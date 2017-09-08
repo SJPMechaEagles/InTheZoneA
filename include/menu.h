@@ -23,9 +23,14 @@ struct menu{
   int current;
 };
 
-struct menu* init_menu(enum menu_type type, int nums, char* options,...){
+static struct menu* create_menu(enum menu_type type) {
   struct menu* menu = (struct menu*) calloc(1, sizeof(struct menu));
   menu->type = type;
+  return menu;
+}
+
+struct menu* init_menu(enum menu_type type, int nums, char* options,...){
+  struct menu* menu = create_menu(type);
   va_list values;
   char **options_array = (char**)malloc(sizeof(char*) * nums);
   va_start(values, options);
@@ -39,16 +44,14 @@ struct menu* init_menu(enum menu_type type, int nums, char* options,...){
 }
 
 struct menu* init_menu(enum menu_type type, char **options, int length){
-  struct menu* menu = (struct menu*) calloc(1, sizeof(struct menu));
-  menu->type = type;
+  struct menu* menu = create_menu(type);
   menu->options = options;
   menu->length = &length;
   return menu;
 }
 
 struct menu* init_menu(enum menu_type type, int min, int max, int step){
-  struct menu* menu = (struct menu*) calloc(1, sizeof(struct menu));
-  menu->type = type;
+  struct menu* menu = create_menu(type);
   menu->min = &min;
   menu->max = &max;
   menu->step = &step;
@@ -56,8 +59,7 @@ struct menu* init_menu(enum menu_type type, int min, int max, int step){
 }
 
 struct menu* init_menu(enum menu_type type, float min, float max, float step){
-  struct menu* menu = (struct menu*) calloc(1, sizeof(struct menu));
-  menu->type = type;
+  struct menu* menu = create_menu(type);
   menu->min_f = &min;
   menu->max_f = &max;
   menu->step_f = &step;
