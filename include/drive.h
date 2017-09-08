@@ -6,7 +6,6 @@
 #include <API.h>
 #include "joystick.h"
 
-
 typedef enum side{
   left,
   both,
@@ -19,7 +18,5 @@ typedef enum side{
 #define MLEFT 3
 #define BRIGHT 4
 #define BLEFT 5
-
-//#include "drive.c"
 
 #endif
