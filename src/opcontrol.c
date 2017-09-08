@@ -11,6 +11,7 @@
  */
 
 #include "main.h"
+#include "drive.h>"
 
 /*
  * Runs the user operator control code. This function will be started in its own task with the
