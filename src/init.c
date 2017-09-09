@@ -11,6 +11,8 @@
  */
 
 #include "main.h"
+#include <API.h>
+#include "encoders.h"
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode one time while the
@@ -21,6 +23,8 @@
  * configure a UART port (usartOpen()) but cannot set up an LCD (lcdInit()).
  */
 void initializeIO() {
+  watchdogInit();
+  setTeamName("Mecha Eagles: 9228A");
 }
 
 /*
@@ -37,4 +41,11 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
+  lcdInit(uart1);
+  lcdClear(uart1);
+  if(!init_encoders()) {
+    lcdSetBacklight(uart1, true);
+    lcdPrint(uart1, 1, "CHECK IMEs!");
+    lcdPrint(uart1, 1, "Not all IMEs plugged in.");
+  }
 }

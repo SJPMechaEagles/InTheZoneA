@@ -6,6 +6,10 @@ Header file for global functions.
 
 
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+Include dependency graph for main.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -80,4 +84,5 @@ If no V\+EX Competition Switch or Field Management system is plugged in, the V\+
 
 Code running in this task can take almost any action, as the V\+EX Joystick is available and the scheduler is operational. However, proper use of \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay()} or \hyperlink{_a_p_i_8h_ae93bc867b1aa4a12d6536a497f1b6869}{task\+Delay\+Until()} is highly recommended to give other tasks (including system tasks such as updating L\+C\+Ds) time to run.
 
-This task should never exit; it should end with some kind of infinite loop, even if empty. 
+This task should never exit; it should end with some kind of infinite loop, even if empty. Here is the call graph for this function\+:
+% FIG 2

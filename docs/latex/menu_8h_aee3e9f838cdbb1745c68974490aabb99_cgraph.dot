@@ -1,0 +1,13 @@
+digraph "display_menu"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="display_menu",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="get_pressed_buttons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8h.html#aa9a4e5adb901d98d53599e136792a07a"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="lcdReadButtons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_a_p_i_8h.html#a040d36e5c81594fd05d5042f3e540aed"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="delay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_a_p_i_8h.html#a1c59207742a1acf45a8957d7f04f9dfe"];
+}
