@@ -8,6 +8,7 @@
 #define PRESSED true
 #define RELESED false
 
+static bool lcd_initialized = false;
 static FILE *lcd_port;
 
 enum menu_type {
@@ -113,6 +114,7 @@ struct menu_result display_menu(struct menu *menu){
 
 void init_lcd(FILE *lcd_port) {
   lcdInit (lcd_port);
+  lcd_initialized = true;
 }
 
 void denint_menu(struct menu *menu){

@@ -2,10 +2,6 @@
 #ifndef _DRIVE_H_
 #define _DRIVE_H_
 
-#include <math.h>
-#include <API.h>
-#include "joystick.h"
-
 typedef enum side{
   left,
   both,
