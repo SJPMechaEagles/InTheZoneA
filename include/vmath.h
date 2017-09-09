@@ -1,13 +1,36 @@
+/**
+* @file vmath.h
+* @author Christian Desimone
+* @author Chris Jerrett
+* @date 9/9/2017
+* @brief Vex Specific Math Functions, includes: Cartesian to polar cordinates.
+**/
+
 #ifndef _VMATH_H_
 #define _VMATH_H_
 
 #include <math.h>
 
+/**
+* @brief A struct that contains polar cordinates.
+* @date 9/9/2017
+* @author Chris Jerrett
+*/
 struct polar_cord {
   float angle;
   float magnitue;
 };
 
+/**
+* @brief Function to convert x and y 2 dimensional cartesian cordinated to polar pordinates.
+*
+* @author Christian Desimone
+* @date 9/8/2017
+*
+* @param x float value of the x cartesian cordinate.
+* @param y float value of the y cartesian cordinate.
+* @return a struct containing the angle and magnitude.
+*/
 struct polar_cord cartesian_to_polar(float x, float y) {
   float degree = 0;
   double magnitude = sqrt((fabs(x) * fabs(x)) + (fabs(y) * fabs(y)));
