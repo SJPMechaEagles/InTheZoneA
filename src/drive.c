@@ -1,6 +1,6 @@
-#include "drive.h"
 #include <math.h>
 #include <API.h>
+#include "drive.h"
 #include "controller.h"
 #include "vmath.h"
 
@@ -18,7 +18,5 @@ void set_side_speed(side side, int speed){
 }
 
 void updateDriveMotors(){
-  int y = joystickGetAnalog(MASTER, RIGHT_JOY_X);
-  int x = joystickGetAnalog(MASTER, RIGHT_JOY_Y);
-  struct polar_cord cord = cartesian_to_polar((float) x, (float) y);
+  struct polar_cord cord = cartesian_to_polar(get_joystick_cord(RIGHT_JOY, MASTER));
 }
