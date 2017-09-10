@@ -18,5 +18,5 @@ void set_side_speed(side side, int speed){
 }
 
 void updateDriveMotors(){
-  struct polar_cord cord = cartesian_to_polar(get_joystick_cord(RIGHT_JOY, MASTER));
+  struct polar_cord cord = cartesian_cord_to_polar(get_joystick_cord(RIGHT_JOY, MASTER));
 }

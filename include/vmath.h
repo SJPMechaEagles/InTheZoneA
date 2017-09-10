@@ -35,6 +35,9 @@ struct cord {
   float y;
 };
 
+struct polar_cord cartesian_to_polar(float x, float y);
+struct polar_cord cartesian_cord_to_polar(struct cord cords);
+
 /**
 * @brief Function to convert x and y 2 dimensional cartesian cordinated to polar pordinates.
 *
@@ -87,7 +90,7 @@ struct polar_cord cartesian_to_polar(float x, float y) {
 * @return a struct containing the angle and magnitude.
 * @see polar_cord
 */
-struct polar_cord cartesian_to_polar(struct cord cords) {
+struct polar_cord cartesian_cord_to_polar(struct cord cords) {
   return cartesian_to_polar(cords.x, cords.y);
 }
 
