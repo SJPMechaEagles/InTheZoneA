@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>In the Zone Team A: src/opcontrol.c File Reference</title>
+<title>Vex Team A: src/opcontrol.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">In the Zone Team A
+   <div id="projectname">Vex Team A
    </div>
   </td>
  </tr>
@@ -93,10 +93,12 @@ $(document).ready(function(){initNavTree('opcontrol_8c.html','');});
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for opcontrol.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="opcontrol_8c__incl.png" border="0" usemap="#src_2opcontrol_8c" alt=""/></div>
-<!-- MAP 0 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="opcontrol_8c__incl.svg" width="355" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
-</div><table class="memberdecls">
+</div>
+</div>
+<p><a href="opcontrol_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac71a94af413917f27d108e95c4d6f6a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="opcontrol_8c.html#ac71a94af413917f27d108e95c4d6f6a7">operatorControl</a> ()</td></tr>
@@ -107,6 +109,8 @@ Functions</h2></td></tr>
 <p>This file should contain the user <a class="el" href="opcontrol_8c.html#ac71a94af413917f27d108e95c4d6f6a7">operatorControl()</a> function and any functions related to it.</p>
 <p>Any copyright is dedicated to the Public Domain. <a href="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</a></p>
 <p>PROS contains FreeRTOS (<a href="http://www.freertos.org">http://www.freertos.org</a>) whose source code may be obtained from <a href="http://sourceforge.net/projects/freertos/files/">http://sourceforge.net/projects/freertos/files/</a> or on request. </p>
+
+<p class="definition">Definition in file <a class="el" href="opcontrol_8c_source.html">opcontrol.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ac71a94af413917f27d108e95c4d6f6a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac71a94af413917f27d108e95c4d6f6a7">&#9670;&nbsp;</a></span>operatorControl()</h2>
@@ -126,11 +130,13 @@ Functions</h2></td></tr>
 <p>If no VEX Competition Switch or Field Management system is plugged in, the VEX Cortex will run the operator control task. Be warned that this will also occur if the VEX Cortex is tethered directly to a computer via the USB A to A cable without any VEX Joystick attached.</p>
 <p>Code running in this task can take almost any action, as the VEX Joystick is available and the scheduler is operational. However, proper use of <a class="el" href="_a_p_i_8h.html#a1c59207742a1acf45a8957d7f04f9dfe">delay()</a> or <a class="el" href="_a_p_i_8h.html#ae93bc867b1aa4a12d6536a497f1b6869">taskDelayUntil()</a> is highly recommended to give other tasks (including system tasks such as updating LCDs) time to run.</p>
 <p>This task should never exit; it should end with some kind of infinite loop, even if empty. </p>
+
+<p class="definition">Definition at line <a class="el" href="opcontrol_8c_source.html#l00033">33</a> of file <a class="el" href="opcontrol_8c_source.html">opcontrol.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="opcontrol_8c_ac71a94af413917f27d108e95c4d6f6a7_cgraph.png" border="0" usemap="#opcontrol_8c_ac71a94af413917f27d108e95c4d6f6a7_cgraph" alt=""/></div>
-<!-- MAP 1 -->
+<div class="center"><iframe scrolling="no" frameborder="0" src="opcontrol_8c_ac71a94af413917f27d108e95c4d6f6a7_cgraph.svg" width="226" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>

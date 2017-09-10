@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>Vex Team A</title>
+    </info>
+        <xi:include href="md__r_e_a_d_m_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <chapter>
+        <title>Data Structure Documentation</title>
+        <xi:include href="structlcd__buttons.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structmenu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structmenu__result.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structpolar__cord.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="_a_p_i_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="controller_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="drive_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="encoders_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="lcd_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="main_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="menu_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ports_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vmath_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="auto_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="drive_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="init_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="opcontrol_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Directory Documentation</title>
+        <xi:include href="dir_d44c64559bbebec7f509842c48db8b23.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="dir_68267d1309a1af8e8297ef4c3efbcdba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

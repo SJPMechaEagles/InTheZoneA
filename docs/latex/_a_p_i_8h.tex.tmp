@@ -345,6 +345,8 @@ unsigned long \hyperlink{_a_p_i_8h_a6ff7f2532a22366f0013bc41397129fd}{millis} ()
 void \hyperlink{_a_p_i_8h_add8964052eef78ca864990642888a7d7}{wait} (const unsigned long time)
 \item 
 void \hyperlink{_a_p_i_8h_a591705c8bd27fce32490b0bd4fb7ecd9}{wait\+Until} (unsigned long $\ast$previous\+Wake\+Time, const unsigned long time)
+\item 
+void \hyperlink{_a_p_i_8h_a8c2e4902f39a7abdea20cdf04007bb8e}{watchdog\+Init} ()
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -373,19 +375,31 @@ P\+R\+OS contains Free\+R\+T\+OS (\href{http://www.freertos.org}{\tt http\+://ww
 \subsubsection{\texorpdfstring{A\+C\+C\+E\+L\+\_\+X}{ACCEL\_X}}
 {\footnotesize\ttfamily \#define A\+C\+C\+E\+L\+\_\+X~5}
 
-Analog axis for the X acceleration from the V\+EX Joystick. \mbox{\Hypertarget{_a_p_i_8h_a73df2dcbe32c4a51551b34034093c37f}\label{_a_p_i_8h_a73df2dcbe32c4a51551b34034093c37f}} 
+Analog axis for the X acceleration from the V\+EX Joystick. 
+
+Definition at line 56 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a73df2dcbe32c4a51551b34034093c37f}\label{_a_p_i_8h_a73df2dcbe32c4a51551b34034093c37f}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!A\+C\+C\+E\+L\+\_\+Y@{A\+C\+C\+E\+L\+\_\+Y}}
 \index{A\+C\+C\+E\+L\+\_\+Y@{A\+C\+C\+E\+L\+\_\+Y}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{A\+C\+C\+E\+L\+\_\+Y}{ACCEL\_Y}}
 {\footnotesize\ttfamily \#define A\+C\+C\+E\+L\+\_\+Y~6}
 
-Analog axis for the Y acceleration from the V\+EX Joystick. \mbox{\Hypertarget{_a_p_i_8h_ae0f99ae5d6aae10845f04e642560e702}\label{_a_p_i_8h_ae0f99ae5d6aae10845f04e642560e702}} 
+Analog axis for the Y acceleration from the V\+EX Joystick. 
+
+Definition at line 60 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ae0f99ae5d6aae10845f04e642560e702}\label{_a_p_i_8h_ae0f99ae5d6aae10845f04e642560e702}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+A\+D\+C\+\_\+\+P\+I\+NS@{B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+A\+D\+C\+\_\+\+P\+I\+NS}}
 \index{B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+A\+D\+C\+\_\+\+P\+I\+NS@{B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+A\+D\+C\+\_\+\+P\+I\+NS}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+A\+D\+C\+\_\+\+P\+I\+NS}{BOARD\_NR\_ADC\_PINS}}
 {\footnotesize\ttfamily \#define B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+A\+D\+C\+\_\+\+P\+I\+NS~8}
 
-There are 8 available analog I/O on the Cortex. \mbox{\Hypertarget{_a_p_i_8h_ae61940b1dacc12c437f11082a6018a1c}\label{_a_p_i_8h_ae61940b1dacc12c437f11082a6018a1c}} 
+There are 8 available analog I/O on the Cortex. 
+
+Definition at line 141 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ae61940b1dacc12c437f11082a6018a1c}\label{_a_p_i_8h_ae61940b1dacc12c437f11082a6018a1c}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+G\+P\+I\+O\+\_\+\+P\+I\+NS@{B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+G\+P\+I\+O\+\_\+\+P\+I\+NS}}
 \index{B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+G\+P\+I\+O\+\_\+\+P\+I\+NS@{B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+G\+P\+I\+O\+\_\+\+P\+I\+NS}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{B\+O\+A\+R\+D\+\_\+\+N\+R\+\_\+\+G\+P\+I\+O\+\_\+\+P\+I\+NS}{BOARD\_NR\_GPIO\_PINS}}
@@ -395,13 +409,21 @@ There are 27 available I/O on the Cortex that can be used for digital communicat
 
 This excludes the crystal ports but includes the Communications, Speaker, and Analog ports.
 
-The motor ports are not on the Cortex and are thus excluded from this count. Pin 0 is the Speaker port, pins 1-\/12 are the standard Digital I/O, 13-\/20 are the Analog I/O, 21+22 are U\+A\+R\+T1, 23+24 are U\+A\+R\+T2, and 25+26 are the I2C port. \mbox{\Hypertarget{_a_p_i_8h_a59adc4c82490d23754cd39c2fb99b0da}\label{_a_p_i_8h_a59adc4c82490d23754cd39c2fb99b0da}} 
+The motor ports are not on the Cortex and are thus excluded from this count. Pin 0 is the Speaker port, pins 1-\/12 are the standard Digital I/O, 13-\/20 are the Analog I/O, 21+22 are U\+A\+R\+T1, 23+24 are U\+A\+R\+T2, and 25+26 are the I2C port. 
+
+Definition at line 151 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a59adc4c82490d23754cd39c2fb99b0da}\label{_a_p_i_8h_a59adc4c82490d23754cd39c2fb99b0da}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!E\+OF@{E\+OF}}
 \index{E\+OF@{E\+OF}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{E\+OF}{EOF}}
 {\footnotesize\ttfamily \#define E\+OF~((int)-\/1)}
 
-E\+OF is a value evaluating to -\/1. \mbox{\Hypertarget{_a_p_i_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}\label{_a_p_i_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}} 
+E\+OF is a value evaluating to -\/1. 
+
+Definition at line 829 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}\label{_a_p_i_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!H\+I\+GH@{H\+I\+GH}}
 \index{H\+I\+GH@{H\+I\+GH}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{H\+I\+GH}{HIGH}}
@@ -409,13 +431,21 @@ E\+OF is a value evaluating to -\/1. \mbox{\Hypertarget{_a_p_i_8h_a5bb885982ff66
 
 Used for \hyperlink{_a_p_i_8h_a23e767e5b47fa61d4e2cc02e6f15c7ab}{digital\+Write()} to specify a logic H\+I\+GH state to output.
 
-In reality, using any non-\/zero expression or \char`\"{}true\char`\"{} will work to set a pin to H\+I\+GH. \mbox{\Hypertarget{_a_p_i_8h_a6d369ee1e214daea8bf939aa817b5d00}\label{_a_p_i_8h_a6d369ee1e214daea8bf939aa817b5d00}} 
+In reality, using any non-\/zero expression or \char`\"{}true\char`\"{} will work to set a pin to H\+I\+GH. 
+
+Definition at line 157 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a6d369ee1e214daea8bf939aa817b5d00}\label{_a_p_i_8h_a6d369ee1e214daea8bf939aa817b5d00}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!I\+M\+E\+\_\+\+A\+D\+D\+R\+\_\+\+M\+AX@{I\+M\+E\+\_\+\+A\+D\+D\+R\+\_\+\+M\+AX}}
 \index{I\+M\+E\+\_\+\+A\+D\+D\+R\+\_\+\+M\+AX@{I\+M\+E\+\_\+\+A\+D\+D\+R\+\_\+\+M\+AX}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{I\+M\+E\+\_\+\+A\+D\+D\+R\+\_\+\+M\+AX}{IME\_ADDR\_MAX}}
 {\footnotesize\ttfamily \#define I\+M\+E\+\_\+\+A\+D\+D\+R\+\_\+\+M\+AX~0x1F}
 
-I\+ME addresses end at 0x1F. Actually using more than 10 (address 0x1A) encoders will cause unreliable communications. \mbox{\Hypertarget{_a_p_i_8h_a1bb283bd7893b9855e2f23013891fc82}\label{_a_p_i_8h_a1bb283bd7893b9855e2f23013891fc82}} 
+I\+ME addresses end at 0x1F. Actually using more than 10 (address 0x1A) encoders will cause unreliable communications. 
+
+Definition at line 458 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a1bb283bd7893b9855e2f23013891fc82}\label{_a_p_i_8h_a1bb283bd7893b9855e2f23013891fc82}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!I\+N\+P\+UT@{I\+N\+P\+UT}}
 \index{I\+N\+P\+UT@{I\+N\+P\+UT}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{I\+N\+P\+UT}{INPUT}}
@@ -423,7 +453,11 @@ I\+ME addresses end at 0x1F. Actually using more than 10 (address 0x1A) encoders
 
 \hyperlink{_a_p_i_8h_a1875409d12eee562555bda94cad7f973}{pin\+Mode()} state for digital input, with pullup.
 
-This is the default state for the 12 Digital pins. The pullup causes the input to read as \char`\"{}\+H\+I\+G\+H\char`\"{} when unplugged, but is fairly weak and can safely be driven by most sources. Many V\+EX digital sensors rely on this behavior and cannot be used with I\+N\+P\+U\+T\+\_\+\+F\+L\+O\+A\+T\+I\+NG. \mbox{\Hypertarget{_a_p_i_8h_a877f7490feac007f3a904ece06afe87a}\label{_a_p_i_8h_a877f7490feac007f3a904ece06afe87a}} 
+This is the default state for the 12 Digital pins. The pullup causes the input to read as \char`\"{}\+H\+I\+G\+H\char`\"{} when unplugged, but is fairly weak and can safely be driven by most sources. Many V\+EX digital sensors rely on this behavior and cannot be used with I\+N\+P\+U\+T\+\_\+\+F\+L\+O\+A\+T\+I\+NG. 
+
+Definition at line 172 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a877f7490feac007f3a904ece06afe87a}\label{_a_p_i_8h_a877f7490feac007f3a904ece06afe87a}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!I\+N\+P\+U\+T\+\_\+\+A\+N\+A\+L\+OG@{I\+N\+P\+U\+T\+\_\+\+A\+N\+A\+L\+OG}}
 \index{I\+N\+P\+U\+T\+\_\+\+A\+N\+A\+L\+OG@{I\+N\+P\+U\+T\+\_\+\+A\+N\+A\+L\+OG}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{I\+N\+P\+U\+T\+\_\+\+A\+N\+A\+L\+OG}{INPUT\_ANALOG}}
@@ -431,7 +465,11 @@ This is the default state for the 12 Digital pins. The pullup causes the input t
 
 \hyperlink{_a_p_i_8h_a1875409d12eee562555bda94cad7f973}{pin\+Mode()} state for analog inputs.
 
-This is the default state for the 8 Analog pins and the Speaker port. This only works on pins with analog input capabilities; use anywhere else results in undefined behavior. \mbox{\Hypertarget{_a_p_i_8h_ac31084f7ffdfd4325b3703718fce74ea}\label{_a_p_i_8h_ac31084f7ffdfd4325b3703718fce74ea}} 
+This is the default state for the 8 Analog pins and the Speaker port. This only works on pins with analog input capabilities; use anywhere else results in undefined behavior. 
+
+Definition at line 179 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ac31084f7ffdfd4325b3703718fce74ea}\label{_a_p_i_8h_ac31084f7ffdfd4325b3703718fce74ea}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!I\+N\+P\+U\+T\+\_\+\+F\+L\+O\+A\+T\+I\+NG@{I\+N\+P\+U\+T\+\_\+\+F\+L\+O\+A\+T\+I\+NG}}
 \index{I\+N\+P\+U\+T\+\_\+\+F\+L\+O\+A\+T\+I\+NG@{I\+N\+P\+U\+T\+\_\+\+F\+L\+O\+A\+T\+I\+NG}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{I\+N\+P\+U\+T\+\_\+\+F\+L\+O\+A\+T\+I\+NG}{INPUT\_FLOATING}}
@@ -439,67 +477,111 @@ This is the default state for the 8 Analog pins and the Speaker port. This only 
 
 \hyperlink{_a_p_i_8h_a1875409d12eee562555bda94cad7f973}{pin\+Mode()} state for digital input, without pullup.
 
-Beware of power consumption, as digital inputs left \char`\"{}floating\char`\"{} may switch back and forth and cause spurious interrupts. \mbox{\Hypertarget{_a_p_i_8h_ab0ce5d2283faeb80389f8b54a925a15b}\label{_a_p_i_8h_ab0ce5d2283faeb80389f8b54a925a15b}} 
+Beware of power consumption, as digital inputs left \char`\"{}floating\char`\"{} may switch back and forth and cause spurious interrupts. 
+
+Definition at line 186 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ab0ce5d2283faeb80389f8b54a925a15b}\label{_a_p_i_8h_ab0ce5d2283faeb80389f8b54a925a15b}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+B\+O\+TH@{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+B\+O\+TH}}
 \index{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+B\+O\+TH@{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+B\+O\+TH}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+B\+O\+TH}{INTERRUPT\_EDGE\_BOTH}}
 {\footnotesize\ttfamily \#define I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+B\+O\+TH~3}
 
-When used in \hyperlink{_a_p_i_8h_a8d0fd8e69a4c4c5aba981d106ee7f9ac}{io\+Set\+Interrupt()}, triggers an interrupt on both rising and falling edges (L\+OW to H\+I\+GH or H\+I\+GH to L\+OW). \mbox{\Hypertarget{_a_p_i_8h_a5d01e5bd9626ca29af3e1e9385e58427}\label{_a_p_i_8h_a5d01e5bd9626ca29af3e1e9385e58427}} 
+When used in \hyperlink{_a_p_i_8h_a8d0fd8e69a4c4c5aba981d106ee7f9ac}{io\+Set\+Interrupt()}, triggers an interrupt on both rising and falling edges (L\+OW to H\+I\+GH or H\+I\+GH to L\+OW). 
+
+Definition at line 327 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a5d01e5bd9626ca29af3e1e9385e58427}\label{_a_p_i_8h_a5d01e5bd9626ca29af3e1e9385e58427}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+F\+A\+L\+L\+I\+NG@{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+F\+A\+L\+L\+I\+NG}}
 \index{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+F\+A\+L\+L\+I\+NG@{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+F\+A\+L\+L\+I\+NG}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+F\+A\+L\+L\+I\+NG}{INTERRUPT\_EDGE\_FALLING}}
 {\footnotesize\ttfamily \#define I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+F\+A\+L\+L\+I\+NG~2}
 
-When used in \hyperlink{_a_p_i_8h_a8d0fd8e69a4c4c5aba981d106ee7f9ac}{io\+Set\+Interrupt()}, triggers an interrupt on falling edges (H\+I\+GH to L\+OW). \mbox{\Hypertarget{_a_p_i_8h_a8bd8f2fe1b638ebff63e702d14880b12}\label{_a_p_i_8h_a8bd8f2fe1b638ebff63e702d14880b12}} 
+When used in \hyperlink{_a_p_i_8h_a8d0fd8e69a4c4c5aba981d106ee7f9ac}{io\+Set\+Interrupt()}, triggers an interrupt on falling edges (H\+I\+GH to L\+OW). 
+
+Definition at line 322 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a8bd8f2fe1b638ebff63e702d14880b12}\label{_a_p_i_8h_a8bd8f2fe1b638ebff63e702d14880b12}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+R\+I\+S\+I\+NG@{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+R\+I\+S\+I\+NG}}
 \index{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+R\+I\+S\+I\+NG@{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+R\+I\+S\+I\+NG}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+R\+I\+S\+I\+NG}{INTERRUPT\_EDGE\_RISING}}
 {\footnotesize\ttfamily \#define I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+D\+G\+E\+\_\+\+R\+I\+S\+I\+NG~1}
 
-When used in \hyperlink{_a_p_i_8h_a8d0fd8e69a4c4c5aba981d106ee7f9ac}{io\+Set\+Interrupt()}, triggers an interrupt on rising edges (L\+OW to H\+I\+GH). \mbox{\Hypertarget{_a_p_i_8h_a950e3ba6cd65c992b92f36b837c52a0a}\label{_a_p_i_8h_a950e3ba6cd65c992b92f36b837c52a0a}} 
+When used in \hyperlink{_a_p_i_8h_a8d0fd8e69a4c4c5aba981d106ee7f9ac}{io\+Set\+Interrupt()}, triggers an interrupt on rising edges (L\+OW to H\+I\+GH). 
+
+Definition at line 318 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a950e3ba6cd65c992b92f36b837c52a0a}\label{_a_p_i_8h_a950e3ba6cd65c992b92f36b837c52a0a}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!J\+O\+Y\+\_\+\+D\+O\+WN@{J\+O\+Y\+\_\+\+D\+O\+WN}}
 \index{J\+O\+Y\+\_\+\+D\+O\+WN@{J\+O\+Y\+\_\+\+D\+O\+WN}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{J\+O\+Y\+\_\+\+D\+O\+WN}{JOY\_DOWN}}
 {\footnotesize\ttfamily \#define J\+O\+Y\+\_\+\+D\+O\+WN~1}
 
-D\+O\+WN button (valid on channels 5, 6, 7, 8) \mbox{\Hypertarget{_a_p_i_8h_a5b41c548ba97989b473f6393b9c2c7f1}\label{_a_p_i_8h_a5b41c548ba97989b473f6393b9c2c7f1}} 
+D\+O\+WN button (valid on channels 5, 6, 7, 8) 
+
+Definition at line 40 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a5b41c548ba97989b473f6393b9c2c7f1}\label{_a_p_i_8h_a5b41c548ba97989b473f6393b9c2c7f1}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!J\+O\+Y\+\_\+\+L\+E\+FT@{J\+O\+Y\+\_\+\+L\+E\+FT}}
 \index{J\+O\+Y\+\_\+\+L\+E\+FT@{J\+O\+Y\+\_\+\+L\+E\+FT}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{J\+O\+Y\+\_\+\+L\+E\+FT}{JOY\_LEFT}}
 {\footnotesize\ttfamily \#define J\+O\+Y\+\_\+\+L\+E\+FT~2}
 
-L\+E\+FT button (valid on channels 7, 8) \mbox{\Hypertarget{_a_p_i_8h_a59c1b2e5c6856ed044ba0635102fd995}\label{_a_p_i_8h_a59c1b2e5c6856ed044ba0635102fd995}} 
+L\+E\+FT button (valid on channels 7, 8) 
+
+Definition at line 44 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a59c1b2e5c6856ed044ba0635102fd995}\label{_a_p_i_8h_a59c1b2e5c6856ed044ba0635102fd995}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!J\+O\+Y\+\_\+\+R\+I\+G\+HT@{J\+O\+Y\+\_\+\+R\+I\+G\+HT}}
 \index{J\+O\+Y\+\_\+\+R\+I\+G\+HT@{J\+O\+Y\+\_\+\+R\+I\+G\+HT}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{J\+O\+Y\+\_\+\+R\+I\+G\+HT}{JOY\_RIGHT}}
 {\footnotesize\ttfamily \#define J\+O\+Y\+\_\+\+R\+I\+G\+HT~8}
 
-R\+I\+G\+HT button (valid on channels 7, 8) \mbox{\Hypertarget{_a_p_i_8h_a85e47af11e6a32e3a819f247d9f619d6}\label{_a_p_i_8h_a85e47af11e6a32e3a819f247d9f619d6}} 
+R\+I\+G\+HT button (valid on channels 7, 8) 
+
+Definition at line 52 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a85e47af11e6a32e3a819f247d9f619d6}\label{_a_p_i_8h_a85e47af11e6a32e3a819f247d9f619d6}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!J\+O\+Y\+\_\+\+UP@{J\+O\+Y\+\_\+\+UP}}
 \index{J\+O\+Y\+\_\+\+UP@{J\+O\+Y\+\_\+\+UP}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{J\+O\+Y\+\_\+\+UP}{JOY\_UP}}
 {\footnotesize\ttfamily \#define J\+O\+Y\+\_\+\+UP~4}
 
-UP button (valid on channels 5, 6, 7, 8) \mbox{\Hypertarget{_a_p_i_8h_abf8903693b4a95a6b653916d5f6fe486}\label{_a_p_i_8h_abf8903693b4a95a6b653916d5f6fe486}} 
+UP button (valid on channels 5, 6, 7, 8) 
+
+Definition at line 48 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_abf8903693b4a95a6b653916d5f6fe486}\label{_a_p_i_8h_abf8903693b4a95a6b653916d5f6fe486}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+ER@{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+ER}}
 \index{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+ER@{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+ER}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+ER}{LCD\_BTN\_CENTER}}
 {\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+ER~2}
 
-C\+E\+N\+T\+ER button on L\+CD for use with \hyperlink{_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed}{lcd\+Read\+Buttons()} \mbox{\Hypertarget{_a_p_i_8h_afa86afc6491531fb4b4d7f1e18803852}\label{_a_p_i_8h_afa86afc6491531fb4b4d7f1e18803852}} 
+C\+E\+N\+T\+ER button on L\+CD for use with \hyperlink{_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed}{lcd\+Read\+Buttons()} 
+
+Definition at line 1127 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_afa86afc6491531fb4b4d7f1e18803852}\label{_a_p_i_8h_afa86afc6491531fb4b4d7f1e18803852}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+L\+E\+FT@{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+L\+E\+FT}}
 \index{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+L\+E\+FT@{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+L\+E\+FT}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+L\+E\+FT}{LCD\_BTN\_LEFT}}
 {\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+L\+E\+FT~1}
 
-L\+E\+FT button on L\+CD for use with \hyperlink{_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed}{lcd\+Read\+Buttons()} \mbox{\Hypertarget{_a_p_i_8h_a7851ef3eb7573b194efb0a05d88f2c35}\label{_a_p_i_8h_a7851ef3eb7573b194efb0a05d88f2c35}} 
+L\+E\+FT button on L\+CD for use with \hyperlink{_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed}{lcd\+Read\+Buttons()} 
+
+Definition at line 1123 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a7851ef3eb7573b194efb0a05d88f2c35}\label{_a_p_i_8h_a7851ef3eb7573b194efb0a05d88f2c35}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+R\+I\+G\+HT@{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+R\+I\+G\+HT}}
 \index{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+R\+I\+G\+HT@{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+R\+I\+G\+HT}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+R\+I\+G\+HT}{LCD\_BTN\_RIGHT}}
 {\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+R\+I\+G\+HT~4}
 
-R\+I\+G\+HT button on L\+CD for use with \hyperlink{_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed}{lcd\+Read\+Buttons()} \mbox{\Hypertarget{_a_p_i_8h_ab811d8c6ff3a505312d3276590444289}\label{_a_p_i_8h_ab811d8c6ff3a505312d3276590444289}} 
+R\+I\+G\+HT button on L\+CD for use with \hyperlink{_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed}{lcd\+Read\+Buttons()} 
+
+Definition at line 1131 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ab811d8c6ff3a505312d3276590444289}\label{_a_p_i_8h_ab811d8c6ff3a505312d3276590444289}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!L\+OW@{L\+OW}}
 \index{L\+OW@{L\+OW}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{L\+OW}{LOW}}
@@ -507,7 +589,11 @@ R\+I\+G\+HT button on L\+CD for use with \hyperlink{_a_p_i_8h_a040d36e5c81594fd0
 
 Used for \hyperlink{_a_p_i_8h_a23e767e5b47fa61d4e2cc02e6f15c7ab}{digital\+Write()} to specify a logic L\+OW state to output.
 
-In reality, using a zero expression or \char`\"{}false\char`\"{} will work to set a pin to L\+OW. \mbox{\Hypertarget{_a_p_i_8h_a61a3c9a18380aafb6e430e79bf596557}\label{_a_p_i_8h_a61a3c9a18380aafb6e430e79bf596557}} 
+In reality, using a zero expression or \char`\"{}false\char`\"{} will work to set a pin to L\+OW. 
+
+Definition at line 163 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a61a3c9a18380aafb6e430e79bf596557}\label{_a_p_i_8h_a61a3c9a18380aafb6e430e79bf596557}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!O\+U\+T\+P\+UT@{O\+U\+T\+P\+UT}}
 \index{O\+U\+T\+P\+UT@{O\+U\+T\+P\+UT}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{O\+U\+T\+P\+UT}{OUTPUT}}
@@ -515,7 +601,11 @@ In reality, using a zero expression or \char`\"{}false\char`\"{} will work to se
 
 \hyperlink{_a_p_i_8h_a1875409d12eee562555bda94cad7f973}{pin\+Mode()} state for digital output, push-\/pull.
 
-This is the mode which should be used to output a digital H\+I\+GH or L\+OW value from the Cortex. This mode is useful for pneumatic solenoid valves and V\+EX L\+E\+Ds. \mbox{\Hypertarget{_a_p_i_8h_aea041a6db0843f4b27a6a39b829d56e7}\label{_a_p_i_8h_aea041a6db0843f4b27a6a39b829d56e7}} 
+This is the mode which should be used to output a digital H\+I\+GH or L\+OW value from the Cortex. This mode is useful for pneumatic solenoid valves and V\+EX L\+E\+Ds. 
+
+Definition at line 193 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_aea041a6db0843f4b27a6a39b829d56e7}\label{_a_p_i_8h_aea041a6db0843f4b27a6a39b829d56e7}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!O\+U\+T\+P\+U\+T\+\_\+\+OD@{O\+U\+T\+P\+U\+T\+\_\+\+OD}}
 \index{O\+U\+T\+P\+U\+T\+\_\+\+OD@{O\+U\+T\+P\+U\+T\+\_\+\+OD}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{O\+U\+T\+P\+U\+T\+\_\+\+OD}{OUTPUT\_OD}}
@@ -523,91 +613,151 @@ This is the mode which should be used to output a digital H\+I\+GH or L\+OW valu
 
 \hyperlink{_a_p_i_8h_a1875409d12eee562555bda94cad7f973}{pin\+Mode()} state for open-\/drain outputs.
 
-This is useful in a few cases for external electronics and should not be used for the V\+EX solenoid or L\+E\+Ds. \mbox{\Hypertarget{_a_p_i_8h_a4c8d0b76b470ba65a43ca46a88320f39}\label{_a_p_i_8h_a4c8d0b76b470ba65a43ca46a88320f39}} 
+This is useful in a few cases for external electronics and should not be used for the V\+EX solenoid or L\+E\+Ds. 
+
+Definition at line 200 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a4c8d0b76b470ba65a43ca46a88320f39}\label{_a_p_i_8h_a4c8d0b76b470ba65a43ca46a88320f39}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+E\+K\+\_\+\+C\+UR@{S\+E\+E\+K\+\_\+\+C\+UR}}
 \index{S\+E\+E\+K\+\_\+\+C\+UR@{S\+E\+E\+K\+\_\+\+C\+UR}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+E\+K\+\_\+\+C\+UR}{SEEK\_CUR}}
 {\footnotesize\ttfamily \#define S\+E\+E\+K\+\_\+\+C\+UR~1}
 
-S\+E\+E\+K\+\_\+\+C\+UR is used in \hyperlink{_a_p_i_8h_af2b5e837a27524264f0422232f5f9538}{fseek()} to denote an relative position in bytes from the current file location. \mbox{\Hypertarget{_a_p_i_8h_ad2a2e6c114780c3071efd24f16c7f7d8}\label{_a_p_i_8h_ad2a2e6c114780c3071efd24f16c7f7d8}} 
+S\+E\+E\+K\+\_\+\+C\+UR is used in \hyperlink{_a_p_i_8h_af2b5e837a27524264f0422232f5f9538}{fseek()} to denote an relative position in bytes from the current file location. 
+
+Definition at line 844 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ad2a2e6c114780c3071efd24f16c7f7d8}\label{_a_p_i_8h_ad2a2e6c114780c3071efd24f16c7f7d8}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+E\+K\+\_\+\+E\+ND@{S\+E\+E\+K\+\_\+\+E\+ND}}
 \index{S\+E\+E\+K\+\_\+\+E\+ND@{S\+E\+E\+K\+\_\+\+E\+ND}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+E\+K\+\_\+\+E\+ND}{SEEK\_END}}
 {\footnotesize\ttfamily \#define S\+E\+E\+K\+\_\+\+E\+ND~2}
 
-S\+E\+E\+K\+\_\+\+E\+ND is used in \hyperlink{_a_p_i_8h_af2b5e837a27524264f0422232f5f9538}{fseek()} to denote an absolute position in bytes from the end of the file. The offset will most likely be negative in this case. \mbox{\Hypertarget{_a_p_i_8h_a0d112bae8fd35be772185b6ec6bcbe64}\label{_a_p_i_8h_a0d112bae8fd35be772185b6ec6bcbe64}} 
+S\+E\+E\+K\+\_\+\+E\+ND is used in \hyperlink{_a_p_i_8h_af2b5e837a27524264f0422232f5f9538}{fseek()} to denote an absolute position in bytes from the end of the file. The offset will most likely be negative in this case. 
+
+Definition at line 851 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a0d112bae8fd35be772185b6ec6bcbe64}\label{_a_p_i_8h_a0d112bae8fd35be772185b6ec6bcbe64}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+E\+K\+\_\+\+S\+ET@{S\+E\+E\+K\+\_\+\+S\+ET}}
 \index{S\+E\+E\+K\+\_\+\+S\+ET@{S\+E\+E\+K\+\_\+\+S\+ET}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+E\+K\+\_\+\+S\+ET}{SEEK\_SET}}
 {\footnotesize\ttfamily \#define S\+E\+E\+K\+\_\+\+S\+ET~0}
 
-S\+E\+E\+K\+\_\+\+S\+ET is used in \hyperlink{_a_p_i_8h_af2b5e837a27524264f0422232f5f9538}{fseek()} to denote an absolute position in bytes from the start of the file. \mbox{\Hypertarget{_a_p_i_8h_a0db78b4521d43c0d702b9577bd3acda2}\label{_a_p_i_8h_a0db78b4521d43c0d702b9577bd3acda2}} 
+S\+E\+E\+K\+\_\+\+S\+ET is used in \hyperlink{_a_p_i_8h_af2b5e837a27524264f0422232f5f9538}{fseek()} to denote an absolute position in bytes from the start of the file. 
+
+Definition at line 837 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a0db78b4521d43c0d702b9577bd3acda2}\label{_a_p_i_8h_a0db78b4521d43c0d702b9577bd3acda2}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+R\+I\+A\+L\+\_\+8\+N1@{S\+E\+R\+I\+A\+L\+\_\+8\+N1}}
 \index{S\+E\+R\+I\+A\+L\+\_\+8\+N1@{S\+E\+R\+I\+A\+L\+\_\+8\+N1}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+R\+I\+A\+L\+\_\+8\+N1}{SERIAL\_8N1}}
 {\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+\_\+8\+N1~0x0000}
 
-Specifies the default serial settings when used in \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} \mbox{\Hypertarget{_a_p_i_8h_ae40f3da18d9c7bc3aa3b4f14f6c2fe03}\label{_a_p_i_8h_ae40f3da18d9c7bc3aa3b4f14f6c2fe03}} 
+Specifies the default serial settings when used in \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} 
+
+Definition at line 776 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ae40f3da18d9c7bc3aa3b4f14f6c2fe03}\label{_a_p_i_8h_ae40f3da18d9c7bc3aa3b4f14f6c2fe03}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+8@{S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+8}}
 \index{S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+8@{S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+8}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+8}{SERIAL\_DATABITS\_8}}
 {\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+8~0x0000}
 
-Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for 8 data bits (typical) \mbox{\Hypertarget{_a_p_i_8h_aa742d7e1dd88294b770e7a2fa244d6cb}\label{_a_p_i_8h_aa742d7e1dd88294b770e7a2fa244d6cb}} 
+Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for 8 data bits (typical) 
+
+Definition at line 748 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_aa742d7e1dd88294b770e7a2fa244d6cb}\label{_a_p_i_8h_aa742d7e1dd88294b770e7a2fa244d6cb}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+9@{S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+9}}
 \index{S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+9@{S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+9}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+9}{SERIAL\_DATABITS\_9}}
 {\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+\_\+\+D\+A\+T\+A\+B\+I\+T\+S\+\_\+9~0x1000}
 
-Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for 9 data bits \mbox{\Hypertarget{_a_p_i_8h_ab1469484b1ad5e39561c21b5a590eaf6}\label{_a_p_i_8h_ab1469484b1ad5e39561c21b5a590eaf6}} 
+Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for 9 data bits 
+
+Definition at line 752 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ab1469484b1ad5e39561c21b5a590eaf6}\label{_a_p_i_8h_ab1469484b1ad5e39561c21b5a590eaf6}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN@{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN}}
 \index{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN@{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN}{SERIAL\_PARITY\_EVEN}}
 {\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN~0x0400}
 
-Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for Even parity \mbox{\Hypertarget{_a_p_i_8h_ad3af92391cfd2670eb782a60c7f923a6}\label{_a_p_i_8h_ad3af92391cfd2670eb782a60c7f923a6}} 
+Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for Even parity 
+
+Definition at line 768 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ad3af92391cfd2670eb782a60c7f923a6}\label{_a_p_i_8h_ad3af92391cfd2670eb782a60c7f923a6}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE@{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE}}
 \index{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE@{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE}{SERIAL\_PARITY\_NONE}}
 {\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE~0x0000}
 
-Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for No parity (typical) \mbox{\Hypertarget{_a_p_i_8h_aa1baeda93fe64b888113824d02471d0f}\label{_a_p_i_8h_aa1baeda93fe64b888113824d02471d0f}} 
+Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for No parity (typical) 
+
+Definition at line 764 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_aa1baeda93fe64b888113824d02471d0f}\label{_a_p_i_8h_aa1baeda93fe64b888113824d02471d0f}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD@{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD}}
 \index{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD@{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD}{SERIAL\_PARITY\_ODD}}
 {\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD~0x0600}
 
-Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for Odd parity \mbox{\Hypertarget{_a_p_i_8h_aa81fc4bae892bc1f7be6ca8434ee0ffd}\label{_a_p_i_8h_aa81fc4bae892bc1f7be6ca8434ee0ffd}} 
+Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for Odd parity 
+
+Definition at line 772 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_aa81fc4bae892bc1f7be6ca8434ee0ffd}\label{_a_p_i_8h_aa81fc4bae892bc1f7be6ca8434ee0ffd}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+1@{S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+1}}
 \index{S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+1@{S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+1}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+1}{SERIAL\_STOPBITS\_1}}
 {\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+1~0x0000}
 
-Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for 1 stop bit (typical) \mbox{\Hypertarget{_a_p_i_8h_a3051a690103146121c8202301dbc4e79}\label{_a_p_i_8h_a3051a690103146121c8202301dbc4e79}} 
+Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for 1 stop bit (typical) 
+
+Definition at line 756 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a3051a690103146121c8202301dbc4e79}\label{_a_p_i_8h_a3051a690103146121c8202301dbc4e79}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+2@{S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+2}}
 \index{S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+2@{S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+2}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+2}{SERIAL\_STOPBITS\_2}}
 {\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+O\+P\+B\+I\+T\+S\+\_\+2~0x2000}
 
-Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for 2 stop bits \mbox{\Hypertarget{_a_p_i_8h_aaca70138f0cb63ddb026921afc635179}\label{_a_p_i_8h_aaca70138f0cb63ddb026921afc635179}} 
+Bit mask for \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()} for 2 stop bits 
+
+Definition at line 760 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_aaca70138f0cb63ddb026921afc635179}\label{_a_p_i_8h_aaca70138f0cb63ddb026921afc635179}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!stdin@{stdin}}
 \index{stdin@{stdin}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{stdin}{stdin}}
 {\footnotesize\ttfamily \#define stdin~((\hyperlink{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}{F\+I\+LE} $\ast$)3)}
 
-The standard input stream uses the PC debug terminal. \mbox{\Hypertarget{_a_p_i_8h_a0c0ef221f95f64e8632451312fd18cc8}\label{_a_p_i_8h_a0c0ef221f95f64e8632451312fd18cc8}} 
+The standard input stream uses the PC debug terminal. 
+
+Definition at line 815 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a0c0ef221f95f64e8632451312fd18cc8}\label{_a_p_i_8h_a0c0ef221f95f64e8632451312fd18cc8}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!stdout@{stdout}}
 \index{stdout@{stdout}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{stdout}{stdout}}
 {\footnotesize\ttfamily \#define stdout~((\hyperlink{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}{F\+I\+LE} $\ast$)3)}
 
-The standard output stream uses the PC debug terminal. \mbox{\Hypertarget{_a_p_i_8h_a13a05b7bdcbd07423a04bfb4cc6759b3}\label{_a_p_i_8h_a13a05b7bdcbd07423a04bfb4cc6759b3}} 
+The standard output stream uses the PC debug terminal. 
+
+Definition at line 811 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a13a05b7bdcbd07423a04bfb4cc6759b3}\label{_a_p_i_8h_a13a05b7bdcbd07423a04bfb4cc6759b3}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+D\+E\+AD@{T\+A\+S\+K\+\_\+\+D\+E\+AD}}
 \index{T\+A\+S\+K\+\_\+\+D\+E\+AD@{T\+A\+S\+K\+\_\+\+D\+E\+AD}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+D\+E\+AD}{TASK\_DEAD}}
 {\footnotesize\ttfamily \#define T\+A\+S\+K\+\_\+\+D\+E\+AD~0}
 
-Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is dead or nonexistant. \mbox{\Hypertarget{_a_p_i_8h_a51827b6505ae59fb2ddf9d32e5519ab4}\label{_a_p_i_8h_a51827b6505ae59fb2ddf9d32e5519ab4}} 
+Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is dead or nonexistant. 
+
+Definition at line 1258 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a51827b6505ae59fb2ddf9d32e5519ab4}\label{_a_p_i_8h_a51827b6505ae59fb2ddf9d32e5519ab4}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{T\+A\+S\+K\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}}
 \index{T\+A\+S\+K\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{T\+A\+S\+K\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}{TASK\_DEFAULT\_STACK\_SIZE}}
@@ -615,7 +765,11 @@ Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{t
 
 The recommended stack size for a new task that does an average amount of work. This stack size is used for default tasks such as \hyperlink{main_8h_a3c7ca506bbc071fa740de13805b7f376}{autonomous()}.
 
-This is probably OK for 4-\/5 levels of function calls and the use of \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf()} with several arguments. Tasks requiring deep recursion or large local buffers will need a bigger stack. \mbox{\Hypertarget{_a_p_i_8h_a36bb10267dd6269cfdb231d9e98b5794}\label{_a_p_i_8h_a36bb10267dd6269cfdb231d9e98b5794}} 
+This is probably OK for 4-\/5 levels of function calls and the use of \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf()} with several arguments. Tasks requiring deep recursion or large local buffers will need a bigger stack. 
+
+Definition at line 1245 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a36bb10267dd6269cfdb231d9e98b5794}\label{_a_p_i_8h_a36bb10267dd6269cfdb231d9e98b5794}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+M\+AX@{T\+A\+S\+K\+\_\+\+M\+AX}}
 \index{T\+A\+S\+K\+\_\+\+M\+AX@{T\+A\+S\+K\+\_\+\+M\+AX}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+M\+AX}{TASK\_MAX}}
@@ -623,7 +777,11 @@ This is probably OK for 4-\/5 levels of function calls and the use of \hyperlink
 
 Only this many tasks can exist at once. Attempts to create further tasks will not succeed until tasks end or are destroyed, A\+ND the idle task cleans them up.
 
-Changing this value will not change the limit without a kernel recompile. The idle task and V\+EX daemon task count against the limit. The user \hyperlink{main_8h_a3c7ca506bbc071fa740de13805b7f376}{autonomous()} or teleop() also counts against the limit, so 12 tasks usually remain for other uses. \mbox{\Hypertarget{_a_p_i_8h_ad896f092de28df06fbcdcf925a933996}\label{_a_p_i_8h_ad896f092de28df06fbcdcf925a933996}} 
+Changing this value will not change the limit without a kernel recompile. The idle task and V\+EX daemon task count against the limit. The user \hyperlink{main_8h_a3c7ca506bbc071fa740de13805b7f376}{autonomous()} or teleop() also counts against the limit, so 12 tasks usually remain for other uses. 
+
+Definition at line 1215 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ad896f092de28df06fbcdcf925a933996}\label{_a_p_i_8h_ad896f092de28df06fbcdcf925a933996}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+O\+R\+I\+T\+I\+ES@{T\+A\+S\+K\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+O\+R\+I\+T\+I\+ES}}
 \index{T\+A\+S\+K\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+O\+R\+I\+T\+I\+ES@{T\+A\+S\+K\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+O\+R\+I\+T\+I\+ES}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+O\+R\+I\+T\+I\+ES}{TASK\_MAX\_PRIORITIES}}
@@ -631,7 +789,11 @@ Changing this value will not change the limit without a kernel recompile. The id
 
 The maximum number of available task priorities, which run from 0 to 5.
 
-Changing this value will not change the priority count without a kernel recompile. \mbox{\Hypertarget{_a_p_i_8h_ac6f33c920771bc599d55765a5a6e62c7}\label{_a_p_i_8h_ac6f33c920771bc599d55765a5a6e62c7}} 
+Changing this value will not change the priority count without a kernel recompile. 
+
+Definition at line 1221 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ac6f33c920771bc599d55765a5a6e62c7}\label{_a_p_i_8h_ac6f33c920771bc599d55765a5a6e62c7}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{T\+A\+S\+K\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}}
 \index{T\+A\+S\+K\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{T\+A\+S\+K\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}{TASK\_MINIMAL\_STACK\_SIZE}}
@@ -639,7 +801,11 @@ Changing this value will not change the priority count without a kernel recompil
 
 The minimum stack depth for a task. Scheduler state is stored on the stack, so even if the task never uses the stack, at least this much space must be allocated.
 
-Function calls and other seemingly innocent constructs may place information on the stack. Err on the side of a larger stack when possible. \mbox{\Hypertarget{_a_p_i_8h_a3082a7e8f15691441dba683711bb823f}\label{_a_p_i_8h_a3082a7e8f15691441dba683711bb823f}} 
+Function calls and other seemingly innocent constructs may place information on the stack. Err on the side of a larger stack when possible. 
+
+Definition at line 1253 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a3082a7e8f15691441dba683711bb823f}\label{_a_p_i_8h_a3082a7e8f15691441dba683711bb823f}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+F\+A\+U\+LT@{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+F\+A\+U\+LT}}
 \index{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+F\+A\+U\+LT@{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+F\+A\+U\+LT}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+F\+A\+U\+LT}{TASK\_PRIORITY\_DEFAULT}}
@@ -647,55 +813,91 @@ Function calls and other seemingly innocent constructs may place information on 
 
 The default task priority, which should be used for most tasks.
 
-Default tasks such as \hyperlink{main_8h_a3c7ca506bbc071fa740de13805b7f376}{autonomous()} inherit this priority. \mbox{\Hypertarget{_a_p_i_8h_a1b3cef27c58c5cac78f170c90dbf7a89}\label{_a_p_i_8h_a1b3cef27c58c5cac78f170c90dbf7a89}} 
+Default tasks such as \hyperlink{main_8h_a3c7ca506bbc071fa740de13805b7f376}{autonomous()} inherit this priority. 
+
+Definition at line 1232 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a1b3cef27c58c5cac78f170c90dbf7a89}\label{_a_p_i_8h_a1b3cef27c58c5cac78f170c90dbf7a89}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+H\+I\+G\+H\+E\+ST@{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+H\+I\+G\+H\+E\+ST}}
 \index{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+H\+I\+G\+H\+E\+ST@{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+H\+I\+G\+H\+E\+ST}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+H\+I\+G\+H\+E\+ST}{TASK\_PRIORITY\_HIGHEST}}
 {\footnotesize\ttfamily \#define T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+H\+I\+G\+H\+E\+ST~(\hyperlink{_a_p_i_8h_ad896f092de28df06fbcdcf925a933996}{T\+A\+S\+K\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+O\+R\+I\+T\+I\+ES} -\/ 1)}
 
-The highest priority that can be assigned to a task. Unlike the lowest priority, this priority can be safely used without hampering interrupts. Beware of deadlock. \mbox{\Hypertarget{_a_p_i_8h_aa494e6c8001ab827484775bfd5c0fe9d}\label{_a_p_i_8h_aa494e6c8001ab827484775bfd5c0fe9d}} 
+The highest priority that can be assigned to a task. Unlike the lowest priority, this priority can be safely used without hampering interrupts. Beware of deadlock. 
+
+Definition at line 1237 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_aa494e6c8001ab827484775bfd5c0fe9d}\label{_a_p_i_8h_aa494e6c8001ab827484775bfd5c0fe9d}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+L\+O\+W\+E\+ST@{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+L\+O\+W\+E\+ST}}
 \index{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+L\+O\+W\+E\+ST@{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+L\+O\+W\+E\+ST}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+L\+O\+W\+E\+ST}{TASK\_PRIORITY\_LOWEST}}
 {\footnotesize\ttfamily \#define T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+L\+O\+W\+E\+ST~0}
 
-The lowest priority that can be assigned to a task, which puts it on a level with the idle task. This may cause severe performance problems and is generally not recommended. \mbox{\Hypertarget{_a_p_i_8h_a9dbd080b9c7d79b61e865717bc06306c}\label{_a_p_i_8h_a9dbd080b9c7d79b61e865717bc06306c}} 
+The lowest priority that can be assigned to a task, which puts it on a level with the idle task. This may cause severe performance problems and is generally not recommended. 
+
+Definition at line 1226 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a9dbd080b9c7d79b61e865717bc06306c}\label{_a_p_i_8h_a9dbd080b9c7d79b61e865717bc06306c}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+A\+B\+LE@{T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+A\+B\+LE}}
 \index{T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+A\+B\+LE@{T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+A\+B\+LE}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+A\+B\+LE}{TASK\_RUNNABLE}}
 {\footnotesize\ttfamily \#define T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+A\+B\+LE~2}
 
-Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is exists and is available to run, but not currently running. \mbox{\Hypertarget{_a_p_i_8h_a17e3f99a030e5dfefb8f9815600e3fed}\label{_a_p_i_8h_a17e3f99a030e5dfefb8f9815600e3fed}} 
+Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is exists and is available to run, but not currently running. 
+
+Definition at line 1267 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a17e3f99a030e5dfefb8f9815600e3fed}\label{_a_p_i_8h_a17e3f99a030e5dfefb8f9815600e3fed}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG@{T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG}}
 \index{T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG@{T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG}{TASK\_RUNNING}}
 {\footnotesize\ttfamily \#define T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG~1}
 
-Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is actively executing. \mbox{\Hypertarget{_a_p_i_8h_a1fa55559982d06fb5f1b3f2fbf5814e5}\label{_a_p_i_8h_a1fa55559982d06fb5f1b3f2fbf5814e5}} 
+Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is actively executing. 
+
+Definition at line 1262 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a1fa55559982d06fb5f1b3f2fbf5814e5}\label{_a_p_i_8h_a1fa55559982d06fb5f1b3f2fbf5814e5}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+S\+L\+E\+E\+P\+I\+NG@{T\+A\+S\+K\+\_\+\+S\+L\+E\+E\+P\+I\+NG}}
 \index{T\+A\+S\+K\+\_\+\+S\+L\+E\+E\+P\+I\+NG@{T\+A\+S\+K\+\_\+\+S\+L\+E\+E\+P\+I\+NG}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+S\+L\+E\+E\+P\+I\+NG}{TASK\_SLEEPING}}
 {\footnotesize\ttfamily \#define T\+A\+S\+K\+\_\+\+S\+L\+E\+E\+P\+I\+NG~3}
 
-Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is delayed or blocked waiting for a semaphore, mutex, or I/O operation. \mbox{\Hypertarget{_a_p_i_8h_ac90388d86d6cacd27fb13b218daff9ba}\label{_a_p_i_8h_ac90388d86d6cacd27fb13b218daff9ba}} 
+Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is delayed or blocked waiting for a semaphore, mutex, or I/O operation. 
+
+Definition at line 1272 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ac90388d86d6cacd27fb13b218daff9ba}\label{_a_p_i_8h_ac90388d86d6cacd27fb13b218daff9ba}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!T\+A\+S\+K\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED@{T\+A\+S\+K\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED}}
 \index{T\+A\+S\+K\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED@{T\+A\+S\+K\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{T\+A\+S\+K\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED}{TASK\_SUSPENDED}}
 {\footnotesize\ttfamily \#define T\+A\+S\+K\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED~4}
 
-Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is suspended using \hyperlink{_a_p_i_8h_ab56a51f337ad1903ad2bbce095744170}{task\+Suspend()}. \mbox{\Hypertarget{_a_p_i_8h_ad94ac6d5e345a1f794174d9bb7c6f69c}\label{_a_p_i_8h_ad94ac6d5e345a1f794174d9bb7c6f69c}} 
+Constant returned from \hyperlink{_a_p_i_8h_a4f805fd479cb4c427e8f4edfa7d55143}{task\+Get\+State()} when the task is suspended using \hyperlink{_a_p_i_8h_ab56a51f337ad1903ad2bbce095744170}{task\+Suspend()}. 
+
+Definition at line 1276 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ad94ac6d5e345a1f794174d9bb7c6f69c}\label{_a_p_i_8h_ad94ac6d5e345a1f794174d9bb7c6f69c}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!uart1@{uart1}}
 \index{uart1@{uart1}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{uart1}{uart1}}
 {\footnotesize\ttfamily \#define uart1~((\hyperlink{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}{F\+I\+LE} $\ast$)1)}
 
-U\+A\+RT 1 on the Cortex; must be opened first using \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()}. \mbox{\Hypertarget{_a_p_i_8h_a001e6f2f6c87e1e2bcff741ab586024e}\label{_a_p_i_8h_a001e6f2f6c87e1e2bcff741ab586024e}} 
+U\+A\+RT 1 on the Cortex; must be opened first using \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()}. 
+
+Definition at line 819 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a001e6f2f6c87e1e2bcff741ab586024e}\label{_a_p_i_8h_a001e6f2f6c87e1e2bcff741ab586024e}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!uart2@{uart2}}
 \index{uart2@{uart2}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{uart2}{uart2}}
 {\footnotesize\ttfamily \#define uart2~((\hyperlink{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}{F\+I\+LE} $\ast$)2)}
 
 U\+A\+RT 2 on the Cortex; must be opened first using \hyperlink{_a_p_i_8h_acce6911cfbfe971d368444eecd918301}{usart\+Init()}. 
+
+Definition at line 823 of file A\+P\+I.\+h.
+
+
 
 \subsection{Typedef Documentation}
 \mbox{\Hypertarget{_a_p_i_8h_a8289b20280bf9db1462f60dae76d2939}\label{_a_p_i_8h_a8289b20280bf9db1462f60dae76d2939}} 
@@ -706,7 +908,11 @@ U\+A\+RT 2 on the Cortex; must be opened first using \hyperlink{_a_p_i_8h_acce69
 
 Reference type for an initialized encoder.
 
-Encoder information is stored as an opaque pointer to a structure in memory; as this is a pointer type, it can be safely passed or stored by value. \mbox{\Hypertarget{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}\label{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}} 
+Encoder information is stored as an opaque pointer to a structure in memory; as this is a pointer type, it can be safely passed or stored by value. 
+
+Definition at line 605 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}\label{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!F\+I\+LE@{F\+I\+LE}}
 \index{F\+I\+LE@{F\+I\+LE}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{F\+I\+LE}{FILE}}
@@ -714,7 +920,11 @@ Encoder information is stored as an opaque pointer to a structure in memory; as 
 
 F\+I\+LE is an integer referring to a stream for the standard I/O functions.
 
-F\+I\+LE $\ast$ is the standard library method of referring to a file pointer, even though there is actually nothing there. \mbox{\Hypertarget{_a_p_i_8h_a04e06985633aa933343fcfa3d7fb268d}\label{_a_p_i_8h_a04e06985633aa933343fcfa3d7fb268d}} 
+F\+I\+LE $\ast$ is the standard library method of referring to a file pointer, even though there is actually nothing there. 
+
+Definition at line 744 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a04e06985633aa933343fcfa3d7fb268d}\label{_a_p_i_8h_a04e06985633aa933343fcfa3d7fb268d}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!Gyro@{Gyro}}
 \index{Gyro@{Gyro}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{Gyro}{Gyro}}
@@ -722,13 +932,21 @@ F\+I\+LE $\ast$ is the standard library method of referring to a file pointer, e
 
 Reference type for an initialized gyro.
 
-Gyro information is stored as an opaque pointer to a structure in memory; as this is a pointer type, it can be safely passed or stored by value. \mbox{\Hypertarget{_a_p_i_8h_a5bbb1ca889e36aec7b4fce324c2662c4}\label{_a_p_i_8h_a5bbb1ca889e36aec7b4fce324c2662c4}} 
+Gyro information is stored as an opaque pointer to a structure in memory; as this is a pointer type, it can be safely passed or stored by value. 
+
+Definition at line 548 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a5bbb1ca889e36aec7b4fce324c2662c4}\label{_a_p_i_8h_a5bbb1ca889e36aec7b4fce324c2662c4}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!Interrupt\+Handler@{Interrupt\+Handler}}
 \index{Interrupt\+Handler@{Interrupt\+Handler}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{Interrupt\+Handler}{InterruptHandler}}
 {\footnotesize\ttfamily typedef void($\ast$ Interrupt\+Handler) (unsigned char pin)}
 
-Type definition for interrupt handlers. Such functions must accept one argument indicating the pin which changed. \mbox{\Hypertarget{_a_p_i_8h_a9b40607ca13d2b5261f47f613e3c4fa4}\label{_a_p_i_8h_a9b40607ca13d2b5261f47f613e3c4fa4}} 
+Type definition for interrupt handlers. Such functions must accept one argument indicating the pin which changed. 
+
+Definition at line 332 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a9b40607ca13d2b5261f47f613e3c4fa4}\label{_a_p_i_8h_a9b40607ca13d2b5261f47f613e3c4fa4}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!Mutex@{Mutex}}
 \index{Mutex@{Mutex}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{Mutex}{Mutex}}
@@ -736,7 +954,11 @@ Type definition for interrupt handlers. Such functions must accept one argument 
 
 Type by which mutexes are referenced.
 
-As this is a pointer type, it can be safely passed or stored by value. \mbox{\Hypertarget{_a_p_i_8h_a884363b5e46c2eedeae95c179aaeb717}\label{_a_p_i_8h_a884363b5e46c2eedeae95c179aaeb717}} 
+As this is a pointer type, it can be safely passed or stored by value. 
+
+Definition at line 1289 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a884363b5e46c2eedeae95c179aaeb717}\label{_a_p_i_8h_a884363b5e46c2eedeae95c179aaeb717}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!Semaphore@{Semaphore}}
 \index{Semaphore@{Semaphore}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{Semaphore}{Semaphore}}
@@ -744,7 +966,11 @@ As this is a pointer type, it can be safely passed or stored by value. \mbox{\Hy
 
 Type by which semaphores are referenced.
 
-As this is a pointer type, it can be safely passed or stored by value. \mbox{\Hypertarget{_a_p_i_8h_af3bbcf99b9e4561ebbae4a1f283ba6a3}\label{_a_p_i_8h_af3bbcf99b9e4561ebbae4a1f283ba6a3}} 
+As this is a pointer type, it can be safely passed or stored by value. 
+
+Definition at line 1295 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_af3bbcf99b9e4561ebbae4a1f283ba6a3}\label{_a_p_i_8h_af3bbcf99b9e4561ebbae4a1f283ba6a3}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!Task\+Code@{Task\+Code}}
 \index{Task\+Code@{Task\+Code}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{Task\+Code}{TaskCode}}
@@ -754,7 +980,11 @@ Type for defining task functions. Task functions must accept one parameter of ty
 
 For example\+:
 
-void My\+Task(void $\ast$ignore) \{ while (1); \} \mbox{\Hypertarget{_a_p_i_8h_a23dca3c0de10682afb982677ff292f77}\label{_a_p_i_8h_a23dca3c0de10682afb982677ff292f77}} 
+void My\+Task(void $\ast$ignore) \{ while (1); \} 
+
+Definition at line 1306 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a23dca3c0de10682afb982677ff292f77}\label{_a_p_i_8h_a23dca3c0de10682afb982677ff292f77}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!Task\+Handle@{Task\+Handle}}
 \index{Task\+Handle@{Task\+Handle}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{Task\+Handle}{TaskHandle}}
@@ -762,7 +992,11 @@ void My\+Task(void $\ast$ignore) \{ while (1); \} \mbox{\Hypertarget{_a_p_i_8h_a
 
 Type by which tasks are referenced.
 
-As this is a pointer type, it can be safely passed or stored by value. \mbox{\Hypertarget{_a_p_i_8h_a527ee5b64142c3505d6931d8ed7ac6b7}\label{_a_p_i_8h_a527ee5b64142c3505d6931d8ed7ac6b7}} 
+As this is a pointer type, it can be safely passed or stored by value. 
+
+Definition at line 1283 of file A\+P\+I.\+h.
+
+\mbox{\Hypertarget{_a_p_i_8h_a527ee5b64142c3505d6931d8ed7ac6b7}\label{_a_p_i_8h_a527ee5b64142c3505d6931d8ed7ac6b7}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!Ultrasonic@{Ultrasonic}}
 \index{Ultrasonic@{Ultrasonic}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{Ultrasonic}{Ultrasonic}}
@@ -771,6 +1005,10 @@ As this is a pointer type, it can be safely passed or stored by value. \mbox{\Hy
 Reference type for an initialized ultrasonic sensor.
 
 Ultrasonic information is stored as an opaque pointer to a structure in memory; as this is a pointer type, it can be safely passed or stored by value. 
+
+Definition at line 653 of file A\+P\+I.\+h.
+
+
 
 \subsection{Function Documentation}
 \mbox{\Hypertarget{_a_p_i_8h_abec08731fda5d739cd44c54909beef99}\label{_a_p_i_8h_abec08731fda5d739cd44c54909beef99}} 
@@ -1538,6 +1776,8 @@ This function, unlike the other I\+ME functions, is not thread safe. If using im
 \begin{DoxyReturn}{Returns}
 the number of I\+M\+Es successfully initialized. 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3
 \mbox{\Hypertarget{_a_p_i_8h_ab1ef9ee5f8878856896a6c920ed762fc}\label{_a_p_i_8h_ab1ef9ee5f8878856896a6c920ed762fc}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!ime\+Reset@{ime\+Reset}}
 \index{ime\+Reset@{ime\+Reset}!A\+P\+I.\+h@{A\+P\+I.\+h}}
@@ -1657,7 +1897,7 @@ Gets the value of a control axis on the V\+EX joystick. Returns the value from -
 \hline
 \end{DoxyParams}
 Here is the caller graph for this function\+:
-% FIG 3
+% FIG 4
 \mbox{\Hypertarget{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}\label{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!joystick\+Get\+Digital@{joystick\+Get\+Digital}}
 \index{joystick\+Get\+Digital@{joystick\+Get\+Digital}!A\+P\+I.\+h@{A\+P\+I.\+h}}
@@ -1705,6 +1945,8 @@ If the L\+CD was not initialized before, the text currently on the screen will b
 {\em lcd\+Port} & the L\+CD to initialize, either uart1 or uart2 \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed}\label{_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!lcd\+Read\+Buttons@{lcd\+Read\+Buttons}}
 \index{lcd\+Read\+Buttons@{lcd\+Read\+Buttons}!A\+P\+I.\+h@{A\+P\+I.\+h}}
@@ -1723,8 +1965,6 @@ For example, if the left and right buttons are pushed, (1 $\vert$ 4) = 5 will be
 \begin{DoxyReturn}{Returns}
 the buttons pressed as a bit mask 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-% FIG 4
 \mbox{\Hypertarget{_a_p_i_8h_aeafd247b27813122cfee95e0cecf188b}\label{_a_p_i_8h_aeafd247b27813122cfee95e0cecf188b}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!lcd\+Set\+Backlight@{lcd\+Set\+Backlight}}
 \index{lcd\+Set\+Backlight@{lcd\+Set\+Backlight}!A\+P\+I.\+h@{A\+P\+I.\+h}}
@@ -1742,6 +1982,8 @@ Turning it off will save power but may make it more difficult to read in dim con
 {\em backlight} & true to turn the backlight on, or false to turn it off \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 6
 \mbox{\Hypertarget{_a_p_i_8h_aae51423c0e108729bbb4d26a1b265eb3}\label{_a_p_i_8h_aae51423c0e108729bbb4d26a1b265eb3}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!lcd\+Set\+Text@{lcd\+Set\+Text}}
 \index{lcd\+Set\+Text@{lcd\+Set\+Text}!A\+P\+I.\+h@{A\+P\+I.\+h}}
@@ -1836,7 +2078,7 @@ Do not use \hyperlink{_a_p_i_8h_a03c5b04b472d024281f62d7af8854a8e}{motor\+Set()}
 \hline
 \end{DoxyParams}
 Here is the caller graph for this function\+:
-% FIG 5
+% FIG 7
 \mbox{\Hypertarget{_a_p_i_8h_a339844ebc35f48a14945b73edaeca498}\label{_a_p_i_8h_a339844ebc35f48a14945b73edaeca498}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!motor\+Stop@{motor\+Stop}}
 \index{motor\+Stop@{motor\+Stop}!A\+P\+I.\+h@{A\+P\+I.\+h}}
@@ -1945,7 +2187,9 @@ Do note that I\+N\+P\+UT by default turns on the pull-\/up resistor, as most V\+
 
 Returns the backup battery voltage in millivolts.
 
-If no backup battery is connected, returns 0. \mbox{\Hypertarget{_a_p_i_8h_aeb5efefae0d6fa559dae5a7e5a77c956}\label{_a_p_i_8h_aeb5efefae0d6fa559dae5a7e5a77c956}} 
+If no backup battery is connected, returns 0. Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{_a_p_i_8h_aeb5efefae0d6fa559dae5a7e5a77c956}\label{_a_p_i_8h_aeb5efefae0d6fa559dae5a7e5a77c956}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!power\+Level\+Main@{power\+Level\+Main}}
 \index{power\+Level\+Main@{power\+Level\+Main}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{power\+Level\+Main()}{powerLevelMain()}}
@@ -2095,6 +2339,8 @@ Sets the team name displayed to the V\+EX field control and V\+EX Firmware Upgra
 {\em name} & a string containing the team name; only the first eight characters will be shown \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 9
 \mbox{\Hypertarget{_a_p_i_8h_ada81026ae730d990159aab26c302a3ad}\label{_a_p_i_8h_ada81026ae730d990159aab26c302a3ad}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!snprintf@{snprintf}}
 \index{snprintf@{snprintf}!A\+P\+I.\+h@{A\+P\+I.\+h}}
@@ -2493,6 +2739,16 @@ Alias of \hyperlink{_a_p_i_8h_ae93bc867b1aa4a12d6536a497f1b6869}{task\+Delay\+Un
 {\em time} & the duration of the delay in milliseconds (1 000 milliseconds per second) \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{_a_p_i_8h_a8c2e4902f39a7abdea20cdf04007bb8e}\label{_a_p_i_8h_a8c2e4902f39a7abdea20cdf04007bb8e}} 
+\index{A\+P\+I.\+h@{A\+P\+I.\+h}!watchdog\+Init@{watchdog\+Init}}
+\index{watchdog\+Init@{watchdog\+Init}!A\+P\+I.\+h@{A\+P\+I.\+h}}
+\subsubsection{\texorpdfstring{watchdog\+Init()}{watchdogInit()}}
+{\footnotesize\ttfamily void watchdog\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enables I\+W\+DG watchdog timer which will reset the cortex if it locks up due to static shock or a misbehaving task preventing the timer to be reset. Not recovering from static shock will cause the robot to continue moving its motors indefinitely until turned off manually.
+
+This function should only be called once in \hyperlink{main_8h_ad9cda921edb01125bb13c2f86bcf624b}{initialize\+I\+O()} Here is the caller graph for this function\+:
+% FIG 10
 
 
 \subsection{Variable Documentation}
@@ -2502,9 +2758,17 @@ Alias of \hyperlink{_a_p_i_8h_ae93bc867b1aa4a12d6536a497f1b6869}{task\+Delay\+Un
 \subsubsection{\texorpdfstring{format\+String}{formatString}}
 {\footnotesize\ttfamily void unsigned char const char$\ast$ format\+String}
 
+
+
+Definition at line 1165 of file A\+P\+I.\+h.
+
 \mbox{\Hypertarget{_a_p_i_8h_a58c3304a90ff2bb7064ff7187b2da466}\label{_a_p_i_8h_a58c3304a90ff2bb7064ff7187b2da466}} 
 \index{A\+P\+I.\+h@{A\+P\+I.\+h}!line@{line}}
 \index{line@{line}!A\+P\+I.\+h@{A\+P\+I.\+h}}
 \subsubsection{\texorpdfstring{line}{line}}
 {\footnotesize\ttfamily void unsigned char line}
+
+
+
+Definition at line 1165 of file A\+P\+I.\+h.
 

@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "In the Zone Team A", "index.html", [
+  [ "Vex Team A", "index.html", [
     [ "InTheZoneA", "md__r_e_a_d_m_e.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -28,7 +28,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_p_i_8h.html",
-"menu_8h.html#ad1cc81f5773a4f67527e63299b1b24d7"
+"lcd_8h.html#aa0d4ca88701dfecf98796e2028482b69"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

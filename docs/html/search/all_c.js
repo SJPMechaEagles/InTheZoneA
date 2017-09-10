@@ -10,7 +10,7 @@ var searchData=
   ['menu_5fresult',['menu_result',['../structmenu__result.html',1,'']]],
   ['menu_5ftype',['menu_type',['../menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62',1,'menu.h']]],
   ['micros',['micros',['../_a_p_i_8h.html#a8b24cbb7c3486e1bfa05c86db83ecb01',1,'API.h']]],
-  ['middle',['middle',['../structbuttons.html#a8cc5e7f4df5287f9292fba5dd15379ea',1,'buttons']]],
+  ['middle',['middle',['../structlcd__buttons.html#a682104bb266b516795b8533f269e0c74',1,'lcd_buttons']]],
   ['millis',['millis',['../_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd',1,'API.h']]],
   ['min',['min',['../structmenu.html#aea9f5a2490568cd16f46c29df1106fc1',1,'menu']]],
   ['min_5ff',['min_f',['../structmenu.html#a52d27cf45e46c52138c1a6bc4e46773d',1,'menu']]],

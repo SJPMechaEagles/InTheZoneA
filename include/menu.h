@@ -4,24 +4,13 @@
 #include "stdarg.h"
 #include "stdlib.h"
 #include <API.h>
-
-#define PRESSED true
-#define RELESED false
-
-static bool lcd_initialized = false;
-static FILE *lcd_port;
+#include "lcd.h"
 
 enum menu_type {
   int_type,
   float_type,
   string_type
 };
-
-typedef struct buttons {
-  bool left;
-  bool middle;
-  bool right;
-} buttons_t;
 
 struct menu{
   enum menu_type type;
@@ -35,19 +24,6 @@ struct menu{
   float *step_f;
   int current;
 };
-
-buttons_t get_pressed_buttons(){
-  unsigned int btn_binary = lcdReadButtons(lcd_port);
-  bool left = btn_binary & 0x1;
-  bool middle = btn_binary & 0x2;
-  bool right = btn_binary & 0x4;
-  buttons_t btns;
-  btns.left = left;
-  btns.middle = middle;
-  btns.right = right;
-
-  return btns;
-}
 
 struct menu_result {
   int result_index;
@@ -110,11 +86,6 @@ struct menu_result display_menu(struct menu *menu){
   struct menu_result results;
   results.result_index = menu->current;
   return results;
-}
-
-void init_lcd(FILE *lcd_port) {
-  lcdInit (lcd_port);
-  lcd_initialized = true;
 }
 
 void denint_menu(struct menu *menu){

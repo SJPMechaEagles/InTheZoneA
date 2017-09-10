@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="menu_8h">
+    <title>menu.h File Reference</title>
+    <programlisting>#include &quot;stdarg.h&quot;</programlisting>
+    <programlisting>#include &quot;stdlib.h&quot;</programlisting>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+    <programlisting>#include &quot;lcd.h&quot;</programlisting>
+<para>Include dependency diagram for menu.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="menu_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for menu.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="menu_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmenu">menu</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmenu__result">menu_result</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> {
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a1762bddf438155a00ecf0318446e8a83">int_type</link>,
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a67a95930928f80abf404f492d8ab0e22">float_type</link>,
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62afca80dc288f5f112ad3b5a8493758095">string_type</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static struct <link linkend="structmenu">menu</link> * <link linkend="menu_8h_1ae687a91b069c800fac3458e82538b8e5">create_menu</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmenu">menu</link> * <link linkend="menu_8h_1ad278f2d3a0219659e7cdfb3389dd7040">init_menu</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, unsigned int nums, char * options, ... )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmenu">menu</link> * <link linkend="menu_8h_1a684f321ba7d9e2bab78f2025641faa79">init_menu</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, char ** options, unsigned int length)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmenu">menu</link> * <link linkend="menu_8h_1a0f38ebcd231151bda773bad9b08d17f2">init_menu</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, int min, int max, int step)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmenu">menu</link> * <link linkend="menu_8h_1ab0b05be4bdb1ef6554187247e50cc96f">init_menu</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, float min, float max, float step)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmenu__result">menu_result</link> <link linkend="menu_8h_1aee3e9f838cdbb1745c68974490aabb99">display_menu</link> (
+struct <link linkend="structmenu">menu</link> * menu)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="menu_8h_1a84f7c6b4cde1e723a08937762cacc617">denint_menu</link> (
+struct <link linkend="structmenu">menu</link> * menu)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/menu.h</para>
+    </simplesect>
+</section>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buttons',['buttons',['../structbuttons.html',1,'']]]
+  ['lcd_5fbuttons',['lcd_buttons',['../structlcd__buttons.html',1,'']]]
 ];

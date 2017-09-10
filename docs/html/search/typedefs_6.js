@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['semaphore',['Semaphore',['../_a_p_i_8h.html#a884363b5e46c2eedeae95c179aaeb717',1,'API.h']]],
-  ['side',['side',['../drive_8h.html#aa54148a43aa3bad0eb6cb13d8c1c0fea',1,'drive.h']]]
+  ['taskcode',['TaskCode',['../_a_p_i_8h.html#af3bbcf99b9e4561ebbae4a1f283ba6a3',1,'API.h']]],
+  ['taskhandle',['TaskHandle',['../_a_p_i_8h.html#a23dca3c0de10682afb982677ff292f77',1,'API.h']]]
 ];

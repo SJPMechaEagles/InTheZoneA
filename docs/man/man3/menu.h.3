@@ -1,0 +1,100 @@
+.TH "include/menu.h" 3 "Sat Sep 9 2017" "Vex Team A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/menu.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stdarg\&.h'\fP
+.br
+\fC#include 'stdlib\&.h'\fP
+.br
+\fC#include <API\&.h>\fP
+.br
+\fC#include 'lcd\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmenu\fP"
+.br
+.ti -1c
+.RI "struct \fBmenu_result\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBmenu_type\fP { \fBint_type\fP, \fBfloat_type\fP, \fBstring_type\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmenu\fP * \fBinit_menu\fP (enum \fBmenu_type\fP type, unsigned int nums, char *options,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "struct \fBmenu\fP * \fBinit_menu\fP (enum \fBmenu_type\fP type, char **options, unsigned int length)"
+.br
+.ti -1c
+.RI "struct \fBmenu\fP * \fBinit_menu\fP (enum \fBmenu_type\fP type, int min, int max, int step)"
+.br
+.ti -1c
+.RI "struct \fBmenu\fP * \fBinit_menu\fP (enum \fBmenu_type\fP type, float min, float max, float step)"
+.br
+.ti -1c
+.RI "struct \fBmenu_result\fP \fBdisplay_menu\fP (struct \fBmenu\fP *\fBmenu\fP)"
+.br
+.ti -1c
+.RI "void \fBdenint_menu\fP (struct \fBmenu\fP *\fBmenu\fP)"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBmenu_type\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIint_type \fP\fP
+.TP
+\fB\fIfloat_type \fP\fP
+.TP
+\fB\fIstring_type \fP\fP
+.PP
+Definition at line 9 of file menu\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "void denint_menu (struct \fBmenu\fP * menu)"
+
+.PP
+Definition at line 91 of file menu\&.h\&.
+.SS "struct \fBmenu_result\fP display_menu (struct \fBmenu\fP * menu)"
+
+.PP
+Definition at line 76 of file menu\&.h\&.
+.SS "struct \fBmenu\fP* init_menu (enum \fBmenu_type\fP type, unsigned int nums, char * options,  \&.\&.\&.)"
+
+.PP
+Definition at line 39 of file menu\&.h\&.
+.SS "struct \fBmenu\fP* init_menu (enum \fBmenu_type\fP type, char ** options, unsigned int length)"
+
+.PP
+Definition at line 53 of file menu\&.h\&.
+.SS "struct \fBmenu\fP* init_menu (enum \fBmenu_type\fP type, int min, int max, int step)"
+
+.PP
+Definition at line 60 of file menu\&.h\&.
+.SS "struct \fBmenu\fP* init_menu (enum \fBmenu_type\fP type, float min, float max, float step)"
+
+.PP
+Definition at line 68 of file menu\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team A from the source code\&.

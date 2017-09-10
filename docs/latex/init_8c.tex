@@ -6,6 +6,8 @@ File for initialization code.
 
 
 {\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}encoders.\+h\char`\"{}}\newline
 Include dependency graph for init.\+c\+:
 % FIG 0
 \subsection*{Functions}
@@ -37,7 +39,13 @@ Runs user initialization code. This function will be started in its own task wit
 
 This function should initialize most sensors (gyro, encoders, ultrasonics), L\+C\+Ds, global variables, and I\+M\+Es.
 
-This function must exit relatively promptly, or the \hyperlink{main_8h_ac71a94af413917f27d108e95c4d6f6a7}{operator\+Control()} and \hyperlink{main_8h_a3c7ca506bbc071fa740de13805b7f376}{autonomous()} tasks will not start. An autonomous mode selection menu like the pre\+\_\+auton() in other environments can be implemented in this task if desired. \mbox{\Hypertarget{init_8c_ad9cda921edb01125bb13c2f86bcf624b}\label{init_8c_ad9cda921edb01125bb13c2f86bcf624b}} 
+This function must exit relatively promptly, or the \hyperlink{main_8h_ac71a94af413917f27d108e95c4d6f6a7}{operator\+Control()} and \hyperlink{main_8h_a3c7ca506bbc071fa740de13805b7f376}{autonomous()} tasks will not start. An autonomous mode selection menu like the pre\+\_\+auton() in other environments can be implemented in this task if desired. 
+
+Definition at line 43 of file init.\+c.
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{init_8c_ad9cda921edb01125bb13c2f86bcf624b}\label{init_8c_ad9cda921edb01125bb13c2f86bcf624b}} 
 \index{init.\+c@{init.\+c}!initialize\+IO@{initialize\+IO}}
 \index{initialize\+IO@{initialize\+IO}!init.\+c@{init.\+c}}
 \subsubsection{\texorpdfstring{initialize\+I\+O()}{initializeIO()}}
@@ -46,3 +54,8 @@ This function must exit relatively promptly, or the \hyperlink{main_8h_ac71a94af
 Runs pre-\/initialization code. This function will be started in kernel mode one time while the V\+EX Cortex is starting up. As the scheduler is still paused, most A\+PI functions will fail.
 
 The purpose of this function is solely to set the default pin modes (\hyperlink{_a_p_i_8h_a1875409d12eee562555bda94cad7f973}{pin\+Mode()}) and port states (\hyperlink{_a_p_i_8h_a23e767e5b47fa61d4e2cc02e6f15c7ab}{digital\+Write()}) of limit switches, push buttons, and solenoids. It can also safely configure a U\+A\+RT port (usart\+Open()) but cannot set up an L\+CD (\hyperlink{_a_p_i_8h_a51af160afcbfb860dfff75d91ffb3824}{lcd\+Init()}). 
+
+Definition at line 25 of file init.\+c.
+
+Here is the call graph for this function\+:
+% FIG 2

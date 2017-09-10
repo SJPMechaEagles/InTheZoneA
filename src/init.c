@@ -42,10 +42,14 @@ void initializeIO() {
  */
 void initialize() {
   lcdInit(uart1);
-  lcdClear(uart1);
   if(!init_encoders()) {
     lcdSetBacklight(uart1, true);
     lcdPrint(uart1, 1, "CHECK IMEs!");
-    lcdPrint(uart1, 1, "Not all IMEs plugged in.");
+    lcdPrint(uart1, 1, "btn to confirm");
+    waitForConfirmation();
+  }
+
+  if(powerLevelBackup()/1000 == 0) {
+
   }
 }

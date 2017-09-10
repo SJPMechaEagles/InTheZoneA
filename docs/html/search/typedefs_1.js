@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['encoder',['Encoder',['../_a_p_i_8h.html#a8289b20280bf9db1462f60dae76d2939',1,'API.h']]]
+  ['file',['FILE',['../_a_p_i_8h.html#ac15bbd02a147d1595cdfb8b2979693d7',1,'API.h']]]
 ];

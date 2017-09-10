@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="init_8c">
+    <title>init.c File Reference</title>
+    <programlisting>#include &quot;main.h&quot;</programlisting>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+    <programlisting>#include &quot;encoders.h&quot;</programlisting>
+<para>Include dependency diagram for init.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="init_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for init.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="init_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="init_8c_1ad9cda921edb01125bb13c2f86bcf624b">initializeIO</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="init_8c_1a25a40b6614565f755233080a384c35f1">initialize</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>File for initialization code. </para>
+
+<para>This file should contain the user <link linkend="init_8c_1a25a40b6614565f755233080a384c35f1">initialize()</link> function and any functions related to it.</para>
+
+<para>Any copyright is dedicated to the Public Domain. <link xlink:href="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</link></para>
+
+<para>PROS contains FreeRTOS (<link xlink:href="http://www.freertos.org">http://www.freertos.org</link>) whose source code may be obtained from <link xlink:href="http://sourceforge.net/projects/freertos/files/">http://sourceforge.net/projects/freertos/files/</link> or on request. </para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/init.c</para>
+    </simplesect>
+</section>

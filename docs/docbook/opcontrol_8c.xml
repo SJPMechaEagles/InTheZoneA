@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="opcontrol_8c">
+    <title>opcontrol.c File Reference</title>
+    <programlisting>#include &quot;main.h&quot;</programlisting>
+    <programlisting>#include &quot;drive.h&quot;</programlisting>
+<para>Include dependency diagram for opcontrol.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="opcontrol_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for opcontrol.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="opcontrol_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>File for operator control code. </para>
+
+<para>This file should contain the user <link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl()</link> function and any functions related to it.</para>
+
+<para>Any copyright is dedicated to the Public Domain. <link xlink:href="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</link></para>
+
+<para>PROS contains FreeRTOS (<link xlink:href="http://www.freertos.org">http://www.freertos.org</link>) whose source code may be obtained from <link xlink:href="http://sourceforge.net/projects/freertos/files/">http://sourceforge.net/projects/freertos/files/</link> or on request. </para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/opcontrol.c</para>
+    </simplesect>
+</section>

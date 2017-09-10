@@ -3,28 +3,15 @@
 {\ttfamily \#include \char`\"{}stdarg.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
 Include dependency graph for menu.\+h\+:
 % FIG 0
 \subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structbuttons}{buttons}
-\item 
 struct \hyperlink{structmenu}{menu}
 \item 
 struct \hyperlink{structmenu__result}{menu\+\_\+result}
-\end{DoxyCompactItemize}
-\subsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \hyperlink{menu_8h_a654adff3c664f27f0b29c24af818dd26}{P\+R\+E\+S\+S\+ED}~true
-\item 
-\#define \hyperlink{menu_8h_a0fc6fd4148b566d2656cab72cd691b5e}{R\+E\+L\+E\+S\+ED}~false
-\end{DoxyCompactItemize}
-\subsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef struct \hyperlink{structbuttons}{buttons} \hyperlink{menu_8h_a4ff38f2e1bc526a24dc4b8017b52c20e}{buttons\+\_\+t}
 \end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -37,8 +24,6 @@ enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} \{ \h
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{menu_8h_a4ff38f2e1bc526a24dc4b8017b52c20e}{buttons\+\_\+t} \hyperlink{menu_8h_aa9a4e5adb901d98d53599e136792a07a}{get\+\_\+pressed\+\_\+buttons} ()
-\item 
 struct \hyperlink{structmenu}{menu} $\ast$ \hyperlink{menu_8h_ad278f2d3a0219659e7cdfb3389dd7040}{init\+\_\+menu} (enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} type, unsigned int nums, char $\ast$options,...)
 \item 
 struct \hyperlink{structmenu}{menu} $\ast$ \hyperlink{menu_8h_a684f321ba7d9e2bab78f2025641faa79}{init\+\_\+menu} (enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} type, char $\ast$$\ast$options, unsigned int length)
@@ -49,34 +34,8 @@ struct \hyperlink{structmenu}{menu} $\ast$ \hyperlink{menu_8h_ab0b05be4bdb1ef655
 \item 
 struct \hyperlink{structmenu__result}{menu\+\_\+result} \hyperlink{menu_8h_aee3e9f838cdbb1745c68974490aabb99}{display\+\_\+menu} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu})
 \item 
-void \hyperlink{menu_8h_ad1cc81f5773a4f67527e63299b1b24d7}{init\+\_\+lcd} (\hyperlink{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}{F\+I\+LE} $\ast$lcd\+\_\+port)
-\item 
 void \hyperlink{menu_8h_a84f7c6b4cde1e723a08937762cacc617}{denint\+\_\+menu} (struct \hyperlink{structmenu}{menu} $\ast$\hyperlink{structmenu}{menu})
 \end{DoxyCompactItemize}
-
-
-\subsection{Macro Definition Documentation}
-\mbox{\Hypertarget{menu_8h_a654adff3c664f27f0b29c24af818dd26}\label{menu_8h_a654adff3c664f27f0b29c24af818dd26}} 
-\index{menu.\+h@{menu.\+h}!P\+R\+E\+S\+S\+ED@{P\+R\+E\+S\+S\+ED}}
-\index{P\+R\+E\+S\+S\+ED@{P\+R\+E\+S\+S\+ED}!menu.\+h@{menu.\+h}}
-\subsubsection{\texorpdfstring{P\+R\+E\+S\+S\+ED}{PRESSED}}
-{\footnotesize\ttfamily \#define P\+R\+E\+S\+S\+ED~true}
-
-\mbox{\Hypertarget{menu_8h_a0fc6fd4148b566d2656cab72cd691b5e}\label{menu_8h_a0fc6fd4148b566d2656cab72cd691b5e}} 
-\index{menu.\+h@{menu.\+h}!R\+E\+L\+E\+S\+ED@{R\+E\+L\+E\+S\+ED}}
-\index{R\+E\+L\+E\+S\+ED@{R\+E\+L\+E\+S\+ED}!menu.\+h@{menu.\+h}}
-\subsubsection{\texorpdfstring{R\+E\+L\+E\+S\+ED}{RELESED}}
-{\footnotesize\ttfamily \#define R\+E\+L\+E\+S\+ED~false}
-
-
-
-\subsection{Typedef Documentation}
-\mbox{\Hypertarget{menu_8h_a4ff38f2e1bc526a24dc4b8017b52c20e}\label{menu_8h_a4ff38f2e1bc526a24dc4b8017b52c20e}} 
-\index{menu.\+h@{menu.\+h}!buttons\+\_\+t@{buttons\+\_\+t}}
-\index{buttons\+\_\+t@{buttons\+\_\+t}!menu.\+h@{menu.\+h}}
-\subsubsection{\texorpdfstring{buttons\+\_\+t}{buttons\_t}}
-{\footnotesize\ttfamily typedef struct \hyperlink{structbuttons}{buttons}  \hyperlink{menu_8h_a4ff38f2e1bc526a24dc4b8017b52c20e}{buttons\+\_\+t}}
-
 
 
 \subsection{Enumeration Type Documentation}
@@ -102,6 +61,10 @@ string\+\_\+type&\\
 \end{DoxyEnumFields}
 
 
+Definition at line 9 of file menu.\+h.
+
+
+
 \subsection{Function Documentation}
 \mbox{\Hypertarget{menu_8h_a84f7c6b4cde1e723a08937762cacc617}\label{menu_8h_a84f7c6b4cde1e723a08937762cacc617}} 
 \index{menu.\+h@{menu.\+h}!denint\+\_\+menu@{denint\+\_\+menu}}
@@ -109,35 +72,31 @@ string\+\_\+type&\\
 \subsubsection{\texorpdfstring{denint\+\_\+menu()}{denint\_menu()}}
 {\footnotesize\ttfamily void denint\+\_\+menu (\begin{DoxyParamCaption}\item[{struct \hyperlink{structmenu}{menu} $\ast$}]{menu }\end{DoxyParamCaption})}
 
+
+
+Definition at line 91 of file menu.\+h.
+
 \mbox{\Hypertarget{menu_8h_aee3e9f838cdbb1745c68974490aabb99}\label{menu_8h_aee3e9f838cdbb1745c68974490aabb99}} 
 \index{menu.\+h@{menu.\+h}!display\+\_\+menu@{display\+\_\+menu}}
 \index{display\+\_\+menu@{display\+\_\+menu}!menu.\+h@{menu.\+h}}
 \subsubsection{\texorpdfstring{display\+\_\+menu()}{display\_menu()}}
 {\footnotesize\ttfamily struct \hyperlink{structmenu__result}{menu\+\_\+result} display\+\_\+menu (\begin{DoxyParamCaption}\item[{struct \hyperlink{structmenu}{menu} $\ast$}]{menu }\end{DoxyParamCaption})}
 
+
+
+Definition at line 76 of file menu.\+h.
+
 Here is the call graph for this function\+:
 % FIG 1
-\mbox{\Hypertarget{menu_8h_aa9a4e5adb901d98d53599e136792a07a}\label{menu_8h_aa9a4e5adb901d98d53599e136792a07a}} 
-\index{menu.\+h@{menu.\+h}!get\+\_\+pressed\+\_\+buttons@{get\+\_\+pressed\+\_\+buttons}}
-\index{get\+\_\+pressed\+\_\+buttons@{get\+\_\+pressed\+\_\+buttons}!menu.\+h@{menu.\+h}}
-\subsubsection{\texorpdfstring{get\+\_\+pressed\+\_\+buttons()}{get\_pressed\_buttons()}}
-{\footnotesize\ttfamily \hyperlink{menu_8h_a4ff38f2e1bc526a24dc4b8017b52c20e}{buttons\+\_\+t} get\+\_\+pressed\+\_\+buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:
-% FIG 2
-Here is the caller graph for this function\+:
-% FIG 3
-\mbox{\Hypertarget{menu_8h_ad1cc81f5773a4f67527e63299b1b24d7}\label{menu_8h_ad1cc81f5773a4f67527e63299b1b24d7}} 
-\index{menu.\+h@{menu.\+h}!init\+\_\+lcd@{init\+\_\+lcd}}
-\index{init\+\_\+lcd@{init\+\_\+lcd}!menu.\+h@{menu.\+h}}
-\subsubsection{\texorpdfstring{init\+\_\+lcd()}{init\_lcd()}}
-{\footnotesize\ttfamily void init\+\_\+lcd (\begin{DoxyParamCaption}\item[{\hyperlink{_a_p_i_8h_ac15bbd02a147d1595cdfb8b2979693d7}{F\+I\+LE} $\ast$}]{lcd\+\_\+port }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{menu_8h_ad278f2d3a0219659e7cdfb3389dd7040}\label{menu_8h_ad278f2d3a0219659e7cdfb3389dd7040}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu@{init\+\_\+menu}}
 \index{init\+\_\+menu@{init\+\_\+menu}!menu.\+h@{menu.\+h}}
 \subsubsection{\texorpdfstring{init\+\_\+menu()}{init\_menu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily struct \hyperlink{structmenu}{menu}$\ast$ init\+\_\+menu (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{unsigned int}]{nums,  }\item[{char $\ast$}]{options,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file menu.\+h.
 
 \mbox{\Hypertarget{menu_8h_a684f321ba7d9e2bab78f2025641faa79}\label{menu_8h_a684f321ba7d9e2bab78f2025641faa79}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu@{init\+\_\+menu}}
@@ -145,15 +104,27 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{init\+\_\+menu()}{init\_menu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily struct \hyperlink{structmenu}{menu}$\ast$ init\+\_\+menu (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{char $\ast$$\ast$}]{options,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})}
 
+
+
+Definition at line 53 of file menu.\+h.
+
 \mbox{\Hypertarget{menu_8h_a0f38ebcd231151bda773bad9b08d17f2}\label{menu_8h_a0f38ebcd231151bda773bad9b08d17f2}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu@{init\+\_\+menu}}
 \index{init\+\_\+menu@{init\+\_\+menu}!menu.\+h@{menu.\+h}}
 \subsubsection{\texorpdfstring{init\+\_\+menu()}{init\_menu()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily struct \hyperlink{structmenu}{menu}$\ast$ init\+\_\+menu (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{int}]{step }\end{DoxyParamCaption})}
 
+
+
+Definition at line 60 of file menu.\+h.
+
 \mbox{\Hypertarget{menu_8h_ab0b05be4bdb1ef6554187247e50cc96f}\label{menu_8h_ab0b05be4bdb1ef6554187247e50cc96f}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu@{init\+\_\+menu}}
 \index{init\+\_\+menu@{init\+\_\+menu}!menu.\+h@{menu.\+h}}
 \subsubsection{\texorpdfstring{init\+\_\+menu()}{init\_menu()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily struct \hyperlink{structmenu}{menu}$\ast$ init\+\_\+menu (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{float}]{min,  }\item[{float}]{max,  }\item[{float}]{step }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file menu.\+h.
 

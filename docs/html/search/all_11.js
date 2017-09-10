@@ -25,5 +25,6 @@ var searchData=
   ['taskresume',['taskResume',['../_a_p_i_8h.html#afa2a4c5236b32bd9983bf19a4ac0cc23',1,'API.h']]],
   ['taskrunloop',['taskRunLoop',['../_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156',1,'API.h']]],
   ['tasksuspend',['taskSuspend',['../_a_p_i_8h.html#ab56a51f337ad1903ad2bbce095744170',1,'API.h']]],
+  ['top_5frow',['TOP_ROW',['../lcd_8h.html#a18bab754c6ad16bc35c48333091516c9',1,'lcd.h']]],
   ['type',['type',['../structmenu.html#ae131df142b529116ec8300a3c59b14be',1,'menu']]]
 ];

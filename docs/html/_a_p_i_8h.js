@@ -162,6 +162,7 @@ var _a_p_i_8h =
     [ "usartShutdown", "_a_p_i_8h.html#a599d7ea04f8d9fb0e37b75423a80a54f", null ],
     [ "wait", "_a_p_i_8h.html#add8964052eef78ca864990642888a7d7", null ],
     [ "waitUntil", "_a_p_i_8h.html#a591705c8bd27fce32490b0bd4fb7ecd9", null ],
+    [ "watchdogInit", "_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e", null ],
     [ "formatString", "_a_p_i_8h.html#aa3800794cdb71dc374a5ce3e645e4bb4", null ],
     [ "line", "_a_p_i_8h.html#a58c3304a90ff2bb7064ff7187b2da466", null ]
 ];

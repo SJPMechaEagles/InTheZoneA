@@ -1,0 +1,260 @@
+.TH "include/drive.h" 3 "Sat Sep 9 2017" "Vex Team A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/drive.h \- Drive base definitions and eumerations\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMOTOR_FRONT_RIGHT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_FRONT_LEFT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_MIDDLE_RIGHT\fP   2"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_MIDDLE_LEFT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_BACK_RIGHT\fP   4"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_BACK_LEFT\fP   5"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBside\fP \fBside\fP"
+.br
+.RI "enumeration indication side of the robot\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBside\fP { \fBleft\fP, \fBboth\fP, \fBright\fP }
+.RI "enumeration indication side of the robot\&. ""
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBset_side_speed\fP (\fBside\fP \fBside\fP, int speed)"
+.br
+.ti -1c
+.RI "void \fBupdateDriveMotors\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Drive base definitions and eumerations\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/9/2017 
+.RE
+.PP
+
+.PP
+Definition in file \fBdrive\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MOTOR_BACK_LEFT   5"
+Back left drive motor of robot base 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file drive\&.h\&.
+.SS "#define MOTOR_BACK_RIGHT   4"
+Back right drive motor of robot base 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file drive\&.h\&.
+.SS "#define MOTOR_FRONT_LEFT   1"
+Front left drive motor of robot base 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file drive\&.h\&.
+.SS "#define MOTOR_FRONT_RIGHT   0"
+Front right drive motor of robot base 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file drive\&.h\&.
+.SS "#define MOTOR_MIDDLE_LEFT   3"
+Middle left drive motor of robot base 
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file drive\&.h\&.
+.SS "#define MOTOR_MIDDLE_RIGHT   2"
+Middle right drive motor of robot base 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 42 of file drive\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBside\fP  \fBside\fP"
+
+.PP
+enumeration indication side of the robot\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 Side can be right, both of left\&. Containted in side typedef, so enum is unnedcessary\&. 
+.RE
+.PP
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBside\fP"
+
+.PP
+enumeration indication side of the robot\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 Side can be right, both of left\&. Containted in side typedef, so enum is unnedcessary\&. 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIleft \fP\fP
+.TP
+\fB\fIboth \fP\fP
+.TP
+\fB\fIright \fP\fP
+.PP
+Definition at line 17 of file drive\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "void set_side_speed (\fBside\fP side, int speed)"
+sets the speed of one side of the robot\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIside\fP a side enum which indicates the size\&. 
+.br
+\fIspeed\fP the speed of the side\&. Can range from -127 - 127 negative being back and positive forwards 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file drive\&.c\&.
+.SS "void updateDriveMotors ()"
+Updates the drive motosrs during teleop 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/5/17 
+.RE
+.PP
+
+.PP
+Definition at line 31 of file drive\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team A from the source code\&.
