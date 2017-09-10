@@ -85,10 +85,10 @@ struct polar_cord cartesian_to_polar(float x, float y) {
 * @author Christian Desimone
 * @date 9/8/2017
 *
-* @param x float value of the x cartesian cordinate.
-* @param y float value of the y cartesian cordinate.
+* @param cords the cartesian cords
 * @return a struct containing the angle and magnitude.
 * @see polar_cord
+* @see cord
 */
 struct polar_cord cartesian_cord_to_polar(struct cord cords) {
   return cartesian_to_polar(cords.x, cords.y);

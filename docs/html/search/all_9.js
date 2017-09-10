@@ -15,7 +15,7 @@ var searchData=
   ['init_2ec',['init.c',['../a00041.html',1,'']]],
   ['init_5fencoders',['init_encoders',['../a00011.html#aa6ec1ca17e907babd52803ecba451cd3',1,'encoders.h']]],
   ['init_5flcd',['init_lcd',['../a00014.html#a806a9b54d4f965867c02daa5a6ae65e6',1,'lcd.h']]],
-  ['init_5fmenu',['init_menu',['../a00020.html#afce058d85afa1692d4e2c58b50a62d03',1,'init_menu(enum menu_type type, unsigned int nums, char *prompt, char *options,...):&#160;menu.h'],['../a00020.html#a2f50cdb311b52c2853e934bf2b4e9240',1,'init_menu(enum menu_type type, char **options, unsigned int length, char *prompt):&#160;menu.h'],['../a00020.html#a26a5710500a59c4422212d809a853d03',1,'init_menu(enum menu_type type, int min, int max, int step, char *prompt):&#160;menu.h'],['../a00020.html#a02c9bff6b442d865cce434b17811c21c',1,'init_menu(enum menu_type type, float min, float max, float step, char *prompt):&#160;menu.h']]],
+  ['init_5fmenu',['init_menu',['../a00020.html#afce058d85afa1692d4e2c58b50a62d03',1,'init_menu(enum menu_type type, unsigned int nums, char *prompt, char *options,...):&#160;menu.h'],['../a00020.html#a26a5710500a59c4422212d809a853d03',1,'init_menu(enum menu_type type, int min, int max, int step, char *prompt):&#160;menu.h'],['../a00020.html#a02c9bff6b442d865cce434b17811c21c',1,'init_menu(enum menu_type type, float min, float max, float step, char *prompt):&#160;menu.h']]],
   ['initialize',['initialize',['../a00017.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;init.c'],['../a00041.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;init.c']]],
   ['initializeio',['initializeIO',['../a00017.html#ad9cda921edb01125bb13c2f86bcf624b',1,'initializeIO():&#160;init.c'],['../a00041.html#ad9cda921edb01125bb13c2f86bcf624b',1,'initializeIO():&#160;init.c']]],
   ['input',['INPUT',['../a00002.html#a1bb283bd7893b9855e2f23013891fc82',1,'API.h']]],
@@ -33,5 +33,5 @@ var searchData=
   ['isjoystickconnected',['isJoystickConnected',['../a00002.html#a72aa0bce6b1d8ee298a60617f8fa74da',1,'API.h']]],
   ['isonline',['isOnline',['../a00002.html#a1eceab28885f971892b9d4fc76e0e542',1,'API.h']]],
   ['itoa',['itoa',['../a00026.html#aa1986c48c027cf691df679c7a4968126',1,'vlib.h']]],
-  ['inthezonea',['InTheZoneA',['../a00067.html',1,'']]]
+  ['inthezonea',['InTheZoneA',['../a00063.html',1,'']]]
 ];

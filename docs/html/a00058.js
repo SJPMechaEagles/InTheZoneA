@@ -1,5 +1,5 @@
 var a00058 =
 [
-    [ "result_index", "a00058.html#ae3056b14bf39f02e9435b9b5b8f71bad", null ],
-    [ "value", "a00058.html#a0f61d63b009d0880a89c843bd50d8d76", null ]
+    [ "angle", "a00058.html#ab8ef1bf8a70cc07c6d55823c390a7e76", null ],
+    [ "magnitue", "a00058.html#a16ebe6028d7fa6cbd5cd673819eecb9f", null ]
 ];

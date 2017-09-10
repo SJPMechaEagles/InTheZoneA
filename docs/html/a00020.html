@@ -87,19 +87,25 @@ $(document).ready(function(){initNavTree('a00020.html','');});
 <div class="title">menu.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains menu functionality and abstraction.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdarg.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="">API.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="">vlib.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">lcd.h</a>&quot;</code><br />
 <code>#include &lt;float.h&gt;</code><br />
+<code>#include &lt;limits.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for menu.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00021.png" border="0" usemap="#include_2menu_8h" alt=""/></div>
 <map name="include_2menu_8h" id="include_2menu_8h">
-<area shape="rect" id="node3" href="a00002.html" title="Provides the high&#45;level user functionality intended for use by typical VEX Cortex programmers..." alt="" coords="169,152,223,177"/>
-<area shape="rect" id="node7" href="a00026.html" title="Contains misc helpful functions. " alt="" coords="96,79,149,104"/>
-<area shape="rect" id="node9" href="a00014.html" title="LCD wrapper functions and macros. " alt="" coords="298,79,347,104"/>
+<area shape="rect" id="node3" href="a00002.html" title="Provides the high&#45;level user functionality intended for use by typical VEX Cortex programmers..." alt="" coords="167,152,221,177"/>
+<area shape="rect" id="node7" href="a00026.html" title="Contains misc helpful functions. " alt="" coords="102,79,154,104"/>
+<area shape="rect" id="node9" href="a00014.html" title="LCD wrapper functions and macros. " alt="" coords="296,79,346,104"/>
 </map>
 </div>
 </div>
@@ -108,8 +114,7 @@ Include dependency graph for menu.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html">menu</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html">menu_result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the different types of menus.  <a href="a00054.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -117,29 +122,41 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a6bbf4baf5018b0d76aab6c2e6bf85e62"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</a> { <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a1762bddf438155a00ecf0318446e8a83">int_type</a>, 
 <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a67a95930928f80abf404f492d8ab0e22">float_type</a>, 
 <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62afca80dc288f5f112ad3b5a8493758095">string_type</a>
- }</td></tr>
+ }<tr class="memdesc:a6bbf4baf5018b0d76aab6c2e6bf85e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the different types of menus.  <a href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a6bbf4baf5018b0d76aab6c2e6bf85e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2acf72023d9e9485deeb9309e11114a8"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="a00054.html">menu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a2acf72023d9e9485deeb9309e11114a8">create_menu</a> (enum <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</a> type, char *prompt)</td></tr>
-<tr class="separator:a2acf72023d9e9485deeb9309e11114a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7801f612b6473c2458cb2840d76c34c5"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="a00054.html">menu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a7801f612b6473c2458cb2840d76c34c5">create_menu</a> (enum <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</a> type, const char *prompt)</td></tr>
+<tr class="memdesc:a7801f612b6473c2458cb2840d76c34c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static function that handles creation of menu.  <a href="#a7801f612b6473c2458cb2840d76c34c5">More...</a><br /></td></tr>
+<tr class="separator:a7801f612b6473c2458cb2840d76c34c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afce058d85afa1692d4e2c58b50a62d03"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="a00054.html">menu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#afce058d85afa1692d4e2c58b50a62d03">init_menu</a> (enum <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</a> type, unsigned int nums, char *prompt, char *options,...)</td></tr>
+<tr class="memdesc:afce058d85afa1692d4e2c58b50a62d03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a menu context, but does not display.  <a href="#afce058d85afa1692d4e2c58b50a62d03">More...</a><br /></td></tr>
 <tr class="separator:afce058d85afa1692d4e2c58b50a62d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f50cdb311b52c2853e934bf2b4e9240"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="a00054.html">menu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a2f50cdb311b52c2853e934bf2b4e9240">init_menu</a> (enum <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</a> type, char **options, unsigned int length, char *prompt)</td></tr>
-<tr class="separator:a2f50cdb311b52c2853e934bf2b4e9240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a5710500a59c4422212d809a853d03"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="a00054.html">menu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a26a5710500a59c4422212d809a853d03">init_menu</a> (enum <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</a> type, int min, int max, int step, char *prompt)</td></tr>
+<tr class="memdesc:a26a5710500a59c4422212d809a853d03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a menu context, but does not display.  <a href="#a26a5710500a59c4422212d809a853d03">More...</a><br /></td></tr>
 <tr class="separator:a26a5710500a59c4422212d809a853d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02c9bff6b442d865cce434b17811c21c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="a00054.html">menu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a02c9bff6b442d865cce434b17811c21c">init_menu</a> (enum <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</a> type, float min, float max, float step, char *prompt)</td></tr>
+<tr class="memdesc:a02c9bff6b442d865cce434b17811c21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a menu context, but does not display.  <a href="#a02c9bff6b442d865cce434b17811c21c">More...</a><br /></td></tr>
 <tr class="separator:a02c9bff6b442d865cce434b17811c21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf35a777d64d7aab8aa9f8e067fd2e9a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#adf35a777d64d7aab8aa9f8e067fd2e9a">calculate_current_display</a> (char *rtn, struct <a class="el" href="a00054.html">menu</a> *<a class="el" href="a00054.html">menu</a>)</td></tr>
+<tr class="memdesc:adf35a777d64d7aab8aa9f8e067fd2e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static function that calculates the string from menu.  <a href="#adf35a777d64d7aab8aa9f8e067fd2e9a">More...</a><br /></td></tr>
 <tr class="separator:adf35a777d64d7aab8aa9f8e067fd2e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee3e9f838cdbb1745c68974490aabb99"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="a00058.html">menu_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#aee3e9f838cdbb1745c68974490aabb99">display_menu</a> (struct <a class="el" href="a00054.html">menu</a> *<a class="el" href="a00054.html">menu</a>)</td></tr>
-<tr class="separator:aee3e9f838cdbb1745c68974490aabb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a689a08c4bacd81b6d0ca761f19a54002"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a689a08c4bacd81b6d0ca761f19a54002">display_menu</a> (struct <a class="el" href="a00054.html">menu</a> *<a class="el" href="a00054.html">menu</a>)</td></tr>
+<tr class="memdesc:a689a08c4bacd81b6d0ca761f19a54002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a menu context, but does not display.  <a href="#a689a08c4bacd81b6d0ca761f19a54002">More...</a><br /></td></tr>
+<tr class="separator:a689a08c4bacd81b6d0ca761f19a54002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84f7c6b4cde1e723a08937762cacc617"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a84f7c6b4cde1e723a08937762cacc617">denint_menu</a> (struct <a class="el" href="a00054.html">menu</a> *<a class="el" href="a00054.html">menu</a>)</td></tr>
+<tr class="memdesc:a84f7c6b4cde1e723a08937762cacc617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a menu <em> Menu must be freed or will cause memory leak <em> </em></em> <a href="#a84f7c6b4cde1e723a08937762cacc617">More...</a><br /></td></tr>
 <tr class="separator:a84f7c6b4cde1e723a08937762cacc617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains menu functionality and abstraction. </p>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="">menu.h</a>.</p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a6bbf4baf5018b0d76aab6c2e6bf85e62"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6bbf4baf5018b0d76aab6c2e6bf85e62">&#9670;&nbsp;</a></span>menu_type</h2>
 
@@ -151,10 +168,31 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Represents the different types of menus. </p>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00020.html" title="Contains menu functionality and abstraction. ">menu.h</a> </dd>
+<dd>
+struct <a class="el" href="a00054.html" title="Represents the different types of menus. ">menu</a> </dd>
+<dd>
+<a class="el" href="a00020.html#a7801f612b6473c2458cb2840d76c34c5" title="Static function that handles creation of menu. ">create_menu</a> </dd>
+<dd>
+<a class="el" href="a00020.html#afce058d85afa1692d4e2c58b50a62d03" title="Creates a menu context, but does not display. ">init_menu</a> </dd>
+<dd>
+<a class="el" href="a00020.html#a689a08c4bacd81b6d0ca761f19a54002" title="Displays a menu context, but does not display. ">display_menu</a> </dd>
+<dd>
+<a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62" title="Represents the different types of menus. ">menu_type</a> </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6bbf4baf5018b0d76aab6c2e6bf85e62a1762bddf438155a00ecf0318446e8a83"></a>int_type&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a6bbf4baf5018b0d76aab6c2e6bf85e62a67a95930928f80abf404f492d8ab0e22"></a>float_type&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a6bbf4baf5018b0d76aab6c2e6bf85e62afca80dc288f5f112ad3b5a8493758095"></a>string_type&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6bbf4baf5018b0d76aab6c2e6bf85e62a1762bddf438155a00ecf0318446e8a83"></a>int_type&#160;</td><td class="fielddoc"><p>Menu type allowing user to select a integer. </p>
+<p>The integer type menu has a max, min and a step value. Each step is calculated. Will return the index of the selected value. Example: User goes forwards twice then it will return 2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6bbf4baf5018b0d76aab6c2e6bf85e62a67a95930928f80abf404f492d8ab0e22"></a>float_type&#160;</td><td class="fielddoc"><p>Menu type allowing user to select a float The float type menu has a max, min and a step value. </p>
+<p>Each step is calculated. Will return the index of the selected value. Example: User goes forwards twice then it will return 2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6bbf4baf5018b0d76aab6c2e6bf85e62afca80dc288f5f112ad3b5a8493758095"></a>string_type&#160;</td><td class="fielddoc"><p>Menu type allowing user to select a string from a array of strings. </p>
+<p>Will return the index of the selected value. Example: User goes forwards twice then it will return 2. </p>
+</td></tr>
 </table>
 
 </div>
@@ -194,10 +232,21 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Static function that calculates the string from menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rtn</td><td>the string to be written to </td></tr>
+    <tr><td class="paramname">menu</td><td>the menu for prompt to be calculated from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
+
 </div>
 </div>
-<a id="a2acf72023d9e9485deeb9309e11114a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2acf72023d9e9485deeb9309e11114a8">&#9670;&nbsp;</a></span>create_menu()</h2>
+<a id="a7801f612b6473c2458cb2840d76c34c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7801f612b6473c2458cb2840d76c34c5">&#9670;&nbsp;</a></span>create_menu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,7 +263,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>prompt</em>&#160;</td>
         </tr>
         <tr>
@@ -229,6 +278,11 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Static function that handles creation of menu. </p>
+<p><em> Menu must be freed or will cause memory leak <em> </p><dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
+<p></em></em></p>
 
 </div>
 </div>
@@ -248,16 +302,27 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Destroys a menu <em> Menu must be freed or will cause memory leak <em> </em></em></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">menu</td><td>the menu to free </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00054.html" title="Represents the different types of menus. ">menu</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
+
 </div>
 </div>
-<a id="aee3e9f838cdbb1745c68974490aabb99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee3e9f838cdbb1745c68974490aabb99">&#9670;&nbsp;</a></span>display_menu()</h2>
+<a id="a689a08c4bacd81b6d0ca761f19a54002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a689a08c4bacd81b6d0ca761f19a54002">&#9670;&nbsp;</a></span>display_menu()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="a00058.html">menu_result</a> display_menu </td>
+          <td class="memname">int display_menu </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="a00054.html">menu</a> *&#160;</td>
           <td class="paramname"><em>menu</em></td><td>)</td>
@@ -266,10 +331,23 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Displays a menu context, but does not display. </p>
+<p><em> Menu must be freed or will cause memory leak! <em> Will exit if robot is enabled. This prevents menu from locking up system in even of a reset.</em></em></p>
+<p><em><em></p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">menu</td><td>the menu to display </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62" title="Represents the different types of menus. ">menu_type</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
+<p></em></em></p>
+
 </div>
 </div>
 <a id="afce058d85afa1692d4e2c58b50a62d03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afce058d85afa1692d4e2c58b50a62d03">&#9670;&nbsp;</a></span>init_menu() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afce058d85afa1692d4e2c58b50a62d03">&#9670;&nbsp;</a></span>init_menu() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,50 +390,31 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a2f50cdb311b52c2853e934bf2b4e9240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f50cdb311b52c2853e934bf2b4e9240">&#9670;&nbsp;</a></span>init_menu() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="a00054.html">menu</a>* init_menu </td>
-          <td>(</td>
-          <td class="paramtype">enum <a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>options</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>length</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>prompt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Creates a menu context, but does not display. </p>
+<p><em> Menu must be freed or will cause memory leak <em></em></em></p>
+<p><em><em></p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of menu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62" title="Represents the different types of menus. ">menu_type</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nums</td><td>the number of elements passed to function </td></tr>
+    <tr><td class="paramname">prompt</td><td>the prompt to diplay to user </td></tr>
+    <tr><td class="paramname">options</td><td>the options to display for user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
+<p></em></em></p>
 
 </div>
 </div>
 <a id="a26a5710500a59c4422212d809a853d03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26a5710500a59c4422212d809a853d03">&#9670;&nbsp;</a></span>init_menu() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a5710500a59c4422212d809a853d03">&#9670;&nbsp;</a></span>init_menu() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,11 +456,33 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates a menu context, but does not display. </p>
+<p><em> Menu must be freed or will cause memory leak <em></em></em></p>
+<p><em><em></p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of menu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62" title="Represents the different types of menus. ">menu_type</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>the minimum value </td></tr>
+    <tr><td class="paramname">max</td><td>the maximum vlaue </td></tr>
+    <tr><td class="paramname">step</td><td>the step value </td></tr>
+    <tr><td class="paramname">prompt</td><td>the prompt to diplay to user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
+<p></em></em></p>
 
 </div>
 </div>
 <a id="a02c9bff6b442d865cce434b17811c21c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02c9bff6b442d865cce434b17811c21c">&#9670;&nbsp;</a></span>init_menu() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c9bff6b442d865cce434b17811c21c">&#9670;&nbsp;</a></span>init_menu() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,6 +524,28 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates a menu context, but does not display. </p>
+<p><em> Menu must be freed or will cause memory leak! <em></em></em></p>
+<p><em><em></p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of menu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62" title="Represents the different types of menus. ">menu_type</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>the minimum value </td></tr>
+    <tr><td class="paramname">max</td><td>the maximum vlaue </td></tr>
+    <tr><td class="paramname">step</td><td>the step value </td></tr>
+    <tr><td class="paramname">prompt</td><td>the prompt to diplay to user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
+<p></em></em></p>
 
 </div>
 </div>
