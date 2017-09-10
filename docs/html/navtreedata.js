@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "Vex Team A", "index.html", [
+  [ "My Project", "index.html", [
     [ "InTheZoneA", "md__r_e_a_d_m_e.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],

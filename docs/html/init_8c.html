@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: src/init.c File Reference</title>
+<title>My Project: src/init.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -94,8 +94,12 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for init.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c__incl.svg" width="355" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><img src="init_8c__incl.png" border="0" usemap="#src_2init_8c" alt=""/></div>
+<map name="src_2init_8c" id="src_2init_8c">
+<area shape="rect" id="node2" href="main_8h.html" title="Header file for global functions. " alt="" coords="80,79,141,104"/>
+<area shape="rect" id="node3" href="_a_p_i_8h.html" title="Provides the high&#45;level user functionality intended for use by typical VEX Cortex programmers..." alt="" coords="151,152,205,177"/>
+<area shape="rect" id="node8" href="encoders_8h.html" title="encoders.h" alt="" coords="216,79,303,104"/>
+</map>
 </div>
 </div>
 <p><a href="init_8c_source.html">Go to the source code of this file.</a></p>
@@ -134,11 +138,19 @@ Functions</h2></td></tr>
 <p>This function must exit relatively promptly, or the <a class="el" href="main_8h.html#ac71a94af413917f27d108e95c4d6f6a7">operatorControl()</a> and <a class="el" href="main_8h.html#a3c7ca506bbc071fa740de13805b7f376">autonomous()</a> tasks will not start. An autonomous mode selection menu like the pre_auton() in other environments can be implemented in this task if desired. </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00043">43</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+<p class="reference">References <a class="el" href="encoders_8h_source.html#l00008">init_encoders()</a>, <a class="el" href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit()</a>, <a class="el" href="_a_p_i_8h.html#aeafd247b27813122cfee95e0cecf188b">lcdSetBacklight()</a>, <a class="el" href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd">powerLevelBackup()</a>, and <a class="el" href="_a_p_i_8h_source.html#l00819">uart1</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_a25a40b6614565f755233080a384c35f1_cgraph.svg" width="415" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><img src="init_8c_a25a40b6614565f755233080a384c35f1_cgraph.png" border="0" usemap="#init_8c_a25a40b6614565f755233080a384c35f1_cgraph" alt=""/></div>
+<map name="init_8c_a25a40b6614565f755233080a384c35f1_cgraph" id="init_8c_a25a40b6614565f755233080a384c35f1_cgraph">
+<area shape="rect" id="node2" href="encoders_8h.html#aa6ec1ca17e907babd52803ecba451cd3" title="init_encoders" alt="" coords="139,5,239,31"/>
+<area shape="rect" id="node4" href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824" title="lcdInit" alt="" coords="161,55,217,80"/>
+<area shape="rect" id="node5" href="_a_p_i_8h.html#aeafd247b27813122cfee95e0cecf188b" title="lcdSetBacklight" alt="" coords="133,104,245,129"/>
+<area shape="rect" id="node6" href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd" title="powerLevelBackup" alt="" coords="122,153,256,179"/>
+<area shape="rect" id="node3" href="_a_p_i_8h.html#a868ab46aa5992e60829936c0109160bf" title="imeInitializeAll" alt="" coords="304,5,410,31"/>
+</map>
 </div>
 
 </div>
@@ -161,11 +173,16 @@ Here is the call graph for this function:</div>
 <p>The purpose of this function is solely to set the default pin modes (<a class="el" href="_a_p_i_8h.html#a1875409d12eee562555bda94cad7f973">pinMode()</a>) and port states (<a class="el" href="_a_p_i_8h.html#a23e767e5b47fa61d4e2cc02e6f15c7ab">digitalWrite()</a>) of limit switches, push buttons, and solenoids. It can also safely configure a UART port (usartOpen()) but cannot set up an LCD (<a class="el" href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit()</a>). </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00025">25</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+<p class="reference">References <a class="el" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName()</a>, and <a class="el" href="_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e">watchdogInit()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_ad9cda921edb01125bb13c2f86bcf624b_cgraph.svg" width="250" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><img src="init_8c_ad9cda921edb01125bb13c2f86bcf624b_cgraph.png" border="0" usemap="#init_8c_ad9cda921edb01125bb13c2f86bcf624b_cgraph" alt=""/></div>
+<map name="init_8c_ad9cda921edb01125bb13c2f86bcf624b_cgraph" id="init_8c_ad9cda921edb01125bb13c2f86bcf624b_cgraph">
+<area shape="rect" id="node2" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a" title="setTeamName" alt="" coords="136,5,243,31"/>
+<area shape="rect" id="node3" href="_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e" title="watchdogInit" alt="" coords="142,55,238,80"/>
+</map>
 </div>
 
 </div>
