@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value',['value',['../structmenu__result.html#a0f61d63b009d0880a89c843bd50d8d76',1,'menu_result']]]
+  ['type',['type',['../a00054.html#ae131df142b529116ec8300a3c59b14be',1,'menu']]]
 ];

@@ -67,7 +67,8 @@ void lcd_set_backlight(bool state);
 **/
  static void lcd_assert() {
   if(lcd_port != NULL) {
-    printf("LCD NULL");
+    printf("LCD NULL!");
+    exit(1);
   }
 }
 
@@ -105,6 +106,9 @@ lcd_buttons lcd_get_pressed_buttons(){
 /**
 * @brief Initializes the lcd screen.
 * Also will initialize the lcd_port var. Must be called before any lcd function can be called.
+* @param lcd the urart port of the lcd scrren
+* @see uart1
+* @see uart2
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
@@ -128,11 +132,11 @@ void init_lcd(FILE *lcd) {
 /**
 * @brief prints a formated string to a line on the lcd. Smilar to printf
 * @param line the line to print on
-* @param format_string format string string to print
+* @param format_str format string string to print
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
- void lcd_printf( unsigned int line, const char *format_str, ...) {
+ void lcd_printf(unsigned int line, const char *format_str, ...) {
   lcd_assert();
   lcdPrint(lcd_port, line, format_str);
 }

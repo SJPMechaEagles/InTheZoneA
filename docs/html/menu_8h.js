@@ -7,11 +7,12 @@ var menu_8h =
       [ "float_type", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a67a95930928f80abf404f492d8ab0e22", null ],
       [ "string_type", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62afca80dc288f5f112ad3b5a8493758095", null ]
     ] ],
-    [ "create_menu", "menu_8h.html#ae687a91b069c800fac3458e82538b8e5", null ],
+    [ "calculate_current_display", "menu_8h.html#adf35a777d64d7aab8aa9f8e067fd2e9a", null ],
+    [ "create_menu", "menu_8h.html#a2acf72023d9e9485deeb9309e11114a8", null ],
     [ "denint_menu", "menu_8h.html#a84f7c6b4cde1e723a08937762cacc617", null ],
     [ "display_menu", "menu_8h.html#aee3e9f838cdbb1745c68974490aabb99", null ],
-    [ "init_menu", "menu_8h.html#ad278f2d3a0219659e7cdfb3389dd7040", null ],
-    [ "init_menu", "menu_8h.html#a684f321ba7d9e2bab78f2025641faa79", null ],
-    [ "init_menu", "menu_8h.html#a0f38ebcd231151bda773bad9b08d17f2", null ],
-    [ "init_menu", "menu_8h.html#ab0b05be4bdb1ef6554187247e50cc96f", null ]
+    [ "init_menu", "menu_8h.html#afce058d85afa1692d4e2c58b50a62d03", null ],
+    [ "init_menu", "menu_8h.html#a2f50cdb311b52c2853e934bf2b4e9240", null ],
+    [ "init_menu", "menu_8h.html#a26a5710500a59c4422212d809a853d03", null ],
+    [ "init_menu", "menu_8h.html#a02c9bff6b442d865cce434b17811c21c", null ]
 ];

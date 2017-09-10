@@ -23,7 +23,7 @@ typedef enum side{
 } side;
 
 /**
-* @bried sets the speed of one side of the robot.
+* @brief sets the speed of one side of the robot.
 * @author Christian Desimone
 * @param side a side enum which indicates the size.
 * @param speed the speed of the side. Can range from -127 - 127 negative being back and positive forwards
@@ -31,7 +31,7 @@ typedef enum side{
 void set_side_speed(side side, int speed);
 
 /**
-* @bried Updates the drive motosrs during teleop
+* @brief Updates the drive motosrs during teleop
 * @author Christian Desimone
 * @date 9/5/17
 **/

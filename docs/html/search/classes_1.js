@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['menu',['menu',['../structmenu.html',1,'']]],
-  ['menu_5fresult',['menu_result',['../structmenu__result.html',1,'']]]
+  ['menu',['menu',['../a00054.html',1,'']]],
+  ['menu_5fresult',['menu_result',['../a00058.html',1,'']]]
 ];

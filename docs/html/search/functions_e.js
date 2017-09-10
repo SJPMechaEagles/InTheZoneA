@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['taskcreate',['taskCreate',['../_a_p_i_8h.html#abd5e503a273aaf6abf6869ebd76f2d2d',1,'API.h']]],
-  ['taskdelay',['taskDelay',['../_a_p_i_8h.html#ac89618d0782547d189fe412a9917639b',1,'API.h']]],
-  ['taskdelayuntil',['taskDelayUntil',['../_a_p_i_8h.html#ae93bc867b1aa4a12d6536a497f1b6869',1,'API.h']]],
-  ['taskdelete',['taskDelete',['../_a_p_i_8h.html#add3b8d580ea6ef5635c6d9ff88c68612',1,'API.h']]],
-  ['taskgetcount',['taskGetCount',['../_a_p_i_8h.html#a436fb5636d9a200ecebbb95968de91f6',1,'API.h']]],
-  ['taskgetstate',['taskGetState',['../_a_p_i_8h.html#a4f805fd479cb4c427e8f4edfa7d55143',1,'API.h']]],
-  ['taskpriorityget',['taskPriorityGet',['../_a_p_i_8h.html#ae62d015b8280e4c74ad9ee15c7ac790b',1,'API.h']]],
-  ['taskpriorityset',['taskPrioritySet',['../_a_p_i_8h.html#a91d8f7074c6cb12dfe163df17bdf5540',1,'API.h']]],
-  ['taskresume',['taskResume',['../_a_p_i_8h.html#afa2a4c5236b32bd9983bf19a4ac0cc23',1,'API.h']]],
-  ['taskrunloop',['taskRunLoop',['../_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156',1,'API.h']]],
-  ['tasksuspend',['taskSuspend',['../_a_p_i_8h.html#ab56a51f337ad1903ad2bbce095744170',1,'API.h']]]
+  ['semaphorecreate',['semaphoreCreate',['../a00002.html#a4461acf29574576dda6a3316117f85a9',1,'API.h']]],
+  ['semaphoredelete',['semaphoreDelete',['../a00002.html#af27ba79dc102f914d31a3c20136b1cd9',1,'API.h']]],
+  ['semaphoregive',['semaphoreGive',['../a00002.html#a9e5b0b6d5da138b4d5a077237894f96e',1,'API.h']]],
+  ['semaphoretake',['semaphoreTake',['../a00002.html#a7520baa9cf5c9ec2f43925b098e7b46a',1,'API.h']]],
+  ['set_5fside_5fspeed',['set_side_speed',['../a00008.html#a84ec727837d829af43250141e762f65f',1,'set_side_speed(side side, int speed):&#160;drive.c'],['../a00038.html#a84ec727837d829af43250141e762f65f',1,'set_side_speed(side side, int speed):&#160;drive.c']]],
+  ['setteamname',['setTeamName',['../a00002.html#a22269cefc22e487f7acdcc4737d58c4a',1,'API.h']]],
+  ['snprintf',['snprintf',['../a00002.html#ada81026ae730d990159aab26c302a3ad',1,'API.h']]],
+  ['speakerinit',['speakerInit',['../a00002.html#a7e0b8a79a6f53f88329b87229e7d698b',1,'API.h']]],
+  ['speakerplayarray',['speakerPlayArray',['../a00002.html#af91f9f80737d283ff82a96596f833854',1,'API.h']]],
+  ['speakerplayrtttl',['speakerPlayRtttl',['../a00002.html#a6971b95fa28048bf134b7421b7f2faee',1,'API.h']]],
+  ['speakershutdown',['speakerShutdown',['../a00002.html#a8d6d3ddc25b8408b0270cd2ccb9505ce',1,'API.h']]],
+  ['sprintf',['sprintf',['../a00002.html#acbfbfc380f865613ad5ff3cae256bdc4',1,'API.h']]]
 ];
