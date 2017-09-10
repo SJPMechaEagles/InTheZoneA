@@ -18,7 +18,7 @@
 <!-- Node85 -->
 <g id="node2" class="node">
 <title>Node85</title>
-<g id="a_node2"><a xlink:href="encoders_8h.html#aa6ec1ca17e907babd52803ecba451cd3" target="_top" xlink:title="init_encoders">
+<g id="a_node2"><a xlink:href="encoders_8h.html#aa6ec1ca17e907babd52803ecba451cd3" target="_top" xlink:title="Initializes all motor encoders. ">
 <polygon fill="#ffffff" stroke="#000000" points="115.3545,-.5 115.3545,-18.5 190.8369,-18.5 190.8369,-.5 115.3545,-.5"/>
 <text text-anchor="middle" x="153.0957" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">init_encoders</text>
 </a>

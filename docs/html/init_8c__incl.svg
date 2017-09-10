@@ -48,7 +48,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="encoders_8h.html" target="_top" xlink:title="encoders.h">
+<g id="a_node8"><a xlink:href="encoders_8h.html" target="_top" xlink:title="wrapper around encer functions ">
 <polygon fill="#ffffff" stroke="#000000" points="158.1035,-110.5 158.1035,-128.5 223.5811,-128.5 223.5811,-110.5 158.1035,-110.5"/>
 <text text-anchor="middle" x="190.8423" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">encoders.h</text>
 </a>

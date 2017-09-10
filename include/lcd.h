@@ -8,8 +8,7 @@
 #ifndef _LCD_H_
 #define  _LCD_H_
 
-#include <api.h>
-#include <assert.h>
+#include <API.h>
 #include <string.h>
 #include <stdarg.h>
 
@@ -66,8 +65,10 @@ void lcd_set_backlight(bool state);
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
-inline static void lcd_assert() {
-  assert(lcd_port != NULL);
+ static void lcd_assert() {
+  if(lcd_port != NULL) {
+    printf("LCD NULL");
+  }
 }
 
 /**
@@ -75,6 +76,7 @@ inline static void lcd_assert() {
 * @return a struct containing the states of all three buttons.
 * @author Chris Jerrett
 * @date 9/9/2017
+* @see lcd_buttons
 **/
 lcd_buttons lcd_get_pressed_buttons(){
   lcd_assert();
@@ -95,7 +97,7 @@ lcd_buttons lcd_get_pressed_buttons(){
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
-inline void lcd_clear() {
+ void lcd_clear() {
   lcd_assert();
   lcdClear(lcd_port);
 }
@@ -118,7 +120,7 @@ void init_lcd(FILE *lcd) {
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
-inline void lcd_print(unsigned int line, const char *str) {
+ void lcd_print(unsigned int line, const char *str) {
   lcd_assert();
   lcdSetText(lcd_port, line, str);
 }
@@ -130,7 +132,7 @@ inline void lcd_print(unsigned int line, const char *str) {
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
-inline void lcd_printf( unsigned int line, const char *format_str, ...) {
+ void lcd_printf( unsigned int line, const char *format_str, ...) {
   lcd_assert();
   lcdPrint(lcd_port, line, format_str);
 }
@@ -141,7 +143,7 @@ inline void lcd_printf( unsigned int line, const char *format_str, ...) {
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
-inline void lcd_set_backlight(bool state) {
+ void lcd_set_backlight(bool state) {
   lcd_assert();
   lcdSetBacklight(lcd_port, state);
 }
@@ -150,7 +152,7 @@ inline void lcd_set_backlight(bool state) {
 * @brief Prompts the user to confirm a string.
 * User must press middle button to confirm.
 * Function is not thread safe and will stall a thread.
-* 
+*
 * @param confirm_text the text for the user to confirm.
 * @author Chris Jerrett
 * @date 9/9/2017

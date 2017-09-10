@@ -30,6 +30,7 @@ struct polar_cord {
 * @param x float value of the x cartesian cordinate.
 * @param y float value of the y cartesian cordinate.
 * @return a struct containing the angle and magnitude.
+* @see polar_cord
 */
 struct polar_cord cartesian_to_polar(float x, float y) {
   float degree = 0;

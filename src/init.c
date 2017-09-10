@@ -13,6 +13,7 @@
 #include "main.h"
 #include <API.h>
 #include "encoders.h"
+#include "lcd.h"
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode one time while the
@@ -43,13 +44,10 @@ void initializeIO() {
 void initialize() {
   lcdInit(uart1);
   if(!init_encoders()) {
-    lcdSetBacklight(uart1, true);
-    lcdPrint(uart1, 1, "CHECK IMEs!");
-    lcdPrint(uart1, 1, "btn to confirm");
-    waitForConfirmation();
+    promt_confirmation("Check IME");
   }
 
   if(powerLevelBackup()/1000 == 0) {
-
+    promt_confirmation("Check Backup");
   }
 }
