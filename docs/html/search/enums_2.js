@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['side',['side',['../a00008.html#afc015eff6557e84151d2e53b94375445',1,'drive.h']]]
+  ['menu_5ftype',['menu_type',['../a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62',1,'menu.h']]]
 ];

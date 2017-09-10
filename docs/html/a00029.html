@@ -100,7 +100,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00031.png" border="0" usemap="#include_2vmath_8hdep" alt=""/></div>
 <map name="include_2vmath_8hdep" id="include_2vmath_8hdep">
-<area shape="rect" id="node2" href="a00038.html" title="src/drive.c" alt="" coords="22,79,104,104"/>
+<area shape="rect" id="node2" href="a00005.html" title="controller definitions, macros " alt="" coords="5,79,138,104"/>
+<area shape="rect" id="node3" href="a00038.html" title="src/drive.c" alt="" coords="83,152,165,177"/>
 </map>
 </div>
 </div>
@@ -111,12 +112,18 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00062.html">polar_cord</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A struct that contains polar cordinates.  <a href="a00062.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00066.html">cord</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A struct that contains cartesian cordinates.  <a href="a00066.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1c4a1747b714f5d4654f0614193f9e49"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="a00062.html">polar_cord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#a1c4a1747b714f5d4654f0614193f9e49">cartesian_to_polar</a> (float x, float y)</td></tr>
 <tr class="memdesc:a1c4a1747b714f5d4654f0614193f9e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to convert x and y 2 dimensional cartesian cordinated to polar pordinates.  <a href="#a1c4a1747b714f5d4654f0614193f9e49">More...</a><br /></td></tr>
 <tr class="separator:a1c4a1747b714f5d4654f0614193f9e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d77b972c1d17e9bd7ac2990fec3d56e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="a00062.html">polar_cord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#a8d77b972c1d17e9bd7ac2990fec3d56e">cartesian_to_polar</a> (struct <a class="el" href="a00066.html">cord</a> cords)</td></tr>
+<tr class="memdesc:a8d77b972c1d17e9bd7ac2990fec3d56e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to convert x and y 2 dimensional cartesian cordinated to polar pordinates.  <a href="#a8d77b972c1d17e9bd7ac2990fec3d56e">More...</a><br /></td></tr>
+<tr class="separator:a8d77b972c1d17e9bd7ac2990fec3d56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Vex Specific Math Functions, includes: Cartesian to polar cordinates. </p>
@@ -128,7 +135,7 @@ Chris Jerrett </dd></dl>
 <p class="definition">Definition in file <a class="el" href="">vmath.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1c4a1747b714f5d4654f0614193f9e49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c4a1747b714f5d4654f0614193f9e49">&#9670;&nbsp;</a></span>cartesian_to_polar()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4a1747b714f5d4654f0614193f9e49">&#9670;&nbsp;</a></span>cartesian_to_polar() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,6 +156,37 @@ Chris Jerrett </dd></dl>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to convert x and y 2 dimensional cartesian cordinated to polar pordinates. </p>
+<dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>9/8/2017</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>float value of the x cartesian cordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>float value of the y cartesian cordinate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a struct containing the angle and magnitude. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00062.html" title="A struct that contains polar cordinates. ">polar_cord</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8d77b972c1d17e9bd7ac2990fec3d56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d77b972c1d17e9bd7ac2990fec3d56e">&#9670;&nbsp;</a></span>cartesian_to_polar() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="a00062.html">polar_cord</a> cartesian_to_polar </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="a00066.html">cord</a>&#160;</td>
+          <td class="paramname"><em>cords</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

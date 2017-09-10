@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['menu_5ftype',['menu_type',['../a00020.html#a6bbf4baf5018b0d76aab6c2e6bf85e62',1,'menu.h']]]
+  ['joystick',['joystick',['../a00005.html#ac365c9e892abe4a1b85ae8f56a4eae5a',1,'controller.h']]]
 ];

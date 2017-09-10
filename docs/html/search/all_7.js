@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['get_5fjoystick_5fcord',['get_joystick_cord',['../a00005.html#a0ce0176099c0bb15ad8c36123222059d',1,'controller.h']]],
   ['getchar',['getchar',['../a00002.html#ac45fdeab51c3197c1e7c4ec7beabaca9',1,'API.h']]],
   ['gyro',['Gyro',['../a00002.html#a04e06985633aa933343fcfa3d7fb268d',1,'API.h']]],
   ['gyroget',['gyroGet',['../a00002.html#a0ae2ca5d2fd99f33aaef38786bb8ee59',1,'API.h']]],

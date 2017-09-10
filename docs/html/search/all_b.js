@@ -19,6 +19,9 @@ var searchData=
   ['lcdsettext',['lcdSetText',['../a00002.html#aae51423c0e108729bbb4d26a1b265eb3',1,'API.h']]],
   ['lcdshutdown',['lcdShutdown',['../a00002.html#aa97fb2f4a17f8924bd11a1e40a2abe20',1,'API.h']]],
   ['left',['left',['../a00050.html#adf4426df10903d1dba0ee269473cb079',1,'lcd_buttons::left()'],['../a00008.html#afc015eff6557e84151d2e53b94375445ab0ac36b187aa60c167ffcead3d5a03c0',1,'left():&#160;drive.h']]],
+  ['left_5fjoy',['LEFT_JOY',['../a00005.html#ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9',1,'controller.h']]],
+  ['left_5fjoy_5fx',['LEFT_JOY_X',['../a00005.html#ac055a23829dc64aa20b8e2e1bcfbf316',1,'controller.h']]],
+  ['left_5fjoy_5fy',['LEFT_JOY_Y',['../a00005.html#ae0a2b64db5fc4f4bf4b169185be93db3',1,'controller.h']]],
   ['length',['length',['../a00054.html#ad42d625fa749b07c73c9ae28ea4c3bd2',1,'menu']]],
   ['line',['line',['../a00002.html#a58c3304a90ff2bb7064ff7187b2da466',1,'API.h']]],
   ['low',['LOW',['../a00002.html#ab811d8c6ff3a505312d3276590444289',1,'API.h']]]
