@@ -44,6 +44,7 @@
 * @author Christian Desimone
 **/
 #define MOTOR_MIDDLE_LEFT 3
+
 /**
 * @brief Back right drive motor of robot base
 * @author Christian Desimone
