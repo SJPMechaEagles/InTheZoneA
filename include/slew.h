@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <API.h>
+#include <math.h>
 
 #define UPDATE_PERIOD_MS 25
 
@@ -15,7 +15,7 @@ static void updateMotors(){
     char set_speed = motors_set_speeds[i];
     char curr_speed = motorGet(i);
     char diff = set_speed - curr_speed;
-    motors_set_speeds[i] += diff/2;
+    motorSet(i, curr_speed+ceil(diff/2.0));
   }
   /*for(int i = 0; i < size; i++){
     if(abs(motors[i] - motorGet(i)) < increment[i]){

@@ -14,7 +14,6 @@
 #include <float.h>
 #include <limits.h>
 #include <string.h>
-#include <stdio.h>
 
 /**
 * @brief Represents the different types of menus.
