@@ -24,14 +24,6 @@ static void updateMotors(){
     printf("set: %d\n", set_speed);
     printf("diff: %d\n\n", diff);
   }
-  /*for(int i = 0; i < size; i++){
-    if(abs(motors[i] - motorGet(i)) < increment[i]){
-      motorSet(i, motorGet(i) + increment[i]);
-    }
-    else if(motors[i] != motorGet(i)){
-      motorSet(i, motors[i]);
-    }
-  }*/
 }
 
 void initslew(const int nummotors){
@@ -57,6 +49,6 @@ int main() {
   for(int i = 0;; i++) {
     printf("number: %d\n", i);
     updateMotors();
-    usleep(10000);
+    usleep(100000);
   }
 }
