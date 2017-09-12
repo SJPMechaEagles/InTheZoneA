@@ -4,9 +4,10 @@
 #include <math.h>
 
 #define UPDATE_PERIOD_MS 25
-#define RAMP_FACTOR 6
+#define RAMP_FACTOR 2
 
 static int *motors_set_speeds = NULL;
+// Represents the getMotor function values
 static int *curr = NULL;
 static unsigned int num_motors = 0;
 static unsigned int *increment = NULL;
@@ -20,8 +21,8 @@ static void updateMotors(){
     int diff = set_speed - curr_speed;
     curr[i] = curr_speed + (int)ceil((diff/(float)(RAMP_FACTOR)));
     printf("curr: %d\n", curr_speed);
-    printf("diff: %d\n", diff);
     printf("set: %d\n", set_speed);
+    printf("diff: %d\n\n", diff);
   }
   /*for(int i = 0; i < size; i++){
     if(abs(motors[i] - motorGet(i)) < increment[i]){
@@ -50,10 +51,12 @@ void deinitslew(){
 
 int main() {
   initslew(1);
+  printf("\n");
   motors_set_speeds[0] = 127;
+  curr[0] = -127;
   for(int i = 0;; i++) {
-    printf("number: %d\n\n\n", i);
+    printf("number: %d\n", i);
     updateMotors();
-    usleep(100000);
+    usleep(10000);
   }
 }
