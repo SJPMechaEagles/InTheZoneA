@@ -49,6 +49,6 @@ int main() {
   for(int i = 0;; i++) {
     printf("number: %d\n", i);
     updateMotors();
-    usleep(100000);
+    usleep(83*1000);
   }
 }
