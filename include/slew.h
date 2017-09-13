@@ -1,48 +1,37 @@
 #include <API.h>
 #include <math.h>
+#include "log.h"
 
 #define UPDATE_PERIOD_MS 25
+#define MOTOR_PORTS 12
+#define RAMP_PROPORTION 2
 
 static unsigned char *motors_set_speeds = NULL;
-static int num_motors = 0;
-static unsigned char *increment = NULL;
 static TaskHandle slew = NULL; //TaskHandle is of type void*
+static bool initialized = false;
 
 static void updateMotors(){
   //Take back half approach
   //Not linear but equal to setSpeed(1-(1/2)^x)
-  for(int i = 0; i < num_motors; i++) {
+  for(int i = 0; i < MOTOR_PORTS; i++) {
     char set_speed = motors_set_speeds[i];
     char curr_speed = motorGet(i);
     char diff = set_speed - curr_speed;
-    motorSet(i, curr_speed+ceil(diff/2.0));
+    motorSet(i, curr_speed+ceil(diff/(float)RAMP_PROPORTION));
   }
-  /*for(int i = 0; i < size; i++){
-    if(abs(motors[i] - motorGet(i)) < increment[i]){
-      motorSet(i, motorGet(i) + increment[i]);
-    }
-    else if(motors[i] != motorGet(i)){
-      motorSet(i, motors[i]);
-    }
-  }*/
 }
 
-void initslew(int nummotors){
-  motors_set_speeds = (unsigned char*) malloc(sizeof(unsigned char) * nummotors);
-  increment = (unsigned char*) malloc(sizeof(unsigned char) * nummotors);
-  num_motors = nummotors;
+void initslew(){
+  motors_set_speeds = (unsigned char*) malloc(sizeof(unsigned char) * MOTOR_PORTS);
   slew = taskRunLoop(updateMotors, UPDATE_PERIOD_MS);
+  initialized = true;
 }
 
 void deinitslew(){
   free(motors_set_speeds);
-  free(increment);
   taskDelete(slew);
 }
 
-
-
 void setMotorS(int motor, int speed){
   motors_set_speeds[motor] = speed;
-  increment[motor] = (speed - motorGet(motor))/5;
 }

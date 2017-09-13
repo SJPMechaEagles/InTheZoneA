@@ -112,7 +112,7 @@ lcd_buttons lcd_get_pressed_buttons(){
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
-void init_lcd(FILE *lcd) {
+void init_main_lcd(FILE *lcd) {
   lcdInit(lcd);
   lcd_port = lcd;
 }
