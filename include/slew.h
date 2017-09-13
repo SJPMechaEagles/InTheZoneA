@@ -1,3 +1,5 @@
+#pragma once
+
 #include <API.h>
 #include <math.h>
 #include "log.h"
