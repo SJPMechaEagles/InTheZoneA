@@ -14,6 +14,7 @@
 #include <API.h>
 #include "encoders.h"
 #include "lcd.h"
+#include "log.h"
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode one time while the
@@ -42,12 +43,15 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
-  lcdInit(uart1);
+  init_main_lcd(uart1);
+  init_error(true, uart2);
   if(!init_encoders()) {
     promt_confirmation("Check IME");
+    warning("CHECK IME");
   }
 
   if(powerLevelBackup()/1000 == 0) {
     promt_confirmation("Check Backup");
+    warning("Checkbackup bat");
   }
 }
