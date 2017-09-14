@@ -20,7 +20,7 @@
 * @author Chris Jerrett
 * @date 9/8/17
 * @see menu.h
-* @see struct menu
+* @see menu_t
 * @see create_menu
 * @see init_menu
 * @see display_menu
@@ -54,13 +54,13 @@ enum menu_type {
 * @author Chris Jerrett
 * @date 9/8/17
 * @see menu.h
-* @see struct menu
+* @see menu_t
 * @see create_menu
 * @see init_menu
 * @see display_menu
 * @see menu_type
 **/
-struct menu{
+typedef struct menu_t{
   /**
   * @brief contains the type of menu.
   * @author Chris Jerrett
@@ -88,7 +88,7 @@ struct menu{
   * @author Chris Jerrett
   * @date 9/8/17
   **/
-  int min = INT_MIN;
+  int min;
 
   /**
   * @brief contains the maximum int value of menu.
@@ -96,7 +96,7 @@ struct menu{
   * @author Chris Jerrett
   * @date 9/8/17
   **/
-  int max = INT_MAX;
+  int max;
 
   /**
   * @brief contains the step int value of menu.
@@ -104,7 +104,7 @@ struct menu{
   * @author Chris Jerrett
   * @date 9/8/17
   **/
-  int step = 1;
+  int step;
 
   /**
   * @brief contains the minumum float value of menu.
@@ -112,7 +112,7 @@ struct menu{
   * @author Chris Jerrett
   * @date 9/8/17
   **/
-  float min_f = FLT_MIN;
+  float min_f;
 
   /**
   * @brief contains the maximum float value of menu.
@@ -120,7 +120,7 @@ struct menu{
   * @author Chris Jerrett
   * @date 9/8/17
   **/
-  float max_f = FLT_MAX;
+  float max_f;
 
   /**
   * @brief contains the step float value of menu.
@@ -128,13 +128,13 @@ struct menu{
   * @author Chris Jerrett
   * @date 9/8/17
   **/
-  float step_f = 1.0;
+  float step_f;
   /**
   * @brief contains the current index of menu.
   * @author Chris Jerrett
   * @date 9/8/17
   **/
-  int current = 0;
+  int current;
   /**
   * @brief contains the prompt to display on the first line.
   * Step is how much the int menu will increase of decrease with each press. Defualts to one
@@ -142,7 +142,7 @@ struct menu{
   * @date 9/8/17
   **/
   char prompt[16];
-};
+} menu_t;
 
 /**
 * @brief Static function that handles creation of menu.
@@ -150,10 +150,17 @@ struct menu{
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-static struct menu* create_menu(enum menu_type type, const char *prompt) {
-  struct menu* menu = (struct menu*) calloc(1, sizeof(struct menu));
+static menu_t* create_menu(enum menu_type type, const char *prompt) {
+  menu_t* menu = (menu_t*) malloc(sizeof(menu_t));
   menu->type = type;
   strcpy(menu->prompt, prompt);
+  menu->min = INT_MAX;
+  menu->min = INT_MIN;
+  menu->step = 1;
+  menu->min_f = FLT_MIN;
+  menu->max_f = FLT_MAX;
+  menu->step_f = 1;
+
   return menu;
 }
 
@@ -169,8 +176,8 @@ static struct menu* create_menu(enum menu_type type, const char *prompt) {
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-struct menu* init_menu(enum menu_type type, unsigned int nums, char *prompt, char* options,...){
-  struct menu* menu = create_menu(type, prompt);
+menu_t* init_menu_var(enum menu_type type, unsigned int nums, char *prompt, char* options,...){
+  menu_t* menu = create_menu(type, prompt);
   va_list values;
   char **options_array = (char**)malloc(sizeof(char*) * nums);
   va_start(values, options);
@@ -196,8 +203,8 @@ struct menu* init_menu(enum menu_type type, unsigned int nums, char *prompt, cha
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-struct menu* init_menu(enum menu_type type, int min, int max, int step, char* prompt){
-  struct menu* menu = create_menu(type, prompt);
+menu_t* init_menu_int(enum menu_type type, int min, int max, int step, char* prompt){
+  menu_t* menu = create_menu(type, prompt);
   menu->min = min;
   menu->max = max;
   menu->step = step;
@@ -217,8 +224,8 @@ struct menu* init_menu(enum menu_type type, int min, int max, int step, char* pr
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-struct menu* init_menu(enum menu_type type, float min, float max, float step, char* prompt){
-  struct menu* menu = create_menu(type, prompt);
+menu_t* init_menu_float(enum menu_type type, float min, float max, float step, char* prompt){
+  menu_t* menu = create_menu(type, prompt);
   menu->min_f = min;
   menu->max_f = max;
   menu->step_f = step;
@@ -233,7 +240,7 @@ struct menu* init_menu(enum menu_type type, float min, float max, float step, ch
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-static void calculate_current_display(char* rtn, struct menu *menu) {
+static void calculate_current_display(char* rtn, menu_t *menu) {
   if(menu->type == string_type){
     //Ignore warning
     rtn = (menu->options[menu->current % (menu->length)]);
@@ -269,7 +276,7 @@ static void calculate_current_display(char* rtn, struct menu *menu) {
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-int display_menu(struct menu *menu){
+int display_menu(menu_t *menu){
   lcd_print(TOP_ROW, menu->prompt);
   //Will exit if teleop or autonomous begin. This is extremely important if robot disconnects or resets.
   while(lcd_get_pressed_buttons().middle == RELEASED && !isEnabled()) {
@@ -296,7 +303,7 @@ int display_menu(struct menu *menu){
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-void denint_menu(struct menu *menu){
+void denint_menu(menu_t *menu){
   free(menu->prompt);
   if(menu->options != NULL) free(menu->options);
   free(menu);

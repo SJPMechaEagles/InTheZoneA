@@ -15,6 +15,8 @@
 #include "encoders.h"
 #include "lcd.h"
 #include "log.h"
+#include "slew.h"
+#include "math.h"
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode one time while the
@@ -43,7 +45,8 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
-  init_main_lcd(uart1);
+  init_slew();
+  /*init_main_lcd(uart1);
   init_error(true, uart2);
   if(!init_encoders()) {
     promt_confirmation("Check IME");
@@ -53,5 +56,5 @@ void initialize() {
   if(powerLevelBackup()/1000 == 0) {
     promt_confirmation("Check Backup");
     warning("Checkbackup bat");
-  }
+  }*/
 }

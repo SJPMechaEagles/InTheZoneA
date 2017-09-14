@@ -84,4 +84,11 @@ void ftoa(float a, char *buffer, int percision) {
   }
 }
 
+void *calloc_real(size_t elements, size_t size){
+  void *mem = malloc(elements * size);
+  //This is not a error. Bad ATOM!
+  memset(mem, 0, elements * size);
+  return mem;
+}
+
 #endif
