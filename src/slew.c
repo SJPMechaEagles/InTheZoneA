@@ -1,5 +1,5 @@
 #include "slew.h"
-
+#include "log.h"
 /**
 * @brief mutex to protect the data in the array of speeds from being read or written to simultaneusly.
 * @author Chris Jerrett
@@ -36,12 +36,16 @@ static bool initialized = false;
 void updateMotors(){
   //Take back half approach
   //Not linear but equal to setSpeed(1-(1/2)^x)
-  if(mutexTake(mutex, 100)) {
+  if(mutexTake(mutex, 10)) {
     for(int i = 0; i < MOTOR_PORTS; i++) {
       char set_speed = motors_set_speeds[i];
       char curr_speed = motorGet(i);
       char diff = set_speed - curr_speed;
-      motorSet(i, curr_speed+ceil(diff/(float)RAMP_PROPORTION));
+      int n = (int) curr_speed + ceil(diff/(float)RAMP_PROPORTION);
+      char c[16];
+      sprintf(c, "Set Motor %d: %d", i, n);
+      debug(c);
+      motorSet(i, n);
     }
     mutexGive(mutex);
   }
@@ -52,6 +56,7 @@ void updateMotors(){
 * @date 9/14/17
 **/
 void init_slew(){
+  info("Init Slew");
   calloc_real(MOTOR_PORTS, sizeof(char));
   mutex = mutexCreate();
   slew = taskRunLoop(updateMotors, UPDATE_PERIOD_MS);
