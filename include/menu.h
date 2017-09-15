@@ -181,7 +181,7 @@ menu_t* init_menu_var(enum menu_type type, unsigned int nums, char *prompt, char
   va_list values;
   char **options_array = (char**)malloc(sizeof(char*) * nums);
   va_start(values, options);
-  for(unsigned int i; i < nums; i++){
+  for(unsigned int i = 0; i < nums; i++){
     options_array[i] = va_arg(values, char*);
   }
   va_end(values);
