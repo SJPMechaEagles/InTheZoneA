@@ -1,7 +1,15 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
-    [ "auto.c", "a00035.html", "a00035" ],
-    [ "drive.c", "a00038.html", "a00038" ],
-    [ "init.c", "a00041.html", "a00041" ],
-    [ "opcontrol.c", "a00044.html", "a00044" ]
+    [ "auto.c", "auto_8c.html", "auto_8c" ],
+    [ "controller.c", "controller_8c.html", "controller_8c" ],
+    [ "drive.c", "drive_8c.html", "drive_8c" ],
+    [ "encoders.c", "encoders_8c.html", "encoders_8c" ],
+    [ "init.c", "init_8c.html", "init_8c" ],
+    [ "lcd.c", "lcd_8c.html", "lcd_8c" ],
+    [ "log.c", "log_8c.html", "log_8c" ],
+    [ "menu.c", "menu_8c.html", "menu_8c" ],
+    [ "opcontrol.c", "opcontrol_8c.html", "opcontrol_8c" ],
+    [ "slew.c", "slew_8c.html", "slew_8c" ],
+    [ "vlib.c", "vlib_8c.html", "vlib_8c" ],
+    [ "vmath.c", "vmath_8c.html", "vmath_8c" ]
 ];

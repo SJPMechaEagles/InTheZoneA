@@ -1,7 +1,7 @@
 var annotated_dup =
 [
-    [ "cord", "a00062.html", "a00062" ],
-    [ "lcd_buttons", "a00050.html", "a00050" ],
-    [ "menu", "a00054.html", "a00054" ],
-    [ "polar_cord", "a00058.html", "a00058" ]
+    [ "cord", "structcord.html", "structcord" ],
+    [ "lcd_buttons", "structlcd__buttons.html", "structlcd__buttons" ],
+    [ "menu_t", "structmenu__t.html", "structmenu__t" ],
+    [ "polar_cord", "structpolar__cord.html", "structpolar__cord" ]
 ];

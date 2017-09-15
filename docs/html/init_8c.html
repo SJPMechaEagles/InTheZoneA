@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: src/init.c File Reference</title>
+<title>Vex Team A: src/init.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Vex Team A
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
   </td>
  </tr>
@@ -89,23 +90,21 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 <p>File for initialization code.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
-<code>#include &lt;<a class="el" href="_a_p_i_8h_source.html">API.h</a>&gt;</code><br />
-<code>#include &quot;<a class="el" href="encoders_8h_source.html">encoders.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="lcd_8h_source.html">lcd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="slew_8h_source.html">slew.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for init.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c__incl.svg" width="422" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c__incl.svg" width="384" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="init_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad9cda921edb01125bb13c2f86bcf624b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8c.html#ad9cda921edb01125bb13c2f86bcf624b">initializeIO</a> ()</td></tr>
-<tr class="separator:ad9cda921edb01125bb13c2f86bcf624b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25a40b6614565f755233080a384c35f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8c.html#a25a40b6614565f755233080a384c35f1">initialize</a> ()</td></tr>
 <tr class="separator:a25a40b6614565f755233080a384c35f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9cda921edb01125bb13c2f86bcf624b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8c.html#ad9cda921edb01125bb13c2f86bcf624b">initializeIO</a> ()</td></tr>
+<tr class="separator:ad9cda921edb01125bb13c2f86bcf624b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>File for initialization code. </p>
@@ -133,13 +132,14 @@ Functions</h2></td></tr>
 <p>This function should initialize most sensors (gyro, encoders, ultrasonics), LCDs, global variables, and IMEs.</p>
 <p>This function must exit relatively promptly, or the <a class="el" href="main_8h.html#ac71a94af413917f27d108e95c4d6f6a7">operatorControl()</a> and <a class="el" href="main_8h.html#a3c7ca506bbc071fa740de13805b7f376">autonomous()</a> tasks will not start. An autonomous mode selection menu like the pre_auton() in other environments can be implemented in this task if desired. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00044">44</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00041">41</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
-<p class="reference">References <a class="el" href="encoders_8h_source.html#l00029">init_encoders()</a>, <a class="el" href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit()</a>, <a class="el" href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd">powerLevelBackup()</a>, <a class="el" href="lcd_8h_source.html#l00160">promt_confirmation()</a>, and <a class="el" href="_a_p_i_8h_source.html#l00819">uart1</a>.</p>
-<div class="dynheader">
+<p class="reference">References <a class="el" href="slew_8c_source.html#l00054">init_slew()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                  {</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="slew_8h.html#a321758941d88b75783955c819bb75005">init_slew</a>();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">/*init_main_lcd(uart1);</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">  init_error(true, uart2);</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  if(!init_encoders()) {</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    promt_confirmation(&quot;Check IME&quot;);</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    warning(&quot;CHECK IME&quot;);</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">  }</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  if(powerLevelBackup()/1000 == 0) {</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    promt_confirmation(&quot;Check Backup&quot;);</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    warning(&quot;Checkbackup bat&quot;);</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">  }*/</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div><div class="ttc" id="slew_8h_html_a321758941d88b75783955c819bb75005"><div class="ttname"><a href="slew_8h.html#a321758941d88b75783955c819bb75005">init_slew</a></div><div class="ttdeci">void init_slew()</div><div class="ttdoc">Initializes the slew rate controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00054">slew.c:54</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_a25a40b6614565f755233080a384c35f1_cgraph.svg" width="744" height="260"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_a25a40b6614565f755233080a384c35f1_cgraph.svg" width="484" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -161,10 +161,12 @@ Here is the call graph for this function:</div>
 <p>Runs pre-initialization code. This function will be started in kernel mode one time while the VEX Cortex is starting up. As the scheduler is still paused, most API functions will fail.</p>
 <p>The purpose of this function is solely to set the default pin modes (<a class="el" href="_a_p_i_8h.html#a1875409d12eee562555bda94cad7f973">pinMode()</a>) and port states (<a class="el" href="_a_p_i_8h.html#a23e767e5b47fa61d4e2cc02e6f15c7ab">digitalWrite()</a>) of limit switches, push buttons, and solenoids. It can also safely configure a UART port (usartOpen()) but cannot set up an LCD (<a class="el" href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit()</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00026">26</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00023">23</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 <p class="reference">References <a class="el" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName()</a>, and <a class="el" href="_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e">watchdogInit()</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                    {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e">watchdogInit</a>();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName</a>(<span class="stringliteral">&quot;Mecha Eagles: 9228A&quot;</span>);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a22269cefc22e487f7acdcc4737d58c4a"><div class="ttname"><a href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName</a></div><div class="ttdeci">void setTeamName(const char *name)</div></div>
+<div class="ttc" id="_a_p_i_8h_html_a8c2e4902f39a7abdea20cdf04007bb8e"><div class="ttname"><a href="_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e">watchdogInit</a></div><div class="ttdeci">void watchdogInit()</div></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_ad9cda921edb01125bb13c2f86bcf624b_cgraph.svg" width="250" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>

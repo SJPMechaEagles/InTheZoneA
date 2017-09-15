@@ -6,7 +6,7 @@
 **/
 
 #ifndef _PORTS_H_
-#define  _PORTS_H_
+#define _PORTS_H_
 
 /**
 * @brief Number of integrated motor encoders

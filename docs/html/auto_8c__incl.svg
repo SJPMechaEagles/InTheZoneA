@@ -8,7 +8,6 @@
  viewBox="0.00 0.00 265.96 192.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 188)">
 <title>src/auto.c</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-188 261.9629,-188 261.9629,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
@@ -19,7 +18,7 @@
 <g id="node2" class="node">
 <title>Node1</title>
 <g id="a_node2"><a xlink:href="main_8h.html" target="_top" xlink:title="Header file for global functions. ">
-<polygon fill="#ffffff" stroke="#000000" points="106.835,-110.5 106.835,-128.5 152.8496,-128.5 152.8496,-110.5 106.835,-110.5"/>
+<polygon fill="none" stroke="#000000" points="106.835,-110.5 106.835,-128.5 152.8496,-128.5 152.8496,-110.5 106.835,-110.5"/>
 <text text-anchor="middle" x="129.8423" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">main.h</text>
 </a>
 </g>
@@ -34,7 +33,7 @@
 <g id="node3" class="node">
 <title>Node2</title>
 <g id="a_node3"><a xlink:href="_a_p_i_8h.html" target="_top" xlink:title="Provides the high&#45;level user functionality intended for use by typical VEX Cortex programmers...">
-<polygon fill="#ffffff" stroke="#000000" points="109.6133,-55.5 109.6133,-73.5 150.0713,-73.5 150.0713,-55.5 109.6133,-55.5"/>
+<polygon fill="none" stroke="#000000" points="109.6133,-55.5 109.6133,-73.5 150.0713,-73.5 150.0713,-55.5 109.6133,-55.5"/>
 <text text-anchor="middle" x="129.8423" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">API.h</text>
 </a>
 </g>
@@ -48,7 +47,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<polygon fill="#ffffff" stroke="#bfbfbf" points="0,-.5 0,-18.5 47.6846,-18.5 47.6846,-.5 0,-.5"/>
+<polygon fill="none" stroke="#bfbfbf" points="0,-.5 0,-18.5 47.6846,-18.5 47.6846,-.5 0,-.5"/>
 <text text-anchor="middle" x="23.8423" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">stdlib.h</text>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
@@ -60,7 +59,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<polygon fill="#ffffff" stroke="#bfbfbf" points="65.5493,-.5 65.5493,-18.5 122.1353,-18.5 122.1353,-.5 65.5493,-.5"/>
+<polygon fill="none" stroke="#bfbfbf" points="65.5493,-.5 65.5493,-18.5 122.1353,-18.5 122.1353,-.5 65.5493,-.5"/>
 <text text-anchor="middle" x="93.8423" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">stdbool.h</text>
 </g>
 <!-- Node2&#45;&gt;Node4 -->
@@ -72,7 +71,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<polygon fill="#ffffff" stroke="#bfbfbf" points="139.7759,-.5 139.7759,-18.5 191.9087,-18.5 191.9087,-.5 139.7759,-.5"/>
+<polygon fill="none" stroke="#bfbfbf" points="139.7759,-.5 139.7759,-18.5 191.9087,-18.5 191.9087,-.5 139.7759,-.5"/>
 <text text-anchor="middle" x="165.8423" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">stdarg.h</text>
 </g>
 <!-- Node2&#45;&gt;Node5 -->
@@ -84,7 +83,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<polygon fill="#ffffff" stroke="#bfbfbf" points="209.7217,-.5 209.7217,-18.5 257.9629,-18.5 257.9629,-.5 209.7217,-.5"/>
+<polygon fill="none" stroke="#bfbfbf" points="209.7217,-.5 209.7217,-18.5 257.9629,-18.5 257.9629,-.5 209.7217,-.5"/>
 <text text-anchor="middle" x="233.8423" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">stdint.h</text>
 </g>
 <!-- Node2&#45;&gt;Node6 -->

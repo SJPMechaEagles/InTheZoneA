@@ -6,7 +6,7 @@
 **/
 
 #ifndef _ENCODERS_H_
-#define  _ENCODERS_H_
+#define _ENCODERS_H_
 
 #include <API.h>
 
@@ -26,8 +26,6 @@
 * @date 9/9/2017
 * @see IME_NUMBER
 **/
-bool init_encoders() {
-  return imeInitializeAll() == IME_NUMBER;
-}
+bool init_encoders();
 
 #endif

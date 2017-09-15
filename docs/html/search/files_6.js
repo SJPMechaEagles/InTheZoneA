@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['main_2eh',['main.h',['../a00017.html',1,'']]],
-  ['menu_2eh',['menu.h',['../a00020.html',1,'']]]
+  ['main_2eh',['main.h',['../main_8h.html',1,'']]],
+  ['menu_2ec',['menu.c',['../menu_8c.html',1,'']]],
+  ['menu_2eh',['menu.h',['../menu_8h.html',1,'']]]
 ];

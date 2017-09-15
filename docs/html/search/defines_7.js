@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['master',['MASTER',['../a00005.html#a3fa2d3bf1901157f734a584d47b25d8b',1,'controller.h']]],
-  ['motor_5fback_5fleft',['MOTOR_BACK_LEFT',['../a00023.html#a36e9fda07b5cd4408170fe907b75a8b7',1,'ports.h']]],
-  ['motor_5fback_5fright',['MOTOR_BACK_RIGHT',['../a00023.html#ad85c5f3d6a2d00789c8c67b960c46c2b',1,'ports.h']]],
-  ['motor_5ffront_5fleft',['MOTOR_FRONT_LEFT',['../a00023.html#a743b47e164fb23b30f4f2f228db0b338',1,'ports.h']]],
-  ['motor_5ffront_5fright',['MOTOR_FRONT_RIGHT',['../a00023.html#a6f48bcc6d5fce24caeae0b17954c277a',1,'ports.h']]],
-  ['motor_5fmiddle_5fleft',['MOTOR_MIDDLE_LEFT',['../a00023.html#ac7dd3397e2f909b4dc11f2a2e6f28800',1,'ports.h']]],
-  ['motor_5fmiddle_5fright',['MOTOR_MIDDLE_RIGHT',['../a00023.html#a0da3f792b8f28ab09b339295859d8334',1,'ports.h']]]
+  ['lcd_5fbtn_5fcenter',['LCD_BTN_CENTER',['../_a_p_i_8h.html#abf8903693b4a95a6b653916d5f6fe486',1,'API.h']]],
+  ['lcd_5fbtn_5fleft',['LCD_BTN_LEFT',['../_a_p_i_8h.html#afa86afc6491531fb4b4d7f1e18803852',1,'API.h']]],
+  ['lcd_5fbtn_5fright',['LCD_BTN_RIGHT',['../_a_p_i_8h.html#a7851ef3eb7573b194efb0a05d88f2c35',1,'API.h']]],
+  ['left_5fjoy_5fx',['LEFT_JOY_X',['../controller_8h.html#ac055a23829dc64aa20b8e2e1bcfbf316',1,'controller.h']]],
+  ['left_5fjoy_5fy',['LEFT_JOY_Y',['../controller_8h.html#ae0a2b64db5fc4f4bf4b169185be93db3',1,'controller.h']]],
+  ['low',['LOW',['../_a_p_i_8h.html#ab811d8c6ff3a505312d3276590444289',1,'API.h']]]
 ];

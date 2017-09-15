@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['prompt',['prompt',['../a00054.html#acb70b4c47b2df0ea658cdf49dbde4009',1,'menu']]]
+  ['options',['options',['../structmenu__t.html#ad695cd88051e34817f0f582d4e43c33a',1,'menu_t']]]
 ];

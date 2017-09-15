@@ -8,7 +8,6 @@
  viewBox="0.00 0.00 237.19 82.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 78)">
 <title>include/main.h</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-78 233.187,-78 233.187,4 -4,4"/>
 <!-- Node6 -->
 <g id="node1" class="node">
 <title>Node6</title>
@@ -19,7 +18,7 @@
 <g id="node2" class="node">
 <title>Node7</title>
 <g id="a_node2"><a xlink:href="auto_8c.html" target="_top" xlink:title="File for autonomous code. ">
-<polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-18.5 59.3496,-18.5 59.3496,-.5 0,-.5"/>
+<polygon fill="none" stroke="#000000" points="0,-.5 0,-18.5 59.3496,-18.5 59.3496,-.5 0,-.5"/>
 <text text-anchor="middle" x="29.6748" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/auto.c</text>
 </a>
 </g>
@@ -34,7 +33,7 @@
 <g id="node3" class="node">
 <title>Node8</title>
 <g id="a_node3"><a xlink:href="init_8c.html" target="_top" xlink:title="File for initialization code. ">
-<polygon fill="#ffffff" stroke="#000000" points="77.3398,-.5 77.3398,-18.5 130.0098,-18.5 130.0098,-.5 77.3398,-.5"/>
+<polygon fill="none" stroke="#000000" points="77.3398,-.5 77.3398,-18.5 130.0098,-18.5 130.0098,-.5 77.3398,-.5"/>
 <text text-anchor="middle" x="103.6748" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/init.c</text>
 </a>
 </g>
@@ -49,7 +48,7 @@
 <g id="node4" class="node">
 <title>Node9</title>
 <g id="a_node4"><a xlink:href="opcontrol_8c.html" target="_top" xlink:title="File for operator control code. ">
-<polygon fill="#ffffff" stroke="#000000" points="148.1626,-.5 148.1626,-18.5 229.187,-18.5 229.187,-.5 148.1626,-.5"/>
+<polygon fill="none" stroke="#000000" points="148.1626,-.5 148.1626,-18.5 229.187,-18.5 229.187,-.5 148.1626,-.5"/>
 <text text-anchor="middle" x="188.6748" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/opcontrol.c</text>
 </a>
 </g>

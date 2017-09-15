@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eof',['EOF',['../a00002.html#a59adc4c82490d23754cd39c2fb99b0da',1,'API.h']]]
+  ['debug',['DEBUG',['../log_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'log.h']]]
 ];

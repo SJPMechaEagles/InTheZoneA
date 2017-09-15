@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/vlib.h File Reference</title>
+<title>Vex Team A: include/vlib.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Vex Team A
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
   </td>
  </tr>
@@ -88,9 +89,9 @@ $(document).ready(function(){initNavTree('vlib_8h.html','');});
 
 <p>Contains misc helpful functions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;math.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="_a_p_i_8h_source.html">API.h</a>&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for vlib.h:</div>
 <div class="dyncontent">
@@ -99,22 +100,24 @@ Include dependency graph for vlib.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="vlib_8h__dep__incl.svg" width="123" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="vlib_8h__dep__incl.svg" width="427" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="vlib_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aad7fea725cb4b198ace1aa3df5051244"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vlib_8h.html#aad7fea725cb4b198ace1aa3df5051244">reverse</a> (char *str, int len)</td></tr>
-<tr class="memdesc:aad7fea725cb4b198ace1aa3df5051244"><td class="mdescLeft">&#160;</td><td class="mdescRight">reverses a string 'str' of length 'len'  <a href="#aad7fea725cb4b198ace1aa3df5051244">More...</a><br /></td></tr>
-<tr class="separator:aad7fea725cb4b198ace1aa3df5051244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1115803c6996aebfbf67434810df7b4b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vlib_8h.html#a1115803c6996aebfbf67434810df7b4b">calloc_real</a> (size_t elements, size_t size)</td></tr>
+<tr class="separator:a1115803c6996aebfbf67434810df7b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4124054db8f5e3246e321971f993b165"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vlib_8h.html#a4124054db8f5e3246e321971f993b165">ftoa</a> (float a, char *buffer, int percision)</td></tr>
+<tr class="memdesc:a4124054db8f5e3246e321971f993b165"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts a float to string.  <a href="#a4124054db8f5e3246e321971f993b165">More...</a><br /></td></tr>
+<tr class="separator:a4124054db8f5e3246e321971f993b165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1986c48c027cf691df679c7a4968126"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vlib_8h.html#aa1986c48c027cf691df679c7a4968126">itoa</a> (int a, char *buffer, int digits)</td></tr>
 <tr class="memdesc:aa1986c48c027cf691df679c7a4968126"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts a int to string.  <a href="#aa1986c48c027cf691df679c7a4968126">More...</a><br /></td></tr>
 <tr class="separator:aa1986c48c027cf691df679c7a4968126"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94a81de3fb1a5f6148aee8582b9f9607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vlib_8h.html#a94a81de3fb1a5f6148aee8582b9f9607">ftoa</a> (float a, char *res, int percision)</td></tr>
-<tr class="memdesc:a94a81de3fb1a5f6148aee8582b9f9607"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts a float to string.  <a href="#a94a81de3fb1a5f6148aee8582b9f9607">More...</a><br /></td></tr>
-<tr class="separator:a94a81de3fb1a5f6148aee8582b9f9607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7fea725cb4b198ace1aa3df5051244"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vlib_8h.html#aad7fea725cb4b198ace1aa3df5051244">reverse</a> (char *str, int len)</td></tr>
+<tr class="memdesc:aad7fea725cb4b198ace1aa3df5051244"><td class="mdescLeft">&#160;</td><td class="mdescRight">reverses a string 'str' of length 'len'  <a href="#aad7fea725cb4b198ace1aa3df5051244">More...</a><br /></td></tr>
+<tr class="separator:aad7fea725cb4b198ace1aa3df5051244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains misc helpful functions. </p>
@@ -123,8 +126,45 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="vlib_8h_source.html">vlib.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a94a81de3fb1a5f6148aee8582b9f9607"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94a81de3fb1a5f6148aee8582b9f9607">&#9670;&nbsp;</a></span>ftoa()</h2>
+<a id="a1115803c6996aebfbf67434810df7b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1115803c6996aebfbf67434810df7b4b">&#9670;&nbsp;</a></span>calloc_real()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* calloc_real </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>elements</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="vlib_8c_source.html#l00053">53</a> of file <a class="el" href="vlib_8c_source.html">vlib.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00054">init_slew()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                               {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> *mem = malloc(elements * size);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">//This is not a error. Bad ATOM!</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  memset(mem, 0, elements * size);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">return</span> mem;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="vlib_8h_a1115803c6996aebfbf67434810df7b4b_icgraph.svg" width="334" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4124054db8f5e3246e321971f993b165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4124054db8f5e3246e321971f993b165">&#9670;&nbsp;</a></span>ftoa()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,7 +179,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>res</em>, </td>
+          <td class="paramname"><em>buffer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -165,20 +205,21 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vlib_8h_source.html#l00064">64</a> of file <a class="el" href="vlib_8h_source.html">vlib.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vlib_8c_source.html#l00030">30</a> of file <a class="el" href="vlib_8c_source.html">vlib.c</a>.</p>
 
-<p class="reference">References <a class="el" href="vlib_8h_source.html#l00041">itoa()</a>.</p>
+<p class="reference">References <a class="el" href="vlib_8c_source.html#l00013">itoa()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8h_source.html#l00080">calculate_current_display()</a>.</p>
-<div class="dynheader">
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                                {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// Extract integer part</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> ipart = (int)a;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// Extract floating part</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">float</span> fpart = a - (float)ipart;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// convert integer part to string</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">int</span> i = <a class="code" href="vlib_8c.html#aa1986c48c027cf691df679c7a4968126">itoa</a>(ipart, buffer, 0);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">// check for display option after point</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">if</span>(percision != 0) {</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    buffer[i] = <span class="charliteral">&#39;.&#39;</span>;  <span class="comment">// add dot</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Get the value of fraction part upto given no.</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// of points after dot. The third parameter is needed</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// to handle cases like 233.007</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    fpart = fpart * pow(10, percision);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="vlib_8c.html#aa1986c48c027cf691df679c7a4968126">itoa</a>((<span class="keywordtype">int</span>)fpart, buffer + i + 1, percision);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div><div class="ttc" id="vlib_8c_html_aa1986c48c027cf691df679c7a4968126"><div class="ttname"><a href="vlib_8c.html#aa1986c48c027cf691df679c7a4968126">itoa</a></div><div class="ttdeci">int itoa(int a, char *buffer, int digits)</div><div class="ttdoc">converts a int to string. </div><div class="ttdef"><b>Definition:</b> <a href="vlib_8c_source.html#l00013">vlib.c:13</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="vlib_8h_a94a81de3fb1a5f6148aee8582b9f9607_cgraph.svg" width="259" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="vlib_8h_a4124054db8f5e3246e321971f993b165_cgraph.svg" width="259" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="vlib_8h_a94a81de3fb1a5f6148aee8582b9f9607_icgraph.svg" width="426" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="vlib_8h_a4124054db8f5e3246e321971f993b165_icgraph.svg" width="426" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -228,12 +269,13 @@ Here is the caller graph for this function:</div>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="vlib_8h_source.html#l00041">41</a> of file <a class="el" href="vlib_8h_source.html">vlib.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vlib_8c_source.html#l00013">13</a> of file <a class="el" href="vlib_8c_source.html">vlib.c</a>.</p>
 
-<p class="reference">References <a class="el" href="vlib_8h_source.html#l00022">reverse()</a>.</p>
+<p class="reference">References <a class="el" href="vlib_8c_source.html#l00003">reverse()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8h_source.html#l00080">calculate_current_display()</a>, and <a class="el" href="vlib_8h_source.html#l00064">ftoa()</a>.</p>
-<div class="dynheader">
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, and <a class="el" href="vlib_8c_source.html#l00030">ftoa()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                          {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">int</span> i = 0;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;   <span class="keywordflow">while</span> (a) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;       buffer[i++] = (a%10) + <span class="charliteral">&#39;0&#39;</span>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;       a = a/10;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   }</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;   <span class="comment">// If number of digits required is more, then</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;   <span class="comment">// add 0s at the beginning</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;   <span class="keywordflow">while</span> (i &lt; digits)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;       buffer[i++] = <span class="charliteral">&#39;0&#39;</span>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   <a class="code" href="vlib_8c.html#aad7fea725cb4b198ace1aa3df5051244">reverse</a>(buffer, i);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;   buffer[i] = <span class="charliteral">&#39;\0&#39;</span>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   <span class="keywordflow">return</span> i;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div><div class="ttc" id="vlib_8c_html_aad7fea725cb4b198ace1aa3df5051244"><div class="ttname"><a href="vlib_8c.html#aad7fea725cb4b198ace1aa3df5051244">reverse</a></div><div class="ttdeci">void reverse(char *str, int len)</div><div class="ttdoc">reverses a string &amp;#39;str&amp;#39; of length &amp;#39;len&amp;#39; </div><div class="ttdef"><b>Definition:</b> <a href="vlib_8c_source.html#l00003">vlib.c:3</a></div></div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="vlib_8h_aa1986c48c027cf691df679c7a4968126_cgraph.svg" width="167" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -283,10 +325,10 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="vlib_8h_source.html#l00022">22</a> of file <a class="el" href="vlib_8h_source.html">vlib.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="vlib_8c_source.html#l00003">3</a> of file <a class="el" href="vlib_8c_source.html">vlib.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="vlib_8h_source.html#l00041">itoa()</a>.</p>
-<div class="dynheader">
+<p class="reference">Referenced by <a class="el" href="vlib_8c_source.html#l00013">itoa()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                 {</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keywordtype">int</span> i=0, j=len-1, temp;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">while</span> (i&lt;j) {</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        temp = str[i];</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        str[i] = str[j];</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        str[j] = temp;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        i++; j--;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="vlib_8h_aad7fea725cb4b198ace1aa3df5051244_icgraph.svg" width="631" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>

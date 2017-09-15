@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x',['x',['../a00062.html#ad0da36b2558901e21e7a30f6c227a45e',1,'cord']]]
+  ['type',['type',['../structmenu__t.html#a110244ceb7d2a7cba95cfc5758d61c01',1,'menu_t']]]
 ];

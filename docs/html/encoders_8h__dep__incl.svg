@@ -8,7 +8,6 @@
  viewBox="0.00 0.00 107.95 82.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 78)">
 <title>include/encoders.h</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-78 103.9453,-78 103.9453,4 -4,4"/>
 <!-- Node6 -->
 <g id="node1" class="node">
 <title>Node6</title>
@@ -18,9 +17,9 @@
 <!-- Node7 -->
 <g id="node2" class="node">
 <title>Node7</title>
-<g id="a_node2"><a xlink:href="init_8c.html" target="_top" xlink:title="File for initialization code. ">
-<polygon fill="#ffffff" stroke="#000000" points="23.6377,-.5 23.6377,-18.5 76.3076,-18.5 76.3076,-.5 23.6377,-.5"/>
-<text text-anchor="middle" x="49.9727" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/init.c</text>
+<g id="a_node2"><a xlink:href="encoders_8c.html" target="_top" xlink:title="src/encoders.c">
+<polygon fill="none" stroke="#000000" points="9.4604,-.5 9.4604,-18.5 90.4849,-18.5 90.4849,-.5 9.4604,-.5"/>
+<text text-anchor="middle" x="49.9727" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/encoders.c</text>
 </a>
 </g>
 </g>

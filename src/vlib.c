@@ -1,0 +1,58 @@
+#include "vlib.h"
+
+void reverse(char *str, int len) {
+    int i=0, j=len-1, temp;
+    while (i<j) {
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+        i++; j--;
+    }
+}
+
+int itoa(int a, char *buffer, int digits) {
+  int i = 0;
+   while (a) {
+       buffer[i++] = (a%10) + '0';
+       a = a/10;
+   }
+
+   // If number of digits required is more, then
+   // add 0s at the beginning
+   while (i < digits)
+       buffer[i++] = '0';
+
+   reverse(buffer, i);
+   buffer[i] = '\0';
+   return i;
+}
+
+void ftoa(float a, char *buffer, int percision) {
+  // Extract integer part
+  int ipart = (int)a;
+
+  // Extract floating part
+  float fpart = a - (float)ipart;
+
+  // convert integer part to string
+  int i = itoa(ipart, buffer, 0);
+
+  // check for display option after point
+  if(percision != 0) {
+    buffer[i] = '.';  // add dot
+
+    // Get the value of fraction part upto given no.
+    // of points after dot. The third parameter is needed
+    // to handle cases like 233.007
+    fpart = fpart * pow(10, percision);
+
+    itoa((int)fpart, buffer + i + 1, percision);
+  }
+}
+
+void *calloc_real(size_t elements, size_t size){
+  void *mem = malloc(elements * size);
+  //This is not a error. Bad ATOM!
+  memset(mem, 0, elements * size);
+  return mem;
+}
