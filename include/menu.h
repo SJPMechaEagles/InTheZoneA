@@ -154,7 +154,7 @@ static menu_t* create_menu(enum menu_type type, const char *prompt) {
   menu_t* menu = (menu_t*) malloc(sizeof(menu_t));
   menu->type = type;
   strcpy(menu->prompt, prompt);
-  menu->min = INT_MAX;
+  menu->max = INT_MAX;
   menu->min = INT_MIN;
   menu->step = 1;
   menu->min_f = FLT_MIN;
