@@ -36,9 +36,9 @@ int itoa(int a, char *buffer, int digits);
 * @brief converts a float to string.
 * @param a the float
 * @param buffer the string the float will be written to.
-* @param percision digits after the decimal to write
+* @param precision digits after the decimal to write
 **/
-void ftoa(float a, char *buffer, int percision);
+void ftoa(float a, char *buffer, int precision);
 
 void *calloc_real(size_t elements, size_t size);
 

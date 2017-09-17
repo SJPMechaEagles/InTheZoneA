@@ -27,7 +27,7 @@ int itoa(int a, char *buffer, int digits) {
    return i;
 }
 
-void ftoa(float a, char *buffer, int percision) {
+void ftoa(float a, char *buffer, int precision) {
   // Extract integer part
   int ipart = (int)a;
 
@@ -38,15 +38,15 @@ void ftoa(float a, char *buffer, int percision) {
   int i = itoa(ipart, buffer, 0);
 
   // check for display option after point
-  if(percision != 0) {
+  if(precision != 0) {
     buffer[i] = '.';  // add dot
 
-    // Get the value of fraction part upto given no.
+    // Get the value of fraction part up to given num.
     // of points after dot. The third parameter is needed
     // to handle cases like 233.007
-    fpart = fpart * pow(10, percision);
+    fpart = fpart * pow(10, precision);
 
-    itoa((int)fpart, buffer + i + 1, percision);
+    itoa((int)fpart, buffer + i + 1, precision);
   }
 }
 

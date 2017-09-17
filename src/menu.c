@@ -45,11 +45,11 @@ menu_t* init_menu_float(enum menu_type type, float min, float max, float step, c
 }
 
 static void calculate_current_display(char* rtn, menu_t *menu) {
-  if(menu->type == string_type){
+  if(menu->type == STRING_TYPE){
     //Ignore warning
     rtn = (menu->options[menu->current % (menu->length)]);
   }
-  if(menu->type == int_type) {
+  if(menu->type == INT_TYPE) {
     int step = (menu->step);
     int min = (menu->min);
     int max = (menu->max);
@@ -58,7 +58,7 @@ static void calculate_current_display(char* rtn, menu_t *menu) {
     value = value > max ? max : value;
     itoa(value, rtn, 4);
   }
-  if(menu->type == float_type) {
+  if(menu->type == FLOAT_TYPE) {
     float step = (menu->step_f);
     float min = (menu->min_f);
     float max = (menu->max_f);

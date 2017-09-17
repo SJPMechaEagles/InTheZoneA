@@ -32,20 +32,20 @@ enum menu_type {
   * Will return the index of the selected value.
   * Example: User goes forwards twice then it will return 2.
   **/
-  int_type,
+  INT_TYPE,
   /**
   * @brief Menu type allowing user to select a float
   * The float type menu has a max, min and a step value. Each step is calculated.
   * Will return the index of the selected value.
   * Example: User goes forwards twice then it will return 2.
   **/
-  float_type,
+  FLOAT_TYPE,
   /**
   * @brief Menu type allowing user to select a string from a array of strings.
   * Will return the index of the selected value.
   * Example: User goes forwards twice then it will return 2.
   **/
-  string_type
+  STRING_TYPE
 };
 
 /**
@@ -82,7 +82,7 @@ typedef struct menu_t{
   unsigned int length;
 
   /**
-  * @brief contains the minumum int value of menu.
+  * @brief contains the minimum int value of menu.
   * Defaults to minimum int value
   * @author Chris Jerrett
   * @date 9/8/17
@@ -99,14 +99,14 @@ typedef struct menu_t{
 
   /**
   * @brief contains the step int value of menu.
-  * Step is how much the int menu will increase of decrease with each press. Defualts to one
+  * Step is how much the int menu will increase of decrease with each press. Defaults to one
   * @author Chris Jerrett
   * @date 9/8/17
   **/
   int step;
 
   /**
-  * @brief contains the minumum float value of menu.
+  * @brief contains the minimum float value of menu.
   * Defaults to minimum int value
   * @author Chris Jerrett
   * @date 9/8/17
@@ -123,7 +123,7 @@ typedef struct menu_t{
 
   /**
   * @brief contains the step float value of menu.
-  * Step is how much the int menu will increase of decrease with each press. Defualts to 1.0f
+  * Step is how much the int menu will increase of decrease with each press. Defaults to 1.0f
   * @author Chris Jerrett
   * @date 9/8/17
   **/
@@ -136,7 +136,7 @@ typedef struct menu_t{
   int current;
   /**
   * @brief contains the prompt to display on the first line.
-  * Step is how much the int menu will increase of decrease with each press. Defualts to one
+  * Step is how much the int menu will increase of decrease with each press. Defaults to one
   * @author Chris Jerrett
   * @date 9/8/17
   **/
@@ -158,7 +158,7 @@ static menu_t* create_menu(enum menu_type type, const char *prompt);
 * @param type the type of menu
 * @see menu_type
 * @param nums the number of elements passed to function
-* @param prompt the prompt to diplay to user
+* @param prompt the prompt to display to user
 * @param options the options to display for user
 * @author Chris Jerrett
 * @date 9/8/17
@@ -172,9 +172,9 @@ menu_t* init_menu_var(enum menu_type type, unsigned int nums, char *prompt, char
 * @param type the type of menu
 * @see menu_type
 * @param min the minimum value
-* @param max the maximum vlaue
+* @param max the maximum value
 * @param step the step value
-* @param prompt the prompt to diplay to user
+* @param prompt the prompt to display to user
 * @author Chris Jerrett
 * @date 9/8/17
 **/
@@ -187,9 +187,9 @@ menu_t* init_menu_int(enum menu_type type, int min, int max, int step, char* pro
 * @param type the type of menu
 * @see menu_type
 * @param min the minimum value
-* @param max the maximum vlaue
+* @param max the maximum value
 * @param step the step value
-* @param prompt the prompt to diplay to user
+* @param prompt the prompt to display to user
 * @author Chris Jerrett
 * @date 9/8/17
 **/

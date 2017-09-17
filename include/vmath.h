@@ -12,7 +12,7 @@
 #include <math.h>
 
 /**
-* @brief A struct that contains polar cordinates.
+* @brief A struct that contains polar coordinates.
 * @date 9/9/2017
 * @author Chris Jerrett
 */
@@ -24,32 +24,32 @@ struct polar_cord {
 };
 
 /**
-* @brief A struct that contains cartesian cordinates.
+* @brief A struct that contains cartesian coordinates.
 * @date 9/9/2017
 * @author Chris Jerrett
 */
 struct cord {
-  /** the x cordinate **/
+  /** the x coordinate **/
   float x;
-  /** the y cordinate **/
+  /** the y coordinate **/
   float y;
 };
 
 /**
-* @brief Function to convert x and y 2 dimensional cartesian cordinated to polar pordinates.
+* @brief Function to convert x and y 2 dimensional cartesian coordinated to polar coordinates.
 *
 * @author Christian Desimone
 * @date 9/8/2017
 *
-* @param x float value of the x cartesian cordinate.
-* @param y float value of the y cartesian cordinate.
+* @param x float value of the x cartesian coordinate.
+* @param y float value of the y cartesian coordinate.
 * @return a struct containing the angle and magnitude.
 * @see polar_cord
 */
 struct polar_cord cartesian_to_polar(float x, float y);
 
 /**
-* @brief Function to convert x and y 2 dimensional cartesian cordinated to polar pordinates.
+* @brief Function to convert x and y 2 dimensional cartesian cordinated to polar coordinates.
 *
 * @author Christian Desimone
 * @date 9/8/2017

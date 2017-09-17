@@ -1,3 +1,10 @@
+/**
+* @file log.h
+* @author Chris Jerrett
+* @date 9/16/2017
+* @brief Contains logging functions.
+**/
+
 #ifndef _LOG_H_
 #define _LOG_H_
 
@@ -43,9 +50,15 @@
 **/
 #define DEBUG 4
 
+/**
+* @brief Initializes the error lcd system
+* Only required if using lcd
+* @author Chris Jerrett
+* @date 9/10/17
+* @param use_lcd whether to use the lcd
+* @param lcd the lcd
+**/
 void init_error(bool use_lcd, FILE *lcd);
-
-static void log_info(const char *s, const char *mess);
 
 /**
 * @brief prints a error message and displays on lcd.

@@ -9,9 +9,11 @@
  * PROS contains FreeRTOS (http://www.freertos.org) whose source code may be
  * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
  */
-
 #include "main.h"
 #include "slew.h"
+#include "lcd.h"
+#include "log.h"
+#include "encoders.h"
 /*
  * Runs pre-initialization code. This function will be started in kernel mode one time while the
  * VEX Cortex is starting up. As the scheduler is still paused, most API functions will fail.
@@ -19,10 +21,12 @@
  * The purpose of this function is solely to set the default pin modes (pinMode()) and port
  * states (digitalWrite()) of limit switches, push buttons, and solenoids. It can also safely
  * configure a UART port (usartOpen()) but cannot set up an LCD (lcdInit()).
+ *
+ * AKA DON'T USE
+ * -Chris
  */
 void initializeIO() {
-  watchdogInit();
-  setTeamName("Mecha Eagles: 9228A");
+    watchdogInit();
 }
 
 /*
@@ -39,8 +43,9 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
+  setTeamName("9228A");
   init_slew();
-  /*init_main_lcd(uart1);
+  init_main_lcd(uart1);
   init_error(true, uart2);
   if(!init_encoders()) {
     promt_confirmation("Check IME");
@@ -50,5 +55,5 @@ void initialize() {
   if(powerLevelBackup()/1000 == 0) {
     promt_confirmation("Check Backup");
     warning("Checkbackup bat");
-  }*/
+  }
 }

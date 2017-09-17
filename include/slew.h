@@ -4,6 +4,7 @@
 * @author Chris Jerrett
 * @date 9/14/17
 **/
+
 #ifndef _SLEW_H_
 #define _SLEW_H_
 
@@ -38,6 +39,14 @@
 * @date 9/14/17
 **/
 void updateMotors();
+
+/**
+* @brief Deinitializes the slew rate controller and frees memory.
+* @author Chris Jerrett
+* @date 9/14/17
+**/
+void deinitslew();
+
 /**
 * @brief Initializes the slew rate controller.
 * @author Chris Jerrett, Christian DeSimone

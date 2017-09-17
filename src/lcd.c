@@ -3,6 +3,13 @@
 /** The port of the initialized lcd **/
 static FILE *lcd_port = NULL;
 
+/**
+* @brief Asserts the lcd is initialized
+* Works by checking is the File *lcd_port is the default NULL
+* value and thus not set.
+* @author Chris Jerrett
+* @date 9/9/2017
+**/
  static void lcd_assert() {
   if(lcd_port != NULL) {
     printf("LCD NULL!");

@@ -25,7 +25,7 @@
 #define BOTTOM_ROW 2
 
 /**
-* @brief Repressents the state of a button
+* @brief Represents the state of a button
 *
 * A button can be pressed of RELEASED. Release is false which is also 0.
 * PRESSED is true or 1.
@@ -41,7 +41,7 @@ typedef enum {
 } button_state;
 
 /**
-* @brief repreents the state of the lcd buttons
+* @brief represents the state of the lcd buttons
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
@@ -51,15 +51,6 @@ typedef struct {
   button_state right;
 } lcd_buttons;
 
-
-/**
-* @brief Asserts the lcd is initialized
-* Works by chekcing is the File *lcd_port is the default NULL
-* value and thus not set.
-* @author Chris Jerrett
-* @date 9/9/2017
-**/
- static void lcd_assert();
 
 /**
 * @brief Returns the pressed buttons
@@ -80,7 +71,7 @@ void lcd_clear();
 /**
 * @brief Initializes the lcd screen.
 * Also will initialize the lcd_port var. Must be called before any lcd function can be called.
-* @param lcd the urart port of the lcd scrren
+* @param lcd the urart port of the lcd screen
 * @see uart1
 * @see uart2
 * @author Chris Jerrett

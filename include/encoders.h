@@ -2,7 +2,7 @@
 * @file encoders.h
 * @author Chris Jerrett
 * @date 9/9/2017
-* @brief wrapper around encer functions
+* @brief wrapper around encoder functions
 **/
 
 #ifndef _ENCODERS_H_
@@ -27,5 +27,19 @@
 * @see IME_NUMBER
 **/
 bool init_encoders();
+
+/**
+* @brief Gets the encoder ticks since last reset
+* @author Chris Jerrett
+* @date 9/15/2017
+**/
+int get_encoder_ticks(unsigned char address);
+
+/**
+* @brief Gets the encoder reads
+* @author Chris Jerrett
+* @date 9/15/2017
+**/
+int get_encoder_velocity(unsigned char address);
 
 #endif
