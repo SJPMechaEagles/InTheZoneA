@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['board_5fnr_5fadc_5fpins',['BOARD_NR_ADC_PINS',['../_a_p_i_8h.html#ae0f99ae5d6aae10845f04e642560e702',1,'API.h']]],
-  ['board_5fnr_5fgpio_5fpins',['BOARD_NR_GPIO_PINS',['../_a_p_i_8h.html#ae61940b1dacc12c437f11082a6018a1c',1,'API.h']]],
-  ['both',['both',['../drive_8h.html#afc015eff6557e84151d2e53b94375445ad0957f04342d48a36bfb6beefd2b04f1',1,'drive.h']]],
-  ['bottom_5frow',['BOTTOM_ROW',['../lcd_8h.html#a7b55e87550874687b3e25a64e1cfda9d',1,'lcd.h']]],
-  ['button_5fstate',['button_state',['../lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29b',1,'lcd.h']]]
+  ['calculate_5fcurrent_5fdisplay',['calculate_current_display',['../menu_8h.html#a0fb55c1213b23963d509b974d1254567',1,'calculate_current_display(char *rtn, menu_t *menu):&#160;menu.h'],['../menu_8c.html#a0fb55c1213b23963d509b974d1254567',1,'calculate_current_display(char *rtn, menu_t *menu):&#160;menu.c']]],
+  ['calloc_5freal',['calloc_real',['../vlib_8h.html#a1115803c6996aebfbf67434810df7b4b',1,'calloc_real(size_t elements, size_t size):&#160;vlib.c'],['../vlib_8c.html#a1115803c6996aebfbf67434810df7b4b',1,'calloc_real(size_t elements, size_t size):&#160;vlib.c']]],
+  ['cartesian_5fcord_5fto_5fpolar',['cartesian_cord_to_polar',['../vmath_8h.html#a832105cf858b3046c57c0d08a4e7c38b',1,'cartesian_cord_to_polar(struct cord cords):&#160;vmath.c'],['../vmath_8c.html#a832105cf858b3046c57c0d08a4e7c38b',1,'cartesian_cord_to_polar(struct cord cords):&#160;vmath.c']]],
+  ['cartesian_5fto_5fpolar',['cartesian_to_polar',['../vmath_8h.html#a1c4a1747b714f5d4654f0614193f9e49',1,'cartesian_to_polar(float x, float y):&#160;vmath.c'],['../vmath_8c.html#a1c4a1747b714f5d4654f0614193f9e49',1,'cartesian_to_polar(float x, float y):&#160;vmath.c']]],
+  ['controller_2ec',['controller.c',['../controller_8c.html',1,'']]],
+  ['controller_2eh',['controller.h',['../controller_8h.html',1,'']]],
+  ['cord',['cord',['../structcord.html',1,'']]],
+  ['create_5fmenu',['create_menu',['../menu_8h.html#adcee778eac0edb821427d32949106dc5',1,'create_menu(enum menu_type type, const char *prompt):&#160;menu.h'],['../menu_8c.html#adcee778eac0edb821427d32949106dc5',1,'create_menu(enum menu_type type, const char *prompt):&#160;menu.c']]],
+  ['current',['current',['../structmenu__t.html#a2acb18066898677ec5e2dc40eec811c5',1,'menu_t']]]
 ];

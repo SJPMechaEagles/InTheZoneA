@@ -1,0 +1,430 @@
+\hypertarget{log_8h}{}\section{include/log.h File Reference}
+\label{log_8h}\index{include/log.\+h@{include/log.\+h}}
+
+
+Contains logging functions.  
+
+
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
+Include dependency graph for log.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{log_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{log_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{log_8h_ad72dbcf6d0153db1b8d8a58001feed83}{D\+E\+B\+UG}~4
+\begin{DoxyCompactList}\small\item\em logging only info debug. most verbose level \end{DoxyCompactList}\item 
+\#define \hyperlink{log_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{E\+R\+R\+OR}~1
+\begin{DoxyCompactList}\small\item\em logging only errors. Also displays error to lcd \end{DoxyCompactList}\item 
+\#define \hyperlink{log_8h_ae1103fea1e1b3c41ca3322d5389f7162}{I\+N\+FO}~3
+\begin{DoxyCompactList}\small\item\em logging only info messages and higher. \end{DoxyCompactList}\item 
+\#define \hyperlink{log_8h_a655c84af1b0034986ff56e12e84f983d}{N\+O\+NE}~0
+\begin{DoxyCompactList}\small\item\em No logging. Should be used in competition to reduce serial communication. \end{DoxyCompactList}\item 
+\#define \hyperlink{log_8h_a5cb439d9f933fde4cf23caa370c030e7}{W\+A\+R\+N\+I\+NG}~2
+\begin{DoxyCompactList}\small\item\em logs errors and warnings. Also displays error to lcd \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{log_8h_af3668f40d1ad1b4f3418869ac9a31f34}{debug} (const char $\ast$debug\+\_\+message)
+\begin{DoxyCompactList}\small\item\em prints a info message \end{DoxyCompactList}\item 
+void \hyperlink{log_8h_a8e5bb8a2a372f5b066ff7af7044584c1}{error} (const char $\ast$error\+\_\+message)
+\begin{DoxyCompactList}\small\item\em prints a error message and displays on lcd. Only will print and display if log\+\_\+level is greater than N\+O\+NE \end{DoxyCompactList}\item 
+void \hyperlink{log_8h_a1606d750e1bb8de9f9e917172bba3382}{info} (const char $\ast$info\+\_\+message)
+\begin{DoxyCompactList}\small\item\em prints a info message \end{DoxyCompactList}\item 
+void \hyperlink{log_8h_a163f389b4f5cf440a807d8fb48aaa006}{init\+\_\+error} (bool use\+\_\+lcd, F\+I\+LE $\ast$lcd)
+\begin{DoxyCompactList}\small\item\em Initializes the error lcd system Only required if using lcd. \end{DoxyCompactList}\item 
+void \hyperlink{log_8h_a0bec2cf5fff7f607bc510b74aba9887c}{warning} (const char $\ast$warning\+\_\+message)
+\begin{DoxyCompactList}\small\item\em prints a warning message and displays on lcd. Only will print and display if log\+\_\+level is greater than N\+O\+NE \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains logging functions. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/16/2017 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{log_8h_ad72dbcf6d0153db1b8d8a58001feed83}\label{log_8h_ad72dbcf6d0153db1b8d8a58001feed83}} 
+\index{log.\+h@{log.\+h}!D\+E\+B\+UG@{D\+E\+B\+UG}}
+\index{D\+E\+B\+UG@{D\+E\+B\+UG}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+B\+UG}{DEBUG}}
+{\footnotesize\ttfamily \#define D\+E\+B\+UG~4}
+
+
+
+logging only info debug. most verbose level 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/10/17 
+\end{DoxyDate}
+
+
+Definition at line 51 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_a8fe83ac76edc595f6b98cd4a4127aed5}\label{log_8h_a8fe83ac76edc595f6b98cd4a4127aed5}} 
+\index{log.\+h@{log.\+h}!E\+R\+R\+OR@{E\+R\+R\+OR}}
+\index{E\+R\+R\+OR@{E\+R\+R\+OR}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{E\+R\+R\+OR}{ERROR}}
+{\footnotesize\ttfamily \#define E\+R\+R\+OR~1}
+
+
+
+logging only errors. Also displays error to lcd 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/10/17 
+\end{DoxyDate}
+
+
+Definition at line 28 of file log.\+h.
+
+
+
+Referenced by debug(), and info().
+
+\mbox{\Hypertarget{log_8h_ae1103fea1e1b3c41ca3322d5389f7162}\label{log_8h_ae1103fea1e1b3c41ca3322d5389f7162}} 
+\index{log.\+h@{log.\+h}!I\+N\+FO@{I\+N\+FO}}
+\index{I\+N\+FO@{I\+N\+FO}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+FO}{INFO}}
+{\footnotesize\ttfamily \#define I\+N\+FO~3}
+
+
+
+logging only info messages and higher. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/10/17 
+\end{DoxyDate}
+
+
+Definition at line 43 of file log.\+h.
+
+\mbox{\Hypertarget{log_8h_a655c84af1b0034986ff56e12e84f983d}\label{log_8h_a655c84af1b0034986ff56e12e84f983d}} 
+\index{log.\+h@{log.\+h}!N\+O\+NE@{N\+O\+NE}}
+\index{N\+O\+NE@{N\+O\+NE}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{N\+O\+NE}{NONE}}
+{\footnotesize\ttfamily \#define N\+O\+NE~0}
+
+
+
+No logging. Should be used in competition to reduce serial communication. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/10/17 
+\end{DoxyDate}
+
+
+Definition at line 20 of file log.\+h.
+
+
+
+Referenced by error().
+
+\mbox{\Hypertarget{log_8h_a5cb439d9f933fde4cf23caa370c030e7}\label{log_8h_a5cb439d9f933fde4cf23caa370c030e7}} 
+\index{log.\+h@{log.\+h}!W\+A\+R\+N\+I\+NG@{W\+A\+R\+N\+I\+NG}}
+\index{W\+A\+R\+N\+I\+NG@{W\+A\+R\+N\+I\+NG}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{W\+A\+R\+N\+I\+NG}{WARNING}}
+{\footnotesize\ttfamily \#define W\+A\+R\+N\+I\+NG~2}
+
+
+
+logs errors and warnings. Also displays error to lcd 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/10/17 
+\end{DoxyDate}
+
+
+Definition at line 36 of file log.\+h.
+
+
+
+Referenced by warning().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{log_8h_af3668f40d1ad1b4f3418869ac9a31f34}\label{log_8h_af3668f40d1ad1b4f3418869ac9a31f34}} 
+\index{log.\+h@{log.\+h}!debug@{debug}}
+\index{debug@{debug}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily void debug (\begin{DoxyParamCaption}\item[{const char $\ast$}]{debug\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+prints a info message 
+
+Only will print and display if log\+\_\+level is greater than info \begin{DoxySeeAlso}{See also}
+\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\+\_\+level} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em debug\+\_\+message} & the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file log.\+c.
+
+
+
+References E\+R\+R\+OR, and log\+\_\+level.
+
+
+
+Referenced by update\+Motors().
+
+
+\begin{DoxyCode}
+37                                       \{
+38   \textcolor{keywordflow}{if}(\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\_level}>\hyperlink{log_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}) \{
+39     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
+40   \}
+41 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log_8h_af3668f40d1ad1b4f3418869ac9a31f34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{log_8h_a8e5bb8a2a372f5b066ff7af7044584c1}\label{log_8h_a8e5bb8a2a372f5b066ff7af7044584c1}} 
+\index{log.\+h@{log.\+h}!error@{error}}
+\index{error@{error}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{error\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+prints a error message and displays on lcd. Only will print and display if log\+\_\+level is greater than N\+O\+NE 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\+\_\+level} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/10/17 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+message} & the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file log.\+c.
+
+
+
+References log\+\_\+info(), log\+\_\+level, and N\+O\+NE.
+
+
+\begin{DoxyCode}
+21                                       \{
+22   \textcolor{keywordflow}{if}(\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\_level}>\hyperlink{log_8h_a655c84af1b0034986ff56e12e84f983d}{NONE})
+23     \hyperlink{log_8c_afff22aff6749311a684a559cac3ac8bd}{log\_info}(\textcolor{stringliteral}{"ERROR"}, error\_message);
+24 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{log_8h_a1606d750e1bb8de9f9e917172bba3382}\label{log_8h_a1606d750e1bb8de9f9e917172bba3382}} 
+\index{log.\+h@{log.\+h}!info@{info}}
+\index{info@{info}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily void info (\begin{DoxyParamCaption}\item[{const char $\ast$}]{info\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+prints a info message 
+
+Only will print and display if log\+\_\+level is greater than E\+R\+R\+OR \begin{DoxySeeAlso}{See also}
+\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\+\_\+level} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em info\+\_\+message} & the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file log.\+c.
+
+
+
+References E\+R\+R\+OR, and log\+\_\+level.
+
+
+
+Referenced by init\+\_\+slew().
+
+
+\begin{DoxyCode}
+31                                     \{
+32   \textcolor{keywordflow}{if}(\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\_level}>\hyperlink{log_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}) \{
+33     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, info\_message);
+34   \}
+35 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{log_8h_a1606d750e1bb8de9f9e917172bba3382_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{log_8h_a163f389b4f5cf440a807d8fb48aaa006}\label{log_8h_a163f389b4f5cf440a807d8fb48aaa006}} 
+\index{log.\+h@{log.\+h}!init\+\_\+error@{init\+\_\+error}}
+\index{init\+\_\+error@{init\+\_\+error}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{init\+\_\+error()}{init\_error()}}
+{\footnotesize\ttfamily void init\+\_\+error (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+lcd,  }\item[{F\+I\+LE $\ast$}]{lcd }\end{DoxyParamCaption})}
+
+
+
+Initializes the error lcd system Only required if using lcd. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/10/17 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em use\+\_\+lcd} & whether to use the lcd \\
+\hline
+{\em lcd} & the lcd \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file log.\+c.
+
+
+
+References log\+\_\+lcd.
+
+
+
+Referenced by initialize().
+
+
+\begin{DoxyCode}
+6                                          \{
+7   \textcolor{keywordflow}{if}(use\_lcd) \{
+8     lcdInit(lcd);
+9     \hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\_lcd} = lcd;
+10   \}
+11 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{log_8h_a163f389b4f5cf440a807d8fb48aaa006_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{log_8h_a0bec2cf5fff7f607bc510b74aba9887c}\label{log_8h_a0bec2cf5fff7f607bc510b74aba9887c}} 
+\index{log.\+h@{log.\+h}!warning@{warning}}
+\index{warning@{warning}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily void warning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{warning\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+prints a warning message and displays on lcd. Only will print and display if log\+\_\+level is greater than N\+O\+NE 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\+\_\+level} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/10/17 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em warning\+\_\+message} & the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file log.\+c.
+
+
+
+References log\+\_\+info(), log\+\_\+level, and W\+A\+R\+N\+I\+NG.
+
+
+
+Referenced by initialize().
+
+
+\begin{DoxyCode}
+26                                           \{
+27   \textcolor{keywordflow}{if}(\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\_level}>\hyperlink{log_8h_a5cb439d9f933fde4cf23caa370c030e7}{WARNING})
+28     \hyperlink{log_8c_afff22aff6749311a684a559cac3ac8bd}{log\_info}(\textcolor{stringliteral}{"WARNING"}, warning\_message);
+29 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{log_8h_a0bec2cf5fff7f607bc510b74aba9887c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{log_8h_a0bec2cf5fff7f607bc510b74aba9887c_icgraph}
+\end{center}
+\end{figure}

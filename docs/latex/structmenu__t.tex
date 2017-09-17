@@ -1,0 +1,336 @@
+\hypertarget{structmenu__t}{}\section{menu\+\_\+t Struct Reference}
+\label{structmenu__t}\index{menu\+\_\+t@{menu\+\_\+t}}
+
+
+Represents the different types of menus.  
+
+
+
+
+{\ttfamily \#include $<$menu.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}{current}
+\begin{DoxyCompactList}\small\item\em contains the current index of menu. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structmenu__t_a023063461c4a247e574abd6a55faf765}{length}
+\begin{DoxyCompactList}\small\item\em contains the length of options char$\ast$$\ast$. \end{DoxyCompactList}\item 
+int \hyperlink{structmenu__t_ace9cbaecd7bf311be0ef230da657f406}{max}
+\begin{DoxyCompactList}\small\item\em contains the maximum int value of menu. Defaults to minimum int value \end{DoxyCompactList}\item 
+float \hyperlink{structmenu__t_a14b11d0a7610484462c8a6e93068a2c1}{max\+\_\+f}
+\begin{DoxyCompactList}\small\item\em contains the maximum float value of menu. Defaults to minimum int value \end{DoxyCompactList}\item 
+int \hyperlink{structmenu__t_a6891bc6c94f1e995cc62a05b13328de5}{min}
+\begin{DoxyCompactList}\small\item\em contains the minimum int value of menu. Defaults to minimum int value \end{DoxyCompactList}\item 
+float \hyperlink{structmenu__t_a0a6e4f711992fb69e8a57c2af1ab7a05}{min\+\_\+f}
+\begin{DoxyCompactList}\small\item\em contains the minimum float value of menu. Defaults to minimum int value \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{structmenu__t_ad695cd88051e34817f0f582d4e43c33a}{options}
+\begin{DoxyCompactList}\small\item\em contains the array of string options. \end{DoxyCompactList}\item 
+char \hyperlink{structmenu__t_a5e3af2830962c2bbcb0a983f2c040c65}{prompt} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em contains the prompt to display on the first line. Step is how much the int menu will increase of decrease with each press. Defaults to one \end{DoxyCompactList}\item 
+int \hyperlink{structmenu__t_adc50450bc59ea66a8d67424adc46e24e}{step}
+\begin{DoxyCompactList}\small\item\em contains the step int value of menu. Step is how much the int menu will increase of decrease with each press. Defaults to one \end{DoxyCompactList}\item 
+float \hyperlink{structmenu__t_a84cfd9226f6554c63ca9f4b11f94d12d}{step\+\_\+f}
+\begin{DoxyCompactList}\small\item\em contains the step float value of menu. Step is how much the int menu will increase of decrease with each press. Defaults to 1.\+0f \end{DoxyCompactList}\item 
+enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} \hyperlink{structmenu__t_a110244ceb7d2a7cba95cfc5758d61c01}{type}
+\begin{DoxyCompactList}\small\item\em contains the type of menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the different types of menus. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{menu_8h}{menu.\+h} 
+
+\hyperlink{structmenu__t}{menu\+\_\+t} 
+
+\hyperlink{menu_8c_adcee778eac0edb821427d32949106dc5}{create\+\_\+menu} 
+
+init\+\_\+menu 
+
+\hyperlink{menu_8c_abfadedb104f89f672dd3045499975a71}{display\+\_\+menu} 
+
+\hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} 
+\end{DoxySeeAlso}
+
+
+Definition at line 62 of file menu.\+h.
+
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}\label{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!current@{current}}
+\index{current@{current}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily int menu\+\_\+t\+::current}
+
+
+
+contains the current index of menu. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 136 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), and display\+\_\+menu().
+
+\mbox{\Hypertarget{structmenu__t_a023063461c4a247e574abd6a55faf765}\label{structmenu__t_a023063461c4a247e574abd6a55faf765}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!length@{length}}
+\index{length@{length}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily unsigned int menu\+\_\+t\+::length}
+
+
+
+contains the length of options char$\ast$$\ast$. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 82 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), and init\+\_\+menu\+\_\+var().
+
+\mbox{\Hypertarget{structmenu__t_ace9cbaecd7bf311be0ef230da657f406}\label{structmenu__t_ace9cbaecd7bf311be0ef230da657f406}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!max@{max}}
+\index{max@{max}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily int menu\+\_\+t\+::max}
+
+
+
+contains the maximum int value of menu. Defaults to minimum int value 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 98 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), create\+\_\+menu(), and init\+\_\+menu\+\_\+int().
+
+\mbox{\Hypertarget{structmenu__t_a14b11d0a7610484462c8a6e93068a2c1}\label{structmenu__t_a14b11d0a7610484462c8a6e93068a2c1}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!max\+\_\+f@{max\+\_\+f}}
+\index{max\+\_\+f@{max\+\_\+f}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{max\+\_\+f}{max\_f}}
+{\footnotesize\ttfamily float menu\+\_\+t\+::max\+\_\+f}
+
+
+
+contains the maximum float value of menu. Defaults to minimum int value 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 122 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), create\+\_\+menu(), and init\+\_\+menu\+\_\+float().
+
+\mbox{\Hypertarget{structmenu__t_a6891bc6c94f1e995cc62a05b13328de5}\label{structmenu__t_a6891bc6c94f1e995cc62a05b13328de5}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!min@{min}}
+\index{min@{min}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily int menu\+\_\+t\+::min}
+
+
+
+contains the minimum int value of menu. Defaults to minimum int value 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 90 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), create\+\_\+menu(), and init\+\_\+menu\+\_\+int().
+
+\mbox{\Hypertarget{structmenu__t_a0a6e4f711992fb69e8a57c2af1ab7a05}\label{structmenu__t_a0a6e4f711992fb69e8a57c2af1ab7a05}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!min\+\_\+f@{min\+\_\+f}}
+\index{min\+\_\+f@{min\+\_\+f}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{min\+\_\+f}{min\_f}}
+{\footnotesize\ttfamily float menu\+\_\+t\+::min\+\_\+f}
+
+
+
+contains the minimum float value of menu. Defaults to minimum int value 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 114 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), create\+\_\+menu(), and init\+\_\+menu\+\_\+float().
+
+\mbox{\Hypertarget{structmenu__t_ad695cd88051e34817f0f582d4e43c33a}\label{structmenu__t_ad695cd88051e34817f0f582d4e43c33a}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!options@{options}}
+\index{options@{options}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily char$\ast$$\ast$ menu\+\_\+t\+::options}
+
+
+
+contains the array of string options. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 75 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), denint\+\_\+menu(), and init\+\_\+menu\+\_\+var().
+
+\mbox{\Hypertarget{structmenu__t_a5e3af2830962c2bbcb0a983f2c040c65}\label{structmenu__t_a5e3af2830962c2bbcb0a983f2c040c65}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!prompt@{prompt}}
+\index{prompt@{prompt}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{prompt}{prompt}}
+{\footnotesize\ttfamily char menu\+\_\+t\+::prompt\mbox{[}16\mbox{]}}
+
+
+
+contains the prompt to display on the first line. Step is how much the int menu will increase of decrease with each press. Defaults to one 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 143 of file menu.\+h.
+
+
+
+Referenced by create\+\_\+menu(), denint\+\_\+menu(), and display\+\_\+menu().
+
+\mbox{\Hypertarget{structmenu__t_adc50450bc59ea66a8d67424adc46e24e}\label{structmenu__t_adc50450bc59ea66a8d67424adc46e24e}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!step@{step}}
+\index{step@{step}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{step}{step}}
+{\footnotesize\ttfamily int menu\+\_\+t\+::step}
+
+
+
+contains the step int value of menu. Step is how much the int menu will increase of decrease with each press. Defaults to one 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 106 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), create\+\_\+menu(), and init\+\_\+menu\+\_\+int().
+
+\mbox{\Hypertarget{structmenu__t_a84cfd9226f6554c63ca9f4b11f94d12d}\label{structmenu__t_a84cfd9226f6554c63ca9f4b11f94d12d}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!step\+\_\+f@{step\+\_\+f}}
+\index{step\+\_\+f@{step\+\_\+f}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{step\+\_\+f}{step\_f}}
+{\footnotesize\ttfamily float menu\+\_\+t\+::step\+\_\+f}
+
+
+
+contains the step float value of menu. Step is how much the int menu will increase of decrease with each press. Defaults to 1.\+0f 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 130 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), create\+\_\+menu(), and init\+\_\+menu\+\_\+float().
+
+\mbox{\Hypertarget{structmenu__t_a110244ceb7d2a7cba95cfc5758d61c01}\label{structmenu__t_a110244ceb7d2a7cba95cfc5758d61c01}} 
+\index{menu\+\_\+t@{menu\+\_\+t}!type@{type}}
+\index{type@{type}!menu\+\_\+t@{menu\+\_\+t}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} menu\+\_\+t\+::type}
+
+
+
+contains the type of menu. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line 68 of file menu.\+h.
+
+
+
+Referenced by calculate\+\_\+current\+\_\+display(), and create\+\_\+menu().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{menu_8h}{menu.\+h}\end{DoxyCompactItemize}

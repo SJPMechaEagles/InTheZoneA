@@ -1,0 +1,147 @@
+\hypertarget{drive_8c}{}\section{src/drive.c File Reference}
+\label{drive_8c}\index{src/drive.\+c@{src/drive.\+c}}
+{\ttfamily \#include \char`\"{}drive.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ports.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vmath.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+Include dependency graph for drive.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{drive_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{drive_8c_a9c6ff5e12027f5d580a33abb9b608400}{deadspot} (int val)
+\item 
+static int \hyperlink{drive_8c_a64c46e0951d154140f0fd2f07cfcbc61}{joystick\+\_\+interpolate} (int val)
+\item 
+void \hyperlink{drive_8c_a8df41fd50094c065eedc81fc5e6595d1}{set\+\_\+side\+\_\+speed} (\hyperlink{drive_8h_a9df2afd2f1acb97019655e5e730609c7}{side\+\_\+t} \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side}, int speed)
+\begin{DoxyCompactList}\small\item\em sets the speed of one side of the robot. \end{DoxyCompactList}\item 
+void \hyperlink{drive_8c_a8224a4626a934d30ed587671b7004bf8}{update\+\_\+drive\+\_\+motors} ()
+\begin{DoxyCompactList}\small\item\em Updates the drive motors during teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{drive_8c_a9c6ff5e12027f5d580a33abb9b608400}\label{drive_8c_a9c6ff5e12027f5d580a33abb9b608400}} 
+\index{drive.\+c@{drive.\+c}!deadspot@{deadspot}}
+\index{deadspot@{deadspot}!drive.\+c@{drive.\+c}}
+\subsubsection{\texorpdfstring{deadspot()}{deadspot()}}
+{\footnotesize\ttfamily static int deadspot (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 24 of file drive.\+c.
+
+
+
+References D\+E\+A\+D\+S\+P\+OT.
+
+
+\begin{DoxyCode}
+24                              \{
+25   \textcolor{keywordflow}{return} abs(val) > \hyperlink{drive_8h_a3d683c4ec93ad778fc5914cd5671a793}{DEADSPOT} ? val : 0;
+26 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8c_a64c46e0951d154140f0fd2f07cfcbc61}\label{drive_8c_a64c46e0951d154140f0fd2f07cfcbc61}} 
+\index{drive.\+c@{drive.\+c}!joystick\+\_\+interpolate@{joystick\+\_\+interpolate}}
+\index{joystick\+\_\+interpolate@{joystick\+\_\+interpolate}!drive.\+c@{drive.\+c}}
+\subsubsection{\texorpdfstring{joystick\+\_\+interpolate()}{joystick\_interpolate()}}
+{\footnotesize\ttfamily static int joystick\+\_\+interpolate (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 20 of file drive.\+c.
+
+
+\begin{DoxyCode}
+20                                          \{
+21 
+22 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8c_a8df41fd50094c065eedc81fc5e6595d1}\label{drive_8c_a8df41fd50094c065eedc81fc5e6595d1}} 
+\index{drive.\+c@{drive.\+c}!set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}}
+\index{set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}!drive.\+c@{drive.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+side\+\_\+speed()}{set\_side\_speed()}}
+{\footnotesize\ttfamily void set\+\_\+side\+\_\+speed (\begin{DoxyParamCaption}\item[{\hyperlink{drive_8h_a9df2afd2f1acb97019655e5e730609c7}{side\+\_\+t}}]{side,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+sets the speed of one side of the robot. 
+
+\begin{DoxyAuthor}{Author}
+Christian Desimone 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em side} & a side enum which indicates the size. \\
+\hline
+{\em speed} & the speed of the side. Can range from -\/127 -\/ 127 negative being back and positive forwards \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file drive.\+c.
+
+
+
+References B\+O\+TH, L\+E\+FT, M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT, M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT, M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT, M\+O\+T\+O\+R\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+R\+I\+G\+HT, and R\+I\+G\+HT.
+
+
+\begin{DoxyCode}
+7                                            \{
+8   \textcolor{keywordflow}{if}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38}{RIGHT} || \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH})\{
+9     motorSet(\hyperlink{ports_8h_ad85c5f3d6a2d00789c8c67b960c46c2b}{MOTOR\_BACK\_RIGHT} , speed);
+10     motorSet(\hyperlink{ports_8h_a6f48bcc6d5fce24caeae0b17954c277a}{MOTOR\_FRONT\_RIGHT}, speed);
+11     motorSet(\hyperlink{ports_8h_a0da3f792b8f28ab09b339295859d8334}{MOTOR\_MIDDLE\_RIGHT}, speed);
+12   \}
+13   \textcolor{keywordflow}{if}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065}{LEFT} || \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH})\{
+14     motorSet(\hyperlink{ports_8h_a36e9fda07b5cd4408170fe907b75a8b7}{MOTOR\_BACK\_LEFT}, speed);
+15     motorSet(\hyperlink{ports_8h_a36e9fda07b5cd4408170fe907b75a8b7}{MOTOR\_BACK\_LEFT}, speed);
+16     motorSet(\hyperlink{ports_8h_a36e9fda07b5cd4408170fe907b75a8b7}{MOTOR\_BACK\_LEFT}, speed);
+17   \}
+18 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8c_a8224a4626a934d30ed587671b7004bf8}\label{drive_8c_a8224a4626a934d30ed587671b7004bf8}} 
+\index{drive.\+c@{drive.\+c}!update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}}
+\index{update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}!drive.\+c@{drive.\+c}}
+\subsubsection{\texorpdfstring{update\+\_\+drive\+\_\+motors()}{update\_drive\_motors()}}
+{\footnotesize\ttfamily void update\+\_\+drive\+\_\+motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the drive motors during teleop. 
+
+\begin{DoxyAuthor}{Author}
+Christian Desimone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/5/17 
+\end{DoxyDate}
+
+
+Definition at line 28 of file drive.\+c.
+
+
+
+References cartesian\+\_\+cord\+\_\+to\+\_\+polar(), get\+\_\+joystick\+\_\+cord(), M\+A\+S\+T\+ER, and R\+I\+G\+H\+T\+\_\+\+J\+OY.
+
+
+\begin{DoxyCode}
+28                           \{
+29   \textcolor{keyword}{struct }\hyperlink{structpolar__cord}{polar\_cord} \hyperlink{structcord}{cord} = \hyperlink{vmath_8h_a832105cf858b3046c57c0d08a4e7c38b}{cartesian\_cord\_to\_polar}(
+      \hyperlink{controller_8h_a0ce0176099c0bb15ad8c36123222059d}{get\_joystick\_cord}(\hyperlink{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe}{RIGHT\_JOY}, \hyperlink{controller_8h_a3fa2d3bf1901157f734a584d47b25d8b}{MASTER}));
+30 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{drive_8c_a8224a4626a934d30ed587671b7004bf8_cgraph}
+\end{center}
+\end{figure}

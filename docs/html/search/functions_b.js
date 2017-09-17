@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operatorcontrol',['operatorControl',['../main_8h.html#ac71a94af413917f27d108e95c4d6f6a7',1,'operatorControl():&#160;opcontrol.c'],['../opcontrol_8c.html#ac71a94af413917f27d108e95c4d6f6a7',1,'operatorControl():&#160;opcontrol.c']]]
+  ['reverse',['reverse',['../vlib_8h.html#aad7fea725cb4b198ace1aa3df5051244',1,'reverse(char *str, int len):&#160;vlib.c'],['../vlib_8c.html#aad7fea725cb4b198ace1aa3df5051244',1,'reverse(char *str, int len):&#160;vlib.c']]]
 ];

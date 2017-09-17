@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debug',['DEBUG',['../log_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'log.h']]]
+  ['error',['ERROR',['../log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5',1,'log.h']]]
 ];

@@ -17,7 +17,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="vmath_8c.html#a1c4a1747b714f5d4654f0614193f9e49" target="_top" xlink:title="Function to convert x and y 2 dimensional cartesian cordinated to polar pordinates. ">
+<g id="a_node2"><a xlink:href="vmath_8c.html#a1c4a1747b714f5d4654f0614193f9e49" target="_top" xlink:title="Function to convert x and y 2 dimensional cartesian coordinated to polar coordinates. ">
 <polygon fill="none" stroke="#000000" points="159.29,-.5 159.29,-18.5 257.5654,-18.5 257.5654,-.5 159.29,-.5"/>
 <text text-anchor="middle" x="208.4277" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">cartesian_to_polar</text>
 </a>

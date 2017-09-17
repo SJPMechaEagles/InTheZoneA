@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['output',['OUTPUT',['../_a_p_i_8h.html#a61a3c9a18380aafb6e430e79bf596557',1,'API.h']]],
-  ['output_5fod',['OUTPUT_OD',['../_a_p_i_8h.html#aea041a6db0843f4b27a6a39b829d56e7',1,'API.h']]]
+  ['update_5fperiod_5fms',['UPDATE_PERIOD_MS',['../slew_8h.html#a4e8e7d6fdd1f5c6f8a0f341e4b61f025',1,'slew.h']]]
 ];

@@ -1,0 +1,4816 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.18)  16 SEP 2017 23:45
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**refman.tex
+(./refman.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count90
+\calc@Cskip=\skip45
+) (./doxygen.sty
+Package: doxygen 
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen105
+\extrarowheight=\dimen106
+\NC@list=\toks14
+\extratabsurround=\skip46
+\backup@length=\skip47
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks17
+\verbatim@line=\toks18
+\verbatim@in@stream=\read1
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count92
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks19
+\minrowclearance=\skip48
+)
+\rownum=\count93
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count94
+\LTcapwidth=\dimen107
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count95
+\LT@rows=\count96
+\c@LT@tables=\count97
+\c@LT@chunks=\count98
+\LT@p@ftn=\toks20
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box32
+\sift@deathcycles=\count99
+\@vwid@loff=\dimen108
+\@vwid@roff=\dimen109
+)
+\c@taburow=\count100
+\tabu@nbcols=\count101
+\tabu@cnt=\count102
+\tabu@Xcol=\count103
+\tabu@alloc=\count104
+\tabu@nested=\count105
+\tabu@target=\dimen110
+\tabu@spreadtarget=\dimen111
+\tabu@naturalX=\dimen112
+\tabucolX=\dimen113
+\tabu@Xsum=\dimen114
+\extrarowdepth=\dimen115
+\abovetabulinesep=\dimen116
+\belowtabulinesep=\dimen117
+\tabustrutrule=\dimen118
+\tabu@thebody=\toks21
+\tabu@footnotes=\toks22
+\tabu@box=\box33
+\tabu@arstrutbox=\box34
+\tabu@hleads=\box35
+\tabu@vleads=\box36
+\tabu@cellskip=\skip53
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+\TX@col@width=\dimen119
+\TX@old@table=\dimen120
+\TX@old@col=\dimen121
+\TX@target=\dimen122
+\TX@delta=\dimen123
+\TX@cols=\count106
+\TX@ftn=\toks23
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip54
+\multirow@cntb=\count107
+\multirow@dima=\skip55
+\bigstrutjot=\dimen124
+)
+\xrefbox=\box37
+\xreflength=\skip56
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count108
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box38
+)
+\tc@llx=\dimen127
+\tc@lly=\dimen128
+\tc@urx=\dimen129
+\tc@ury=\dimen130
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen131
+\adjbox@Height=\dimen132
+\adjbox@Depth=\dimen133
+\adjbox@Totalheight=\dimen134
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count109
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks26
+\inpenc@posthook=\toks27
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
+   defining Unicode char U+1E02 (decimal 7682)
+   defining Unicode char U+1E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2010 (decimal 8208)
+   defining Unicode char U+2011 (decimal 8209)
+   defining Unicode char U+2012 (decimal 8210)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2015 (decimal 8213)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count110
+\mult@box=\box39
+\multicol@leftmargin=\dimen135
+\c@unbalance=\count111
+\c@collectmore=\count112
+\doublecol@number=\count113
+\multicoltolerance=\count114
+\multicolpretolerance=\count115
+\full@width=\dimen136
+\page@free=\dimen137
+\premulticols=\dimen138
+\postmulticols=\dimen139
+\multicolsep=\skip57
+\multicolbaselineskip=\skip58
+\partial@page=\box40
+\last@line=\box41
+\maxbalancingoverflow=\dimen140
+\mult@rightbox=\box42
+\mult@grightbox=\box43
+\mult@gfirstbox=\box44
+\mult@firstbox=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\c@columnbadness=\count116
+\c@finalcolumnbadness=\count117
+\last@try=\dimen141
+\multicolovershoot=\dimen142
+\multicolundershoot=\dimen143
+\mult@nat@firstbox=\box63
+\colbreak@box=\box64
+\mc@col@check@num=\count118
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/02/22 v2.0g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/02/22 v2.0g Standard LaTeX package
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2017/02/22 v2.0g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count119
+\Gm@cntv=\count120
+\c@Gm@tempcnt=\count121
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks29
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+\fancy@headwidth=\skip59
+\f@ncyO@elh=\skip60
+\f@ncyO@erh=\skip61
+\f@ncyO@olh=\skip62
+\f@ncyO@orh=\skip63
+\f@ncyO@elf=\skip64
+\f@ncyO@erf=\skip65
+\f@ncyO@olf=\skip66
+\f@ncyO@orf=\skip67
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip68
+\bibsep=\skip69
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count122
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip70
+\cftbeforetoctitleskip=\skip71
+\cftaftertoctitleskip=\skip72
+\cftbeforepartskip=\skip73
+\cftpartnumwidth=\skip74
+\cftpartindent=\skip75
+\cftbeforechapskip=\skip76
+\cftchapindent=\skip77
+\cftchapnumwidth=\skip78
+\cftbeforesecskip=\skip79
+\cftsecindent=\skip80
+\cftsecnumwidth=\skip81
+\cftbeforesubsecskip=\skip82
+\cftsubsecindent=\skip83
+\cftsubsecnumwidth=\skip84
+\cftbeforesubsubsecskip=\skip85
+\cftsubsubsecindent=\skip86
+\cftsubsubsecnumwidth=\skip87
+\cftbeforeparaskip=\skip88
+\cftparaindent=\skip89
+\cftparanumwidth=\skip90
+\cftbeforesubparaskip=\skip91
+\cftsubparaindent=\skip92
+\cftsubparanumwidth=\skip93
+\cftbeforeloftitleskip=\skip94
+\cftafterloftitleskip=\skip95
+\cftbeforefigskip=\skip96
+\cftfigindent=\skip97
+\cftfignumwidth=\skip98
+\c@lofdepth=\count123
+\c@lotdepth=\count124
+\cftbeforelottitleskip=\skip99
+\cftafterlottitleskip=\skip100
+\cftbeforetabskip=\skip101
+\cfttabindent=\skip102
+\cfttabnumwidth=\skip103
+)
+\@indexfile=\write3
+\openout3 = `refman.idx'.
+
+
+Writing index file refman.idx
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen152
+\Hy@linkcounter=\count125
+\Hy@pagecounter=\count126
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count127
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing ON on input line 4516.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2016/05/21 v1.39 Bibliographical back referencing
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+))
+\c@Hy@tempcnt=\count128
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen153
+\Fld@menulength=\count129
+\Field@Width=\dimen154
+\Fld@charsize=\dimen155
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing ON on input line 6371.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count130
+\c@Item=\count131
+\c@Hfootnote=\count132
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count133
+\c@bookmark@seq@number=\count134
+\Hy@SectionHShift=\skip104
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 105.
+Package hyperref Info: Option `unicode' set `true' on input line 105.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2017/03/14 v6.85a Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen156
+\captionmargin@=\dimen157
+\captionwidth=\dimen158
+\caption@tempdima=\dimen159
+\caption@indent=\dimen160
+\caption@parindent=\dimen161
+\caption@hangindent=\dimen162
+)
+\c@ContinuedFloat=\count135
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+))
+(./refman.aux)
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 117.
+
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 117.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 117.
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count136
+\scratchdimen=\dimen163
+\scratchbox=\box65
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen164
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
+\everyMPtoPDFconversion=\toks31
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-31.2056pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box66
+Package backref Info: ** backref set up for natbib ** on input line 117.
+Package hyperref Info: Link coloring ON on input line 117.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count142
+)
+LaTeX Info: Redefining \ref on input line 117.
+LaTeX Info: Redefining \pageref on input line 117.
+LaTeX Info: Redefining \nameref on input line 117.
+
+(./refman.out) (./refman.out)
+\@outlinefile=\write4
+\openout4 = `refman.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Option `pageanchor' set `false' on input line 123.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 123.
+
+Package hyperref Info: Option `unicode' set `true' on input line 123.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 128.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 128.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 128.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 128.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 128.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 128.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 22.39185pt on input line 135.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 135.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 135.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 22.39185pt on input line 135.
+ (./refman.toc
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 1.
+
+[1
+
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13])
+\tf@toc=\write5
+\openout5 = `refman.toc'.
+
+ [14]
+Package hyperref Info: Option `pageanchor' set `true' on input line 138.
+
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 18.66588pt on input line 141.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 141.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 18.66588pt on input line 141.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 18.66588pt on input line 141.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 6.29996pt on input line 141.
+(./md__r_e_a_d_m_e.tex) [1
+
+
+] [2
+
+]
+Chapter 2.
+(./annotated.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+) [3] [4
+
+]
+Chapter 3.
+(./files.tex [5]) [6]
+Chapter 4.
+(./structcord.tex
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 10.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 12.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 12.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 10.79993pt on input line 12.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 15.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 15.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 24.
+
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 41.
+[7
+
+]) (./structlcd__buttons.tex
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
+ []
+
+[8]) (./structmenu__t.tex
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 16.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 16.
+ [9]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 34.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 34.
+
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 48
+[][][]
+ []
+
+[10]
+Underfull \hbox (badness 10000) detected at line 78
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 81
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 126
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 129
+[][][]
+ []
+
+[11]
+Underfull \hbox (badness 10000) detected at line 150
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 177
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 198
+[][][]
+ []
+
+[12]
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 222
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 225
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 246
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 249
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 270
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 273
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 294
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 297
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 318
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 321
+[][][]
+ []
+
+) (./structpolar__cord.tex [14]
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+) [15] [16
+
+]
+Chapter 5.
+(./battery_8h.tex
+<battery_8h__dep__incl.pdf, id=2325, 169.63374pt x 154.5775pt>
+File: battery_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use battery_8h__dep__incl.pdf>
+Package pdftex.def Info: battery_8h__dep__incl.pdf used on input line 7.
+(pdftex.def)             Requested size: 169.0pt x 154.0063pt.
+) (./controller_8h.tex
+<controller_8h__incl.pdf, id=2326, 190.7125pt x 209.78375pt>
+File: controller_8h__incl.pdf Graphic file (type pdf)
+
+<use controller_8h__incl.pdf>
+Package pdftex.def Info: controller_8h__incl.pdf used on input line 15.
+(pdftex.def)             Requested size: 190.0pt x 209.00856pt.
+ [17 <./battery_8h__dep__incl.pdf>]
+<controller_8h__dep__incl.pdf, id=2344, 240.9pt x 154.5775pt>
+File: controller_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use controller_8h__dep__incl.pdf>
+Package pdftex.def Info: controller_8h__dep__incl.pdf used on input line 23.
+(pdftex.def)             Requested size: 240.0pt x 154.00394pt.
+ [18 <./controller_8h__incl.pdf> <./controller_8h__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 58
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 61
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 77
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 80
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 101
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 104
+[][][]
+ []
+
+[19]
+Underfull \hbox (badness 10000) detected at line 125
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 128
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 149
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 152
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 169
+[][][]
+ []
+
+[20]
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 193
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 196
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 220
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 223
+[][][]
+ []
+
+[21]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.1 on input line 235.
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 254.
+
+<controller_8h_a0ce0176099c0bb15ad8c36123222059d_icgraph.pdf, id=2441, 320.1962
+4pt x 99.37125pt>
+File: controller_8h_a0ce0176099c0bb15ad8c36123222059d_icgraph.pdf Graphic file 
+(type pdf)
+
+<use controller_8h_a0ce0176099c0bb15ad8c36123222059d_icgraph.pdf>
+Package pdftex.def Info: controller_8h_a0ce0176099c0bb15ad8c36123222059d_icgrap
+h.pdf used on input line 291.
+(pdftex.def)             Requested size: 319.0pt x 99.00102pt.
+)
+(./drive_8h.tex <drive_8h__incl.pdf, id=2442, 160.6pt x 154.5775pt>
+File: drive_8h__incl.pdf Graphic file (type pdf)
+
+<use drive_8h__incl.pdf>
+Package pdftex.def Info: drive_8h__incl.pdf used on input line 14.
+(pdftex.def)             Requested size: 160.0pt x 154.00394pt.
+ [22 <./controller_8h_a0ce0176099c0bb15ad8c36123222059d_icgraph.pdf>] <drive_8h
+__dep__incl.pdf, id=2464, 160.6pt x 154.5775pt>
+File: drive_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use drive_8h__dep__incl.pdf>
+Package pdftex.def Info: drive_8h__dep__incl.pdf used on input line 22.
+(pdftex.def)             Requested size: 160.0pt x 154.00394pt.
+ [23 <./drive_8h__incl.pdf> <./drive_8h__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 55
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 58
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 94
+[][][]
+ []
+
+[24]
+Underfull \hbox (badness 10000) detected at line 110
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 113
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.2 on input line 129.
+
+
+Underfull \hbox (badness 10000) detected at line 155
+[][][]
+ []
+
+[25]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.3 on input line 164.
+
+
+Underfull \hbox (badness 10000) detected at line 198
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+
+<drive_8h_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf, id=2557, 485.815pt x 13
+6.51pt>
+File: drive_8h_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf Graphic file (type 
+pdf)
+ <use drive_8h_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf>
+Package pdftex.def Info: drive_8h_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf 
+used on input line 224.
+(pdftex.def)             Requested size: 350.0pt x 98.34544pt.
+)
+(./encoders_8h.tex <encoders_8h__incl.pdf, id=2558, 180.675pt x 154.5775pt>
+File: encoders_8h__incl.pdf Graphic file (type pdf)
+
+<use encoders_8h__incl.pdf>
+Package pdftex.def Info: encoders_8h__incl.pdf used on input line 14.
+(pdftex.def)             Requested size: 180.0pt x 154.00159pt.
+ [26 <./drive_8h_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf>] <encoders_8h__d
+ep__incl.pdf, id=2585, 232.87pt x 154.5775pt>
+File: encoders_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use encoders_8h__dep__incl.pdf>
+Package pdftex.def Info: encoders_8h__dep__incl.pdf used on input line 22.
+(pdftex.def)             Requested size: 232.0pt x 154.0063pt.
+ [27 <./encoders_8h__incl.pdf> <./encoders_8h__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 96
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+[28]
+Underfull \hbox (badness 10000) detected at line 124
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 127
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 152
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 155
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 158
+[][][]
+ []
+
+[29]
+<encoders_8h_aa6ec1ca17e907babd52803ecba451cd3_icgraph.pdf, id=2641, 243.91125p
+t x 99.37125pt>
+File: encoders_8h_aa6ec1ca17e907babd52803ecba451cd3_icgraph.pdf Graphic file (t
+ype pdf)
+
+<use encoders_8h_aa6ec1ca17e907babd52803ecba451cd3_icgraph.pdf>
+Package pdftex.def Info: encoders_8h_aa6ec1ca17e907babd52803ecba451cd3_icgraph.
+pdf used on input line 188.
+(pdftex.def)             Requested size: 243.0pt x 99.00102pt.
+) (./lcd_8h.tex
+<lcd_8h__incl.pdf, id=2642, 152.57pt x 154.5775pt>
+File: lcd_8h__incl.pdf Graphic file (type pdf)
+ <use lcd_8h__incl.pdf>
+Package pdftex.def Info: lcd_8h__incl.pdf used on input line 14.
+(pdftex.def)             Requested size: 152.0pt x 154.0063pt.
+
+<lcd_8h__dep__incl.pdf, id=2643, 387.4475pt x 209.78375pt>
+File: lcd_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use lcd_8h__dep__incl.pdf>
+Package pdftex.def Info: lcd_8h__dep__incl.pdf used on input line 22.
+(pdftex.def)             Requested size: 350.0pt x 189.51103pt.
+ [30 <./encoders_8h_aa6ec1ca17e907babd52803ecba451cd3_icgraph.pdf>] [31 <./lcd_
+8h__incl.pdf> <./lcd_8h__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 85
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 88
+[][][]
+ []
+
+[32]
+Underfull \hbox (badness 10000) detected at line 109
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 112
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 138
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 141
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.4 on input line 153.
+
+[33]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.5 on input line 182.
+
+
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 191
+[][][]
+ []
+
+
+<lcd_8h_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf, id=2738, 242.9075pt x 99
+.37125pt>
+File: lcd_8h_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf Graphic file (type p
+df)
+ <use lcd_8h_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf>
+Package pdftex.def Info: lcd_8h_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf u
+sed on input line 218.
+(pdftex.def)             Requested size: 242.0pt x 98.99951pt.
+ [34 <./lcd_8h_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 231
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 234
+[][][]
+ []
+
+
+<lcd_8h_a35c08b1fa742e650f4873939707b893b_cgraph.pdf, id=2762, 234.8775pt x 99.
+37125pt>
+File: lcd_8h_a35c08b1fa742e650f4873939707b893b_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8h_a35c08b1fa742e650f4873939707b893b_cgraph.pdf>
+Package pdftex.def Info: lcd_8h_a35c08b1fa742e650f4873939707b893b_cgraph.pdf us
+ed on input line 257.
+(pdftex.def)             Requested size: 234.0pt x 98.99951pt.
+
+Underfull \hbox (badness 10000) detected at line 270
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 273
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 276
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 279
+[][][]
+ []
+
+[35 <./lcd_8h_a35c08b1fa742e650f4873939707b893b_cgraph.pdf>]
+<lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf, id=2797, 306.14375pt x 99
+.37125pt>
+File: lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf>
+Package pdftex.def Info: lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf us
+ed on input line 315.
+(pdftex.def)             Requested size: 305.0pt x 99.00557pt.
+
+<lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.pdf, id=2798, 434.62375pt x 1
+36.51pt>
+File: lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.pdf Graphic file (type p
+df)
+ <use lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.pdf>
+Package pdftex.def Info: lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.pdf u
+sed on input line 323.
+(pdftex.def)             Requested size: 350.0pt x 109.93718pt.
+ [36 <./lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf> <./lcd_8h_ac7b3225
+ccc82fcbe067ba9da934f010d_icgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.6 on input line 342.
+
+
+Underfull \hbox (badness 10000) detected at line 343
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 346
+[][][]
+ []
+
+
+<lcd_8h_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf, id=2833, 231.86626pt x 99
+.37125pt>
+File: lcd_8h_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8h_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf>
+Package pdftex.def Info: lcd_8h_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf us
+ed on input line 373.
+(pdftex.def)             Requested size: 231.0pt x 99.00253pt.
+
+<lcd_8h_adabd3f7cdda45119604b488caf22bba8_icgraph.pdf, id=2834, 360.34625pt x 1
+36.51pt>
+File: lcd_8h_adabd3f7cdda45119604b488caf22bba8_icgraph.pdf Graphic file (type p
+df)
+ <use lcd_8h_adabd3f7cdda45119604b488caf22bba8_icgraph.pdf>
+Package pdftex.def Info: lcd_8h_adabd3f7cdda45119604b488caf22bba8_icgraph.pdf u
+sed on input line 381.
+(pdftex.def)             Requested size: 350.0pt x 132.5895pt.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 388.
+ [37 <./lcd_8h_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf> <./lcd_8h_adabd3f7
+cdda45119604b488caf22bba8_icgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.7 on input line 400.
+
+
+Underfull \hbox (badness 10000) detected at line 401
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 404
+[][][]
+ []
+
+
+<lcd_8h_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf, id=2869, 234.8775pt x 99.
+37125pt>
+File: lcd_8h_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8h_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf>
+Package pdftex.def Info: lcd_8h_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf us
+ed on input line 427.
+(pdftex.def)             Requested size: 234.0pt x 98.99951pt.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.8 on input line 444.
+
+
+Underfull \hbox (badness 10000) detected at line 445
+[][][]
+ []
+
+[38 <./lcd_8h_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 448
+[][][]
+ []
+
+
+<lcd_8h_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf, id=2892, 271.0125pt x 99.
+37125pt>
+File: lcd_8h_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8h_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf>
+Package pdftex.def Info: lcd_8h_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf us
+ed on input line 471.
+(pdftex.def)             Requested size: 270.0pt x 99.00406pt.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.9 on input line 488.
+
+
+Underfull \hbox (badness 10000) detected at line 489
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 492
+[][][]
+ []
+
+[39 <./lcd_8h_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf>]
+<lcd_8h_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf, id=2917, 444.66125pt x 15
+1.56625pt>
+File: lcd_8h_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8h_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf>
+Package pdftex.def Info: lcd_8h_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf us
+ed on input line 522.
+(pdftex.def)             Requested size: 350.0pt x 119.30122pt.
+
+<lcd_8h_a99f4683e1990edf624ab216bf327cba4_icgraph.pdf, id=2918, 270.00874pt x 9
+9.37125pt>
+File: lcd_8h_a99f4683e1990edf624ab216bf327cba4_icgraph.pdf Graphic file (type p
+df)
+ <use lcd_8h_a99f4683e1990edf624ab216bf327cba4_icgraph.pdf>
+Package pdftex.def Info: lcd_8h_a99f4683e1990edf624ab216bf327cba4_icgraph.pdf u
+sed on input line 530.
+(pdftex.def)             Requested size: 269.0pt x 99.00253pt.
+)
+(./log_8h.tex <log_8h__incl.pdf, id=2919, 159.59625pt x 209.78375pt>
+File: log_8h__incl.pdf Graphic file (type pdf)
+
+<use log_8h__incl.pdf>
+Package pdftex.def Info: log_8h__incl.pdf used on input line 15.
+(pdftex.def)             Requested size: 159.0pt x 209.00215pt.
+
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+ [40 <./lcd_8h_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf> <./lcd_8h_a99f4683
+e1990edf624ab216bf327cba4_icgraph.pdf>]
+<log_8h__dep__incl.pdf, id=2953, 282.05376pt x 154.5775pt>
+File: log_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use log_8h__dep__incl.pdf>
+Package pdftex.def Info: log_8h__dep__incl.pdf used on input line 23.
+(pdftex.def)             Requested size: 281.0pt x 154.01102pt.
+ [41 <./log_8h__incl.pdf> <./log_8h__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 57
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 60
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 96
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+[42]
+Underfull \hbox (badness 10000) detected at line 120
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 123
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 143
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 164
+[][][]
+ []
+
+[43]
+Underfull \hbox (badness 10000) detected at line 167
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 191
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.10 on input line 198.
+
+
+<log_8h_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf, id=3019, 416.55624pt x 9
+9.37125pt>
+File: log_8h_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf Graphic file (type p
+df)
+ <use log_8h_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf>
+Package pdftex.def Info: log_8h_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf u
+sed on input line 224.
+(pdftex.def)             Requested size: 350.0pt x 83.49857pt.
+ [44]
+Underfull \hbox (badness 10000) detected at line 237
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 240
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 243
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.11 on input line 250.
+
+
+<log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf, id=3031, 204.765pt x 99.3
+7125pt>
+File: log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf Graphic file (type pd
+f)
+ <use log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf>
+Package pdftex.def Info: log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf us
+ed on input line 271.
+(pdftex.def)             Requested size: 204.0pt x 99.00557pt.
+
+Underfull \vbox (badness 2150) has occurred while \output is active []
+
+ [45 <./log_8h_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 284
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.12 on input line 291.
+
+
+<log_8h_a1606d750e1bb8de9f9e917172bba3382_icgraph.pdf, id=3056, 291.0875pt x 99
+.37125pt>
+File: log_8h_a1606d750e1bb8de9f9e917172bba3382_icgraph.pdf Graphic file (type p
+df)
+ <use log_8h_a1606d750e1bb8de9f9e917172bba3382_icgraph.pdf>
+Package pdftex.def Info: log_8h_a1606d750e1bb8de9f9e917172bba3382_icgraph.pdf u
+sed on input line 317.
+(pdftex.def)             Requested size: 290.0pt x 99.00708pt.
+ [46 <./log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf> <./log_8h_a1606d75
+0e1bb8de9f9e917172bba3382_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 330
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 333
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.13 on input line 342.
+
+
+<log_8h_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf, id=3091, 223.83624pt x 9
+9.37125pt>
+File: log_8h_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf Graphic file (type p
+df)
+ <use log_8h_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf>
+Package pdftex.def Info: log_8h_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf u
+sed on input line 369.
+(pdftex.def)             Requested size: 223.0pt x 99.00253pt.
+
+Underfull \hbox (badness 10000) detected at line 382
+[][][]
+ []
+
+[47 <./log_8h_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 385
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 388
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.14 on input line 395.
+
+
+<log_8h_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf, id=3116, 218.8175pt x 99.
+37125pt>
+File: log_8h_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf Graphic file (type pd
+f)
+ <use log_8h_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf>
+Package pdftex.def Info: log_8h_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf us
+ed on input line 420.
+(pdftex.def)             Requested size: 218.0pt x 99.00102pt.
+
+<log_8h_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.pdf, id=3117, 219.82124pt x 9
+9.37125pt>
+File: log_8h_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.pdf Graphic file (type p
+df)
+ <use log_8h_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.pdf>
+Package pdftex.def Info: log_8h_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.pdf u
+sed on input line 428.
+(pdftex.def)             Requested size: 219.0pt x 99.00253pt.
+)
+(./main_8h.tex [48 <./log_8h_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf> <./l
+og_8h_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.pdf>]
+<main_8h__incl.pdf, id=3150, 160.6pt x 154.5775pt>
+File: main_8h__incl.pdf Graphic file (type pdf)
+ <use main_8h__incl.pdf>
+Package pdftex.def Info: main_8h__incl.pdf used on input line 14.
+(pdftex.def)             Requested size: 160.0pt x 154.00394pt.
+
+<main_8h__dep__incl.pdf, id=3151, 310.15875pt x 154.5775pt>
+File: main_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use main_8h__dep__incl.pdf>
+Package pdftex.def Info: main_8h__dep__incl.pdf used on input line 22.
+(pdftex.def)             Requested size: 309.0pt x 153.99922pt.
+ [49 <./main_8h__incl.pdf> <./main_8h__dep__incl.pdf>] [50]
+<main_8h_a25a40b6614565f755233080a384c35f1_cgraph.pdf, id=3209, 531.9875pt x 36
+1.35pt>
+File: main_8h_a25a40b6614565f755233080a384c35f1_cgraph.pdf Graphic file (type p
+df)
+ <use main_8h_a25a40b6614565f755233080a384c35f1_cgraph.pdf>
+Package pdftex.def Info: main_8h_a25a40b6614565f755233080a384c35f1_cgraph.pdf u
+sed on input line 119.
+(pdftex.def)             Requested size: 350.0pt x 237.74187pt.
+ [51 <./main_8h_a25a40b6614565f755233080a384c35f1_cgraph.pdf>]
+<main_8h_ac71a94af413917f27d108e95c4d6f6a7_cgraph.pdf, id=3230, 289.08pt x 99.3
+7125pt>
+File: main_8h_ac71a94af413917f27d108e95c4d6f6a7_cgraph.pdf Graphic file (type p
+df)
+ <use main_8h_ac71a94af413917f27d108e95c4d6f6a7_cgraph.pdf>
+Package pdftex.def Info: main_8h_ac71a94af413917f27d108e95c4d6f6a7_cgraph.pdf u
+sed on input line 174.
+(pdftex.def)             Requested size: 288.0pt x 99.00557pt.
+)
+(./menu_8h.tex <menu_8h__incl.pdf, id=3231, 634.37pt x 209.78375pt>
+File: menu_8h__incl.pdf Graphic file (type pdf)
+
+<use menu_8h__incl.pdf>
+Package pdftex.def Info: menu_8h__incl.pdf used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 115.74632pt.
+ [52 <./main_8h_ac71a94af413917f27d108e95c4d6f6a7_cgraph.pdf>] <menu_8h__dep__i
+ncl.pdf, id=3250, 164.615pt x 154.5775pt>
+File: menu_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use menu_8h__dep__incl.pdf>
+Package pdftex.def Info: menu_8h__dep__incl.pdf used on input line 26.
+(pdftex.def)             Requested size: 164.0pt x 154.00394pt.
+ [53 <./menu_8h__incl.pdf> <./menu_8h__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 88
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 94
+[][][]
+ []
+
+[54]
+Underfull \hbox (badness 10000) detected at line 120
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 123
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 126
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.15 on input line 152.
+
+[55]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.16 on input line 184.
+
+
+Underfull \hbox (badness 10000) detected at line 185
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 204
+[][][]
+ []
+
+[56]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.17 on input line 221.
+
+
+Underfull \hbox (badness 10000) detected at line 222
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 225
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 228
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.18 on input line 261.
+
+
+Underfull \hbox (badness 10000) detected at line 262
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 265
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 268
+[][][]
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 277--278
+[]\T1/phv/m/n/10 References calculate[]_[]current[]_[]display(), menu[]_[]t[]::
+current, lcd[]_[]get[]_[]pressed[]_[]buttons(), lcd[]_[]print(), P[]R[]E[]S[]S[
+]ED,
+ []
+
+[57]
+<menu_8h_abfadedb104f89f672dd3045499975a71_cgraph.pdf, id=3388, 576.1525pt x 20
+0.75pt>
+File: menu_8h_abfadedb104f89f672dd3045499975a71_cgraph.pdf Graphic file (type p
+df)
+ <use menu_8h_abfadedb104f89f672dd3045499975a71_cgraph.pdf>
+Package pdftex.def Info: menu_8h_abfadedb104f89f672dd3045499975a71_cgraph.pdf u
+sed on input line 304.
+(pdftex.def)             Requested size: 350.0pt x 121.95494pt.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.19 on input line 321.
+
+[58 <./menu_8h_abfadedb104f89f672dd3045499975a71_cgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 322
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.20 on input line 335.
+
+
+Underfull \hbox (badness 10000) detected at line 336
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 339
+[][][]
+ []
+
+
+<menu_8h_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf, id=3418, 275.0275pt x 99
+.37125pt>
+File: menu_8h_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf Graphic file (type p
+df)
+ <use menu_8h_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf>
+Package pdftex.def Info: menu_8h_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf u
+sed on input line 365.
+(pdftex.def)             Requested size: 274.0pt x 99.0086pt.
+ [59 <./menu_8h_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.21 on input line 382.
+
+
+Underfull \hbox (badness 10000) detected at line 383
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.22 on input line 396.
+
+
+Underfull \hbox (badness 10000) detected at line 397
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 400
+[][][]
+ []
+
+
+<menu_8h_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf, id=3446, 266.9975pt x 99
+.37125pt>
+File: menu_8h_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf Graphic file (type p
+df)
+ <use menu_8h_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf>
+Package pdftex.def Info: menu_8h_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf u
+sed on input line 426.
+(pdftex.def)             Requested size: 266.0pt x 99.01012pt.
+ [60 <./menu_8h_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.23 on input line 443.
+
+
+Underfull \hbox (badness 10000) detected at line 444
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.24 on input line 455.
+
+
+Underfull \hbox (badness 10000) detected at line 456
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 459
+[][][]
+ []
+
+
+<menu_8h_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf, id=3474, 270.00874pt x 9
+9.37125pt>
+File: menu_8h_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf Graphic file (type p
+df)
+ <use menu_8h_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf>
+Package pdftex.def Info: menu_8h_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf u
+sed on input line 491.
+(pdftex.def)             Requested size: 269.0pt x 99.00253pt.
+)
+(./ports_8h.tex <ports_8h__dep__incl.pdf, id=3475, 161.60374pt x 154.5775pt>
+File: ports_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use ports_8h__dep__incl.pdf>
+Package pdftex.def Info: ports_8h__dep__incl.pdf used on input line 12.
+(pdftex.def)             Requested size: 161.0pt x 154.00865pt.
+ [61 <./menu_8h_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 37
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 40
+[][][]
+ []
+
+[62 <./ports_8h__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 56
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 59
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 62
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 103
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 106
+[][][]
+ []
+
+[63]
+Underfull \hbox (badness 10000) detected at line 127
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 130
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 147
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 150
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 171
+[][][]
+ []
+
+[64]
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 191
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 194
+[][][]
+ []
+
+) (./slew_8h.tex <slew_8h__incl.pdf, id=3539, 253.94875pt x 209.78375pt>
+File: slew_8h__incl.pdf Graphic file (type pdf)
+
+<use slew_8h__incl.pdf>
+Package pdftex.def Info: slew_8h__incl.pdf used on input line 16.
+(pdftex.def)             Requested size: 253.0pt x 209.00856pt.
+
+<slew_8h__dep__incl.pdf, id=3540, 310.15875pt x 154.5775pt>
+File: slew_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use slew_8h__dep__incl.pdf>
+Package pdftex.def Info: slew_8h__dep__incl.pdf used on input line 24.
+(pdftex.def)             Requested size: 309.0pt x 153.99922pt.
+ [65] [66 <./slew_8h__incl.pdf> <./slew_8h__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 52
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 55
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 71
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 74
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 98
+[][][]
+ []
+
+[67]
+Underfull \hbox (badness 10000) detected at line 119
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 122
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 146
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 149
+[][][]
+ []
+
+[68]
+Underfull \hbox (badness 10000) detected at line 177
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 180
+[][][]
+ []
+
+
+<slew_8h_a321758941d88b75783955c819bb75005_cgraph.pdf, id=3610, 328.22626pt x 1
+73.64874pt>
+File: slew_8h_a321758941d88b75783955c819bb75005_cgraph.pdf Graphic file (type p
+df)
+ <use slew_8h_a321758941d88b75783955c819bb75005_cgraph.pdf>
+Package pdftex.def Info: slew_8h_a321758941d88b75783955c819bb75005_cgraph.pdf u
+sed on input line 210.
+(pdftex.def)             Requested size: 327.0pt x 173.00179pt.
+ [69]
+<slew_8h_a321758941d88b75783955c819bb75005_icgraph.pdf, id=3624, 222.8325pt x 9
+9.37125pt>
+File: slew_8h_a321758941d88b75783955c819bb75005_icgraph.pdf Graphic file (type 
+pdf)
+ <use slew_8h_a321758941d88b75783955c819bb75005_icgraph.pdf>
+Package pdftex.def Info: slew_8h_a321758941d88b75783955c819bb75005_icgraph.pdf 
+used on input line 218.
+(pdftex.def)             Requested size: 222.0pt x 99.00102pt.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.25 on input line 237.
+
+
+Underfull \hbox (badness 10000) detected at line 238
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 241
+[][][]
+ []
+
+[70 <./slew_8h_a321758941d88b75783955c819bb75005_cgraph.pdf> <./slew_8h_a321758
+941d88b75783955c819bb75005_icgraph.pdf>]
+<slew_8h_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf, id=3661, 289.08pt x 99.
+37125pt>
+File: slew_8h_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf Graphic file (type 
+pdf)
+ <use slew_8h_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf>
+Package pdftex.def Info: slew_8h_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf 
+used on input line 270.
+(pdftex.def)             Requested size: 288.0pt x 99.00557pt.
+
+Underfull \hbox (badness 10000) detected at line 283
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 286
+[][][]
+ []
+
+
+<slew_8h_a807a87c5df438fde21c1e8213906695b_cgraph.pdf, id=3668, 237.88875pt x 9
+9.37125pt>
+File: slew_8h_a807a87c5df438fde21c1e8213906695b_cgraph.pdf Graphic file (type p
+df)
+ <use slew_8h_a807a87c5df438fde21c1e8213906695b_cgraph.pdf>
+Package pdftex.def Info: slew_8h_a807a87c5df438fde21c1e8213906695b_cgraph.pdf u
+sed on input line 326.
+(pdftex.def)             Requested size: 237.0pt x 99.00406pt.
+ [71 <./slew_8h_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf>]
+<slew_8h_a807a87c5df438fde21c1e8213906695b_icgraph.pdf, id=3687, 336.25626pt x 
+99.37125pt>
+File: slew_8h_a807a87c5df438fde21c1e8213906695b_icgraph.pdf Graphic file (type 
+pdf)
+ <use slew_8h_a807a87c5df438fde21c1e8213906695b_icgraph.pdf>
+Package pdftex.def Info: slew_8h_a807a87c5df438fde21c1e8213906695b_icgraph.pdf 
+used on input line 334.
+(pdftex.def)             Requested size: 335.0pt x 99.00102pt.
+)
+(./vlib_8h.tex <vlib_8h__incl.pdf, id=3688, 253.94875pt x 154.5775pt>
+File: vlib_8h__incl.pdf Graphic file (type pdf)
+
+<use vlib_8h__incl.pdf>
+Package pdftex.def Info: vlib_8h__incl.pdf used on input line 16.
+(pdftex.def)             Requested size: 253.0pt x 154.0063pt.
+ [72 <./slew_8h_a807a87c5df438fde21c1e8213906695b_cgraph.pdf> <./slew_8h_a807a8
+7c5df438fde21c1e8213906695b_icgraph.pdf>]
+<vlib_8h__dep__incl.pdf, id=3719, 393.47pt x 209.78375pt>
+File: vlib_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use vlib_8h__dep__incl.pdf>
+Package pdftex.def Info: vlib_8h__dep__incl.pdf used on input line 24.
+(pdftex.def)             Requested size: 350.0pt x 186.60449pt.
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 37.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 37.
+
+Underfull \hbox (badness 10000) detected at line 43
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 46
+[][][]
+ []
+
+[73 <./vlib_8h__incl.pdf> <./vlib_8h__dep__incl.pdf>]
+<vlib_8h_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf, id=3759, 323.2075pt x 9
+9.37125pt>
+File: vlib_8h_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf Graphic file (type 
+pdf)
+ <use vlib_8h_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf>
+Package pdftex.def Info: vlib_8h_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf 
+used on input line 79.
+(pdftex.def)             Requested size: 322.0pt x 99.00557pt.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.26 on input line 100.
+
+[74 <./vlib_8h_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf>]
+<vlib_8h_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf, id=3780, 266.9975pt x 99
+.37125pt>
+File: vlib_8h_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf Graphic file (type p
+df)
+ <use vlib_8h_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf>
+Package pdftex.def Info: vlib_8h_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf u
+sed on input line 142.
+(pdftex.def)             Requested size: 266.0pt x 99.01012pt.
+
+<vlib_8h_a1c3b16ce8c66ade17aca0f267027b855_icgraph.pdf, id=3781, 392.46625pt x 
+99.37125pt>
+File: vlib_8h_a1c3b16ce8c66ade17aca0f267027b855_icgraph.pdf Graphic file (type 
+pdf)
+ <use vlib_8h_a1c3b16ce8c66ade17aca0f267027b855_icgraph.pdf>
+Package pdftex.def Info: vlib_8h_a1c3b16ce8c66ade17aca0f267027b855_icgraph.pdf 
+used on input line 149.
+(pdftex.def)             Requested size: 350.0pt x 88.6251pt.
+
+[75 <./vlib_8h_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf> <./vlib_8h_a1c3b16
+ce8c66ade17aca0f267027b855_icgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.27 on input line 170.
+
+
+Underfull \hbox (badness 10000) detected at line 171
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 177
+[][][]
+ []
+
+
+<vlib_8h_aa1986c48c027cf691df679c7a4968126_cgraph.pdf, id=3815, 197.73875pt x 9
+9.37125pt>
+File: vlib_8h_aa1986c48c027cf691df679c7a4968126_cgraph.pdf Graphic file (type p
+df)
+ <use vlib_8h_aa1986c48c027cf691df679c7a4968126_cgraph.pdf>
+Package pdftex.def Info: vlib_8h_aa1986c48c027cf691df679c7a4968126_cgraph.pdf u
+sed on input line 215.
+(pdftex.def)             Requested size: 197.0pt x 99.00102pt.
+
+<vlib_8h_aa1986c48c027cf691df679c7a4968126_icgraph.pdf, id=3816, 460.72125pt x 
+118.4425pt>
+File: vlib_8h_aa1986c48c027cf691df679c7a4968126_icgraph.pdf Graphic file (type 
+pdf)
+ <use vlib_8h_aa1986c48c027cf691df679c7a4968126_icgraph.pdf>
+Package pdftex.def Info: vlib_8h_aa1986c48c027cf691df679c7a4968126_icgraph.pdf 
+used on input line 222.
+(pdftex.def)             Requested size: 350.0pt x 89.97746pt.
+
+[76 <./vlib_8h_aa1986c48c027cf691df679c7a4968126_cgraph.pdf> <./vlib_8h_aa1986c
+48c027cf691df679c7a4968126_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 235
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 238
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.28 on input line 247.
+
+
+<vlib_8h_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf, id=3849, 547.04375pt x 
+118.4425pt>
+File: vlib_8h_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf Graphic file (type 
+pdf)
+ <use vlib_8h_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf>
+Package pdftex.def Info: vlib_8h_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf 
+used on input line 272.
+(pdftex.def)             Requested size: 350.0pt x 75.78123pt.
+)
+(./vmath_8h.tex <vmath_8h__incl.pdf, id=3850, 166.6225pt x 154.5775pt>
+File: vmath_8h__incl.pdf Graphic file (type pdf)
+
+<use vmath_8h__incl.pdf>
+Package pdftex.def Info: vmath_8h__incl.pdf used on input line 13.
+(pdftex.def)             Requested size: 166.0pt x 154.01102pt.
+ [77 <./vlib_8h_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf>] <vmath_8h__dep_
+_incl.pdf, id=3871, 306.14375pt x 209.78375pt>
+File: vmath_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use vmath_8h__dep__incl.pdf>
+Package pdftex.def Info: vmath_8h__dep__incl.pdf used on input line 20.
+(pdftex.def)             Requested size: 305.0pt x 209.01176pt.
+ [78 <./vmath_8h__incl.pdf> <./vmath_8h__dep__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.29 on input line 73.
+
+
+Underfull \hbox (badness 10000) detected at line 74
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 77
+[][][]
+ []
+
+
+<vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf, id=3919, 339.2675pt x 9
+9.37125pt>
+File: vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf Graphic file (type 
+pdf)
+ <use vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf>
+Package pdftex.def Info: vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf 
+used on input line 104.
+(pdftex.def)             Requested size: 338.0pt x 99.00406pt.
+ [79]
+<vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_icgraph.pdf, id=3925, 350.30875pt x
+ 99.37125pt>
+File: vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_icgraph.pdf Graphic file (type
+ pdf)
+ <use vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_icgraph.pdf>
+Package pdftex.def Info: vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_icgraph.pdf
+ used on input line 111.
+(pdftex.def)             Requested size: 349.0pt x 99.00708pt.
+
+Underfull \hbox (badness 10000) detected at line 124
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 127
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.30 on input line 136.
+
+[80 <./vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf> <./vmath_8h_a8321
+05cf858b3046c57c0d08a4e7c38b_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 137
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+
+<vmath_8h_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf, id=3962, 485.815pt x 9
+9.37125pt>
+File: vmath_8h_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf Graphic file (type
+ pdf)
+ <use vmath_8h_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf>
+Package pdftex.def Info: vmath_8h_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf
+ used on input line 191.
+(pdftex.def)             Requested size: 350.0pt x 71.58969pt.
+)
+(./_r_e_a_d_m_e_8md.tex) (./auto_8c.tex
+<auto_8c__incl.pdf, id=3963, 139.52126pt x 209.78375pt>
+File: auto_8c__incl.pdf Graphic file (type pdf)
+
+<use auto_8c__incl.pdf>
+Package pdftex.def Info: auto_8c__incl.pdf used on input line 14.
+(pdftex.def)             Requested size: 139.0pt x 209.00536pt.
+ [81 <./vmath_8h_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf>]
+Overfull \hbox (27.1099pt too wide) in paragraph at lines 29--30
+[]\T1/phv/m/n/10 Any copy-right is ded-i-cated to the Pub-lic Do-main. [][]\T1/
+pcr/m/n/10 http[]://creativecommons.[]org/publicdomain/zero/1.[]
+ []
+
+[82 <./auto_8c__incl.pdf>]) (./battery_8c.tex
+<battery_8c__incl.pdf, id=4013, 150.5625pt x 154.5775pt>
+File: battery_8c__incl.pdf Graphic file (type pdf)
+
+<use battery_8c__incl.pdf>
+Package pdftex.def Info: battery_8c__incl.pdf used on input line 8.
+(pdftex.def)             Requested size: 150.0pt x 154.01338pt.
+) (./controller_8c.tex
+<controller_8c__incl.pdf, id=4014, 190.7125pt x 264.99pt>
+File: controller_8c__incl.pdf Graphic file (type pdf)
+
+<use controller_8c__incl.pdf>
+Package pdftex.def Info: controller_8c__incl.pdf used on input line 9.
+(pdftex.def)             Requested size: 190.0pt x 264.01083pt.
+ [83 <./battery_8c__incl.pdf>]
+<controller_8c_a0ce0176099c0bb15ad8c36123222059d_icgraph.pdf, id=4049, 320.1962
+4pt x 99.37125pt>
+File: controller_8c_a0ce0176099c0bb15ad8c36123222059d_icgraph.pdf Graphic file 
+(type pdf)
+
+<use controller_8c_a0ce0176099c0bb15ad8c36123222059d_icgraph.pdf>
+Package pdftex.def Info: controller_8c_a0ce0176099c0bb15ad8c36123222059d_icgrap
+h.pdf used on input line 61.
+(pdftex.def)             Requested size: 319.0pt x 99.00102pt.
+)
+(./drive_8c.tex [84 <./controller_8c__incl.pdf>]
+<drive_8c__incl.pdf, id=4071, 336.25626pt x 264.99pt>
+File: drive_8c__incl.pdf Graphic file (type pdf)
+ <use drive_8c__incl.pdf>
+Package pdftex.def Info: drive_8c__incl.pdf used on input line 13.
+(pdftex.def)             Requested size: 335.0pt x 264.00275pt.
+
+[85 <./controller_8c_a0ce0176099c0bb15ad8c36123222059d_icgraph.pdf> <./drive_8c
+__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.31 on input line 85.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86]
+Underfull \hbox (badness 10000) detected at line 119
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 122
+[][][]
+ []
+
+
+<drive_8c_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf, id=4143, 485.815pt x 13
+6.51pt>
+File: drive_8c_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf Graphic file (type 
+pdf)
+ <use drive_8c_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf>
+Package pdftex.def Info: drive_8c_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf 
+used on input line 145.
+(pdftex.def)             Requested size: 350.0pt x 98.34544pt.
+)
+(./encoders_8c.tex <encoders_8c__incl.pdf, id=4144, 183.68625pt x 209.78375pt>
+File: encoders_8c__incl.pdf Graphic file (type pdf)
+
+<use encoders_8c__incl.pdf>
+Package pdftex.def Info: encoders_8c__incl.pdf used on input line 10.
+(pdftex.def)             Requested size: 183.0pt x 209.01497pt.
+ [87 <./drive_8c_a8224a4626a934d30ed587671b7004bf8_cgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+[88 <./encoders_8c__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 66
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 94
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 97
+[][][]
+ []
+
+
+<encoders_8c_aa6ec1ca17e907babd52803ecba451cd3_icgraph.pdf, id=4189, 243.91125p
+t x 99.37125pt>
+File: encoders_8c_aa6ec1ca17e907babd52803ecba451cd3_icgraph.pdf Graphic file (t
+ype pdf)
+
+<use encoders_8c_aa6ec1ca17e907babd52803ecba451cd3_icgraph.pdf>
+Package pdftex.def Info: encoders_8c_aa6ec1ca17e907babd52803ecba451cd3_icgraph.
+pdf used on input line 127.
+(pdftex.def)             Requested size: 243.0pt x 99.00102pt.
+) (./init_8c.tex [89] <init_8c__incl.pdf, id=4194, 411.5375pt x 264.99pt>
+File: init_8c__incl.pdf Graphic file (type pdf)
+
+<use init_8c__incl.pdf>
+Package pdftex.def Info: init_8c__incl.pdf used on input line 18.
+(pdftex.def)             Requested size: 350.0pt x 225.3679pt.
+ [90 <./encoders_8c_aa6ec1ca17e907babd52803ecba451cd3_icgraph.pdf> <./init_8c__
+incl.pdf>]
+Overfull \hbox (27.1099pt too wide) in paragraph at lines 35--36
+[]\T1/phv/m/n/10 Any copy-right is ded-i-cated to the Pub-lic Do-main. [][]\T1/
+pcr/m/n/10 http[]://creativecommons.[]org/publicdomain/zero/1.[]
+ []
+
+
+<init_8c_a25a40b6614565f755233080a384c35f1_cgraph.pdf, id=4242, 531.9875pt x 36
+1.35pt>
+File: init_8c_a25a40b6614565f755233080a384c35f1_cgraph.pdf Graphic file (type p
+df)
+ <use init_8c_a25a40b6614565f755233080a384c35f1_cgraph.pdf>
+Package pdftex.def Info: init_8c_a25a40b6614565f755233080a384c35f1_cgraph.pdf u
+sed on input line 81.
+(pdftex.def)             Requested size: 350.0pt x 237.74187pt.
+ [91])
+(./lcd_8c.tex <lcd_8c__incl.pdf, id=4254, 133.49875pt x 209.78375pt>
+File: lcd_8c__incl.pdf Graphic file (type pdf)
+
+<use lcd_8c__incl.pdf>
+Package pdftex.def Info: lcd_8c__incl.pdf used on input line 9.
+(pdftex.def)             Requested size: 133.0pt x 209.02136pt.
+ [92 <./init_8c_a25a40b6614565f755233080a384c35f1_cgraph.pdf>] [93 <./lcd_8c__i
+ncl.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.32 on input line 53.
+
+
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 59
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 62
+[][][]
+ []
+
+
+<lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf, id=4310, 242.9075pt x 99
+.37125pt>
+File: lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf Graphic file (type p
+df)
+ <use lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf>
+Package pdftex.def Info: lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf u
+sed on input line 89.
+(pdftex.def)             Requested size: 242.0pt x 98.99951pt.
+
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+[94 <./lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca_icgraph.pdf>]
+<lcd_8c_a07f04b524b5ded617d5f193db05ba0ad_icgraph.pdf, id=4332, 531.9875pt x 28
+7.0725pt>
+File: lcd_8c_a07f04b524b5ded617d5f193db05ba0ad_icgraph.pdf Graphic file (type p
+df)
+ <use lcd_8c_a07f04b524b5ded617d5f193db05ba0ad_icgraph.pdf>
+Package pdftex.def Info: lcd_8c_a07f04b524b5ded617d5f193db05ba0ad_icgraph.pdf u
+sed on input line 134.
+(pdftex.def)             Requested size: 350.0pt x 188.8727pt.
+
+Underfull \hbox (badness 10000) detected at line 147
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 150
+[][][]
+ []
+
+
+<lcd_8c_a35c08b1fa742e650f4873939707b893b_cgraph.pdf, id=4335, 234.8775pt x 99.
+37125pt>
+File: lcd_8c_a35c08b1fa742e650f4873939707b893b_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8c_a35c08b1fa742e650f4873939707b893b_cgraph.pdf>
+Package pdftex.def Info: lcd_8c_a35c08b1fa742e650f4873939707b893b_cgraph.pdf us
+ed on input line 173.
+(pdftex.def)             Requested size: 234.0pt x 98.99951pt.
+ [95 <./lcd_8c_a07f04b524b5ded617d5f193db05ba0ad_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 186
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 189
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 192
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 195
+[][][]
+ []
+
+
+<lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf, id=4368, 306.14375pt x 99
+.37125pt>
+File: lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf>
+Package pdftex.def Info: lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf us
+ed on input line 231.
+(pdftex.def)             Requested size: 305.0pt x 99.00557pt.
+ [96 <./lcd_8c_a35c08b1fa742e650f4873939707b893b_cgraph.pdf>]
+<lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.pdf, id=4387, 434.62375pt x 1
+36.51pt>
+File: lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.pdf Graphic file (type p
+df)
+ <use lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.pdf>
+Package pdftex.def Info: lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.pdf u
+sed on input line 239.
+(pdftex.def)             Requested size: 350.0pt x 109.93718pt.
+ [97 <./lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_cgraph.pdf> <./lcd_8c_ac7b3225
+ccc82fcbe067ba9da934f010d_icgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.33 on input line 258.
+
+
+Underfull \hbox (badness 10000) detected at line 259
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 262
+[][][]
+ []
+
+
+<lcd_8c_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf, id=4421, 231.86626pt x 99
+.37125pt>
+File: lcd_8c_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8c_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf>
+Package pdftex.def Info: lcd_8c_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf us
+ed on input line 289.
+(pdftex.def)             Requested size: 231.0pt x 99.00253pt.
+
+<lcd_8c_adabd3f7cdda45119604b488caf22bba8_icgraph.pdf, id=4422, 360.34625pt x 1
+36.51pt>
+File: lcd_8c_adabd3f7cdda45119604b488caf22bba8_icgraph.pdf Graphic file (type p
+df)
+ <use lcd_8c_adabd3f7cdda45119604b488caf22bba8_icgraph.pdf>
+Package pdftex.def Info: lcd_8c_adabd3f7cdda45119604b488caf22bba8_icgraph.pdf u
+sed on input line 297.
+(pdftex.def)             Requested size: 350.0pt x 132.5895pt.
+ [98 <./lcd_8c_adabd3f7cdda45119604b488caf22bba8_cgraph.pdf> <./lcd_8c_adabd3f7
+cdda45119604b488caf22bba8_icgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.34 on input line 316.
+
+
+Underfull \hbox (badness 10000) detected at line 317
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 320
+[][][]
+ []
+
+
+<lcd_8c_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf, id=4458, 234.8775pt x 99.
+37125pt>
+File: lcd_8c_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8c_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf>
+Package pdftex.def Info: lcd_8c_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf us
+ed on input line 343.
+(pdftex.def)             Requested size: 234.0pt x 98.99951pt.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.35 on input line 360.
+
+
+Underfull \hbox (badness 10000) detected at line 361
+[][][]
+ []
+
+[99 <./lcd_8c_aa0d4ca88701dfecf98796e2028482b69_cgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 364
+[][][]
+ []
+
+
+<lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf, id=4482, 271.0125pt x 99.
+37125pt>
+File: lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf>
+Package pdftex.def Info: lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf us
+ed on input line 387.
+(pdftex.def)             Requested size: 270.0pt x 99.00406pt.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.36 on input line 404.
+
+
+Underfull \hbox (badness 10000) detected at line 405
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 408
+[][][]
+ []
+
+[100 <./lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph.pdf>]
+<lcd_8c_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf, id=4506, 444.66125pt x 15
+1.56625pt>
+File: lcd_8c_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf Graphic file (type pd
+f)
+ <use lcd_8c_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf>
+Package pdftex.def Info: lcd_8c_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf us
+ed on input line 438.
+(pdftex.def)             Requested size: 350.0pt x 119.30122pt.
+
+<lcd_8c_a99f4683e1990edf624ab216bf327cba4_icgraph.pdf, id=4507, 270.00874pt x 9
+9.37125pt>
+File: lcd_8c_a99f4683e1990edf624ab216bf327cba4_icgraph.pdf Graphic file (type p
+df)
+ <use lcd_8c_a99f4683e1990edf624ab216bf327cba4_icgraph.pdf>
+Package pdftex.def Info: lcd_8c_a99f4683e1990edf624ab216bf327cba4_icgraph.pdf u
+sed on input line 446.
+(pdftex.def)             Requested size: 269.0pt x 99.00253pt.
+)
+(./log_8c.tex <log_8c__incl.pdf, id=4508, 149.55875pt x 264.99pt>
+File: log_8c__incl.pdf Graphic file (type pdf)
+
+<use log_8c__incl.pdf>
+Package pdftex.def Info: log_8c__incl.pdf used on input line 9.
+(pdftex.def)             Requested size: 149.0pt x 264.01892pt.
+ [101 <./lcd_8c_a99f4683e1990edf624ab216bf327cba4_cgraph.pdf> <./lcd_8c_a99f468
+3e1990edf624ab216bf327cba4_icgraph.pdf>] [102 <./log_8c__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.37 on input line 54.
+
+
+<log_8c_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf, id=4576, 416.55624pt x 9
+9.37125pt>
+File: log_8c_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf Graphic file (type p
+df)
+ <use log_8c_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf>
+Package pdftex.def Info: log_8c_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf u
+sed on input line 80.
+(pdftex.def)             Requested size: 350.0pt x 83.49857pt.
+
+Underfull \hbox (badness 10000) detected at line 93
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 96
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+[103 <./log_8c_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.38 on input line 106.
+
+
+<log_8c_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf, id=4599, 204.765pt x 99.3
+7125pt>
+File: log_8c_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf Graphic file (type pd
+f)
+ <use log_8c_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf>
+Package pdftex.def Info: log_8c_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf us
+ed on input line 127.
+(pdftex.def)             Requested size: 204.0pt x 99.00557pt.
+
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.39 on input line 147.
+
+[104 <./log_8c_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.pdf>]
+<log_8c_a1606d750e1bb8de9f9e917172bba3382_icgraph.pdf, id=4622, 291.0875pt x 99
+.37125pt>
+File: log_8c_a1606d750e1bb8de9f9e917172bba3382_icgraph.pdf Graphic file (type p
+df)
+ <use log_8c_a1606d750e1bb8de9f9e917172bba3382_icgraph.pdf>
+Package pdftex.def Info: log_8c_a1606d750e1bb8de9f9e917172bba3382_icgraph.pdf u
+sed on input line 173.
+(pdftex.def)             Requested size: 290.0pt x 99.00708pt.
+
+Underfull \hbox (badness 10000) detected at line 186
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 189
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.40 on input line 198.
+
+
+<log_8c_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf, id=4624, 223.83624pt x 9
+9.37125pt>
+File: log_8c_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf Graphic file (type p
+df)
+ <use log_8c_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf>
+Package pdftex.def Info: log_8c_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf u
+sed on input line 225.
+(pdftex.def)             Requested size: 223.0pt x 99.00253pt.
+ [105 <./log_8c_a1606d750e1bb8de9f9e917172bba3382_icgraph.pdf>]
+<log_8c_afff22aff6749311a684a559cac3ac8bd_icgraph.pdf, id=4650, 307.1475pt x 13
+6.51pt>
+File: log_8c_afff22aff6749311a684a559cac3ac8bd_icgraph.pdf Graphic file (type p
+df)
+ <use log_8c_afff22aff6749311a684a559cac3ac8bd_icgraph.pdf>
+Package pdftex.def Info: log_8c_afff22aff6749311a684a559cac3ac8bd_icgraph.pdf u
+sed on input line 261.
+(pdftex.def)             Requested size: 306.0pt x 136.00766pt.
+
+Underfull \hbox (badness 10000) detected at line 274
+[][][]
+ []
+
+[106 <./log_8c_a163f389b4f5cf440a807d8fb48aaa006_icgraph.pdf> <./log_8c_afff22a
+ff6749311a684a559cac3ac8bd_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 277
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 280
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.41 on input line 287.
+
+
+<log_8c_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf, id=4686, 218.8175pt x 99.
+37125pt>
+File: log_8c_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf Graphic file (type pd
+f)
+ <use log_8c_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf>
+Package pdftex.def Info: log_8c_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf us
+ed on input line 312.
+(pdftex.def)             Requested size: 218.0pt x 99.00102pt.
+
+<log_8c_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.pdf, id=4687, 219.82124pt x 9
+9.37125pt>
+File: log_8c_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.pdf Graphic file (type p
+df)
+ <use log_8c_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.pdf>
+Package pdftex.def Info: log_8c_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.pdf u
+sed on input line 320.
+(pdftex.def)             Requested size: 219.0pt x 99.00253pt.
+ [107 <./log_8c_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.pdf> <./log_8c_a0bec2c
+f5fff7f607bc510b74aba9887c_icgraph.pdf>]) (./menu_8c.tex
+<menu_8c__incl.pdf, id=4720, 634.37pt x 264.99pt>
+File: menu_8c__incl.pdf Graphic file (type pdf)
+ <use menu_8c__incl.pdf>
+Package pdftex.def Info: menu_8c__incl.pdf used on input line 9.
+(pdftex.def)             Requested size: 350.0pt x 146.20589pt.
+
+[108 <./menu_8c__incl.pdf>]
+<menu_8c_a0fb55c1213b23963d509b974d1254567_cgraph.pdf, id=4782, 432.61626pt x 1
+37.51375pt>
+File: menu_8c_a0fb55c1213b23963d509b974d1254567_cgraph.pdf Graphic file (type p
+df)
+ <use menu_8c_a0fb55c1213b23963d509b974d1254567_cgraph.pdf>
+Package pdftex.def Info: menu_8c_a0fb55c1213b23963d509b974d1254567_cgraph.pdf u
+sed on input line 82.
+(pdftex.def)             Requested size: 350.0pt x 111.25752pt.
+
+<menu_8c_a0fb55c1213b23963d509b974d1254567_icgraph.pdf, id=4783, 324.21124pt x 
+99.37125pt>
+File: menu_8c_a0fb55c1213b23963d509b974d1254567_icgraph.pdf Graphic file (type 
+pdf)
+ <use menu_8c_a0fb55c1213b23963d509b974d1254567_icgraph.pdf>
+Package pdftex.def Info: menu_8c_a0fb55c1213b23963d509b974d1254567_icgraph.pdf 
+used on input line 89.
+(pdftex.def)             Requested size: 323.0pt x 99.00557pt.
+
+[109 <./menu_8c_a0fb55c1213b23963d509b974d1254567_cgraph.pdf>]
+<menu_8c_adcee778eac0edb821427d32949106dc5_icgraph.pdf, id=4815, 275.0275pt x 1
+73.64874pt>
+File: menu_8c_adcee778eac0edb821427d32949106dc5_icgraph.pdf Graphic file (type 
+pdf)
+ <use menu_8c_adcee778eac0edb821427d32949106dc5_icgraph.pdf>
+Package pdftex.def Info: menu_8c_adcee778eac0edb821427d32949106dc5_icgraph.pdf 
+used on input line 130.
+(pdftex.def)             Requested size: 274.0pt x 173.01505pt.
+
+[110 <./menu_8c_a0fb55c1213b23963d509b974d1254567_icgraph.pdf> <./menu_8c_adcee
+778eac0edb821427d32949106dc5_icgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.42 on input line 147.
+
+
+Underfull \hbox (badness 10000) detected at line 148
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 151
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 154
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.43 on input line 187.
+
+
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+[111]
+Underfull \hbox (badness 10000) detected at line 191
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 194
+[][][]
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 203--204
+[]\T1/phv/m/n/10 References calculate[]_[]current[]_[]display(), menu[]_[]t[]::
+current, lcd[]_[]get[]_[]pressed[]_[]buttons(), lcd[]_[]print(), P[]R[]E[]S[]S[
+]ED,
+ []
+
+
+<menu_8c_abfadedb104f89f672dd3045499975a71_cgraph.pdf, id=4872, 576.1525pt x 20
+2.7575pt>
+File: menu_8c_abfadedb104f89f672dd3045499975a71_cgraph.pdf Graphic file (type p
+df)
+ <use menu_8c_abfadedb104f89f672dd3045499975a71_cgraph.pdf>
+Package pdftex.def Info: menu_8c_abfadedb104f89f672dd3045499975a71_cgraph.pdf u
+sed on input line 230.
+(pdftex.def)             Requested size: 350.0pt x 123.1745pt.
+ [112 <./menu_8c_abfadedb104f89f672dd3045499975a71_cgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.44 on input line 247.
+
+
+Underfull \hbox (badness 10000) detected at line 248
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.45 on input line 261.
+
+
+Underfull \hbox (badness 10000) detected at line 262
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 265
+[][][]
+ []
+
+
+<menu_8c_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf, id=4899, 275.0275pt x 99
+.37125pt>
+File: menu_8c_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf Graphic file (type p
+df)
+ <use menu_8c_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf>
+Package pdftex.def Info: menu_8c_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf u
+sed on input line 291.
+(pdftex.def)             Requested size: 274.0pt x 99.0086pt.
+ [113 <./menu_8c_a156a29228511b0010edbc3567a5dd9a8_cgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.46 on input line 308.
+
+
+Underfull \hbox (badness 10000) detected at line 309
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.47 on input line 322.
+
+
+Underfull \hbox (badness 10000) detected at line 323
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 326
+[][][]
+ []
+
+
+<menu_8c_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf, id=4927, 266.9975pt x 99
+.37125pt>
+File: menu_8c_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf Graphic file (type p
+df)
+ <use menu_8c_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf>
+Package pdftex.def Info: menu_8c_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf u
+sed on input line 352.
+(pdftex.def)             Requested size: 266.0pt x 99.01012pt.
+ [114 <./menu_8c_aa86d2c973646a6afc1525b88537c74e4_cgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.48 on input line 369.
+
+
+Underfull \hbox (badness 10000) detected at line 370
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.49 on input line 381.
+
+
+Underfull \hbox (badness 10000) detected at line 382
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 385
+[][][]
+ []
+
+
+<menu_8c_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf, id=4955, 270.00874pt x 9
+9.37125pt>
+File: menu_8c_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf Graphic file (type p
+df)
+ <use menu_8c_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf>
+Package pdftex.def Info: menu_8c_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf u
+sed on input line 417.
+(pdftex.def)             Requested size: 269.0pt x 99.00253pt.
+)
+(./opcontrol_8c.tex <opcontrol_8c__incl.pdf, id=4956, 287.0725pt x 264.99pt>
+File: opcontrol_8c__incl.pdf Graphic file (type pdf)
+
+<use opcontrol_8c__incl.pdf>
+Package pdftex.def Info: opcontrol_8c__incl.pdf used on input line 15.
+(pdftex.def)             Requested size: 286.0pt x 264.00679pt.
+ [115 <./menu_8c_a9388fba279e391fe22922a2d555e12b2_cgraph.pdf>]
+Overfull \hbox (27.1099pt too wide) in paragraph at lines 30--31
+[]\T1/phv/m/n/10 Any copy-right is ded-i-cated to the Pub-lic Do-main. [][]\T1/
+pcr/m/n/10 http[]://creativecommons.[]org/publicdomain/zero/1.[]
+ []
+
+[116 <./opcontrol_8c__incl.pdf>]
+<opcontrol_8c_ac71a94af413917f27d108e95c4d6f6a7_cgraph.pdf, id=5005, 289.08pt x
+ 99.37125pt>
+File: opcontrol_8c_ac71a94af413917f27d108e95c4d6f6a7_cgraph.pdf Graphic file (t
+ype pdf)
+ <use opcontrol_8c_ac71a94af413917f27d108e95c4d6f6a7_cgraph.pdf>
+Package pdftex.def Info: opcontrol_8c_ac71a94af413917f27d108e95c4d6f6a7_cgraph.
+pdf used on input line 69.
+(pdftex.def)             Requested size: 288.0pt x 99.00557pt.
+)
+(./slew_8c.tex <slew_8c__incl.pdf, id=5006, 277.035pt x 264.99pt>
+File: slew_8c__incl.pdf Graphic file (type pdf)
+
+<use slew_8c__incl.pdf>
+Package pdftex.def Info: slew_8c__incl.pdf used on input line 10.
+(pdftex.def)             Requested size: 276.0pt x 264.00275pt.
+ [117 <./opcontrol_8c_ac71a94af413917f27d108e95c4d6f6a7_cgraph.pdf>] [118 <./sl
+ew_8c__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 48
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 51
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+
+<slew_8c_a321758941d88b75783955c819bb75005_cgraph.pdf, id=5066, 328.22626pt x 1
+73.64874pt>
+File: slew_8c_a321758941d88b75783955c819bb75005_cgraph.pdf Graphic file (type p
+df)
+ <use slew_8c_a321758941d88b75783955c819bb75005_cgraph.pdf>
+Package pdftex.def Info: slew_8c_a321758941d88b75783955c819bb75005_cgraph.pdf u
+sed on input line 112.
+(pdftex.def)             Requested size: 327.0pt x 173.00179pt.
+ [119]
+<slew_8c_a321758941d88b75783955c819bb75005_icgraph.pdf, id=5073, 222.8325pt x 9
+9.37125pt>
+File: slew_8c_a321758941d88b75783955c819bb75005_icgraph.pdf Graphic file (type 
+pdf)
+ <use slew_8c_a321758941d88b75783955c819bb75005_icgraph.pdf>
+Package pdftex.def Info: slew_8c_a321758941d88b75783955c819bb75005_icgraph.pdf 
+used on input line 120.
+(pdftex.def)             Requested size: 222.0pt x 99.00102pt.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.50 on input line 139.
+
+
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 143
+[][][]
+ []
+
+[120 <./slew_8c_a321758941d88b75783955c819bb75005_cgraph.pdf> <./slew_8c_a32175
+8941d88b75783955c819bb75005_icgraph.pdf>]
+<slew_8c_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf, id=5109, 289.08pt x 99.
+37125pt>
+File: slew_8c_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf Graphic file (type 
+pdf)
+ <use slew_8c_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf>
+Package pdftex.def Info: slew_8c_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf 
+used on input line 172.
+(pdftex.def)             Requested size: 288.0pt x 99.00557pt.
+
+Underfull \hbox (badness 10000) detected at line 185
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+<slew_8c_a807a87c5df438fde21c1e8213906695b_cgraph.pdf, id=5116, 237.88875pt x 9
+9.37125pt>
+File: slew_8c_a807a87c5df438fde21c1e8213906695b_cgraph.pdf Graphic file (type p
+df)
+ <use slew_8c_a807a87c5df438fde21c1e8213906695b_cgraph.pdf>
+Package pdftex.def Info: slew_8c_a807a87c5df438fde21c1e8213906695b_cgraph.pdf u
+sed on input line 228.
+(pdftex.def)             Requested size: 237.0pt x 99.00406pt.
+ [121 <./slew_8c_a7dff2b79dffe55fb936d977594d7c01d_icgraph.pdf>]
+<slew_8c_a807a87c5df438fde21c1e8213906695b_icgraph.pdf, id=5136, 336.25626pt x 
+99.37125pt>
+File: slew_8c_a807a87c5df438fde21c1e8213906695b_icgraph.pdf Graphic file (type 
+pdf)
+ <use slew_8c_a807a87c5df438fde21c1e8213906695b_icgraph.pdf>
+Package pdftex.def Info: slew_8c_a807a87c5df438fde21c1e8213906695b_icgraph.pdf 
+used on input line 236.
+(pdftex.def)             Requested size: 335.0pt x 99.00102pt.
+
+Underfull \hbox (badness 10000) detected at line 252
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 255
+[][][]
+ []
+
+[122 <./slew_8c_a807a87c5df438fde21c1e8213906695b_cgraph.pdf> <./slew_8c_a807a8
+7c5df438fde21c1e8213906695b_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 276
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 279
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 300
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 303
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 324
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 327
+[][][]
+ []
+
+) (./vlib_8c.tex <vlib_8c__incl.pdf, id=5167, 253.94875pt x 209.78375pt>
+File: vlib_8c__incl.pdf Graphic file (type pdf)
+
+<use vlib_8c__incl.pdf>
+Package pdftex.def Info: vlib_8c__incl.pdf used on input line 9.
+(pdftex.def)             Requested size: 253.0pt x 209.00856pt.
+ [123]
+<vlib_8c_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf, id=5180, 323.2075pt x 9
+9.37125pt>
+File: vlib_8c_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf Graphic file (type 
+pdf)
+ <use vlib_8c_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf>
+Package pdftex.def Info: vlib_8c_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf 
+used on input line 53.
+(pdftex.def)             Requested size: 322.0pt x 99.00557pt.
+ [124 <./vlib_8c__incl.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.51 on input line 74.
+
+
+<vlib_8c_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf, id=5203, 266.9975pt x 99
+.37125pt>
+File: vlib_8c_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf Graphic file (type p
+df)
+ <use vlib_8c_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf>
+Package pdftex.def Info: vlib_8c_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf u
+sed on input line 116.
+(pdftex.def)             Requested size: 266.0pt x 99.01012pt.
+ [125 <./vlib_8c_a1115803c6996aebfbf67434810df7b4b_icgraph.pdf>]
+<vlib_8c_a1c3b16ce8c66ade17aca0f267027b855_icgraph.pdf, id=5223, 392.46625pt x 
+99.37125pt>
+File: vlib_8c_a1c3b16ce8c66ade17aca0f267027b855_icgraph.pdf Graphic file (type 
+pdf)
+ <use vlib_8c_a1c3b16ce8c66ade17aca0f267027b855_icgraph.pdf>
+Package pdftex.def Info: vlib_8c_a1c3b16ce8c66ade17aca0f267027b855_icgraph.pdf 
+used on input line 123.
+(pdftex.def)             Requested size: 350.0pt x 88.6251pt.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.52 on input line 144.
+
+
+Underfull \hbox (badness 10000) detected at line 145
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 148
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 151
+[][][]
+ []
+
+[126 <./vlib_8c_a1c3b16ce8c66ade17aca0f267027b855_cgraph.pdf> <./vlib_8c_a1c3b1
+6ce8c66ade17aca0f267027b855_icgraph.pdf>]
+<vlib_8c_aa1986c48c027cf691df679c7a4968126_cgraph.pdf, id=5256, 197.73875pt x 9
+9.37125pt>
+File: vlib_8c_aa1986c48c027cf691df679c7a4968126_cgraph.pdf Graphic file (type p
+df)
+ <use vlib_8c_aa1986c48c027cf691df679c7a4968126_cgraph.pdf>
+Package pdftex.def Info: vlib_8c_aa1986c48c027cf691df679c7a4968126_cgraph.pdf u
+sed on input line 189.
+(pdftex.def)             Requested size: 197.0pt x 99.00102pt.
+
+<vlib_8c_aa1986c48c027cf691df679c7a4968126_icgraph.pdf, id=5257, 460.72125pt x 
+118.4425pt>
+File: vlib_8c_aa1986c48c027cf691df679c7a4968126_icgraph.pdf Graphic file (type 
+pdf)
+ <use vlib_8c_aa1986c48c027cf691df679c7a4968126_icgraph.pdf>
+Package pdftex.def Info: vlib_8c_aa1986c48c027cf691df679c7a4968126_icgraph.pdf 
+used on input line 196.
+(pdftex.def)             Requested size: 350.0pt x 89.97746pt.
+
+Underfull \hbox (badness 10000) detected at line 209
+[][][]
+ []
+
+[127 <./vlib_8c_aa1986c48c027cf691df679c7a4968126_cgraph.pdf> <./vlib_8c_aa1986
+c48c027cf691df679c7a4968126_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 212
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.53 on input line 221.
+
+
+<vlib_8c_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf, id=5288, 547.04375pt x 
+118.4425pt>
+File: vlib_8c_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf Graphic file (type 
+pdf)
+ <use vlib_8c_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf>
+Package pdftex.def Info: vlib_8c_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf 
+used on input line 246.
+(pdftex.def)             Requested size: 350.0pt x 75.78123pt.
+)
+(./vmath_8c.tex <vmath_8c__incl.pdf, id=5289, 147.55125pt x 209.78375pt>
+File: vmath_8c__incl.pdf Graphic file (type pdf)
+
+<use vmath_8c__incl.pdf>
+Package pdftex.def Info: vmath_8c__incl.pdf used on input line 8.
+(pdftex.def)             Requested size: 147.0pt x 209.00536pt.
+ [128 <./vlib_8c_aad7fea725cb4b198ace1aa3df5051244_icgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.54 on input line 41.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [129 <./vmath_8c__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+
+<vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf, id=5342, 339.2675pt x 9
+9.37125pt>
+File: vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf Graphic file (type 
+pdf)
+ <use vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf>
+Package pdftex.def Info: vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf 
+used on input line 72.
+(pdftex.def)             Requested size: 338.0pt x 99.00406pt.
+
+<vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_icgraph.pdf, id=5343, 350.30875pt x
+ 99.37125pt>
+File: vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_icgraph.pdf Graphic file (type
+ pdf)
+ <use vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_icgraph.pdf>
+Package pdftex.def Info: vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_icgraph.pdf
+ used on input line 79.
+(pdftex.def)             Requested size: 349.0pt x 99.00708pt.
+
+Underfull \hbox (badness 10000) detected at line 92
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+[130 <./vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_cgraph.pdf> <./vmath_8c_a832
+105cf858b3046c57c0d08a4e7c38b_icgraph.pdf>]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 5.55 on input line 104.
+
+
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 108
+[][][]
+ []
+
+
+<vmath_8c_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf, id=5378, 485.815pt x 9
+9.37125pt>
+File: vmath_8c_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf Graphic file (type
+ pdf)
+ <use vmath_8c_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf>
+Package pdftex.def Info: vmath_8c_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf
+ used on input line 159.
+(pdftex.def)             Requested size: 350.0pt x 71.58969pt.
+)
+[131 <./vmath_8c_a1c4a1747b714f5d4654f0614193f9e49_icgraph.pdf>] [132
+
+]
+No file refman.ind.
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
+(./refman.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 191.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
+
+
+Package rerunfilecheck Warning: File `refman.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `refman.out':
+(rerunfilecheck)             Before: AF71F9C567272814149201159811073A;78491
+(rerunfilecheck)             After:  0098DBDA0DBFCE4332165756C8222320;46251.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
+ ) 
+Here is how much of TeX's memory you used:
+ 17422 strings out of 493013
+ 284522 string characters out of 6133343
+ 352938 words of memory out of 5000000
+ 19502 multiletter control sequences out of 15000+600000
+ 68131 words of font info for 93 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 53i,15n,92p,2867b,630s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsubsection.5.27.1.2} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.27.1.1} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.27.1} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.27} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.26.1.4} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.26.1.3} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.25.2.4} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.25.2.3} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.25.2.2} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.25.2.1} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.25.2} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.23.1.7} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.23.1.6} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.23.1.5} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.23.1.4} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.23.1.3} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.23.1.2} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.23.1.1} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.22.2.2} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.22.2.1} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.22.2} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.21.1.8} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.21.1.7} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.20.2.2} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.19.1.3} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.19.1.2} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.19.1.1} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.18.1.4} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.15.2.1} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.15.2} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.15.1} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.13.2.2} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.13.2.1} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.13.2} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.13.1} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.12.2.4} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.12.2.3} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.11.3.4} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.11.3.3} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.11.3.2} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.11.3.1} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.11.3} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.10.2.7} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.10.2.6} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.10.2.5} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.10.2.4} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.9.4.7} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.9.4.6} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.9.4.5} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.9.4.4} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.9.4.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.9.4.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.9.4.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.9.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.9.3.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.9.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.8.2.4} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.8.2.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.8.2.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.7.3.5} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.7.3.4} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.7.3.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.7.3.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.7.3.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.7.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.7.2.5} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.6.4.7} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.6.4.6} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.6.4.5} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.6.4.4} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.6.4.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.6.4.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.6.4.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.6.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.5.3.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.5.3.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.4.5.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.4.5.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.4.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.4.4.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.4.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.3.2.6} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.3.2.5} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.3.2.4} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.3.2.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.3.2.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.5.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.5.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.104} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.103} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.102} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.101} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.100} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.99} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.98} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.97} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.96} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.95} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.94} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.93} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.92} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.91} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.90} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.89} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.88} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.87} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.86} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.85} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.84} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.83} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.82} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.81} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.80} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.79} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.78} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.77} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.76} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.75} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.74} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.73} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.72} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.71} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.70} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.69} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.68} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.67} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.66} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.65} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.64} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.63} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.62} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.61} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.60} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.59} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.58} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.57} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.56} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.55} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.54} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.53} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.52} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.51} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.50} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.49} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.48} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.47} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.46} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.45} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.44} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.43} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.42} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.41} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.40} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.39} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.38} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.37} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.36} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.35} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.34} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.33} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.32} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.31} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.30} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.29} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.28} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.27} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.26} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.25} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.24} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.23} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.22} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.21} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.20} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.19} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.18} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.17} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.16} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.15} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.14} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.13} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.12} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.11} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.10} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.9} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.8} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.7} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.6} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.5} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.4} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.4.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.3.9} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.3.8} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.3.7} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.3.6} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.3.5} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.3.4} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.3.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.3.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.3.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.50} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.49} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.48} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.47} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.46} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.45} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.44} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.43} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.42} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.41} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.40} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.39} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.38} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.37} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.36} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.35} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.34} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.33} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.32} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.31} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.30} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.29} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.28} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.27} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.26} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.25} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.24} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.23} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.22} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.21} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.20} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.19} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.18} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.17} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.16} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.15} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.14} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.13} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.12} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.11} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.10} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.9} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.8} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.7} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.6} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.5} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.4} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.3} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.5.1.2.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/urw/helvetic/uhvb8ac.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/h
+elvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/helvetic
+/uhvro8a.pfb>
+Output written on refman.pdf (148 pages, 1505089 bytes).
+PDF statistics:
+ 5663 PDF objects out of 6186 (max. 8388607)
+ 5096 compressed objects within 51 object streams
+ 1022 named destinations out of 1200 (max. 500000)
+ 3839 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -9,6 +9,5 @@ var log_8h =
     [ "error", "log_8h.html#a8e5bb8a2a372f5b066ff7af7044584c1", null ],
     [ "info", "log_8h.html#a1606d750e1bb8de9f9e917172bba3382", null ],
     [ "init_error", "log_8h.html#a163f389b4f5cf440a807d8fb48aaa006", null ],
-    [ "log_info", "log_8h.html#afff22aff6749311a684a559cac3ac8bd", null ],
     [ "warning", "log_8h.html#a0bec2cf5fff7f607bc510b74aba9887c", null ]
 ];

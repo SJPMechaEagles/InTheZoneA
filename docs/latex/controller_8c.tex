@@ -1,0 +1,63 @@
+\hypertarget{controller_8c}{}\section{src/controller.c File Reference}
+\label{controller_8c}\index{src/controller.\+c@{src/controller.\+c}}
+{\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
+Include dependency graph for controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{controller_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcord}{cord} \hyperlink{controller_8c_a0ce0176099c0bb15ad8c36123222059d}{get\+\_\+joystick\+\_\+cord} (enum \hyperlink{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5a}{joystick} \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side}, int controller)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{controller_8c_a0ce0176099c0bb15ad8c36123222059d}\label{controller_8c_a0ce0176099c0bb15ad8c36123222059d}} 
+\index{controller.\+c@{controller.\+c}!get\+\_\+joystick\+\_\+cord@{get\+\_\+joystick\+\_\+cord}}
+\index{get\+\_\+joystick\+\_\+cord@{get\+\_\+joystick\+\_\+cord}!controller.\+c@{controller.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+joystick\+\_\+cord()}{get\_joystick\_cord()}}
+{\footnotesize\ttfamily struct \hyperlink{structcord}{cord} get\+\_\+joystick\+\_\+cord (\begin{DoxyParamCaption}\item[{enum \hyperlink{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5a}{joystick}}]{side,  }\item[{int}]{controller }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file controller.\+c.
+
+
+
+References L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X, L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y, R\+I\+G\+H\+T\+\_\+\+J\+OY, R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X, R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y, cord\+::x, and cord\+::y.
+
+
+
+Referenced by update\+\_\+drive\+\_\+motors().
+
+
+\begin{DoxyCode}
+3                                                                   \{
+4   \textcolor{keywordtype}{int} x;
+5   \textcolor{keywordtype}{int} y;
+6   \textcolor{keywordflow}{if}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe}{RIGHT\_JOY}) \{
+7     y = joystickGetAnalog(controller, \hyperlink{controller_8h_ad74f84aad465437cc1e0f914dbd6fab5}{RIGHT\_JOY\_X});
+8     x = joystickGetAnalog(controller, \hyperlink{controller_8h_a99457bf9dee795334411ea77f0858b16}{RIGHT\_JOY\_Y});
+9   \} \textcolor{keywordflow}{else} \{
+10     y = joystickGetAnalog(controller, \hyperlink{controller_8h_ac055a23829dc64aa20b8e2e1bcfbf316}{LEFT\_JOY\_X});
+11     x = joystickGetAnalog(controller, \hyperlink{controller_8h_ae0a2b64db5fc4f4bf4b169185be93db3}{LEFT\_JOY\_Y});
+12   \}
+13   \textcolor{keyword}{struct }\hyperlink{structcord}{cord} c;
+14   c.\hyperlink{structcord_a2eef9b681474b679cf87b0c20eced2cd}{x} = \hyperlink{structcord_a2eef9b681474b679cf87b0c20eced2cd}{x};
+15   c.y = \hyperlink{structcord_a4e7d289c55cfe511532e53a81dc19215}{y};
+16   \textcolor{keywordflow}{return} c;
+17 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{controller_8c_a0ce0176099c0bb15ad8c36123222059d_icgraph}
+\end{center}
+\end{figure}

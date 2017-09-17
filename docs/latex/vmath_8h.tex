@@ -1,0 +1,193 @@
+\hypertarget{vmath_8h}{}\section{include/vmath.h File Reference}
+\label{vmath_8h}\index{include/vmath.\+h@{include/vmath.\+h}}
+
+
+Vex Specific Math Functions, includes\+: Cartesian to polar cordinates.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for vmath.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{vmath_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{vmath_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcord}{cord}
+\begin{DoxyCompactList}\small\item\em A struct that contains cartesian coordinates. \end{DoxyCompactList}\item 
+struct \hyperlink{structpolar__cord}{polar\+\_\+cord}
+\begin{DoxyCompactList}\small\item\em A struct that contains polar coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpolar__cord}{polar\+\_\+cord} \hyperlink{vmath_8h_a832105cf858b3046c57c0d08a4e7c38b}{cartesian\+\_\+cord\+\_\+to\+\_\+polar} (struct \hyperlink{structcord}{cord} cords)
+\begin{DoxyCompactList}\small\item\em Function to convert x and y 2 dimensional cartesian cordinated to polar coordinates. \end{DoxyCompactList}\item 
+struct \hyperlink{structpolar__cord}{polar\+\_\+cord} \hyperlink{vmath_8h_a1c4a1747b714f5d4654f0614193f9e49}{cartesian\+\_\+to\+\_\+polar} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Function to convert x and y 2 dimensional cartesian coordinated to polar coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Vex Specific Math Functions, includes\+: Cartesian to polar cordinates. 
+
+\begin{DoxyAuthor}{Author}
+Christian Desimone 
+
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/9/2017 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{vmath_8h_a832105cf858b3046c57c0d08a4e7c38b}\label{vmath_8h_a832105cf858b3046c57c0d08a4e7c38b}} 
+\index{vmath.\+h@{vmath.\+h}!cartesian\+\_\+cord\+\_\+to\+\_\+polar@{cartesian\+\_\+cord\+\_\+to\+\_\+polar}}
+\index{cartesian\+\_\+cord\+\_\+to\+\_\+polar@{cartesian\+\_\+cord\+\_\+to\+\_\+polar}!vmath.\+h@{vmath.\+h}}
+\subsubsection{\texorpdfstring{cartesian\+\_\+cord\+\_\+to\+\_\+polar()}{cartesian\_cord\_to\_polar()}}
+{\footnotesize\ttfamily struct \hyperlink{structpolar__cord}{polar\+\_\+cord} cartesian\+\_\+cord\+\_\+to\+\_\+polar (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcord}{cord}}]{cords }\end{DoxyParamCaption})}
+
+
+
+Function to convert x and y 2 dimensional cartesian cordinated to polar coordinates. 
+
+\begin{DoxyAuthor}{Author}
+Christian Desimone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/2017
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em cords} & the cartesian cords \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a struct containing the angle and magnitude. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structpolar__cord}{polar\+\_\+cord} 
+
+\hyperlink{structcord}{cord} 
+\end{DoxySeeAlso}
+
+
+Definition at line 33 of file vmath.\+c.
+
+
+
+References cartesian\+\_\+to\+\_\+polar().
+
+
+
+Referenced by update\+\_\+drive\+\_\+motors().
+
+
+\begin{DoxyCode}
+33                                                              \{
+34   \textcolor{keywordflow}{return} \hyperlink{vmath_8c_a1c4a1747b714f5d4654f0614193f9e49}{cartesian\_to\_polar}(cords.\hyperlink{structcord_a2eef9b681474b679cf87b0c20eced2cd}{x}, cords.\hyperlink{structcord_a4e7d289c55cfe511532e53a81dc19215}{y});
+35 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{vmath_8h_a832105cf858b3046c57c0d08a4e7c38b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vmath_8h_a1c4a1747b714f5d4654f0614193f9e49}\label{vmath_8h_a1c4a1747b714f5d4654f0614193f9e49}} 
+\index{vmath.\+h@{vmath.\+h}!cartesian\+\_\+to\+\_\+polar@{cartesian\+\_\+to\+\_\+polar}}
+\index{cartesian\+\_\+to\+\_\+polar@{cartesian\+\_\+to\+\_\+polar}!vmath.\+h@{vmath.\+h}}
+\subsubsection{\texorpdfstring{cartesian\+\_\+to\+\_\+polar()}{cartesian\_to\_polar()}}
+{\footnotesize\ttfamily struct \hyperlink{structpolar__cord}{polar\+\_\+cord} cartesian\+\_\+to\+\_\+polar (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Function to convert x and y 2 dimensional cartesian coordinated to polar coordinates. 
+
+\begin{DoxyAuthor}{Author}
+Christian Desimone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/2017
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & float value of the x cartesian coordinate. \\
+\hline
+{\em y} & float value of the y cartesian coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a struct containing the angle and magnitude. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structpolar__cord}{polar\+\_\+cord} 
+\end{DoxySeeAlso}
+
+
+Definition at line 3 of file vmath.\+c.
+
+
+
+References polar\+\_\+cord\+::angle, and polar\+\_\+cord\+::magnitue.
+
+
+
+Referenced by cartesian\+\_\+cord\+\_\+to\+\_\+polar().
+
+
+\begin{DoxyCode}
+3                                                        \{
+4   \textcolor{keywordtype}{float} degree = 0;
+5   \textcolor{keywordtype}{double} magnitude = sqrt((fabs(x) * fabs(x)) + (fabs(y) * fabs(y)));
+6 
+7   \textcolor{keywordflow}{if}(x < 0)\{
+8     degree += 180.0;
+9   \}
+10   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x > 0 && y < 0)\{
+11     degree += 360.0;
+12   \}
+13 
+14   \textcolor{keywordflow}{if}(x != 0 && y != 0)\{
+15     degree += atan((\textcolor{keywordtype}{float})y / (\textcolor{keywordtype}{float})x);
+16   \}
+17   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x == 0 && y > 0)\{
+18     degree = 90.0;
+19   \}
+20   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(y == 0 && x < 0)\{
+21     degree = 180.0;
+22   \}
+23   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x == 0 && y < 0)\{
+24     degree = 270.0;
+25   \}
+26 
+27   \textcolor{keyword}{struct }\hyperlink{structpolar__cord}{polar\_cord} p;
+28   p.\hyperlink{structpolar__cord_a81b3a11d38d76719b02fcd425adaa216}{angle} = degree;
+29   p.magnitue = magnitude;
+30   \textcolor{keywordflow}{return} p;
+31 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vmath_8h_a1c4a1747b714f5d4654f0614193f9e49_icgraph}
+\end{center}
+\end{figure}

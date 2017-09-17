@@ -1,10 +1,24 @@
 var searchData=
 [
-  ['joy_5fdown',['JOY_DOWN',['../_a_p_i_8h.html#a950e3ba6cd65c992b92f36b837c52a0a',1,'API.h']]],
-  ['joy_5fleft',['JOY_LEFT',['../_a_p_i_8h.html#a5b41c548ba97989b473f6393b9c2c7f1',1,'API.h']]],
-  ['joy_5fright',['JOY_RIGHT',['../_a_p_i_8h.html#a59c1b2e5c6856ed044ba0635102fd995',1,'API.h']]],
-  ['joy_5fup',['JOY_UP',['../_a_p_i_8h.html#a85e47af11e6a32e3a819f247d9f619d6',1,'API.h']]],
-  ['joystick',['joystick',['../controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5a',1,'controller.h']]],
-  ['joystickgetanalog',['joystickGetAnalog',['../_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d',1,'API.h']]],
-  ['joystickgetdigital',['joystickGetDigital',['../_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92',1,'API.h']]]
+  ['magnitue',['magnitue',['../structpolar__cord.html#aec2e25fecc82af176f0fcd23f1e02f0c',1,'polar_cord']]],
+  ['main_2eh',['main.h',['../main_8h.html',1,'']]],
+  ['master',['MASTER',['../controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b',1,'controller.h']]],
+  ['max',['max',['../structmenu__t.html#ace9cbaecd7bf311be0ef230da657f406',1,'menu_t']]],
+  ['max_5ff',['max_f',['../structmenu__t.html#a14b11d0a7610484462c8a6e93068a2c1',1,'menu_t']]],
+  ['menu_2ec',['menu.c',['../menu_8c.html',1,'']]],
+  ['menu_2eh',['menu.h',['../menu_8h.html',1,'']]],
+  ['menu_5ft',['menu_t',['../structmenu__t.html',1,'menu_t'],['../menu_8h.html#aac280f147a4bb94ab2f1a69eff76f751',1,'menu_t():&#160;menu.h']]],
+  ['menu_5ftype',['menu_type',['../menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62',1,'menu.h']]],
+  ['middle',['middle',['../structlcd__buttons.html#a293342810ac56f73979b08f144d6e6b9',1,'lcd_buttons']]],
+  ['min',['min',['../structmenu__t.html#a6891bc6c94f1e995cc62a05b13328de5',1,'menu_t']]],
+  ['min_5ff',['min_f',['../structmenu__t.html#a0a6e4f711992fb69e8a57c2af1ab7a05',1,'menu_t']]],
+  ['motor_5fback_5fleft',['MOTOR_BACK_LEFT',['../ports_8h.html#a36e9fda07b5cd4408170fe907b75a8b7',1,'ports.h']]],
+  ['motor_5fback_5fright',['MOTOR_BACK_RIGHT',['../ports_8h.html#ad85c5f3d6a2d00789c8c67b960c46c2b',1,'ports.h']]],
+  ['motor_5ffront_5fleft',['MOTOR_FRONT_LEFT',['../ports_8h.html#a743b47e164fb23b30f4f2f228db0b338',1,'ports.h']]],
+  ['motor_5ffront_5fright',['MOTOR_FRONT_RIGHT',['../ports_8h.html#a6f48bcc6d5fce24caeae0b17954c277a',1,'ports.h']]],
+  ['motor_5fmiddle_5fleft',['MOTOR_MIDDLE_LEFT',['../ports_8h.html#ac7dd3397e2f909b4dc11f2a2e6f28800',1,'ports.h']]],
+  ['motor_5fmiddle_5fright',['MOTOR_MIDDLE_RIGHT',['../ports_8h.html#a0da3f792b8f28ab09b339295859d8334',1,'ports.h']]],
+  ['motor_5fports',['MOTOR_PORTS',['../slew_8h.html#ad1ad4b29af4180aa00713599367fbc98',1,'slew.h']]],
+  ['motors_5fset_5fspeeds',['motors_set_speeds',['../slew_8c.html#a3143c164339fd92b9b1e132c63a41060',1,'slew.c']]],
+  ['mutex',['mutex',['../slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531',1,'slew.c']]]
 ];

@@ -3,9 +3,9 @@ var menu_8h =
     [ "menu_t", "structmenu__t.html", "structmenu__t" ],
     [ "menu_t", "menu_8h.html#aac280f147a4bb94ab2f1a69eff76f751", null ],
     [ "menu_type", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62", [
-      [ "int_type", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a1762bddf438155a00ecf0318446e8a83", null ],
-      [ "float_type", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a67a95930928f80abf404f492d8ab0e22", null ],
-      [ "string_type", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62afca80dc288f5f112ad3b5a8493758095", null ]
+      [ "INT_TYPE", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a7fee88532b24b79bf2a88688a5d681d7", null ],
+      [ "FLOAT_TYPE", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62ab2a272a88abadbaa481269e2506345c5", null ],
+      [ "STRING_TYPE", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c", null ]
     ] ],
     [ "calculate_current_display", "menu_8h.html#a0fb55c1213b23963d509b974d1254567", null ],
     [ "create_menu", "menu_8h.html#adcee778eac0edb821427d32949106dc5", null ],

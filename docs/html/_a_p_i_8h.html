@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.0.1</span>
    </div>
   </td>
  </tr>
@@ -1305,6 +1305,8 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_a_p_i_8h_source.html#l00819">819</a> of file <a class="el" href="_a_p_i_8h_source.html">API.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00045">initialize()</a>.</p>
+
 </div>
 </div>
 <a id="a001e6f2f6c87e1e2bcff741ab586024e"></a>
@@ -1321,6 +1323,8 @@ Variables</h2></td></tr>
 <p>UART 2 on the Cortex; must be opened first using <a class="el" href="_a_p_i_8h.html#acce6911cfbfe971d368444eecd918301">usartInit()</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="_a_p_i_8h_source.html#l00823">823</a> of file <a class="el" href="_a_p_i_8h_source.html">API.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00045">initialize()</a>.</p>
 
 </div>
 </div>
@@ -1653,11 +1657,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00074">display_menu()</a>, <a class="el" href="opcontrol_8c_source.html#l00033">operatorControl()</a>, and <a class="el" href="lcd_8c_source.html#l00052">promt_confirmation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00074">display_menu()</a>, <a class="el" href="opcontrol_8c_source.html#l00033">operatorControl()</a>, and <a class="el" href="lcd_8c_source.html#l00059">promt_confirmation()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe_icgraph.svg" width="247" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe_icgraph.svg" width="364" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -2802,6 +2806,13 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the count was successfully read and the value stored in *value is valid; false otherwise </dd></dl>
 
+<p class="reference">Referenced by <a class="el" href="encoders_8c_source.html#l00012">get_encoder_ticks()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_ac4f1500418a729ac3ee95bce9768b20c_icgraph.svg" width="252" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a2dfd22ed31510b48a91bd9cd3d04a72f"></a>
@@ -2846,6 +2857,13 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the velocity was successfully read and the value stored in *value is valid; false otherwise </dd></dl>
 
+<p class="reference">Referenced by <a class="el" href="encoders_8c_source.html#l00018">get_encoder_velocity()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a2dfd22ed31510b48a91bd9cd3d04a72f_icgraph.svg" width="316" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a868ab46aa5992e60829936c0109160bf"></a>
@@ -2868,11 +2886,11 @@ Here is the caller graph for this function:</div>
 <p>This function, unlike the other IME functions, is not thread safe. If using imeInitializeAll to re-initialize encoders, calls to other IME functions might behave unpredictably during this function's execution.</p>
 <dl class="section return"><dt>Returns</dt><dd>the number of IMEs successfully initialized. </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="encoders_8c_source.html#l00003">init_encoders()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="encoders_8c_source.html#l00004">init_encoders()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a868ab46aa5992e60829936c0109160bf_icgraph.svg" width="266" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a868ab46aa5992e60829936c0109160bf_icgraph.svg" width="382" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3123,7 +3141,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_ad56fcec15d1a48deb8780bb0fc38be4d_icgraph.svg" width="494" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_ad56fcec15d1a48deb8780bb0fc38be4d_icgraph.svg" width="506" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3195,11 +3213,11 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00027">lcd_clear()</a>, and <a class="el" href="log_8c_source.html#l00013">log_info()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00034">lcd_clear()</a>, and <a class="el" href="log_8c_source.html#l00013">log_info()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_aa53f19724bcf9f7bf1b4468b5982553b_icgraph.svg" width="320" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_aa53f19724bcf9f7bf1b4468b5982553b_icgraph.svg" width="436" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3228,11 +3246,11 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="log_8c_source.html#l00006">init_error()</a>, and <a class="el" href="lcd_8c_source.html#l00032">init_main_lcd()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="log_8c_source.html#l00006">init_error()</a>, and <a class="el" href="lcd_8c_source.html#l00039">init_main_lcd()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a51af160afcbfb860dfff75d91ffb3824_icgraph.svg" width="214" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a51af160afcbfb860dfff75d91ffb3824_icgraph.svg" width="331" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3262,11 +3280,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the buttons pressed as a bit mask </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00013">lcd_get_pressed_buttons()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00020">lcd_get_pressed_buttons()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed_icgraph.svg" width="528" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a040d36e5c81594fd05d5042f3e540aed_icgraph.svg" width="646" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3306,11 +3324,11 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00047">lcd_set_backlight()</a>, and <a class="el" href="log_8c_source.html#l00013">log_info()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00054">lcd_set_backlight()</a>, and <a class="el" href="log_8c_source.html#l00013">log_info()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_aeafd247b27813122cfee95e0cecf188b_icgraph.svg" width="411" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_aeafd247b27813122cfee95e0cecf188b_icgraph.svg" width="528" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3357,11 +3375,11 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00037">lcd_print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00044">lcd_print()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_aae51423c0e108729bbb4d26a1b265eb3_icgraph.svg" width="398" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_aae51423c0e108729bbb4d26a1b265eb3_icgraph.svg" width="514" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -3456,7 +3474,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the speed last sent to this channel; -127 is full reverse and 127 is full forward, with 0 being off </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00036">updateMotors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00031">updateMotors()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3500,7 +3518,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00007">set_side_speed()</a>, and <a class="el" href="slew_8c_source.html#l00036">updateMotors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00007">set_side_speed()</a>, and <a class="el" href="slew_8c_source.html#l00031">updateMotors()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3572,7 +3590,7 @@ Here is the caller graph for this function:</div>
 <p>This type of object uses a priority inheritance mechanism so a task 'taking' a mutex MUST ALWAYS 'give' the mutex back once the mutex is no longer required.</p>
 <dl class="section return"><dt>Returns</dt><dd>a handle to the created mutex </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00054">init_slew()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00049">init_slew()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3630,7 +3648,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the mutex was released, or false if the mutex was not already held </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00077">set_motor_slew()</a>, and <a class="el" href="slew_8c_source.html#l00036">updateMotors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00067">set_motor_slew()</a>, and <a class="el" href="slew_8c_source.html#l00031">updateMotors()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3674,7 +3692,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the mutex was successfully taken, or false if the timeout expired </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00077">set_motor_slew()</a>, and <a class="el" href="slew_8c_source.html#l00036">updateMotors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00067">set_motor_slew()</a>, and <a class="el" href="slew_8c_source.html#l00031">updateMotors()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3736,6 +3754,13 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Returns the backup battery voltage in millivolts.</p>
 <p>If no backup battery is connected, returns 0. </p>
+
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00045">initialize()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a91ac9eacbf0930cd5f26bc12b90b9efd_icgraph.svg" width="262" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -3818,11 +3843,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the number of characters written </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="log_8c_source.html#l00037">debug()</a>, <a class="el" href="log_8c_source.html#l00031">info()</a>, <a class="el" href="lcd_8c_source.html#l00006">lcd_assert()</a>, and <a class="el" href="log_8c_source.html#l00013">log_info()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="log_8c_source.html#l00037">debug()</a>, <a class="el" href="log_8c_source.html#l00031">info()</a>, <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, and <a class="el" href="log_8c_source.html#l00013">log_info()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6_icgraph.svg" width="594" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -4013,11 +4038,11 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00023">initializeIO()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00045">initialize()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a22269cefc22e487f7acdcc4737d58c4a_icgraph.svg" width="250" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_a22269cefc22e487f7acdcc4737d58c4a_icgraph.svg" width="235" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -4207,6 +4232,13 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the number of characters stored </dd></dl>
 
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00031">updateMotors()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_acbfbfc380f865613ad5ff3cae256bdc4_icgraph.svg" width="456" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="abd5e503a273aaf6abf6869ebd76f2d2d"></a>
@@ -4349,6 +4381,13 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00062">deinitslew()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_a_p_i_8h_add3b8d580ea6ef5635c6d9ff88c68612_icgraph.svg" width="223" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -4524,7 +4563,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a handle to the task, or NULL if an error occurred </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00054">init_slew()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00049">init_slew()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4799,7 +4838,7 @@ Here is the caller graph for this function:</div>
 <p>Enables IWDG watchdog timer which will reset the cortex if it locks up due to static shock or a misbehaving task preventing the timer to be reset. Not recovering from static shock will cause the robot to continue moving its motors indefinitely until turned off manually.</p>
 <p>This function should only be called once in <a class="el" href="main_8h.html#ad9cda921edb01125bb13c2f86bcf624b">initializeIO()</a> </p>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00023">initializeIO()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00028">initializeIO()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

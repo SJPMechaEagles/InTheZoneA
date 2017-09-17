@@ -1,6 +1,7 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "auto.c", "auto_8c.html", "auto_8c" ],
+    [ "battery.c", "battery_8c.html", null ],
     [ "controller.c", "controller_8c.html", "controller_8c" ],
     [ "drive.c", "drive_8c.html", "drive_8c" ],
     [ "encoders.c", "encoders_8c.html", "encoders_8c" ],
