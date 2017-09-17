@@ -49,7 +49,8 @@ enum menu_type {
 };
 
 /**
-* @brief Represents the different types of menus.
+* @brief Represents a specific instance of a menu.
+* Will cause a memory leak if not deinitialized via denint_menu.
 * @author Chris Jerrett
 * @date 9/8/17
 * @see menu.h
@@ -58,6 +59,7 @@ enum menu_type {
 * @see init_menu
 * @see display_menu
 * @see menu_type
+* @see denint_menu
 **/
 typedef struct menu_t{
   /**

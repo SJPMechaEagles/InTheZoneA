@@ -11,31 +11,16 @@ Contains menu functionality and abstraction.
 {\ttfamily \#include $<$limits.\+h$>$}\newline
 {\ttfamily \#include $<$float.\+h$>$}\newline
 {\ttfamily \#include $<$vlib.\+h$>$}\newline
-Include dependency graph for menu.\+h\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{menu_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=164pt]{menu_8h__dep__incl}
-\end{center}
-\end{figure}
 \subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structmenu__t}{menu\+\_\+t}
-\begin{DoxyCompactList}\small\item\em Represents the different types of menus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint\+\_\+menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \hyperlink{structmenu__t}{menu\+\_\+t} \hyperlink{menu_8h_aac280f147a4bb94ab2f1a69eff76f751}{menu\+\_\+t}
-\begin{DoxyCompactList}\small\item\em Represents the different types of menus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint\+\_\+menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,7 +68,7 @@ Chris Jerrett
 
 
 
-Represents the different types of menus. 
+Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint\+\_\+menu. 
 
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
@@ -103,6 +88,8 @@ init\+\_\+menu
 \hyperlink{menu_8c_abfadedb104f89f672dd3045499975a71}{display\+\_\+menu} 
 
 \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} 
+
+\hyperlink{menu_8c_a05a36619ac6c9ba4544eddb83ee2a50d}{denint\+\_\+menu} 
 \end{DoxySeeAlso}
 
 
@@ -296,14 +283,6 @@ References calculate\+\_\+current\+\_\+display(), menu\+\_\+t\+::current, lcd\+\
 89   \textcolor{keywordflow}{return} menu->\hyperlink{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}{current};
 90 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{menu_8h_abfadedb104f89f672dd3045499975a71_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{menu_8h_a156a29228511b0010edbc3567a5dd9a8}\label{menu_8h_a156a29228511b0010edbc3567a5dd9a8}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu\+\_\+float@{init\+\_\+menu\+\_\+float}}
 \index{init\+\_\+menu\+\_\+float@{init\+\_\+menu\+\_\+float}!menu.\+h@{menu.\+h}}
@@ -357,14 +336,6 @@ References create\+\_\+menu(), menu\+\_\+t\+::max\+\_\+f, menu\+\_\+t\+::min\+\_
 44   \textcolor{keywordflow}{return} menu;
 45 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=274pt]{menu_8h_a156a29228511b0010edbc3567a5dd9a8_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{menu_8h_aa86d2c973646a6afc1525b88537c74e4}\label{menu_8h_aa86d2c973646a6afc1525b88537c74e4}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu\+\_\+int@{init\+\_\+menu\+\_\+int}}
 \index{init\+\_\+menu\+\_\+int@{init\+\_\+menu\+\_\+int}!menu.\+h@{menu.\+h}}
@@ -418,14 +389,6 @@ References create\+\_\+menu(), menu\+\_\+t\+::max, menu\+\_\+t\+::min, and menu\
 36   \textcolor{keywordflow}{return} menu;
 37 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=266pt]{menu_8h_aa86d2c973646a6afc1525b88537c74e4_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{menu_8h_a9388fba279e391fe22922a2d555e12b2}\label{menu_8h_a9388fba279e391fe22922a2d555e12b2}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu\+\_\+var@{init\+\_\+menu\+\_\+var}}
 \index{init\+\_\+menu\+\_\+var@{init\+\_\+menu\+\_\+var}!menu.\+h@{menu.\+h}}
@@ -483,11 +446,3 @@ References create\+\_\+menu(), menu\+\_\+t\+::length, and menu\+\_\+t\+::options
 28   \textcolor{keywordflow}{return} menu;
 29 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=269pt]{menu_8h_a9388fba279e391fe22922a2d555e12b2_cgraph}
-\end{center}
-\end{figure}
