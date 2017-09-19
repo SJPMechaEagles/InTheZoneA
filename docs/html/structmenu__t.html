@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.1</span>
+   &#160;<span id="projectnumber">1.0.2</span>
    </div>
   </td>
  </tr>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('structmenu__t.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Represents the different types of menus.  
+<p>Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint_menu.  
  <a href="structmenu__t.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="menu_8h_source.html">menu.h</a>&gt;</code></p>
@@ -129,12 +129,12 @@ Data Fields</h2></td></tr>
 <tr class="separator:a110244ceb7d2a7cba95cfc5758d61c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents the different types of menus. </p>
+<div class="textblock"><p>Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint_menu. </p>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="menu_8h.html" title="Contains menu functionality and abstraction. ">menu.h</a> </dd>
 <dd>
-<a class="el" href="structmenu__t.html" title="Represents the different types of menus. ">menu_t</a> </dd>
+<a class="el" href="structmenu__t.html" title="Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint_me...">menu_t</a> </dd>
 <dd>
 <a class="el" href="menu_8c.html#adcee778eac0edb821427d32949106dc5">create_menu</a> </dd>
 <dd>
@@ -142,9 +142,11 @@ init_menu </dd>
 <dd>
 <a class="el" href="menu_8c.html#abfadedb104f89f672dd3045499975a71" title="Displays a menu context, but does not display.  Menu must be freed or will cause memory leak!  Will e...">display_menu</a> </dd>
 <dd>
-<a class="el" href="menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62" title="Represents the different types of menus. ">menu_type</a> </dd></dl>
+<a class="el" href="menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62" title="Represents the different types of menus. ">menu_type</a> </dd>
+<dd>
+<a class="el" href="menu_8c.html#a05a36619ac6c9ba4544eddb83ee2a50d" title="Destroys a menu  Menu must be freed or will cause memory leak  ">denint_menu</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00062">62</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00064">64</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a2acb18066898677ec5e2dc40eec811c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2acb18066898677ec5e2dc40eec811c5">&#9670;&nbsp;</a></span>current</h2>
@@ -162,7 +164,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00136">136</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00138">138</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, and <a class="el" href="menu_8c_source.html#l00074">display_menu()</a>.</p>
 
@@ -184,7 +186,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00082">82</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00084">84</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, and <a class="el" href="menu_8c_source.html#l00017">init_menu_var()</a>.</p>
 
@@ -206,7 +208,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00098">98</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00100">100</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, <a class="el" href="menu_8c_source.html#l00003">create_menu()</a>, and <a class="el" href="menu_8c_source.html#l00031">init_menu_int()</a>.</p>
 
@@ -228,7 +230,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00122">122</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00124">124</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, <a class="el" href="menu_8c_source.html#l00003">create_menu()</a>, and <a class="el" href="menu_8c_source.html#l00039">init_menu_float()</a>.</p>
 
@@ -250,7 +252,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00090">90</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00092">92</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, <a class="el" href="menu_8c_source.html#l00003">create_menu()</a>, and <a class="el" href="menu_8c_source.html#l00031">init_menu_int()</a>.</p>
 
@@ -272,7 +274,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00114">114</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00116">116</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, <a class="el" href="menu_8c_source.html#l00003">create_menu()</a>, and <a class="el" href="menu_8c_source.html#l00039">init_menu_float()</a>.</p>
 
@@ -294,7 +296,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00075">75</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00077">77</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, <a class="el" href="menu_8c_source.html#l00092">denint_menu()</a>, and <a class="el" href="menu_8c_source.html#l00017">init_menu_var()</a>.</p>
 
@@ -316,7 +318,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00143">143</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00145">145</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00003">create_menu()</a>, <a class="el" href="menu_8c_source.html#l00092">denint_menu()</a>, and <a class="el" href="menu_8c_source.html#l00074">display_menu()</a>.</p>
 
@@ -338,7 +340,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00106">106</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00108">108</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, <a class="el" href="menu_8c_source.html#l00003">create_menu()</a>, and <a class="el" href="menu_8c_source.html#l00031">init_menu_int()</a>.</p>
 
@@ -360,7 +362,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00130">130</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00132">132</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, <a class="el" href="menu_8c_source.html#l00003">create_menu()</a>, and <a class="el" href="menu_8c_source.html#l00039">init_menu_float()</a>.</p>
 
@@ -382,7 +384,7 @@ init_menu </dd>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/8/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00068">68</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8h_source.html#l00070">70</a> of file <a class="el" href="menu_8h_source.html">menu.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00047">calculate_current_display()</a>, and <a class="el" href="menu_8c_source.html#l00003">create_menu()</a>.</p>
 

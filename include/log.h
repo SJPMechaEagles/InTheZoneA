@@ -4,7 +4,6 @@
 * @date 9/16/2017
 * @brief Contains logging functions.
 **/
-
 #ifndef _LOG_H_
 #define _LOG_H_
 

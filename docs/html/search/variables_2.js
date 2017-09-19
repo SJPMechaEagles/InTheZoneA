@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialized',['initialized',['../slew_8c.html#aedeffc7d23da25d52b9a50045189fe2b',1,'slew.c']]]
+  ['formatstring',['formatString',['../_a_p_i_8h.html#aa3800794cdb71dc374a5ce3e645e4bb4',1,'API.h']]]
 ];

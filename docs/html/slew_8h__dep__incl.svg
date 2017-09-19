@@ -8,54 +8,54 @@
  viewBox="0.00 0.00 237.01 82.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 78)">
 <title>include/slew.h</title>
-<!-- Node5 -->
+<!-- Node9 -->
 <g id="node1" class="node">
-<title>Node5</title>
+<title>Node9</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="72.2021,-55.5 72.2021,-73.5 150.4678,-73.5 150.4678,-55.5 72.2021,-55.5"/>
 <text text-anchor="middle" x="111.335" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/slew.h</text>
 </g>
-<!-- Node6 -->
+<!-- Node10 -->
 <g id="node2" class="node">
-<title>Node6</title>
+<title>Node10</title>
 <g id="a_node2"><a xlink:href="init_8c.html" target="_top" xlink:title="File for initialization code. ">
 <polygon fill="none" stroke="#000000" points="0,-.5 0,-18.5 52.6699,-18.5 52.6699,-.5 0,-.5"/>
 <text text-anchor="middle" x="26.335" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/init.c</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node6 -->
+<!-- Node9&#45;&gt;Node10 -->
 <g id="edge1" class="edge">
-<title>Node5&#45;&gt;Node6</title>
+<title>Node9&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M88.8533,-49.953C73.4749,-40.0023 53.5642,-27.1189 40.3918,-18.5956"/>
 <polygon fill="#191970" stroke="#191970" points="87.0018,-52.9238 97.2989,-55.4179 90.8046,-47.0468 87.0018,-52.9238"/>
 </g>
-<!-- Node7 -->
+<!-- Node11 -->
 <g id="node3" class="node">
-<title>Node7</title>
+<title>Node11</title>
 <g id="a_node3"><a xlink:href="opcontrol_8c.html" target="_top" xlink:title="File for operator control code. ">
 <polygon fill="none" stroke="#000000" points="70.8228,-.5 70.8228,-18.5 151.8472,-18.5 151.8472,-.5 70.8228,-.5"/>
 <text text-anchor="middle" x="111.335" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/opcontrol.c</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node7 -->
+<!-- Node9&#45;&gt;Node11 -->
 <g id="edge2" class="edge">
-<title>Node5&#45;&gt;Node7</title>
+<title>Node9&#45;&gt;Node11</title>
 <path fill="none" stroke="#191970" d="M111.335,-45.383C111.335,-36.3738 111.335,-26.0373 111.335,-18.7795"/>
 <polygon fill="#191970" stroke="#191970" points="107.8351,-45.4178 111.335,-55.4179 114.8351,-45.4179 107.8351,-45.4178"/>
 </g>
-<!-- Node8 -->
+<!-- Node12 -->
 <g id="node4" class="node">
-<title>Node8</title>
+<title>Node12</title>
 <g id="a_node4"><a xlink:href="slew_8c.html" target="_top" xlink:title="src/slew.c">
 <polygon fill="none" stroke="#000000" points="169.6626,-.5 169.6626,-18.5 229.0073,-18.5 229.0073,-.5 169.6626,-.5"/>
 <text text-anchor="middle" x="199.335" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/slew.c</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node8 -->
+<!-- Node9&#45;&gt;Node12 -->
 <g id="edge3" class="edge">
-<title>Node5&#45;&gt;Node8</title>
+<title>Node9&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M134.6101,-49.953C150.5313,-40.0023 171.1446,-27.1189 184.782,-18.5956"/>
 <polygon fill="#191970" stroke="#191970" points="132.4914,-47.1498 125.8664,-55.4179 136.2014,-53.0858 132.4914,-47.1498"/>
 </g>

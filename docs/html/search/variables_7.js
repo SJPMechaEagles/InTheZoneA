@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['right',['right',['../structlcd__buttons.html#a2437d744e09ca1bb91ab4ca53ef77198',1,'lcd_buttons']]]
+  ['prompt',['prompt',['../structmenu__t.html#a5e3af2830962c2bbcb0a983f2c040c65',1,'menu_t']]]
 ];
