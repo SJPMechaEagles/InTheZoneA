@@ -1,4 +1,5 @@
 language: c
-sudo: false
+sudo: true
 script:
+  - sh pros_install_ubuntu.sh
   - make
