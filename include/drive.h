@@ -11,7 +11,7 @@
 #include <API.h>
 
 #define DEADSPOT 30
-
+#define THRESHOLD 30
 /**
 * @brief enumeration indication side of the robot.
 * @author Christian Desimone
@@ -31,6 +31,14 @@ typedef enum side{
 * @param speed the speed of the side. Can range from -127 - 127 negative being back and positive forwards
 **/
 void set_side_speed(side_t side, int speed);
+
+/**
+* @brief Applies exponential scale to a joystick value.
+* @author Christian DeSimone, Chris Jerrett
+* @param joystickVal the analog value from the joystick
+* @date 9/21/2017
+**/
+float joystickExp(int joystickVal);
 
 /**
 * @brief Updates the drive motors during teleop
