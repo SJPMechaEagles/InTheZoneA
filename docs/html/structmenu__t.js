@@ -7,7 +7,7 @@ var structmenu__t =
     [ "min", "structmenu__t.html#a6891bc6c94f1e995cc62a05b13328de5", null ],
     [ "min_f", "structmenu__t.html#a0a6e4f711992fb69e8a57c2af1ab7a05", null ],
     [ "options", "structmenu__t.html#ad695cd88051e34817f0f582d4e43c33a", null ],
-    [ "prompt", "structmenu__t.html#a5e3af2830962c2bbcb0a983f2c040c65", null ],
+    [ "prompt", "structmenu__t.html#a7bf29a030b7ed4a623c6b445587cc647", null ],
     [ "step", "structmenu__t.html#adc50450bc59ea66a8d67424adc46e24e", null ],
     [ "step_f", "structmenu__t.html#a84cfd9226f6554c63ca9f4b11f94d12d", null ],
     [ "type", "structmenu__t.html#a110244ceb7d2a7cba95cfc5758d61c01", null ]

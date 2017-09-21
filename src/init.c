@@ -14,6 +14,7 @@
 #include "lcd.h"
 #include "log.h"
 #include "encoders.h"
+#include "menu.h"
 /*
  * Runs pre-initialization code. This function will be started in kernel mode one time while the
  * VEX Cortex is starting up. As the scheduler is still paused, most API functions will fail.
@@ -47,6 +48,10 @@ void initialize() {
   init_slew();
   init_main_lcd(uart1);
   init_error(true, uart2);
+
+  menu_t *t = init_menu_int(INT_TYPE, -1, 100, 1, "Times to kill");
+  display_menu(t);
+
   if(!init_encoders()) {
     promt_confirmation("Check IME");
     warning("CHECK IME");

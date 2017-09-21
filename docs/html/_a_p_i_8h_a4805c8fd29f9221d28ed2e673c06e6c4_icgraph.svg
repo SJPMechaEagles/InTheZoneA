@@ -8,54 +8,54 @@
  viewBox="0.00 0.00 356.75 27.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 23)">
 <title>motorGet</title>
-<!-- Node151 -->
+<!-- Node161 -->
 <g id="node1" class="node">
-<title>Node151</title>
+<title>Node161</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-18.5 57.6797,-18.5 57.6797,-.5 0,-.5"/>
 <text text-anchor="middle" x="28.8398" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">motorGet</text>
 </g>
-<!-- Node152 -->
+<!-- Node162 -->
 <g id="node2" class="node">
-<title>Node152</title>
+<title>Node162</title>
 <g id="a_node2"><a xlink:href="slew_8c.html#a807a87c5df438fde21c1e8213906695b" target="_top" xlink:title="Closes the distance between the desired motor value and the current motor value by half for each moto...">
 <polygon fill="none" stroke="#000000" points="93.6797,-.5 93.6797,-18.5 170.8271,-18.5 170.8271,-.5 93.6797,-.5"/>
 <text text-anchor="middle" x="132.2534" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">updateMotors</text>
 </a>
 </g>
 </g>
-<!-- Node151&#45;&gt;Node152 -->
+<!-- Node161&#45;&gt;Node162 -->
 <g id="edge1" class="edge">
-<title>Node151&#45;&gt;Node152</title>
+<title>Node161&#45;&gt;Node162</title>
 <path fill="none" stroke="#191970" d="M68.0917,-9.5C76.3664,-9.5 85.0936,-9.5 93.3552,-9.5"/>
 <polygon fill="#191970" stroke="#191970" points="67.9215,-6.0001 57.9215,-9.5 67.9215,-13.0001 67.9215,-6.0001"/>
 </g>
-<!-- Node153 -->
+<!-- Node163 -->
 <g id="node3" class="node">
-<title>Node153</title>
+<title>Node163</title>
 <g id="a_node3"><a xlink:href="slew_8c.html#a321758941d88b75783955c819bb75005" target="_top" xlink:title="Initializes the slew rate controller. ">
 <polygon fill="none" stroke="#000000" points="206.8271,-.5 206.8271,-18.5 261.1768,-18.5 261.1768,-.5 206.8271,-.5"/>
 <text text-anchor="middle" x="234.002" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">init_slew</text>
 </a>
 </g>
 </g>
-<!-- Node152&#45;&gt;Node153 -->
+<!-- Node162&#45;&gt;Node163 -->
 <g id="edge2" class="edge">
-<title>Node152&#45;&gt;Node153</title>
+<title>Node162&#45;&gt;Node163</title>
 <path fill="none" stroke="#191970" d="M181.2165,-9.5C189.9937,-9.5 198.8468,-9.5 206.7289,-9.5"/>
 <polygon fill="#191970" stroke="#191970" points="181.0105,-6.0001 171.0104,-9.5 181.0104,-13.0001 181.0105,-6.0001"/>
 </g>
-<!-- Node154 -->
+<!-- Node164 -->
 <g id="node4" class="node">
-<title>Node154</title>
+<title>Node164</title>
 <g id="a_node4"><a xlink:href="init_8c.html#a25a40b6614565f755233080a384c35f1" target="_top" xlink:title="initialize">
 <polygon fill="none" stroke="#000000" points="297.1768,-.5 297.1768,-18.5 348.748,-18.5 348.748,-.5 297.1768,-.5"/>
 <text text-anchor="middle" x="322.9624" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">initialize</text>
 </a>
 </g>
 </g>
-<!-- Node153&#45;&gt;Node154 -->
+<!-- Node163&#45;&gt;Node164 -->
 <g id="edge3" class="edge">
-<title>Node153&#45;&gt;Node154</title>
+<title>Node163&#45;&gt;Node164</title>
 <path fill="none" stroke="#191970" d="M271.8216,-9.5C280.3582,-9.5 289.2298,-9.5 297.1399,-9.5"/>
 <polygon fill="#191970" stroke="#191970" points="271.662,-6.0001 261.6619,-9.5 271.6619,-13.0001 271.662,-6.0001"/>
 </g>

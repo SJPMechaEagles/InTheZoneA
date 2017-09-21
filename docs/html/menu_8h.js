@@ -11,7 +11,7 @@ var menu_8h =
     [ "create_menu", "menu_8h.html#adcee778eac0edb821427d32949106dc5", null ],
     [ "denint_menu", "menu_8h.html#a05a36619ac6c9ba4544eddb83ee2a50d", null ],
     [ "display_menu", "menu_8h.html#abfadedb104f89f672dd3045499975a71", null ],
-    [ "init_menu_float", "menu_8h.html#a156a29228511b0010edbc3567a5dd9a8", null ],
-    [ "init_menu_int", "menu_8h.html#aa86d2c973646a6afc1525b88537c74e4", null ],
-    [ "init_menu_var", "menu_8h.html#a9388fba279e391fe22922a2d555e12b2", null ]
+    [ "init_menu_float", "menu_8h.html#a5abb752733423805f59ef3b92e3c2e57", null ],
+    [ "init_menu_int", "menu_8h.html#ac8efedba760ec35ebf841ab19543ba5a", null ],
+    [ "init_menu_var", "menu_8h.html#a3529988b0a7c12cb3f2ebb3cf5595594", null ]
 ];

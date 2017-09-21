@@ -38,6 +38,7 @@ void lcd_clear() {
 
 void init_main_lcd(FILE *lcd) {
   lcdInit(lcd);
+  lcdClear(lcd);
   lcd_port = lcd;
 }
 

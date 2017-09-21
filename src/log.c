@@ -1,6 +1,6 @@
 #include "log.h"
 
-unsigned int log_level = DEBUG;
+unsigned int log_level = ERROR;
 static FILE *log_lcd = NULL;
 
 void init_error(bool use_lcd, FILE *lcd) {

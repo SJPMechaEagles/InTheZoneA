@@ -2,8 +2,14 @@
 
 static menu_t* create_menu(enum menu_type type, const char *prompt) {
   menu_t* menu = (menu_t*) malloc(sizeof(menu_t));
+  if (!menu) {
+    error("Menu Malloc");
+  }
   menu->type = type;
-  strcpy(menu->prompt, prompt);
+  // Add one for numm terminator
+  size_t strlength = strlen(prompt) + 1;
+  menu->prompt = (char*) malloc(strlength * sizeof(char));
+  memcpy(menu->prompt, prompt, strlength);
   menu->max = INT_MAX;
   menu->min = INT_MIN;
   menu->step = 1;
@@ -14,10 +20,10 @@ static menu_t* create_menu(enum menu_type type, const char *prompt) {
   return menu;
 }
 
-menu_t* init_menu_var(enum menu_type type, unsigned int nums, char *prompt, char* options,...){
+menu_t* init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char* options,...){
   menu_t* menu = create_menu(type, prompt);
   va_list values;
-  char **options_array = (char**)malloc(sizeof(char*) * nums);
+  char **options_array = (char**)calloc_real(sizeof(char*), nums);
   va_start(values, options);
   for(unsigned int i = 0; i < nums; i++){
     options_array[i] = va_arg(values, char*);
@@ -28,7 +34,7 @@ menu_t* init_menu_var(enum menu_type type, unsigned int nums, char *prompt, char
   return menu;
 }
 
-menu_t* init_menu_int(enum menu_type type, int min, int max, int step, char* prompt){
+menu_t* init_menu_int(enum menu_type type, int min, int max, int step, const char* prompt){
   menu_t* menu = create_menu(type, prompt);
   menu->min = min;
   menu->max = max;
@@ -36,7 +42,7 @@ menu_t* init_menu_int(enum menu_type type, int min, int max, int step, char* pro
   return menu;
 }
 
-menu_t* init_menu_float(enum menu_type type, float min, float max, float step, char* prompt){
+menu_t* init_menu_float(enum menu_type type, float min, float max, float step, const char* prompt){
   menu_t* menu = create_menu(type, prompt);
   menu->min_f = min;
   menu->max_f = max;

@@ -13,6 +13,7 @@
 #include <limits.h>
 #include <float.h>
 #include <vlib.h>
+#include "log.h"
 
 /**
 * @brief Represents the different types of menus.
@@ -142,7 +143,7 @@ typedef struct menu_t{
   * @author Chris Jerrett
   * @date 9/8/17
   **/
-  char prompt[16];
+  char *prompt;
 } menu_t;
 
 /**
@@ -165,7 +166,7 @@ static menu_t* create_menu(enum menu_type type, const char *prompt);
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-menu_t* init_menu_var(enum menu_type type, unsigned int nums, char *prompt, char* options,...);
+menu_t* init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char* options,...);
 
 /**
 * @brief Creates a menu context, but does not display.
@@ -180,7 +181,7 @@ menu_t* init_menu_var(enum menu_type type, unsigned int nums, char *prompt, char
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-menu_t* init_menu_int(enum menu_type type, int min, int max, int step, char* prompt);
+menu_t* init_menu_int(enum menu_type type, int min, int max, int step, const char* prompt);
 
 /**
 * @brief Creates a menu context, but does not display.
@@ -195,7 +196,7 @@ menu_t* init_menu_int(enum menu_type type, int min, int max, int step, char* pro
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-menu_t* init_menu_float(enum menu_type type, float min, float max, float step, char* prompt);
+menu_t* init_menu_float(enum menu_type type, float min, float max, float step, const char* prompt);
 
 /**
 * @brief Static function that calculates the string from menu
