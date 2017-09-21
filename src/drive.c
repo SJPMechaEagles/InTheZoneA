@@ -1,24 +1,56 @@
 #include "drive.h"
-#include "ports.h"
+#include "motor_ports.h"
 #include "vmath.h"
+#include "controller.h"
+#include "slew.h"
 #include "controller.h"
 #include <API.h>
 
+void updateDrive(){
+
+  int x = joystickExp(joystickGetAnalog(MASTER, RIGHT_JOY_X));
+  int y = joystickExp(joystickGetAnalog(MASTER, RIGHT_JOY_Y));
+
+  int r = -(y + x);
+  int l = -(y - x);
+
+  set_side_speed(LEFT, l);
+  set_side_speed(RIGHT, r);
+
+}
+
 void set_side_speed(side_t side, int speed){
   if(side == RIGHT || side == BOTH){
-    motorSet(MOTOR_BACK_RIGHT , speed);
-    motorSet(MOTOR_FRONT_RIGHT, speed);
-    motorSet(MOTOR_MIDDLE_RIGHT, speed);
+    set_motor_slew(MOTOR_BACK_RIGHT , speed);
+    set_motor_slew(MOTOR_FRONT_RIGHT, speed);
+    set_motor_slew(MOTOR_MIDDLE_RIGHT, speed);
   }
   if(side == LEFT || side == BOTH){
-    motorSet(MOTOR_BACK_LEFT, speed);
-    motorSet(MOTOR_BACK_LEFT, speed);
-    motorSet(MOTOR_BACK_LEFT, speed);
+    set_motor_slew(MOTOR_BACK_LEFT, speed);
+    set_motor_slew(MOTOR_BACK_LEFT, speed);
+    set_motor_slew(MOTOR_BACK_LEFT, speed);
   }
 }
 
 static int joystick_interpolate(int val) {
 
+}
+
+float joystickExp(int joystickVal) {
+	//make the offset negative if moving backwards
+	if (abs(joystickVal) < THRESHOLD) {
+			return 0;
+	}
+
+	int offset;
+	if (joystickVal < 0) {
+		offset = - (THRESHOLD);
+	} else {
+		offset = THRESHOLD;
+	}
+
+
+	return (pow(joystickVal/10 , 3) / 18 + offset) * 0.8;
 }
 
 static int deadspot(int val) {
