@@ -2,8 +2,7 @@ language: c
 sudo: true
 before_install:
   - sudo pacman --noprogressbar -Sy
-  - sudo pacman --noprogressbar --needed -S \
-  - git clang arm-none-eabi-gcc python python-pip
+  - sudo pacman --noprogressbar --needed -S \ git clang arm-none-eabi-gcc python python-pip
   - sudo pip3 install pros-cli
 script:
   - pros make
