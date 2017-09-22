@@ -6,7 +6,7 @@ static menu_t* create_menu(enum menu_type type, const char *prompt) {
     error("Menu Malloc");
   }
   menu->type = type;
-  // Add one for numm terminator
+  // Add one for null terminator
   size_t strlength = strlen(prompt) + 1;
   menu->prompt = (char*) malloc(strlength * sizeof(char));
   memcpy(menu->prompt, prompt, strlength);
