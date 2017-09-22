@@ -6,5 +6,4 @@ before_install:
   - git clang gcc-arm-none-eabi python3 python3-pip
   - sudo pip3 install pros-cli
 script:
-  - sh pros_install_ubuntu.sh
-  - make
+  - pros make
