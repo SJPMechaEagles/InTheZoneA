@@ -27,7 +27,7 @@
  * -Chris
  */
 void initializeIO() {
-    watchdogInit();
+    //watchdogInit();
 }
 
 /*
@@ -44,13 +44,14 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
-  setTeamName("9228A");
+  /*setTeamName("9228A");
   init_slew();
   init_main_lcd(uart1);
   init_error(true, uart2);
+  init_encoders();
 
-  menu_t *t = init_menu_int(INT_TYPE, -1, 100, 1, "Times to kill");
-  display_menu(t);
+  //menu_t *t = init_menu_int(INT_TYPE, -1, 100, 1, "Times to kill");
+  //display_menu(t);
 
   if(!init_encoders()) {
     promt_confirmation("Check IME");
@@ -60,5 +61,5 @@ void initialize() {
   if(powerLevelBackup()/1000 == 0) {
     promt_confirmation("Check Backup");
     warning("Checkbackup bat");
-  }
+  }*/
 }

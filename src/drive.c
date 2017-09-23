@@ -58,5 +58,5 @@ static int deadspot(int val) {
 }
 
 void update_drive_motors(){
-  struct polar_cord cord = cartesian_cord_to_polar(get_joystick_cord(RIGHT_JOY, MASTER));
+  updateDrive();
 }

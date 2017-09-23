@@ -18,7 +18,7 @@
 * @date 9/9/2017
 * @see IME_NUMBER
 **/
-#define IME_NUMBER 0
+#define IME_NUMBER 6
 
 /**
 * @brief Initializes all motor encoders
