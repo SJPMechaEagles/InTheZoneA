@@ -34,8 +34,9 @@
  */
 void operatorControl() {
 	while (1) {
+		printf("%s\n", "Opt");
 		update_drive_motors();
-		update_lifter();
-		delay(10000);
+		//update_lifter();
+		delay(10);
 	}
 }

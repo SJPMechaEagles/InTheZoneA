@@ -5,14 +5,17 @@
 #include "slew.h"
 #include "controller.h"
 #include <API.h>
+#include "log.h"
 
-void updateDrive(){
+void update_drive_motors(){
 
-  int x = joystickExp(joystickGetAnalog(MASTER, RIGHT_JOY_X));
-  int y = joystickExp(joystickGetAnalog(MASTER, RIGHT_JOY_Y));
+  int x = (joystickGetAnalog(1, 2));
+  int y = (joystickGetAnalog(1, 1));
 
-  int r = -(y + x);
-  int l = -(y - x);
+  int r = (x + y);
+  int l = -(x - y);
+
+  printf("x: %d, y: %d\n", x, y);
 
   set_side_speed(LEFT, l);
   set_side_speed(RIGHT, r);
@@ -51,12 +54,4 @@ float joystickExp(int joystickVal) {
 
 
 	return (pow(joystickVal/10 , 3) / 18 + offset) * 0.8;
-}
-
-static int deadspot(int val) {
-  return abs(val) > DEADSPOT ? val : 0;
-}
-
-void update_drive_motors(){
-  updateDrive();
 }

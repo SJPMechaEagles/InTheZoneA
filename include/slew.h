@@ -31,7 +31,7 @@
 * @author Chris Jerrett
 * @date 9/14/17
 **/
-#define RAMP_PROPORTION 2
+#define RAMP_PROPORTION 1
 
 /**
 * @brief Closes the distance between the desired motor value and the current motor value by half for each motor
@@ -61,6 +61,6 @@ void init_slew();
 * @author Chris Jerrett
 *@date 9/14/17
 **/
-void set_motor_slew(int motor, int speed);
+void set_motor_slew(int motor, char speed);
 
 #endif

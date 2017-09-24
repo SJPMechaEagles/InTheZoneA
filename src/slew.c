@@ -3,8 +3,7 @@
 
 static Mutex mutex;
 
-
-static signed char *motors_set_speeds = NULL;
+static signed char motors_set_speeds[MOTOR_PORTS] = {0};
 
 static TaskHandle slew = NULL; //TaskHandle is of type void*
 
@@ -12,29 +11,27 @@ static TaskHandle slew = NULL; //TaskHandle is of type void*
 static bool initialized = false;
 
 void updateMotors(){
-  //Take back half approach
-  //Not linear but equal to setSpeed(1-(1/2)^x)
-  if(mutexTake(mutex, 10)) {
-    for(unsigned char i = 0; i < MOTOR_PORTS; i++) {
-      char set_speed = motors_set_speeds[i];
-      char curr_speed = motorGet(i);
-      char diff = set_speed - curr_speed;
-      int n = (int) curr_speed + ceil(diff/(float)RAMP_PROPORTION);
-      char c[32];
-      sprintf(c, "Set Motor %d: %d", i, n);
-      debug(c);
-      motorSet(i, n);
+  if(isEnabled() && !isAutonomous()) {
+    //Take back half approach
+    //Not linear but equal to setSpeed(1-(1/2)^x)
+    if(mutexTake(mutex, 10)) {
+      for(unsigned char i = 0; i < MOTOR_PORTS; i++) {
+        char set_speed = motors_set_speeds[i];
+        char curr_speed = motorGet(i);
+        char diff = set_speed - curr_speed;
+        int n = (int) curr_speed + (int) ceil(diff/2);
+        motorSet(i, n);
+      }
+      mutexGive(mutex);
     }
-    mutexGive(mutex);
   }
 }
 
 void init_slew(){
-  for(int i = 0; i < MOTOR_PORTS; i++) {
-    motorSet(i, 0);
-  }
   info("Init Slew");
-  calloc_real(MOTOR_PORTS, sizeof(char));
+  if(motors_set_speeds == NULL) {
+    debug("MOTORS SETS NULL!");
+  }
   mutex = mutexCreate();
   slew = taskRunLoop(updateMotors, UPDATE_PERIOD_MS);
   initialized = true;
@@ -43,13 +40,12 @@ void init_slew(){
 
 
 void deinitslew(){
-  free(motors_set_speeds);
   taskDelete(slew);
 }
 
-void set_motor_slew(int motor, int speed){
+void set_motor_slew(int motor, char speed){
   if(mutexTake(mutex, 100)) {
-      *(motors_set_speeds + motor) = speed;
+      motors_set_speeds[motor] = speed;
       mutexGive(mutex);
   }
 }
