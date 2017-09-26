@@ -45,9 +45,9 @@ void initializeIO() {
  */
 void initialize() {
   setTeamName("9228A");
-  init_slew();
+  printf("init\n\n");
+  return;
   init_main_lcd(uart1);
   init_error(true, uart2);
   init_encoders();
-  return;
 }

@@ -9,13 +9,13 @@
 
 void update_drive_motors(){
 
-  int x = (joystickGetAnalog(1, 2));
-  int y = (joystickGetAnalog(1, 1));
+  int x = -(joystickGetAnalog(MASTER, 3));
+  int y = (joystickGetAnalog(MASTER, 4));
 
   int r = (x + y);
   int l = -(x - y);
 
-  printf("x: %d, y: %d\n", x, y);
+  //printf("x: %d, y: %d\n", x, y);
 
   set_side_speed(LEFT, l);
   set_side_speed(RIGHT, r);
@@ -24,14 +24,14 @@ void update_drive_motors(){
 
 void set_side_speed(side_t side, int speed){
   if(side == RIGHT || side == BOTH){
-    set_motor_slew(MOTOR_BACK_RIGHT , speed);
-    set_motor_slew(MOTOR_FRONT_RIGHT, speed);
-    set_motor_slew(MOTOR_MIDDLE_RIGHT, speed);
+    motorSet(MOTOR_BACK_RIGHT , speed);
+    motorSet(MOTOR_FRONT_RIGHT, speed);
+    motorSet(MOTOR_MIDDLE_RIGHT, speed);
   }
   if(side == LEFT || side == BOTH){
-    set_motor_slew(MOTOR_BACK_LEFT, speed);
-    set_motor_slew(MOTOR_BACK_LEFT, speed);
-    set_motor_slew(MOTOR_BACK_LEFT, speed);
+    motorSet(MOTOR_BACK_LEFT, speed);
+    motorSet(MOTOR_MIDDLE_LEFT, speed);
+    motorSet(MOTOR_FRONT_LEFT, speed);
   }
 }
 
@@ -51,7 +51,6 @@ float joystickExp(int joystickVal) {
 	} else {
 		offset = THRESHOLD;
 	}
-
 
 	return (pow(joystickVal/10 , 3) / 18 + offset) * 0.8;
 }

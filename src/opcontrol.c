@@ -14,6 +14,7 @@
 #include "slew.h"
 #include "drive.h"
 #include "lifter.h"
+#include "claw.h"
 
 /**
  * Runs the user operator control code. This function will be started in its own task with the
@@ -33,10 +34,12 @@
  * This task should never exit; it should end with some kind of infinite loop, even if empty.
  */
 void operatorControl() {
+	init_slew();
+	delay(10);
 	while (1) {
-		printf("%s\n", "Opt");
 		update_drive_motors();
-		//update_lifter();
+		update_lifter();
+		update_claw();
 		delay(10);
 	}
 }
