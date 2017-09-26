@@ -10,7 +10,7 @@ void reverse(char *str, int len) {
     }
 }
 
-int itoa(int a, char *buffer, int digits) {
+int itoa_bad(int a, char *buffer, int digits) {
   int i = 0;
    while (a) {
        buffer[i++] = (a%10) + '0';
@@ -27,7 +27,7 @@ int itoa(int a, char *buffer, int digits) {
    return i;
 }
 
-void ftoa(float a, char *buffer, int precision) {
+void ftoa_bad(float a, char *buffer, int precision) {
   // Extract integer part
   int ipart = (int)a;
 
@@ -35,7 +35,7 @@ void ftoa(float a, char *buffer, int precision) {
   float fpart = a - (float)ipart;
 
   // convert integer part to string
-  int i = itoa(ipart, buffer, 0);
+  int i = itoa_bad(ipart, buffer, 0);
 
   // check for display option after point
   if(precision != 0) {
@@ -46,7 +46,7 @@ void ftoa(float a, char *buffer, int precision) {
     // to handle cases like 233.007
     fpart = fpart * pow(10, precision);
 
-    itoa((int)fpart, buffer + i + 1, precision);
+    itoa_bad((int)fpart, buffer + i + 1, precision);
   }
 }
 
