@@ -27,18 +27,20 @@ void reverse(char *str, int len);
 * @param buffer the string the int will be written to.
 * @param digits the number of digits to be written
 * @return the digits
-* @author Chris Jerrett
+* @author Chris Jerrett, Christian DeSimone
 * @date 9/9/2017
 **/
-int itoa(int a, char *buffer, int digits);
+int itoa_bad(int a, char *buffer, int digits);
 
 /**
 * @brief converts a float to string.
 * @param a the float
 * @param buffer the string the float will be written to.
 * @param precision digits after the decimal to write
+* @author Christian DeSimone
+* @date 9/26/2017
 **/
-void ftoa(float a, char *buffer, int precision);
+void ftoa_bad(float a, char *buffer, int precision);
 
 void *calloc_real(size_t elements, size_t size);
 
