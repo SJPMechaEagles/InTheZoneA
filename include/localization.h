@@ -5,6 +5,8 @@
 #include "encoders.h"
 #include <math.h>
 
+#define LOCALIZATION_UPDATE_FREQUENCY 5
+
 struct location {
   int x;
   int y;
