@@ -7,15 +7,18 @@
 #include <API.h>
 #include "log.h"
 
+static float joystickExp(int joystickVal);
+
 void update_drive_motors(){
 
   int x = -(joystickGetAnalog(MASTER, 3));
   int y = (joystickGetAnalog(MASTER, 4));
 
+  x = joystickExp(x);
+  y = joystickExp(y);
+
   int r = (x + y);
   int l = -(x - y);
-
-  //printf("x: %d, y: %d\n", x, y);
 
   set_side_speed(LEFT, l);
   set_side_speed(RIGHT, r);
@@ -35,11 +38,13 @@ void set_side_speed(side_t side, int speed){
   }
 }
 
-static int joystick_interpolate(int val) {
-
-}
-
-float joystickExp(int joystickVal) {
+/**
+* @brief Applies exponential scale to a joystick value.
+* @author Christian DeSimone, Chris Jerrett
+* @param joystickVal the analog value from the joystick
+* @date 9/21/2017
+**/
+static float joystickExp(int joystickVal) {
 	//make the offset negative if moving backwards
 	if (abs(joystickVal) < THRESHOLD) {
 			return 0;

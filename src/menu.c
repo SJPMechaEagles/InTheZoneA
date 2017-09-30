@@ -1,5 +1,8 @@
 #include "menu.h"
 
+static menu_t* create_menu(enum menu_type type, const char *prompt);
+static void calculate_current_display(char* rtn, menu_t *menu);
+
 static menu_t* create_menu(enum menu_type type, const char *prompt) {
   menu_t* menu = (menu_t*) malloc(sizeof(menu_t));
   if (!menu) {

@@ -33,14 +33,6 @@ typedef enum side{
 void set_side_speed(side_t side, int speed);
 
 /**
-* @brief Applies exponential scale to a joystick value.
-* @author Christian DeSimone, Chris Jerrett
-* @param joystickVal the analog value from the joystick
-* @date 9/21/2017
-**/
-float joystickExp(int joystickVal);
-
-/**
 * @brief Updates the drive motors during teleop
 * @author Christian Desimone
 * @date 9/5/17

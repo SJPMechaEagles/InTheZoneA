@@ -1,4 +1,5 @@
 #include "localization.h"
+#include <inttypes.h>
 static Gyro g1;
 static TaskHandle localization_task;
 
@@ -29,7 +30,7 @@ struct location get_position() {
 void update_position() {
   //int curr_theta = calculate_angle();
 
-  struct accelerometer_odometry a = calculate_accelerometer_odemetry();
+  struct accelerometer_odometry oddem = calculate_accelerometer_odemetry();
   //printf("x: %d y: %d T: %d\n", a.x, a.y, 0);
 
   /*int l = 1;
@@ -50,10 +51,11 @@ static struct accelerometer_odometry calculate_accelerometer_odemetry() {
   static double vel_acumm_x = 0;
   static double vel_acumm_y = 0;
 
-  int32_t accel_x_rel = (int32_t)analogReadCalibratedHR(2);
-  int32_t accel_y_rel = (int32_t)analogReadCalibratedHR(3);
+  int32_t accel_x_rel = (int32_t) analogReadCalibratedHR(2);
+  int32_t accel_y_rel = (int32_t) analogReadCalibratedHR(3);
 
-  printf("x: %d y: %d\n", accel_x_rel, accel_y_rel);
+  //Ignore atom format string errors
+  printf("x: %+" PRId32 " y: %+" PRId32 "\n", accel_x_rel, accel_y_rel);
 
   double delta_time = ((millis() - last_call)/1000.0);
   double accel_x_abs = (accel_x_rel *  cos(theta) + accel_y_rel * sin(theta)) * delta_time;
@@ -65,7 +67,6 @@ static struct accelerometer_odometry calculate_accelerometer_odemetry() {
   double new_x = x + vel_acumm_x * delta_time;
   double new_y = y + vel_acumm_y * delta_time;
 
-  //overdoses accum_x and accum_y
   struct accelerometer_odometry od;
   od.x = new_x;
   od.y = new_y;
