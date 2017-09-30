@@ -17,5 +17,6 @@
 **/
 #define IME_FRONT_RIGHT 0
 
+#define CLAW_POT 2
 
 #endif

@@ -46,6 +46,8 @@ void initializeIO() {
 void initialize() {
   setTeamName("9228A");
   printf("init\n\n");
+  analogCalibrate(1);
+  analogCalibrate(2);
   return;
   init_main_lcd(uart1);
   init_error(true, uart2);
