@@ -12,5 +12,6 @@ var searchData=
   ['lcdsetbacklight',['lcdSetBacklight',['../_a_p_i_8h.html#aeafd247b27813122cfee95e0cecf188b',1,'API.h']]],
   ['lcdsettext',['lcdSetText',['../_a_p_i_8h.html#aae51423c0e108729bbb4d26a1b265eb3',1,'API.h']]],
   ['lcdshutdown',['lcdShutdown',['../_a_p_i_8h.html#aa97fb2f4a17f8924bd11a1e40a2abe20',1,'API.h']]],
-  ['log_5finfo',['log_info',['../log_8c.html#afff22aff6749311a684a559cac3ac8bd',1,'log.c']]]
+  ['log_5finfo',['log_info',['../log_8c.html#afff22aff6749311a684a559cac3ac8bd',1,'log.c']]],
+  ['lower_5flifter',['lower_lifter',['../lifter_8c.html#aa7d2d04059f57cc5b8582f6fd0726dc1',1,'lifter.c']]]
 ];

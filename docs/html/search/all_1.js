@@ -2,6 +2,7 @@ var searchData=
 [
   ['accel_5fx',['ACCEL_X',['../_a_p_i_8h.html#af4cc2866af9a3674feedf15a2bb2b540',1,'API.h']]],
   ['accel_5fy',['ACCEL_Y',['../_a_p_i_8h.html#a73df2dcbe32c4a51551b34034093c37f',1,'API.h']]],
+  ['accelerometer_5fodometry',['accelerometer_odometry',['../structaccelerometer__odometry.html',1,'']]],
   ['analogcalibrate',['analogCalibrate',['../_a_p_i_8h.html#aab54c390b2ff91b5b7861db877136392',1,'API.h']]],
   ['analogread',['analogRead',['../_a_p_i_8h.html#a5da86064604c539c2b6a5e2993289108',1,'API.h']]],
   ['analogreadcalibrated',['analogReadCalibrated',['../_a_p_i_8h.html#adefc4d860dbaed441901d47d8c3598ee',1,'API.h']]],

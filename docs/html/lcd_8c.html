@@ -27,6 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
    &#160;<span id="projectnumber">1.0.7</span>
@@ -162,7 +163,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>, <a class="el" href="_a_p_i_8h.html#aa53f19724bcf9f7bf1b4468b5982553b">lcdClear()</a>, and <a class="el" href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00046">initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00049">initialize()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                              {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit</a>(lcd);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="_a_p_i_8h.html#aa53f19724bcf9f7bf1b4468b5982553b">lcdClear</a>(lcd);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a> = lcd;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_a51af160afcbfb860dfff75d91ffb3824"><div class="ttname"><a href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit</a></div><div class="ttdeci">void lcdInit(FILE *lcdPort)</div></div>
 <div class="ttc" id="_a_p_i_8h_html_aa53f19724bcf9f7bf1b4468b5982553b"><div class="ttname"><a href="_a_p_i_8h.html#aa53f19724bcf9f7bf1b4468b5982553b">lcdClear</a></div><div class="ttdeci">void lcdClear(FILE *lcdPort)</div></div>
@@ -221,7 +222,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lcd_8c_a07f04b524b5ded617d5f193db05ba0ad_icgraph.svg" width="611" height="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lcd_8c_a07f04b524b5ded617d5f193db05ba0ad_icgraph.svg" width="495" height="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -284,7 +285,7 @@ Here is the call graph for this function:</div>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>, <a class="el" href="_a_p_i_8h.html#a040d36e5c81594fd05d5042f3e540aed">lcdReadButtons()</a>, <a class="el" href="lcd_8h_source.html#l00049">lcd_buttons::left</a>, <a class="el" href="lcd_8h_source.html#l00050">lcd_buttons::middle</a>, <a class="el" href="lcd_8h_source.html#l00040">PRESSED</a>, <a class="el" href="lcd_8h_source.html#l00038">RELEASED</a>, and <a class="el" href="lcd_8h_source.html#l00051">lcd_buttons::right</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00080">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00060">promt_confirmation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00083">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00060">promt_confirmation()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                     {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="lcd_8c.html#a07f04b524b5ded617d5f193db05ba0ad">lcd_assert</a>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> btn_binary = <a class="code" href="_a_p_i_8h.html#a040d36e5c81594fd05d5042f3e540aed">lcdReadButtons</a>(<a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">bool</span> left = btn_binary &amp; 0x1;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">bool</span> middle = btn_binary &amp; 0x2;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">bool</span> right = btn_binary &amp; 0x4;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="structlcd__buttons.html">lcd_buttons</a> btns;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  btns.<a class="code" href="structlcd__buttons.html#ae385efb5ec794acf5f11027f46c6c039">left</a> = left ? <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a> : <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</a>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  btns.<a class="code" href="structlcd__buttons.html#a293342810ac56f73979b08f144d6e6b9">middle</a> = middle ? <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a> : <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  btns.<a class="code" href="structlcd__buttons.html#a2437d744e09ca1bb91ab4ca53ef77198">right</a> = right ? <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a> : <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</a>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">return</span> btns;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div><div class="ttc" id="structlcd__buttons_html"><div class="ttname"><a href="structlcd__buttons.html">lcd_buttons</a></div><div class="ttdoc">represents the state of the lcd buttons </div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00048">lcd.h:48</a></div></div>
 <div class="ttc" id="structlcd__buttons_html_ae385efb5ec794acf5f11027f46c6c039"><div class="ttname"><a href="structlcd__buttons.html#ae385efb5ec794acf5f11027f46c6c039">lcd_buttons::left</a></div><div class="ttdeci">button_state left</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00049">lcd.h:49</a></div></div>
 <div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
@@ -302,7 +303,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.svg" width="482" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_icgraph.svg" width="364" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -348,7 +349,7 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>, and <a class="el" href="_a_p_i_8h.html#aae51423c0e108729bbb4d26a1b265eb3">lcdSetText()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00080">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00060">promt_confirmation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00083">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00060">promt_confirmation()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                                    {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="lcd_8c.html#a07f04b524b5ded617d5f193db05ba0ad">lcd_assert</a>();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="_a_p_i_8h.html#aae51423c0e108729bbb4d26a1b265eb3">lcdSetText</a>(<a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a>, <a class="code" href="_a_p_i_8h.html#a58c3304a90ff2bb7064ff7187b2da466">line</a>, str);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_aae51423c0e108729bbb4d26a1b265eb3"><div class="ttname"><a href="_a_p_i_8h.html#aae51423c0e108729bbb4d26a1b265eb3">lcdSetText</a></div><div class="ttdeci">void lcdSetText(FILE *lcdPort, unsigned char line, const char *buffer)</div></div>
 <div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
 <div class="ttc" id="lcd_8c_html_a07f04b524b5ded617d5f193db05ba0ad"><div class="ttname"><a href="lcd_8c.html#a07f04b524b5ded617d5f193db05ba0ad">lcd_assert</a></div><div class="ttdeci">static void lcd_assert()</div><div class="ttdoc">Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00013">lcd.c:13</a></div></div>
@@ -361,7 +362,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lcd_8c_adabd3f7cdda45119604b488caf22bba8_icgraph.svg" width="383" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lcd_8c_adabd3f7cdda45119604b488caf22bba8_icgraph.svg" width="266" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -492,8 +493,6 @@ Here is the call graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00060">60</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 
 <p class="reference">References <a class="el" href="_a_p_i_8h.html#a1c59207742a1acf45a8957d7f04f9dfe">delay()</a>, <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, <a class="el" href="lcd_8c_source.html#l00020">lcd_get_pressed_buttons()</a>, <a class="el" href="lcd_8c_source.html#l00045">lcd_print()</a>, and <a class="el" href="lcd_8h_source.html#l00040">PRESSED</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00046">initialize()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                                  {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="lcd_8c.html#a07f04b524b5ded617d5f193db05ba0ad">lcd_assert</a>();</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="lcd_8c.html#adabd3f7cdda45119604b488caf22bba8">lcd_print</a>(1, confirm_text);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">while</span>(<a class="code" href="lcd_8c.html#ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</a>().middle != <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a>){</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="_a_p_i_8h.html#a1c59207742a1acf45a8957d7f04f9dfe">delay</a>(200);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div><div class="ttc" id="lcd_8c_html_ac7b3225ccc82fcbe067ba9da934f010d"><div class="ttname"><a href="lcd_8c.html#ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</a></div><div class="ttdeci">lcd_buttons lcd_get_pressed_buttons()</div><div class="ttdoc">Returns the pressed buttons. </div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00020">lcd.c:20</a></div></div>
 <div class="ttc" id="lcd_8c_html_a07f04b524b5ded617d5f193db05ba0ad"><div class="ttname"><a href="lcd_8c.html#a07f04b524b5ded617d5f193db05ba0ad">lcd_assert</a></div><div class="ttdeci">static void lcd_assert()</div><div class="ttdoc">Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00013">lcd.c:13</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_a1c59207742a1acf45a8957d7f04f9dfe"><div class="ttname"><a href="_a_p_i_8h.html#a1c59207742a1acf45a8957d7f04f9dfe">delay</a></div><div class="ttdeci">void delay(const unsigned long time)</div></div>
@@ -503,11 +502,6 @@ Here is the call graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="lcd_8c_a99f4683e1990edf624ab216bf327cba4_cgraph.svg" width="627" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lcd_8c_a99f4683e1990edf624ab216bf327cba4_icgraph.svg" width="263" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

@@ -18,6 +18,6 @@ var searchData=
   ['fread',['fread',['../_a_p_i_8h.html#afb8cb08b18c9b9ed78d1598c8076d956',1,'API.h']]],
   ['fseek',['fseek',['../_a_p_i_8h.html#af2b5e837a27524264f0422232f5f9538',1,'API.h']]],
   ['ftell',['ftell',['../_a_p_i_8h.html#a6273f71322efc95f429d9e990a8ef8ae',1,'API.h']]],
-  ['ftoa',['ftoa',['../vlib_8h.html#a1c3b16ce8c66ade17aca0f267027b855',1,'ftoa(float a, char *buffer, int precision):&#160;vlib.c'],['../vlib_8c.html#a1c3b16ce8c66ade17aca0f267027b855',1,'ftoa(float a, char *buffer, int precision):&#160;vlib.c']]],
+  ['ftoa_5fbad',['ftoa_bad',['../vlib_8h.html#a8805990ed667939e615e4a98950b8bd1',1,'ftoa_bad(float a, char *buffer, int precision):&#160;vlib.c'],['../vlib_8c.html#a8805990ed667939e615e4a98950b8bd1',1,'ftoa_bad(float a, char *buffer, int precision):&#160;vlib.c']]],
   ['fwrite',['fwrite',['../_a_p_i_8h.html#a998dde93aaae1ed6cc10a4656eb5cc10',1,'API.h']]]
 ];

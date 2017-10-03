@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['deadspot',['deadspot',['../drive_8c.html#a9c6ff5e12027f5d580a33abb9b608400',1,'drive.c']]],
   ['debug',['debug',['../log_8h.html#af3668f40d1ad1b4f3418869ac9a31f34',1,'debug(const char *debug_message):&#160;log.c'],['../log_8c.html#af3668f40d1ad1b4f3418869ac9a31f34',1,'debug(const char *debug_message):&#160;log.c']]],
   ['deinitslew',['deinitslew',['../slew_8h.html#a981c9990a969d2587e66e550737f7cd9',1,'deinitslew():&#160;slew.c'],['../slew_8c.html#a981c9990a969d2587e66e550737f7cd9',1,'deinitslew():&#160;slew.c']]],
   ['delay',['delay',['../_a_p_i_8h.html#a1c59207742a1acf45a8957d7f04f9dfe',1,'API.h']]],

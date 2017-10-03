@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['last_5fcall',['last_call',['../localization_8c.html#a0f327d31da83831114e7417abb7b6b63',1,'localization.c']]],
   ['lcd_2ec',['lcd.c',['../lcd_8c.html',1,'']]],
   ['lcd_2eh',['lcd.h',['../lcd_8h.html',1,'']]],
   ['lcd_5fassert',['lcd_assert',['../lcd_8c.html#a07f04b524b5ded617d5f193db05ba0ad',1,'lcd.c']]],
@@ -24,11 +25,19 @@ var searchData=
   ['left_5fjoy_5fx',['LEFT_JOY_X',['../controller_8h.html#ac055a23829dc64aa20b8e2e1bcfbf316',1,'controller.h']]],
   ['left_5fjoy_5fy',['LEFT_JOY_Y',['../controller_8h.html#ae0a2b64db5fc4f4bf4b169185be93db3',1,'controller.h']]],
   ['length',['length',['../structmenu__t.html#a023063461c4a247e574abd6a55faf765',1,'menu_t']]],
+  ['lifter_2ec',['lifter.c',['../lifter_8c.html',1,'']]],
+  ['lifter_2eh',['lifter.h',['../lifter_8h.html',1,'']]],
   ['line',['line',['../_a_p_i_8h.html#a58c3304a90ff2bb7064ff7187b2da466',1,'API.h']]],
+  ['localization_2ec',['localization.c',['../localization_8c.html',1,'']]],
+  ['localization_2eh',['localization.h',['../localization_8h.html',1,'']]],
+  ['localization_5ftask',['localization_task',['../localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488',1,'localization.c']]],
+  ['localization_5fupdate_5ffrequency',['LOCALIZATION_UPDATE_FREQUENCY',['../localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5',1,'localization.h']]],
+  ['location',['location',['../structlocation.html',1,'']]],
   ['log_2ec',['log.c',['../log_8c.html',1,'']]],
   ['log_2eh',['log.h',['../log_8h.html',1,'']]],
   ['log_5finfo',['log_info',['../log_8c.html#afff22aff6749311a684a559cac3ac8bd',1,'log.c']]],
   ['log_5flcd',['log_lcd',['../log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a',1,'log.c']]],
   ['log_5flevel',['log_level',['../log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5',1,'log.c']]],
-  ['low',['LOW',['../_a_p_i_8h.html#ab811d8c6ff3a505312d3276590444289',1,'API.h']]]
+  ['low',['LOW',['../_a_p_i_8h.html#ab811d8c6ff3a505312d3276590444289',1,'API.h']]],
+  ['lower_5flifter',['lower_lifter',['../lifter_8c.html#aa7d2d04059f57cc5b8582f6fd0726dc1',1,'lifter.c']]]
 ];

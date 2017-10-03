@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialized',['initialized',['../slew_8c.html#aedeffc7d23da25d52b9a50045189fe2b',1,'slew.c']]]
+  ['g1',['g1',['../localization_8c.html#a46b8f25ffa3bbee071a0468eac654393',1,'localization.c']]]
 ];

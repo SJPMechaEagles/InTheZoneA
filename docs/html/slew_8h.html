@@ -27,6 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
    &#160;<span id="projectnumber">1.0.7</span>
@@ -101,7 +102,7 @@ Include dependency graph for slew.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h__dep__incl.svg" width="316" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h__dep__incl.svg" width="611" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="slew_8h_source.html">Go to the source code of this file.</a></p>
@@ -111,7 +112,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ad1ad4b29af4180aa00713599367fbc98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="slew_8h.html#ad1ad4b29af4180aa00713599367fbc98">MOTOR_PORTS</a>&#160;&#160;&#160;12</td></tr>
 <tr class="memdesc:ad1ad4b29af4180aa00713599367fbc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of motor ports on the robot.  <a href="#ad1ad4b29af4180aa00713599367fbc98">More...</a><br /></td></tr>
 <tr class="separator:ad1ad4b29af4180aa00713599367fbc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3ff8667251227c99f8f4c81e9ff467"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="slew_8h.html#a4a3ff8667251227c99f8f4c81e9ff467">RAMP_PROPORTION</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:a4a3ff8667251227c99f8f4c81e9ff467"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="slew_8h.html#a4a3ff8667251227c99f8f4c81e9ff467">RAMP_PROPORTION</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:a4a3ff8667251227c99f8f4c81e9ff467"><td class="mdescLeft">&#160;</td><td class="mdescRight">proportion defining how quickly the motor should converge on the correct value. higher value leads to slower convergence  <a href="#a4a3ff8667251227c99f8f4c81e9ff467">More...</a><br /></td></tr>
 <tr class="separator:a4a3ff8667251227c99f8f4c81e9ff467"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e8e7d6fdd1f5c6f8a0f341e4b61f025"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="slew_8h.html#a4e8e7d6fdd1f5c6f8a0f341e4b61f025">UPDATE_PERIOD_MS</a>&#160;&#160;&#160;25</td></tr>
@@ -126,9 +127,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a321758941d88b75783955c819bb75005"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="slew_8h.html#a321758941d88b75783955c819bb75005">init_slew</a> ()</td></tr>
 <tr class="memdesc:a321758941d88b75783955c819bb75005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the slew rate controller.  <a href="#a321758941d88b75783955c819bb75005">More...</a><br /></td></tr>
 <tr class="separator:a321758941d88b75783955c819bb75005"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dff2b79dffe55fb936d977594d7c01d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="slew_8h.html#a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</a> (int motor, int speed)</td></tr>
-<tr class="memdesc:a7dff2b79dffe55fb936d977594d7c01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets motor speed wrapped inside the slew rate controller.  <a href="#a7dff2b79dffe55fb936d977594d7c01d">More...</a><br /></td></tr>
-<tr class="separator:a7dff2b79dffe55fb936d977594d7c01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b1be616c319611d7696d35e5df66a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="slew_8h.html#a88b1be616c319611d7696d35e5df66a0">set_motor_slew</a> (int motor, char speed)</td></tr>
+<tr class="memdesc:a88b1be616c319611d7696d35e5df66a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets motor speed wrapped inside the slew rate controller.  <a href="#a88b1be616c319611d7696d35e5df66a0">More...</a><br /></td></tr>
+<tr class="separator:a88b1be616c319611d7696d35e5df66a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a807a87c5df438fde21c1e8213906695b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="slew_8h.html#a807a87c5df438fde21c1e8213906695b">updateMotors</a> ()</td></tr>
 <tr class="memdesc:a807a87c5df438fde21c1e8213906695b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the distance between the desired motor value and the current motor value by half for each motor.  <a href="#a807a87c5df438fde21c1e8213906695b">More...</a><br /></td></tr>
 <tr class="separator:a807a87c5df438fde21c1e8213906695b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,8 +159,6 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="slew_8h_source.html#l00027">27</a> of file <a class="el" href="slew_8h_source.html">slew.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00049">init_slew()</a>, and <a class="el" href="slew_8c_source.html#l00031">updateMotors()</a>.</p>
-
 </div>
 </div>
 <a id="a4a3ff8667251227c99f8f4c81e9ff467"></a>
@@ -169,7 +168,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RAMP_PROPORTION&#160;&#160;&#160;2</td>
+          <td class="memname">#define RAMP_PROPORTION&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -179,8 +178,6 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/14/17 </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="slew_8h_source.html#l00034">34</a> of file <a class="el" href="slew_8h_source.html">slew.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00031">updateMotors()</a>.</p>
 
 </div>
 </div>
@@ -201,8 +198,6 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/14/17 </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="slew_8h_source.html#l00020">20</a> of file <a class="el" href="slew_8h_source.html">slew.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00049">init_slew()</a>.</p>
 
 </div>
 </div>
@@ -226,11 +221,10 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/14/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="slew_8c_source.html#l00062">62</a> of file <a class="el" href="slew_8c_source.html">slew.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slew_8c_source.html#l00037">37</a> of file <a class="el" href="slew_8c_source.html">slew.c</a>.</p>
 
-<p class="reference">References <a class="el" href="slew_8c_source.html#l00015">motors_set_speeds</a>, <a class="el" href="slew_8c_source.html#l00022">slew</a>, and <a class="el" href="_a_p_i_8h.html#add3b8d580ea6ef5635c6d9ff88c68612">taskDelete()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                 {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  free(<a class="code" href="slew_8c.html#a3143c164339fd92b9b1e132c63a41060">motors_set_speeds</a>);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="_a_p_i_8h.html#add3b8d580ea6ef5635c6d9ff88c68612">taskDelete</a>(<a class="code" href="slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f">slew</a>);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div><div class="ttc" id="slew_8c_html_a9dc30877eadbb32ceb6bede027c9a93f"><div class="ttname"><a href="slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f">slew</a></div><div class="ttdeci">static TaskHandle slew</div><div class="ttdoc">Task that will handle updating the motors on a routine period. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00022">slew.c:22</a></div></div>
-<div class="ttc" id="slew_8c_html_a3143c164339fd92b9b1e132c63a41060"><div class="ttname"><a href="slew_8c.html#a3143c164339fd92b9b1e132c63a41060">motors_set_speeds</a></div><div class="ttdeci">static signed char * motors_set_speeds</div><div class="ttdoc">Array of motor speed values to set the motors to. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00015">slew.c:15</a></div></div>
+<p class="reference">References <a class="el" href="slew_8c_source.html#l00008">slew</a>, and <a class="el" href="_a_p_i_8h.html#add3b8d580ea6ef5635c6d9ff88c68612">taskDelete()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                 {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="_a_p_i_8h.html#add3b8d580ea6ef5635c6d9ff88c68612">taskDelete</a>(<a class="code" href="slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f">slew</a>);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div><div class="ttc" id="slew_8c_html_a9dc30877eadbb32ceb6bede027c9a93f"><div class="ttname"><a href="slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f">slew</a></div><div class="ttdeci">static TaskHandle slew</div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00008">slew.c:8</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_add3b8d580ea6ef5635c6d9ff88c68612"><div class="ttname"><a href="_a_p_i_8h.html#add3b8d580ea6ef5635c6d9ff88c68612">taskDelete</a></div><div class="ttdeci">void taskDelete(TaskHandle taskToDelete)</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -259,36 +253,35 @@ Here is the call graph for this function:</div>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett, Christian DeSimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/14/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="slew_8c_source.html#l00049">49</a> of file <a class="el" href="slew_8c_source.html">slew.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slew_8c_source.html#l00025">25</a> of file <a class="el" href="slew_8c_source.html">slew.c</a>.</p>
 
-<p class="reference">References <a class="el" href="vlib_8c_source.html#l00053">calloc_real()</a>, <a class="el" href="log_8c_source.html#l00031">info()</a>, <a class="el" href="slew_8c_source.html#l00029">initialized</a>, <a class="el" href="slew_8h_source.html#l00027">MOTOR_PORTS</a>, <a class="el" href="slew_8c_source.html#l00008">mutex</a>, <a class="el" href="_a_p_i_8h.html#aecd027ce8f8b52a765735e9eb5b202b3">mutexCreate()</a>, <a class="el" href="slew_8c_source.html#l00022">slew</a>, <a class="el" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop()</a>, <a class="el" href="slew_8h_source.html#l00020">UPDATE_PERIOD_MS</a>, and <a class="el" href="slew_8c_source.html#l00031">updateMotors()</a>.</p>
+<p class="reference">References <a class="el" href="log_8c_source.html#l00037">debug()</a>, <a class="el" href="log_8c_source.html#l00031">info()</a>, <a class="el" href="slew_8c_source.html#l00010">initialized</a>, <a class="el" href="slew_8c_source.html#l00006">motors_set_speeds</a>, <a class="el" href="slew_8c_source.html#l00004">mutex</a>, <a class="el" href="_a_p_i_8h.html#aecd027ce8f8b52a765735e9eb5b202b3">mutexCreate()</a>, <a class="el" href="slew_8c_source.html#l00008">slew</a>, <a class="el" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop()</a>, and <a class="el" href="slew_8c_source.html#l00012">updateMotors()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00046">initialize()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="log_8h.html#a1606d750e1bb8de9f9e917172bba3382">info</a>(<span class="stringliteral">&quot;Init Slew&quot;</span>);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="vlib_8h.html#a1115803c6996aebfbf67434810df7b4b">calloc_real</a>(<a class="code" href="slew_8h.html#ad1ad4b29af4180aa00713599367fbc98">MOTOR_PORTS</a>, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a> = <a class="code" href="_a_p_i_8h.html#aecd027ce8f8b52a765735e9eb5b202b3">mutexCreate</a>();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f">slew</a> = <a class="code" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a>(<a class="code" href="slew_8c.html#a807a87c5df438fde21c1e8213906695b">updateMotors</a>, <a class="code" href="slew_8h.html#a4e8e7d6fdd1f5c6f8a0f341e4b61f025">UPDATE_PERIOD_MS</a>);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="slew_8c.html#aedeffc7d23da25d52b9a50045189fe2b">initialized</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="slew_8c_html_a807a87c5df438fde21c1e8213906695b"><div class="ttname"><a href="slew_8c.html#a807a87c5df438fde21c1e8213906695b">updateMotors</a></div><div class="ttdeci">void updateMotors()</div><div class="ttdoc">Closes the distance between the desired motor value and the current motor value by half for each moto...</div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00031">slew.c:31</a></div></div>
-<div class="ttc" id="slew_8c_html_a9dc30877eadbb32ceb6bede027c9a93f"><div class="ttname"><a href="slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f">slew</a></div><div class="ttdeci">static TaskHandle slew</div><div class="ttdoc">Task that will handle updating the motors on a routine period. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00022">slew.c:22</a></div></div>
+<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00037">operatorControl()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="log_8h.html#a1606d750e1bb8de9f9e917172bba3382">info</a>(<span class="stringliteral">&quot;Init Slew&quot;</span>);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="slew_8c.html#a8acedaaffbee7bd3959cf25bedcfbe2e">motors_set_speeds</a> == NULL) {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="log_8h.html#af3668f40d1ad1b4f3418869ac9a31f34">debug</a>(<span class="stringliteral">&quot;MOTORS SETS NULL!&quot;</span>);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a> = <a class="code" href="_a_p_i_8h.html#aecd027ce8f8b52a765735e9eb5b202b3">mutexCreate</a>();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f">slew</a> = <a class="code" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a>(<a class="code" href="slew_8c.html#a807a87c5df438fde21c1e8213906695b">updateMotors</a>, 20);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="slew_8c.html#aedeffc7d23da25d52b9a50045189fe2b">initialized</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div><div class="ttc" id="slew_8c_html_a807a87c5df438fde21c1e8213906695b"><div class="ttname"><a href="slew_8c.html#a807a87c5df438fde21c1e8213906695b">updateMotors</a></div><div class="ttdeci">void updateMotors()</div><div class="ttdoc">Closes the distance between the desired motor value and the current motor value by half for each moto...</div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00012">slew.c:12</a></div></div>
+<div class="ttc" id="slew_8c_html_a9dc30877eadbb32ceb6bede027c9a93f"><div class="ttname"><a href="slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f">slew</a></div><div class="ttdeci">static TaskHandle slew</div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00008">slew.c:8</a></div></div>
 <div class="ttc" id="log_8h_html_a1606d750e1bb8de9f9e917172bba3382"><div class="ttname"><a href="log_8h.html#a1606d750e1bb8de9f9e917172bba3382">info</a></div><div class="ttdeci">void info(const char *info_message)</div><div class="ttdoc">prints a info message </div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00031">log.c:31</a></div></div>
-<div class="ttc" id="slew_8h_html_a4e8e7d6fdd1f5c6f8a0f341e4b61f025"><div class="ttname"><a href="slew_8h.html#a4e8e7d6fdd1f5c6f8a0f341e4b61f025">UPDATE_PERIOD_MS</a></div><div class="ttdeci">#define UPDATE_PERIOD_MS</div><div class="ttdoc">How frequently to update the motors, in milliseconds. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8h_source.html#l00020">slew.h:20</a></div></div>
-<div class="ttc" id="slew_8c_html_ae8b85b4f519a4945ba9ea43e9b503531"><div class="ttname"><a href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a></div><div class="ttdeci">static Mutex mutex</div><div class="ttdoc">mutex to protect the data in the array of speeds from being read or written to simultaneously. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00008">slew.c:8</a></div></div>
-<div class="ttc" id="slew_8c_html_aedeffc7d23da25d52b9a50045189fe2b"><div class="ttname"><a href="slew_8c.html#aedeffc7d23da25d52b9a50045189fe2b">initialized</a></div><div class="ttdeci">static bool initialized</div><div class="ttdoc">Boolean indicating whether or not the slew rate controller has been initialized. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00029">slew.c:29</a></div></div>
-<div class="ttc" id="vlib_8h_html_a1115803c6996aebfbf67434810df7b4b"><div class="ttname"><a href="vlib_8h.html#a1115803c6996aebfbf67434810df7b4b">calloc_real</a></div><div class="ttdeci">void * calloc_real(size_t elements, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="vlib_8c_source.html#l00053">vlib.c:53</a></div></div>
+<div class="ttc" id="slew_8c_html_ae8b85b4f519a4945ba9ea43e9b503531"><div class="ttname"><a href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a></div><div class="ttdeci">static Mutex mutex</div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00004">slew.c:4</a></div></div>
+<div class="ttc" id="slew_8c_html_aedeffc7d23da25d52b9a50045189fe2b"><div class="ttname"><a href="slew_8c.html#aedeffc7d23da25d52b9a50045189fe2b">initialized</a></div><div class="ttdeci">static bool initialized</div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00010">slew.c:10</a></div></div>
+<div class="ttc" id="log_8h_html_af3668f40d1ad1b4f3418869ac9a31f34"><div class="ttname"><a href="log_8h.html#af3668f40d1ad1b4f3418869ac9a31f34">debug</a></div><div class="ttdeci">void debug(const char *debug_message)</div><div class="ttdoc">prints a info message </div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00037">log.c:37</a></div></div>
+<div class="ttc" id="slew_8c_html_a8acedaaffbee7bd3959cf25bedcfbe2e"><div class="ttname"><a href="slew_8c.html#a8acedaaffbee7bd3959cf25bedcfbe2e">motors_set_speeds</a></div><div class="ttdeci">static signed char motors_set_speeds[12]</div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00006">slew.c:6</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_ab05a241d6d1fd98b1ceb4665db678156"><div class="ttname"><a href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a></div><div class="ttdeci">TaskHandle taskRunLoop(void(*fn)(void), const unsigned long increment)</div></div>
-<div class="ttc" id="slew_8h_html_ad1ad4b29af4180aa00713599367fbc98"><div class="ttname"><a href="slew_8h.html#ad1ad4b29af4180aa00713599367fbc98">MOTOR_PORTS</a></div><div class="ttdeci">#define MOTOR_PORTS</div><div class="ttdoc">The number of motor ports on the robot. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8h_source.html#l00027">slew.h:27</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_aecd027ce8f8b52a765735e9eb5b202b3"><div class="ttname"><a href="_a_p_i_8h.html#aecd027ce8f8b52a765735e9eb5b202b3">mutexCreate</a></div><div class="ttdeci">Mutex mutexCreate()</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a321758941d88b75783955c819bb75005_cgraph.svg" width="467" height="382"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a321758941d88b75783955c819bb75005_cgraph.svg" width="359" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a321758941d88b75783955c819bb75005_icgraph.svg" width="200" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a321758941d88b75783955c819bb75005_icgraph.svg" width="246" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a7dff2b79dffe55fb936d977594d7c01d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dff2b79dffe55fb936d977594d7c01d">&#9670;&nbsp;</a></span>set_motor_slew()</h2>
+<a id="a88b1be616c319611d7696d35e5df66a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b1be616c319611d7696d35e5df66a0">&#9670;&nbsp;</a></span>set_motor_slew()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +295,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">char&#160;</td>
           <td class="paramname"><em>speed</em>&#160;</td>
         </tr>
         <tr>
@@ -324,26 +317,11 @@ Here is the caller graph for this function:</div>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/14/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="slew_8c_source.html#l00067">67</a> of file <a class="el" href="slew_8c_source.html">slew.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slew_8c_source.html#l00041">41</a> of file <a class="el" href="slew_8c_source.html">slew.c</a>.</p>
 
-<p class="reference">References <a class="el" href="slew_8c_source.html#l00015">motors_set_speeds</a>, <a class="el" href="slew_8c_source.html#l00008">mutex</a>, <a class="el" href="_a_p_i_8h.html#afe171a08d22de18fc2ab604b2364959f">mutexGive()</a>, and <a class="el" href="_a_p_i_8h.html#a8b51124628d2a7741738d48551d1e8ee">mutexTake()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00033">operatorControl()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                         {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_a_p_i_8h.html#a8b51124628d2a7741738d48551d1e8ee">mutexTake</a>(<a class="code" href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a>, 100)) {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <a class="code" href="slew_8c.html#a3143c164339fd92b9b1e132c63a41060">motors_set_speeds</a>[motor] = speed;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <a class="code" href="_a_p_i_8h.html#afe171a08d22de18fc2ab604b2364959f">mutexGive</a>(<a class="code" href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a>);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div><div class="ttc" id="slew_8c_html_a3143c164339fd92b9b1e132c63a41060"><div class="ttname"><a href="slew_8c.html#a3143c164339fd92b9b1e132c63a41060">motors_set_speeds</a></div><div class="ttdeci">static signed char * motors_set_speeds</div><div class="ttdoc">Array of motor speed values to set the motors to. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00015">slew.c:15</a></div></div>
-<div class="ttc" id="_a_p_i_8h_html_a8b51124628d2a7741738d48551d1e8ee"><div class="ttname"><a href="_a_p_i_8h.html#a8b51124628d2a7741738d48551d1e8ee">mutexTake</a></div><div class="ttdeci">bool mutexTake(Mutex mutex, const unsigned long blockTime)</div></div>
-<div class="ttc" id="slew_8c_html_ae8b85b4f519a4945ba9ea43e9b503531"><div class="ttname"><a href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a></div><div class="ttdeci">static Mutex mutex</div><div class="ttdoc">mutex to protect the data in the array of speeds from being read or written to simultaneously. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00008">slew.c:8</a></div></div>
-<div class="ttc" id="_a_p_i_8h_html_afe171a08d22de18fc2ab604b2364959f"><div class="ttname"><a href="_a_p_i_8h.html#afe171a08d22de18fc2ab604b2364959f">mutexGive</a></div><div class="ttdeci">bool mutexGive(Mutex mutex)</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a7dff2b79dffe55fb936d977594d7c01d_cgraph.svg" width="259" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a7dff2b79dffe55fb936d977594d7c01d_icgraph.svg" width="288" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
+<p class="reference">References <a class="el" href="slew_8c_source.html#l00006">motors_set_speeds</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                          {</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="slew_8c.html#a8acedaaffbee7bd3959cf25bedcfbe2e">motors_set_speeds</a>[motor] = speed;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="slew_8c_html_a8acedaaffbee7bd3959cf25bedcfbe2e"><div class="ttname"><a href="slew_8c.html#a8acedaaffbee7bd3959cf25bedcfbe2e">motors_set_speeds</a></div><div class="ttdeci">static signed char motors_set_speeds[12]</div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00006">slew.c:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a807a87c5df438fde21c1e8213906695b"></a>
@@ -365,30 +343,23 @@ Here is the caller graph for this function:</div>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/14/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="slew_8c_source.html#l00031">31</a> of file <a class="el" href="slew_8c_source.html">slew.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="slew_8c_source.html#l00012">12</a> of file <a class="el" href="slew_8c_source.html">slew.c</a>.</p>
 
-<p class="reference">References <a class="el" href="log_8c_source.html#l00037">debug()</a>, <a class="el" href="slew_8h_source.html#l00027">MOTOR_PORTS</a>, <a class="el" href="_a_p_i_8h.html#a4805c8fd29f9221d28ed2e673c06e6c4">motorGet()</a>, <a class="el" href="slew_8c_source.html#l00015">motors_set_speeds</a>, <a class="el" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet()</a>, <a class="el" href="slew_8c_source.html#l00008">mutex</a>, <a class="el" href="_a_p_i_8h.html#afe171a08d22de18fc2ab604b2364959f">mutexGive()</a>, <a class="el" href="_a_p_i_8h.html#a8b51124628d2a7741738d48551d1e8ee">mutexTake()</a>, <a class="el" href="slew_8h_source.html#l00034">RAMP_PROPORTION</a>, and <a class="el" href="_a_p_i_8h.html#acbfbfc380f865613ad5ff3cae256bdc4">sprintf()</a>.</p>
+<p class="reference">References <a class="el" href="_a_p_i_8h.html#a4805c8fd29f9221d28ed2e673c06e6c4">motorGet()</a>, <a class="el" href="slew_8c_source.html#l00006">motors_set_speeds</a>, and <a class="el" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00049">init_slew()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                   {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">//Take back half approach</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">//Not linear but equal to setSpeed(1-(1/2)^x)</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_a_p_i_8h.html#a8b51124628d2a7741738d48551d1e8ee">mutexTake</a>(<a class="code" href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a>, 10)) {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="slew_8h.html#ad1ad4b29af4180aa00713599367fbc98">MOTOR_PORTS</a>; i++) {</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordtype">char</span> set_speed = <a class="code" href="slew_8c.html#a3143c164339fd92b9b1e132c63a41060">motors_set_speeds</a>[i];</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordtype">char</span> curr_speed = <a class="code" href="_a_p_i_8h.html#a4805c8fd29f9221d28ed2e673c06e6c4">motorGet</a>(i);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordtype">char</span> diff = set_speed - curr_speed;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordtype">int</span> n = (int) curr_speed + ceil(diff/(<span class="keywordtype">float</span>)<a class="code" href="slew_8h.html#a4a3ff8667251227c99f8f4c81e9ff467">RAMP_PROPORTION</a>);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordtype">char</span> c[16];</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <a class="code" href="_a_p_i_8h.html#acbfbfc380f865613ad5ff3cae256bdc4">sprintf</a>(c, <span class="stringliteral">&quot;Set Motor %d: %d&quot;</span>, i, n);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <a class="code" href="log_8h.html#af3668f40d1ad1b4f3418869ac9a31f34">debug</a>(c);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <a class="code" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a>(i, n);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="_a_p_i_8h.html#afe171a08d22de18fc2ab604b2364959f">mutexGive</a>(<a class="code" href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a>);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a4805c8fd29f9221d28ed2e673c06e6c4"><div class="ttname"><a href="_a_p_i_8h.html#a4805c8fd29f9221d28ed2e673c06e6c4">motorGet</a></div><div class="ttdeci">int motorGet(unsigned char channel)</div></div>
-<div class="ttc" id="_a_p_i_8h_html_acbfbfc380f865613ad5ff3cae256bdc4"><div class="ttname"><a href="_a_p_i_8h.html#acbfbfc380f865613ad5ff3cae256bdc4">sprintf</a></div><div class="ttdeci">int sprintf(char *buffer, const char *formatString,...)</div></div>
-<div class="ttc" id="slew_8c_html_a3143c164339fd92b9b1e132c63a41060"><div class="ttname"><a href="slew_8c.html#a3143c164339fd92b9b1e132c63a41060">motors_set_speeds</a></div><div class="ttdeci">static signed char * motors_set_speeds</div><div class="ttdoc">Array of motor speed values to set the motors to. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00015">slew.c:15</a></div></div>
-<div class="ttc" id="_a_p_i_8h_html_a8b51124628d2a7741738d48551d1e8ee"><div class="ttname"><a href="_a_p_i_8h.html#a8b51124628d2a7741738d48551d1e8ee">mutexTake</a></div><div class="ttdeci">bool mutexTake(Mutex mutex, const unsigned long blockTime)</div></div>
-<div class="ttc" id="slew_8c_html_ae8b85b4f519a4945ba9ea43e9b503531"><div class="ttname"><a href="slew_8c.html#ae8b85b4f519a4945ba9ea43e9b503531">mutex</a></div><div class="ttdeci">static Mutex mutex</div><div class="ttdoc">mutex to protect the data in the array of speeds from being read or written to simultaneously. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00008">slew.c:8</a></div></div>
-<div class="ttc" id="log_8h_html_af3668f40d1ad1b4f3418869ac9a31f34"><div class="ttname"><a href="log_8h.html#af3668f40d1ad1b4f3418869ac9a31f34">debug</a></div><div class="ttdeci">void debug(const char *debug_message)</div><div class="ttdoc">prints a info message </div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00037">log.c:37</a></div></div>
-<div class="ttc" id="_a_p_i_8h_html_afe171a08d22de18fc2ab604b2364959f"><div class="ttname"><a href="_a_p_i_8h.html#afe171a08d22de18fc2ab604b2364959f">mutexGive</a></div><div class="ttdeci">bool mutexGive(Mutex mutex)</div></div>
-<div class="ttc" id="slew_8h_html_a4a3ff8667251227c99f8f4c81e9ff467"><div class="ttname"><a href="slew_8h.html#a4a3ff8667251227c99f8f4c81e9ff467">RAMP_PROPORTION</a></div><div class="ttdeci">#define RAMP_PROPORTION</div><div class="ttdoc">proportion defining how quickly the motor should converge on the correct value. higher value leads to...</div><div class="ttdef"><b>Definition:</b> <a href="slew_8h_source.html#l00034">slew.h:34</a></div></div>
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00025">init_slew()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                   {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">//Take back half approach</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">//Not linear but equal to setSpeed(1-(1/2)^x)</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> i = 0; i &lt; 12; i++) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">char</span> set_speed = <a class="code" href="slew_8c.html#a8acedaaffbee7bd3959cf25bedcfbe2e">motors_set_speeds</a>[i];</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">char</span> curr_speed = <a class="code" href="_a_p_i_8h.html#a4805c8fd29f9221d28ed2e673c06e6c4">motorGet</a>(i);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">char</span> diff = set_speed - curr_speed;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> n = (int) curr_speed + (<span class="keywordtype">int</span>) ceil(diff/2);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//printf(&quot;Port: %d, Set: %d Curr: %d Diff %d New: %d\n&quot;, i, set_speed, curr_speed, diff, n);</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a>(i, n);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a4805c8fd29f9221d28ed2e673c06e6c4"><div class="ttname"><a href="_a_p_i_8h.html#a4805c8fd29f9221d28ed2e673c06e6c4">motorGet</a></div><div class="ttdeci">int motorGet(unsigned char channel)</div></div>
+<div class="ttc" id="slew_8c_html_a8acedaaffbee7bd3959cf25bedcfbe2e"><div class="ttname"><a href="slew_8c.html#a8acedaaffbee7bd3959cf25bedcfbe2e">motors_set_speeds</a></div><div class="ttdeci">static signed char motors_set_speeds[12]</div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00006">slew.c:6</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_a03c5b04b472d024281f62d7af8854a8e"><div class="ttname"><a href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a></div><div class="ttdeci">void motorSet(unsigned char channel, int speed)</div></div>
-<div class="ttc" id="slew_8h_html_ad1ad4b29af4180aa00713599367fbc98"><div class="ttname"><a href="slew_8h.html#ad1ad4b29af4180aa00713599367fbc98">MOTOR_PORTS</a></div><div class="ttdeci">#define MOTOR_PORTS</div><div class="ttdoc">The number of motor ports on the robot. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8h_source.html#l00027">slew.h:27</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a807a87c5df438fde21c1e8213906695b_cgraph.svg" width="347" height="283"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a807a87c5df438fde21c1e8213906695b_cgraph.svg" width="239" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a807a87c5df438fde21c1e8213906695b_icgraph.svg" width="351" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="slew_8h_a807a87c5df438fde21c1e8213906695b_icgraph.svg" width="396" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

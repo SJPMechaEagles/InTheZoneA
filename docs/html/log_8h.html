@@ -27,6 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
    &#160;<span id="projectnumber">1.0.7</span>
@@ -100,7 +101,7 @@ Include dependency graph for log.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h__dep__incl.svg" width="394" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h__dep__incl.svg" width="499" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="log_8h_source.html">Go to the source code of this file.</a></p>
@@ -284,7 +285,7 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="log_8h_source.html#l00027">ERROR</a>, <a class="el" href="log_8c_source.html#l00003">log_level</a>, and <a class="el" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00031">updateMotors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00025">init_slew()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                      {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a>&gt;<a class="code" href="log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>) {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a>(<span class="stringliteral">&quot;[INFO]: %s\n&quot;</span>, debug_message);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="log_8h_html_a8fe83ac76edc595f6b98cd4a4127aed5"><div class="ttname"><a href="log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a></div><div class="ttdeci">#define ERROR</div><div class="ttdoc">logging only errors. Also displays error to lcd </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00027">log.h:27</a></div></div>
 <div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_a403c82418e475fa4a8273719e6a7f3e6"><div class="ttname"><a href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a></div><div class="ttdeci">int printf(const char *formatString,...)</div></div>
@@ -296,7 +297,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.svg" width="458" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.svg" width="352" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -332,7 +333,7 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="log_8c_source.html#l00013">log_info()</a>, <a class="el" href="log_8c_source.html#l00003">log_level</a>, and <a class="el" href="log_8h_source.html#l00019">NONE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00003">create_menu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00006">create_menu()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                      {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a>&gt;<a class="code" href="log_8h.html#a655c84af1b0034986ff56e12e84f983d">NONE</a>)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a>(<span class="stringliteral">&quot;ERROR&quot;</span>, error_message);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div><div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
 <div class="ttc" id="log_8c_html_afff22aff6749311a684a559cac3ac8bd"><div class="ttname"><a href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a></div><div class="ttdeci">static void log_info(const char *s, const char *mess)</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00013">log.c:13</a></div></div>
 <div class="ttc" id="log_8h_html_a655c84af1b0034986ff56e12e84f983d"><div class="ttname"><a href="log_8h.html#a655c84af1b0034986ff56e12e84f983d">NONE</a></div><div class="ttdeci">#define NONE</div><div class="ttdoc">No logging. Should be used in competition to reduce serial communication. </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00019">log.h:19</a></div></div>
@@ -344,7 +345,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_icgraph.svg" width="484" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_icgraph.svg" width="367" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -378,7 +379,7 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="log_8h_source.html#l00027">ERROR</a>, <a class="el" href="log_8c_source.html#l00003">log_level</a>, and <a class="el" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00049">init_slew()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00025">init_slew()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                    {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a>&gt;<a class="code" href="log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>) {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a>(<span class="stringliteral">&quot;[INFO]: %s\n&quot;</span>, info_message);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div><div class="ttc" id="log_8h_html_a8fe83ac76edc595f6b98cd4a4127aed5"><div class="ttname"><a href="log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a></div><div class="ttdeci">#define ERROR</div><div class="ttdoc">logging only errors. Also displays error to lcd </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00027">log.h:27</a></div></div>
 <div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_a403c82418e475fa4a8273719e6a7f3e6"><div class="ttname"><a href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a></div><div class="ttdeci">int printf(const char *formatString,...)</div></div>
@@ -390,7 +391,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a1606d750e1bb8de9f9e917172bba3382_icgraph.svg" width="291" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a1606d750e1bb8de9f9e917172bba3382_icgraph.svg" width="336" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -436,7 +437,7 @@ Here is the caller graph for this function:</div>
 
 <p class="reference">References <a class="el" href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit()</a>, and <a class="el" href="log_8c_source.html#l00004">log_lcd</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00046">initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00049">initialize()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                                         {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordflow">if</span>(use_lcd) {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit</a>(lcd);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a> = lcd;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  }</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div><div class="ttc" id="log_8c_html_ac1b33b9fa813506300fa09c1b21ed20a"><div class="ttname"><a href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a></div><div class="ttdeci">static FILE * log_lcd</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00004">log.c:4</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_a51af160afcbfb860dfff75d91ffb3824"><div class="ttname"><a href="_a_p_i_8h.html#a51af160afcbfb860dfff75d91ffb3824">lcdInit</a></div><div class="ttdeci">void lcdInit(FILE *lcdPort)</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -482,8 +483,6 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00026">26</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
 
 <p class="reference">References <a class="el" href="log_8c_source.html#l00013">log_info()</a>, <a class="el" href="log_8c_source.html#l00003">log_level</a>, and <a class="el" href="log_8h_source.html#l00035">WARNING</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00046">initialize()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                          {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a>&gt;<a class="code" href="log_8h.html#a5cb439d9f933fde4cf23caa370c030e7">WARNING</a>)</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a>(<span class="stringliteral">&quot;WARNING&quot;</span>, warning_message);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
 <div class="ttc" id="log_8h_html_a5cb439d9f933fde4cf23caa370c030e7"><div class="ttname"><a href="log_8h.html#a5cb439d9f933fde4cf23caa370c030e7">WARNING</a></div><div class="ttdeci">#define WARNING</div><div class="ttdoc">logs errors and warnings. Also displays error to lcd </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00035">log.h:35</a></div></div>
 <div class="ttc" id="log_8c_html_afff22aff6749311a684a559cac3ac8bd"><div class="ttname"><a href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a></div><div class="ttdeci">static void log_info(const char *s, const char *mess)</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00013">log.c:13</a></div></div>
@@ -491,11 +490,6 @@ Here is the caller graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.svg" width="355" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.svg" width="196" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['partner',['PARTNER',['../controller_8h.html#a136e64cf351535da81cacb6a546cade6',1,'controller.h']]]
+  ['none',['NONE',['../log_8h.html#a655c84af1b0034986ff56e12e84f983d',1,'log.h']]]
 ];

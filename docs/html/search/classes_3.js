@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['polar_5fcord',['polar_cord',['../structpolar__cord.html',1,'']]]
+  ['lcd_5fbuttons',['lcd_buttons',['../structlcd__buttons.html',1,'']]],
+  ['location',['location',['../structlocation.html',1,'']]]
 ];

@@ -15,6 +15,9 @@
 #include "log.h"
 #include "encoders.h"
 #include "menu.h"
+#include "stdarg.h"
+#include <stdio.h>
+
 /*
  * Runs pre-initialization code. This function will be started in kernel mode one time while the
  * VEX Cortex is starting up. As the scheduler is still paused, most API functions will fail.

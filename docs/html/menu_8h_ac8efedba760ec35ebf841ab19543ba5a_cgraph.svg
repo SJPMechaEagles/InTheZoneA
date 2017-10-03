@@ -8,99 +8,99 @@
  viewBox="0.00 0.00 474.36 101.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 97)">
 <title>init_menu_int</title>
-<!-- Node30 -->
+<!-- Node29 -->
 <g id="node1" class="node">
-<title>Node30</title>
+<title>Node29</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-37.5 0,-55.5 75.4824,-55.5 75.4824,-37.5 0,-37.5"/>
 <text text-anchor="middle" x="37.7412" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">init_menu_int</text>
 </g>
-<!-- Node31 -->
+<!-- Node30 -->
 <g id="node2" class="node">
-<title>Node31</title>
-<g id="a_node2"><a xlink:href="menu_8c.html#adcee778eac0edb821427d32949106dc5" target="_top" xlink:title="create_menu">
+<title>Node30</title>
+<g id="a_node2"><a xlink:href="menu_8c.html#aff4fd27ff7707295d91c67fa52a6b021" target="_top" xlink:title="create_menu">
 <polygon fill="none" stroke="#000000" points="111.4824,-37.5 111.4824,-55.5 185.8516,-55.5 185.8516,-37.5 111.4824,-37.5"/>
 <text text-anchor="middle" x="148.667" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">create_menu</text>
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node31 -->
+<!-- Node29&#45;&gt;Node30 -->
 <g id="edge1" class="edge">
-<title>Node30&#45;&gt;Node31</title>
+<title>Node29&#45;&gt;Node30</title>
 <path fill="none" stroke="#191970" d="M75.6053,-46.5C83.8154,-46.5 92.5995,-46.5 101.1283,-46.5"/>
 <polygon fill="#191970" stroke="#191970" points="101.3494,-50.0001 111.3493,-46.5 101.3493,-43.0001 101.3494,-50.0001"/>
 </g>
-<!-- Node32 -->
+<!-- Node31 -->
 <g id="node3" class="node">
-<title>Node32</title>
+<title>Node31</title>
 <g id="a_node3"><a xlink:href="log_8h.html#a8e5bb8a2a372f5b066ff7af7044584c1" target="_top" xlink:title="prints a error message and displays on lcd. Only will print and display if log_level is greater than ...">
 <polygon fill="none" stroke="#000000" points="221.8516,-37.5 221.8516,-55.5 258.9648,-55.5 258.9648,-37.5 221.8516,-37.5"/>
 <text text-anchor="middle" x="240.4082" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">error</text>
 </a>
 </g>
 </g>
-<!-- Node31&#45;&gt;Node32 -->
+<!-- Node30&#45;&gt;Node31 -->
 <g id="edge2" class="edge">
-<title>Node31&#45;&gt;Node32</title>
+<title>Node30&#45;&gt;Node31</title>
 <path fill="none" stroke="#191970" d="M185.9817,-46.5C194.5359,-46.5 203.5016,-46.5 211.6314,-46.5"/>
 <polygon fill="#191970" stroke="#191970" points="211.7325,-50.0001 221.7324,-46.5 211.7324,-43.0001 211.7325,-50.0001"/>
 </g>
-<!-- Node33 -->
+<!-- Node32 -->
 <g id="node4" class="node">
-<title>Node33</title>
+<title>Node32</title>
 <g id="a_node4"><a xlink:href="log_8c.html#afff22aff6749311a684a559cac3ac8bd" target="_top" xlink:title="log_info">
 <polygon fill="none" stroke="#000000" points="294.9648,-37.5 294.9648,-55.5 345.9941,-55.5 345.9941,-37.5 294.9648,-37.5"/>
 <text text-anchor="middle" x="320.4795" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">log_info</text>
 </a>
 </g>
 </g>
-<!-- Node32&#45;&gt;Node33 -->
+<!-- Node31&#45;&gt;Node32 -->
 <g id="edge3" class="edge">
-<title>Node32&#45;&gt;Node33</title>
+<title>Node31&#45;&gt;Node32</title>
 <path fill="none" stroke="#191970" d="M258.9794,-46.5C266.6167,-46.5 275.7335,-46.5 284.5782,-46.5"/>
 <polygon fill="#191970" stroke="#191970" points="284.7313,-50.0001 294.7313,-46.5 284.7312,-43.0001 284.7313,-50.0001"/>
 </g>
-<!-- Node34 -->
+<!-- Node33 -->
 <g id="node5" class="node">
-<title>Node34</title>
+<title>Node33</title>
 <g id="a_node5"><a xlink:href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6" target="_top" xlink:title="printf">
 <polygon fill="none" stroke="#000000" points="405.063,-74.5 405.063,-92.5 443.2944,-92.5 443.2944,-74.5 405.063,-74.5"/>
 <text text-anchor="middle" x="424.1787" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">printf</text>
 </a>
 </g>
 </g>
-<!-- Node33&#45;&gt;Node34 -->
+<!-- Node32&#45;&gt;Node33 -->
 <g id="edge4" class="edge">
-<title>Node33&#45;&gt;Node34</title>
+<title>Node32&#45;&gt;Node33</title>
 <path fill="none" stroke="#191970" d="M345.8472,-55.5512C360.7999,-60.8864 379.7693,-67.6547 395.2955,-73.1944"/>
 <polygon fill="#191970" stroke="#191970" points="394.3296,-76.5659 404.9243,-76.63 396.682,-69.973 394.3296,-76.5659"/>
 </g>
-<!-- Node35 -->
+<!-- Node34 -->
 <g id="node6" class="node">
-<title>Node35</title>
+<title>Node34</title>
 <g id="a_node6"><a xlink:href="_a_p_i_8h.html#aeafd247b27813122cfee95e0cecf188b" target="_top" xlink:title="lcdSetBacklight">
 <polygon fill="none" stroke="#000000" points="381.9941,-37.5 381.9941,-55.5 466.3633,-55.5 466.3633,-37.5 381.9941,-37.5"/>
 <text text-anchor="middle" x="424.1787" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcdSetBacklight</text>
 </a>
 </g>
 </g>
-<!-- Node33&#45;&gt;Node35 -->
+<!-- Node32&#45;&gt;Node34 -->
 <g id="edge5" class="edge">
-<title>Node33&#45;&gt;Node35</title>
+<title>Node32&#45;&gt;Node34</title>
 <path fill="none" stroke="#191970" d="M346.113,-46.5C353.9569,-46.5 362.8871,-46.5 371.8368,-46.5"/>
 <polygon fill="#191970" stroke="#191970" points="371.8928,-50.0001 381.8928,-46.5 371.8927,-43.0001 371.8928,-50.0001"/>
 </g>
-<!-- Node36 -->
+<!-- Node35 -->
 <g id="node7" class="node">
-<title>Node36</title>
+<title>Node35</title>
 <g id="a_node7"><a xlink:href="_a_p_i_8h.html#aa53f19724bcf9f7bf1b4468b5982553b" target="_top" xlink:title="lcdClear">
 <polygon fill="none" stroke="#000000" points="397.8389,-.5 397.8389,-18.5 450.5186,-18.5 450.5186,-.5 397.8389,-.5"/>
 <text text-anchor="middle" x="424.1787" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcdClear</text>
 </a>
 </g>
 </g>
-<!-- Node33&#45;&gt;Node36 -->
+<!-- Node32&#45;&gt;Node35 -->
 <g id="edge6" class="edge">
-<title>Node33&#45;&gt;Node36</title>
+<title>Node32&#45;&gt;Node35</title>
 <path fill="none" stroke="#191970" d="M345.8472,-37.4488C358.9037,-32.7902 375.0226,-27.0389 389.2376,-21.967"/>
 <polygon fill="#191970" stroke="#191970" points="390.4713,-25.243 398.7135,-18.586 388.1189,-18.6501 390.4713,-25.243"/>
 </g>

@@ -5,7 +5,7 @@ var searchData=
   ['i2cwrite',['i2cWrite',['../_a_p_i_8h.html#a2d286627370658ecee04a18335b91c39',1,'API.h']]],
   ['i2cwriteregister',['i2cWriteRegister',['../_a_p_i_8h.html#a51385d22e08f52852c85ad675e3523a9',1,'API.h']]],
   ['ime_5faddr_5fmax',['IME_ADDR_MAX',['../_a_p_i_8h.html#a6d369ee1e214daea8bf939aa817b5d00',1,'API.h']]],
-  ['ime_5ffront_5fright',['IME_FRONT_RIGHT',['../ports_8h.html#ae59fbcf599f31d0317338ee35491c175',1,'ports.h']]],
+  ['ime_5ffront_5fright',['IME_FRONT_RIGHT',['../sensor__ports_8h.html#ae59fbcf599f31d0317338ee35491c175',1,'sensor_ports.h']]],
   ['ime_5fnumber',['IME_NUMBER',['../encoders_8h.html#a87db35d2735ef045f57d446b3bfe8d48',1,'encoders.h']]],
   ['imeget',['imeGet',['../_a_p_i_8h.html#ac4f1500418a729ac3ee95bce9768b20c',1,'API.h']]],
   ['imegetvelocity',['imeGetVelocity',['../_a_p_i_8h.html#a2dfd22ed31510b48a91bd9cd3d04a72f',1,'API.h']]],
@@ -16,6 +16,7 @@ var searchData=
   ['init_2ec',['init.c',['../init_8c.html',1,'']]],
   ['init_5fencoders',['init_encoders',['../encoders_8h.html#aa6ec1ca17e907babd52803ecba451cd3',1,'init_encoders():&#160;encoders.c'],['../encoders_8c.html#aa6ec1ca17e907babd52803ecba451cd3',1,'init_encoders():&#160;encoders.c']]],
   ['init_5ferror',['init_error',['../log_8h.html#a163f389b4f5cf440a807d8fb48aaa006',1,'init_error(bool use_lcd, FILE *lcd):&#160;log.c'],['../log_8c.html#a163f389b4f5cf440a807d8fb48aaa006',1,'init_error(bool use_lcd, FILE *lcd):&#160;log.c']]],
+  ['init_5flocalization',['init_localization',['../localization_8h.html#afdd0147de6aa15957e9a125f9cd20578',1,'init_localization(const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta):&#160;localization.c'],['../localization_8c.html#afdd0147de6aa15957e9a125f9cd20578',1,'init_localization(const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta):&#160;localization.c']]],
   ['init_5fmain_5flcd',['init_main_lcd',['../lcd_8h.html#a93b26f37d6b1687ad54c90feedfd29ca',1,'init_main_lcd(FILE *lcd):&#160;lcd.c'],['../lcd_8c.html#a93b26f37d6b1687ad54c90feedfd29ca',1,'init_main_lcd(FILE *lcd):&#160;lcd.c']]],
   ['init_5fmenu_5ffloat',['init_menu_float',['../menu_8h.html#a5abb752733423805f59ef3b92e3c2e57',1,'init_menu_float(enum menu_type type, float min, float max, float step, const char *prompt):&#160;menu.c'],['../menu_8c.html#a5abb752733423805f59ef3b92e3c2e57',1,'init_menu_float(enum menu_type type, float min, float max, float step, const char *prompt):&#160;menu.c']]],
   ['init_5fmenu_5fint',['init_menu_int',['../menu_8h.html#ac8efedba760ec35ebf841ab19543ba5a',1,'init_menu_int(enum menu_type type, int min, int max, int step, const char *prompt):&#160;menu.c'],['../menu_8c.html#ac8efedba760ec35ebf841ab19543ba5a',1,'init_menu_int(enum menu_type type, int min, int max, int step, const char *prompt):&#160;menu.c']]],
@@ -28,6 +29,7 @@ var searchData=
   ['input_5fanalog',['INPUT_ANALOG',['../_a_p_i_8h.html#a877f7490feac007f3a904ece06afe87a',1,'API.h']]],
   ['input_5ffloating',['INPUT_FLOATING',['../_a_p_i_8h.html#ac31084f7ffdfd4325b3703718fce74ea',1,'API.h']]],
   ['int_5ftype',['INT_TYPE',['../menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a7fee88532b24b79bf2a88688a5d681d7',1,'menu.h']]],
+  ['integrate_5fgyro_5fw',['integrate_gyro_w',['../localization_8c.html#ac103fff038e59ff45f292b9b5138182e',1,'localization.c']]],
   ['interrupt_5fedge_5fboth',['INTERRUPT_EDGE_BOTH',['../_a_p_i_8h.html#ab0ce5d2283faeb80389f8b54a925a15b',1,'API.h']]],
   ['interrupt_5fedge_5ffalling',['INTERRUPT_EDGE_FALLING',['../_a_p_i_8h.html#a5d01e5bd9626ca29af3e1e9385e58427',1,'API.h']]],
   ['interrupt_5fedge_5frising',['INTERRUPT_EDGE_RISING',['../_a_p_i_8h.html#a8bd8f2fe1b638ebff63e702d14880b12',1,'API.h']]],
@@ -38,6 +40,6 @@ var searchData=
   ['isenabled',['isEnabled',['../_a_p_i_8h.html#a56722b6f1c22da04885bc9853148bb71',1,'API.h']]],
   ['isjoystickconnected',['isJoystickConnected',['../_a_p_i_8h.html#a72aa0bce6b1d8ee298a60617f8fa74da',1,'API.h']]],
   ['isonline',['isOnline',['../_a_p_i_8h.html#a1eceab28885f971892b9d4fc76e0e542',1,'API.h']]],
-  ['itoa',['itoa',['../vlib_8h.html#aa1986c48c027cf691df679c7a4968126',1,'itoa(int a, char *buffer, int digits):&#160;vlib.c'],['../vlib_8c.html#aa1986c48c027cf691df679c7a4968126',1,'itoa(int a, char *buffer, int digits):&#160;vlib.c']]],
+  ['itoa_5fbad',['itoa_bad',['../vlib_8h.html#a08fa7134f8b9a80eeba25f9feab22892',1,'itoa_bad(int a, char *buffer, int digits):&#160;vlib.c'],['../vlib_8c.html#a08fa7134f8b9a80eeba25f9feab22892',1,'itoa_bad(int a, char *buffer, int digits):&#160;vlib.c']]],
   ['inthezonea',['InTheZoneA',['../md__r_e_a_d_m_e.html',1,'']]]
 ];
