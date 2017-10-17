@@ -49,8 +49,5 @@ void initialize() {
   printf("init\n\n");
   analogCalibrate(1);
   analogCalibrate(2);
-  return;
-  init_main_lcd(uart1);
-  init_error(true, uart2);
-  init_encoders();
+  init_slew();
 }

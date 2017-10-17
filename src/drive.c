@@ -27,14 +27,14 @@ void update_drive_motors(){
 
 void set_side_speed(side_t side, int speed){
   if(side == RIGHT || side == BOTH){
-    motorSet(MOTOR_BACK_RIGHT , speed);
-    motorSet(MOTOR_FRONT_RIGHT, speed);
-    motorSet(MOTOR_MIDDLE_RIGHT, speed);
+    set_motor_slew(MOTOR_BACK_RIGHT , speed);
+    set_motor_slew(MOTOR_FRONT_RIGHT, speed);
+    set_motor_slew(MOTOR_MIDDLE_RIGHT, speed);
   }
   if(side == LEFT || side == BOTH){
-    motorSet(MOTOR_BACK_LEFT, speed);
-    motorSet(MOTOR_MIDDLE_LEFT, speed);
-    motorSet(MOTOR_FRONT_LEFT, speed);
+    set_motor_slew(MOTOR_BACK_LEFT, speed);
+    set_motor_slew(MOTOR_MIDDLE_LEFT, speed);
+    set_motor_slew(MOTOR_FRONT_LEFT, speed);
   }
 }
 

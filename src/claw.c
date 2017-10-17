@@ -23,15 +23,15 @@ void update_claw() {
 
     int motor_value = p/100 + d/1000 + integral/10000;
     last = current_pot;
-    printf("P: %d I: %d D: %d\n", p/100, d/1000, integral/10000);
-    motorSet(CLAW_MOTOR, -motor_value);
+    //printf("P: %d I: %d D: %d\n", p/100, d/1000, integral/10000);
+    setMotorImmediate(CLAW_MOTOR, -motor_value);
   }
 }
 
 void open_claw() {
-  motorSet(CLAW_MOTOR, 70);
+  setMotorImmediate(CLAW_MOTOR, 70);
 }
 
 void close_claw() {
-  motorSet(CLAW_MOTOR, -70);
+  setMotorImmediate(CLAW_MOTOR, -70);
 }

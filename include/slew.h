@@ -61,6 +61,8 @@ void init_slew();
 * @author Chris Jerrett
 *@date 9/14/17
 **/
-void set_motor_slew(int motor, char speed);
+void set_motor_slew(int motor, int speed);
+
+void setMotorImmediate(int motor, int speed);
 
 #endif
