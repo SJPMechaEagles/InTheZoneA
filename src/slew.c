@@ -22,7 +22,6 @@ void updateMotors(){
     int offset = diff > 0 ? (int)ceil((diff)/4) : (int)floor((diff)/4);
     int n = curr_speed + offset;
     motors_curr_speeds[i] = n;
-    printf("Port: %d, Set: %d Curr: %d Diff %d New: %d\n", i, set_speed, curr_speed, diff, n);
     motorSet(i, n);
   }
 }
@@ -35,7 +34,7 @@ void init_slew(){
   }
   printf("Init Slew");
   mutex = mutexCreate();
-  slew = taskRunLoop(updateMotors, 100);
+  slew = taskRunLoop(updateMotors, 40);
   initialized = true;
 }
 
