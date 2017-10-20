@@ -35,6 +35,7 @@
  * This task should never exit; it should end with some kind of infinite loop, even if empty.
  */
 void operatorControl() {
+	init_slew();
 	delay(10);
 	while (1) {
 		update_drive_motors();

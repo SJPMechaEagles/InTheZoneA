@@ -63,6 +63,6 @@ void init_slew();
 **/
 void set_motor_slew(int motor, int speed);
 
-void setMotorImmediate(int motor, int speed);
+void set_motor_immediate(int motor, int speed);
 
 #endif
