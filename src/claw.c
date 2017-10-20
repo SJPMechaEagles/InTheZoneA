@@ -10,6 +10,8 @@ void update_claw() {
   } else if(joystickGetDigital(MASTER, 8, JOY_LEFT)) {
     open_claw();
   } else {
+    set_motor_immediate(CLAW_MOTOR, 0);
+    return;
     int current_pot = analogRead(CLAW_POT);
     static int last = 0;
     if(!pressed_last) {
@@ -24,14 +26,14 @@ void update_claw() {
     int motor_value = p/100 + d/1000 + integral/10000;
     last = current_pot;
     //printf("P: %d I: %d D: %d\n", p/100, d/1000, integral/10000);
-    setMotorImmediate(CLAW_MOTOR, -motor_value);
+    set_motor_immediate(CLAW_MOTOR, -motor_value);
   }
 }
 
 void open_claw() {
-  setMotorImmediate(CLAW_MOTOR, 70);
+  set_motor_immediate(CLAW_MOTOR, 70);
 }
 
 void close_claw() {
-  setMotorImmediate(CLAW_MOTOR, -70);
+  set_motor_immediate(CLAW_MOTOR, -70);
 }
