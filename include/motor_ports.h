@@ -47,6 +47,7 @@
 #define MOTOR_LIFT_TOP_RIGHT 8
 #define MOTOR_LIFT_TOP_LEFT 9
 
-#define CLAW_MOTOR 1
+#define CLAW_MOTOR 10
+#define INTAKE_MOTOR 1
 
 #endif
