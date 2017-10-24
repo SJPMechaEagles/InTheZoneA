@@ -16,6 +16,7 @@
 #include "lifter.h"
 #include "localization.h"
 #include "claw.h"
+#include "mobile_goal_intake.h"
 
 /**
  * Runs the user operator control code. This function will be started in its own task with the
@@ -41,6 +42,7 @@ void operatorControl() {
 		update_drive_motors();
 		update_lifter();
 		update_claw();
+		updateIntake();
 		delay(10);
 	}
 }

@@ -9,7 +9,7 @@ static void lower_intake() {
 }
 
 static void raise_intake() {
-  set_intake_motor(100);
+  set_intake_motor(-100);
 }
 
 void updateIntake() {

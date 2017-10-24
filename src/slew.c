@@ -31,7 +31,7 @@ void init_slew(){
   memset(motors_set_speeds, 0, sizeof(int) * 10);
   memset(motors_curr_speeds, 0, sizeof(int) * 10);
   motorStopAll();
-  info("Init Slew");
+  info("Did Init Slew");
   speeds_mutex = mutexCreate();
   slew = taskRunLoop(updateMotors, 100);
   initialized = true;
@@ -43,7 +43,8 @@ void deinitslew(){
 
 void set_motor_slew(int motor, int speed){
   if(!initialized) {
-    debug("Slew Not Initialized");
+    debug("Slew Not Initialized! Initializing");
+    init_slew();
   }
   mutexTake(speeds_mutex, 10);
   motors_set_speeds[motor-1] = speed;
@@ -51,6 +52,10 @@ void set_motor_slew(int motor, int speed){
 }
 
 void set_motor_immediate(int motor, int speed) {
+  if(!initialized) {
+    debug("Slew Not Initialized! Initializing");
+    init_slew();
+  }
   motorSet(motor, speed);
   mutexTake(speeds_mutex, 10);
   motors_curr_speeds[motor-1] = speed;
