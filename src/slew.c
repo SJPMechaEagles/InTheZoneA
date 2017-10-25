@@ -28,6 +28,9 @@ void updateMotors(){
 }
 
 void init_slew(){
+  if(initialized) {
+    warning("Trying to init already init slew");
+  }
   memset(motors_set_speeds, 0, sizeof(int) * 10);
   memset(motors_curr_speeds, 0, sizeof(int) * 10);
   motorStopAll();
@@ -39,6 +42,7 @@ void init_slew(){
 
 void deinitslew(){
   taskDelete(slew);
+  initialized = false;
 }
 
 void set_motor_slew(int motor, int speed){

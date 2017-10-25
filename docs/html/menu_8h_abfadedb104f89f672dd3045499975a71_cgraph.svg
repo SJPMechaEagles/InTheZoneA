@@ -219,7 +219,7 @@ var sectionId = 'dynsection-2';
 <!-- Node17 -->
 <g id="node12" class="node">
 <title>Node17</title>
-<g id="a_node12"><a xlink:href="_a_p_i_8h.html#a040d36e5c81594fd05d5042f3e540aed" target="_top" xlink:title="lcdReadButtons">
+<g id="a_node12"><a xlink:href="_a_p_i_8h.html#a04541d90f60b1ccd3d036656673c972d" target="_top" xlink:title="lcdReadButtons">
 <polygon fill="none" stroke="#000000" points="278.5459,-74.5 278.5459,-92.5 365.1465,-92.5 365.1465,-74.5 278.5459,-74.5"/>
 <text text-anchor="middle" x="321.8462" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcdReadButtons</text>
 </a>
@@ -255,7 +255,7 @@ var sectionId = 'dynsection-2';
 <!-- Node19 -->
 <g id="node14" class="node">
 <title>Node19</title>
-<g id="a_node14"><a xlink:href="_a_p_i_8h.html#aae51423c0e108729bbb4d26a1b265eb3" target="_top" xlink:title="lcdSetText">
+<g id="a_node14"><a xlink:href="_a_p_i_8h.html#a5555228be96449af952aed5bcabb6d8d" target="_top" xlink:title="lcdSetText">
 <polygon fill="none" stroke="#000000" points="290.7798,-.5 290.7798,-18.5 352.9126,-18.5 352.9126,-.5 290.7798,-.5"/>
 <text text-anchor="middle" x="321.8462" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcdSetText</text>
 </a>

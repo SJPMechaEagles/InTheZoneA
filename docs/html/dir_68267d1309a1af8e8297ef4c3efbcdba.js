@@ -12,6 +12,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "localization.c", "localization_8c.html", "localization_8c" ],
     [ "log.c", "log_8c.html", "log_8c" ],
     [ "menu.c", "menu_8c.html", "menu_8c" ],
+    [ "mobile_goal_intake.c", "mobile__goal__intake_8c.html", "mobile__goal__intake_8c" ],
     [ "opcontrol.c", "opcontrol_8c.html", "opcontrol_8c" ],
     [ "slew.c", "slew_8c.html", "slew_8c" ],
     [ "vlib.c", "vlib_8c.html", "vlib_8c" ],

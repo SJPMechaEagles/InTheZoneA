@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['raise_5fintake',['raise_intake',['../mobile__goal__intake_8c.html#a4899f9a8621015313e6312ce085da979',1,'mobile_goal_intake.c']]],
   ['raise_5flifter',['raise_lifter',['../lifter_8c.html#a7452163ed7946b6262f41de51c62dfd4',1,'lifter.c']]],
   ['ramp_5fproportion',['RAMP_PROPORTION',['../slew_8h.html#a4a3ff8667251227c99f8f4c81e9ff467',1,'slew.h']]],
   ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],

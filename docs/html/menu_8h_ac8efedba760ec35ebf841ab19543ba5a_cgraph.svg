@@ -77,7 +77,7 @@
 <!-- Node34 -->
 <g id="node6" class="node">
 <title>Node34</title>
-<g id="a_node6"><a xlink:href="_a_p_i_8h.html#aeafd247b27813122cfee95e0cecf188b" target="_top" xlink:title="lcdSetBacklight">
+<g id="a_node6"><a xlink:href="_a_p_i_8h.html#aab53a247d88151a6623c20fa1ea940b0" target="_top" xlink:title="lcdSetBacklight">
 <polygon fill="none" stroke="#000000" points="381.9941,-37.5 381.9941,-55.5 466.3633,-55.5 466.3633,-37.5 381.9941,-37.5"/>
 <text text-anchor="middle" x="424.1787" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcdSetBacklight</text>
 </a>
@@ -92,7 +92,7 @@
 <!-- Node35 -->
 <g id="node7" class="node">
 <title>Node35</title>
-<g id="a_node7"><a xlink:href="_a_p_i_8h.html#aa53f19724bcf9f7bf1b4468b5982553b" target="_top" xlink:title="lcdClear">
+<g id="a_node7"><a xlink:href="_a_p_i_8h.html#a5fa1d119fe3e836b5519f97eae7a1272" target="_top" xlink:title="lcdClear">
 <polygon fill="none" stroke="#000000" points="397.8389,-.5 397.8389,-18.5 450.5186,-18.5 450.5186,-.5 397.8389,-.5"/>
 <text text-anchor="middle" x="424.1787" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcdClear</text>
 </a>
