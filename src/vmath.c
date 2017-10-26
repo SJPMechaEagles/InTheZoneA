@@ -33,3 +33,8 @@ struct polar_cord cartesian_to_polar(float x, float y) {
 struct polar_cord cartesian_cord_to_polar(struct cord cords) {
   return cartesian_to_polar(cords.x, cords.y);
 }
+
+double sind(double angle) {
+    double angleradians = angle * M_PI / 180.0f;
+    return sin(angleradians);
+}

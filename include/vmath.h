@@ -10,6 +10,7 @@
 #define _VMATH_H_
 
 #include <math.h>
+#define M_PI 3.14159265358979323846
 
 /**
 * @brief A struct that contains polar coordinates.
@@ -61,4 +62,6 @@ struct polar_cord cartesian_to_polar(float x, float y);
 */
 struct polar_cord cartesian_cord_to_polar(struct cord cords);
 
+
+double sind(double angle);
 #endif

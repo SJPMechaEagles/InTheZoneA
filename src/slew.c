@@ -12,17 +12,16 @@ static bool initialized = false;
 
 void updateMotors(){
   //Take back half approach
-  //Not linear but equal to setSpeed(1-(1/2)^x)``
+  //Not linear but equal to setSpeed(1-(1/2)^x)
   for(unsigned int i = 0; i < 9; i++) {
     mutexTake(speeds_mutex, 10);
     int set_speed = (motors_set_speeds[i]);
     int curr_speed = motors_curr_speeds[i];
     mutexGive(speeds_mutex);
     int diff = set_speed - curr_speed;
-    int offset = diff; //diff > 0 ? (int)ceil((diff)/4) : (int)floor((diff)/2);
+    int offset = diff;
     int n = curr_speed + offset;
     motors_curr_speeds[i] = n;
-    printf("%d: %d:\n",i+1, n);
     motorSet(i+1, n);
   }
 }
@@ -42,6 +41,8 @@ void init_slew(){
 
 void deinitslew(){
   taskDelete(slew);
+  memset(motors_set_speeds, 0, sizeof(int) * 10);
+  memset(motors_curr_speeds, 0, sizeof(int) * 10);
   initialized = false;
 }
 

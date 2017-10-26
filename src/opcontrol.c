@@ -17,6 +17,8 @@
 #include "localization.h"
 #include "claw.h"
 #include "mobile_goal_intake.h"
+#include "vmath.h"
+#include "lifter.h"
 
 /**
  * Runs the user operator control code. This function will be started in its own task with the
@@ -43,6 +45,9 @@ void operatorControl() {
 		update_lifter();
 		update_claw();
 		updateIntake();
-		delay(10);
+		delay(1000);
+		printf("Potentiometer Boi: %d \n", analogReadCalibrated(2) + 680);
+		printf("Potentiometer Degree: %f \n", lifterPotentiometerToDegree(analogReadCalibrated(2)));
+		printf("Potentiometer Height %f\n", getLifterHeight());
 	}
 }
