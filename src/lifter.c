@@ -21,6 +21,7 @@ void update_lifter() {
   if(joystickGetDigital(MASTER, 8, JOY_UP)) lower_lifter();
   else if(joystickGetDigital(MASTER, 8, JOY_DOWN)) raise_lifter();
   else set_lifter_motors(0);
+  return;
 }
 
 float lifterPotentiometerToDegree(int x){
@@ -31,5 +32,8 @@ float lifterPotentiometerToDegree(int x){
 
 double getLifterHeight() {
   int degree = lifterPotentiometerToDegree(analogReadCalibrated(2));
-  return 2 * (LENGTH + (1.75 / sind(degree))) * sind(degree) + HEIGHT;
+  double sinDeg = sind(degree);
+  float overshoot = (1.75 / sinDeg);
+  return (LENGTH_LONG + LENGTH_SHORT + 2 * overshoot) * sinDeg + HEIGHT;
+    //(LENGTH_LONG + overshoot) * sinDeg + HEIGHT + (LENGTH_SHORT + overshoot) * sinDeg;
 }

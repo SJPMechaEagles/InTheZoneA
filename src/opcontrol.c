@@ -39,6 +39,7 @@
  */
 void operatorControl() {
 	init_slew();
+	analogCalibrate(2);
 	delay(10);
 	while (1) {
 		update_drive_motors();
@@ -46,7 +47,8 @@ void operatorControl() {
 		update_claw();
 		updateIntake();
 		delay(1000);
-		printf("Potentiometer Boi: %d \n", analogReadCalibrated(2) + 680);
+		printf("Potentiometer Boi: %d \n", analogReadCalibrated(2));
+		printf("Potentiometer uncal: %d \n", analogRead(2));
 		printf("Potentiometer Degree: %f \n", lifterPotentiometerToDegree(analogReadCalibrated(2)));
 		printf("Potentiometer Height %f\n", getLifterHeight());
 	}
