@@ -53,15 +53,12 @@ float lifterPotentiometerToDegree(int x){
   return f;
 }
 
-int getLifterTicks() {
+unsigned int getLifterTicks() {
   return analogReadCalibrated(2);
 }
 
 
 double getLifterHeight() {
-  int degree = lifterPotentiometerToDegree(analogReadCalibrated(2));
-  double sinDeg = sind(degree);
-  float overshoot = (1.75 / sinDeg);
-  return (LENGTH_LONG + LENGTH_SHORT + 2 * overshoot) * sinDeg + HEIGHT;
-    //(LENGTH_LONG + overshoot) * sinDeg + HEIGHT + (LENGTH_SHORT + overshoot) * sinDeg;
+  unsigned int ticks = getLifterTicks();
+  return (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) + 0.0198 * ticks + 2.3033);
 }
