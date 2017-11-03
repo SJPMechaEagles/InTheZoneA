@@ -20,4 +20,6 @@ float lifterPotentiometerToDegree(int x);
 
 double getLifterHeight();
 
+int getLifterTicks();
+
 #endif

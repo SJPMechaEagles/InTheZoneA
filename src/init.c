@@ -48,6 +48,6 @@ void initialize() {
   setTeamName("9228A");
   printf("init\n\n");
   analogCalibrate(1);
-  
+  init_encoders();
   init_slew();
 }
