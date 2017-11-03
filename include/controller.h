@@ -11,6 +11,11 @@
 #include "vmath.h"
 #include <API.h>
 
+#define RIGHT_BUTTONS 8
+#define LEFT_BUTTONS 7
+#define RIGHT_BUMPERS 5
+#define LEFT_BUMPERS 6
+
 /**
 * @brief the master controller
 * @date 9/1/2017

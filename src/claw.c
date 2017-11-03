@@ -1,15 +1,14 @@
 #include "claw.h"
-#include "sensor_ports.h"
 
 void update_claw() {
   static bool changed = true;
   static int target = 0;
-  if(joystickGetDigital(MASTER, 8, JOY_RIGHT)){
+  if(joystickGetDigital(CLAW_OPEN)){
     changed = true;
     target = getClawTicks();
     close_claw();
   }
-  else if(joystickGetDigital(MASTER, 8, JOY_LEFT)) {
+  else if(joystickGetDigital(CLAW_CLOSE)) {
     changed = true;
     target = getClawTicks();
     open_claw();
@@ -23,7 +22,7 @@ void update_claw() {
     int p = target - getClawTicks();
     i += p;
     int d = target - getClawTicks();
-    int motorVal = -p/10 - d/100 -i/400;
+    int motorVal = -p/CLAW_P - d/CLAW_D -i/CLAW_I;
     //printf("%d\n", motorVal);
 
     set_claw_motor(motorVal);
@@ -41,9 +40,9 @@ int getClawTicks(){
 }
 
 void open_claw() {
-  set_motor_immediate(CLAW_MOTOR, 70);
+  set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED);
 }
 
 void close_claw() {
-  set_motor_immediate(CLAW_MOTOR, -70);
+  set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED);
 }
