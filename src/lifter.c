@@ -10,22 +10,22 @@ void set_lifter_pos(int pos) {
 }
 
 void raise_lifter(){
-  set_lifter_motors(127);
+  set_lifter_motors(MAX_SPEED);
 }
 
 void lower_lifter(){
-  set_lifter_motors(-127);
+  set_lifter_motors(MIN_SPEED);
 }
 
 void update_lifter() {
   static bool changed = true;
   static int target = 0;
-  if(joystickGetDigital(MASTER, 8, JOY_UP)){
+  if(joystickGetDigital(LIFTER_UP)){
     changed = true;
     target = getLifterTicks();
     lower_lifter();
   }
-  else if(joystickGetDigital(MASTER, 8, JOY_DOWN)) {
+  else if(joystickGetDigital(LIFTER_DOWN)) {
     changed = true;
     target = getLifterTicks();
     raise_lifter();
@@ -39,7 +39,7 @@ void update_lifter() {
     int p = target - getLifterTicks();
     i += p;
     int d = target - getLifterTicks();
-    int motorVal = -p/10 - d/100 -i/400;
+    int motorVal = -p/LIFTER_P - d/LIFTER_D -i/LIFTER_I;
     printf("%d\n", motorVal);
 
     set_lifter_motors(motorVal);
@@ -48,13 +48,11 @@ void update_lifter() {
 }
 
 float lifterPotentiometerToDegree(int x){
-  //Magic math by Christian
-  float f = (x - 680) / 4095.0 * 250.0;
-  return f;
+  return (x - TICK_DIFF) / TICK_MAX * DEG_MAX;
 }
 
 unsigned int getLifterTicks() {
-  return analogReadCalibrated(2);
+  return analogReadCalibrated(LIFTER);
 }
 
 

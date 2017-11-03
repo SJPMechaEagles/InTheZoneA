@@ -1,6 +1,9 @@
 #ifndef _MOTOT_PORTS_H_
 #define _MOTOR_PORTS_H_
 
+#define MAX_SPEED 127
+#define MIN_SPEED -127
+
 /**
 * @brief Front right drive motor of robot base
 * @author Christian Desimone
