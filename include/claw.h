@@ -18,7 +18,7 @@
 
 void update_claw();
 void set_claw_motor(const char v);
-int getClawTicks();
+unsigned int getClawTicks();
 void open_claw();
 void close_claw();
 

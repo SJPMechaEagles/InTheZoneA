@@ -35,7 +35,7 @@ void set_claw_motor(const char v){
   set_motor_slew(CLAW_MOTOR, v);
 }
 
-int getClawTicks(){
+unsigned int getClawTicks(){
   return analogReadCalibrated(CLAW_POT);
 }
 
