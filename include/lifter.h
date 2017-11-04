@@ -10,14 +10,14 @@
 
 #define TICK_DIFF 680
 
-#define LIFTER_P 10
-#define LIFTER_D 100
-#define LIFTER_I 400
+#define LIFTER_P .09
+#define LIFTER_D .003
+#define LIFTER_I .0005
 
 
-#define LENGTH_LONG (13.5)
-#define HEIGHT (19.1 - 3.8)
-#define LENGTH_SHORT (10.5)
+#define LENGTH_LONG 13.5
+#define HEIGHT 19.1 - 3.8
+#define LENGTH_SHORT 10.5
 
 #define LIFTER_UP MASTER, RIGHT_BUTTONS, JOY_UP
 #define LIFTER_DOWN MASTER, RIGHT_BUTTONS, JOY_DOWN
@@ -32,6 +32,6 @@ float lifterPotentiometerToDegree(int x);
 
 double getLifterHeight();
 
-unsigned int getLifterTicks();
+int getLifterTicks();
 
 #endif

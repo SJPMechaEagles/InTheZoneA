@@ -19,7 +19,7 @@ void lower_lifter(){
 
 void update_lifter() {
   static bool changed = true;
-  static int target = 0;
+  static unsigned int target = 0;
   if(joystickGetDigital(LIFTER_UP)){
     changed = true;
     target = getLifterTicks();
@@ -33,13 +33,12 @@ void update_lifter() {
   else {
     static int i = 0;
     if(changed) {
-      target = getLifterTicks();
       i = 0;
     }
     int p = target - getLifterTicks();
     i += p;
     int d = target - getLifterTicks();
-    int motorVal = -p/LIFTER_P - d/LIFTER_D -i/LIFTER_I;
+    int motorVal = -p * LIFTER_P + d * LIFTER_D + i * LIFTER_I;
     printf("%d\n", motorVal);
 
     set_lifter_motors(motorVal);
@@ -51,7 +50,7 @@ float lifterPotentiometerToDegree(int x){
   return (x - TICK_DIFF) / TICK_MAX * DEG_MAX;
 }
 
-unsigned int getLifterTicks() {
+int getLifterTicks() {
   return analogReadCalibrated(LIFTER);
 }
 
