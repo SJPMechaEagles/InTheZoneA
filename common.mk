@@ -1,76 +1,49 @@
 # Universal C Makefile for MCU targets
+# Top-level template file to configure build
 
-# Path to project root (for top-level, so the project is in ./; first-level, ../; etc.)
-ROOT=.
-# Binary output directory
-BINDIR=$(ROOT)/bin
-# Subdirectories to include in the build
-SUBDIRS=src
+MAKE_COMMAND=make
 
-# Nothing below here needs to be modified by typical users
+# Makefile for IFI VeX Cortex Microcontroller (STM32F103VD series)
+DEVICE=VexCortex
+# Libraries to include in the link (use -L and -l) e.g. -lm, -lmyLib
+LIBRARIES=$(wildcard $(ROOT)/firmware/*.a) -lgcc -lm
+# Prefix for ARM tools (must be on the path)
+MCUPREFIX=arm-none-eabi-
+# Flags for the assembler
+MCUAFLAGS=-mthumb -mcpu=cortex-m3 -mlittle-endian
+# Flags for the compiler
+MCUCFLAGS=-mthumb -mcpu=cortex-m3 -mlittle-endian -mfloat-abi=soft
+# Flags for the linker
+MCULFLAGS=-nostartfiles -Wl,-static -Bfirmware -Wl,-u,VectorTable -Wl,-T -Xlinker firmware/cortex.ld
+# Prepares the elf file by converting it to a binary that java can write
+MCUPREPARE=$(OBJCOPY) $(OUT) -O binary $(BINDIR)/$(OUTBIN)
+# Advanced sizing flags
+SIZEFLAGS=
+# Uploads program using java
+UPLOAD=@java -jar firmware/uniflash.jar vex $(BINDIR)/$(OUTBIN)
+# Flashes program using the PROS CLI flash command
+FLASH=pros flash -f $(BINDIR)/$(OUTBIN)
 
-# Include common aspects of this project
--include $(ROOT)/common.mk
+# Advanced options
+ASMEXT=s
+CEXT=c
+CPPEXT=cpp
+HEXT=h
+INCLUDE=-I$(ROOT)/include -I$(ROOT)/src
+OUTBIN=output.bin
+OUTNAME=output.elf
 
-ASMSRC:=$(wildcard *.$(ASMEXT))
-ASMOBJ:=$(patsubst %.o,$(BINDIR)/%.o,$(ASMSRC:.$(ASMEXT)=.o))
-HEADERS:=$(wildcard *.$(HEXT))
-CSRC=$(wildcard *.$(CEXT))
-COBJ:=$(patsubst %.o,$(BINDIR)/%.o,$(CSRC:.$(CEXT)=.o))
-CPPSRC:=$(wildcard *.$(CPPEXT))
-CPPOBJ:=$(patsubst %.o,$(BINDIR)/%.o,$(CPPSRC:.$(CPPEXT)=.o))
-OUT:=$(BINDIR)/$(OUTNAME)
+# Flags for programs
+AFLAGS:=$(MCUAFLAGS)
+ARFLAGS:=$(MCUCFLAGS)
+CCFLAGS:=-c -Wall $(MCUCFLAGS) -Os -ffunction-sections -fsigned-char -fomit-frame-pointer -fsingle-precision-constant
+CFLAGS:=$(CCFLAGS) -std=gnu99 -Werror=implicit-function-declaration
+CPPFLAGS:=$(CCFLAGS) -fno-exceptions -fno-rtti -felide-constructors
+LDFLAGS:=-Wall $(MCUCFLAGS) $(MCULFLAGS) -Wl,--gc-sections
 
-.PHONY: all clean flash upload upload-legacy _force_look
-
-# By default, compile program
-all: $(BINDIR) $(OUT)
-
-# Remove all intermediate object files (remove the binary directory)
-clean:
-	-rm -f $(OUT)
-	-rm -rf $(BINDIR)
-
-# Uploads program to device
-upload: all
-	$(FLASH)
-
-# Alias to upload, more consistent with our terminology
-flash: upload
-
-# Uploads program to device using legacy uniflasher JAR file
-upload-legacy: all
-	$(UPLOAD)
-
-# Phony force-look target
-_force_look:
-	@true
-
-# Looks in subdirectories for things to make
-$(SUBDIRS): %: _force_look
-	@$(MAKE) --no-print-directory -C $@
-
-# Ensure binary directory exists
-$(BINDIR):
-	-@mkdir -p $(BINDIR)
-
-# Compile program
-$(OUT): $(SUBDIRS) $(ASMOBJ) $(COBJ) $(CPPOBJ)
-	@echo LN $(BINDIR)/*.o $(LIBRARIES) to $@
-	@$(CC) $(LDFLAGS) $(BINDIR)/*.o $(LIBRARIES) -o $@
-	@$(MCUPREFIX)size $(SIZEFLAGS) $(OUT)
-	$(MCUPREPARE)
-
-# Assembly source file management
-$(ASMOBJ): $(BINDIR)/%.o: %.$(ASMEXT) $(HEADERS)
-	@echo AS $<
-	@$(AS) $(AFLAGS) -o $@ $<
-
-# Object management
-$(COBJ): $(BINDIR)/%.o: %.$(CEXT) $(HEADERS)
-	@echo CC $(INCLUDE) $<
-	$(CC) $(INCLUDE) $(CFLAGS) -o $@ $<
-
-$(CPPOBJ): $(BINDIR)/%.o: %.$(CPPEXT) $(HEADERS)
-	@echo CPC $(INCLUDE) $<
-	@$(CPPCC) $(INCLUDE) $(CPPFLAGS) -o $@ $<
+# Tools used in program
+AR:=$(MCUPREFIX)ar
+AS:=$(MCUPREFIX)as
+CC:=$(MCUPREFIX)gcc
+CPPCC:=$(MCUPREFIX)g++
+OBJCOPY:=$(MCUPREFIX)objcopy

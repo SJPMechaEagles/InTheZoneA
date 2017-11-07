@@ -7,13 +7,11 @@ void update_claw() {
     changed = true;
     target = getClawTicks();
     close_claw();
-  }
-  else if(joystickGetDigital(CLAW_CLOSE)) {
+  } else if(joystickGetDigital(CLAW_CLOSE)) {
     changed = true;
     target = getClawTicks();
     open_claw();
-  }
-  else {
+  } else {
     static int i = 0;
     if(changed) {
       target = getClawTicks();
@@ -22,7 +20,7 @@ void update_claw() {
     int p = target - getClawTicks();
     i += p;
     int d = target - getClawTicks();
-    int motorVal = -p/CLAW_P - d/CLAW_D -i/CLAW_I;
+    int motorVal = -p * CLAW_P + d * CLAW_D  + i * CLAW_I;
     //printf("%d\n", motorVal);
 
     set_claw_motor(motorVal);
@@ -30,9 +28,14 @@ void update_claw() {
   }
 }
 
+void set_claw(enum claw_state state) {
+  if(state == open) {
+    set_claw_motor(100);
+  }
+}
 
 void set_claw_motor(const char v){
-  set_motor_slew(CLAW_MOTOR, v);
+  set_motor_immediate(CLAW_MOTOR, v);
 }
 
 unsigned int getClawTicks(){

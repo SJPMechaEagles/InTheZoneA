@@ -1,8 +1,8 @@
 #include "lifter.h"
 
-void set_lifter_motors(const char v) {
-  set_motor_slew(MOTOR_LIFT_TOP_RIGHT, v);
-  set_motor_slew(MOTOR_LIFT_TOP_LEFT, -v);
+void set_lifter_motors(const int v) {
+  set_motor_immediate(MOTOR_LIFT_TOP_RIGHT, v);
+  set_motor_immediate(MOTOR_LIFT_TOP_LEFT, -v);
 }
 
 void set_lifter_pos(int pos) {
@@ -20,29 +20,26 @@ void lower_lifter(){
 void update_lifter() {
   static bool changed = true;
   static unsigned int target = 0;
+  static int last_error = 0;
+  static long long i = 0;
   if(joystickGetDigital(LIFTER_UP)){
     changed = true;
+    i = 0;
     target = getLifterTicks();
     lower_lifter();
   }
   else if(joystickGetDigital(LIFTER_DOWN)) {
     changed = true;
+    i = 0;
     target = getLifterTicks();
     raise_lifter();
   }
   else {
-    static int i = 0;
-    if(changed) {
-      i = 0;
-    }
-    int p = target - getLifterTicks();
+    int p = getLifterTicks() - target;
+    int d = p - last_error;
     i += p;
-    int d = target - getLifterTicks();
-    int motorVal = -p * LIFTER_P + d * LIFTER_D + i * LIFTER_I;
-    printf("%d\n", motorVal);
-
-    set_lifter_motors(motorVal);
-    changed = false;
+    int motor = LIFTER_P * p + LIFTER_D * d + LIFTER_I * i;
+    set_lifter_motors(motor);
   }
 }
 
