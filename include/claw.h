@@ -16,6 +16,9 @@
 #define CLAW_CLOSE MASTER, RIGHT_BUTTONS, JOY_LEFT
 #define CLAW_OPEN MASTER, RIGHT_BUTTONS, JOY_RIGHT
 
+#define CLAW_CLOSE_VAL 1070
+#define CLAW_OPEN_VAL 21
+
 enum claw_state {
   open,
   close

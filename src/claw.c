@@ -21,11 +21,11 @@ void update_claw() {
   static int target = 0;
   if(joystickGetDigital(CLAW_OPEN)){
     changed = true;
-    target = CLAW_OPEN;
+    target = CLAW_OPEN_VAL;
     close_claw();
   } else if(joystickGetDigital(CLAW_CLOSE)) {
     changed = true;
-    target = CLAW_CLOSE;
+    target = CLAW_CLOSE_VAL;
     open_claw();
   } else {
     static long long i = 0;
