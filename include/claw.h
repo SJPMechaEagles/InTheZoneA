@@ -7,9 +7,9 @@
 #include "motor_ports.h"
 #include "sensor_ports.h"
 
-#define CLAW_P .10
-#define CLAW_D .00
-#define CLAW_I .004
+#define CLAW_P .06
+#define CLAW_D 00
+#define CLAW_I 00
 #define MAX_CLAW_SPEED 70
 #define MIN_CLAW_SPEED -70
 

@@ -22,22 +22,16 @@ void update_claw() {
   if(joystickGetDigital(CLAW_OPEN)){
     changed = true;
     target = CLAW_OPEN_VAL;
-    close_claw();
   } else if(joystickGetDigital(CLAW_CLOSE)) {
     changed = true;
     target = CLAW_CLOSE_VAL;
-    open_claw();
   } else {
     static long long i = 0;
-    if(changed) {
-      target = getClawTicks();
-      i = 0;
-    }
     int p = target - getClawTicks();
     i += p;
     int d = target - getClawTicks();
-    int motorVal = -p * CLAW_P + d * CLAW_D  + i * CLAW_I;
-    //printf("%d\n", motorVal);
+    int motorVal = p * CLAW_P + d * CLAW_D  + i * CLAW_I;
+    printf("P: %f\t, D: %f\t, I: %f\n", p*CLAW_P , d*CLAW_D, i*CLAW_D);
 
     set_claw_motor(motorVal);
     changed = false;
