@@ -10,8 +10,8 @@
 
 #define TICK_DIFF 680
 
-#define LIFTER_P 0
-#define LIFTER_D 0
+#define LIFTER_P .1
+#define LIFTER_D .00
 #define LIFTER_I 0
 
 

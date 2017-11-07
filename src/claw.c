@@ -28,7 +28,7 @@ void update_claw() {
     target = CLAW_CLOSE;
     open_claw();
   } else {
-    static int i = 0;
+    static long long i = 0;
     if(changed) {
       target = getClawTicks();
       i = 0;

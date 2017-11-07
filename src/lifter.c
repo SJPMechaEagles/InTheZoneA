@@ -25,7 +25,7 @@ void update_lifter() {
   if(joystickGetDigital(LIFTER_UP)){
     changed = true;
     i = 0;
-    target = getLifterTicks();
+    target = getLifterTicks() + 200;
     lower_lifter();
   }
   else if(joystickGetDigital(LIFTER_DOWN)) {
@@ -39,6 +39,7 @@ void update_lifter() {
     int d = p - last_error;
     i += p;
     int motor = LIFTER_P * p + LIFTER_D * d + LIFTER_I * i;
+    printf("P: %f, D: %f, I: %f\n", p*LIFTER_P , d*LIFTER_D, i*LIFTER_I);
     set_lifter_motors(motor);
   }
 }
