@@ -10,7 +10,7 @@
 
 #define TICK_DIFF 680
 
-#define LIFTER_P .1
+#define LIFTER_P .2
 #define LIFTER_D .00
 #define LIFTER_I 0
 
@@ -21,6 +21,9 @@
 
 #define LIFTER_UP MASTER, RIGHT_BUTTONS, JOY_UP
 #define LIFTER_DOWN MASTER, RIGHT_BUTTONS, JOY_DOWN
+
+#define LIFTER_UP_PARTNER PARTNER, RIGHT_BUTTONS, JOY_UP
+#define LIFTER_DOWN_PARTNER PARTNER, RIGHT_BUTTONS, JOY_DOWN
 
 void set_lifter_motors(const int);
 

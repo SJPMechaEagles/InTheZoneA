@@ -47,5 +47,4 @@ void initializeIO() {
 void initialize() {
   setTeamName("9228A");
   printf("init\n\n");
-  analogCalibrate(1);
 }

@@ -7,17 +7,17 @@
 #include "motor_ports.h"
 #include "sensor_ports.h"
 
-#define CLAW_P .06
-#define CLAW_D 00
-#define CLAW_I 00
+#define CLAW_P .35
+#define CLAW_D .3
+#define CLAW_I .002
 #define MAX_CLAW_SPEED 70
 #define MIN_CLAW_SPEED -70
 
 #define CLAW_CLOSE MASTER, RIGHT_BUTTONS, JOY_LEFT
 #define CLAW_OPEN MASTER, RIGHT_BUTTONS, JOY_RIGHT
 
-#define CLAW_CLOSE_VAL 1070
-#define CLAW_OPEN_VAL 21
+#define CLAW_CLOSE_VAL 1027
+#define CLAW_OPEN_VAL 0
 
 enum claw_state {
   open,
@@ -25,7 +25,7 @@ enum claw_state {
 };
 
 void update_claw();
-void set_claw_motor(const char v);
+void set_claw_motor(const int v);
 unsigned int getClawTicks();
 void open_claw();
 void close_claw();

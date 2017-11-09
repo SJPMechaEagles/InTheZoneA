@@ -22,13 +22,13 @@ void update_lifter() {
   static unsigned int target = 0;
   static int last_error = 0;
   static long long i = 0;
-  if(joystickGetDigital(LIFTER_UP)){
+  if(joystickGetDigital(LIFTER_UP) || joystickGetDigital(LIFTER_UP_PARTNER)){
     changed = true;
     i = 0;
     target = getLifterTicks() + 200;
     lower_lifter();
   }
-  else if(joystickGetDigital(LIFTER_DOWN)) {
+  else if(joystickGetDigital(LIFTER_DOWN) || joystickGetDigital(LIFTER_DOWN_PARTNER)) {
     changed = true;
     i = 0;
     target = getLifterTicks() - 300;

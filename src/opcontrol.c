@@ -39,7 +39,7 @@
  */
 void operatorControl() {
 	init_slew();
-	analogCalibrate(2);
+	analogCalibrate(LIFTER);
 	delay(10);
 	while (1) {
 		update_drive_motors();
