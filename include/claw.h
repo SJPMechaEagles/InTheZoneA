@@ -7,9 +7,9 @@
 #include "motor_ports.h"
 #include "sensor_ports.h"
 
-#define CLAW_P .35
-#define CLAW_D .3
-#define CLAW_I .002
+#define CLAW_P .3
+#define CLAW_D 0
+#define CLAW_I 0
 #define MAX_CLAW_SPEED 70
 #define MIN_CLAW_SPEED -70
 
@@ -17,7 +17,7 @@
 #define CLAW_OPEN MASTER, RIGHT_BUTTONS, JOY_RIGHT
 
 #define CLAW_CLOSE_VAL 1027
-#define CLAW_OPEN_VAL 0
+#define CLAW_OPEN_VAL 800
 
 enum claw_state {
   open,

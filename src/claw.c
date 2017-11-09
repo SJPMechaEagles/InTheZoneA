@@ -17,7 +17,8 @@ void update_claw() {
     i += p;
     int d = target - getClawTicks();
     int motorVal = p * CLAW_P + d * CLAW_D  + i * CLAW_I;
-    printf("P: %f\t, D: %f\t, I: %f\n", p*CLAW_P , d*CLAW_D, i*CLAW_D);
+    printf("P: %f\t, D: %f\t, I: %f\n", p*CLAW_P , d*CLAW_D, i*CLAW_I);
+    printf("MOTOR: %d\n", -motorVal);
 
     set_claw_motor(-motorVal);
     //changed = false;
