@@ -63,5 +63,8 @@ struct polar_cord cartesian_to_polar(float x, float y);
 struct polar_cord cartesian_cord_to_polar(struct cord cords);
 
 
+int min(int a, int b);
+int max(int a, int b);
+
 double sind(double angle);
 #endif
