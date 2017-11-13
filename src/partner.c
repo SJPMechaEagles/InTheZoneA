@@ -1,6 +1,6 @@
 #include "partner.h"
 
-static enum CONTROLL_MODE mode;
+static enum CONTROLL_MODE mode = MAIN_CONTROLLER_MODE;
 
 enum CONTROLL_MODE get_mode() {
   return mode;
