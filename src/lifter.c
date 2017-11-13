@@ -41,6 +41,12 @@ void update_lifter() {
     target = getLifterTicks() - 300;
     raise_lifter();
   }
+  else if(joystickGetDigital(LIFTER_DRIVER_LOAD) && get_mode() == MAIN_CONTROLLER_MODE){
+    changed = true;
+    i = 0;
+    target = 450;
+
+  }
   else {
     int p = getLifterTicks() - target;
     int d = p - last_error;
@@ -51,6 +57,7 @@ void update_lifter() {
     } else {
         set_lifter_motors(motor);
     }
+    printf("Target: %u \n", target);
   }
 }
 
