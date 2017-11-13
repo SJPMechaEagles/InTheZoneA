@@ -38,3 +38,14 @@ double sind(double angle) {
     double angleradians = angle * M_PI / 180.0f;
     return sin(angleradians);
 }
+
+int min(int a, int b) {
+  if(a < b) return a;
+  return b;
+}
+
+
+int max(int a, int b) {
+  if(a > b) return a;
+  return b;
+}
