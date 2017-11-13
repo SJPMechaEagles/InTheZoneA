@@ -20,11 +20,11 @@ void update_drive_motors(){
   int x = 0;
   int y = 0;
   if(partner) {
-    x = (joystickGetAnalog(PARTNER, 4));
-    y = (joystickGetAnalog(PARTNER, 2));
+    x = (joystickGetAnalog(PARTNER, 3));
+    y = (joystickGetAnalog(PARTNER, 1));
   } else {
-    x = -(joystickGetAnalog(MASTER, 4));
-    y = (joystickGetAnalog(MASTER, 2));
+    x = -(joystickGetAnalog(MASTER, 3));
+    y = (joystickGetAnalog(MASTER, 1));
   }
 
   x = joystickExp(x);
