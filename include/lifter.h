@@ -7,6 +7,7 @@
 #include "slew.h"
 #include "controller.h"
 #include "potentiometer.h"
+#include "partner.h"
 
 #define TICK_DIFF 680
 

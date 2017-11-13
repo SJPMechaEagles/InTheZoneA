@@ -11,17 +11,11 @@ static float joystickExp(int joystickVal);
 
 void update_drive_motors(){
 
-  static bool partner = false;
-  if(joystickGetDigital(PARTNER, 7, JOY_LEFT)) {
-    partner = false;
-  } else if(joystickGetDigital(PARTNER, 7, JOY_RIGHT)) {
-    partner = true;
-  }
   int x = 0;
   int y = 0;
   if(partner) {
-    x = (joystickGetAnalog(PARTNER, 3));
-    y = (joystickGetAnalog(PARTNER, 1));
+    y = (joystickGetAnalog(PARTNER, 3));
+    x = (joystickGetAnalog(PARTNER, 1));
   } else {
     x = -(joystickGetAnalog(MASTER, 3));
     y = (joystickGetAnalog(MASTER, 1));
