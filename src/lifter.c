@@ -44,8 +44,8 @@ void update_lifter() {
   else if(joystickGetDigital(LIFTER_DRIVER_LOAD) && get_mode() == MAIN_CONTROLLER_MODE){
     changed = true;
     i = 0;
-    target = 450;
-
+    target = 650;
+    raise_lifter();
   }
   else {
     int p = getLifterTicks() - target;
