@@ -47,7 +47,7 @@ void operatorControl() {
 		update_lifter();
 		update_claw();
 		updateIntake();
-		update_control()
+		update_control();
 		printf("%d\n", getClawTicks());
 		delay(100);
 	}

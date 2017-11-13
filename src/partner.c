@@ -1,4 +1,5 @@
 #include "partner.h"
+
 static enum CONTROLL_MODE mode;
 
 enum CONTROLL_MODE get_mode() {

@@ -9,6 +9,7 @@
 #define _DRIVE_H_
 
 #include <API.h>
+#include "partner.h"
 
 #define DEADSPOT 30
 #define THRESHOLD 30
