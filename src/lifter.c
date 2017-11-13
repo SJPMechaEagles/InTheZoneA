@@ -28,14 +28,14 @@ void update_lifter() {
   static int last_error = 0;
   static long long i = 0;
   if((joystickGetDigital(LIFTER_UP) && get_mode() == MAIN_CONTROLLER_MODE)
-   || (joystickGetDigital(LIFTER_UP_PARTNER && get_mode() == PARTNER_CONTROLLER_MODE))){
+   || (joystickGetDigital(LIFTER_UP_PARTNER) && get_mode() == PARTNER_CONTROLLER_MODE)){
     changed = true;
     i = 0;
     target = getLifterTicks() + 200;
     lower_lifter();
   }
   else if((joystickGetDigital(LIFTER_DOWN) && get_mode() == MAIN_CONTROLLER_MODE)
-   || (joystickGetDigital(LIFTER_DOWN_PARTNER && get_mode() == PARTNER_CONTROLLER_MODE))) {
+   || (joystickGetDigital(LIFTER_DOWN_PARTNER) && get_mode() == PARTNER_CONTROLLER_MODE)) {
     changed = true;
     i = 0;
     target = getLifterTicks() - 300;
