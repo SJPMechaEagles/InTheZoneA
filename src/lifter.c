@@ -1,7 +1,7 @@
 #include "lifter.h"
 
 void set_lifter_motors(const int v) {
-  set_motor_immediate(MOTOR_LIFT_TOP_RIGHT, v);
+  set_motor_immediate(MOTOR_LIFT_TOP_RIGHT, -v);
   set_motor_immediate(MOTOR_LIFT_TOP_LEFT, -v);
 }
 
@@ -44,7 +44,6 @@ void update_lifter() {
     int d = p - last_error;
     i += p;
     int motor = LIFTER_P * p + LIFTER_D * d + LIFTER_I * i;
-    //printf("P: %f\t, D: %f\t, I: %f\n", p*LIFTER_P , d*LIFTER_D, i*LIFTER_I);
     if (motor < 10) {
         set_lifter_motors(0);
     } else {
