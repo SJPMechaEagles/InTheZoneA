@@ -14,8 +14,8 @@ void update_drive_motors(){
   int x = 0;
   int y = 0;
   if(get_mode() == PARTNER_CONTROLLER_MODE) {
-    y = (joystickGetAnalog(PARTNER, 3));
-    x = (joystickGetAnalog(PARTNER, 1));
+    x = (joystickGetAnalog(PARTNER, 3));
+    y = (joystickGetAnalog(PARTNER, 1));
   } else {
     x = -(joystickGetAnalog(MASTER, 3));
     y = (joystickGetAnalog(MASTER, 1));
