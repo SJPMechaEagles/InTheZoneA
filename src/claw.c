@@ -1,7 +1,25 @@
 #include "claw.h"
 
 void update_claw() {
-  //static bool changed = true;
+  static int ticksOld = 0;
+  if(joystickGetDigital(CLAW_CLOSE)){
+    close_claw();
+    ticksOld = getClawTicks();
+  }
+  else if(joystickGetDigital(CLAW_OPEN)){
+    open_claw();
+    ticksOld = getClawTicks();
+  }
+  else if(getClawTicks() - ticksOld < 100){
+    set_claw_motor(10);
+  }
+  else if(getClawTicks() - ticksOld > -100){
+    set_claw_motor(-10);
+  }
+  else{
+    set_claw_motor(0);
+  }
+  /*//static bool changed = true;
   static long long i = 0;
   static int target = CLAW_CLOSE_VAL;
   if(joystickGetDigital(CLAW_OPEN)){
@@ -24,12 +42,7 @@ void update_claw() {
     //changed = false;
 
   }
-}
-
-void set_claw(enum claw_state state) {
-  if(state == open) {
-    set_claw_motor(100);
-  }
+  */
 }
 
 void set_claw_motor(const int v){
@@ -37,7 +50,7 @@ void set_claw_motor(const int v){
 }
 
 unsigned int getClawTicks(){
-  return analogRead(CLAW_POT);
+  return analogReadCalibrated(CLAW_POT);
 }
 
 void open_claw() {

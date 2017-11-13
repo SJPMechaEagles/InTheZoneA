@@ -19,11 +19,6 @@
 #define CLAW_CLOSE_VAL 1027
 #define CLAW_OPEN_VAL 800
 
-enum claw_state {
-  open,
-  close
-};
-
 void update_claw();
 void set_claw_motor(const int v);
 unsigned int getClawTicks();
