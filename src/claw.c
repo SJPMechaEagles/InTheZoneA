@@ -10,10 +10,7 @@ void update_claw() {
     open_claw();
     ticksOld = getClawTicks();
   }
-  else if(getClawTicks() < 200){
-    set_claw_motor(20);
-  }
-  else if(getClawTicks() > 20){
+  else if(getClawTicks() > 200){
     set_claw_motor(-20);
   }
   else{
