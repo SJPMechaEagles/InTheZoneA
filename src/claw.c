@@ -23,7 +23,7 @@ void set_claw_motor(const int v){
 }
 
 unsigned int getClawTicks(){
-  return analogReadCalibrated(CLAW_POT);
+  return analogRead(CLAW_POT);
 }
 
 void open_claw() {

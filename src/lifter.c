@@ -57,7 +57,7 @@ void update_lifter() {
     } else {
         set_lifter_motors(motor);
     }
-    printf("Target: %u \n", target);
+    printf("Target: %u, motor: %d \n", target, motor);
   }
 }
 
@@ -66,7 +66,7 @@ float lifterPotentiometerToDegree(int x){
 }
 
 int getLifterTicks() {
-  return analogReadCalibrated(LIFTER);
+  return analogRead(LIFTER);
 }
 
 

@@ -14,18 +14,18 @@ void update_drive_motors(){
   int x = 0;
   int y = 0;
   if(get_mode() == PARTNER_CONTROLLER_MODE) {
-    x = (joystickGetAnalog(PARTNER, 3));
-    y = (joystickGetAnalog(PARTNER, 1));
+    x = (joystickGetAnalog(PARTNER, 4));
+    y = -(joystickGetAnalog(PARTNER, 2));
   } else {
-    x = -(joystickGetAnalog(MASTER, 3));
-    y = (joystickGetAnalog(MASTER, 1));
+    x = (joystickGetAnalog(MASTER, 4));
+    y = -(joystickGetAnalog(MASTER, 2));
   }
 
   x = joystickExp(x);
   y = joystickExp(y);
 
   int r = (x + y);
-  int l = -(x - y);
+  int l = -(y - x);
 
   set_side_speed(LEFT, l);
   set_side_speed(RIGHT, r);
