@@ -14,6 +14,7 @@ void updateMotors(){
   //Take back half approach
   //Not linear but equal to setSpeed(1-(1/2)^x)
   for(unsigned int i = 0; i < 9; i++) {
+    if(motors_set_speeds[i] == motors_curr_speeds[i]) continue;
     mutexTake(speeds_mutex, 10);
     int set_speed = (motors_set_speeds[i]);
     int curr_speed = motors_curr_speeds[i];
