@@ -10,6 +10,14 @@
 static float joystickExp(int joystickVal);
 static int thresh = 10;
 
+int getThresh(){
+  return thresh;
+}
+
+void setThresh(int t){
+  thresh = t;
+}
+
 void update_drive_motors(){
 
   int x = 0;

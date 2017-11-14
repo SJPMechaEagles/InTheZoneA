@@ -8,6 +8,7 @@
 #include "controller.h"
 #include "potentiometer.h"
 #include "partner.h"
+#include "drive.h"
 
 #define TICK_DIFF 680
 

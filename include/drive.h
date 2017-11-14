@@ -33,6 +33,8 @@ typedef enum side{
 **/
 void set_side_speed(side_t side, int speed);
 
+void setThresh(int t);
+
 /**
 * @brief Updates the drive motors during teleop
 * @author Christian Desimone
