@@ -11,8 +11,8 @@
 #include <API.h>
 #include "partner.h"
 
-#define DEADSPOT 30
-#define THRESHOLD 30
+#define DEADSPOT 10
+#define THRESHOLD 10
 /**
 * @brief enumeration indication side of the robot.
 * @author Christian Desimone
