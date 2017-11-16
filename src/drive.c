@@ -32,10 +32,10 @@ void update_drive_motors(){
 
   //x = joystickExp(x);
   //y = joystickExp(y);
-  if(x < thresh){
+  if(x < thresh && x > -thresh){
     x = 0;
   }
-  if(y < thresh){
+  if(y < thresh && y > -thresh){
     y = 0;
   }
 

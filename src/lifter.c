@@ -38,16 +38,29 @@ void update_lifter() {
    || (joystickGetDigital(LIFTER_DOWN_PARTNER) && get_mode() == PARTNER_CONTROLLER_MODE)) {
     changed = true;
     i = 0;
-    target = getLifterTicks() - 100;
+    target = getLifterTicks();
     raise_lifter();
   }
   else if(joystickGetDigital(LIFTER_DRIVER_LOAD) && get_mode() == MAIN_CONTROLLER_MODE){
     changed = true;
     i = 0;
-    target = 650;
-    raise_lifter();
+    int k = 0;
+    if(getLifterTicks() < 1270){
+      lower_lifter();
+
+    }
+    if(getLifterTicks() > 1230){
+      raise_lifter();
+      //k = 100;
+    }
+    target = 1250;
+    //raise_lifter();
   }
   else {
+    if(get_mode() == PARTNER_CONTROLLER_MODE){
+      set_lifter_motors(0);
+      return;
+    }
     int p = getLifterTicks() - target;
     int d = p - last_error;
     i += p;
@@ -57,7 +70,6 @@ void update_lifter() {
     } else {
         set_lifter_motors(motor);
     }
-    printf("Target: %u, motor: %d \n", target, motor);
     if(target > 450){
       setThresh(0);
     }
