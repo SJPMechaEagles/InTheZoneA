@@ -45,6 +45,7 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
+  imeInitializeAll();
   setTeamName("9228A");
   printf("init\n\n");
 }

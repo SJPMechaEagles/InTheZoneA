@@ -43,15 +43,15 @@ void update_drive_motors(){
   int l = -(x - y);
 
   set_side_speed(LEFT, l);
-  set_side_speed(RIGHT, r);
+  set_side_speed(RIGHT, -r);
 
 }
 
 void set_side_speed(side_t side, int speed){
   if(side == RIGHT || side == BOTH){
-    set_motor_slew(MOTOR_BACK_RIGHT , speed);
-    set_motor_slew(MOTOR_FRONT_RIGHT, speed);
-    set_motor_slew(MOTOR_MIDDLE_RIGHT, speed);
+    set_motor_slew(MOTOR_BACK_RIGHT , -speed);
+    set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
+    set_motor_slew(MOTOR_MIDDLE_RIGHT, -speed);
   }
   if(side == LEFT || side == BOTH){
     set_motor_slew(MOTOR_BACK_LEFT, speed);
