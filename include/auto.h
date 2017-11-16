@@ -9,9 +9,9 @@
 #define FRONT_LEFT_DRIVE 0
 #define MID_LEFT_DRIVE 1
 #define MID_RIGHT_DRIVE 4
-#define STOP_ONE 5000
-#define STOP_TWO 1000
-#define GOAL_HEIGHT 1700
+#define STOP_ONE 400
+#define STOP_TWO 0
+#define GOAL_HEIGHT 1300
 
 
 #endif

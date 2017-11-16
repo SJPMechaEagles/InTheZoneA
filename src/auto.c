@@ -28,7 +28,6 @@
  * so, the robot will await a switch to another mode or disable/enable cycle.
  */
 void autonomous() {
-  return;
   init_slew();
   delay(10);
   printf("auto\n");
@@ -40,28 +39,24 @@ void autonomous() {
   counts_drive = counts_drive_left + counts_drive_right;
   counts_drive /= 2;
   close_claw();
+  imeReset(MID_LEFT_DRIVE);
+  imeReset(MID_RIGHT_DRIVE);
+  delay(300);
+  while(analogRead(LIFTER) < GOAL_HEIGHT){
+    set_lifter_motors(-127);
+  }
+  set_lifter_motors(0);
   while(counts_drive < STOP_ONE){
     set_side_speed(BOTH, 127);
     imeGet(MID_LEFT_DRIVE, &counts_drive_left);
     imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
     counts_drive = counts_drive_left + counts_drive_right;
     counts_drive /= 2;
-    printf("count:\n", counts_drive);
+    printf("count: %d\n", counts_drive);
   }
   set_side_speed(BOTH, 0);
-  while(analogRead(LIFTER) < GOAL_HEIGHT){
-    set_lifter_motors(-127);
-  }
-  set_lifter_motors(0);
-  while(counts_drive < STOP_TWO){
-    set_side_speed(BOTH, 127);
-    imeGet(MID_LEFT_DRIVE, &counts_drive_left);
-    imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
-    counts_drive = counts_drive_left + counts_drive_right;
-    counts_drive /= 2;
-  }
-  set_side_speed(BOTH, 0);
-
+  delay(300);
   open_claw();
+  delay(1000);
   deinitslew();
 }
