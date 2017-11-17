@@ -8,7 +8,7 @@
 #include "log.h"
 
 static float joystickExp(int joystickVal);
-static int thresh = 10;
+static int thresh = 30;
 
 int getThresh(){
   return thresh;

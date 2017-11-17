@@ -70,12 +70,7 @@ void update_lifter() {
     } else {
         set_lifter_motors(motor);
     }
-    if(target > 450){
-      setThresh(0);
-    }
-    else{
-      setThresh(30);
-    }
+    
   }
 }
 

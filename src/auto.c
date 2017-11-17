@@ -29,30 +29,35 @@
  */
 void autonomous() {
   init_slew();
+
+
   delay(10);
   printf("auto\n");
   int counts_drive_left;
   int counts_drive_right;
   int counts_drive;
+  imeReset(MID_LEFT_DRIVE);
+  imeReset(MID_RIGHT_DRIVE);
   imeGet(MID_LEFT_DRIVE, &counts_drive_left);
   imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
   counts_drive = counts_drive_left + counts_drive_right;
   counts_drive /= 2;
   close_claw();
-  imeReset(MID_LEFT_DRIVE);
-  imeReset(MID_RIGHT_DRIVE);
+
   delay(300);
+  //unsigned long time = millis();
   while(analogRead(LIFTER) < GOAL_HEIGHT){
     set_lifter_motors(-127);
   }
   set_lifter_motors(0);
-  while(counts_drive < STOP_ONE){
+  while(counts_drive_left < 500){
     set_side_speed(BOTH, 127);
     imeGet(MID_LEFT_DRIVE, &counts_drive_left);
     imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
     counts_drive = counts_drive_left + counts_drive_right;
     counts_drive /= 2;
     printf("count: %d\n", counts_drive);
+    //if(millis() - time > 1000) break;
   }
   set_side_speed(BOTH, 0);
   delay(300);

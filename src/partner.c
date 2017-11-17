@@ -7,6 +7,7 @@ enum CONTROLL_MODE get_mode() {
 }
 
 void update_control() {
+  delay(10);
   if(joystickGetDigital(PARTNER, 7, JOY_LEFT)) {
     mode = MAIN_CONTROLLER_MODE;
   } else if(joystickGetDigital(PARTNER, 7, JOY_RIGHT)) {
