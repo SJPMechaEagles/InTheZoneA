@@ -50,7 +50,7 @@ void autonomous() {
     set_lifter_motors(-127);
   }
   set_lifter_motors(0);
-  while(counts_drive_left < 500){
+  while(counts_drive_left < STOP_ONE){
     set_side_speed(BOTH, 127);
     imeGet(MID_LEFT_DRIVE, &counts_drive_left);
     imeGet(MID_RIGHT_DRIVE, &counts_drive_right);

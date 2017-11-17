@@ -18,7 +18,7 @@ void update_claw() {
       printf("CLOSE\n");
     }
 
-    if(getClawTicks() < 1600) return;
+    //if(getClawTicks() < 1600) return;
 
     int d = (p - last_error);
     int motor = CLAW_P * p;
