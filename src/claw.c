@@ -16,11 +16,6 @@ void update_claw() {
       p = getClawTicks() - CLAW_CLOSE_VAL;
     }
 
-<<<<<<< HEAD
-=======
-    //if(getClawTicks() < 1600) return;
-
->>>>>>> b1dcd7b066da52ff16cad1c5834b4ab23dad99fa
     int d = (p - last_error);
     int motor = CLAW_P * p;
     set_claw_motor(motor);
