@@ -10,7 +10,7 @@
  * aborts the program.
  * This is ment to act like Python's assert keyword.
  **/
-void assert(int assertion, char* message) {
+void assert(int assertion, const char* message) {
     if (assertion == 0) {
         fprintf(stderr, "%s\n", message);
         exit(1);
