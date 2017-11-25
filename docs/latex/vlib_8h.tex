@@ -51,24 +51,12 @@ Chris Jerrett
 \index{vlib.\+h@{vlib.\+h}!calloc\+\_\+real@{calloc\+\_\+real}}
 \index{calloc\+\_\+real@{calloc\+\_\+real}!vlib.\+h@{vlib.\+h}}
 \subsubsection{\texorpdfstring{calloc\+\_\+real()}{calloc\_real()}}
-{\footnotesize\ttfamily void$\ast$ calloc\+\_\+real (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{elements,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line 53 of file vlib.\+c.
+{\footnotesize\ttfamily void$\ast$ calloc\+\_\+real (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{elements,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
 Referenced by init\+\_\+menu\+\_\+var().
 
-
-\begin{DoxyCode}
-53                                                       \{
-54   \textcolor{keywordtype}{void} *mem = malloc(elements * size);
-55   memset(mem, 0, elements * size);
-56   \textcolor{keywordflow}{return} mem;
-57 \}
-\end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}

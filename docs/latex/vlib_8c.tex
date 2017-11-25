@@ -11,8 +11,6 @@ Include dependency graph for vlib.\+c\+:\nopagebreak
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void $\ast$ \hyperlink{vlib_8c_a1115803c6996aebfbf67434810df7b4b}{calloc\+\_\+real} (size\+\_\+t elements, size\+\_\+t size)
-\item 
 void \hyperlink{vlib_8c_a8805990ed667939e615e4a98950b8bd1}{ftoa\+\_\+bad} (float a, char $\ast$buffer, int precision)
 \begin{DoxyCompactList}\small\item\em converts a float to string. \end{DoxyCompactList}\item 
 int \hyperlink{vlib_8c_a08fa7134f8b9a80eeba25f9feab22892}{itoa\+\_\+bad} (int a, char $\ast$buffer, int digits)
@@ -22,35 +20,6 @@ void \hyperlink{vlib_8c_aad7fea725cb4b198ace1aa3df5051244}{reverse} (char $\ast$
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{vlib_8c_a1115803c6996aebfbf67434810df7b4b}\label{vlib_8c_a1115803c6996aebfbf67434810df7b4b}} 
-\index{vlib.\+c@{vlib.\+c}!calloc\+\_\+real@{calloc\+\_\+real}}
-\index{calloc\+\_\+real@{calloc\+\_\+real}!vlib.\+c@{vlib.\+c}}
-\subsubsection{\texorpdfstring{calloc\+\_\+real()}{calloc\_real()}}
-{\footnotesize\ttfamily void$\ast$ calloc\+\_\+real (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{elements,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line 53 of file vlib.\+c.
-
-
-
-Referenced by init\+\_\+menu\+\_\+var().
-
-
-\begin{DoxyCode}
-53                                                       \{
-54   \textcolor{keywordtype}{void} *mem = malloc(elements * size);
-55   memset(mem, 0, elements * size);
-56   \textcolor{keywordflow}{return} mem;
-57 \}
-\end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=259pt]{vlib_8c_a1115803c6996aebfbf67434810df7b4b_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{vlib_8c_a8805990ed667939e615e4a98950b8bd1}\label{vlib_8c_a8805990ed667939e615e4a98950b8bd1}} 
 \index{vlib.\+c@{vlib.\+c}!ftoa\+\_\+bad@{ftoa\+\_\+bad}}
 \index{ftoa\+\_\+bad@{ftoa\+\_\+bad}!vlib.\+c@{vlib.\+c}}
@@ -113,14 +82,16 @@ Referenced by calculate\+\_\+current\+\_\+display().
 50   \}
 51 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=311pt]{vlib_8c_a8805990ed667939e615e4a98950b8bd1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -186,14 +157,16 @@ Referenced by calculate\+\_\+current\+\_\+display(), and ftoa\+\_\+bad().
 27    \textcolor{keywordflow}{return} i;
 28 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=220pt]{vlib_8c_a08fa7134f8b9a80eeba25f9feab22892_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -243,7 +216,8 @@ Referenced by itoa\+\_\+bad().
 10     \}
 11 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

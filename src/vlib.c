@@ -49,9 +49,3 @@ void ftoa_bad(float a, char *buffer, int precision) {
     itoa_bad((int)fpart, buffer + i + 1, precision);
   }
 }
-
-inline void *calloc_real(size_t elements, size_t size){
-  void *mem = malloc(elements * size);
-  memset(mem, 0, elements * size);
-  return mem;
-}

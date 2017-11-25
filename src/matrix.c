@@ -60,7 +60,6 @@ void freeMatrix(matrix* m) {
         }
 
         free(m);
-        m = NULL;
     }
     return;
 }
@@ -137,7 +136,6 @@ double traceMatrix(matrix* m) {
  **/
 matrix* meanMatrix(matrix* m) {
     int i, j;
-    double* ptr;
     matrix* out;
 
     assert(m->height > 0, "Height of matrix cannot be zero.");
@@ -145,6 +143,7 @@ matrix* meanMatrix(matrix* m) {
     out = makeMatrix(m->width, 1);
 
     for (i = 0; i < m->width; i++) {
+        double* ptr;
         out->data[i] = 0.0;
         ptr = &m->data[i];
         for (j = 0; j < m->height; j++) {
@@ -162,7 +161,7 @@ matrix* meanMatrix(matrix* m) {
  * n columns, where each element represents covariance of 2 columns.
  **/
 matrix* covarianceMatrix(matrix* m) {
-    int i, j, k, L = 0;
+    int i, j, k = 0;
     matrix* out;
     matrix* mean;
     double* ptrA;
@@ -200,11 +199,11 @@ matrix* covarianceMatrix(matrix* m) {
  **/
 matrix* transposeMatrix(matrix* m) {
     matrix* out = makeMatrix(m->height, m->width);
-    double* ptrOut;
     double* ptrM = m->data;
     int i, j;
 
     for (i = 0; i < m->height; i++) {
+        double* ptrOut;
         ptrOut = &out->data[i];
         for (j = 0; j < m->width; j++) {
             *ptrOut = *ptrM;
