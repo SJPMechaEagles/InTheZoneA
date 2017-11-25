@@ -51,6 +51,7 @@ var _a_p_i_8h =
     [ "TASK_SUSPENDED", "_a_p_i_8h.html#ac90388d86d6cacd27fb13b218daff9ba", null ],
     [ "uart1", "_a_p_i_8h.html#ad94ac6d5e345a1f794174d9bb7c6f69c", null ],
     [ "uart2", "_a_p_i_8h.html#a001e6f2f6c87e1e2bcff741ab586024e", null ],
+    [ "ULTRA_BAD_RESPONSE", "_a_p_i_8h.html#a1b7b9cb43946faa30303eb05ee8cf146", null ],
     [ "Encoder", "_a_p_i_8h.html#a8289b20280bf9db1462f60dae76d2939", null ],
     [ "Gyro", "_a_p_i_8h.html#a04e06985633aa933343fcfa3d7fb268d", null ],
     [ "InterruptHandler", "_a_p_i_8h.html#a5bbb1ca889e36aec7b4fce324c2662c4", null ],

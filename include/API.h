@@ -7,10 +7,8 @@
  * include main.h instead of referencing API.h by name, to better handle any nomenclature
  * changes to this file or its contents.
  *
- * Copyright (c) 2011-2017, Purdue University ACM SIGBots.
+ * Copyright (c) 2011-2016, Purdue University ACM SIGBots.
  * All rights reserved.
- *
- * PROS Kernel v.2.12.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -647,6 +645,11 @@ void encoderReset(Encoder enc);
 void encoderShutdown(Encoder enc);
 
 /**
+ * This value is returned if the sensor cannot find a reasonable value to return.
+ */
+#define ULTRA_BAD_RESPONSE -1
+
+/**
  * Reference type for an initialized ultrasonic sensor.
  *
  * Ultrasonic information is stored as an opaque pointer to a structure in memory; as this is a
@@ -656,9 +659,10 @@ typedef void * Ultrasonic;
 /**
  * Gets the current ultrasonic sensor value in centimeters.
  *
- * If no object was found, zero is returned. If the ultrasonic sensor was never started, the
- * return value is undefined. Round and fluffy objects can cause inaccurate values to be
- * returned.
+ * If no object was found or if the ultrasonic sensor is polled while it is pinging and waiting
+ * for a response, -1 (ULTRA_BAD_RESPONSE) is returned.
+ * If the ultrasonic sensor was never started, the return value is undefined. Round and fluffy
+ * objects can cause inaccurate values to be returned.
  *
  * @param ult the Ultrasonic object from ultrasonicInit() to read
  * @return the distance to the nearest object in centimeters
@@ -748,7 +752,7 @@ typedef int PROS_FILE;
 
 #ifndef FILE
 /**
- * For convenience, FILE is defined as PROS_FILE if it wasn't already defined. This provides 
+ * For convenience, FILE is defined as PROS_FILE if it wasn't already defined. This provides
  * backwards compatability with PROS, but also allows libraries such as newlib to be incorporated
  * into PROS projects. If you're not using C++/newlib, you can disregard this and just use FILE.
  */

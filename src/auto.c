@@ -50,17 +50,16 @@ void autonomous() {
     set_lifter_motors(-127);
   }
   set_lifter_motors(0);
-  while(counts_drive_left < 500){
+  while(counts_drive_left < 530){
     set_side_speed(BOTH, 127);
     imeGet(MID_LEFT_DRIVE, &counts_drive_left);
     imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
     counts_drive = counts_drive_left + counts_drive_right;
     counts_drive /= 2;
-    printf("count: %d\n", counts_drive);
     //if(millis() - time > 1000) break;
   }
   set_side_speed(BOTH, 0);
-  delay(300);
+  delay(1000);
   open_claw();
   delay(1000);
   deinitslew();

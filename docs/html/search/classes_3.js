@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['lcd_5fbuttons',['lcd_buttons',['../structlcd__buttons.html',1,'']]],
-  ['location',['location',['../structlocation.html',1,'']]]
+  ['encoder_5fodemtry',['encoder_odemtry',['../structencoder__odemtry.html',1,'']]]
 ];

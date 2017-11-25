@@ -11,6 +11,21 @@ Contains menu functionality and abstraction.
 {\ttfamily \#include $<$limits.\+h$>$}\newline
 {\ttfamily \#include $<$float.\+h$>$}\newline
 {\ttfamily \#include $<$vlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+Include dependency graph for menu.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{menu_8h__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,11 +55,11 @@ void \hyperlink{menu_8h_a05a36619ac6c9ba4544eddb83ee2a50d}{denint\+\_\+menu} (\h
 \begin{DoxyCompactList}\small\item\em Destroys a menu {\itshape  Menu must be freed or will cause memory leak {\itshape  }}\end{DoxyCompactList}\item 
 int \hyperlink{menu_8h_abfadedb104f89f672dd3045499975a71}{display\+\_\+menu} (\hyperlink{structmenu__t}{menu\+\_\+t} $\ast$menu)
 \begin{DoxyCompactList}\small\item\em Displays a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak! {\itshape  Will exit if robot is enabled. This prevents menu from locking up system in even of a reset. }}\end{DoxyCompactList}\item 
-\hyperlink{structmenu__t}{menu\+\_\+t} $\ast$ \hyperlink{menu_8h_a156a29228511b0010edbc3567a5dd9a8}{init\+\_\+menu\+\_\+float} (enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} type, float min, float max, float step, char $\ast$prompt)
+\hyperlink{structmenu__t}{menu\+\_\+t} $\ast$ \hyperlink{menu_8h_a5abb752733423805f59ef3b92e3c2e57}{init\+\_\+menu\+\_\+float} (enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} type, float \hyperlink{vmath_8c_abd8bbcfabb3ddef2ccaafb9928a37b95}{min}, float \hyperlink{vmath_8c_af082905f7eac6d03e92015146bbc1925}{max}, float step, const char $\ast$prompt)
 \begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak! {\itshape  }}\end{DoxyCompactList}\item 
-\hyperlink{structmenu__t}{menu\+\_\+t} $\ast$ \hyperlink{menu_8h_aa86d2c973646a6afc1525b88537c74e4}{init\+\_\+menu\+\_\+int} (enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} type, int min, int max, int step, char $\ast$prompt)
+\hyperlink{structmenu__t}{menu\+\_\+t} $\ast$ \hyperlink{menu_8h_ac8efedba760ec35ebf841ab19543ba5a}{init\+\_\+menu\+\_\+int} (enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} type, int \hyperlink{vmath_8c_abd8bbcfabb3ddef2ccaafb9928a37b95}{min}, int \hyperlink{vmath_8c_af082905f7eac6d03e92015146bbc1925}{max}, int step, const char $\ast$prompt)
 \begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak {\itshape  }}\end{DoxyCompactList}\item 
-\hyperlink{structmenu__t}{menu\+\_\+t} $\ast$ \hyperlink{menu_8h_a9388fba279e391fe22922a2d555e12b2}{init\+\_\+menu\+\_\+var} (enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} type, unsigned int nums, char $\ast$prompt, char $\ast$options,...)
+\hyperlink{structmenu__t}{menu\+\_\+t} $\ast$ \hyperlink{menu_8h_a3529988b0a7c12cb3f2ebb3cf5595594}{init\+\_\+menu\+\_\+var} (enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type} type, unsigned int nums, const char $\ast$prompt, char $\ast$options,...)
 \begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak {\itshape  }}\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -81,7 +96,7 @@ Chris Jerrett
 
 \hyperlink{structmenu__t}{menu\+\_\+t} 
 
-\hyperlink{menu_8c_adcee778eac0edb821427d32949106dc5}{create\+\_\+menu} 
+\hyperlink{menu_8c_aff4fd27ff7707295d91c67fa52a6b021}{create\+\_\+menu} 
 
 init\+\_\+menu 
 
@@ -139,15 +154,15 @@ S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE&Menu type allowing user to select a string from
 \end{DoxyEnumFields}
 
 
-Definition at line 28 of file menu.\+h.
+Definition at line 29 of file menu.\+h.
 
 
 \begin{DoxyCode}
-28                \{
-35   \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62a7fee88532b24b79bf2a88688a5d681d7}{INT\_TYPE},
-42   \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62ab2a272a88abadbaa481269e2506345c5}{FLOAT\_TYPE},
-48   \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c}{STRING\_TYPE}
-49 \};
+29                \{
+36   \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62a7fee88532b24b79bf2a88688a5d681d7}{INT\_TYPE},
+43   \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62ab2a272a88abadbaa481269e2506345c5}{FLOAT\_TYPE},
+49   \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c}{STRING\_TYPE}
+50 \};
 \end{DoxyCode}
 
 
@@ -217,7 +232,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 92 of file menu.\+c.
+Definition at line 101 of file menu.\+c.
 
 
 
@@ -225,11 +240,11 @@ References menu\+\_\+t\+::options, and menu\+\_\+t\+::prompt.
 
 
 \begin{DoxyCode}
-92                               \{
-93   free(menu->\hyperlink{structmenu__t_a5e3af2830962c2bbcb0a983f2c040c65}{prompt});
-94   \textcolor{keywordflow}{if}(menu->\hyperlink{structmenu__t_ad695cd88051e34817f0f582d4e43c33a}{options} != NULL) free(menu->\hyperlink{structmenu__t_ad695cd88051e34817f0f582d4e43c33a}{options});
-95   free(menu);
-96 \}
+101                               \{
+102   free(menu->\hyperlink{structmenu__t_a7bf29a030b7ed4a623c6b445587cc647}{prompt});
+103   \textcolor{keywordflow}{if}(menu->\hyperlink{structmenu__t_ad695cd88051e34817f0f582d4e43c33a}{options} != NULL) free(menu->\hyperlink{structmenu__t_ad695cd88051e34817f0f582d4e43c33a}{options});
+104   free(menu);
+105 \}
 \end{DoxyCode}
 \mbox{\Hypertarget{menu_8h_abfadedb104f89f672dd3045499975a71}\label{menu_8h_abfadedb104f89f672dd3045499975a71}} 
 \index{menu.\+h@{menu.\+h}!display\+\_\+menu@{display\+\_\+menu}}
@@ -257,37 +272,45 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 74 of file menu.\+c.
+Definition at line 83 of file menu.\+c.
 
 
 
-References calculate\+\_\+current\+\_\+display(), menu\+\_\+t\+::current, lcd\+\_\+get\+\_\+pressed\+\_\+buttons(), lcd\+\_\+print(), P\+R\+E\+S\+S\+ED, menu\+\_\+t\+::prompt, R\+E\+L\+E\+A\+S\+ED, and T\+O\+P\+\_\+\+R\+OW.
+References calculate\+\_\+current\+\_\+display(), menu\+\_\+t\+::current, delay(), is\+Enabled(), lcd\+\_\+get\+\_\+pressed\+\_\+buttons(), lcd\+\_\+print(), P\+R\+E\+S\+S\+ED, menu\+\_\+t\+::prompt, R\+E\+L\+E\+A\+S\+ED, and T\+O\+P\+\_\+\+R\+OW.
 
 
 \begin{DoxyCode}
-74                               \{
-75   \hyperlink{lcd_8h_adabd3f7cdda45119604b488caf22bba8}{lcd\_print}(\hyperlink{lcd_8h_a18bab754c6ad16bc35c48333091516c9}{TOP\_ROW}, menu->\hyperlink{structmenu__t_a5e3af2830962c2bbcb0a983f2c040c65}{prompt});
-76   \textcolor{comment}{//Will exit if teleop or autonomous begin. This is extremely important if robot disconnects or resets.}
-77   \textcolor{keywordflow}{while}(\hyperlink{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d}{lcd\_get\_pressed\_buttons}().middle == \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0}{RELEASED} && !isEnabled()) \{
-78     \textcolor{keywordtype}{char} val[16];
-79     \hyperlink{menu_8c_a0fb55c1213b23963d509b974d1254567}{calculate\_current\_display}(val, menu);
-80 
-81     \textcolor{keywordflow}{if}(\hyperlink{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d}{lcd\_get\_pressed\_buttons}().right == \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901}{PRESSED}) \{
-82       menu->\hyperlink{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}{current} += 1;
-83     \}
-84     \textcolor{keywordflow}{if}(\hyperlink{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d}{lcd\_get\_pressed\_buttons}().left == \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901}{PRESSED}) \{
-85       menu->\hyperlink{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}{current} -= 1;
-86     \}
-87     delay(500);
-88   \}
-89   \textcolor{keywordflow}{return} menu->\hyperlink{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}{current};
-90 \}
+83                               \{
+84   \hyperlink{lcd_8h_adabd3f7cdda45119604b488caf22bba8}{lcd\_print}(\hyperlink{lcd_8h_a18bab754c6ad16bc35c48333091516c9}{TOP\_ROW}, menu->\hyperlink{structmenu__t_a7bf29a030b7ed4a623c6b445587cc647}{prompt});
+85   \textcolor{comment}{//Will exit if teleop or autonomous begin. This is extremely important if robot disconnects or resets.}
+86   \textcolor{keywordflow}{while}(\hyperlink{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d}{lcd\_get\_pressed\_buttons}().middle == \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0}{RELEASED} && !
+      \hyperlink{_a_p_i_8h_a56722b6f1c22da04885bc9853148bb71}{isEnabled}()) \{
+87     \textcolor{keywordtype}{char} val[16];
+88     \hyperlink{menu_8c_a0fb55c1213b23963d509b974d1254567}{calculate\_current\_display}(val, menu);
+89 
+90     \textcolor{keywordflow}{if}(\hyperlink{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d}{lcd\_get\_pressed\_buttons}().right == \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901}{PRESSED}) \{
+91       menu->\hyperlink{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}{current} += 1;
+92     \}
+93     \textcolor{keywordflow}{if}(\hyperlink{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d}{lcd\_get\_pressed\_buttons}().left == \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901}{PRESSED}) \{
+94       menu->\hyperlink{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}{current} -= 1;
+95     \}
+96     \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay}(500);
+97   \}
+98   \textcolor{keywordflow}{return} menu->\hyperlink{structmenu__t_a2acb18066898677ec5e2dc40eec811c5}{current};
+99 \}
 \end{DoxyCode}
-\mbox{\Hypertarget{menu_8h_a156a29228511b0010edbc3567a5dd9a8}\label{menu_8h_a156a29228511b0010edbc3567a5dd9a8}} 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_abfadedb104f89f672dd3045499975a71_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_a5abb752733423805f59ef3b92e3c2e57}\label{menu_8h_a5abb752733423805f59ef3b92e3c2e57}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu\+\_\+float@{init\+\_\+menu\+\_\+float}}
 \index{init\+\_\+menu\+\_\+float@{init\+\_\+menu\+\_\+float}!menu.\+h@{menu.\+h}}
 \subsubsection{\texorpdfstring{init\+\_\+menu\+\_\+float()}{init\_menu\_float()}}
-{\footnotesize\ttfamily \hyperlink{structmenu__t}{menu\+\_\+t}$\ast$ init\+\_\+menu\+\_\+float (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{float}]{min,  }\item[{float}]{max,  }\item[{float}]{step,  }\item[{char $\ast$}]{prompt }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{structmenu__t}{menu\+\_\+t}$\ast$ init\+\_\+menu\+\_\+float (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{float}]{min,  }\item[{float}]{max,  }\item[{float}]{step,  }\item[{const char $\ast$}]{prompt }\end{DoxyParamCaption})}
 
 
 
@@ -320,27 +343,34 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 39 of file menu.\+c.
+Definition at line 48 of file menu.\+c.
 
 
 
-References create\+\_\+menu(), menu\+\_\+t\+::max\+\_\+f, menu\+\_\+t\+::min\+\_\+f, and menu\+\_\+t\+::step\+\_\+f.
+References create\+\_\+menu(), max(), menu\+\_\+t\+::max\+\_\+f, min(), menu\+\_\+t\+::min\+\_\+f, and menu\+\_\+t\+::step\+\_\+f.
 
 
 \begin{DoxyCode}
-39                                                                                             \{
-40   \hyperlink{structmenu__t}{menu\_t}* menu = \hyperlink{menu_8c_adcee778eac0edb821427d32949106dc5}{create\_menu}(type, prompt);
-41   menu->\hyperlink{structmenu__t_a0a6e4f711992fb69e8a57c2af1ab7a05}{min\_f} = min;
-42   menu->\hyperlink{structmenu__t_a14b11d0a7610484462c8a6e93068a2c1}{max\_f} = max;
-43   menu->\hyperlink{structmenu__t_a84cfd9226f6554c63ca9f4b11f94d12d}{step\_f} = step;
-44   \textcolor{keywordflow}{return} menu;
-45 \}
+48                                                                                                   \{
+49   \hyperlink{structmenu__t}{menu\_t}* menu = \hyperlink{menu_8c_aff4fd27ff7707295d91c67fa52a6b021}{create\_menu}(type, prompt);
+50   menu->\hyperlink{structmenu__t_a0a6e4f711992fb69e8a57c2af1ab7a05}{min\_f} = \hyperlink{vmath_8h_abd8bbcfabb3ddef2ccaafb9928a37b95}{min};
+51   menu->\hyperlink{structmenu__t_a14b11d0a7610484462c8a6e93068a2c1}{max\_f} = \hyperlink{vmath_8h_af082905f7eac6d03e92015146bbc1925}{max};
+52   menu->\hyperlink{structmenu__t_a84cfd9226f6554c63ca9f4b11f94d12d}{step\_f} = step;
+53   \textcolor{keywordflow}{return} menu;
+54 \}
 \end{DoxyCode}
-\mbox{\Hypertarget{menu_8h_aa86d2c973646a6afc1525b88537c74e4}\label{menu_8h_aa86d2c973646a6afc1525b88537c74e4}} 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a5abb752733423805f59ef3b92e3c2e57_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_ac8efedba760ec35ebf841ab19543ba5a}\label{menu_8h_ac8efedba760ec35ebf841ab19543ba5a}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu\+\_\+int@{init\+\_\+menu\+\_\+int}}
 \index{init\+\_\+menu\+\_\+int@{init\+\_\+menu\+\_\+int}!menu.\+h@{menu.\+h}}
 \subsubsection{\texorpdfstring{init\+\_\+menu\+\_\+int()}{init\_menu\_int()}}
-{\footnotesize\ttfamily \hyperlink{structmenu__t}{menu\+\_\+t}$\ast$ init\+\_\+menu\+\_\+int (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{int}]{step,  }\item[{char $\ast$}]{prompt }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{structmenu__t}{menu\+\_\+t}$\ast$ init\+\_\+menu\+\_\+int (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{int}]{step,  }\item[{const char $\ast$}]{prompt }\end{DoxyParamCaption})}
 
 
 
@@ -373,27 +403,34 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 31 of file menu.\+c.
+Definition at line 40 of file menu.\+c.
 
 
 
-References create\+\_\+menu(), menu\+\_\+t\+::max, menu\+\_\+t\+::min, and menu\+\_\+t\+::step.
+References create\+\_\+menu(), max(), menu\+\_\+t\+::max, min(), menu\+\_\+t\+::min, and menu\+\_\+t\+::step.
 
 
 \begin{DoxyCode}
-31                                                                                     \{
-32   \hyperlink{structmenu__t}{menu\_t}* menu = \hyperlink{menu_8c_adcee778eac0edb821427d32949106dc5}{create\_menu}(type, prompt);
-33   menu->\hyperlink{structmenu__t_a6891bc6c94f1e995cc62a05b13328de5}{min} = min;
-34   menu->\hyperlink{structmenu__t_ace9cbaecd7bf311be0ef230da657f406}{max} = max;
-35   menu->\hyperlink{structmenu__t_adc50450bc59ea66a8d67424adc46e24e}{step} = step;
-36   \textcolor{keywordflow}{return} menu;
-37 \}
+40                                                                                           \{
+41   \hyperlink{structmenu__t}{menu\_t}* menu = \hyperlink{menu_8c_aff4fd27ff7707295d91c67fa52a6b021}{create\_menu}(type, prompt);
+42   menu->\hyperlink{structmenu__t_a6891bc6c94f1e995cc62a05b13328de5}{min} = \hyperlink{vmath_8h_abd8bbcfabb3ddef2ccaafb9928a37b95}{min};
+43   menu->\hyperlink{structmenu__t_ace9cbaecd7bf311be0ef230da657f406}{max} = \hyperlink{vmath_8h_af082905f7eac6d03e92015146bbc1925}{max};
+44   menu->\hyperlink{structmenu__t_adc50450bc59ea66a8d67424adc46e24e}{step} = step;
+45   \textcolor{keywordflow}{return} menu;
+46 \}
 \end{DoxyCode}
-\mbox{\Hypertarget{menu_8h_a9388fba279e391fe22922a2d555e12b2}\label{menu_8h_a9388fba279e391fe22922a2d555e12b2}} 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_ac8efedba760ec35ebf841ab19543ba5a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_a3529988b0a7c12cb3f2ebb3cf5595594}\label{menu_8h_a3529988b0a7c12cb3f2ebb3cf5595594}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu\+\_\+var@{init\+\_\+menu\+\_\+var}}
 \index{init\+\_\+menu\+\_\+var@{init\+\_\+menu\+\_\+var}!menu.\+h@{menu.\+h}}
 \subsubsection{\texorpdfstring{init\+\_\+menu\+\_\+var()}{init\_menu\_var()}}
-{\footnotesize\ttfamily \hyperlink{structmenu__t}{menu\+\_\+t}$\ast$ init\+\_\+menu\+\_\+var (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{unsigned int}]{nums,  }\item[{char $\ast$}]{prompt,  }\item[{char $\ast$}]{options,  }\item[{}]{... }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{structmenu__t}{menu\+\_\+t}$\ast$ init\+\_\+menu\+\_\+var (\begin{DoxyParamCaption}\item[{enum \hyperlink{menu_8h_a6bbf4baf5018b0d76aab6c2e6bf85e62}{menu\+\_\+type}}]{type,  }\item[{unsigned int}]{nums,  }\item[{const char $\ast$}]{prompt,  }\item[{char $\ast$}]{options,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
 
@@ -424,25 +461,32 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 17 of file menu.\+c.
+Definition at line 26 of file menu.\+c.
 
 
 
-References create\+\_\+menu(), menu\+\_\+t\+::length, and menu\+\_\+t\+::options.
+References calloc\+\_\+real(), create\+\_\+menu(), menu\+\_\+t\+::length, and menu\+\_\+t\+::options.
 
 
 \begin{DoxyCode}
-17                                                                                               \{
-18   \hyperlink{structmenu__t}{menu\_t}* menu = \hyperlink{menu_8c_adcee778eac0edb821427d32949106dc5}{create\_menu}(type, prompt);
-19   va\_list values;
-20   \textcolor{keywordtype}{char} **options\_array = (\textcolor{keywordtype}{char}**)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*) * nums);
-21   va\_start(values, options);
-22   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < nums; i++)\{
-23     options\_array[i] = va\_arg(values, \textcolor{keywordtype}{char}*);
-24   \}
-25   va\_end(values);
-26   menu->\hyperlink{structmenu__t_ad695cd88051e34817f0f582d4e43c33a}{options} = options\_array;
-27   menu->\hyperlink{structmenu__t_a023063461c4a247e574abd6a55faf765}{length} = nums;
-28   \textcolor{keywordflow}{return} menu;
-29 \}
+26                                                                                                     \{
+27   \hyperlink{structmenu__t}{menu\_t}* menu = \hyperlink{menu_8c_aff4fd27ff7707295d91c67fa52a6b021}{create\_menu}(type, prompt);
+28   va\_list values;
+29   \textcolor{keywordtype}{char} **options\_array = (\textcolor{keywordtype}{char}**)\hyperlink{vlib_8h_a1115803c6996aebfbf67434810df7b4b}{calloc\_real}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*), nums);
+30   va\_start(values, options);
+31   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < nums; i++)\{
+32     options\_array[i] = va\_arg(values, \textcolor{keywordtype}{char}*);
+33   \}
+34   va\_end(values);
+35   menu->\hyperlink{structmenu__t_ad695cd88051e34817f0f582d4e43c33a}{options} = options\_array;
+36   menu->\hyperlink{structmenu__t_a023063461c4a247e574abd6a55faf765}{length} = nums;
+37   \textcolor{keywordflow}{return} menu;
+38 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a3529988b0a7c12cb3f2ebb3cf5595594_cgraph}
+\end{center}
+\end{figure}

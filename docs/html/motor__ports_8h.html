@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.7</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
   </td>
  </tr>
@@ -90,8 +90,7 @@ $(document).ready(function(){initNavTree('motor__ports_8h.html','');});
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="motor__ports_8h__dep__incl.svg" width="552" height="196"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="motor__ports_8h__dep__incl.svg" width="646" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="motor__ports_8h_source.html">Go to the source code of this file.</a></p>
@@ -104,6 +103,10 @@ Macros</h2></td></tr>
 <tr class="separator:aa3bcf05406f673f735df023643f347bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2badb0c22cf65b0e81743c90de9a3b41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__ports_8h.html#a2badb0c22cf65b0e81743c90de9a3b41">INTAKE_MOTOR</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a2badb0c22cf65b0e81743c90de9a3b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2cd96d53dd3ba6407db6766c3d92b26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</a>&#160;&#160;&#160;127</td></tr>
+<tr class="separator:ac2cd96d53dd3ba6407db6766c3d92b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f5efaa5cb771bd06da4bfe6046809e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</a>&#160;&#160;&#160;-127</td></tr>
+<tr class="separator:ad5f5efaa5cb771bd06da4bfe6046809e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e9fda07b5cd4408170fe907b75a8b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="motor__ports_8h.html#a36e9fda07b5cd4408170fe907b75a8b7">MOTOR_BACK_LEFT</a>&#160;&#160;&#160;5</td></tr>
 <tr class="memdesc:a36e9fda07b5cd4408170fe907b75a8b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Back left drive motor of robot base.  <a href="#a36e9fda07b5cd4408170fe907b75a8b7">More...</a><br /></td></tr>
 <tr class="separator:a36e9fda07b5cd4408170fe907b75a8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,9 +163,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00050">50</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00053">53</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="claw_8c_source.html#l00037">close_claw()</a>, <a class="el" href="claw_8c_source.html#l00033">open_claw()</a>, and <a class="el" href="claw_8c_source.html#l00004">update_claw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="claw_8c_source.html#l00037">close_claw()</a>, <a class="el" href="claw_8c_source.html#l00033">open_claw()</a>, and <a class="el" href="claw_8c_source.html#l00025">set_claw_motor()</a>.</p>
 
 </div>
 </div>
@@ -178,9 +181,45 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00051">51</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00054">54</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mobile__goal__intake_8c_source.html#l00003">set_intake_motor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mobile__goal__intake_8c_source.html#l00004">set_intake_motor()</a>.</p>
+
+</div>
+</div>
+<a id="ac2cd96d53dd3ba6407db6766c3d92b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2cd96d53dd3ba6407db6766c3d92b26">&#9670;&nbsp;</a></span>MAX_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_SPEED&#160;&#160;&#160;127</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00004">4</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00012">raise_lifter()</a>.</p>
+
+</div>
+</div>
+<a id="ad5f5efaa5cb771bd06da4bfe6046809e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5f5efaa5cb771bd06da4bfe6046809e">&#9670;&nbsp;</a></span>MIN_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN_SPEED&#160;&#160;&#160;-127</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00005">5</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00016">lower_lifter()</a>.</p>
 
 </div>
 </div>
@@ -200,9 +239,9 @@ Macros</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/7/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00043">43</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00046">46</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00028">set_side_speed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00050">set_side_speed()</a>.</p>
 
 </div>
 </div>
@@ -222,9 +261,9 @@ Macros</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/7/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00037">37</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00040">40</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00028">set_side_speed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00050">set_side_speed()</a>.</p>
 
 </div>
 </div>
@@ -244,9 +283,9 @@ Macros</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/7/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00016">16</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00019">19</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00028">set_side_speed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00050">set_side_speed()</a>.</p>
 
 </div>
 </div>
@@ -266,9 +305,9 @@ Macros</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/7/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00009">9</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00012">12</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00028">set_side_speed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00050">set_side_speed()</a>.</p>
 
 </div>
 </div>
@@ -284,7 +323,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00046">46</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00049">49</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
 </div>
 </div>
@@ -300,7 +339,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00045">45</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00048">48</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
 </div>
 </div>
@@ -316,7 +355,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00048">48</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00051">51</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00003">set_lifter_motors()</a>.</p>
 
@@ -334,7 +373,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00047">47</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00050">50</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00003">set_lifter_motors()</a>.</p>
 
@@ -356,9 +395,9 @@ Macros</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/7/2017 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00030">30</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00033">33</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00028">set_side_speed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00050">set_side_speed()</a>.</p>
 
 </div>
 </div>
@@ -378,9 +417,9 @@ Macros</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/7/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00023">23</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor__ports_8h_source.html#l00026">26</a> of file <a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00028">set_side_speed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00050">set_side_speed()</a>.</p>
 
 </div>
 </div>

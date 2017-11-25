@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['string_5ftype',['STRING_TYPE',['../menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c',1,'menu.h']]]
+  ['main_5fcontroller_5fmode',['MAIN_CONTROLLER_MODE',['../partner_8h.html#afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475',1,'partner.h']]]
 ];

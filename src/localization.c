@@ -1,13 +1,12 @@
 #include "localization.h"
 #include <inttypes.h>
+
 static Gyro g1;
 static TaskHandle localization_task;
 
-static double x = 0;
-static double y = 0;
-static double theta = 0;
-
 static int last_call = 0;
+
+matrix *state_matrix;
 
 struct encoder_odemtry {
   double x;
@@ -58,18 +57,18 @@ static struct accelerometer_odometry calculate_accelerometer_odemetry() {
   printf("x: %+" PRId32 " y: %+" PRId32 "\n", accel_x_rel, accel_y_rel);
 
   double delta_time = ((millis() - last_call)/1000.0);
-  double accel_x_abs = (accel_x_rel *  cos(theta) + accel_y_rel * sin(theta)) * delta_time;
-  double accel_y_abs = (accel_y_rel *  cos(theta) + accel_x_rel * sin(theta)) * delta_time;
+  //double accel_x_abs = (accel_x_rel *  cos(theta) + accel_y_rel * sin(theta)) * delta_time;
+  //double accel_y_abs = (accel_y_rel *  cos(theta) + accel_x_rel * sin(theta)) * delta_time;
 
-  vel_acumm_x += accel_x_abs;
-  vel_acumm_y += accel_y_abs;
+  //vel_acumm_x += accel_x_abs;
+  //vel_acumm_y += accel_y_abs;
 
-  double new_x = x + vel_acumm_x * delta_time;
-  double new_y = y + vel_acumm_y * delta_time;
+  //double new_x = x + vel_acumm_x * delta_time;
+  //double new_y = y + vel_acumm_y * delta_time;
 
   struct accelerometer_odometry od;
-  od.x = new_x;
-  od.y = new_y;
+  //od.x = new_x;
+  //od.y = new_y;
   return od;
 }
 
@@ -89,13 +88,11 @@ static double calculate_gryo_anglular_velocity() {
 
 bool init_localization(const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta)  {
   g1 = gyroInit(gyro1, multiplier);
-  x = start_x;
-  y = start_y;
-  theta = start_theta;
+  //init state matrix
+
+  //one dimensional vector with x, y, theta, acceleration in x and y
+  state_matrix = makeMatrix(1, 5);
   localization_task = taskRunLoop(update_position, LOCALIZATION_UPDATE_FREQUENCY * 1000);
-  x = start_x;
-  y = start_y;
-  theta = start_theta;
   last_call = millis();
   return true;
 }

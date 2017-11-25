@@ -6,10 +6,27 @@ Drive base definitions and enumerations.
 
 
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}partner.\+h\char`\"{}}\newline
+Include dependency graph for drive.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{drive_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{drive_8h__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{drive_8h_a3d683c4ec93ad778fc5914cd5671a793}{D\+E\+A\+D\+S\+P\+OT}~30
+\#define \hyperlink{drive_8h_a3d683c4ec93ad778fc5914cd5671a793}{D\+E\+A\+D\+S\+P\+OT}~10
+\item 
+\#define \hyperlink{drive_8h_a4679d8ea8690999a6c6c7c0cb245c879}{T\+H\+R\+E\+S\+H\+O\+LD}~10
 \end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -29,6 +46,8 @@ enum \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} \{ \hyperlink{
 \item 
 void \hyperlink{drive_8h_a8df41fd50094c065eedc81fc5e6595d1}{set\+\_\+side\+\_\+speed} (\hyperlink{drive_8h_a9df2afd2f1acb97019655e5e730609c7}{side\+\_\+t} \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side}, int speed)
 \begin{DoxyCompactList}\small\item\em sets the speed of one side of the robot. \end{DoxyCompactList}\item 
+void \hyperlink{drive_8h_a53d6e35d53ec3e0b1b1c489d8203f204}{set\+Thresh} (int t)
+\begin{DoxyCompactList}\small\item\em Sets the deadzone threshhold on the drive. \end{DoxyCompactList}\item 
 void \hyperlink{drive_8h_a8224a4626a934d30ed587671b7004bf8}{update\+\_\+drive\+\_\+motors} ()
 \begin{DoxyCompactList}\small\item\em Updates the drive motors during teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -49,15 +68,25 @@ Christian Desimone
 \index{drive.\+h@{drive.\+h}!D\+E\+A\+D\+S\+P\+OT@{D\+E\+A\+D\+S\+P\+OT}}
 \index{D\+E\+A\+D\+S\+P\+OT@{D\+E\+A\+D\+S\+P\+OT}!drive.\+h@{drive.\+h}}
 \subsubsection{\texorpdfstring{D\+E\+A\+D\+S\+P\+OT}{DEADSPOT}}
-{\footnotesize\ttfamily \#define D\+E\+A\+D\+S\+P\+OT~30}
+{\footnotesize\ttfamily \#define D\+E\+A\+D\+S\+P\+OT~10}
 
 
 
-Definition at line 13 of file drive.\+h.
+Definition at line 14 of file drive.\+h.
+
+\mbox{\Hypertarget{drive_8h_a4679d8ea8690999a6c6c7c0cb245c879}\label{drive_8h_a4679d8ea8690999a6c6c7c0cb245c879}} 
+\index{drive.\+h@{drive.\+h}!T\+H\+R\+E\+S\+H\+O\+LD@{T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{T\+H\+R\+E\+S\+H\+O\+LD@{T\+H\+R\+E\+S\+H\+O\+LD}!drive.\+h@{drive.\+h}}
+\subsubsection{\texorpdfstring{T\+H\+R\+E\+S\+H\+O\+LD}{THRESHOLD}}
+{\footnotesize\ttfamily \#define T\+H\+R\+E\+S\+H\+O\+LD~10}
 
 
 
-Referenced by deadspot().
+Definition at line 15 of file drive.\+h.
+
+
+
+Referenced by joystick\+Exp().
 
 
 
@@ -113,15 +142,15 @@ R\+I\+G\+HT&\\
 \end{DoxyEnumFields}
 
 
-Definition at line 21 of file drive.\+h.
+Definition at line 22 of file drive.\+h.
 
 
 \begin{DoxyCode}
-21                  \{
-22   \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065}{LEFT},
-23   \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH},
-24   \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38}{RIGHT}
-25 \} \hyperlink{drive_8h_a9df2afd2f1acb97019655e5e730609c7}{side\_t};
+22                  \{
+23   \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065}{LEFT},
+24   \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH},
+25   \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38}{RIGHT}
+26 \} \hyperlink{drive_8h_a9df2afd2f1acb97019655e5e730609c7}{side\_t};
 \end{DoxyCode}
 
 
@@ -148,26 +177,71 @@ Christian Desimone
 \end{DoxyParams}
 
 
-Definition at line 7 of file drive.\+c.
+Definition at line 50 of file drive.\+c.
 
 
 
-References B\+O\+TH, L\+E\+FT, M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT, M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT, M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT, M\+O\+T\+O\+R\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+R\+I\+G\+HT, and R\+I\+G\+HT.
+References B\+O\+TH, L\+E\+FT, M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT, M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT, M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+L\+E\+FT, M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT, M\+O\+T\+O\+R\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+L\+E\+FT, M\+O\+T\+O\+R\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+R\+I\+G\+HT, R\+I\+G\+HT, and set\+\_\+motor\+\_\+slew().
+
+
+
+Referenced by autonomous(), and update\+\_\+drive\+\_\+motors().
 
 
 \begin{DoxyCode}
-7                                            \{
-8   \textcolor{keywordflow}{if}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38}{RIGHT} || \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH})\{
-9     motorSet(\hyperlink{ports_8h_ad85c5f3d6a2d00789c8c67b960c46c2b}{MOTOR\_BACK\_RIGHT} , speed);
-10     motorSet(\hyperlink{ports_8h_a6f48bcc6d5fce24caeae0b17954c277a}{MOTOR\_FRONT\_RIGHT}, speed);
-11     motorSet(\hyperlink{ports_8h_a0da3f792b8f28ab09b339295859d8334}{MOTOR\_MIDDLE\_RIGHT}, speed);
-12   \}
-13   \textcolor{keywordflow}{if}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065}{LEFT} || \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH})\{
-14     motorSet(\hyperlink{ports_8h_a36e9fda07b5cd4408170fe907b75a8b7}{MOTOR\_BACK\_LEFT}, speed);
-15     motorSet(\hyperlink{ports_8h_a36e9fda07b5cd4408170fe907b75a8b7}{MOTOR\_BACK\_LEFT}, speed);
-16     motorSet(\hyperlink{ports_8h_a36e9fda07b5cd4408170fe907b75a8b7}{MOTOR\_BACK\_LEFT}, speed);
-17   \}
-18 \}
+50                                            \{
+51   \textcolor{keywordflow}{if}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38}{RIGHT} || \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH})\{
+52     \hyperlink{slew_8h_a7dff2b79dffe55fb936d977594d7c01d}{set\_motor\_slew}(\hyperlink{motor__ports_8h_ad85c5f3d6a2d00789c8c67b960c46c2b}{MOTOR\_BACK\_RIGHT} , -speed);
+53     \hyperlink{slew_8h_a7dff2b79dffe55fb936d977594d7c01d}{set\_motor\_slew}(\hyperlink{motor__ports_8h_a6f48bcc6d5fce24caeae0b17954c277a}{MOTOR\_FRONT\_RIGHT}, -speed);
+54     \hyperlink{slew_8h_a7dff2b79dffe55fb936d977594d7c01d}{set\_motor\_slew}(\hyperlink{motor__ports_8h_a0da3f792b8f28ab09b339295859d8334}{MOTOR\_MIDDLE\_RIGHT}, -speed);
+55   \}
+56   \textcolor{keywordflow}{if}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065}{LEFT} || \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445}{side} == \hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH})\{
+57     \hyperlink{slew_8h_a7dff2b79dffe55fb936d977594d7c01d}{set\_motor\_slew}(\hyperlink{motor__ports_8h_a36e9fda07b5cd4408170fe907b75a8b7}{MOTOR\_BACK\_LEFT}, speed);
+58     \hyperlink{slew_8h_a7dff2b79dffe55fb936d977594d7c01d}{set\_motor\_slew}(\hyperlink{motor__ports_8h_ac7dd3397e2f909b4dc11f2a2e6f28800}{MOTOR\_MIDDLE\_LEFT}, speed);
+59     \hyperlink{slew_8h_a7dff2b79dffe55fb936d977594d7c01d}{set\_motor\_slew}(\hyperlink{motor__ports_8h_a743b47e164fb23b30f4f2f228db0b338}{MOTOR\_FRONT\_LEFT}, speed);
+60   \}
+61 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{drive_8h_a8df41fd50094c065eedc81fc5e6595d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{drive_8h_a8df41fd50094c065eedc81fc5e6595d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{drive_8h_a53d6e35d53ec3e0b1b1c489d8203f204}\label{drive_8h_a53d6e35d53ec3e0b1b1c489d8203f204}} 
+\index{drive.\+h@{drive.\+h}!set\+Thresh@{set\+Thresh}}
+\index{set\+Thresh@{set\+Thresh}!drive.\+h@{drive.\+h}}
+\subsubsection{\texorpdfstring{set\+Thresh()}{setThresh()}}
+{\footnotesize\ttfamily void set\+Thresh (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the deadzone threshhold on the drive. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line 17 of file drive.\+c.
+
+
+
+References thresh.
+
+
+\begin{DoxyCode}
+17                      \{
+18   \hyperlink{drive_8c_a6cf8bf160a02413bc3d5d18b0294b581}{thresh} = t;
+19 \}
 \end{DoxyCode}
 \mbox{\Hypertarget{drive_8h_a8224a4626a934d30ed587671b7004bf8}\label{drive_8h_a8224a4626a934d30ed587671b7004bf8}} 
 \index{drive.\+h@{drive.\+h}!update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}}
@@ -187,16 +261,58 @@ Christian Desimone
 \end{DoxyDate}
 
 
-Definition at line 28 of file drive.\+c.
+Definition at line 21 of file drive.\+c.
 
 
 
-References cartesian\+\_\+cord\+\_\+to\+\_\+polar(), get\+\_\+joystick\+\_\+cord(), M\+A\+S\+T\+ER, and R\+I\+G\+H\+T\+\_\+\+J\+OY.
+References get\+\_\+mode(), joystick\+Get\+Analog(), L\+E\+FT, M\+A\+S\+T\+ER, P\+A\+R\+T\+N\+ER, P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE, R\+I\+G\+HT, set\+\_\+side\+\_\+speed(), thresh, cord\+::x, and cord\+::y.
+
+
+
+Referenced by operator\+Control().
 
 
 \begin{DoxyCode}
-28                           \{
-29   \textcolor{keyword}{struct }\hyperlink{structpolar__cord}{polar\_cord} \hyperlink{structcord}{cord} = \hyperlink{vmath_8h_a832105cf858b3046c57c0d08a4e7c38b}{cartesian\_cord\_to\_polar}(
-      \hyperlink{controller_8h_a0ce0176099c0bb15ad8c36123222059d}{get\_joystick\_cord}(\hyperlink{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe}{RIGHT\_JOY}, \hyperlink{controller_8h_a3fa2d3bf1901157f734a584d47b25d8b}{MASTER}));
-30 \}
+21                           \{
+22 
+23   \textcolor{keywordtype}{int} \hyperlink{structcord_a2eef9b681474b679cf87b0c20eced2cd}{x} = 0;
+24   \textcolor{keywordtype}{int} \hyperlink{structcord_a4e7d289c55cfe511532e53a81dc19215}{y} = 0;
+25   \textcolor{keywordflow}{if}(\hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7}{PARTNER\_CONTROLLER\_MODE}) \{
+26     x = (\hyperlink{_a_p_i_8h_ad56fcec15d1a48deb8780bb0fc38be4d}{joystickGetAnalog}(\hyperlink{controller_8h_a136e64cf351535da81cacb6a546cade6}{PARTNER}, 3));
+27     y = (\hyperlink{_a_p_i_8h_ad56fcec15d1a48deb8780bb0fc38be4d}{joystickGetAnalog}(\hyperlink{controller_8h_a136e64cf351535da81cacb6a546cade6}{PARTNER}, 1));
+28   \} \textcolor{keywordflow}{else} \{
+29     x = -(\hyperlink{_a_p_i_8h_ad56fcec15d1a48deb8780bb0fc38be4d}{joystickGetAnalog}(\hyperlink{controller_8h_a3fa2d3bf1901157f734a584d47b25d8b}{MASTER}, 3));
+30     y = (\hyperlink{_a_p_i_8h_ad56fcec15d1a48deb8780bb0fc38be4d}{joystickGetAnalog}(\hyperlink{controller_8h_a3fa2d3bf1901157f734a584d47b25d8b}{MASTER}, 1));
+31   \}
+32 
+33   \textcolor{comment}{//x = joystickExp(x);}
+34   \textcolor{comment}{//y = joystickExp(y);}
+35   \textcolor{keywordflow}{if}(x < thresh && x > -\hyperlink{drive_8c_a6cf8bf160a02413bc3d5d18b0294b581}{thresh})\{
+36     x = 0;
+37   \}
+38   \textcolor{keywordflow}{if}(y < thresh && y > -\hyperlink{drive_8c_a6cf8bf160a02413bc3d5d18b0294b581}{thresh})\{
+39     y = 0;
+40   \}
+41 
+42   \textcolor{keywordtype}{int} r = (x + \hyperlink{structcord_a4e7d289c55cfe511532e53a81dc19215}{y});
+43   \textcolor{keywordtype}{int} l = -(x - \hyperlink{structcord_a4e7d289c55cfe511532e53a81dc19215}{y});
+44 
+45   \hyperlink{drive_8c_a8df41fd50094c065eedc81fc5e6595d1}{set\_side\_speed}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065}{LEFT}, l);
+46   \hyperlink{drive_8c_a8df41fd50094c065eedc81fc5e6595d1}{set\_side\_speed}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38}{RIGHT}, -r);
+47 
+48 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{drive_8h_a8224a4626a934d30ed587671b7004bf8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{drive_8h_a8224a4626a934d30ed587671b7004bf8_icgraph}
+\end{center}
+\end{figure}

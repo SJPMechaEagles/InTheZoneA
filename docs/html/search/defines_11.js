@@ -1,17 +1,18 @@
 var searchData=
 [
-  ['task_5fdead',['TASK_DEAD',['../_a_p_i_8h.html#a13a05b7bdcbd07423a04bfb4cc6759b3',1,'API.h']]],
-  ['task_5fdefault_5fstack_5fsize',['TASK_DEFAULT_STACK_SIZE',['../_a_p_i_8h.html#a51827b6505ae59fb2ddf9d32e5519ab4',1,'API.h']]],
-  ['task_5fmax',['TASK_MAX',['../_a_p_i_8h.html#a36bb10267dd6269cfdb231d9e98b5794',1,'API.h']]],
-  ['task_5fmax_5fpriorities',['TASK_MAX_PRIORITIES',['../_a_p_i_8h.html#ad896f092de28df06fbcdcf925a933996',1,'API.h']]],
-  ['task_5fminimal_5fstack_5fsize',['TASK_MINIMAL_STACK_SIZE',['../_a_p_i_8h.html#ac6f33c920771bc599d55765a5a6e62c7',1,'API.h']]],
-  ['task_5fpriority_5fdefault',['TASK_PRIORITY_DEFAULT',['../_a_p_i_8h.html#a3082a7e8f15691441dba683711bb823f',1,'API.h']]],
-  ['task_5fpriority_5fhighest',['TASK_PRIORITY_HIGHEST',['../_a_p_i_8h.html#a1b3cef27c58c5cac78f170c90dbf7a89',1,'API.h']]],
-  ['task_5fpriority_5flowest',['TASK_PRIORITY_LOWEST',['../_a_p_i_8h.html#aa494e6c8001ab827484775bfd5c0fe9d',1,'API.h']]],
-  ['task_5frunnable',['TASK_RUNNABLE',['../_a_p_i_8h.html#a9dbd080b9c7d79b61e865717bc06306c',1,'API.h']]],
-  ['task_5frunning',['TASK_RUNNING',['../_a_p_i_8h.html#a17e3f99a030e5dfefb8f9815600e3fed',1,'API.h']]],
-  ['task_5fsleeping',['TASK_SLEEPING',['../_a_p_i_8h.html#a1fa55559982d06fb5f1b3f2fbf5814e5',1,'API.h']]],
-  ['task_5fsuspended',['TASK_SUSPENDED',['../_a_p_i_8h.html#ac90388d86d6cacd27fb13b218daff9ba',1,'API.h']]],
-  ['threshold',['THRESHOLD',['../drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879',1,'drive.h']]],
-  ['top_5frow',['TOP_ROW',['../lcd_8h.html#a18bab754c6ad16bc35c48333091516c9',1,'lcd.h']]]
+  ['seek_5fcur',['SEEK_CUR',['../_a_p_i_8h.html#a4c8d0b76b470ba65a43ca46a88320f39',1,'API.h']]],
+  ['seek_5fend',['SEEK_END',['../_a_p_i_8h.html#ad2a2e6c114780c3071efd24f16c7f7d8',1,'API.h']]],
+  ['seek_5fset',['SEEK_SET',['../_a_p_i_8h.html#a0d112bae8fd35be772185b6ec6bcbe64',1,'API.h']]],
+  ['serial_5f8n1',['SERIAL_8N1',['../_a_p_i_8h.html#a0db78b4521d43c0d702b9577bd3acda2',1,'API.h']]],
+  ['serial_5fdatabits_5f8',['SERIAL_DATABITS_8',['../_a_p_i_8h.html#ae40f3da18d9c7bc3aa3b4f14f6c2fe03',1,'API.h']]],
+  ['serial_5fdatabits_5f9',['SERIAL_DATABITS_9',['../_a_p_i_8h.html#aa742d7e1dd88294b770e7a2fa244d6cb',1,'API.h']]],
+  ['serial_5fparity_5feven',['SERIAL_PARITY_EVEN',['../_a_p_i_8h.html#ab1469484b1ad5e39561c21b5a590eaf6',1,'API.h']]],
+  ['serial_5fparity_5fnone',['SERIAL_PARITY_NONE',['../_a_p_i_8h.html#ad3af92391cfd2670eb782a60c7f923a6',1,'API.h']]],
+  ['serial_5fparity_5fodd',['SERIAL_PARITY_ODD',['../_a_p_i_8h.html#aa1baeda93fe64b888113824d02471d0f',1,'API.h']]],
+  ['serial_5fstopbits_5f1',['SERIAL_STOPBITS_1',['../_a_p_i_8h.html#aa81fc4bae892bc1f7be6ca8434ee0ffd',1,'API.h']]],
+  ['serial_5fstopbits_5f2',['SERIAL_STOPBITS_2',['../_a_p_i_8h.html#a3051a690103146121c8202301dbc4e79',1,'API.h']]],
+  ['stdin',['stdin',['../_a_p_i_8h.html#aaca70138f0cb63ddb026921afc635179',1,'API.h']]],
+  ['stdout',['stdout',['../_a_p_i_8h.html#a0c0ef221f95f64e8632451312fd18cc8',1,'API.h']]],
+  ['stop_5fone',['STOP_ONE',['../auto_8h.html#a67c9207ce99d4414dce28d8c42ba1d2a',1,'auto.h']]],
+  ['stop_5ftwo',['STOP_TWO',['../auto_8h.html#a48277cb6230d221523bc94b478c1eb0d',1,'auto.h']]]
 ];

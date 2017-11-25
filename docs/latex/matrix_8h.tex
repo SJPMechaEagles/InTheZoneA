@@ -1,0 +1,809 @@
+\hypertarget{matrix_8h}{}\section{include/matrix.h File Reference}
+\label{matrix_8h}\index{include/matrix.\+h@{include/matrix.\+h}}
+
+
+Various Matrix operations.
+
+None of the matrix operations below change the input matrices if an input is required. They all return a new matrix with the new changes. Because memory issues are so prevelant, be sure to use the  function to reclaim some of that memory.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{matrix_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__matrix}{\+\_\+matrix}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__matrix}{\+\_\+matrix} \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{matrix_8h_aa40f301fe71dfcea781169d3e6f14025}{assert} (int assertion, char $\ast$message)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_abbb8d2d20c2dd53a2269d017a336668f}{copy\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$m)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_ae6dab569959c360cf165136a3b625edd}{covariance\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$m)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_af49b525d7476c365833db9acd975e3a5}{dot\+Diagonal\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$a, \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$b)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_a0b568a64e81a56779c2141b424475976}{dot\+Product\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$a, \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$b)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_a0cbaeee632d87d719660ac5d2d6d2c88}{eye\+Matrix} (int n)
+\item 
+void \hyperlink{matrix_8h_ae98365c910e9d688d2bdedec50d89a6b}{free\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$m)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_a093bef732ee165055061299b41780439}{L2\+\_\+distance} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$a, \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$b)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_aae8b56c6fb44d9147b835f4006ca872c}{make\+Matrix} (int width, int height)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_ae4babf9b518a2d5d6b12776191e3b7de}{mean\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$m)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_a63ed5c518b34768e9ef8e9d5f7d0b534}{multiply\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$a, \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$b)
+\item 
+void \hyperlink{matrix_8h_a50ab2b1ac33d6993d93522fc4f30a051}{print\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$m)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_a1cb64c54a2c9179c77dc2cccee269607}{read\+Matrix} (char $\ast$filename)
+\item 
+void \hyperlink{matrix_8h_acdd57777a972ce339153878fa917db14}{row\+Swap} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$a, int p, int q)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_a6b7faa6ba9ee987d0777d9d0bd0e7b32}{scale\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$m, double value)
+\item 
+double \hyperlink{matrix_8h_a4794df8b2032f961dd8b2d90276bc417}{trace\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$m)
+\item 
+\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$ \hyperlink{matrix_8h_a2936260302742748b0639e8ec71d4d9f}{transpose\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$m)
+\item 
+void \hyperlink{matrix_8h_a9e401ca3ccfd3bc7f72c15b686804b69}{write\+Matrix} (\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$m, char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Various Matrix operations.
+
+None of the matrix operations below change the input matrices if an input is required. They all return a new matrix with the new changes. Because memory issues are so prevelant, be sure to use the  function to reclaim some of that memory. 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{matrix_8h_abc75382643898dd572498a574bf891c7}\label{matrix_8h_abc75382643898dd572498a574bf891c7}} 
+\index{matrix.\+h@{matrix.\+h}!matrix@{matrix}}
+\index{matrix@{matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{matrix}{matrix}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__matrix}{\+\_\+matrix}  \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{matrix_8h_aa40f301fe71dfcea781169d3e6f14025}\label{matrix_8h_aa40f301fe71dfcea781169d3e6f14025}} 
+\index{matrix.\+h@{matrix.\+h}!assert@{assert}}
+\index{assert@{assert}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{assert()}{assert()}}
+{\footnotesize\ttfamily void assert (\begin{DoxyParamCaption}\item[{int}]{assertion,  }\item[{char $\ast$}]{message }\end{DoxyParamCaption})}
+
+assert If the assertion is non-\/zero (i.\+e. true), then it returns. If the assertion is zero (i.\+e. false), then it display the string and aborts the program. This is ment to act like Python\textquotesingle{}s assert keyword. 
+
+Definition at line 13 of file matrix.\+c.
+
+
+
+References fprintf().
+
+
+
+Referenced by covariance\+Matrix(), dot\+Diagonal\+Matrix(), dot\+Product\+Matrix(), eye\+Matrix(), make\+Matrix(), mean\+Matrix(), multiply\+Matrix(), and row\+Swap().
+
+
+\begin{DoxyCode}
+13                                           \{
+14     \textcolor{keywordflow}{if} (assertion == 0) \{
+15         \hyperlink{_a_p_i_8h_ab9989f4619e4d3ccb13ed4c36d5f787a}{fprintf}(stderr, \textcolor{stringliteral}{"%s\(\backslash\)n"}, message);
+16         exit(1);
+17     \}
+18 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{matrix_8h_aa40f301fe71dfcea781169d3e6f14025_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_aa40f301fe71dfcea781169d3e6f14025_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_abbb8d2d20c2dd53a2269d017a336668f}\label{matrix_8h_abbb8d2d20c2dd53a2269d017a336668f}} 
+\index{matrix.\+h@{matrix.\+h}!copy\+Matrix@{copy\+Matrix}}
+\index{copy\+Matrix@{copy\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{copy\+Matrix()}{copyMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ copy\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{m }\end{DoxyParamCaption})}
+
+copy\+Matrix Copies a matrix. This function uses scale\+Matrix, because scaling matrix by 1 is the same as a copy. 
+
+Definition at line 47 of file matrix.\+c.
+
+
+
+References scale\+Matrix().
+
+
+\begin{DoxyCode}
+47                               \{
+48     \textcolor{keywordflow}{return} \hyperlink{matrix_8c_a6b7faa6ba9ee987d0777d9d0bd0e7b32}{scaleMatrix}(m, 1);
+49 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_abbb8d2d20c2dd53a2269d017a336668f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_ae6dab569959c360cf165136a3b625edd}\label{matrix_8h_ae6dab569959c360cf165136a3b625edd}} 
+\index{matrix.\+h@{matrix.\+h}!covariance\+Matrix@{covariance\+Matrix}}
+\index{covariance\+Matrix@{covariance\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{covariance\+Matrix()}{covarianceMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ covariance\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{m }\end{DoxyParamCaption})}
+
+covariance\+Matrix Given an \char`\"{}m rows by n columns\char`\"{} matrix, it returns a matrix with n row and n columns, where each element represents covariance of 2 columns. 
+
+Definition at line 164 of file matrix.\+c.
+
+
+
+References assert(), \+\_\+matrix\+::data, free\+Matrix(), \+\_\+matrix\+::height, make\+Matrix(), mean\+Matrix(), and \+\_\+matrix\+::width.
+
+
+\begin{DoxyCode}
+164                                     \{
+165     \textcolor{keywordtype}{int} i, j, k, L = 0;
+166     \hyperlink{struct__matrix}{matrix}* out;
+167     \hyperlink{struct__matrix}{matrix}* mean;
+168     \textcolor{keywordtype}{double}* ptrA;
+169     \textcolor{keywordtype}{double}* ptrB;
+170     \textcolor{keywordtype}{double}* ptrOut;
+171 
+172     \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height} > 1, \textcolor{stringliteral}{"Height of matrix cannot be zero or one."});
+173 
+174     mean = \hyperlink{matrix_8c_ae4babf9b518a2d5d6b12776191e3b7de}{meanMatrix}(m);
+175     out = \hyperlink{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}{makeMatrix}(m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}, m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width});
+176     ptrOut = out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+177 
+178     \textcolor{keywordflow}{for} (i = 0; i < m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; i++) \{
+179         \textcolor{keywordflow}{for} (j = 0; j < m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; j++) \{
+180              ptrA = &m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[i];
+181              ptrB = &m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[j];
+182              *ptrOut = 0.0;
+183              \textcolor{keywordflow}{for} (k = 0; k < m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}; k++) \{
+184                  *ptrOut += (*ptrA - mean->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[i]) * (*ptrB - mean->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[j]);
+185                  ptrA += m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width};
+186                  ptrB += m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width};
+187              \}
+188              *ptrOut /= m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height} - 1;
+189              ptrOut++;
+190         \}
+191     \}
+192 
+193     \hyperlink{matrix_8c_ae98365c910e9d688d2bdedec50d89a6b}{freeMatrix}(mean);
+194     \textcolor{keywordflow}{return} out;
+195 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_ae6dab569959c360cf165136a3b625edd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_af49b525d7476c365833db9acd975e3a5}\label{matrix_8h_af49b525d7476c365833db9acd975e3a5}} 
+\index{matrix.\+h@{matrix.\+h}!dot\+Diagonal\+Matrix@{dot\+Diagonal\+Matrix}}
+\index{dot\+Diagonal\+Matrix@{dot\+Diagonal\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{dot\+Diagonal\+Matrix()}{dotDiagonalMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ dot\+Diagonal\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{a,  }\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{b }\end{DoxyParamCaption})}
+
+matrix\+Dot\+Diagonal Given a two matrices (or the same matrix twice) with identical widths and heights, this method returns a 1 by a-\/$>$height matrix of the cross product of each matrix along the diagonal.
+
+Dot product is essentially the sum-\/of-\/squares of two vectors.
+
+If the second paramter is N\+U\+LL, it is assumed that we are performing a cross product with itself. 
+
+Definition at line 367 of file matrix.\+c.
+
+
+
+References assert(), \+\_\+matrix\+::data, \+\_\+matrix\+::height, make\+Matrix(), and \+\_\+matrix\+::width.
+
+
+\begin{DoxyCode}
+367                                                 \{
+368     \hyperlink{struct__matrix}{matrix}* out;
+369     \textcolor{keywordtype}{double}* ptrOut;
+370     \textcolor{keywordtype}{double}* ptrA;
+371     \textcolor{keywordtype}{double}* ptrB;
+372     \textcolor{keywordtype}{int} i, j;
+373 
+374     \textcolor{keywordflow}{if} (b != NULL) \{
+375         \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width} == b->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width} && a->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height} == b->
+      \hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}, \textcolor{stringliteral}{"Matrices must be of the same dimensionality."});
+376     \}
+377 
+378     \textcolor{comment}{// Are we computing the sum of squares of the same matrix?}
+379     \textcolor{keywordflow}{if} (a == b || b == NULL) \{
+380         b = a; \textcolor{comment}{// May not appear safe, but we can do this without risk of losing b.}
+381     \}
+382 
+383     out = \hyperlink{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}{makeMatrix}(1, a->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height});
+384     ptrOut = out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+385     ptrA = a->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+386     ptrB = b->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+387 
+388     \textcolor{keywordflow}{for} (i = 0; i < a->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}; i++) \{
+389         *ptrOut = 0;
+390         \textcolor{keywordflow}{for} (j = 0; j < a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; j++) \{
+391             *ptrOut += *ptrA * *ptrB;
+392             ptrA++;
+393             ptrB++;
+394         \}
+395         ptrOut++;
+396     \}
+397 
+398     \textcolor{keywordflow}{return} out;
+399 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_af49b525d7476c365833db9acd975e3a5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_a0b568a64e81a56779c2141b424475976}\label{matrix_8h_a0b568a64e81a56779c2141b424475976}} 
+\index{matrix.\+h@{matrix.\+h}!dot\+Product\+Matrix@{dot\+Product\+Matrix}}
+\index{dot\+Product\+Matrix@{dot\+Product\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{dot\+Product\+Matrix()}{dotProductMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ dot\+Product\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{a,  }\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{b }\end{DoxyParamCaption})}
+
+dot\+Product\+Matrix Given a two matrices (or the same matrix twice) with identical widths and different heights, this method returns a a-\/$>$height by b-\/$>$height matrix of the cross product of each matrix.
+
+Dot product is essentially the sum-\/of-\/squares of two vectors.
+
+Also, if the second paramter is N\+U\+LL, it is assumed that we are performing a cross product with itself. 
+
+Definition at line 318 of file matrix.\+c.
+
+
+
+References assert(), \+\_\+matrix\+::data, \+\_\+matrix\+::height, make\+Matrix(), and \+\_\+matrix\+::width.
+
+
+\begin{DoxyCode}
+318                                                \{
+319     \hyperlink{struct__matrix}{matrix}* out;
+320     \textcolor{keywordtype}{double}* ptrOut;
+321     \textcolor{keywordtype}{double}* ptrA;
+322     \textcolor{keywordtype}{double}* ptrB;
+323     \textcolor{keywordtype}{int} i, j, k;
+324 
+325     \textcolor{keywordflow}{if} (b != NULL) \{
+326         \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width} == b->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}, \textcolor{stringliteral}{"Matrices must be of the same dimensionality."});
+327     \}
+328 
+329     \textcolor{comment}{// Are we computing the sum of squares of the same matrix?}
+330     \textcolor{keywordflow}{if} (a == b || b == NULL) \{
+331         b = a; \textcolor{comment}{// May not appear safe, but we can do this without risk of losing b.}
+332     \}
+333 
+334     out = \hyperlink{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}{makeMatrix}(b->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}, a->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height});
+335     ptrOut = out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+336 
+337     \textcolor{keywordflow}{for} (i = 0; i < a->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}; i++) \{
+338         ptrB = b->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+339 
+340         \textcolor{keywordflow}{for} (j = 0; j < b->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}; j++) \{
+341             ptrA = &a->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[ i * a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width} ];
+342 
+343             *ptrOut = 0;
+344             \textcolor{keywordflow}{for} (k = 0; k < a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; k++) \{
+345                 *ptrOut += *ptrA * *ptrB;
+346                 ptrA++;
+347                 ptrB++;
+348             \}
+349             ptrOut++;
+350         \}
+351     \}
+352 
+353     \textcolor{keywordflow}{return} out;
+354 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_a0b568a64e81a56779c2141b424475976_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_a0cbaeee632d87d719660ac5d2d6d2c88}\label{matrix_8h_a0cbaeee632d87d719660ac5d2d6d2c88}} 
+\index{matrix.\+h@{matrix.\+h}!eye\+Matrix@{eye\+Matrix}}
+\index{eye\+Matrix@{eye\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{eye\+Matrix()}{eyeMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ eye\+Matrix (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+eye\+Matrix Returns an identity matrix of size n by n, where n is the input parameter. 
+
+Definition at line 90 of file matrix.\+c.
+
+
+
+References assert(), \+\_\+matrix\+::data, and make\+Matrix().
+
+
+\begin{DoxyCode}
+90                          \{
+91     \textcolor{keywordtype}{int} i;
+92     \hyperlink{struct__matrix}{matrix} *out;
+93     \textcolor{keywordtype}{double}* ptr;
+94 
+95     \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(n > 0, \textcolor{stringliteral}{"Identity matrix must have value greater than zero."});
+96 
+97     out = \hyperlink{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}{makeMatrix}(n, n);
+98     ptr = out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+99     \textcolor{keywordflow}{for} (i = 0; i < n; i++) \{
+100         *ptr = 1.0;
+101         ptr += n + 1;
+102     \}
+103 
+104     \textcolor{keywordflow}{return} out;
+105 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_a0cbaeee632d87d719660ac5d2d6d2c88_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_ae98365c910e9d688d2bdedec50d89a6b}\label{matrix_8h_ae98365c910e9d688d2bdedec50d89a6b}} 
+\index{matrix.\+h@{matrix.\+h}!free\+Matrix@{free\+Matrix}}
+\index{free\+Matrix@{free\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{free\+Matrix()}{freeMatrix()}}
+{\footnotesize\ttfamily void free\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{m }\end{DoxyParamCaption})}
+
+free\+Matrix Frees the resources of a matrix 
+
+Definition at line 55 of file matrix.\+c.
+
+
+
+References \+\_\+matrix\+::data.
+
+
+
+Referenced by covariance\+Matrix().
+
+
+\begin{DoxyCode}
+55                            \{
+56     \textcolor{keywordflow}{if} (m != NULL) \{
+57         \textcolor{keywordflow}{if} (m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data} != NULL) \{
+58             free(m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data});
+59             m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data} = NULL;
+60         \}
+61 
+62         free(m);
+63         m = NULL;
+64     \}
+65     \textcolor{keywordflow}{return};
+66 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{matrix_8h_ae98365c910e9d688d2bdedec50d89a6b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_a093bef732ee165055061299b41780439}\label{matrix_8h_a093bef732ee165055061299b41780439}} 
+\index{matrix.\+h@{matrix.\+h}!L2\+\_\+distance@{L2\+\_\+distance}}
+\index{L2\+\_\+distance@{L2\+\_\+distance}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{L2\+\_\+distance()}{L2\_distance()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ L2\+\_\+distance (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{a,  }\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{matrix_8h_aae8b56c6fb44d9147b835f4006ca872c}\label{matrix_8h_aae8b56c6fb44d9147b835f4006ca872c}} 
+\index{matrix.\+h@{matrix.\+h}!make\+Matrix@{make\+Matrix}}
+\index{make\+Matrix@{make\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{make\+Matrix()}{makeMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ make\+Matrix (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+make\+Matrix Makes a matrix with a width and height parameters. 
+
+Definition at line 24 of file matrix.\+c.
+
+
+
+References assert(), \+\_\+matrix\+::data, \+\_\+matrix\+::height, and \+\_\+matrix\+::width.
+
+
+
+Referenced by covariance\+Matrix(), dot\+Diagonal\+Matrix(), dot\+Product\+Matrix(), eye\+Matrix(), init\+\_\+localization(), mean\+Matrix(), multiply\+Matrix(), scale\+Matrix(), and transpose\+Matrix().
+
+
+\begin{DoxyCode}
+24                                           \{
+25     \hyperlink{struct__matrix}{matrix}* out;
+26     \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(width > 0 && height > 0, \textcolor{stringliteral}{"New matrix must be at least a 1 by 1"});
+27     out = (\hyperlink{struct__matrix}{matrix}*) malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct__matrix}{matrix}));
+28 
+29     \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(out != NULL, \textcolor{stringliteral}{"Out of memory."});
+30 
+31     out->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width} = width;
+32     out->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height} = height;
+33     out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data} = (\textcolor{keywordtype}{double}*) malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}) * width * height);
+34 
+35     \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data} != NULL, \textcolor{stringliteral}{"Out of memory."});
+36 
+37     memset(out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}, 0.0, width * height * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+38 
+39     \textcolor{keywordflow}{return} out;
+40 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{matrix_8h_aae8b56c6fb44d9147b835f4006ca872c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_aae8b56c6fb44d9147b835f4006ca872c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_ae4babf9b518a2d5d6b12776191e3b7de}\label{matrix_8h_ae4babf9b518a2d5d6b12776191e3b7de}} 
+\index{matrix.\+h@{matrix.\+h}!mean\+Matrix@{mean\+Matrix}}
+\index{mean\+Matrix@{mean\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{mean\+Matrix()}{meanMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ mean\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{m }\end{DoxyParamCaption})}
+
+mean\+Matrix Given an \char`\"{}m rows by n columns\char`\"{} matrix, it returns a matrix with 1 row and n columns, where each element represents the mean of that full column. 
+
+Definition at line 138 of file matrix.\+c.
+
+
+
+References assert(), \+\_\+matrix\+::data, \+\_\+matrix\+::height, make\+Matrix(), and \+\_\+matrix\+::width.
+
+
+
+Referenced by covariance\+Matrix().
+
+
+\begin{DoxyCode}
+138                               \{
+139     \textcolor{keywordtype}{int} i, j;
+140     \textcolor{keywordtype}{double}* ptr;
+141     \hyperlink{struct__matrix}{matrix}* out;
+142 
+143     \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height} > 0, \textcolor{stringliteral}{"Height of matrix cannot be zero."});
+144 
+145     out = \hyperlink{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}{makeMatrix}(m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}, 1);
+146 
+147     \textcolor{keywordflow}{for} (i = 0; i < m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; i++) \{
+148         out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[i] = 0.0;
+149         ptr = &m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[i];
+150         \textcolor{keywordflow}{for} (j = 0; j < m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}; j++) \{
+151             out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[i] += *ptr;
+152             ptr += out->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width};
+153         \}
+154         out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[i] /= (double) m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height};
+155     \}
+156     \textcolor{keywordflow}{return} out;
+157 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_ae4babf9b518a2d5d6b12776191e3b7de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{matrix_8h_ae4babf9b518a2d5d6b12776191e3b7de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_a63ed5c518b34768e9ef8e9d5f7d0b534}\label{matrix_8h_a63ed5c518b34768e9ef8e9d5f7d0b534}} 
+\index{matrix.\+h@{matrix.\+h}!multiply\+Matrix@{multiply\+Matrix}}
+\index{multiply\+Matrix@{multiply\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{multiply\+Matrix()}{multiplyMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ multiply\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{a,  }\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{b }\end{DoxyParamCaption})}
+
+multiply\+Matrix Given a two matrices, returns the multiplication of the two. 
+
+Definition at line 223 of file matrix.\+c.
+
+
+
+References assert(), \+\_\+matrix\+::data, \+\_\+matrix\+::height, make\+Matrix(), and \+\_\+matrix\+::width.
+
+
+\begin{DoxyCode}
+223                                              \{
+224     \textcolor{keywordtype}{int} i, j, k;
+225     \hyperlink{struct__matrix}{matrix}* out;
+226     \textcolor{keywordtype}{double}* ptrOut;
+227     \textcolor{keywordtype}{double}* ptrA;
+228     \textcolor{keywordtype}{double}* ptrB;
+229 
+230     \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width} == b->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}, \textcolor{stringliteral}{"Matrices have incorrect dimensions. a->width !=
+       b->height"});
+231 
+232     out = \hyperlink{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}{makeMatrix}(b->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}, a->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height});
+233     ptrOut = out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+234 
+235     \textcolor{keywordflow}{for} (i = 0; i < a->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}; i++) \{
+236 
+237         \textcolor{keywordflow}{for} (j = 0; j < b->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; j++) \{
+238             ptrA = &a->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[ i * a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width} ];
+239             ptrB = &b->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[ j ];
+240 
+241             *ptrOut = 0;
+242             \textcolor{keywordflow}{for} (k = 0; k < a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; k++) \{
+243                 *ptrOut += *ptrA * *ptrB;
+244                 ptrA++;
+245                 ptrB += b->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width};
+246             \}
+247             ptrOut++;
+248         \}
+249     \}
+250 
+251     \textcolor{keywordflow}{return} out;
+252 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_a63ed5c518b34768e9ef8e9d5f7d0b534_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_a50ab2b1ac33d6993d93522fc4f30a051}\label{matrix_8h_a50ab2b1ac33d6993d93522fc4f30a051}} 
+\index{matrix.\+h@{matrix.\+h}!print\+Matrix@{print\+Matrix}}
+\index{print\+Matrix@{print\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{print\+Matrix()}{printMatrix()}}
+{\footnotesize\ttfamily void print\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{m }\end{DoxyParamCaption})}
+
+print\+Matrix Prints a matrix. Great for debugging. 
+
+Definition at line 72 of file matrix.\+c.
+
+
+
+References \+\_\+matrix\+::data, \+\_\+matrix\+::height, printf(), and \+\_\+matrix\+::width.
+
+
+\begin{DoxyCode}
+72                             \{
+73     \textcolor{keywordtype}{int} i, j;
+74     \textcolor{keywordtype}{double}* ptr = m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+75     \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf}(\textcolor{stringliteral}{"%d %d\(\backslash\)n"}, m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}, m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height});
+76     \textcolor{keywordflow}{for} (i = 0; i < m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}; i++) \{
+77         \textcolor{keywordflow}{for} (j = 0; j < m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; j++) \{
+78             \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf}(\textcolor{stringliteral}{" %9.6f"}, *(ptr++));
+79         \}
+80         \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf}(\textcolor{stringliteral}{"\(\backslash\)n"});
+81     \}
+82     \textcolor{keywordflow}{return};
+83 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{matrix_8h_a50ab2b1ac33d6993d93522fc4f30a051_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_a1cb64c54a2c9179c77dc2cccee269607}\label{matrix_8h_a1cb64c54a2c9179c77dc2cccee269607}} 
+\index{matrix.\+h@{matrix.\+h}!read\+Matrix@{read\+Matrix}}
+\index{read\+Matrix@{read\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{read\+Matrix()}{readMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ read\+Matrix (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{matrix_8h_acdd57777a972ce339153878fa917db14}\label{matrix_8h_acdd57777a972ce339153878fa917db14}} 
+\index{matrix.\+h@{matrix.\+h}!row\+Swap@{row\+Swap}}
+\index{row\+Swap@{row\+Swap}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{row\+Swap()}{rowSwap()}}
+{\footnotesize\ttfamily void row\+Swap (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{a,  }\item[{int}]{p,  }\item[{int}]{q }\end{DoxyParamCaption})}
+
+row\+Swap Given a matrix, this algorithm will swap rows p and q, provided that p and q are less than or equal to the height of matrix A and p and q are different values. 
+
+Definition at line 278 of file matrix.\+c.
+
+
+
+References assert(), \+\_\+matrix\+::data, \+\_\+matrix\+::height, and \+\_\+matrix\+::width.
+
+
+\begin{DoxyCode}
+278                                       \{
+279     \textcolor{keywordtype}{int} i;
+280     \textcolor{keywordtype}{double} temp;
+281     \textcolor{keywordtype}{double}* pRow;
+282     \textcolor{keywordtype}{double}* qRow;
+283 
+284     \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(a->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height} > 2, \textcolor{stringliteral}{"Matrix must have at least two rows to swap."});
+285     \hyperlink{matrix_8c_aa40f301fe71dfcea781169d3e6f14025}{assert}(p < a->height && q < a->height, \textcolor{stringliteral}{"Values p and q must be less than the height of the
+       matrix."});
+286 
+287     \textcolor{comment}{// If p and q are equal, do nothing.}
+288     \textcolor{keywordflow}{if} (p == q) \{
+289         \textcolor{keywordflow}{return};
+290     \}
+291 
+292     pRow = a->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data} + (p * a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width});
+293     qRow = a->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data} + (q * a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width});
+294 
+295     \textcolor{comment}{// Swap!}
+296     \textcolor{keywordflow}{for} (i = 0; i < a->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; i++) \{
+297         temp = *pRow;
+298         *pRow = *qRow;
+299         *qRow = temp;
+300         pRow++;
+301         qRow++;
+302     \}
+303 
+304     \textcolor{keywordflow}{return};
+305 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{matrix_8h_acdd57777a972ce339153878fa917db14_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_a6b7faa6ba9ee987d0777d9d0bd0e7b32}\label{matrix_8h_a6b7faa6ba9ee987d0777d9d0bd0e7b32}} 
+\index{matrix.\+h@{matrix.\+h}!scale\+Matrix@{scale\+Matrix}}
+\index{scale\+Matrix@{scale\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{scale\+Matrix()}{scaleMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ scale\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{m,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+scale\+Matrix Given a matrix and a double value, this returns a new matrix where each element in the input matrix is multiplied by the double value 
+
+Definition at line 259 of file matrix.\+c.
+
+
+
+References \+\_\+matrix\+::data, \+\_\+matrix\+::height, make\+Matrix(), and \+\_\+matrix\+::width.
+
+
+
+Referenced by copy\+Matrix().
+
+
+\begin{DoxyCode}
+259                                              \{
+260     \textcolor{keywordtype}{int} i, elements = m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width} * m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height};
+261     \hyperlink{struct__matrix}{matrix}* out = \hyperlink{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}{makeMatrix}(m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}, m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height});
+262     \textcolor{keywordtype}{double}* ptrM = m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+263     \textcolor{keywordtype}{double}* ptrOut = out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+264 
+265     \textcolor{keywordflow}{for} (i = 0; i < elements; i++) \{
+266         *(ptrOut++) = *(ptrM++) * value;
+267     \}
+268 
+269     \textcolor{keywordflow}{return} out;
+270 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_a6b7faa6ba9ee987d0777d9d0bd0e7b32_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{matrix_8h_a6b7faa6ba9ee987d0777d9d0bd0e7b32_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_a4794df8b2032f961dd8b2d90276bc417}\label{matrix_8h_a4794df8b2032f961dd8b2d90276bc417}} 
+\index{matrix.\+h@{matrix.\+h}!trace\+Matrix@{trace\+Matrix}}
+\index{trace\+Matrix@{trace\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{trace\+Matrix()}{traceMatrix()}}
+{\footnotesize\ttfamily double trace\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{m }\end{DoxyParamCaption})}
+
+trace\+Matrix Given an \char`\"{}m rows by n columns\char`\"{} matrix, it returns the sum of the elements along the diagonal. This is know as the matrix \textquotesingle{}trace\textquotesingle{}. 
+
+Definition at line 112 of file matrix.\+c.
+
+
+
+References \+\_\+matrix\+::data, \+\_\+matrix\+::height, and \+\_\+matrix\+::width.
+
+
+\begin{DoxyCode}
+112                               \{
+113     \textcolor{keywordtype}{int} i;
+114     \textcolor{keywordtype}{int} size;
+115     \textcolor{keywordtype}{double}* ptr = m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+116     \textcolor{keywordtype}{double} sum = 0.0;
+117 
+118     \textcolor{keywordflow}{if} (m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height} < m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}) \{
+119         size = m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height};
+120     \}
+121     \textcolor{keywordflow}{else} \{
+122         size = m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width};
+123     \}
+124 
+125     \textcolor{keywordflow}{for} (i = 0; i < size; i++) \{
+126         sum += *ptr;
+127         ptr += m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width} + 1;
+128     \}
+129 
+130     \textcolor{keywordflow}{return} sum;
+131 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{matrix_8h_a2936260302742748b0639e8ec71d4d9f}\label{matrix_8h_a2936260302742748b0639e8ec71d4d9f}} 
+\index{matrix.\+h@{matrix.\+h}!transpose\+Matrix@{transpose\+Matrix}}
+\index{transpose\+Matrix@{transpose\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{transpose\+Matrix()}{transposeMatrix()}}
+{\footnotesize\ttfamily \hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix}$\ast$ transpose\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{m }\end{DoxyParamCaption})}
+
+transpose\+Matrix Given an matrix, returns the transpose. 
+
+Definition at line 201 of file matrix.\+c.
+
+
+
+References \+\_\+matrix\+::data, \+\_\+matrix\+::height, make\+Matrix(), and \+\_\+matrix\+::width.
+
+
+\begin{DoxyCode}
+201                                    \{
+202     \hyperlink{struct__matrix}{matrix}* out = \hyperlink{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}{makeMatrix}(m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}, m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width});
+203     \textcolor{keywordtype}{double}* ptrOut;
+204     \textcolor{keywordtype}{double}* ptrM = m->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data};
+205     \textcolor{keywordtype}{int} i, j;
+206 
+207     \textcolor{keywordflow}{for} (i = 0; i < m->\hyperlink{struct__matrix_a8d3b2dbcf98704f11073d646273eb3b0}{height}; i++) \{
+208         ptrOut = &out->\hyperlink{struct__matrix_ad3fdadaa9e22623d5830e37663d500be}{data}[i];
+209         \textcolor{keywordflow}{for} (j = 0; j < m->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width}; j++) \{
+210             *ptrOut = *ptrM;
+211             ptrM++;
+212             ptrOut += out->\hyperlink{struct__matrix_a30d055d00e1b4afea4568f2aa1cf5c37}{width};
+213         \}
+214     \}
+215 
+216     \textcolor{keywordflow}{return} out;
+217 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h_a2936260302742748b0639e8ec71d4d9f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{matrix_8h_a9e401ca3ccfd3bc7f72c15b686804b69}\label{matrix_8h_a9e401ca3ccfd3bc7f72c15b686804b69}} 
+\index{matrix.\+h@{matrix.\+h}!write\+Matrix@{write\+Matrix}}
+\index{write\+Matrix@{write\+Matrix}!matrix.\+h@{matrix.\+h}}
+\subsubsection{\texorpdfstring{write\+Matrix()}{writeMatrix()}}
+{\footnotesize\ttfamily void write\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{matrix_8h_abc75382643898dd572498a574bf891c7}{matrix} $\ast$}]{m,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+

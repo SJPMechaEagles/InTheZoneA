@@ -1,7 +1,8 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
     [ "API.h", "_a_p_i_8h.html", "_a_p_i_8h" ],
-    [ "battery.h", "battery_8h.html", null ],
+    [ "auto.h", "auto_8h.html", "auto_8h" ],
+    [ "battery.h", "battery_8h.html", "battery_8h" ],
     [ "claw.h", "claw_8h.html", "claw_8h" ],
     [ "controller.h", "controller_8h.html", "controller_8h" ],
     [ "drive.h", "drive_8h.html", "drive_8h" ],
@@ -11,11 +12,15 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "localization.h", "localization_8h.html", "localization_8h" ],
     [ "log.h", "log_8h.html", "log_8h" ],
     [ "main.h", "main_8h.html", "main_8h" ],
+    [ "matrix.h", "matrix_8h.html", "matrix_8h" ],
     [ "menu.h", "menu_8h.html", "menu_8h" ],
     [ "mobile_goal_intake.h", "mobile__goal__intake_8h.html", "mobile__goal__intake_8h" ],
     [ "motor_ports.h", "motor__ports_8h.html", "motor__ports_8h" ],
+    [ "partner.h", "partner_8h.html", "partner_8h" ],
+    [ "potentiometer.h", "potentiometer_8h.html", "potentiometer_8h" ],
     [ "sensor_ports.h", "sensor__ports_8h.html", "sensor__ports_8h" ],
     [ "slew.h", "slew_8h.html", "slew_8h" ],
+    [ "toggle.h", "toggle_8h.html", "toggle_8h" ],
     [ "vlib.h", "vlib_8h.html", "vlib_8h" ],
     [ "vmath.h", "vmath_8h.html", "vmath_8h" ]
 ];

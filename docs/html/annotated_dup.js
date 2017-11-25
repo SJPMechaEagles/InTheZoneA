@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "_matrix", "struct__matrix.html", "struct__matrix" ],
     [ "accelerometer_odometry", "structaccelerometer__odometry.html", "structaccelerometer__odometry" ],
     [ "cord", "structcord.html", "structcord" ],
     [ "encoder_odemtry", "structencoder__odemtry.html", "structencoder__odemtry" ],

@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.7</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
   </td>
  </tr>
@@ -99,8 +99,7 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for init.c:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="init_8c__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="init_8c__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="init_8c_source.html">Go to the source code of this file.</a></p>
@@ -140,16 +139,14 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00047">47</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
-<p class="reference">References <a class="el" href="_a_p_i_8h.html#aab54c390b2ff91b5b7861db877136392">analogCalibrate()</a>, <a class="el" href="slew_8c_source.html#l00030">init_slew()</a>, <a class="el" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf()</a>, and <a class="el" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                  {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName</a>(<span class="stringliteral">&quot;9228A&quot;</span>);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a>(<span class="stringliteral">&quot;init\n\n&quot;</span>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="_a_p_i_8h.html#aab54c390b2ff91b5b7861db877136392">analogCalibrate</a>(1);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="_a_p_i_8h.html#aab54c390b2ff91b5b7861db877136392">analogCalibrate</a>(2);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="slew_8h.html#a321758941d88b75783955c819bb75005">init_slew</a>();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a22269cefc22e487f7acdcc4737d58c4a"><div class="ttname"><a href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName</a></div><div class="ttdeci">void setTeamName(const char *name)</div></div>
-<div class="ttc" id="slew_8h_html_a321758941d88b75783955c819bb75005"><div class="ttname"><a href="slew_8h.html#a321758941d88b75783955c819bb75005">init_slew</a></div><div class="ttdeci">void init_slew()</div><div class="ttdoc">Initializes the slew rate controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00030">slew.c:30</a></div></div>
+<p class="reference">References <a class="el" href="_a_p_i_8h.html#a868ab46aa5992e60829936c0109160bf">imeInitializeAll()</a>, <a class="el" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf()</a>, and <a class="el" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                  {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">int</span> c = <a class="code" href="_a_p_i_8h.html#a868ab46aa5992e60829936c0109160bf">imeInitializeAll</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName</a>(<span class="stringliteral">&quot;9228A&quot;</span>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a>(<span class="stringliteral">&quot;Counts : %d\n&quot;</span>, c);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a22269cefc22e487f7acdcc4737d58c4a"><div class="ttname"><a href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName</a></div><div class="ttdeci">void setTeamName(const char *name)</div></div>
 <div class="ttc" id="_a_p_i_8h_html_a403c82418e475fa4a8273719e6a7f3e6"><div class="ttname"><a href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a></div><div class="ttdeci">int printf(const char *formatString,...)</div></div>
-<div class="ttc" id="_a_p_i_8h_html_aab54c390b2ff91b5b7861db877136392"><div class="ttname"><a href="_a_p_i_8h.html#aab54c390b2ff91b5b7861db877136392">analogCalibrate</a></div><div class="ttdeci">int analogCalibrate(unsigned char channel)</div></div>
+<div class="ttc" id="_a_p_i_8h_html_a868ab46aa5992e60829936c0109160bf"><div class="ttname"><a href="_a_p_i_8h.html#a868ab46aa5992e60829936c0109160bf">imeInitializeAll</a></div><div class="ttdeci">unsigned int imeInitializeAll()</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="init_8c_a25a40b6614565f755233080a384c35f1_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_a25a40b6614565f755233080a384c35f1_cgraph.svg" width="235" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -178,8 +175,7 @@ Here is the call graph for this function:</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_ad9cda921edb01125bb13c2f86bcf624b_cgraph.svg" width="238" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_ad9cda921edb01125bb13c2f86bcf624b_cgraph.svg" width="238" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

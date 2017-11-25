@@ -12,18 +12,13 @@ void update_claw() {
     int p = 0;
     if(state == CLAW_OPEN_STATE) {
       p = getClawTicks() - CLAW_OPEN_VAL;
-      printf("OPEN\n");
     } else {
       p = getClawTicks() - CLAW_CLOSE_VAL;
-      printf("CLOSE\n");
     }
-
-    if(getClawTicks() < 1600) return;
 
     int d = (p - last_error);
     int motor = CLAW_P * p;
     set_claw_motor(motor);
-    printf("claw %d\n",(motor));
   }
 }
 

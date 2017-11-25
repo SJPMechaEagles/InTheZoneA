@@ -16,7 +16,6 @@
 #define LIFTER_D 0
 #define LIFTER_I 0
 
-
 #define LENGTH_LONG 13.5
 #define HEIGHT 19.1 - 3.8
 #define LENGTH_SHORT 10.5

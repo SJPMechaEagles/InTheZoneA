@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['y',['y',['../structlocation.html#ad7197d1981d4ea5d8b36041473cac815',1,'location::y()'],['../structcord.html#a4e7d289c55cfe511532e53a81dc19215',1,'cord::y()'],['../structencoder__odemtry.html#a955cbea800158b8c0cd5f36b253fe6bb',1,'encoder_odemtry::y()'],['../structaccelerometer__odometry.html#a4d812f516efdd477ae9f74fca2a07a2b',1,'accelerometer_odometry::y()'],['../localization_8c.html#ab927965981178aa1fba979a37168db2a',1,'y():&#160;localization.c']]]
+  ['slew',['slew',['../slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f',1,'slew.c']]],
+  ['speeds_5fmutex',['speeds_mutex',['../slew_8c.html#a29ddd4c66a52ff81b441d04f9f6d9318',1,'slew.c']]],
+  ['state_5fmatrix',['state_matrix',['../localization_8c.html#a424e677cc0238390cb4a3068a6f3518c',1,'localization.c']]],
+  ['step',['step',['../structmenu__t.html#adc50450bc59ea66a8d67424adc46e24e',1,'menu_t']]],
+  ['step_5ff',['step_f',['../structmenu__t.html#a84cfd9226f6554c63ca9f4b11f94d12d',1,'menu_t']]]
 ];

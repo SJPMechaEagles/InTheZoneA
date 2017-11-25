@@ -6,6 +6,14 @@ File for autonomous code.
 
 
 {\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auto.\+h\char`\"{}}\newline
+Include dependency graph for auto.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{auto_8c__incl}
+\end{center}
+\end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,10 +43,56 @@ Code running in the autonomous task cannot access information from the V\+EX Joy
 
 The autonomous task may exit, unlike \hyperlink{main_8h_ac71a94af413917f27d108e95c4d6f6a7}{operator\+Control()} which should never exit. If it does so, the robot will await a switch to another mode or disable/enable cycle. 
 
-Definition at line 29 of file auto.\+c.
+Definition at line 30 of file auto.\+c.
+
+
+
+References analog\+Read(), B\+O\+TH, close\+\_\+claw(), deinitslew(), delay(), G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT, ime\+Get(), ime\+Reset(), init\+\_\+slew(), L\+I\+F\+T\+ER, M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE, M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE, open\+\_\+claw(), printf(), set\+\_\+lifter\+\_\+motors(), and set\+\_\+side\+\_\+speed().
 
 
 \begin{DoxyCode}
-29                   \{
-30 \}
+30                   \{
+31   \hyperlink{slew_8h_a321758941d88b75783955c819bb75005}{init\_slew}();
+32 
+33 
+34   \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay}(10);
+35   \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf}(\textcolor{stringliteral}{"auto\(\backslash\)n"});
+36   \textcolor{keywordtype}{int} counts\_drive\_left;
+37   \textcolor{keywordtype}{int} counts\_drive\_right;
+38   \textcolor{keywordtype}{int} counts\_drive;
+39   \hyperlink{_a_p_i_8h_ab1ef9ee5f8878856896a6c920ed762fc}{imeReset}(\hyperlink{auto_8h_a811b1777cccc7f0e3abbec1874715f0a}{MID\_LEFT\_DRIVE});
+40   \hyperlink{_a_p_i_8h_ab1ef9ee5f8878856896a6c920ed762fc}{imeReset}(\hyperlink{auto_8h_a2919b1b6b7bf06fab5b5bbf09d8d2761}{MID\_RIGHT\_DRIVE});
+41   \hyperlink{_a_p_i_8h_ac4f1500418a729ac3ee95bce9768b20c}{imeGet}(\hyperlink{auto_8h_a811b1777cccc7f0e3abbec1874715f0a}{MID\_LEFT\_DRIVE}, &counts\_drive\_left);
+42   \hyperlink{_a_p_i_8h_ac4f1500418a729ac3ee95bce9768b20c}{imeGet}(\hyperlink{auto_8h_a2919b1b6b7bf06fab5b5bbf09d8d2761}{MID\_RIGHT\_DRIVE}, &counts\_drive\_right);
+43   counts\_drive = counts\_drive\_left + counts\_drive\_right;
+44   counts\_drive /= 2;
+45   \hyperlink{claw_8h_ac42dd40dbb37219295286859c6b068c2}{close\_claw}();
+46 
+47   \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay}(300);
+48   \textcolor{comment}{//unsigned long time = millis();}
+49   \textcolor{keywordflow}{while}(\hyperlink{_a_p_i_8h_a5da86064604c539c2b6a5e2993289108}{analogRead}(\hyperlink{sensor__ports_8h_a1968b8c13fa0757cc721c96a67407d9b}{LIFTER}) < \hyperlink{auto_8h_a83cf08759ac4ffc3ea6e3b7f9c406b3c}{GOAL\_HEIGHT})\{
+50     \hyperlink{lifter_8h_a16ed2ef406519bbd4d091f6321f4ed8a}{set\_lifter\_motors}(-127);
+51   \}
+52   \hyperlink{lifter_8h_a16ed2ef406519bbd4d091f6321f4ed8a}{set\_lifter\_motors}(0);
+53   \textcolor{keywordflow}{while}(counts\_drive\_left < 530)\{
+54     \hyperlink{drive_8h_a8df41fd50094c065eedc81fc5e6595d1}{set\_side\_speed}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH}, 127);
+55     \hyperlink{_a_p_i_8h_ac4f1500418a729ac3ee95bce9768b20c}{imeGet}(\hyperlink{auto_8h_a811b1777cccc7f0e3abbec1874715f0a}{MID\_LEFT\_DRIVE}, &counts\_drive\_left);
+56     \hyperlink{_a_p_i_8h_ac4f1500418a729ac3ee95bce9768b20c}{imeGet}(\hyperlink{auto_8h_a2919b1b6b7bf06fab5b5bbf09d8d2761}{MID\_RIGHT\_DRIVE}, &counts\_drive\_right);
+57     counts\_drive = counts\_drive\_left + counts\_drive\_right;
+58     counts\_drive /= 2;
+59     \textcolor{comment}{//if(millis() - time > 1000) break;}
+60   \}
+61   \hyperlink{drive_8h_a8df41fd50094c065eedc81fc5e6595d1}{set\_side\_speed}(\hyperlink{drive_8h_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}{BOTH}, 0);
+62   \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay}(1000);
+63   \hyperlink{claw_8h_a03023ca28f671b9fa7bac07782ccd8c1}{open\_claw}();
+64   \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay}(1000);
+65   \hyperlink{slew_8h_a981c9990a969d2587e66e550737f7cd9}{deinitslew}();
+66 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{auto_8c_a3c7ca506bbc071fa740de13805b7f376_cgraph}
+\end{center}
+\end{figure}

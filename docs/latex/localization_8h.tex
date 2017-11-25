@@ -1,0 +1,119 @@
+\hypertarget{localization_8h}{}\section{include/localization.h File Reference}
+\label{localization_8h}\index{include/localization.\+h@{include/localization.\+h}}
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}encoders.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\newline
+Include dependency graph for localization.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{localization_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{localization_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlocation}{location}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{localization_8h_a4fa0a97f6aafe983a46ffc7188d1fab5}{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}~0.\+500
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlocation}{location} \hyperlink{localization_8h_aadbff35bb757f60bc348d4d778f57a2f}{get\+\_\+position} ()
+\item 
+bool \hyperlink{localization_8h_afdd0147de6aa15957e9a125f9cd20578}{init\+\_\+localization} (const unsigned char gyro1, unsigned short multiplier, int start\+\_\+x, int start\+\_\+y, int start\+\_\+theta)
+\begin{DoxyCompactList}\small\item\em Starts the localization process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{localization_8h_a4fa0a97f6aafe983a46ffc7188d1fab5}\label{localization_8h_a4fa0a97f6aafe983a46ffc7188d1fab5}} 
+\index{localization.\+h@{localization.\+h}!L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}
+\index{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}!localization.\+h@{localization.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}{LOCALIZATION\_UPDATE\_FREQUENCY}}
+{\footnotesize\ttfamily \#define L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY~0.\+500}
+
+
+
+Definition at line 9 of file localization.\+h.
+
+
+
+Referenced by calculate\+\_\+gryo\+\_\+anglular\+\_\+velocity(), init\+\_\+localization(), and integrate\+\_\+gyro\+\_\+w().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{localization_8h_aadbff35bb757f60bc348d4d778f57a2f}\label{localization_8h_aadbff35bb757f60bc348d4d778f57a2f}} 
+\index{localization.\+h@{localization.\+h}!get\+\_\+position@{get\+\_\+position}}
+\index{get\+\_\+position@{get\+\_\+position}!localization.\+h@{localization.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+position()}{get\_position()}}
+{\footnotesize\ttfamily struct \hyperlink{structlocation}{location} get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file localization.\+c.
+
+
+\begin{DoxyCode}
+25                                \{
+26 
+27 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{localization_8h_afdd0147de6aa15957e9a125f9cd20578}\label{localization_8h_afdd0147de6aa15957e9a125f9cd20578}} 
+\index{localization.\+h@{localization.\+h}!init\+\_\+localization@{init\+\_\+localization}}
+\index{init\+\_\+localization@{init\+\_\+localization}!localization.\+h@{localization.\+h}}
+\subsubsection{\texorpdfstring{init\+\_\+localization()}{init\_localization()}}
+{\footnotesize\ttfamily bool init\+\_\+localization (\begin{DoxyParamCaption}\item[{const unsigned char}]{gyro1,  }\item[{unsigned short}]{multiplier,  }\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{start\+\_\+theta }\end{DoxyParamCaption})}
+
+
+
+Starts the localization process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gyro1} & The first gyro  The multiplier parameter can tune the gyro to adapt to specific sensors. The default value at this time is 196; higher values will increase the number of degrees reported for a fixed actual rotation, while lower values will decrease the number of degrees reported. If your robot is consistently turning too far, increase the multiplier, and if it is not turning far enough, decrease the multiplier. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file localization.\+c.
+
+
+
+References g1, gyro\+Init(), last\+\_\+call, localization\+\_\+task, L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY, make\+Matrix(), millis(), task\+Run\+Loop(), and update\+\_\+position().
+
+
+\begin{DoxyCode}
+89                                                                                                            
+                    \{
+90   \hyperlink{localization_8c_a46b8f25ffa3bbee071a0468eac654393}{g1} = \hyperlink{_a_p_i_8h_a17270080a32b64937a3669089a80120f}{gyroInit}(gyro1, multiplier);
+91   \textcolor{comment}{//init state matrix}
+92 
+93   \textcolor{comment}{//one dimensional vector with x, y, theta, acceleration in x and y}
+94   \hyperlink{localization_8c_a424e677cc0238390cb4a3068a6f3518c}{state\_matrix} = \hyperlink{matrix_8h_aae8b56c6fb44d9147b835f4006ca872c}{makeMatrix}(1, 5);
+95   \hyperlink{localization_8c_a5be50f74f0f5a3aea13f2bd8db891488}{localization\_task} = \hyperlink{_a_p_i_8h_ab05a241d6d1fd98b1ceb4665db678156}{taskRunLoop}(\hyperlink{localization_8c_afacd5e0b3d5e677df26a4402bbd9ec9e}{update\_position}, 
+      \hyperlink{localization_8h_a4fa0a97f6aafe983a46ffc7188d1fab5}{LOCALIZATION\_UPDATE\_FREQUENCY} * 1000);
+96   \hyperlink{localization_8c_a0f327d31da83831114e7417abb7b6b63}{last\_call} = \hyperlink{_a_p_i_8h_a6ff7f2532a22366f0013bc41397129fd}{millis}();
+97   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+98 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{localization_8h_afdd0147de6aa15957e9a125f9cd20578_cgraph}
+\end{center}
+\end{figure}

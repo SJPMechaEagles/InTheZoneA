@@ -2,6 +2,13 @@
 \label{slew_8c}\index{src/slew.\+c@{src/slew.\+c}}
 {\ttfamily \#include \char`\"{}slew.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+Include dependency graph for slew.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c__incl}
+\end{center}
+\end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -9,6 +16,8 @@ void \hyperlink{slew_8c_a981c9990a969d2587e66e550737f7cd9}{deinitslew} ()
 \begin{DoxyCompactList}\small\item\em Deinitializes the slew rate controller and frees memory. \end{DoxyCompactList}\item 
 void \hyperlink{slew_8c_a321758941d88b75783955c819bb75005}{init\+\_\+slew} ()
 \begin{DoxyCompactList}\small\item\em Initializes the slew rate controller. \end{DoxyCompactList}\item 
+void \hyperlink{slew_8c_a9f8b8ae577ef938622024545711f0151}{set\+\_\+motor\+\_\+immediate} (int motor, int speed)
+\item 
 void \hyperlink{slew_8c_a7dff2b79dffe55fb936d977594d7c01d}{set\+\_\+motor\+\_\+slew} (int motor, int speed)
 \begin{DoxyCompactList}\small\item\em Sets motor speed wrapped inside the slew rate controller. \end{DoxyCompactList}\item 
 void \hyperlink{slew_8c_a807a87c5df438fde21c1e8213906695b}{update\+Motors} ()
@@ -17,13 +26,15 @@ void \hyperlink{slew_8c_a807a87c5df438fde21c1e8213906695b}{update\+Motors} ()
 \begin{DoxyCompactItemize}
 \item 
 static bool \hyperlink{slew_8c_aedeffc7d23da25d52b9a50045189fe2b}{initialized} = false
-\begin{DoxyCompactList}\small\item\em Boolean indicating whether or not the slew rate controller has been initialized. \end{DoxyCompactList}\item 
-static signed char $\ast$ \hyperlink{slew_8c_a3143c164339fd92b9b1e132c63a41060}{motors\+\_\+set\+\_\+speeds} = N\+U\+LL
-\begin{DoxyCompactList}\small\item\em Array of motor speed values to set the motors to. \end{DoxyCompactList}\item 
-static Mutex \hyperlink{slew_8c_ae8b85b4f519a4945ba9ea43e9b503531}{mutex}
-\begin{DoxyCompactList}\small\item\em mutex to protect the data in the array of speeds from being read or written to simultaneously. \end{DoxyCompactList}\item 
-static Task\+Handle \hyperlink{slew_8c_a9dc30877eadbb32ceb6bede027c9a93f}{slew} = N\+U\+LL
-\begin{DoxyCompactList}\small\item\em Task that will handle updating the motors on a routine period. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\item 
+static int \hyperlink{slew_8c_a69e0d1204ea4d87b7366c9cd79527984}{motors\+\_\+curr\+\_\+speeds} \mbox{[}10\mbox{]}
+\item 
+static int \hyperlink{slew_8c_acf7558ed17fdecd298ea7eb82291c7d0}{motors\+\_\+set\+\_\+speeds} \mbox{[}10\mbox{]}
+\item 
+static \hyperlink{_a_p_i_8h_a23dca3c0de10682afb982677ff292f77}{Task\+Handle} \hyperlink{slew_8c_a9dc30877eadbb32ceb6bede027c9a93f}{slew} = N\+U\+LL
+\item 
+static \hyperlink{_a_p_i_8h_a9b40607ca13d2b5261f47f613e3c4fa4}{Mutex} \hyperlink{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}{speeds\+\_\+mutex}
+\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -45,19 +56,39 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 62 of file slew.\+c.
+Definition at line 43 of file slew.\+c.
 
 
 
-References motors\+\_\+set\+\_\+speeds, and slew.
+References initialized, motors\+\_\+curr\+\_\+speeds, motors\+\_\+set\+\_\+speeds, slew, and task\+Delete().
+
+
+
+Referenced by autonomous().
 
 
 \begin{DoxyCode}
-62                  \{
-63   free(\hyperlink{slew_8c_a3143c164339fd92b9b1e132c63a41060}{motors\_set\_speeds});
-64   taskDelete(\hyperlink{slew_8c_a9dc30877eadbb32ceb6bede027c9a93f}{slew});
-65 \}
+43                  \{
+44   \hyperlink{_a_p_i_8h_add3b8d580ea6ef5635c6d9ff88c68612}{taskDelete}(\hyperlink{slew_8c_a9dc30877eadbb32ceb6bede027c9a93f}{slew});
+45   memset(\hyperlink{slew_8c_acf7558ed17fdecd298ea7eb82291c7d0}{motors\_set\_speeds}, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+46   memset(\hyperlink{slew_8c_a69e0d1204ea4d87b7366c9cd79527984}{motors\_curr\_speeds}, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+47   \hyperlink{slew_8c_aedeffc7d23da25d52b9a50045189fe2b}{initialized} = \textcolor{keyword}{false};
+48 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{slew_8c_a981c9990a969d2587e66e550737f7cd9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{slew_8c_a981c9990a969d2587e66e550737f7cd9_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{slew_8c_a321758941d88b75783955c819bb75005}\label{slew_8c_a321758941d88b75783955c819bb75005}} 
 \index{slew.\+c@{slew.\+c}!init\+\_\+slew@{init\+\_\+slew}}
 \index{init\+\_\+slew@{init\+\_\+slew}!slew.\+c@{slew.\+c}}
@@ -76,26 +107,91 @@ Chris Jerrett, Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line 49 of file slew.\+c.
+Definition at line 30 of file slew.\+c.
 
 
 
-References calloc\+\_\+real(), info(), initialized, M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS, mutex, slew, U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS, and update\+Motors().
+References info(), initialized, motors\+\_\+curr\+\_\+speeds, motors\+\_\+set\+\_\+speeds, motor\+Stop\+All(), mutex\+Create(), slew, speeds\+\_\+mutex, task\+Run\+Loop(), update\+Motors(), and warning().
 
 
 
-Referenced by initialize().
+Referenced by autonomous(), operator\+Control(), set\+\_\+motor\+\_\+immediate(), and set\+\_\+motor\+\_\+slew().
 
 
 \begin{DoxyCode}
-49                 \{
-50   \hyperlink{log_8h_a1606d750e1bb8de9f9e917172bba3382}{info}(\textcolor{stringliteral}{"Init Slew"});
-51   \hyperlink{vlib_8h_a1115803c6996aebfbf67434810df7b4b}{calloc\_real}(\hyperlink{slew_8h_ad1ad4b29af4180aa00713599367fbc98}{MOTOR\_PORTS}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
-52   \hyperlink{slew_8c_ae8b85b4f519a4945ba9ea43e9b503531}{mutex} = mutexCreate();
-53   \hyperlink{slew_8c_a9dc30877eadbb32ceb6bede027c9a93f}{slew} = taskRunLoop(\hyperlink{slew_8c_a807a87c5df438fde21c1e8213906695b}{updateMotors}, \hyperlink{slew_8h_a4e8e7d6fdd1f5c6f8a0f341e4b61f025}{UPDATE\_PERIOD\_MS});
-54   \hyperlink{slew_8c_aedeffc7d23da25d52b9a50045189fe2b}{initialized} = \textcolor{keyword}{true};
-55 \}
+30                 \{
+31   \textcolor{keywordflow}{if}(\hyperlink{slew_8c_aedeffc7d23da25d52b9a50045189fe2b}{initialized}) \{
+32     \hyperlink{log_8h_a0bec2cf5fff7f607bc510b74aba9887c}{warning}(\textcolor{stringliteral}{"Trying to init already init slew"});
+33   \}
+34   memset(\hyperlink{slew_8c_acf7558ed17fdecd298ea7eb82291c7d0}{motors\_set\_speeds}, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+35   memset(\hyperlink{slew_8c_a69e0d1204ea4d87b7366c9cd79527984}{motors\_curr\_speeds}, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+36   \hyperlink{_a_p_i_8h_a8966c541f3e9565aea1289f0d2f2cf43}{motorStopAll}();
+37   \hyperlink{log_8h_a1606d750e1bb8de9f9e917172bba3382}{info}(\textcolor{stringliteral}{"Did Init Slew"});
+38   \hyperlink{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}{speeds\_mutex} = \hyperlink{_a_p_i_8h_aecd027ce8f8b52a765735e9eb5b202b3}{mutexCreate}();
+39   \hyperlink{slew_8c_a9dc30877eadbb32ceb6bede027c9a93f}{slew} = \hyperlink{_a_p_i_8h_ab05a241d6d1fd98b1ceb4665db678156}{taskRunLoop}(\hyperlink{slew_8c_a807a87c5df438fde21c1e8213906695b}{updateMotors}, 100);
+40   \hyperlink{slew_8c_aedeffc7d23da25d52b9a50045189fe2b}{initialized} = \textcolor{keyword}{true};
+41 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a321758941d88b75783955c819bb75005_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a321758941d88b75783955c819bb75005_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{slew_8c_a9f8b8ae577ef938622024545711f0151}\label{slew_8c_a9f8b8ae577ef938622024545711f0151}} 
+\index{slew.\+c@{slew.\+c}!set\+\_\+motor\+\_\+immediate@{set\+\_\+motor\+\_\+immediate}}
+\index{set\+\_\+motor\+\_\+immediate@{set\+\_\+motor\+\_\+immediate}!slew.\+c@{slew.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+motor\+\_\+immediate()}{set\_motor\_immediate()}}
+{\footnotesize\ttfamily void set\+\_\+motor\+\_\+immediate (\begin{DoxyParamCaption}\item[{int}]{motor,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file slew.\+c.
+
+
+
+References debug(), init\+\_\+slew(), initialized, motors\+\_\+curr\+\_\+speeds, motors\+\_\+set\+\_\+speeds, motor\+Set(), mutex\+Give(), mutex\+Take(), and speeds\+\_\+mutex.
+
+
+
+Referenced by close\+\_\+claw(), open\+\_\+claw(), set\+\_\+claw\+\_\+motor(), set\+\_\+intake\+\_\+motor(), and set\+\_\+lifter\+\_\+motors().
+
+
+\begin{DoxyCode}
+60                                                \{
+61   \textcolor{keywordflow}{if}(!\hyperlink{slew_8c_aedeffc7d23da25d52b9a50045189fe2b}{initialized}) \{
+62     \hyperlink{log_8h_af3668f40d1ad1b4f3418869ac9a31f34}{debug}(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
+63     \hyperlink{slew_8c_a321758941d88b75783955c819bb75005}{init\_slew}();
+64   \}
+65   \hyperlink{_a_p_i_8h_a03c5b04b472d024281f62d7af8854a8e}{motorSet}(motor, speed);
+66   \hyperlink{_a_p_i_8h_a8b51124628d2a7741738d48551d1e8ee}{mutexTake}(\hyperlink{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}{speeds\_mutex}, 10);
+67   \hyperlink{slew_8c_a69e0d1204ea4d87b7366c9cd79527984}{motors\_curr\_speeds}[motor-1] = speed;
+68   \hyperlink{slew_8c_acf7558ed17fdecd298ea7eb82291c7d0}{motors\_set\_speeds}[motor-1] = speed;
+69   \hyperlink{_a_p_i_8h_afe171a08d22de18fc2ab604b2364959f}{mutexGive}(\hyperlink{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}{speeds\_mutex});
+70 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a9f8b8ae577ef938622024545711f0151_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a9f8b8ae577ef938622024545711f0151_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{slew_8c_a7dff2b79dffe55fb936d977594d7c01d}\label{slew_8c_a7dff2b79dffe55fb936d977594d7c01d}} 
 \index{slew.\+c@{slew.\+c}!set\+\_\+motor\+\_\+slew@{set\+\_\+motor\+\_\+slew}}
 \index{set\+\_\+motor\+\_\+slew@{set\+\_\+motor\+\_\+slew}!slew.\+c@{slew.\+c}}
@@ -121,25 +217,42 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 67 of file slew.\+c.
+Definition at line 50 of file slew.\+c.
 
 
 
-References motors\+\_\+set\+\_\+speeds, and mutex.
+References debug(), init\+\_\+slew(), initialized, motors\+\_\+set\+\_\+speeds, mutex\+Give(), mutex\+Take(), and speeds\+\_\+mutex.
 
 
 
-Referenced by operator\+Control().
+Referenced by set\+\_\+side\+\_\+speed().
 
 
 \begin{DoxyCode}
-67                                          \{
-68   \textcolor{keywordflow}{if}(mutexTake(\hyperlink{slew_8c_ae8b85b4f519a4945ba9ea43e9b503531}{mutex}, 100)) \{
-69       \hyperlink{slew_8c_a3143c164339fd92b9b1e132c63a41060}{motors\_set\_speeds}[motor] = speed;
-70       mutexGive(\hyperlink{slew_8c_ae8b85b4f519a4945ba9ea43e9b503531}{mutex});
-71   \}
-72 \}
+50                                          \{
+51   \textcolor{keywordflow}{if}(!\hyperlink{slew_8c_aedeffc7d23da25d52b9a50045189fe2b}{initialized}) \{
+52     \hyperlink{log_8h_af3668f40d1ad1b4f3418869ac9a31f34}{debug}(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
+53     \hyperlink{slew_8c_a321758941d88b75783955c819bb75005}{init\_slew}();
+54   \}
+55   \hyperlink{_a_p_i_8h_a8b51124628d2a7741738d48551d1e8ee}{mutexTake}(\hyperlink{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}{speeds\_mutex}, 10);
+56   \hyperlink{slew_8c_acf7558ed17fdecd298ea7eb82291c7d0}{motors\_set\_speeds}[motor-1] = speed;
+57   \hyperlink{_a_p_i_8h_afe171a08d22de18fc2ab604b2364959f}{mutexGive}(\hyperlink{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}{speeds\_mutex});
+58 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a7dff2b79dffe55fb936d977594d7c01d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a7dff2b79dffe55fb936d977594d7c01d_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{slew_8c_a807a87c5df438fde21c1e8213906695b}\label{slew_8c_a807a87c5df438fde21c1e8213906695b}} 
 \index{slew.\+c@{slew.\+c}!update\+Motors@{update\+Motors}}
 \index{update\+Motors@{update\+Motors}!slew.\+c@{slew.\+c}}
@@ -158,11 +271,11 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 31 of file slew.\+c.
+Definition at line 13 of file slew.\+c.
 
 
 
-References debug(), M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS, motors\+\_\+set\+\_\+speeds, mutex, and R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON.
+References motors\+\_\+curr\+\_\+speeds, motors\+\_\+set\+\_\+speeds, motor\+Set(), mutex\+Give(), mutex\+Take(), and speeds\+\_\+mutex.
 
 
 
@@ -170,24 +283,37 @@ Referenced by init\+\_\+slew().
 
 
 \begin{DoxyCode}
-31                    \{
-32   \textcolor{comment}{//Take back half approach}
-33   \textcolor{comment}{//Not linear but equal to setSpeed(1-(1/2)^x)}
-34   \textcolor{keywordflow}{if}(mutexTake(\hyperlink{slew_8c_ae8b85b4f519a4945ba9ea43e9b503531}{mutex}, 10)) \{
-35     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{slew_8h_ad1ad4b29af4180aa00713599367fbc98}{MOTOR\_PORTS}; i++) \{
-36       \textcolor{keywordtype}{char} set\_speed = \hyperlink{slew_8c_a3143c164339fd92b9b1e132c63a41060}{motors\_set\_speeds}[i];
-37       \textcolor{keywordtype}{char} curr\_speed = motorGet(i);
-38       \textcolor{keywordtype}{char} diff = set\_speed - curr\_speed;
-39       \textcolor{keywordtype}{int} n = (int) curr\_speed + ceil(diff/(\textcolor{keywordtype}{float})\hyperlink{slew_8h_a4a3ff8667251227c99f8f4c81e9ff467}{RAMP\_PROPORTION});
-40       \textcolor{keywordtype}{char} c[16];
-41       sprintf(c, \textcolor{stringliteral}{"Set Motor %d: %d"}, i, n);
-42       \hyperlink{log_8h_af3668f40d1ad1b4f3418869ac9a31f34}{debug}(c);
-43       motorSet(i, n);
-44     \}
-45     mutexGive(\hyperlink{slew_8c_ae8b85b4f519a4945ba9ea43e9b503531}{mutex});
-46   \}
-47 \}
+13                    \{
+14   \textcolor{comment}{//Take back half approach}
+15   \textcolor{comment}{//Not linear but equal to setSpeed(1-(1/2)^x)}
+16   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < 9; i++) \{
+17     \textcolor{keywordflow}{if}(\hyperlink{slew_8c_acf7558ed17fdecd298ea7eb82291c7d0}{motors\_set\_speeds}[i] == \hyperlink{slew_8c_a69e0d1204ea4d87b7366c9cd79527984}{motors\_curr\_speeds}[i]) \textcolor{keywordflow}{continue};
+18     \hyperlink{_a_p_i_8h_a8b51124628d2a7741738d48551d1e8ee}{mutexTake}(\hyperlink{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}{speeds\_mutex}, 10);
+19     \textcolor{keywordtype}{int} set\_speed = (\hyperlink{slew_8c_acf7558ed17fdecd298ea7eb82291c7d0}{motors\_set\_speeds}[i]);
+20     \textcolor{keywordtype}{int} curr\_speed = \hyperlink{slew_8c_a69e0d1204ea4d87b7366c9cd79527984}{motors\_curr\_speeds}[i];
+21     \hyperlink{_a_p_i_8h_afe171a08d22de18fc2ab604b2364959f}{mutexGive}(\hyperlink{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}{speeds\_mutex});
+22     \textcolor{keywordtype}{int} diff = set\_speed - curr\_speed;
+23     \textcolor{keywordtype}{int} offset = diff;
+24     \textcolor{keywordtype}{int} n = curr\_speed + offset;
+25     \hyperlink{slew_8c_a69e0d1204ea4d87b7366c9cd79527984}{motors\_curr\_speeds}[i] = n;
+26     \hyperlink{_a_p_i_8h_a03c5b04b472d024281f62d7af8854a8e}{motorSet}(i+1, n);
+27   \}
+28 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{slew_8c_a807a87c5df438fde21c1e8213906695b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a807a87c5df438fde21c1e8213906695b_icgraph}
+\end{center}
+\end{figure}
 
 
 \subsection{Variable Documentation}
@@ -199,91 +325,65 @@ Referenced by init\+\_\+slew().
 
 
 
-Boolean indicating whether or not the slew rate controller has been initialized. 
-
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-9/14/17 
-\end{DoxyDate}
-
-
-Definition at line 29 of file slew.\+c.
+Definition at line 11 of file slew.\+c.
 
 
 
-Referenced by init\+\_\+slew().
+Referenced by deinitslew(), init\+\_\+slew(), set\+\_\+motor\+\_\+immediate(), and set\+\_\+motor\+\_\+slew().
 
-\mbox{\Hypertarget{slew_8c_a3143c164339fd92b9b1e132c63a41060}\label{slew_8c_a3143c164339fd92b9b1e132c63a41060}} 
+\mbox{\Hypertarget{slew_8c_a69e0d1204ea4d87b7366c9cd79527984}\label{slew_8c_a69e0d1204ea4d87b7366c9cd79527984}} 
+\index{slew.\+c@{slew.\+c}!motors\+\_\+curr\+\_\+speeds@{motors\+\_\+curr\+\_\+speeds}}
+\index{motors\+\_\+curr\+\_\+speeds@{motors\+\_\+curr\+\_\+speeds}!slew.\+c@{slew.\+c}}
+\subsubsection{\texorpdfstring{motors\+\_\+curr\+\_\+speeds}{motors\_curr\_speeds}}
+{\footnotesize\ttfamily int motors\+\_\+curr\+\_\+speeds\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 7 of file slew.\+c.
+
+
+
+Referenced by deinitslew(), init\+\_\+slew(), set\+\_\+motor\+\_\+immediate(), and update\+Motors().
+
+\mbox{\Hypertarget{slew_8c_acf7558ed17fdecd298ea7eb82291c7d0}\label{slew_8c_acf7558ed17fdecd298ea7eb82291c7d0}} 
 \index{slew.\+c@{slew.\+c}!motors\+\_\+set\+\_\+speeds@{motors\+\_\+set\+\_\+speeds}}
 \index{motors\+\_\+set\+\_\+speeds@{motors\+\_\+set\+\_\+speeds}!slew.\+c@{slew.\+c}}
 \subsubsection{\texorpdfstring{motors\+\_\+set\+\_\+speeds}{motors\_set\_speeds}}
-{\footnotesize\ttfamily signed char$\ast$ motors\+\_\+set\+\_\+speeds = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily int motors\+\_\+set\+\_\+speeds\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Array of motor speed values to set the motors to. 
-
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-9/14/17 
-\end{DoxyDate}
-
-
-Definition at line 15 of file slew.\+c.
+Definition at line 6 of file slew.\+c.
 
 
 
-Referenced by deinitslew(), set\+\_\+motor\+\_\+slew(), and update\+Motors().
-
-\mbox{\Hypertarget{slew_8c_ae8b85b4f519a4945ba9ea43e9b503531}\label{slew_8c_ae8b85b4f519a4945ba9ea43e9b503531}} 
-\index{slew.\+c@{slew.\+c}!mutex@{mutex}}
-\index{mutex@{mutex}!slew.\+c@{slew.\+c}}
-\subsubsection{\texorpdfstring{mutex}{mutex}}
-{\footnotesize\ttfamily Mutex mutex\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-mutex to protect the data in the array of speeds from being read or written to simultaneously. 
-
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-9/14/17 
-\end{DoxyDate}
-
-
-Definition at line 8 of file slew.\+c.
-
-
-
-Referenced by init\+\_\+slew(), set\+\_\+motor\+\_\+slew(), and update\+Motors().
+Referenced by deinitslew(), init\+\_\+slew(), set\+\_\+motor\+\_\+immediate(), set\+\_\+motor\+\_\+slew(), and update\+Motors().
 
 \mbox{\Hypertarget{slew_8c_a9dc30877eadbb32ceb6bede027c9a93f}\label{slew_8c_a9dc30877eadbb32ceb6bede027c9a93f}} 
 \index{slew.\+c@{slew.\+c}!slew@{slew}}
 \index{slew@{slew}!slew.\+c@{slew.\+c}}
 \subsubsection{\texorpdfstring{slew}{slew}}
-{\footnotesize\ttfamily Task\+Handle slew = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \hyperlink{_a_p_i_8h_a23dca3c0de10682afb982677ff292f77}{Task\+Handle} slew = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Task that will handle updating the motors on a routine period. 
-
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-9/14/17 
-\end{DoxyDate}
-
-
-Definition at line 22 of file slew.\+c.
+Definition at line 9 of file slew.\+c.
 
 
 
 Referenced by deinitslew(), and init\+\_\+slew().
+
+\mbox{\Hypertarget{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}\label{slew_8c_a29ddd4c66a52ff81b441d04f9f6d9318}} 
+\index{slew.\+c@{slew.\+c}!speeds\+\_\+mutex@{speeds\+\_\+mutex}}
+\index{speeds\+\_\+mutex@{speeds\+\_\+mutex}!slew.\+c@{slew.\+c}}
+\subsubsection{\texorpdfstring{speeds\+\_\+mutex}{speeds\_mutex}}
+{\footnotesize\ttfamily \hyperlink{_a_p_i_8h_a9b40607ca13d2b5261f47f613e3c4fa4}{Mutex} speeds\+\_\+mutex\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 4 of file slew.\+c.
+
+
+
+Referenced by init\+\_\+slew(), set\+\_\+motor\+\_\+immediate(), set\+\_\+motor\+\_\+slew(), and update\+Motors().
 

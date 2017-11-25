@@ -7,6 +7,20 @@ File for operator control code.
 
 {\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}slew.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drive.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lifter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}localization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}claw.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mobile\+\_\+goal\+\_\+intake.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vmath.\+h\char`\"{}}\newline
+Include dependency graph for opcontrol.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{opcontrol_8c__incl}
+\end{center}
+\end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,22 +48,35 @@ Runs the user operator control code. This function will be started in its own ta
 
 If no V\+EX Competition Switch or Field Management system is plugged in, the V\+EX Cortex will run the operator control task. Be warned that this will also occur if the V\+EX Cortex is tethered directly to a computer via the U\+SB A to A cable without any V\+EX Joystick attached.
 
-Code running in this task can take almost any action, as the V\+EX Joystick is available and the scheduler is operational. However, proper use of delay() or task\+Delay\+Until() is highly recommended to give other tasks (including system tasks such as updating L\+C\+Ds) time to run.
+Code running in this task can take almost any action, as the V\+EX Joystick is available and the scheduler is operational. However, proper use of \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay()} or \hyperlink{_a_p_i_8h_ae93bc867b1aa4a12d6536a497f1b6869}{task\+Delay\+Until()} is highly recommended to give other tasks (including system tasks such as updating L\+C\+Ds) time to run.
 
 This task should never exit; it should end with some kind of infinite loop, even if empty. 
 
-Definition at line 33 of file opcontrol.\+c.
+Definition at line 40 of file opcontrol.\+c.
 
 
 
-References set\+\_\+motor\+\_\+slew().
+References delay(), init\+\_\+slew(), update\+\_\+claw(), update\+\_\+control(), update\+\_\+drive\+\_\+motors(), update\+\_\+lifter(), and update\+Intake().
 
 
 \begin{DoxyCode}
-33                        \{
-34     \textcolor{keywordflow}{while} (1) \{
-35         \hyperlink{slew_8h_a7dff2b79dffe55fb936d977594d7c01d}{set\_motor\_slew}(2, 100);
-36         delay(20);
-37     \}
-38 \}
+40                        \{
+41     \hyperlink{slew_8h_a321758941d88b75783955c819bb75005}{init\_slew}();
+42     \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay}(10);
+43     \textcolor{keywordflow}{while} (1) \{
+44         \hyperlink{drive_8h_a8224a4626a934d30ed587671b7004bf8}{update\_drive\_motors}();
+45         \hyperlink{lifter_8h_a59bb7413777ca16aba124aaedf95c79b}{update\_lifter}();
+46         \hyperlink{claw_8h_a0122b78972344264b8a276a559cfce4a}{update\_claw}();
+47         \hyperlink{mobile__goal__intake_8h_ad0232c21c5c1ffda603d2b7d61034118}{updateIntake}();
+48         \hyperlink{partner_8h_ab2c78903a76d2ed8969271803c78368a}{update\_control}();
+49         \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay}(25);
+50     \}
+51 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{opcontrol_8c_ac71a94af413917f27d108e95c4d6f6a7_cgraph}
+\end{center}
+\end{figure}

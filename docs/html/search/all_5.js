@@ -9,5 +9,6 @@ var searchData=
   ['encoders_2eh',['encoders.h',['../encoders_8h.html',1,'']]],
   ['encodershutdown',['encoderShutdown',['../_a_p_i_8h.html#ad068eaed82fe8c8f08ba02ea8eaf2d17',1,'API.h']]],
   ['eof',['EOF',['../_a_p_i_8h.html#a59adc4c82490d23754cd39c2fb99b0da',1,'API.h']]],
-  ['error',['ERROR',['../log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5',1,'ERROR():&#160;log.h'],['../log_8h.html#a8e5bb8a2a372f5b066ff7af7044584c1',1,'error(const char *error_message):&#160;log.c'],['../log_8c.html#a8e5bb8a2a372f5b066ff7af7044584c1',1,'error(const char *error_message):&#160;log.c']]]
+  ['error',['error',['../log_8h.html#a8e5bb8a2a372f5b066ff7af7044584c1',1,'error(const char *error_message):&#160;log.c'],['../log_8c.html#a8e5bb8a2a372f5b066ff7af7044584c1',1,'error(const char *error_message):&#160;log.c'],['../log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5',1,'ERROR():&#160;log.h']]],
+  ['eyematrix',['eyeMatrix',['../matrix_8h.html#a0cbaeee632d87d719660ac5d2d6d2c88',1,'eyeMatrix(int n):&#160;matrix.c'],['../matrix_8c.html#a0cbaeee632d87d719660ac5d2d6d2c88',1,'eyeMatrix(int n):&#160;matrix.c']]]
 ];

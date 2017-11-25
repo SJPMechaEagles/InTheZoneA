@@ -8,15 +8,15 @@
  viewBox="0.00 0.00 540.78 37.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 33)">
 <title>analogReadCalibratedHR</title>
-<!-- Node12 -->
+<!-- Node16 -->
 <g id="node1" class="node">
-<title>Node12</title>
+<title>Node16</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-5.5 0,-23.5 129.96,-23.5 129.96,-5.5 0,-5.5"/>
 <text text-anchor="middle" x="64.98" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">analogReadCalibratedHR</text>
 </g>
-<!-- Node13 -->
+<!-- Node17 -->
 <g id="node2" class="node">
-<title>Node13</title>
+<title>Node17</title>
 <g id="a_node2"><a xlink:href="localization_8c.html#a6785e4b3b61887f28028f05019b9b39d" target="_top" xlink:title="calculate_accelerometer\l_odemetry">
 <polygon fill="none" stroke="#000000" points="165.96,-.5 165.96,-28.5 290.3486,-28.5 290.3486,-.5 165.96,-.5"/>
 <text text-anchor="start" x="173.96" y="-16.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">calculate_accelerometer</text>
@@ -24,39 +24,39 @@
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node13 -->
+<!-- Node16&#45;&gt;Node17 -->
 <g id="edge1" class="edge">
-<title>Node12&#45;&gt;Node13</title>
+<title>Node16&#45;&gt;Node17</title>
 <path fill="none" stroke="#191970" d="M140.6497,-14.5C149.0999,-14.5 157.6352,-14.5 165.8904,-14.5"/>
 <polygon fill="#191970" stroke="#191970" points="140.409,-11.0001 130.409,-14.5 140.409,-18.0001 140.409,-11.0001"/>
 </g>
-<!-- Node14 -->
+<!-- Node18 -->
 <g id="node3" class="node">
-<title>Node14</title>
+<title>Node18</title>
 <g id="a_node3"><a xlink:href="localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e" target="_top" xlink:title="update_position">
 <polygon fill="none" stroke="#000000" points="326.3486,-5.5 326.3486,-23.5 412.9639,-23.5 412.9639,-5.5 326.3486,-5.5"/>
 <text text-anchor="middle" x="369.6563" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_position</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node14 -->
+<!-- Node17&#45;&gt;Node18 -->
 <g id="edge2" class="edge">
-<title>Node13&#45;&gt;Node14</title>
+<title>Node17&#45;&gt;Node18</title>
 <path fill="none" stroke="#191970" d="M300.7959,-14.5C309.4666,-14.5 318.0995,-14.5 326.1731,-14.5"/>
 <polygon fill="#191970" stroke="#191970" points="300.631,-11.0001 290.631,-14.5 300.631,-18.0001 300.631,-11.0001"/>
 </g>
-<!-- Node15 -->
+<!-- Node19 -->
 <g id="node4" class="node">
-<title>Node15</title>
+<title>Node19</title>
 <g id="a_node4"><a xlink:href="localization_8c.html#afdd0147de6aa15957e9a125f9cd20578" target="_top" xlink:title="Starts the localization process. ">
 <polygon fill="none" stroke="#000000" points="448.9639,-5.5 448.9639,-23.5 532.7813,-23.5 532.7813,-5.5 448.9639,-5.5"/>
 <text text-anchor="middle" x="490.8726" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">init_localization</text>
 </a>
 </g>
 </g>
-<!-- Node14&#45;&gt;Node15 -->
+<!-- Node18&#45;&gt;Node19 -->
 <g id="edge3" class="edge">
-<title>Node14&#45;&gt;Node15</title>
+<title>Node18&#45;&gt;Node19</title>
 <path fill="none" stroke="#191970" d="M423.2728,-14.5C431.7448,-14.5 440.4014,-14.5 448.5687,-14.5"/>
 <polygon fill="#191970" stroke="#191970" points="423.0758,-11.0001 413.0757,-14.5 423.0757,-18.0001 423.0758,-11.0001"/>
 </g>

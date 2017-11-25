@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.7</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
   </td>
  </tr>
@@ -94,7 +94,8 @@ $(document).ready(function(){initNavTree('localization_8c.html','');});
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for localization.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c__incl.svg" width="376" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c__incl.svg" width="448" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="localization_8c_source.html">Go to the source code of this file.</a></p>
@@ -132,12 +133,8 @@ Variables</h2></td></tr>
 <tr class="separator:a0f327d31da83831114e7417abb7b6b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5be50f74f0f5a3aea13f2bd8db891488"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_a_p_i_8h.html#a23dca3c0de10682afb982677ff292f77">TaskHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488">localization_task</a></td></tr>
 <tr class="separator:a5be50f74f0f5a3aea13f2bd8db891488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca81c35c21e3a5f7f3a8d24504e76664"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a> = 0</td></tr>
-<tr class="separator:aca81c35c21e3a5f7f3a8d24504e76664"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af88b946fb90d5f08b5fb740c70e98c10"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="localization_8c.html#af88b946fb90d5f08b5fb740c70e98c10">x</a> = 0</td></tr>
-<tr class="separator:af88b946fb90d5f08b5fb740c70e98c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab927965981178aa1fba979a37168db2a"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="localization_8c.html#ab927965981178aa1fba979a37168db2a">y</a> = 0</td></tr>
-<tr class="separator:ab927965981178aa1fba979a37168db2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424e677cc0238390cb4a3068a6f3518c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="matrix_8h.html#abc75382643898dd572498a574bf891c7">matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="localization_8c.html#a424e677cc0238390cb4a3068a6f3518c">state_matrix</a></td></tr>
+<tr class="separator:a424e677cc0238390cb4a3068a6f3518c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a6785e4b3b61887f28028f05019b9b39d"></a>
@@ -163,20 +160,16 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00050">50</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00049">49</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">References <a class="el" href="_a_p_i_8h.html#a68b2c3e0863b8f4cb022fcdd77d2f5fd">analogReadCalibratedHR()</a>, <a class="el" href="localization_8c_source.html#l00010">last_call</a>, <a class="el" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis()</a>, <a class="el" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf()</a>, <a class="el" href="localization_8c_source.html#l00015">encoder_odemtry::theta</a>, <a class="el" href="localization_8c_source.html#l00013">encoder_odemtry::x</a>, <a class="el" href="localization_8c_source.html#l00019">accelerometer_odometry::x</a>, <a class="el" href="localization_8c_source.html#l00014">encoder_odemtry::y</a>, and <a class="el" href="localization_8c_source.html#l00020">accelerometer_odometry::y</a>.</p>
+<p class="reference">References <a class="el" href="_a_p_i_8h.html#a68b2c3e0863b8f4cb022fcdd77d2f5fd">analogReadCalibratedHR()</a>, <a class="el" href="localization_8c_source.html#l00007">last_call</a>, <a class="el" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis()</a>, and <a class="el" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00030">update_position()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                                                        {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> vel_acumm_x = 0;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> vel_acumm_y = 0;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  int32_t accel_x_rel = (int32_t) <a class="code" href="_a_p_i_8h.html#a68b2c3e0863b8f4cb022fcdd77d2f5fd">analogReadCalibratedHR</a>(2);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  int32_t accel_y_rel = (int32_t) <a class="code" href="_a_p_i_8h.html#a68b2c3e0863b8f4cb022fcdd77d2f5fd">analogReadCalibratedHR</a>(3);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">//Ignore atom format string errors</span></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a>(<span class="stringliteral">&quot;x: %+&quot;</span> PRId32 <span class="stringliteral">&quot; y: %+&quot;</span> PRId32 <span class="stringliteral">&quot;\n&quot;</span>, accel_x_rel, accel_y_rel);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">double</span> delta_time = ((<a class="code" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a>() - <a class="code" href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a>)/1000.0);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">double</span> accel_x_abs = (accel_x_rel *  cos(<a class="code" href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a>) + accel_y_rel * sin(<a class="code" href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a>)) * delta_time;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">double</span> accel_y_abs = (accel_y_rel *  cos(<a class="code" href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a>) + accel_x_rel * sin(<a class="code" href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a>)) * delta_time;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  vel_acumm_x += accel_x_abs;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  vel_acumm_y += accel_y_abs;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">double</span> new_x = <a class="code" href="localization_8c.html#af88b946fb90d5f08b5fb740c70e98c10">x</a> + vel_acumm_x * delta_time;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">double</span> new_y = <a class="code" href="localization_8c.html#ab927965981178aa1fba979a37168db2a">y</a> + vel_acumm_y * delta_time;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">struct </span><a class="code" href="structaccelerometer__odometry.html">accelerometer_odometry</a> od;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  od.<a class="code" href="structaccelerometer__odometry.html#a83af671d99413a7c480678d5abb9c64a">x</a> = new_x;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  od.y = new_y;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">return</span> od;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a6ff7f2532a22366f0013bc41397129fd"><div class="ttname"><a href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a></div><div class="ttdeci">unsigned long millis()</div></div>
-<div class="ttc" id="structaccelerometer__odometry_html_a83af671d99413a7c480678d5abb9c64a"><div class="ttname"><a href="structaccelerometer__odometry.html#a83af671d99413a7c480678d5abb9c64a">accelerometer_odometry::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00019">localization.c:19</a></div></div>
-<div class="ttc" id="structaccelerometer__odometry_html"><div class="ttname"><a href="structaccelerometer__odometry.html">accelerometer_odometry</a></div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00018">localization.c:18</a></div></div>
-<div class="ttc" id="localization_8c_html_af88b946fb90d5f08b5fb740c70e98c10"><div class="ttname"><a href="localization_8c.html#af88b946fb90d5f08b5fb740c70e98c10">x</a></div><div class="ttdeci">static double x</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00006">localization.c:6</a></div></div>
-<div class="ttc" id="localization_8c_html_ab927965981178aa1fba979a37168db2a"><div class="ttname"><a href="localization_8c.html#ab927965981178aa1fba979a37168db2a">y</a></div><div class="ttdeci">static double y</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00007">localization.c:7</a></div></div>
+<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00029">update_position()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                                        {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> vel_acumm_x = 0;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> vel_acumm_y = 0;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  int32_t accel_x_rel = (int32_t) <a class="code" href="_a_p_i_8h.html#a68b2c3e0863b8f4cb022fcdd77d2f5fd">analogReadCalibratedHR</a>(2);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  int32_t accel_y_rel = (int32_t) <a class="code" href="_a_p_i_8h.html#a68b2c3e0863b8f4cb022fcdd77d2f5fd">analogReadCalibratedHR</a>(3);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">//Ignore atom format string errors</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a>(<span class="stringliteral">&quot;x: %+&quot;</span> PRId32 <span class="stringliteral">&quot; y: %+&quot;</span> PRId32 <span class="stringliteral">&quot;\n&quot;</span>, accel_x_rel, accel_y_rel);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">double</span> delta_time = ((<a class="code" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a>() - <a class="code" href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a>)/1000.0);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">//double accel_x_abs = (accel_x_rel *  cos(theta) + accel_y_rel * sin(theta)) * delta_time;</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">//double accel_y_abs = (accel_y_rel *  cos(theta) + accel_x_rel * sin(theta)) * delta_time;</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">//vel_acumm_x += accel_x_abs;</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="comment">//vel_acumm_y += accel_y_abs;</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">//double new_x = x + vel_acumm_x * delta_time;</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">//double new_y = y + vel_acumm_y * delta_time;</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">struct </span><a class="code" href="structaccelerometer__odometry.html">accelerometer_odometry</a> od;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">//od.x = new_x;</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="comment">//od.y = new_y;</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">return</span> od;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a6ff7f2532a22366f0013bc41397129fd"><div class="ttname"><a href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a></div><div class="ttdeci">unsigned long millis()</div></div>
+<div class="ttc" id="structaccelerometer__odometry_html"><div class="ttname"><a href="structaccelerometer__odometry.html">accelerometer_odometry</a></div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00017">localization.c:17</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_a403c82418e475fa4a8273719e6a7f3e6"><div class="ttname"><a href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a></div><div class="ttdeci">int printf(const char *formatString,...)</div></div>
 <div class="ttc" id="_a_p_i_8h_html_a68b2c3e0863b8f4cb022fcdd77d2f5fd"><div class="ttname"><a href="_a_p_i_8h.html#a68b2c3e0863b8f4cb022fcdd77d2f5fd">analogReadCalibratedHR</a></div><div class="ttdeci">int analogReadCalibratedHR(unsigned char channel)</div></div>
-<div class="ttc" id="localization_8c_html_a0f327d31da83831114e7417abb7b6b63"><div class="ttname"><a href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a></div><div class="ttdeci">static int last_call</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00010">localization.c:10</a></div></div>
-<div class="ttc" id="localization_8c_html_aca81c35c21e3a5f7f3a8d24504e76664"><div class="ttname"><a href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a></div><div class="ttdeci">static double theta</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00008">localization.c:8</a></div></div>
+<div class="ttc" id="localization_8c_html_a0f327d31da83831114e7417abb7b6b63"><div class="ttname"><a href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a></div><div class="ttdeci">static int last_call</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00007">localization.c:7</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -185,8 +178,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c_a6785e4b3b61887f28028f05019b9b39d_icgraph.svg" width="500" height="50"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c_a6785e4b3b61887f28028f05019b9b39d_icgraph.svg" width="500" height="50"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -239,17 +231,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00082">82</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00081">81</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">References <a class="el" href="localization_8c_source.html#l00003">g1</a>, <a class="el" href="_a_p_i_8h.html#a0ae2ca5d2fd99f33aaef38786bb8ee59">gyroGet()</a>, and <a class="el" href="localization_8h_source.html#l00008">LOCALIZATION_UPDATE_FREQUENCY</a>.</p>
-<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                                 {</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> last_gyro = 0;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">int</span> current = <a class="code" href="_a_p_i_8h.html#a0ae2ca5d2fd99f33aaef38786bb8ee59">gyroGet</a>(<a class="code" href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a>);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">// Calculate w (angluar velocity in degrees per second)</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">double</span> w = (current - last_gyro) / (<a class="code" href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a>/1000.0);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">return</span> w;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div><div class="ttc" id="localization_8h_html_a4fa0a97f6aafe983a46ffc7188d1fab5"><div class="ttname"><a href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a></div><div class="ttdeci">#define LOCALIZATION_UPDATE_FREQUENCY</div><div class="ttdef"><b>Definition:</b> <a href="localization_8h_source.html#l00008">localization.h:8</a></div></div>
+<p class="reference">References <a class="el" href="localization_8c_source.html#l00004">g1</a>, <a class="el" href="_a_p_i_8h.html#a0ae2ca5d2fd99f33aaef38786bb8ee59">gyroGet()</a>, and <a class="el" href="localization_8h_source.html#l00009">LOCALIZATION_UPDATE_FREQUENCY</a>.</p>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                                 {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> last_gyro = 0;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">int</span> current = <a class="code" href="_a_p_i_8h.html#a0ae2ca5d2fd99f33aaef38786bb8ee59">gyroGet</a>(<a class="code" href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a>);</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// Calculate w (angluar velocity in degrees per second)</span></div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">double</span> w = (current - last_gyro) / (<a class="code" href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a>/1000.0);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">return</span> w;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div><div class="ttc" id="localization_8h_html_a4fa0a97f6aafe983a46ffc7188d1fab5"><div class="ttname"><a href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a></div><div class="ttdeci">#define LOCALIZATION_UPDATE_FREQUENCY</div><div class="ttdef"><b>Definition:</b> <a href="localization_8h_source.html#l00009">localization.h:9</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_a0ae2ca5d2fd99f33aaef38786bb8ee59"><div class="ttname"><a href="_a_p_i_8h.html#a0ae2ca5d2fd99f33aaef38786bb8ee59">gyroGet</a></div><div class="ttdeci">int gyroGet(Gyro gyro)</div></div>
-<div class="ttc" id="localization_8c_html_a46b8f25ffa3bbee071a0468eac654393"><div class="ttname"><a href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a></div><div class="ttdeci">static Gyro g1</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00003">localization.c:3</a></div></div>
+<div class="ttc" id="localization_8c_html_a46b8f25ffa3bbee071a0468eac654393"><div class="ttname"><a href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a></div><div class="ttdeci">static Gyro g1</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00004">localization.c:4</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c_aa849dcc7cd296f4556fab3b57c1c4d3e_cgraph.svg" width="290" height="50"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c_aa849dcc7cd296f4556fab3b57c1c4d3e_cgraph.svg" width="290" height="50"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -269,8 +260,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00026">26</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                               {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00025">25</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                               {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="afdd0147de6aa15957e9a125f9cd20578"></a>
@@ -325,25 +316,23 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00090">90</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00089">89</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">References <a class="el" href="localization_8c_source.html#l00003">g1</a>, <a class="el" href="_a_p_i_8h.html#a17270080a32b64937a3669089a80120f">gyroInit()</a>, <a class="el" href="localization_8c_source.html#l00010">last_call</a>, <a class="el" href="localization_8c_source.html#l00004">localization_task</a>, <a class="el" href="localization_8h_source.html#l00008">LOCALIZATION_UPDATE_FREQUENCY</a>, <a class="el" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis()</a>, <a class="el" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop()</a>, <a class="el" href="localization_8c_source.html#l00015">encoder_odemtry::theta</a>, <a class="el" href="localization_8c_source.html#l00030">update_position()</a>, <a class="el" href="localization_8c_source.html#l00013">encoder_odemtry::x</a>, and <a class="el" href="localization_8c_source.html#l00014">encoder_odemtry::y</a>.</p>
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                                                                                         {</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a> = <a class="code" href="_a_p_i_8h.html#a17270080a32b64937a3669089a80120f">gyroInit</a>(gyro1, multiplier);</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="localization_8c.html#af88b946fb90d5f08b5fb740c70e98c10">x</a> = start_x;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="localization_8c.html#ab927965981178aa1fba979a37168db2a">y</a> = start_y;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a> = start_theta;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488">localization_task</a> = <a class="code" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a>(<a class="code" href="localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</a>, <a class="code" href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a> * 1000);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="localization_8c.html#af88b946fb90d5f08b5fb740c70e98c10">x</a> = start_x;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="localization_8c.html#ab927965981178aa1fba979a37168db2a">y</a> = start_y;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a> = start_theta;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a> = <a class="code" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a>();</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a6ff7f2532a22366f0013bc41397129fd"><div class="ttname"><a href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a></div><div class="ttdeci">unsigned long millis()</div></div>
+<p class="reference">References <a class="el" href="localization_8c_source.html#l00004">g1</a>, <a class="el" href="_a_p_i_8h.html#a17270080a32b64937a3669089a80120f">gyroInit()</a>, <a class="el" href="localization_8c_source.html#l00007">last_call</a>, <a class="el" href="localization_8c_source.html#l00005">localization_task</a>, <a class="el" href="localization_8h_source.html#l00009">LOCALIZATION_UPDATE_FREQUENCY</a>, <a class="el" href="matrix_8c_source.html#l00024">makeMatrix()</a>, <a class="el" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis()</a>, <a class="el" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop()</a>, and <a class="el" href="localization_8c_source.html#l00029">update_position()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                                                                                                         {</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a> = <a class="code" href="_a_p_i_8h.html#a17270080a32b64937a3669089a80120f">gyroInit</a>(gyro1, multiplier);</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">//init state matrix</span></div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">//one dimensional vector with x, y, theta, acceleration in x and y</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="localization_8c.html#a424e677cc0238390cb4a3068a6f3518c">state_matrix</a> = <a class="code" href="matrix_8h.html#aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</a>(1, 5);</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488">localization_task</a> = <a class="code" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a>(<a class="code" href="localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</a>, <a class="code" href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a> * 1000);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a> = <a class="code" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a>();</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a6ff7f2532a22366f0013bc41397129fd"><div class="ttname"><a href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a></div><div class="ttdeci">unsigned long millis()</div></div>
 <div class="ttc" id="_a_p_i_8h_html_a17270080a32b64937a3669089a80120f"><div class="ttname"><a href="_a_p_i_8h.html#a17270080a32b64937a3669089a80120f">gyroInit</a></div><div class="ttdeci">Gyro gyroInit(unsigned char port, unsigned short multiplier)</div></div>
-<div class="ttc" id="localization_8c_html_a5be50f74f0f5a3aea13f2bd8db891488"><div class="ttname"><a href="localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488">localization_task</a></div><div class="ttdeci">static TaskHandle localization_task</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00004">localization.c:4</a></div></div>
-<div class="ttc" id="localization_8c_html_afacd5e0b3d5e677df26a4402bbd9ec9e"><div class="ttname"><a href="localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</a></div><div class="ttdeci">void update_position()</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00030">localization.c:30</a></div></div>
-<div class="ttc" id="localization_8c_html_af88b946fb90d5f08b5fb740c70e98c10"><div class="ttname"><a href="localization_8c.html#af88b946fb90d5f08b5fb740c70e98c10">x</a></div><div class="ttdeci">static double x</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00006">localization.c:6</a></div></div>
-<div class="ttc" id="localization_8h_html_a4fa0a97f6aafe983a46ffc7188d1fab5"><div class="ttname"><a href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a></div><div class="ttdeci">#define LOCALIZATION_UPDATE_FREQUENCY</div><div class="ttdef"><b>Definition:</b> <a href="localization_8h_source.html#l00008">localization.h:8</a></div></div>
-<div class="ttc" id="localization_8c_html_ab927965981178aa1fba979a37168db2a"><div class="ttname"><a href="localization_8c.html#ab927965981178aa1fba979a37168db2a">y</a></div><div class="ttdeci">static double y</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00007">localization.c:7</a></div></div>
+<div class="ttc" id="localization_8c_html_a5be50f74f0f5a3aea13f2bd8db891488"><div class="ttname"><a href="localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488">localization_task</a></div><div class="ttdeci">static TaskHandle localization_task</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00005">localization.c:5</a></div></div>
+<div class="ttc" id="localization_8c_html_afacd5e0b3d5e677df26a4402bbd9ec9e"><div class="ttname"><a href="localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</a></div><div class="ttdeci">void update_position()</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00029">localization.c:29</a></div></div>
+<div class="ttc" id="localization_8h_html_a4fa0a97f6aafe983a46ffc7188d1fab5"><div class="ttname"><a href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a></div><div class="ttdeci">#define LOCALIZATION_UPDATE_FREQUENCY</div><div class="ttdef"><b>Definition:</b> <a href="localization_8h_source.html#l00009">localization.h:9</a></div></div>
+<div class="ttc" id="matrix_8h_html_aae8b56c6fb44d9147b835f4006ca872c"><div class="ttname"><a href="matrix_8h.html#aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</a></div><div class="ttdeci">matrix * makeMatrix(int width, int height)</div><div class="ttdef"><b>Definition:</b> <a href="matrix_8c_source.html#l00024">matrix.c:24</a></div></div>
 <div class="ttc" id="_a_p_i_8h_html_ab05a241d6d1fd98b1ceb4665db678156"><div class="ttname"><a href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a></div><div class="ttdeci">TaskHandle taskRunLoop(void(*fn)(void), const unsigned long increment)</div></div>
-<div class="ttc" id="localization_8c_html_a0f327d31da83831114e7417abb7b6b63"><div class="ttname"><a href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a></div><div class="ttdeci">static int last_call</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00010">localization.c:10</a></div></div>
-<div class="ttc" id="localization_8c_html_a46b8f25ffa3bbee071a0468eac654393"><div class="ttname"><a href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a></div><div class="ttdeci">static Gyro g1</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00003">localization.c:3</a></div></div>
-<div class="ttc" id="localization_8c_html_aca81c35c21e3a5f7f3a8d24504e76664"><div class="ttname"><a href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a></div><div class="ttdeci">static double theta</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00008">localization.c:8</a></div></div>
+<div class="ttc" id="localization_8c_html_a0f327d31da83831114e7417abb7b6b63"><div class="ttname"><a href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a></div><div class="ttdeci">static int last_call</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00007">localization.c:7</a></div></div>
+<div class="ttc" id="localization_8c_html_a424e677cc0238390cb4a3068a6f3518c"><div class="ttname"><a href="localization_8c.html#a424e677cc0238390cb4a3068a6f3518c">state_matrix</a></div><div class="ttdeci">matrix * state_matrix</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00009">localization.c:9</a></div></div>
+<div class="ttc" id="localization_8c_html_a46b8f25ffa3bbee071a0468eac654393"><div class="ttname"><a href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a></div><div class="ttdeci">static Gyro g1</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00004">localization.c:4</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="localization_8c_afdd0147de6aa15957e9a125f9cd20578_cgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="localization_8c_afdd0147de6aa15957e9a125f9cd20578_cgraph.svg" width="100%" height="517"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -372,11 +361,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00076">76</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00075">75</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">References <a class="el" href="localization_8h_source.html#l00008">LOCALIZATION_UPDATE_FREQUENCY</a>, and <a class="el" href="localization_8c_source.html#l00015">encoder_odemtry::theta</a>.</p>
-<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                          {</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a> = 0;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">double</span> delta_theta = new_w * <a class="code" href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a>;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  theta += delta_theta;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div><div class="ttc" id="localization_8h_html_a4fa0a97f6aafe983a46ffc7188d1fab5"><div class="ttname"><a href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a></div><div class="ttdeci">#define LOCALIZATION_UPDATE_FREQUENCY</div><div class="ttdef"><b>Definition:</b> <a href="localization_8h_source.html#l00008">localization.h:8</a></div></div>
-<div class="ttc" id="localization_8c_html_aca81c35c21e3a5f7f3a8d24504e76664"><div class="ttname"><a href="localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664">theta</a></div><div class="ttdeci">static double theta</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00008">localization.c:8</a></div></div>
+<p class="reference">References <a class="el" href="localization_8h_source.html#l00009">LOCALIZATION_UPDATE_FREQUENCY</a>, and <a class="el" href="localization_8c_source.html#l00014">encoder_odemtry::theta</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                          {</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> theta = 0;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">double</span> delta_theta = new_w * <a class="code" href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a>;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  theta += delta_theta;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div><div class="ttc" id="localization_8h_html_a4fa0a97f6aafe983a46ffc7188d1fab5"><div class="ttname"><a href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a></div><div class="ttdeci">#define LOCALIZATION_UPDATE_FREQUENCY</div><div class="ttdef"><b>Definition:</b> <a href="localization_8h_source.html#l00009">localization.h:9</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -395,26 +383,24 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00030">30</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00029">29</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">References <a class="el" href="localization_8c_source.html#l00050">calculate_accelerometer_odemetry()</a>, <a class="el" href="localization_8c_source.html#l00010">last_call</a>, and <a class="el" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis()</a>.</p>
+<p class="reference">References <a class="el" href="localization_8c_source.html#l00049">calculate_accelerometer_odemetry()</a>, <a class="el" href="localization_8c_source.html#l00007">last_call</a>, and <a class="el" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00090">init_localization()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                       {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">//int curr_theta = calculate_angle();</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">struct </span><a class="code" href="structaccelerometer__odometry.html">accelerometer_odometry</a> oddem = <a class="code" href="localization_8c.html#a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</a>();</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">//printf(&quot;x: %d y: %d T: %d\n&quot;, a.x, a.y, 0);</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">/*int l = 1;</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">  int vr = get_encoder_velocity(1);</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">  int vl = get_encoder_velocity(2);</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">  int theta_dot = (vr - vl) / l;</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">  int curr_theta = theta + theta_dot;</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">  double dt = LOCALIZATION_UPDATE_FREQUENCY;</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">  double v_tot = (vr+vl)/2.0;</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">  int x_curr = x - v_tot*dt*sin(curr_theta);</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">  int y_curr = y + v_tot*dt*cos(curr_theta);</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  x = x_curr;</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  y = y_curr;*/</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a> = <a class="code" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a>();</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a6ff7f2532a22366f0013bc41397129fd"><div class="ttname"><a href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a></div><div class="ttdeci">unsigned long millis()</div></div>
-<div class="ttc" id="structaccelerometer__odometry_html"><div class="ttname"><a href="structaccelerometer__odometry.html">accelerometer_odometry</a></div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00018">localization.c:18</a></div></div>
-<div class="ttc" id="localization_8c_html_a6785e4b3b61887f28028f05019b9b39d"><div class="ttname"><a href="localization_8c.html#a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</a></div><div class="ttdeci">static struct accelerometer_odometry calculate_accelerometer_odemetry()</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00050">localization.c:50</a></div></div>
-<div class="ttc" id="localization_8c_html_a0f327d31da83831114e7417abb7b6b63"><div class="ttname"><a href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a></div><div class="ttdeci">static int last_call</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00010">localization.c:10</a></div></div>
+<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00089">init_localization()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                       {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//int curr_theta = calculate_angle();</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">struct </span><a class="code" href="structaccelerometer__odometry.html">accelerometer_odometry</a> oddem = <a class="code" href="localization_8c.html#a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</a>();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">//printf(&quot;x: %d y: %d T: %d\n&quot;, a.x, a.y, 0);</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">/*int l = 1;</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">  int vr = get_encoder_velocity(1);</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">  int vl = get_encoder_velocity(2);</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">  int theta_dot = (vr - vl) / l;</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">  int curr_theta = theta + theta_dot;</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">  double dt = LOCALIZATION_UPDATE_FREQUENCY;</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">  double v_tot = (vr+vl)/2.0;</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">  int x_curr = x - v_tot*dt*sin(curr_theta);</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">  int y_curr = y + v_tot*dt*cos(curr_theta);</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">  x = x_curr;</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  y = y_curr;*/</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a> = <a class="code" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a>();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a6ff7f2532a22366f0013bc41397129fd"><div class="ttname"><a href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a></div><div class="ttdeci">unsigned long millis()</div></div>
+<div class="ttc" id="structaccelerometer__odometry_html"><div class="ttname"><a href="structaccelerometer__odometry.html">accelerometer_odometry</a></div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00017">localization.c:17</a></div></div>
+<div class="ttc" id="localization_8c_html_a6785e4b3b61887f28028f05019b9b39d"><div class="ttname"><a href="localization_8c.html#a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</a></div><div class="ttdeci">static struct accelerometer_odometry calculate_accelerometer_odemetry()</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00049">localization.c:49</a></div></div>
+<div class="ttc" id="localization_8c_html_a0f327d31da83831114e7417abb7b6b63"><div class="ttname"><a href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a></div><div class="ttdeci">static int last_call</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00007">localization.c:7</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c_afacd5e0b3d5e677df26a4402bbd9ec9e_cgraph.svg" width="562" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c_afacd5e0b3d5e677df26a4402bbd9ec9e_cgraph.svg" width="562" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c_afacd5e0b3d5e677df26a4402bbd9ec9e_icgraph.svg" width="286" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8c_afacd5e0b3d5e677df26a4402bbd9ec9e_icgraph.svg" width="286" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -440,9 +426,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00003">3</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00004">4</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00082">calculate_gryo_anglular_velocity()</a>, and <a class="el" href="localization_8c_source.html#l00090">init_localization()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00081">calculate_gryo_anglular_velocity()</a>, and <a class="el" href="localization_8c_source.html#l00089">init_localization()</a>.</p>
 
 </div>
 </div>
@@ -466,9 +452,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00010">10</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00007">7</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00050">calculate_accelerometer_odemetry()</a>, <a class="el" href="localization_8c_source.html#l00090">init_localization()</a>, and <a class="el" href="localization_8c_source.html#l00030">update_position()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00049">calculate_accelerometer_odemetry()</a>, <a class="el" href="localization_8c_source.html#l00089">init_localization()</a>, and <a class="el" href="localization_8c_source.html#l00029">update_position()</a>.</p>
 
 </div>
 </div>
@@ -492,85 +478,25 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00004">4</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00005">5</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00090">init_localization()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00089">init_localization()</a>.</p>
 
 </div>
 </div>
-<a id="aca81c35c21e3a5f7f3a8d24504e76664"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca81c35c21e3a5f7f3a8d24504e76664">&#9670;&nbsp;</a></span>theta</h2>
+<a id="a424e677cc0238390cb4a3068a6f3518c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a424e677cc0238390cb4a3068a6f3518c">&#9670;&nbsp;</a></span>state_matrix</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double theta = 0</td>
+          <td class="memname"><a class="el" href="matrix_8h.html#abc75382643898dd572498a574bf891c7">matrix</a>* state_matrix</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00008">8</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
-
-</div>
-</div>
-<a id="af88b946fb90d5f08b5fb740c70e98c10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af88b946fb90d5f08b5fb740c70e98c10">&#9670;&nbsp;</a></span>x</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double x = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00006">6</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="vmath_8c_source.html#l00003">cartesian_to_polar()</a>, and <a class="el" href="drive_8c_source.html#l00012">update_drive_motors()</a>.</p>
-
-</div>
-</div>
-<a id="ab927965981178aa1fba979a37168db2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab927965981178aa1fba979a37168db2a">&#9670;&nbsp;</a></span>y</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double y = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00007">7</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="vmath_8c_source.html#l00003">cartesian_to_polar()</a>, and <a class="el" href="drive_8c_source.html#l00012">update_drive_motors()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00009">9</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
 </div>
 </div>

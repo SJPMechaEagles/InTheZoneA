@@ -16,6 +16,8 @@ var searchData=
   ['fputc',['fputc',['../_a_p_i_8h.html#afe7d25ce198da1f8fec5a2dca770cb6a',1,'API.h']]],
   ['fputs',['fputs',['../_a_p_i_8h.html#ae4859a13f64d3dc4d57875512f0d1171',1,'API.h']]],
   ['fread',['fread',['../_a_p_i_8h.html#a01b4329a6303387a4187c94343c0cc59',1,'API.h']]],
+  ['freematrix',['freeMatrix',['../matrix_8h.html#ae98365c910e9d688d2bdedec50d89a6b',1,'freeMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#ae98365c910e9d688d2bdedec50d89a6b',1,'freeMatrix(matrix *m):&#160;matrix.c']]],
+  ['front_5fleft_5fdrive',['FRONT_LEFT_DRIVE',['../auto_8h.html#a54946f5d4311565d92d3fa57a4115608',1,'auto.h']]],
   ['fseek',['fseek',['../_a_p_i_8h.html#adda53be8dacaa9deab92cabb9f2e54dd',1,'API.h']]],
   ['ftell',['ftell',['../_a_p_i_8h.html#a1c2742ed272f2a5e12962df45653ff18',1,'API.h']]],
   ['ftoa_5fbad',['ftoa_bad',['../vlib_8h.html#a8805990ed667939e615e4a98950b8bd1',1,'ftoa_bad(float a, char *buffer, int precision):&#160;vlib.c'],['../vlib_8c.html#a8805990ed667939e615e4a98950b8bd1',1,'ftoa_bad(float a, char *buffer, int precision):&#160;vlib.c']]],

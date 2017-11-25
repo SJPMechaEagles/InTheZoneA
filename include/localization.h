@@ -4,6 +4,7 @@
 #include <API.h>
 #include "encoders.h"
 #include <math.h>
+#include "matrix.h"
 
 #define LOCALIZATION_UPDATE_FREQUENCY 0.500
 

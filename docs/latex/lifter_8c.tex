@@ -1,0 +1,345 @@
+\hypertarget{lifter_8c}{}\section{src/lifter.c File Reference}
+\label{lifter_8c}\index{src/lifter.\+c@{src/lifter.\+c}}
+{\ttfamily \#include \char`\"{}lifter.\+h\char`\"{}}\newline
+Include dependency graph for lifter.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{lifter_8c_a2719740958fd8a5926f88f6194e820e3}{get\+Lifter\+Height} ()
+\item 
+int \hyperlink{lifter_8c_acdf909159b0406c48099843f2306be78}{get\+Lifter\+Ticks} ()
+\item 
+float \hyperlink{lifter_8c_ab0460888f3213e5510bd25ae1e152a75}{lifter\+Potentiometer\+To\+Degree} (int x)
+\item 
+void \hyperlink{lifter_8c_aa7d2d04059f57cc5b8582f6fd0726dc1}{lower\+\_\+lifter} ()
+\item 
+void \hyperlink{lifter_8c_a7452163ed7946b6262f41de51c62dfd4}{raise\+\_\+lifter} ()
+\item 
+void \hyperlink{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4}{set\+\_\+lifter\+\_\+motors} (const int v)
+\item 
+void \hyperlink{lifter_8c_abddc7cb502e12fa277b627c90a45efb1}{set\+\_\+lifter\+\_\+pos} (int pos)
+\item 
+void \hyperlink{lifter_8c_a59bb7413777ca16aba124aaedf95c79b}{update\+\_\+lifter} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lifter_8c_a2719740958fd8a5926f88f6194e820e3}\label{lifter_8c_a2719740958fd8a5926f88f6194e820e3}} 
+\index{lifter.\+c@{lifter.\+c}!get\+Lifter\+Height@{get\+Lifter\+Height}}
+\index{get\+Lifter\+Height@{get\+Lifter\+Height}!lifter.\+c@{lifter.\+c}}
+\subsubsection{\texorpdfstring{get\+Lifter\+Height()}{getLifterHeight()}}
+{\footnotesize\ttfamily double get\+Lifter\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file lifter.\+c.
+
+
+
+References get\+Lifter\+Ticks().
+
+
+\begin{DoxyCode}
+86                          \{
+87   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ticks = \hyperlink{lifter_8c_acdf909159b0406c48099843f2306be78}{getLifterTicks}();
+88   \textcolor{keywordflow}{return} (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) + 0.0198 * ticks + 2.3033);
+89 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a2719740958fd8a5926f88f6194e820e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lifter_8c_acdf909159b0406c48099843f2306be78}\label{lifter_8c_acdf909159b0406c48099843f2306be78}} 
+\index{lifter.\+c@{lifter.\+c}!get\+Lifter\+Ticks@{get\+Lifter\+Ticks}}
+\index{get\+Lifter\+Ticks@{get\+Lifter\+Ticks}!lifter.\+c@{lifter.\+c}}
+\subsubsection{\texorpdfstring{get\+Lifter\+Ticks()}{getLifterTicks()}}
+{\footnotesize\ttfamily int get\+Lifter\+Ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file lifter.\+c.
+
+
+
+References analog\+Read(), and L\+I\+F\+T\+ER.
+
+
+
+Referenced by get\+Lifter\+Height(), and update\+\_\+lifter().
+
+
+\begin{DoxyCode}
+81                      \{
+82   \textcolor{keywordflow}{return} \hyperlink{_a_p_i_8h_a5da86064604c539c2b6a5e2993289108}{analogRead}(\hyperlink{sensor__ports_8h_a1968b8c13fa0757cc721c96a67407d9b}{LIFTER});
+83 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{lifter_8c_acdf909159b0406c48099843f2306be78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_acdf909159b0406c48099843f2306be78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lifter_8c_ab0460888f3213e5510bd25ae1e152a75}\label{lifter_8c_ab0460888f3213e5510bd25ae1e152a75}} 
+\index{lifter.\+c@{lifter.\+c}!lifter\+Potentiometer\+To\+Degree@{lifter\+Potentiometer\+To\+Degree}}
+\index{lifter\+Potentiometer\+To\+Degree@{lifter\+Potentiometer\+To\+Degree}!lifter.\+c@{lifter.\+c}}
+\subsubsection{\texorpdfstring{lifter\+Potentiometer\+To\+Degree()}{lifterPotentiometerToDegree()}}
+{\footnotesize\ttfamily float lifter\+Potentiometer\+To\+Degree (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file lifter.\+c.
+
+
+
+References D\+E\+G\+\_\+\+M\+AX, T\+I\+C\+K\+\_\+\+D\+I\+FF, and T\+I\+C\+K\+\_\+\+M\+AX.
+
+
+\begin{DoxyCode}
+77                                         \{
+78   \textcolor{keywordflow}{return} (\hyperlink{structcord_a2eef9b681474b679cf87b0c20eced2cd}{x} - \hyperlink{lifter_8h_a7c0565e3ec8daabba3a66a67aa4e8d2d}{TICK\_DIFF}) / \hyperlink{potentiometer_8h_ad40f2bbc4e57baed2d9e900750d94a7f}{TICK\_MAX} * \hyperlink{potentiometer_8h_ab77b81696cf83be632fca5f56b4c3595}{DEG\_MAX};
+79 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{lifter_8c_aa7d2d04059f57cc5b8582f6fd0726dc1}\label{lifter_8c_aa7d2d04059f57cc5b8582f6fd0726dc1}} 
+\index{lifter.\+c@{lifter.\+c}!lower\+\_\+lifter@{lower\+\_\+lifter}}
+\index{lower\+\_\+lifter@{lower\+\_\+lifter}!lifter.\+c@{lifter.\+c}}
+\subsubsection{\texorpdfstring{lower\+\_\+lifter()}{lower\_lifter()}}
+{\footnotesize\ttfamily void lower\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file lifter.\+c.
+
+
+
+References M\+I\+N\+\_\+\+S\+P\+E\+ED, and set\+\_\+lifter\+\_\+motors().
+
+
+
+Referenced by update\+\_\+lifter().
+
+
+\begin{DoxyCode}
+16                    \{
+17   \hyperlink{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4}{set\_lifter\_motors}(\hyperlink{motor__ports_8h_ad5f5efaa5cb771bd06da4bfe6046809e}{MIN\_SPEED});
+18 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_aa7d2d04059f57cc5b8582f6fd0726dc1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_aa7d2d04059f57cc5b8582f6fd0726dc1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lifter_8c_a7452163ed7946b6262f41de51c62dfd4}\label{lifter_8c_a7452163ed7946b6262f41de51c62dfd4}} 
+\index{lifter.\+c@{lifter.\+c}!raise\+\_\+lifter@{raise\+\_\+lifter}}
+\index{raise\+\_\+lifter@{raise\+\_\+lifter}!lifter.\+c@{lifter.\+c}}
+\subsubsection{\texorpdfstring{raise\+\_\+lifter()}{raise\_lifter()}}
+{\footnotesize\ttfamily void raise\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file lifter.\+c.
+
+
+
+References M\+A\+X\+\_\+\+S\+P\+E\+ED, and set\+\_\+lifter\+\_\+motors().
+
+
+
+Referenced by update\+\_\+lifter().
+
+
+\begin{DoxyCode}
+12                    \{
+13   \hyperlink{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4}{set\_lifter\_motors}(\hyperlink{motor__ports_8h_ac2cd96d53dd3ba6407db6766c3d92b26}{MAX\_SPEED});
+14 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a7452163ed7946b6262f41de51c62dfd4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a7452163ed7946b6262f41de51c62dfd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4}\label{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4}} 
+\index{lifter.\+c@{lifter.\+c}!set\+\_\+lifter\+\_\+motors@{set\+\_\+lifter\+\_\+motors}}
+\index{set\+\_\+lifter\+\_\+motors@{set\+\_\+lifter\+\_\+motors}!lifter.\+c@{lifter.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+lifter\+\_\+motors()}{set\_lifter\_motors()}}
+{\footnotesize\ttfamily void set\+\_\+lifter\+\_\+motors (\begin{DoxyParamCaption}\item[{const int}]{v }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file lifter.\+c.
+
+
+
+References M\+O\+T\+O\+R\+\_\+\+L\+I\+F\+T\+\_\+\+T\+O\+P\+\_\+\+L\+E\+FT, M\+O\+T\+O\+R\+\_\+\+L\+I\+F\+T\+\_\+\+T\+O\+P\+\_\+\+R\+I\+G\+HT, and set\+\_\+motor\+\_\+immediate().
+
+
+
+Referenced by autonomous(), lower\+\_\+lifter(), raise\+\_\+lifter(), and update\+\_\+lifter().
+
+
+\begin{DoxyCode}
+3                                     \{
+4   \hyperlink{slew_8h_a9f8b8ae577ef938622024545711f0151}{set\_motor\_immediate}(\hyperlink{motor__ports_8h_add81e70dc9a7ed2aa5d86e807fb27b02}{MOTOR\_LIFT\_TOP\_RIGHT}, -v);
+5   \hyperlink{slew_8h_a9f8b8ae577ef938622024545711f0151}{set\_motor\_immediate}(\hyperlink{motor__ports_8h_afad261ce61b31db241510a6784798f0c}{MOTOR\_LIFT\_TOP\_LEFT}, -v);
+6 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lifter_8c_abddc7cb502e12fa277b627c90a45efb1}\label{lifter_8c_abddc7cb502e12fa277b627c90a45efb1}} 
+\index{lifter.\+c@{lifter.\+c}!set\+\_\+lifter\+\_\+pos@{set\+\_\+lifter\+\_\+pos}}
+\index{set\+\_\+lifter\+\_\+pos@{set\+\_\+lifter\+\_\+pos}!lifter.\+c@{lifter.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+lifter\+\_\+pos()}{set\_lifter\_pos()}}
+{\footnotesize\ttfamily void set\+\_\+lifter\+\_\+pos (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file lifter.\+c.
+
+
+\begin{DoxyCode}
+8                              \{
+9 
+10 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{lifter_8c_a59bb7413777ca16aba124aaedf95c79b}\label{lifter_8c_a59bb7413777ca16aba124aaedf95c79b}} 
+\index{lifter.\+c@{lifter.\+c}!update\+\_\+lifter@{update\+\_\+lifter}}
+\index{update\+\_\+lifter@{update\+\_\+lifter}!lifter.\+c@{lifter.\+c}}
+\subsubsection{\texorpdfstring{update\+\_\+lifter()}{update\_lifter()}}
+{\footnotesize\ttfamily void update\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file lifter.\+c.
+
+
+
+References get\+\_\+mode(), get\+Lifter\+Ticks(), joystick\+Get\+Digital(), L\+I\+F\+T\+E\+R\+\_\+D, L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+WN, L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+W\+N\+\_\+\+P\+A\+R\+T\+N\+ER, L\+I\+F\+T\+E\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+AD, L\+I\+F\+T\+E\+R\+\_\+I, L\+I\+F\+T\+E\+R\+\_\+P, L\+I\+F\+T\+E\+R\+\_\+\+UP, L\+I\+F\+T\+E\+R\+\_\+\+U\+P\+\_\+\+P\+A\+R\+T\+N\+ER, lower\+\_\+lifter(), M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE, P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE, raise\+\_\+lifter(), and set\+\_\+lifter\+\_\+motors().
+
+
+
+Referenced by operator\+Control().
+
+
+\begin{DoxyCode}
+20                      \{
+21   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} changed = \textcolor{keyword}{true};
+22   \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} target = 0;
+23   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} first\_run = \textcolor{keyword}{true};
+24   \textcolor{keywordflow}{if}(first\_run) \{
+25     target = \hyperlink{lifter_8c_acdf909159b0406c48099843f2306be78}{getLifterTicks}();
+26     first\_run = \textcolor{keyword}{false};
+27   \}
+28   \textcolor{keyword}{static} \textcolor{keywordtype}{int} last\_error = 0;
+29   \textcolor{keyword}{static} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} i = 0;
+30   \textcolor{keywordflow}{if}((\hyperlink{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}{joystickGetDigital}(\hyperlink{lifter_8h_a96a5c0bbb7527bf1d45818fc4db97b68}{LIFTER\_UP}) && \hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == 
+      \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475}{MAIN\_CONTROLLER\_MODE})
+31    || (\hyperlink{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}{joystickGetDigital}(\hyperlink{lifter_8h_adbb0a4048f612d2042be2b1d2644a16e}{LIFTER\_UP\_PARTNER}) && 
+      \hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7}{PARTNER\_CONTROLLER\_MODE}))\{
+32     changed = \textcolor{keyword}{true};
+33     i = 0;
+34     target = \hyperlink{lifter_8c_acdf909159b0406c48099843f2306be78}{getLifterTicks}() + 200;
+35     \hyperlink{lifter_8c_aa7d2d04059f57cc5b8582f6fd0726dc1}{lower\_lifter}();
+36   \}
+37   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((\hyperlink{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}{joystickGetDigital}(\hyperlink{lifter_8h_a12f8c1de242a92f5694e6b80b990773a}{LIFTER\_DOWN}) && 
+      \hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475}{MAIN\_CONTROLLER\_MODE})
+38    || (\hyperlink{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}{joystickGetDigital}(\hyperlink{lifter_8h_a40a0b4dc0172c4133a34d5e3d8b69f9a}{LIFTER\_DOWN\_PARTNER}) && 
+      \hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7}{PARTNER\_CONTROLLER\_MODE})) \{
+39     changed = \textcolor{keyword}{true};
+40     i = 0;
+41     target = \hyperlink{lifter_8c_acdf909159b0406c48099843f2306be78}{getLifterTicks}();
+42     \hyperlink{lifter_8c_a7452163ed7946b6262f41de51c62dfd4}{raise\_lifter}();
+43   \}
+44   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}{joystickGetDigital}(\hyperlink{lifter_8h_ad4a88f04887d4f1f4e5fa057b29f68e9}{LIFTER\_DRIVER\_LOAD}) && 
+      \hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475}{MAIN\_CONTROLLER\_MODE})\{
+45     changed = \textcolor{keyword}{true};
+46     i = 0;
+47     \textcolor{keywordtype}{int} k = 0;
+48     \textcolor{keywordflow}{if}(\hyperlink{lifter_8c_acdf909159b0406c48099843f2306be78}{getLifterTicks}() < 1270)\{
+49       \hyperlink{lifter_8c_aa7d2d04059f57cc5b8582f6fd0726dc1}{lower\_lifter}();
+50 
+51     \}
+52     \textcolor{keywordflow}{if}(\hyperlink{lifter_8c_acdf909159b0406c48099843f2306be78}{getLifterTicks}() > 1230)\{
+53       \hyperlink{lifter_8c_a7452163ed7946b6262f41de51c62dfd4}{raise\_lifter}();
+54       \textcolor{comment}{//k = 100;}
+55     \}
+56     target = 1250;
+57     \textcolor{comment}{//raise\_lifter();}
+58   \}
+59   \textcolor{keywordflow}{else} \{
+60     \textcolor{keywordflow}{if}(\hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7}{PARTNER\_CONTROLLER\_MODE})\{
+61       \hyperlink{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4}{set\_lifter\_motors}(0);
+62       \textcolor{keywordflow}{return};
+63     \}
+64     \textcolor{keywordtype}{int} p = \hyperlink{lifter_8c_acdf909159b0406c48099843f2306be78}{getLifterTicks}() - target;
+65     \textcolor{keywordtype}{int} d = p - last\_error;
+66     i += p;
+67     \textcolor{keywordtype}{int} motor = \hyperlink{lifter_8h_ae5623433650815b810d784e0da176e3c}{LIFTER\_P} * p + \hyperlink{lifter_8h_ad03f59237a197767913457abd53f1780}{LIFTER\_D} * d + \hyperlink{lifter_8h_a4950feabec4e85bf27c1f2e4ec98755a}{LIFTER\_I} * i;
+68     \textcolor{keywordflow}{if} (motor < 10) \{
+69         \hyperlink{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4}{set\_lifter\_motors}(0);
+70     \} \textcolor{keywordflow}{else} \{
+71         \hyperlink{lifter_8c_a2cfc188f60f945c824dd7fe7b0b5f4e4}{set\_lifter\_motors}(motor);
+72     \}
+73     
+74   \}
+75 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a59bb7413777ca16aba124aaedf95c79b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{lifter_8c_a59bb7413777ca16aba124aaedf95c79b_icgraph}
+\end{center}
+\end{figure}

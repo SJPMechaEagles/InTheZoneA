@@ -1,6 +1,13 @@
 \hypertarget{log_8c}{}\section{src/log.c File Reference}
 \label{log_8c}\index{src/log.\+c@{src/log.\+c}}
 {\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+Include dependency graph for log.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{log_8c__incl}
+\end{center}
+\end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -10,7 +17,7 @@ void \hyperlink{log_8c_a8e5bb8a2a372f5b066ff7af7044584c1}{error} (const char $\a
 \begin{DoxyCompactList}\small\item\em prints a error message and displays on lcd. Only will print and display if log\+\_\+level is greater than N\+O\+NE \end{DoxyCompactList}\item 
 void \hyperlink{log_8c_a1606d750e1bb8de9f9e917172bba3382}{info} (const char $\ast$info\+\_\+message)
 \begin{DoxyCompactList}\small\item\em prints a info message \end{DoxyCompactList}\item 
-void \hyperlink{log_8c_a163f389b4f5cf440a807d8fb48aaa006}{init\+\_\+error} (bool use\+\_\+lcd, F\+I\+LE $\ast$lcd)
+void \hyperlink{log_8c_a163f389b4f5cf440a807d8fb48aaa006}{init\+\_\+error} (bool use\+\_\+lcd, \hyperlink{_a_p_i_8h_a3e8cefeee58f762ff50bcef35fa12eec}{F\+I\+LE} $\ast$lcd)
 \begin{DoxyCompactList}\small\item\em Initializes the error lcd system Only required if using lcd. \end{DoxyCompactList}\item 
 static void \hyperlink{log_8c_afff22aff6749311a684a559cac3ac8bd}{log\+\_\+info} (const char $\ast$s, const char $\ast$mess)
 \item 
@@ -19,9 +26,9 @@ void \hyperlink{log_8c_a0bec2cf5fff7f607bc510b74aba9887c}{warning} (const char $
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-static F\+I\+LE $\ast$ \hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\+\_\+lcd} = N\+U\+LL
+static \hyperlink{_a_p_i_8h_a3e8cefeee58f762ff50bcef35fa12eec}{F\+I\+LE} $\ast$ \hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\+\_\+lcd} = N\+U\+LL
 \item 
-unsigned int \hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\+\_\+level} = \hyperlink{log_8h_ad72dbcf6d0153db1b8d8a58001feed83}{D\+E\+B\+UG}
+unsigned int \hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\+\_\+level} = \hyperlink{log_8h_ae1103fea1e1b3c41ca3322d5389f7162}{I\+N\+FO}
 \end{DoxyCompactItemize}
 
 
@@ -50,20 +57,34 @@ Definition at line 37 of file log.\+c.
 
 
 
-References E\+R\+R\+OR, and log\+\_\+level.
+References E\+R\+R\+OR, log\+\_\+level, and printf().
 
 
 
-Referenced by update\+Motors().
+Referenced by set\+\_\+motor\+\_\+immediate(), and set\+\_\+motor\+\_\+slew().
 
 
 \begin{DoxyCode}
 37                                       \{
 38   \textcolor{keywordflow}{if}(\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\_level}>\hyperlink{log_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}) \{
-39     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
+39     \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf}(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
 40   \}
 41 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{log_8c_af3668f40d1ad1b4f3418869ac9a31f34_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log_8c_af3668f40d1ad1b4f3418869ac9a31f34_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{log_8c_a8e5bb8a2a372f5b066ff7af7044584c1}\label{log_8c_a8e5bb8a2a372f5b066ff7af7044584c1}} 
 \index{log.\+c@{log.\+c}!error@{error}}
 \index{error@{error}!log.\+c@{log.\+c}}
@@ -97,12 +118,30 @@ Definition at line 21 of file log.\+c.
 References log\+\_\+info(), log\+\_\+level, and N\+O\+NE.
 
 
+
+Referenced by create\+\_\+menu().
+
+
 \begin{DoxyCode}
 21                                       \{
 22   \textcolor{keywordflow}{if}(\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\_level}>\hyperlink{log_8h_a655c84af1b0034986ff56e12e84f983d}{NONE})
 23     \hyperlink{log_8c_afff22aff6749311a684a559cac3ac8bd}{log\_info}(\textcolor{stringliteral}{"ERROR"}, error\_message);
 24 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{log_8c_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{log_8c_a8e5bb8a2a372f5b066ff7af7044584c1_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{log_8c_a1606d750e1bb8de9f9e917172bba3382}\label{log_8c_a1606d750e1bb8de9f9e917172bba3382}} 
 \index{log.\+c@{log.\+c}!info@{info}}
 \index{info@{info}!log.\+c@{log.\+c}}
@@ -127,7 +166,7 @@ Definition at line 31 of file log.\+c.
 
 
 
-References E\+R\+R\+OR, and log\+\_\+level.
+References E\+R\+R\+OR, log\+\_\+level, and printf().
 
 
 
@@ -137,15 +176,29 @@ Referenced by init\+\_\+slew().
 \begin{DoxyCode}
 31                                     \{
 32   \textcolor{keywordflow}{if}(\hyperlink{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}{log\_level}>\hyperlink{log_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR}) \{
-33     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, info\_message);
+33     \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf}(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, info\_message);
 34   \}
 35 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{log_8c_a1606d750e1bb8de9f9e917172bba3382_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log_8c_a1606d750e1bb8de9f9e917172bba3382_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{log_8c_a163f389b4f5cf440a807d8fb48aaa006}\label{log_8c_a163f389b4f5cf440a807d8fb48aaa006}} 
 \index{log.\+c@{log.\+c}!init\+\_\+error@{init\+\_\+error}}
 \index{init\+\_\+error@{init\+\_\+error}!log.\+c@{log.\+c}}
 \subsubsection{\texorpdfstring{init\+\_\+error()}{init\_error()}}
-{\footnotesize\ttfamily void init\+\_\+error (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+lcd,  }\item[{F\+I\+LE $\ast$}]{lcd }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void init\+\_\+error (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+lcd,  }\item[{\hyperlink{_a_p_i_8h_a3e8cefeee58f762ff50bcef35fa12eec}{F\+I\+LE} $\ast$}]{lcd }\end{DoxyParamCaption})}
 
 
 
@@ -170,21 +223,24 @@ Definition at line 6 of file log.\+c.
 
 
 
-References log\+\_\+lcd.
-
-
-
-Referenced by initialize().
+References lcd\+Init(), and log\+\_\+lcd.
 
 
 \begin{DoxyCode}
 6                                          \{
 7   \textcolor{keywordflow}{if}(use\_lcd) \{
-8     lcdInit(lcd);
+8     \hyperlink{_a_p_i_8h_a43dc11a67b697c0d32315ea5a9af85f9}{lcdInit}(lcd);
 9     \hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\_lcd} = lcd;
 10   \}
 11 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{log_8c_a163f389b4f5cf440a807d8fb48aaa006_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{log_8c_afff22aff6749311a684a559cac3ac8bd}\label{log_8c_afff22aff6749311a684a559cac3ac8bd}} 
 \index{log.\+c@{log.\+c}!log\+\_\+info@{log\+\_\+info}}
 \index{log\+\_\+info@{log\+\_\+info}!log.\+c@{log.\+c}}
@@ -197,7 +253,7 @@ Definition at line 13 of file log.\+c.
 
 
 
-References B\+O\+T\+T\+O\+M\+\_\+\+R\+OW, log\+\_\+lcd, and T\+O\+P\+\_\+\+R\+OW.
+References B\+O\+T\+T\+O\+M\+\_\+\+R\+OW, lcd\+Clear(), lcd\+Set\+Backlight(), log\+\_\+lcd, printf(), and T\+O\+P\+\_\+\+R\+OW.
 
 
 
@@ -206,13 +262,27 @@ Referenced by error(), and warning().
 
 \begin{DoxyCode}
 13                                                       \{
-14   printf(\textcolor{stringliteral}{"[%s]: %s\(\backslash\)n"}, s, mess);
-15   lcdSetBacklight(\hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\_lcd}, \textcolor{keyword}{true});
-16   lcdClear(\hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\_lcd});
+14   \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf}(\textcolor{stringliteral}{"[%s]: %s\(\backslash\)n"}, s, mess);
+15   \hyperlink{_a_p_i_8h_aab53a247d88151a6623c20fa1ea940b0}{lcdSetBacklight}(\hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\_lcd}, \textcolor{keyword}{true});
+16   \hyperlink{_a_p_i_8h_a5fa1d119fe3e836b5519f97eae7a1272}{lcdClear}(\hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\_lcd});
 17   lcdPrint(\hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\_lcd}, \hyperlink{lcd_8h_a18bab754c6ad16bc35c48333091516c9}{TOP\_ROW}, s);
 18   lcdPrint(\hyperlink{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}{log\_lcd}, \hyperlink{lcd_8h_a7b55e87550874687b3e25a64e1cfda9d}{BOTTOM\_ROW}, mess);
 19 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{log_8c_afff22aff6749311a684a559cac3ac8bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log_8c_afff22aff6749311a684a559cac3ac8bd_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{log_8c_a0bec2cf5fff7f607bc510b74aba9887c}\label{log_8c_a0bec2cf5fff7f607bc510b74aba9887c}} 
 \index{log.\+c@{log.\+c}!warning@{warning}}
 \index{warning@{warning}!log.\+c@{log.\+c}}
@@ -247,7 +317,7 @@ References log\+\_\+info(), log\+\_\+level, and W\+A\+R\+N\+I\+NG.
 
 
 
-Referenced by initialize().
+Referenced by init\+\_\+slew().
 
 
 \begin{DoxyCode}
@@ -256,6 +326,20 @@ Referenced by initialize().
 28     \hyperlink{log_8c_afff22aff6749311a684a559cac3ac8bd}{log\_info}(\textcolor{stringliteral}{"WARNING"}, warning\_message);
 29 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{log_8c_a0bec2cf5fff7f607bc510b74aba9887c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log_8c_a0bec2cf5fff7f607bc510b74aba9887c_icgraph}
+\end{center}
+\end{figure}
 
 
 \subsection{Variable Documentation}
@@ -263,7 +347,7 @@ Referenced by initialize().
 \index{log.\+c@{log.\+c}!log\+\_\+lcd@{log\+\_\+lcd}}
 \index{log\+\_\+lcd@{log\+\_\+lcd}!log.\+c@{log.\+c}}
 \subsubsection{\texorpdfstring{log\+\_\+lcd}{log\_lcd}}
-{\footnotesize\ttfamily F\+I\+LE$\ast$ log\+\_\+lcd = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \hyperlink{_a_p_i_8h_a3e8cefeee58f762ff50bcef35fa12eec}{F\+I\+LE}$\ast$ log\+\_\+lcd = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -277,7 +361,7 @@ Referenced by init\+\_\+error(), and log\+\_\+info().
 \index{log.\+c@{log.\+c}!log\+\_\+level@{log\+\_\+level}}
 \index{log\+\_\+level@{log\+\_\+level}!log.\+c@{log.\+c}}
 \subsubsection{\texorpdfstring{log\+\_\+level}{log\_level}}
-{\footnotesize\ttfamily unsigned int log\+\_\+level = \hyperlink{log_8h_ad72dbcf6d0153db1b8d8a58001feed83}{D\+E\+B\+UG}}
+{\footnotesize\ttfamily unsigned int log\+\_\+level = \hyperlink{log_8h_ae1103fea1e1b3c41ca3322d5389f7162}{I\+N\+FO}}
 
 
 

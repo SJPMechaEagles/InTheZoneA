@@ -12,7 +12,5 @@ var localization_8c =
     [ "g1", "localization_8c.html#a46b8f25ffa3bbee071a0468eac654393", null ],
     [ "last_call", "localization_8c.html#a0f327d31da83831114e7417abb7b6b63", null ],
     [ "localization_task", "localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488", null ],
-    [ "theta", "localization_8c.html#aca81c35c21e3a5f7f3a8d24504e76664", null ],
-    [ "x", "localization_8c.html#af88b946fb90d5f08b5fb740c70e98c10", null ],
-    [ "y", "localization_8c.html#ab927965981178aa1fba979a37168db2a", null ]
+    [ "state_matrix", "localization_8c.html#a424e677cc0238390cb4a3068a6f3518c", null ]
 ];

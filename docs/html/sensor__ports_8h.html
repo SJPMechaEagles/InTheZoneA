@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.7</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
   </td>
  </tr>
@@ -90,18 +90,20 @@ $(document).ready(function(){initNavTree('sensor__ports_8h.html','');});
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="sensor__ports_8h__dep__incl.svg" width="167" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="sensor__ports_8h__dep__incl.svg" width="454" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="sensor__ports_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a780fc8672d5a3ae3cfa4ac20278ffc46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor__ports_8h.html#a780fc8672d5a3ae3cfa4ac20278ffc46">CLAW_POT</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:a780fc8672d5a3ae3cfa4ac20278ffc46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor__ports_8h.html#a780fc8672d5a3ae3cfa4ac20278ffc46">CLAW_POT</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a780fc8672d5a3ae3cfa4ac20278ffc46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae59fbcf599f31d0317338ee35491c175"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor__ports_8h.html#ae59fbcf599f31d0317338ee35491c175">IME_FRONT_RIGHT</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:ae59fbcf599f31d0317338ee35491c175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of integrated motor encoders Used when checking to see if all imes are plugged in.  <a href="#ae59fbcf599f31d0317338ee35491c175">More...</a><br /></td></tr>
 <tr class="separator:ae59fbcf599f31d0317338ee35491c175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1968b8c13fa0757cc721c96a67407d9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor__ports_8h.html#a1968b8c13fa0757cc721c96a67407d9b">LIFTER</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a1968b8c13fa0757cc721c96a67407d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a780fc8672d5a3ae3cfa4ac20278ffc46"></a>
@@ -111,14 +113,14 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CLAW_POT&#160;&#160;&#160;2</td>
+          <td class="memname">#define CLAW_POT&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sensor__ports_8h_source.html#l00020">20</a> of file <a class="el" href="sensor__ports_8h_source.html">sensor_ports.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sensor__ports_8h_source.html#l00021">21</a> of file <a class="el" href="sensor__ports_8h_source.html">sensor_ports.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="claw_8c_source.html#l00004">update_claw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="claw_8c_source.html#l00029">getClawTicks()</a>.</p>
 
 </div>
 </div>
@@ -140,6 +142,24 @@ Macros</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/7/2017 </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="sensor__ports_8h_source.html#l00018">18</a> of file <a class="el" href="sensor__ports_8h_source.html">sensor_ports.h</a>.</p>
+
+</div>
+</div>
+<a id="a1968b8c13fa0757cc721c96a67407d9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1968b8c13fa0757cc721c96a67407d9b">&#9670;&nbsp;</a></span>LIFTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIFTER&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sensor__ports_8h_source.html#l00020">20</a> of file <a class="el" href="sensor__ports_8h_source.html">sensor_ports.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00030">autonomous()</a>, and <a class="el" href="lifter_8c_source.html#l00081">getLifterTicks()</a>.</p>
 
 </div>
 </div>

@@ -33,6 +33,10 @@ typedef enum side{
 **/
 void set_side_speed(side_t side, int speed);
 
+/**
+* @brief Sets the deadzone threshhold on the drive.
+* @author Chris Jerrett
+**/
 void setThresh(int t);
 
 /**
