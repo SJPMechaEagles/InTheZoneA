@@ -8,29 +8,60 @@
 #ifndef _MATRIX_H_
 #define _MATRIX_H_
 
+/**
+* A struct representing a matrix
+**/
 typedef struct _matrix {
     int height;
     int width;
     double* data;
 } matrix;
 
-
+/**
+* @brief Asserts a condition is true
+*
+* If the assertion is non-zero (i.e. true), then it returns.
+* If the assertion is zero (i.e. false), then it display the string and
+* aborts the program.
+* This is ment to act like Python's assert keyword.
+**/
 void assert(int assertion, const char* message);
 
-//============================
-// Catch and release functions
-//============================
-matrix* readMatrix(char* filename);
+/**
+ * @brief Makes a matrix with a width and height parameters.
+ **/
 matrix* makeMatrix(int width, int height);
+
+/**
+* @brief Copies a matrix. This function uses scaleMatrix, because scaling matrix
+* by 1 is the same as a copy.
+*
+* @param m a pointer to the matrix
+* @return a copied matrix
+**/
 matrix* copyMatrix(matrix* m);
+
+/**
+ * @brief Frees the resources of a matrix
+ * @param the matrix to free
+ **/
 void freeMatrix(matrix* m);
-void writeMatrix(matrix* m, char* filename);
+
+/**
+* @brief Prints a matrix.
+* @param the matrix
+**/
 void printMatrix(matrix* m);
 
 //============================
 // Basic Matrix operations
 //============================
-matrix* eyeMatrix(int n);
+/**
+ * @brief Returns an identity matrix of size n by n.
+ * @param n the input matrix.
+ * parameter.
+ **/
+matrix* identityMatrix(int n);
 double traceMatrix(matrix* m);
 matrix* transposeMatrix(matrix* m);
 matrix* meanMatrix(matrix* m);

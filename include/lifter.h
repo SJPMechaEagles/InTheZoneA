@@ -1,4 +1,9 @@
-
+/**
+* @file lifter.h
+* @author Chris Jerrett, Christian Desimone
+* @date 8/27/2017
+* @brief Declarations and macros for controlling and manipulating the lifter.
+**/
 #ifndef _LIFTER_H_
 #define _LIFTER_H_
 

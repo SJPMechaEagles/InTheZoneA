@@ -4,12 +4,13 @@
 #include <string.h>
 
 /**
- * assert
- * If the assertion is non-zero (i.e. true), then it returns.
- * If the assertion is zero (i.e. false), then it display the string and
- * aborts the program.
- * This is ment to act like Python's assert keyword.
- **/
+* @brief Asserts a condition is true
+*
+* If the assertion is non-zero (i.e. true), then it returns.
+* If the assertion is zero (i.e. false), then it display the string and
+* aborts the program.
+* This is ment to act like Python's assert keyword.
+**/
 void assert(int assertion, const char* message) {
     if (assertion == 0) {
         fprintf(stderr, "%s\n", message);
@@ -18,8 +19,10 @@ void assert(int assertion, const char* message) {
 }
 
 /**
- * makeMatrix
- * Makes a matrix with a width and height parameters.
+ * @brief Makes a matrix with a width and height parameters.
+ * @param width The width of the matrix
+ * @param height the height of the matrix
+ * @return the new matrix
  **/
 matrix* makeMatrix(int width, int height) {
     matrix* out;
@@ -40,17 +43,19 @@ matrix* makeMatrix(int width, int height) {
 }
 
 /**
- * copyMatrix
- * Copies a matrix. This function uses scaleMatrix, because scaling matrix
- * by 1 is the same as a copy.
- **/
+* @brief Copies a matrix. This function uses scaleMatrix, because scaling matrix
+* by 1 is the same as a copy.
+*
+* @param m a pointer to the matrix
+* @return a copied matrix
+**/
 matrix* copyMatrix(matrix* m) {
     return scaleMatrix(m, 1);
 }
 
 /**
- * freeMatrix
- * Frees the resources of a matrix
+ * @brief Frees the resources of a matrix
+ * @param the matrix to free
  **/
 void freeMatrix(matrix* m) {
     if (m != NULL) {
@@ -58,16 +63,15 @@ void freeMatrix(matrix* m) {
             free(m->data);
             m->data = NULL;
         }
-
         free(m);
     }
     return;
 }
 
 /**
- * printMatrix
- * Prints a matrix. Great for debugging.
- **/
+* @brief Prints a matrix.
+* @param the matrix
+**/
 void printMatrix(matrix* m) {
     int i, j;
     double* ptr = m->data;
@@ -82,11 +86,12 @@ void printMatrix(matrix* m) {
 }
 
 /**
- * eyeMatrix
- * Returns an identity matrix of size n by n, where n is the input
+ * @brief Returns an identity matrix of size n by n.
+ * @param n the input matrix.
+ * @return the identity matrix
  * parameter.
  **/
-matrix* eyeMatrix(int n) {
+matrix* identityMatrix(int n) {
     int i;
     matrix *out;
     double* ptr;
@@ -104,9 +109,9 @@ matrix* eyeMatrix(int n) {
 }
 
 /**
- * traceMatrix
- * Given an "m rows by n columns" matrix, it returns the sum of the elements
- * along the diagonal. This is know as the matrix 'trace'.
+ * @brief Given an "m rows by n columns" matrix
+ * @return the sum of the elements
+ * along the diagonal.
  **/
 double traceMatrix(matrix* m) {
     int i;
@@ -130,9 +135,9 @@ double traceMatrix(matrix* m) {
 }
 
 /**
- * meanMatrix
- * Given an "m rows by n columns" matrix, it returns a matrix with 1 row and
- * n columns, where each element represents the mean of that full column.
+ * @brief Given an "m rows by n columns" matrix.
+ * @pram the matrix
+ * @return matrix with 1 row and n columns, where each element represents the mean of that full column.
  **/
 matrix* meanMatrix(matrix* m) {
     int i, j;

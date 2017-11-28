@@ -1,3 +1,9 @@
+/**
+* @file localization.h
+* @author Chris Jerrett, Christian Desimone
+* @date 9/27/2017
+* @brief Declarations and macros for determining the location of the robot. [WIP]
+**/
 #ifndef _LOCALIZATION_H_
 #define _LOCALIZATION_H_
 
@@ -6,15 +12,23 @@
 #include <math.h>
 #include "matrix.h"
 
-#define LOCALIZATION_UPDATE_FREQUENCY 0.500
+/**
+* How often the localization code updates the position.
+**/
+#define LOCALIZATION_UPDATE_PERIOD 0.500
 
+/**
+* Vector storing the cartesian cords and an angle
+**/
 struct location {
   int x;
   int y;
   int theta;
 };
+
 /**
 * @brief Starts the localization process.
+* @author Chris Jerrett
 *
 * @param gyro1 The first gyro
 * @prama The multiplier parameter can tune the gyro to adapt to specific sensors.
@@ -24,6 +38,13 @@ struct location {
 * and if it is not turning far enough, decrease the multiplier.
 **/
 bool init_localization(const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta);
+
+/**
+* @brief Gets the current posituion of the robot
+*
+* @param gyro1 The first gyro
+* @return the loacation of the robot as a struct.
+**/
 struct location get_position();
 
 #endif
