@@ -43,32 +43,32 @@
 
 
 /**
-* The integral constant for the lifter PID
+* @brief The integral constant for the lifter PID
 **/
 #define HEIGHT 19.1 - 3.8
 
 /**
-* The lifter up controller params
+* @brief The lifter up controller params
 **/
 #define LIFTER_UP MASTER, 5, JOY_UP
 
 /**
-* The lifter down controller params
+* @brief The lifter down controller params
 **/
 #define LIFTER_DOWN MASTER, 5, JOY_DOWN
 
 /**
-* Height to raise lifter to driver preload height
+* @brief Height to raise lifter to driver preload height
 **/
 #define LIFTER_DRIVER_LOAD MASTER, RIGHT_BUTTONS, JOY_RIGHT
 
 /**
-* The lifter up controller params for the partner
+* @brief The lifter up controller params for the partner
 **/
 #define LIFTER_UP_PARTNER PARTNER, 5, JOY_UP
 
 /**
-* The lifter down controller params for the partner
+* @brief The lifter down controller params for the partner
 **/
 #define LIFTER_DOWN_PARTNER PARTNER, 5, JOY_DOWN
 
