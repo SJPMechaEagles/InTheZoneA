@@ -109,7 +109,7 @@ matrix* identityMatrix(int n) {
 }
 
 /**
- * @brief Given an "m rows by n columns" matrix
+ * @brief Given an "m rows by n columns" matrix returns the sum
  * @return the sum of the elements
  * along the diagonal.
  **/
@@ -135,9 +135,9 @@ double traceMatrix(matrix* m) {
 }
 
 /**
- * @brief Given an "m rows by n columns" matrix.
+ * @brief Given an "m rows by n columns" matrix, return a matrix where each element represents the mean of that full column.
  * @pram the matrix
- * @return matrix with 1 row and n columns, where each element represents the mean of that full column.
+ * @return matrix with 1 row and n columns each element represents the mean of that full column.
  **/
 matrix* meanMatrix(matrix* m) {
     int i, j;
@@ -161,10 +161,10 @@ matrix* meanMatrix(matrix* m) {
 }
 
 /**
- * covarianceMatrix
- * Given an "m rows by n columns" matrix, it returns a matrix with n row and
- * n columns, where each element represents covariance of 2 columns.
- **/
+* @brief returns the covariance of the matrix
+* @param the matrix
+* @return a matrix with n row and n columns, where each element represents covariance of 2 columns.
+**/
 matrix* covarianceMatrix(matrix* m) {
     int i, j, k = 0;
     matrix* out;
@@ -199,8 +199,9 @@ matrix* covarianceMatrix(matrix* m) {
 }
 
 /**
- * transposeMatrix
- * Given an matrix, returns the transpose.
+ * @brief returns the transpose matrix.
+ * @param the matrix to transpose.
+ * @return the transposed matrix.
  **/
 matrix* transposeMatrix(matrix* m) {
     matrix* out = makeMatrix(m->height, m->width);
@@ -221,9 +222,11 @@ matrix* transposeMatrix(matrix* m) {
 }
 
 /**
- * multiplyMatrix
- * Given a two matrices, returns the multiplication of the two.
- **/
+* @brief Given a two matrices, returns the multiplication of the two.
+* @param a the first matrix
+* @param b the seconf matrix
+* return the result of the multiplication
+**/
 matrix* multiplyMatrix(matrix* a, matrix* b) {
     int i, j, k;
     matrix* out;
@@ -256,10 +259,12 @@ matrix* multiplyMatrix(matrix* a, matrix* b) {
 }
 
 /**
- * scaleMatrix
- * Given a matrix and a double value, this returns a new matrix where each
- * element in the input matrix is multiplied by the double value
- **/
+* @brief scales a matrix.
+* @param m the matrix to scale
+* @param the value to scale by
+* @return a new matrix where each element in the input matrix is
+* multiplied by the scalar value
+**/
 matrix* scaleMatrix(matrix* m, double value) {
     int i, elements = m->width * m->height;
     matrix* out = makeMatrix(m->width, m->height);
@@ -274,11 +279,14 @@ matrix* scaleMatrix(matrix* m, double value) {
 }
 
 /**
- * rowSwap
- * Given a matrix, this algorithm will swap rows p and q, provided
- * that p and q are less than or equal to the height of matrix A and p
- * and q are different values.
- **/
+* @brief swaps the rows of a matrix. This method changes the input matrix.
+* Given a matrix, this algorithm will swap rows p and q, provided
+* that p and q are less than or equal to the height of matrix A and p
+* and q are different values.
+* @param the matrix to swap. This method changes the input matrix.
+* @param the first row
+* @param the second row
+**/
 void rowSwap(matrix* a, int p, int q) {
     int i;
     double temp;
@@ -309,16 +317,19 @@ void rowSwap(matrix* a, int p, int q) {
 }
 
 /**
- * dotProductMatrix
- * Given a two matrices (or the same matrix twice) with identical widths and
- * different heights, this method returns a a->height by b->height matrix of
- * the cross product of each matrix.
- *
- * Dot product is essentially the sum-of-squares of two vectors.
- *
- * Also, if the second paramter is NULL, it is assumed that we
- * are performing a cross product with itself.
- **/
+* @brief returns the matrix dot product.
+* Given a two matrices (or the same matrix twice) with identical widths and
+* different heights, this method returns a a->height by b->height matrix of
+* the cross product of each matrix.
+*
+* Dot product is essentially the sum-of-squares of two vectors.
+*
+* Also, if the second paramter is NULL, it is assumed that we
+* are performing a cross product with itself.
+* @param a the first matrix
+* @param the second matrix
+* @return the result of the dot product
+**/
 matrix* dotProductMatrix(matrix* a, matrix* b) {
     matrix* out;
     double* ptrOut;
@@ -358,16 +369,19 @@ matrix* dotProductMatrix(matrix* a, matrix* b) {
 }
 
 /**
- * matrixDotDiagonal
- * Given a two matrices (or the same matrix twice) with identical widths and
- * heights, this method returns a 1 by a->height matrix of the cross
- * product of each matrix along the diagonal.
- *
- * Dot product is essentially the sum-of-squares of two vectors.
- *
- * If the second paramter is NULL, it is assumed that we
- * are performing a cross product with itself.
- **/
+* @brief performs a diagonial matrix dot product.
+* Given a two matrices (or the same matrix twice) with identical widths and
+* heights, this method returns a 1 by a->height matrix of the cross
+* product of each matrix along the diagonal.
+*
+* Dot product is essentially the sum-of-squares of two vectors.
+*
+* If the second paramter is NULL, it is assumed that we
+* are performing a cross product with itself.
+* @param a the first matrix
+* @param b the second matrix
+* @return the matrix result
+**/
 matrix* dotDiagonalMatrix(matrix* a, matrix* b) {
     matrix* out;
     double* ptrOut;

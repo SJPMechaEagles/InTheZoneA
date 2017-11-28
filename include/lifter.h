@@ -17,27 +17,27 @@
 #include "drive.h"
 
 /**
-* The initial rotation of the lifter potentiometer at height zero
+* @brief The initial rotation of the lifter potentiometer at height zero
 **/
 #define INIT_ROTATION 680
 
 /**
-* The proportional constant for the lifter PID
+* @brief The proportional constant for the lifter PID
 **/
 #define LIFTER_P .15
 
 /**
-* The derivative constant for the lifter PID
+* @brief The derivative constant for the lifter PID
 **/
 #define LIFTER_D 0
 
 /**
-* The threshold of a signficant speed for the lifter
+* @brief The threshold of a signficant speed for the lifter
 **/
 #define THRESHOLD 10
 
 /**
-* The integral constant for the lifter PID
+* @brief The integral constant for the lifter PID
 **/
 #define LIFTER_I 0
 

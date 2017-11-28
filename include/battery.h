@@ -10,12 +10,12 @@
 #include <API.h>
 
 /**
-* The minimum acceptable main battery voltage beofre a match.
+* @brief The minimum acceptable main battery voltage beofre a match.
 **/
 #define MIN_MAIN_VOLTAGE 7.8
 
 /**
-* The minimum acceptable backup battery voltage beofre a match.
+* @brief The minimum acceptable backup battery voltage beofre a match.
 **/
 #define MIN_BACKUP_VOLTAGE 7.8
 
