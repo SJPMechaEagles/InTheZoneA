@@ -7,17 +7,30 @@
 #include <API.h>
 #include "log.h"
 
-static float joystickExp(int joystickVal);
 static int thresh = 30;
 
+
+/**
+* @brief Gets the deadzone threshhold on the drive.
+* @author Christian Desimone
+**/
 int getThresh(){
   return thresh;
 }
 
+/**
+* @brief Sets the deadzone threshhold on the drive.
+* @author Christian Desimone
+**/
 void setThresh(int t){
   thresh = t;
 }
 
+/**
+* @brief Updates the drive motors during teleop
+* @author Christian Desimone
+* @date 9/5/17
+**/
 void update_drive_motors(){
 
   int x = 0;
@@ -30,8 +43,6 @@ void update_drive_motors(){
     y = (joystickGetAnalog(MASTER, 1));
   }
 
-  //x = joystickExp(x);
-  //y = joystickExp(y);
   if(x < thresh && x > -thresh){
     x = 0;
   }
@@ -47,6 +58,12 @@ void update_drive_motors(){
 
 }
 
+/**
+* @brief sets the speed of one side of the robot.
+* @author Christian Desimone
+* @param side a side enum which indicates the size.
+* @param speed the speed of the side. Can range from -127 - 127 negative being back and positive forwards
+**/
 void set_side_speed(side_t side, int speed){
   if(side == RIGHT || side == BOTH){
     set_motor_slew(MOTOR_BACK_RIGHT , -speed);

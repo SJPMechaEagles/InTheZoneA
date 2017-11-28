@@ -1,5 +1,9 @@
 #include "controller.h"
 
+/**
+* @brief Gets the location of a joystick on the controller
+* @author Chris Jerrett
+**/
 struct cord get_joystick_cord(enum joystick side, int controller) {
   int x;
   int y;

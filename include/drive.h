@@ -1,6 +1,6 @@
 /**
 * @file drive.h
-* @author Christian Desimone
+* @author Chris Jerrett
 * @date 9/9/2017
 * @brief Drive base definitions and enumerations
 **/
@@ -11,8 +11,12 @@
 #include <API.h>
 #include "partner.h"
 
-#define DEADSPOT 10
+/**
+* The dead spot on the controller to avoid running motors at low
+* speeds.
+**/
 #define THRESHOLD 10
+
 /**
 * @brief enumeration indication side of the robot.
 * @author Christian Desimone

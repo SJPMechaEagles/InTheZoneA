@@ -1,3 +1,9 @@
+/**
+* @file battery.h
+* @author Chris Jerrett
+* @date 9/18/2017
+* @brief Battery management related functions
+**/
 #ifndef _BATTERY_H_
 #define _BATTERY_H_
 

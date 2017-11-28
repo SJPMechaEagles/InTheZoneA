@@ -1,10 +1,9 @@
 /**
 * @file encoders.h
-* @author Chris Jerrett
+* @author Chris Jerrett, Christian Desimone
 * @date 9/9/2017
 * @brief wrapper around encoder functions
 **/
-
 #ifndef _ENCODERS_H_
 #define _ENCODERS_H_
 

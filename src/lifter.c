@@ -70,12 +70,12 @@ void update_lifter() {
     } else {
         set_lifter_motors(motor);
     }
-    
+
   }
 }
 
 float lifterPotentiometerToDegree(int x){
-  return (x - TICK_DIFF) / TICK_MAX * DEG_MAX;
+  return (x - INIT_ROTATION) / TICK_MAX * DEG_MAX;
 }
 
 int getLifterTicks() {

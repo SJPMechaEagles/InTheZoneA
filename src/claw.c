@@ -1,5 +1,9 @@
 #include "claw.h"
 
+/**
+* @brief Updates the claw motor values
+* @author Chris Jerrett
+**/
 void update_claw() {
   static int last_error = 0;
   static enum claw_state state = CLAW_OPEN_STATE;
@@ -22,18 +26,34 @@ void update_claw() {
   }
 }
 
+/**
+* @brief sets the claw motor speed
+* @author Chris Jerrett
+**/
 void set_claw_motor(const int v){
   set_motor_immediate(CLAW_MOTOR, v);
 }
 
+/**
+* @brief Gets the claw position in potentiometer ticks
+* @author Chris Jerrett
+**/
 unsigned int getClawTicks(){
   return analogRead(CLAW_POT);
 }
 
+/**
+* @brief Drives the motors to open the claw
+* @author Chris Jerrett
+**/
 void open_claw() {
   set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED);
 }
 
+/**
+* @brief Drives the motors to close the claw
+* @author Chris Jerrett
+**/
 void close_claw() {
   set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED);
 }

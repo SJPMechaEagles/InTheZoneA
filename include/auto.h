@@ -1,3 +1,9 @@
+/**
+* @file auto.h
+* @author Chris Jerrett
+* @date 9/18/2017
+* @brief Autonomous declarations and macros
+**/
 #ifndef _AUTO_H_
 #define _AUTO_H_
 
@@ -6,11 +12,29 @@
 #include "lifter.h"
 #include "claw.h"
 
-#define FRONT_LEFT_DRIVE 0
+/**
+* Front left motor integrated motor encoder
+**/
+#define FRONT_LEFT_IME 0
+
+/**
+* Middle left motor integrated motor encoder
+**/
 #define MID_LEFT_DRIVE 1
+
+/**
+* Middle right motor integrated motor encoder
+**/
 #define MID_RIGHT_DRIVE 4
+
+/**
+* First Stop position for stationary autonomous
+**/
 #define STOP_ONE 500
-#define STOP_TWO 700
+
+/**
+* The height of the goal using potentiometer readings.
+**/
 #define GOAL_HEIGHT 1325
 
 

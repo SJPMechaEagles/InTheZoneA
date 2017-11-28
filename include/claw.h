@@ -1,3 +1,9 @@
+/**
+* @file claw.h
+* @author Chris Jerrett, Christian Desimone
+* @date 8/30/2017
+* @brief Code for controlling the claw that grabs the cones
+**/
 #ifndef _CLAW_H_
 #define _CLAW_H_
 

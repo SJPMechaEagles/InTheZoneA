@@ -15,7 +15,7 @@ typedef struct _matrix {
 } matrix;
 
 
-void assert(int assertion, char* message);
+void assert(int assertion, const char* message);
 
 //============================
 // Catch and release functions
