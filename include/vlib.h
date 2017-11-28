@@ -42,6 +42,4 @@ int itoa_bad(int a, char *buffer, int digits);
 **/
 void ftoa_bad(float a, char *buffer, int precision);
 
-void *calloc_real(size_t elements, size_t size);
-
 #endif

@@ -15,7 +15,7 @@
 /**
 * How often the localization code updates the position.
 **/
-#define LOCALIZATION_UPDATE_PERIOD 0.500
+#define LOCALIZATION_UPDATE_FREQUENCY 0.500
 
 /**
 * Vector storing the cartesian cords and an angle

@@ -26,7 +26,7 @@ static menu_t* create_menu(enum menu_type type, const char *prompt) {
 menu_t* init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char* options,...){
   menu_t* menu = create_menu(type, prompt);
   va_list values;
-  char **options_array = (char**)calloc_real(sizeof(char*), nums);
+  char **options_array = (char**)calloc(sizeof(char*), nums);
   va_start(values, options);
   for(unsigned int i = 0; i < nums; i++){
     options_array[i] = va_arg(values, char*);
