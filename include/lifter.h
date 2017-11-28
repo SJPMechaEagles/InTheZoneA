@@ -32,6 +32,11 @@
 #define LIFTER_D 0
 
 /**
+* The threshold of a signficant speed for the lifter
+**/
+#define THRESHOLD 10
+
+/**
 * The integral constant for the lifter PID
 **/
 #define LIFTER_I 0
@@ -88,7 +93,6 @@ void set_lifter_pos(int pos);
 /**
 * @brief Updates the lifter in teleop.
 *
-* @param v value for the lifter motor. Between -128 - 127, any values outside are clamped.
 * @author Chris Jerrett
 * @date 9/9/2017
 **/

@@ -32,7 +32,7 @@ void setThresh(int t){
 * @date 9/5/17
 **/
 void update_drive_motors(){
-
+  //Get the joystick values from the controller
   int x = 0;
   int y = 0;
   if(get_mode() == PARTNER_CONTROLLER_MODE) {
@@ -42,17 +42,18 @@ void update_drive_motors(){
     x = -(joystickGetAnalog(MASTER, 3));
     y = (joystickGetAnalog(MASTER, 1));
   }
-
+  //Make sure the joystick values are significant enough to change the motors
   if(x < thresh && x > -thresh){
     x = 0;
   }
   if(y < thresh && y > -thresh){
     y = 0;
   }
-
+  //Create motor values for the left and right from the x and y of the joystick
   int r = (x + y);
   int l = -(x - y);
 
+  //Set the drive motors
   set_side_speed(LEFT, l);
   set_side_speed(RIGHT, -r);
 
@@ -90,11 +91,12 @@ static float joystickExp(int joystickVal) {
 	}
 
 	int offset;
+  //Use the threshold to ensure the joystick values are significant
 	if (joystickVal < 0) {
 		offset = - (THRESHOLD);
 	} else {
 		offset = THRESHOLD;
 	}
-
+  //Apply the function ((((x/10)^3)/18) + offset) * 0.8 to the joystick value
 	return (pow(joystickVal/10 , 3) / 18 + offset) * 0.8;
 }
