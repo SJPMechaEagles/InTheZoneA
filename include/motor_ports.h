@@ -1,6 +1,14 @@
+/**
+* @brief The motor port definitions
+* @file motor_ports.h
+* Macros for the different motors ports.
+**/
 #ifndef _MOTOT_PORTS_H_
 #define _MOTOR_PORTS_H_
 
+/**
+* @brief Max motor speed
+**/
 #define MAX_SPEED 127
 #define MIN_SPEED -127
 

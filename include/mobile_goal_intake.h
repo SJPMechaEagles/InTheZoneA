@@ -5,6 +5,9 @@
 #include "controller.h"
 #include "slew.h"
 
+/**
+* @brief updates the mobile goal intake in teleop.
+*/
 void updateIntake();
 
 #endif

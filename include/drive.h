@@ -12,7 +12,7 @@
 #include "partner.h"
 
 /**
-* The dead spot on the controller to avoid running motors at low
+* @brief The dead spot on the controller to avoid running motors at low
 * speeds.
 **/
 #define THRESHOLD 10
