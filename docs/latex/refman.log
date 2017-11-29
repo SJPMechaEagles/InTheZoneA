@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  28 NOV 2017 23:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  28 NOV 2017 23:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1793,14 +1793,18 @@ Underfull \hbox (badness 10000) detected at line 2572
  []
 
 <_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6_icgraph.pdf, id=646, pagebox=cropb
-ox, 1250.6725pt x 645.41125pt>
+ox, 1250.6725pt x 570.13pt>
 File: _a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6_icgraph.pdf Graphic file (typ
 e pdf)
 <use _a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6_icgraph.pdf>
 Package pdftex.def Info: _a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6_icgraph.pd
 f  used on input line 2583. on input line 2583.
-Package pdftex.def Info: Requested size: 350.0pt x 180.61543pt on input line 25
+Package pdftex.def Info: Requested size: 350.0pt x 159.54831pt on input line 25
 83.
+
+Overfull \vbox (9.75478pt too high) has occurred while \output is active []
+
+
 [76 <./_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6_icgraph.pdf>]
 Underfull \hbox (badness 10000) detected at line 2601
 [][][]
@@ -6473,7 +6477,7 @@ No file refman.ind.
 Here is how much of TeX's memory you used:
  10856 strings out of 492985
  238129 string characters out of 6132585
- 261688 words of memory out of 5000000
+ 261685 words of memory out of 5000000
  13577 multiletter control sequences out of 15000+600000
  58028 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -6493,7 +6497,7 @@ t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/urw/helvetic/uhvb8ac.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/he
 lvetic/uhvro8a.pfb>
-Output written on refman.pdf (402 pages, 4283163 bytes).
+Output written on refman.pdf (402 pages, 4282558 bytes).
 PDF statistics:
  5550 PDF objects out of 6186 (max. 8388607)
  4130 compressed objects within 42 object streams
