@@ -12,8 +12,7 @@ var searchData=
   ['task_5frunning',['TASK_RUNNING',['../_a_p_i_8h.html#a17e3f99a030e5dfefb8f9815600e3fed',1,'API.h']]],
   ['task_5fsleeping',['TASK_SLEEPING',['../_a_p_i_8h.html#a1fa55559982d06fb5f1b3f2fbf5814e5',1,'API.h']]],
   ['task_5fsuspended',['TASK_SUSPENDED',['../_a_p_i_8h.html#ac90388d86d6cacd27fb13b218daff9ba',1,'API.h']]],
-  ['threshold',['THRESHOLD',['../drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879',1,'drive.h']]],
-  ['tick_5fdiff',['TICK_DIFF',['../lifter_8h.html#a7c0565e3ec8daabba3a66a67aa4e8d2d',1,'lifter.h']]],
+  ['threshold',['THRESHOLD',['../drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879',1,'THRESHOLD():&#160;drive.h'],['../lifter_8h.html#a4679d8ea8690999a6c6c7c0cb245c879',1,'THRESHOLD():&#160;lifter.h']]],
   ['tick_5fmax',['TICK_MAX',['../potentiometer_8h.html#ad40f2bbc4e57baed2d9e900750d94a7f',1,'potentiometer.h']]],
   ['top_5frow',['TOP_ROW',['../lcd_8h.html#a18bab754c6ad16bc35c48333091516c9',1,'lcd.h']]]
 ];

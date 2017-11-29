@@ -4,6 +4,7 @@ var searchData=
   ['i2creadregister',['i2cReadRegister',['../_a_p_i_8h.html#a69670b44b640e824da387a6616dc2f9a',1,'API.h']]],
   ['i2cwrite',['i2cWrite',['../_a_p_i_8h.html#a2d286627370658ecee04a18335b91c39',1,'API.h']]],
   ['i2cwriteregister',['i2cWriteRegister',['../_a_p_i_8h.html#a51385d22e08f52852c85ad675e3523a9',1,'API.h']]],
+  ['identitymatrix',['identityMatrix',['../matrix_8h.html#aa3f5e409b1641373be7cf7284e216d1a',1,'identityMatrix(int n):&#160;matrix.c'],['../matrix_8c.html#aa3f5e409b1641373be7cf7284e216d1a',1,'identityMatrix(int n):&#160;matrix.c']]],
   ['imeget',['imeGet',['../_a_p_i_8h.html#ac4f1500418a729ac3ee95bce9768b20c',1,'API.h']]],
   ['imegetvelocity',['imeGetVelocity',['../_a_p_i_8h.html#a2dfd22ed31510b48a91bd9cd3d04a72f',1,'API.h']]],
   ['imeinitializeall',['imeInitializeAll',['../_a_p_i_8h.html#a868ab46aa5992e60829936c0109160bf',1,'API.h']]],

@@ -1,0 +1,42 @@
+\subsection{lcd.\+h}
+\label{lcd_8h_source}\index{include/lcd.\+h@{include/lcd.\+h}}
+
+\begin{DoxyCode}
+00001 
+00008 \textcolor{preprocessor}{#ifndef \_LCD\_H\_}
+00009 \textcolor{preprocessor}{#define \_LCD\_H\_}
+00010 
+00011 \textcolor{preprocessor}{#include <API.h>}
+00012 
+00018 \textcolor{preprocessor}{#define TOP\_ROW 1}
+00019 
+00025 \textcolor{preprocessor}{#define BOTTOM\_ROW 2}
+00026 
+00036 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{
+00038   RELEASED = \textcolor{keyword}{false},
+00040   PRESSED = \textcolor{keyword}{true},
+00041 \} button_state;
+00042 
+00048 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{
+00049   button_state left;
+00050   button_state middle;
+00051   button_state right;
+00052 \} lcd_buttons;
+00053 
+00054 
+00062 lcd_buttons lcd_get_pressed_buttons();
+00063 
+00069 \textcolor{keywordtype}{void} lcd_clear();
+00070 
+00080 \textcolor{keywordtype}{void} init_main_lcd(FILE *lcd);
+00081 
+00089 \textcolor{keywordtype}{void} lcd_print(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} line, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *str);
+00090 
+00098 \textcolor{keywordtype}{void} lcd_printf(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} line, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *format\_str, ...);
+00099 
+00106 \textcolor{keywordtype}{void} lcd_set_backlight(\textcolor{keywordtype}{bool} state);
+00107 
+00117 \textcolor{keywordtype}{void} promt_confirmation(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *confirm\_text);
+00118 
+00119 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

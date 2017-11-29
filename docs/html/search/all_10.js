@@ -3,7 +3,6 @@ var searchData=
   ['raise_5fintake',['raise_intake',['../mobile__goal__intake_8c.html#a4899f9a8621015313e6312ce085da979',1,'mobile_goal_intake.c']]],
   ['raise_5flifter',['raise_lifter',['../lifter_8c.html#a7452163ed7946b6262f41de51c62dfd4',1,'lifter.c']]],
   ['ramp_5fproportion',['RAMP_PROPORTION',['../slew_8h.html#a4a3ff8667251227c99f8f4c81e9ff467',1,'slew.h']]],
-  ['readmatrix',['readMatrix',['../matrix_8h.html#a1cb64c54a2c9179c77dc2cccee269607',1,'matrix.h']]],
   ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
   ['released',['RELEASED',['../lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0',1,'lcd.h']]],
   ['reverse',['reverse',['../vlib_8h.html#aad7fea725cb4b198ace1aa3df5051244',1,'reverse(char *str, int len):&#160;vlib.c'],['../vlib_8c.html#aad7fea725cb4b198ace1aa3df5051244',1,'reverse(char *str, int len):&#160;vlib.c']]],

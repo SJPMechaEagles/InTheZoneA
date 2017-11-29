@@ -1,0 +1,50 @@
+.TH "testMath" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+testMath
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBtest\fP (l1, l2)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def testMath\&.test ( l1,  l2)"
+
+.PP
+Definition at line 3 of file testMath\&.py\&.
+.PP
+References print()\&.
+.PP
+.nf
+3 def test(l1, l2):
+4     print(l1, l2)
+5     print("\n")
+6     theta = l1-l2
+7     x = ((l2)/(theta) + \&.5) - ((l2)/(theta) + \&.5) * cos(theta)
+8     y = ((l2)/(theta) + \&.5) * sin(theta)
+9     print(x)
+10     print(y)
+11     print(degrees(theta))
+12     print("\n")
+13     print("\n")
+14 
+15 test(1\&.0, \&.5)
+16 test(\&.5, 1\&.0)
+17 test(2\&.0, \&.5)
+18 test(\&.5, 2\&.0)
+19 test(1\&.0, 3\&.5)
+20 test(3\&.5, 1\&.0)
+21 test(5, \&.3) 
+22 test(\&.3, 5)
+23 test(1\&.0, 0)
+24 .fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

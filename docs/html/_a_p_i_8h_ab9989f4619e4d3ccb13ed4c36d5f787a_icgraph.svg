@@ -17,7 +17,7 @@
 <!-- Node60 -->
 <g id="node2" class="node">
 <title>Node60</title>
-<g id="a_node2"><a xlink:href="matrix_8c.html#aa40f301fe71dfcea781169d3e6f14025" target="_top" xlink:title="assert">
+<g id="a_node2"><a xlink:href="matrix_8c.html#a8e41e30382335ea89f90b72db0b44d6f" target="_top" xlink:title="Asserts a condition is true. ">
 <polygon fill="none" stroke="#000000" points="77.0098,-133.5 77.0098,-151.5 120.2412,-151.5 120.2412,-133.5 77.0098,-133.5"/>
 <text text-anchor="middle" x="98.6255" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">assert</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node61 -->
 <g id="node3" class="node">
 <title>Node61</title>
-<g id="a_node3"><a xlink:href="matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c" target="_top" xlink:title="makeMatrix">
+<g id="a_node3"><a xlink:href="matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c" target="_top" xlink:title="Makes a matrix with a width and height parameters. ">
 <polygon fill="none" stroke="#000000" points="156.2412,-152.5 156.2412,-170.5 223.916,-170.5 223.916,-152.5 156.2412,-152.5"/>
 <text text-anchor="middle" x="190.0786" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">makeMatrix</text>
 </a>
@@ -47,9 +47,9 @@
 <!-- Node63 -->
 <g id="node5" class="node">
 <title>Node63</title>
-<g id="a_node5"><a xlink:href="matrix_8c.html#a0cbaeee632d87d719660ac5d2d6d2c88" target="_top" xlink:title="eyeMatrix">
-<polygon fill="none" stroke="#000000" points="278.5415,-302.5 278.5415,-320.5 337.8862,-320.5 337.8862,-302.5 278.5415,-302.5"/>
-<text text-anchor="middle" x="308.2139" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">eyeMatrix</text>
+<g id="a_node5"><a xlink:href="matrix_8c.html#aa3f5e409b1641373be7cf7284e216d1a" target="_top" xlink:title="Returns an identity matrix of size n by n. ">
+<polygon fill="none" stroke="#000000" points="270.7607,-302.5 270.7607,-320.5 345.667,-320.5 345.667,-302.5 270.7607,-302.5"/>
+<text text-anchor="middle" x="308.2139" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">identityMatrix</text>
 </a>
 </g>
 </g>
@@ -62,7 +62,7 @@
 <!-- Node64 -->
 <g id="node6" class="node">
 <title>Node64</title>
-<g id="a_node6"><a xlink:href="matrix_8c.html#ae4babf9b518a2d5d6b12776191e3b7de" target="_top" xlink:title="meanMatrix">
+<g id="a_node6"><a xlink:href="matrix_8c.html#ae4babf9b518a2d5d6b12776191e3b7de" target="_top" xlink:title="Given an &quot;m rows by n columns&quot; matrix, return a matrix where each element represents the mean of that...">
 <polygon fill="none" stroke="#000000" points="274.0957,-265.5 274.0957,-283.5 342.332,-283.5 342.332,-265.5 274.0957,-265.5"/>
 <text text-anchor="middle" x="308.2139" y="-271.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">meanMatrix</text>
 </a>
@@ -77,7 +77,7 @@
 <!-- Node65 -->
 <g id="node7" class="node">
 <title>Node65</title>
-<g id="a_node7"><a xlink:href="matrix_8c.html#ae6dab569959c360cf165136a3b625edd" target="_top" xlink:title="covarianceMatrix">
+<g id="a_node7"><a xlink:href="matrix_8c.html#ae6dab569959c360cf165136a3b625edd" target="_top" xlink:title="returns the covariance of the matrix ">
 <polygon fill="none" stroke="#000000" points="392.5117,-265.5 392.5117,-283.5 484.0928,-283.5 484.0928,-265.5 392.5117,-265.5"/>
 <text text-anchor="middle" x="438.3022" y="-271.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">covarianceMatrix</text>
 </a>
@@ -92,7 +92,7 @@
 <!-- Node67 -->
 <g id="node9" class="node">
 <title>Node67</title>
-<g id="a_node9"><a xlink:href="matrix_8c.html#a63ed5c518b34768e9ef8e9d5f7d0b534" target="_top" xlink:title="multiplyMatrix">
+<g id="a_node9"><a xlink:href="matrix_8c.html#a63ed5c518b34768e9ef8e9d5f7d0b534" target="_top" xlink:title="Given a two matrices, returns the multiplication of the two. ">
 <polygon fill="none" stroke="#000000" points="269.6548,-78.5 269.6548,-96.5 346.7729,-96.5 346.7729,-78.5 269.6548,-78.5"/>
 <text text-anchor="middle" x="308.2139" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">multiplyMatrix</text>
 </a>
@@ -107,7 +107,7 @@
 <!-- Node70 -->
 <g id="node12" class="node">
 <title>Node70</title>
-<g id="a_node12"><a xlink:href="matrix_8c.html#a0b568a64e81a56779c2141b424475976" target="_top" xlink:title="dotProductMatrix">
+<g id="a_node12"><a xlink:href="matrix_8c.html#a0b568a64e81a56779c2141b424475976" target="_top" xlink:title="returns the matrix dot product. Given a two matrices (or the same matrix twice) with identical widths...">
 <polygon fill="none" stroke="#000000" points="262.4209,-41.5 262.4209,-59.5 354.0068,-59.5 354.0068,-41.5 262.4209,-41.5"/>
 <text text-anchor="middle" x="308.2139" y="-47.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">dotProductMatrix</text>
 </a>
@@ -122,7 +122,7 @@
 <!-- Node71 -->
 <g id="node13" class="node">
 <title>Node71</title>
-<g id="a_node13"><a xlink:href="matrix_8c.html#af49b525d7476c365833db9acd975e3a5" target="_top" xlink:title="dotDiagonalMatrix">
+<g id="a_node13"><a xlink:href="matrix_8c.html#af49b525d7476c365833db9acd975e3a5" target="_top" xlink:title="performs a diagonial matrix dot product. Given a two matrices (or the same matrix twice) with identic...">
 <polygon fill="none" stroke="#000000" points="259.916,-4.5 259.916,-22.5 356.5117,-22.5 356.5117,-4.5 259.916,-4.5"/>
 <text text-anchor="middle" x="308.2139" y="-10.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">dotDiagonalMatrix</text>
 </a>
@@ -137,7 +137,7 @@
 <!-- Node72 -->
 <g id="node14" class="node">
 <title>Node72</title>
-<g id="a_node14"><a xlink:href="matrix_8c.html#acdd57777a972ce339153878fa917db14" target="_top" xlink:title="rowSwap">
+<g id="a_node14"><a xlink:href="matrix_8c.html#acdd57777a972ce339153878fa917db14" target="_top" xlink:title="swaps the rows of a matrix. This method changes the input matrix. Given a matrix, this algorithm will...">
 <polygon fill="none" stroke="#000000" points="161.5146,-.5 161.5146,-18.5 218.6426,-18.5 218.6426,-.5 161.5146,-.5"/>
 <text text-anchor="middle" x="190.0786" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">rowSwap</text>
 </a>
@@ -167,7 +167,7 @@
 <!-- Node61&#45;&gt;Node63 -->
 <g id="edge4" class="edge">
 <title>Node61&#45;&gt;Node63</title>
-<path fill="none" stroke="#191970" d="M195.3427,-180.4746C204.1487,-208.8688 224.4828,-262.3942 259.916,-293.5 265.2286,-298.1638 271.8618,-301.6633 278.4945,-304.2729"/>
+<path fill="none" stroke="#191970" d="M195.3427,-180.4746C204.1487,-208.8688 224.4828,-262.3942 259.916,-293.5 264.0854,-297.1602 269.0681,-300.1032 274.2257,-302.4619"/>
 <polygon fill="#191970" stroke="#191970" points="198.6192,-179.211 192.4369,-170.6069 191.9043,-181.1884 198.6192,-179.211"/>
 </g>
 <!-- Node61&#45;&gt;Node64 -->
@@ -185,7 +185,7 @@
 <!-- Node66 -->
 <g id="node8" class="node">
 <title>Node66</title>
-<g id="a_node8"><a xlink:href="matrix_8c.html#a2936260302742748b0639e8ec71d4d9f" target="_top" xlink:title="transposeMatrix">
+<g id="a_node8"><a xlink:href="matrix_8c.html#a2936260302742748b0639e8ec71d4d9f" target="_top" xlink:title="returns the transpose matrix. ">
 <polygon fill="none" stroke="#000000" points="264.645,-152.5 264.645,-170.5 351.7827,-170.5 351.7827,-152.5 264.645,-152.5"/>
 <text text-anchor="middle" x="308.2139" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">transposeMatrix</text>
 </a>
@@ -206,7 +206,7 @@
 <!-- Node68 -->
 <g id="node10" class="node">
 <title>Node68</title>
-<g id="a_node10"><a xlink:href="matrix_8c.html#a6b7faa6ba9ee987d0777d9d0bd0e7b32" target="_top" xlink:title="scaleMatrix">
+<g id="a_node10"><a xlink:href="matrix_8c.html#a6b7faa6ba9ee987d0777d9d0bd0e7b32" target="_top" xlink:title="scales a matrix. ">
 <polygon fill="none" stroke="#000000" points="274.9307,-115.5 274.9307,-133.5 341.4971,-133.5 341.4971,-115.5 274.9307,-115.5"/>
 <text text-anchor="middle" x="308.2139" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">scaleMatrix</text>
 </a>
@@ -239,7 +239,7 @@
 <!-- Node69 -->
 <g id="node11" class="node">
 <title>Node69</title>
-<g id="a_node11"><a xlink:href="matrix_8c.html#abbb8d2d20c2dd53a2269d017a336668f" target="_top" xlink:title="copyMatrix">
+<g id="a_node11"><a xlink:href="matrix_8c.html#abbb8d2d20c2dd53a2269d017a336668f" target="_top" xlink:title="Copies a matrix. This function uses scaleMatrix, because scaling matrix by 1 is the same as a copy...">
 <polygon fill="none" stroke="#000000" points="406.1299,-115.5 406.1299,-133.5 470.4746,-133.5 470.4746,-115.5 406.1299,-115.5"/>
 <text text-anchor="middle" x="438.3022" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">copyMatrix</text>
 </a>

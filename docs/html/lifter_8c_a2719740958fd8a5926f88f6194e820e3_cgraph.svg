@@ -17,7 +17,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="lifter_8c.html#acdf909159b0406c48099843f2306be78" target="_top" xlink:title="getLifterTicks">
+<g id="a_node2"><a xlink:href="lifter_8c.html#acdf909159b0406c48099843f2306be78" target="_top" xlink:title="Gets the value of the lifter pot. ">
 <polygon fill="none" stroke="#000000" points="117.0391,-.5 117.0391,-18.5 192.1357,-18.5 192.1357,-.5 117.0391,-.5"/>
 <text text-anchor="middle" x="154.5874" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getLifterTicks</text>
 </a>

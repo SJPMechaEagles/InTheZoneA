@@ -1,0 +1,27 @@
+\subsection{encoders.\+c}
+\label{encoders_8c_source}\index{src/encoders.\+c@{src/encoders.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "encoders.h"}
+00002 \textcolor{preprocessor}{#include <API.h>}
+00003 
+00010 \textcolor{keywordtype}{bool} init_encoders() \{
+00011 \textcolor{preprocessor}{  #ifdef IME\_NUMBER}
+00012   \textcolor{keywordflow}{return} imeInitializeAll() == IME_NUMBER;
+00013 \textcolor{preprocessor}{  #else}
+00014   \textcolor{keywordflow}{return} imeInitializeAll();
+00015 \textcolor{preprocessor}{  #endif}
+00016 \}
+00017 
+00023 \textcolor{keywordtype}{int} get_encoder_ticks(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} address) \{
+00024   \textcolor{keywordtype}{int} i = 0;
+00025   imeGet(address, &i);
+00026   \textcolor{keywordflow}{return} i;
+00027 \}
+00028 
+00034 \textcolor{keywordtype}{int} get_encoder_velocity(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} address) \{
+00035   \textcolor{keywordtype}{int} i = 0;
+00036   imeGetVelocity(address, &i);
+00037   \textcolor{keywordflow}{return} i;
+00038 \}
+\end{DoxyCode}

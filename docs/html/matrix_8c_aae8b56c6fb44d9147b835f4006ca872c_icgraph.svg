@@ -17,7 +17,7 @@
 <!-- Node50 -->
 <g id="node2" class="node">
 <title>Node50</title>
-<g id="a_node2"><a xlink:href="matrix_8c.html#ae6dab569959c360cf165136a3b625edd" target="_top" xlink:title="covarianceMatrix">
+<g id="a_node2"><a xlink:href="matrix_8c.html#ae6dab569959c360cf165136a3b625edd" target="_top" xlink:title="returns the covariance of the matrix ">
 <polygon fill="none" stroke="#000000" points="236.2705,-204.5 236.2705,-222.5 327.8516,-222.5 327.8516,-204.5 236.2705,-204.5"/>
 <text text-anchor="middle" x="282.061" y="-210.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">covarianceMatrix</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node51 -->
 <g id="node3" class="node">
 <title>Node51</title>
-<g id="a_node3"><a xlink:href="matrix_8c.html#af49b525d7476c365833db9acd975e3a5" target="_top" xlink:title="dotDiagonalMatrix">
+<g id="a_node3"><a xlink:href="matrix_8c.html#af49b525d7476c365833db9acd975e3a5" target="_top" xlink:title="performs a diagonial matrix dot product. Given a two matrices (or the same matrix twice) with identic...">
 <polygon fill="none" stroke="#000000" points="103.6748,-259.5 103.6748,-277.5 200.2705,-277.5 200.2705,-259.5 103.6748,-259.5"/>
 <text text-anchor="middle" x="151.9727" y="-265.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">dotDiagonalMatrix</text>
 </a>
@@ -47,7 +47,7 @@
 <!-- Node52 -->
 <g id="node4" class="node">
 <title>Node52</title>
-<g id="a_node4"><a xlink:href="matrix_8c.html#a0b568a64e81a56779c2141b424475976" target="_top" xlink:title="dotProductMatrix">
+<g id="a_node4"><a xlink:href="matrix_8c.html#a0b568a64e81a56779c2141b424475976" target="_top" xlink:title="returns the matrix dot product. Given a two matrices (or the same matrix twice) with identical widths...">
 <polygon fill="none" stroke="#000000" points="106.1797,-222.5 106.1797,-240.5 197.7656,-240.5 197.7656,-222.5 106.1797,-222.5"/>
 <text text-anchor="middle" x="151.9727" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">dotProductMatrix</text>
 </a>
@@ -62,9 +62,9 @@
 <!-- Node53 -->
 <g id="node5" class="node">
 <title>Node53</title>
-<g id="a_node5"><a xlink:href="matrix_8c.html#a0cbaeee632d87d719660ac5d2d6d2c88" target="_top" xlink:title="eyeMatrix">
-<polygon fill="none" stroke="#000000" points="122.3003,-185.5 122.3003,-203.5 181.645,-203.5 181.645,-185.5 122.3003,-185.5"/>
-<text text-anchor="middle" x="151.9727" y="-191.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">eyeMatrix</text>
+<g id="a_node5"><a xlink:href="matrix_8c.html#aa3f5e409b1641373be7cf7284e216d1a" target="_top" xlink:title="Returns an identity matrix of size n by n. ">
+<polygon fill="none" stroke="#000000" points="114.5195,-185.5 114.5195,-203.5 189.4258,-203.5 189.4258,-185.5 114.5195,-185.5"/>
+<text text-anchor="middle" x="151.9727" y="-191.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">identityMatrix</text>
 </a>
 </g>
 </g>
@@ -92,7 +92,7 @@
 <!-- Node55 -->
 <g id="node7" class="node">
 <title>Node55</title>
-<g id="a_node7"><a xlink:href="matrix_8c.html#ae4babf9b518a2d5d6b12776191e3b7de" target="_top" xlink:title="meanMatrix">
+<g id="a_node7"><a xlink:href="matrix_8c.html#ae4babf9b518a2d5d6b12776191e3b7de" target="_top" xlink:title="Given an &quot;m rows by n columns&quot; matrix, return a matrix where each element represents the mean of that...">
 <polygon fill="none" stroke="#000000" points="117.8545,-111.5 117.8545,-129.5 186.0908,-129.5 186.0908,-111.5 117.8545,-111.5"/>
 <text text-anchor="middle" x="151.9727" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">meanMatrix</text>
 </a>
@@ -107,7 +107,7 @@
 <!-- Node56 -->
 <g id="node8" class="node">
 <title>Node56</title>
-<g id="a_node8"><a xlink:href="matrix_8c.html#a63ed5c518b34768e9ef8e9d5f7d0b534" target="_top" xlink:title="multiplyMatrix">
+<g id="a_node8"><a xlink:href="matrix_8c.html#a63ed5c518b34768e9ef8e9d5f7d0b534" target="_top" xlink:title="Given a two matrices, returns the multiplication of the two. ">
 <polygon fill="none" stroke="#000000" points="113.4136,-74.5 113.4136,-92.5 190.5317,-92.5 190.5317,-74.5 113.4136,-74.5"/>
 <text text-anchor="middle" x="151.9727" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">multiplyMatrix</text>
 </a>
@@ -122,7 +122,7 @@
 <!-- Node57 -->
 <g id="node9" class="node">
 <title>Node57</title>
-<g id="a_node9"><a xlink:href="matrix_8c.html#a6b7faa6ba9ee987d0777d9d0bd0e7b32" target="_top" xlink:title="scaleMatrix">
+<g id="a_node9"><a xlink:href="matrix_8c.html#a6b7faa6ba9ee987d0777d9d0bd0e7b32" target="_top" xlink:title="scales a matrix. ">
 <polygon fill="none" stroke="#000000" points="118.6895,-37.5 118.6895,-55.5 185.2559,-55.5 185.2559,-37.5 118.6895,-37.5"/>
 <text text-anchor="middle" x="151.9727" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">scaleMatrix</text>
 </a>
@@ -137,7 +137,7 @@
 <!-- Node59 -->
 <g id="node11" class="node">
 <title>Node59</title>
-<g id="a_node11"><a xlink:href="matrix_8c.html#a2936260302742748b0639e8ec71d4d9f" target="_top" xlink:title="transposeMatrix">
+<g id="a_node11"><a xlink:href="matrix_8c.html#a2936260302742748b0639e8ec71d4d9f" target="_top" xlink:title="returns the transpose matrix. ">
 <polygon fill="none" stroke="#000000" points="108.4038,-.5 108.4038,-18.5 195.5415,-18.5 195.5415,-.5 108.4038,-.5"/>
 <text text-anchor="middle" x="151.9727" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">transposeMatrix</text>
 </a>
@@ -158,7 +158,7 @@
 <!-- Node58 -->
 <g id="node10" class="node">
 <title>Node58</title>
-<g id="a_node10"><a xlink:href="matrix_8c.html#abbb8d2d20c2dd53a2269d017a336668f" target="_top" xlink:title="copyMatrix">
+<g id="a_node10"><a xlink:href="matrix_8c.html#abbb8d2d20c2dd53a2269d017a336668f" target="_top" xlink:title="Copies a matrix. This function uses scaleMatrix, because scaling matrix by 1 is the same as a copy...">
 <polygon fill="none" stroke="#000000" points="249.8887,-37.5 249.8887,-55.5 314.2334,-55.5 314.2334,-37.5 249.8887,-37.5"/>
 <text text-anchor="middle" x="282.061" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">copyMatrix</text>
 </a>

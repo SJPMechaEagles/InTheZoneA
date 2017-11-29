@@ -17,7 +17,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="battery_8h.html" target="_top" xlink:title="battery.h">
+<g id="a_node2"><a xlink:href="battery_8h.html" target="_top" xlink:title="Battery management related functions. ">
 <polygon fill="none" stroke="#000000" points="75.7554,-110.5 75.7554,-128.5 129.9292,-128.5 129.9292,-110.5 75.7554,-110.5"/>
 <text text-anchor="middle" x="102.8423" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">battery.h</text>
 </a>

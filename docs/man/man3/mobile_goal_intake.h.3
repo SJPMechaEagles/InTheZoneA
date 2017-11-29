@@ -1,0 +1,52 @@
+.TH "include/mobile_goal_intake.h" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/mobile_goal_intake.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'motor_ports\&.h'\fP
+.br
+\fC#include 'controller\&.h'\fP
+.br
+\fC#include 'slew\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateIntake\fP ()"
+.br
+.RI "updates the mobile goal intake in teleop\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void updateIntake ()"
+
+.PP
+updates the mobile goal intake in teleop\&. 
+.PP
+Definition at line 16 of file mobile_goal_intake\&.c\&.
+.PP
+References get_mode(), JOY_DOWN, JOY_UP, joystickGetDigital(), lower_intake(), MAIN_CONTROLLER_MODE, MASTER, PARTNER, PARTNER_CONTROLLER_MODE, raise_intake(), and set_intake_motor()\&.
+.PP
+Referenced by operatorControl()\&.
+.PP
+.nf
+16                     {
+17   if(joystickGetDigital(MASTER, 7, JOY_UP) && (get_mode() == MAIN_CONTROLLER_MODE)
+18   || joystickGetDigital(PARTNER, 6, JOY_UP) && get_mode() == PARTNER_CONTROLLER_MODE) {
+19     raise_intake();
+20   }
+21   else if(joystickGetDigital(MASTER, 7, JOY_DOWN) && (get_mode() == MAIN_CONTROLLER_MODE)
+22   || joystickGetDigital(PARTNER, 6, JOY_DOWN) && get_mode() == PARTNER_CONTROLLER_MODE){
+23     lower_intake();
+24   }
+25   else set_intake_motor(0);
+26 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

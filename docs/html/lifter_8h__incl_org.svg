@@ -32,7 +32,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="motor__ports_8h.html" target="_top" xlink:title="motor_ports.h">
+<g id="a_node7"><a xlink:href="motor__ports_8h.html" target="_top" xlink:title="The motor port definitionsMacros for the different motors ports. ">
 <polygon fill="none" stroke="#000000" points="309.4385,-220.5 309.4385,-238.5 387.1328,-238.5 387.1328,-220.5 309.4385,-220.5"/>
 <text text-anchor="middle" x="348.2856" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">motor_ports.h</text>
 </a>
@@ -77,7 +77,7 @@
 <!-- Node12 -->
 <g id="node13" class="node">
 <title>Node12</title>
-<g id="a_node13"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros ">
+<g id="a_node13"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros and functions to assist with usig the vex controllers. ">
 <polygon fill="none" stroke="#000000" points="112.8252,-110.5 112.8252,-128.5 177.7461,-128.5 177.7461,-110.5 112.8252,-110.5"/>
 <text text-anchor="middle" x="145.2856" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">controller.h</text>
 </a>

@@ -1,0 +1,54 @@
+\subsection{lifter.\+h}
+\label{lifter_8h_source}\index{include/lifter.\+h@{include/lifter.\+h}}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#ifndef \_LIFTER\_H\_}
+00008 \textcolor{preprocessor}{#define \_LIFTER\_H\_}
+00009 
+00010 \textcolor{preprocessor}{#include <API.h>}
+00011 \textcolor{preprocessor}{#include "motor_ports.h"}
+00012 \textcolor{preprocessor}{#include "sensor_ports.h"}
+00013 \textcolor{preprocessor}{#include "slew.h"}
+00014 \textcolor{preprocessor}{#include "controller.h"}
+00015 \textcolor{preprocessor}{#include "potentiometer.h"}
+00016 \textcolor{preprocessor}{#include "partner.h"}
+00017 \textcolor{preprocessor}{#include "drive.h"}
+00018 
+00022 \textcolor{preprocessor}{#define INIT\_ROTATION 680}
+00023 
+00027 \textcolor{preprocessor}{#define LIFTER\_P .15}
+00028 
+00032 \textcolor{preprocessor}{#define LIFTER\_D 0}
+00033 
+00037 \textcolor{preprocessor}{#define THRESHOLD 10}
+00038 
+00042 \textcolor{preprocessor}{#define LIFTER\_I 0}
+00043 
+00044 
+00048 \textcolor{preprocessor}{#define HEIGHT 19.1 - 3.8}
+00049 
+00053 \textcolor{preprocessor}{#define LIFTER\_UP MASTER, 5, JOY\_UP}
+00054 
+00058 \textcolor{preprocessor}{#define LIFTER\_DOWN MASTER, 5, JOY\_DOWN}
+00059 
+00063 \textcolor{preprocessor}{#define LIFTER\_DRIVER\_LOAD MASTER, RIGHT\_BUTTONS, JOY\_RIGHT}
+00064 
+00068 \textcolor{preprocessor}{#define LIFTER\_UP\_PARTNER PARTNER, 5, JOY\_UP}
+00069 
+00073 \textcolor{preprocessor}{#define LIFTER\_DOWN\_PARTNER PARTNER, 5, JOY\_DOWN}
+00074 
+00082 \textcolor{keywordtype}{void} set_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int});
+00083 
+00091 \textcolor{keywordtype}{void} set_lifter_pos(\textcolor{keywordtype}{int} pos);
+00092 
+00099 \textcolor{keywordtype}{void} update_lifter();
+00100 
+00109 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x);
+00110 
+00118 \textcolor{keywordtype}{double} getLifterHeight();
+00119 
+00127 \textcolor{keywordtype}{int} getLifterTicks();
+00128 
+00129 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

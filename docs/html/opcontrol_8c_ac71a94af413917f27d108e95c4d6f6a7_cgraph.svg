@@ -138,7 +138,7 @@ var sectionId = 'dynsection-1';
 <!-- Node30 -->
 <g id="node31" class="node">
 <title>Node30</title>
-<g id="a_node31"><a xlink:href="lifter_8h.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="update_lifter">
+<g id="a_node31"><a xlink:href="lifter_8h.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="Updates the lifter in teleop. ">
 <polygon fill="none" stroke="#000000" points="140.9355,-113.5 140.9355,-131.5 211.9746,-131.5 211.9746,-113.5 140.9355,-113.5"/>
 <text text-anchor="middle" x="176.4551" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_lifter</text>
 </a>
@@ -153,7 +153,7 @@ var sectionId = 'dynsection-1';
 <!-- Node35 -->
 <g id="node36" class="node">
 <title>Node35</title>
-<g id="a_node36"><a xlink:href="mobile__goal__intake_8h.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updateIntake">
+<g id="a_node36"><a xlink:href="mobile__goal__intake_8h.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updates the mobile goal intake in teleop. ">
 <polygon fill="none" stroke="#000000" points="139.5415,-301.5 139.5415,-319.5 213.3687,-319.5 213.3687,-301.5 139.5415,-301.5"/>
 <text text-anchor="middle" x="176.4551" y="-307.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">updateIntake</text>
 </a>
@@ -636,7 +636,7 @@ var sectionId = 'dynsection-1';
 <!-- Node31 -->
 <g id="node32" class="node">
 <title>Node31</title>
-<g id="a_node32"><a xlink:href="lifter_8c.html#acdf909159b0406c48099843f2306be78" target="_top" xlink:title="getLifterTicks">
+<g id="a_node32"><a xlink:href="lifter_8c.html#acdf909159b0406c48099843f2306be78" target="_top" xlink:title="Gets the value of the lifter pot. ">
 <polygon fill="none" stroke="#000000" points="277.8989,-113.5 277.8989,-131.5 352.9956,-131.5 352.9956,-113.5 277.8989,-113.5"/>
 <text text-anchor="middle" x="315.4473" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getLifterTicks</text>
 </a>
@@ -666,7 +666,7 @@ var sectionId = 'dynsection-1';
 <!-- Node33 -->
 <g id="node34" class="node">
 <title>Node33</title>
-<g id="a_node34"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="set_lifter_motors">
+<g id="a_node34"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="Sets the lifter motors to the given value. ">
 <polygon fill="none" stroke="#000000" points="400.8633,-57.5 400.8633,-75.5 490.7793,-75.5 490.7793,-57.5 400.8633,-57.5"/>
 <text text-anchor="middle" x="445.8213" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">set_lifter_motors</text>
 </a>

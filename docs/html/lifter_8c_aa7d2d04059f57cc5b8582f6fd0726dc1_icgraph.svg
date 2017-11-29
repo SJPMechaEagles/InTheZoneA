@@ -17,7 +17,7 @@
 <!-- Node31 -->
 <g id="node2" class="node">
 <title>Node31</title>
-<g id="a_node2"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="update_lifter">
+<g id="a_node2"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="Updates the lifter in teleop. ">
 <polygon fill="none" stroke="#000000" points="100.3496,-.5 100.3496,-18.5 171.3887,-18.5 171.3887,-.5 100.3496,-.5"/>
 <text text-anchor="middle" x="135.8691" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_lifter</text>
 </a>

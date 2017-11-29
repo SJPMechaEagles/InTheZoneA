@@ -1,0 +1,35 @@
+\subsection{mobile\+\_\+goal\+\_\+intake.\+c}
+\label{mobile__goal__intake_8c_source}\index{src/mobile\+\_\+goal\+\_\+intake.\+c@{src/mobile\+\_\+goal\+\_\+intake.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "mobile_goal_intake.h"}
+00002 \textcolor{preprocessor}{#include "partner.h"}
+00003 
+00004 \textcolor{keyword}{static} \textcolor{keywordtype}{void} set_intake_motor(\textcolor{keywordtype}{int} n) \{
+00005   set_motor_immediate(INTAKE_MOTOR, n);
+00006 \}
+00007 
+00008 \textcolor{keyword}{static} \textcolor{keywordtype}{void} lower_intake() \{
+00009   set_intake_motor(100);
+00010 \}
+00011 
+00012 \textcolor{keyword}{static} \textcolor{keywordtype}{void} raise_intake() \{
+00013   set_intake_motor(-100);
+00014 \}
+00015 
+00016 \textcolor{keywordtype}{void} updateIntake() \{
+00017   \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY_UP) && (get_mode() == 
+      MAIN_CONTROLLER_MODE)
+00018   || joystickGetDigital(PARTNER, 6, JOY_UP) && get_mode() == 
+      PARTNER_CONTROLLER_MODE) \{
+00019     raise_intake();
+00020   \}
+00021   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY_DOWN) && (get_mode() == 
+      MAIN_CONTROLLER_MODE)
+00022   || joystickGetDigital(PARTNER, 6, JOY_DOWN) && get_mode() == 
+      PARTNER_CONTROLLER_MODE)\{
+00023     lower_intake();
+00024   \}
+00025   \textcolor{keywordflow}{else} set_intake_motor(0);
+00026 \}
+\end{DoxyCode}

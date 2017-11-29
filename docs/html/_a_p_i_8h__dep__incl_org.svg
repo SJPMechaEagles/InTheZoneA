@@ -32,7 +32,7 @@
 <!-- Node9 -->
 <g id="node5" class="node">
 <title>Node9</title>
-<g id="a_node5"><a xlink:href="lifter_8h.html" target="_top" xlink:title="include/lifter.h">
+<g id="a_node5"><a xlink:href="lifter_8h.html" target="_top" xlink:title="Declarations and macros for controlling and manipulating the lifter. ">
 <polygon fill="none" stroke="#000000" points="35.9891,-115.5 35.9891,-133.5 113.1414,-133.5 113.1414,-115.5 35.9891,-115.5"/>
 <text text-anchor="middle" x="74.5652" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/lifter.h</text>
 </a>
@@ -62,7 +62,7 @@
 <!-- Node13 -->
 <g id="node9" class="node">
 <title>Node13</title>
-<g id="a_node9"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros ">
+<g id="a_node9"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros and functions to assist with usig the vex controllers. ">
 <polygon fill="none" stroke="#000000" points="190.8709,-285.5 190.8709,-303.5 290.2596,-303.5 290.2596,-285.5 190.8709,-285.5"/>
 <text text-anchor="middle" x="240.5652" y="-291.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/controller.h</text>
 </a>
@@ -92,7 +92,7 @@
 <!-- Node17 -->
 <g id="node13" class="node">
 <title>Node17</title>
-<g id="a_node13"><a xlink:href="claw_8h.html" target="_top" xlink:title="include/claw.h">
+<g id="a_node13"><a xlink:href="claw_8h.html" target="_top" xlink:title="Code for controlling the claw that grabs the cones. ">
 <polygon fill="none" stroke="#000000" points="378.4324,-115.5 378.4324,-133.5 456.698,-133.5 456.698,-115.5 378.4324,-115.5"/>
 <text text-anchor="middle" x="417.5652" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/claw.h</text>
 </a>
@@ -122,7 +122,7 @@
 <!-- Node24 -->
 <g id="node20" class="node">
 <title>Node24</title>
-<g id="a_node20"><a xlink:href="battery_8h.html" target="_top" xlink:title="include/battery.h">
+<g id="a_node20"><a xlink:href="battery_8h.html" target="_top" xlink:title="Battery management related functions. ">
 <polygon fill="none" stroke="#000000" points="506.2444,-285.5 506.2444,-303.5 594.886,-303.5 594.886,-285.5 506.2444,-285.5"/>
 <text text-anchor="middle" x="550.5652" y="-291.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/battery.h</text>
 </a>
@@ -167,7 +167,7 @@
 <!-- Node27 -->
 <g id="node23" class="node">
 <title>Node27</title>
-<g id="a_node23"><a xlink:href="localization_8h.html" target="_top" xlink:title="include/localization.h">
+<g id="a_node23"><a xlink:href="localization_8h.html" target="_top" xlink:title="Declarations and macros for determining the location of the robot. [WIP]. ">
 <polygon fill="none" stroke="#000000" points="1098.4251,-230.5 1098.4251,-248.5 1206.7054,-248.5 1206.7054,-230.5 1098.4251,-230.5"/>
 <text text-anchor="middle" x="1152.5652" y="-236.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/localization.h</text>
 </a>
@@ -287,7 +287,7 @@
 <!-- Node7 -->
 <g id="node3" class="node">
 <title>Node7</title>
-<g id="a_node3"><a xlink:href="auto_8h.html" target="_top" xlink:title="include/auto.h">
+<g id="a_node3"><a xlink:href="auto_8h.html" target="_top" xlink:title="Autonomous declarations and macros. ">
 <polygon fill="none" stroke="#000000" points="128.43,-55.5 128.43,-73.5 206.7005,-73.5 206.7005,-55.5 128.43,-55.5"/>
 <text text-anchor="middle" x="167.5652" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/auto.h</text>
 </a>

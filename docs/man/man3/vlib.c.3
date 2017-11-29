@@ -1,0 +1,182 @@
+.TH "src/vlib.c" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/vlib.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'vlib\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBftoa_bad\fP (float a, char *buffer, int precision)"
+.br
+.RI "converts a float to string\&. "
+.ti -1c
+.RI "int \fBitoa_bad\fP (int a, char *buffer, int digits)"
+.br
+.RI "converts a int to string\&. "
+.ti -1c
+.RI "void \fBreverse\fP (char *str, int len)"
+.br
+.RI "reverses a string 'str' of length 'len' "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void ftoa_bad (float a, char * buffer, int precision)"
+
+.PP
+converts a float to string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP the float 
+.br
+\fIbuffer\fP the string the float will be written to\&. 
+.br
+\fIprecision\fP digits after the decimal to write 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian DeSimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/26/2017 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file vlib\&.c\&.
+.PP
+References itoa_bad()\&.
+.PP
+Referenced by calculate_current_display()\&.
+.PP
+.nf
+30                                                     {
+31   // Extract integer part
+32   int ipart = (int)a;
+33 
+34   // Extract floating part
+35   float fpart = a - (float)ipart;
+36 
+37   // convert integer part to string
+38   int i = itoa_bad(ipart, buffer, 0);
+39 
+40   // check for display option after point
+41   if(precision != 0) {
+42     buffer[i] = '\&.';  // add dot
+43 
+44     // Get the value of fraction part up to given num\&.
+45     // of points after dot\&. The third parameter is needed
+46     // to handle cases like 233\&.007
+47     fpart = fpart * pow(10, precision);
+48 
+49     itoa_bad((int)fpart, buffer + i + 1, precision);
+50   }
+51 }
+.fi
+.SS "int itoa_bad (int a, char * buffer, int digits)"
+
+.PP
+converts a int to string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP the integer 
+.br
+\fIbuffer\fP the string the int will be written to\&. 
+.br
+\fIdigits\fP the number of digits to be written 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the digits 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett, Christian DeSimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/9/2017 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file vlib\&.c\&.
+.PP
+References reverse()\&.
+.PP
+Referenced by calculate_current_display(), and ftoa_bad()\&.
+.PP
+.nf
+13                                               {
+14   int i = 0;
+15    while (a) {
+16        buffer[i++] = (a%10) + '0';
+17        a = a/10;
+18    }
+19 
+20    // If number of digits required is more, then
+21    // add 0s at the beginning
+22    while (i < digits)
+23        buffer[i++] = '0';
+24 
+25    reverse(buffer, i);
+26    buffer[i] = '\0';
+27    return i;
+28 }
+.fi
+.SS "void reverse (char * str, int len)"
+
+.PP
+reverses a string 'str' of length 'len' 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/9/2017 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstr\fP the string to reverse 
+.br
+\fIlen\fP the length 
+.RE
+.PP
+
+.PP
+Definition at line 3 of file vlib\&.c\&.
+.PP
+Referenced by itoa_bad()\&.
+.PP
+.nf
+3                                  {
+4     int i=0, j=len-1, temp;
+5     while (i<j) {
+6         temp = str[i];
+7         str[i] = str[j];
+8         str[j] = temp;
+9         i++; j--;
+10     }
+11 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

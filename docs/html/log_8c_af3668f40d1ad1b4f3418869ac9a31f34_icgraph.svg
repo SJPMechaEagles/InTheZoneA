@@ -138,7 +138,7 @@ var sectionId = 'dynsection-2';
 <!-- Node10 -->
 <g id="node9" class="node">
 <title>Node10</title>
-<g id="a_node9"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="set_lifter_motors">
+<g id="a_node9"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="Sets the lifter motors to the given value. ">
 <polygon fill="none" stroke="#000000" points="229.3564,-187.5 229.3564,-205.5 319.2725,-205.5 319.2725,-187.5 229.3564,-187.5"/>
 <text text-anchor="middle" x="274.3145" y="-193.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">set_lifter_motors</text>
 </a>
@@ -240,7 +240,7 @@ var sectionId = 'dynsection-2';
 <!-- Node12 -->
 <g id="node11" class="node">
 <title>Node12</title>
-<g id="a_node11"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="update_lifter">
+<g id="a_node11"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="Updates the lifter in teleop. ">
 <polygon fill="none" stroke="#000000" points="484.2646,-205.5 484.2646,-223.5 555.3037,-223.5 555.3037,-205.5 484.2646,-205.5"/>
 <text text-anchor="middle" x="519.7842" y="-211.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_lifter</text>
 </a>
@@ -303,7 +303,7 @@ var sectionId = 'dynsection-2';
 <!-- Node16 -->
 <g id="node15" class="node">
 <title>Node16</title>
-<g id="a_node15"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updateIntake">
+<g id="a_node15"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updates the mobile goal intake in teleop. ">
 <polygon fill="none" stroke="#000000" points="482.8706,-130.5 482.8706,-148.5 556.6978,-148.5 556.6978,-130.5 482.8706,-130.5"/>
 <text text-anchor="middle" x="519.7842" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">updateIntake</text>
 </a>

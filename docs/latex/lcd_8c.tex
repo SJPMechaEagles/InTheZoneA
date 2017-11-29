@@ -1,4 +1,4 @@
-\hypertarget{lcd_8c}{}\section{src/lcd.c File Reference}
+\subsection{src/lcd.c File Reference}
 \label{lcd_8c}\index{src/lcd.\+c@{src/lcd.\+c}}
 {\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
 Include dependency graph for lcd.\+c\+:\nopagebreak
@@ -8,38 +8,38 @@ Include dependency graph for lcd.\+c\+:\nopagebreak
 \includegraphics[width=338pt]{lcd_8c__incl}
 \end{center}
 \end{figure}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca}{init\+\_\+main\+\_\+lcd} (\hyperlink{_a_p_i_8h_a3e8cefeee58f762ff50bcef35fa12eec}{F\+I\+LE} $\ast$lcd)
+void \textbf{ init\+\_\+main\+\_\+lcd} (\textbf{ F\+I\+LE} $\ast$lcd)
 \begin{DoxyCompactList}\small\item\em Initializes the lcd screen. Also will initialize the lcd\+\_\+port var. Must be called before any lcd function can be called. \end{DoxyCompactList}\item 
-static void \hyperlink{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}{lcd\+\_\+assert} ()
+static void \textbf{ lcd\+\_\+assert} ()
 \begin{DoxyCompactList}\small\item\em Asserts the lcd is initialized Works by checking is the File $\ast$lcd\+\_\+port is the default N\+U\+LL value and thus not set. \end{DoxyCompactList}\item 
-void \hyperlink{lcd_8c_a35c08b1fa742e650f4873939707b893b}{lcd\+\_\+clear} ()
+void \textbf{ lcd\+\_\+clear} ()
 \begin{DoxyCompactList}\small\item\em Clears the lcd. \end{DoxyCompactList}\item 
-\hyperlink{structlcd__buttons}{lcd\+\_\+buttons} \hyperlink{lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d}{lcd\+\_\+get\+\_\+pressed\+\_\+buttons} ()
+\textbf{ lcd\+\_\+buttons} \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons} ()
 \begin{DoxyCompactList}\small\item\em Returns the pressed buttons. \end{DoxyCompactList}\item 
-void \hyperlink{lcd_8c_adabd3f7cdda45119604b488caf22bba8}{lcd\+\_\+print} (unsigned int \hyperlink{_a_p_i_8h_a58c3304a90ff2bb7064ff7187b2da466}{line}, const char $\ast$str)
+void \textbf{ lcd\+\_\+print} (unsigned int \textbf{ line}, const char $\ast$str)
 \begin{DoxyCompactList}\small\item\em prints a string to a line on the lcd \end{DoxyCompactList}\item 
-void \hyperlink{lcd_8c_aa0d4ca88701dfecf98796e2028482b69}{lcd\+\_\+printf} (unsigned int \hyperlink{_a_p_i_8h_a58c3304a90ff2bb7064ff7187b2da466}{line}, const char $\ast$format\+\_\+str,...)
+void \textbf{ lcd\+\_\+printf} (unsigned int \textbf{ line}, const char $\ast$format\+\_\+str,...)
 \begin{DoxyCompactList}\small\item\em prints a formated string to a line on the lcd. Smilar to printf \end{DoxyCompactList}\item 
-void \hyperlink{lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5}{lcd\+\_\+set\+\_\+backlight} (bool state)
+void \textbf{ lcd\+\_\+set\+\_\+backlight} (bool state)
 \begin{DoxyCompactList}\small\item\em sets the backlight of the lcd \end{DoxyCompactList}\item 
-void \hyperlink{lcd_8c_a99f4683e1990edf624ab216bf327cba4}{promt\+\_\+confirmation} (const char $\ast$confirm\+\_\+text)
+void \textbf{ promt\+\_\+confirmation} (const char $\ast$confirm\+\_\+text)
 \begin{DoxyCompactList}\small\item\em Prompts the user to confirm a string. User must press middle button to confirm. Function is not thread safe and will stall a thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Variables}
+\subsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{_a_p_i_8h_a3e8cefeee58f762ff50bcef35fa12eec}{F\+I\+LE} $\ast$ \hyperlink{lcd_8c_a8d2a398462720032706d94d44a82a1f8}{lcd\+\_\+port} = N\+U\+LL
+static \textbf{ F\+I\+LE} $\ast$ \textbf{ lcd\+\_\+port} = N\+U\+LL
 \end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
-\mbox{\Hypertarget{lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca}\label{lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca}} 
+\subsubsection{Function Documentation}
+\mbox{\label{lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca}} 
 \index{lcd.\+c@{lcd.\+c}!init\+\_\+main\+\_\+lcd@{init\+\_\+main\+\_\+lcd}}
 \index{init\+\_\+main\+\_\+lcd@{init\+\_\+main\+\_\+lcd}!lcd.\+c@{lcd.\+c}}
-\subsubsection{\texorpdfstring{init\+\_\+main\+\_\+lcd()}{init\_main\_lcd()}}
-{\footnotesize\ttfamily void init\+\_\+main\+\_\+lcd (\begin{DoxyParamCaption}\item[{\hyperlink{_a_p_i_8h_a3e8cefeee58f762ff50bcef35fa12eec}{F\+I\+LE} $\ast$}]{lcd }\end{DoxyParamCaption})}
+\paragraph{init\+\_\+main\+\_\+lcd()}
+{\footnotesize\ttfamily void init\+\_\+main\+\_\+lcd (\begin{DoxyParamCaption}\item[{\textbf{ F\+I\+LE} $\ast$}]{lcd }\end{DoxyParamCaption})}
 
 
 
@@ -51,9 +51,9 @@ Initializes the lcd screen. Also will initialize the lcd\+\_\+port var. Must be 
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-\hyperlink{_a_p_i_8h_ad94ac6d5e345a1f794174d9bb7c6f69c}{uart1} 
+\doxyref{uart1}{p.}{_a_p_i_8h_ad94ac6d5e345a1f794174d9bb7c6f69c} 
 
-\hyperlink{_a_p_i_8h_a001e6f2f6c87e1e2bcff741ab586024e}{uart2} 
+\doxyref{uart2}{p.}{_a_p_i_8h_a001e6f2f6c87e1e2bcff741ab586024e} 
 \end{DoxySeeAlso}
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
@@ -63,19 +63,19 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 39 of file lcd.\+c.
+Definition at line \textbf{ 60} of file \textbf{ lcd.\+c}.
 
 
 
-References lcd\+\_\+port, lcd\+Clear(), and lcd\+Init().
+References \textbf{ lcd\+\_\+port}, \textbf{ lcd\+Clear()}, and \textbf{ lcd\+Init()}.
 
 
 \begin{DoxyCode}
-39                               \{
-40   \hyperlink{_a_p_i_8h_a43dc11a67b697c0d32315ea5a9af85f9}{lcdInit}(lcd);
-41   \hyperlink{_a_p_i_8h_a5fa1d119fe3e836b5519f97eae7a1272}{lcdClear}(lcd);
-42   \hyperlink{lcd_8c_a8d2a398462720032706d94d44a82a1f8}{lcd\_port} = lcd;
-43 \}
+00060                               \{
+00061   lcdInit(lcd);
+00062   lcdClear(lcd);
+00063   lcd_port = lcd;
+00064 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -84,10 +84,10 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=243pt]{lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}\label{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}} 
+\mbox{\label{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+assert@{lcd\+\_\+assert}}
 \index{lcd\+\_\+assert@{lcd\+\_\+assert}!lcd.\+c@{lcd.\+c}}
-\subsubsection{\texorpdfstring{lcd\+\_\+assert()}{lcd\_assert()}}
+\paragraph{lcd\+\_\+assert()}
 {\footnotesize\ttfamily static void lcd\+\_\+assert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -102,24 +102,24 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 13 of file lcd.\+c.
+Definition at line \textbf{ 13} of file \textbf{ lcd.\+c}.
 
 
 
-References lcd\+\_\+port, and printf().
+References \textbf{ lcd\+\_\+port}, and \textbf{ printf()}.
 
 
 
-Referenced by lcd\+\_\+clear(), lcd\+\_\+get\+\_\+pressed\+\_\+buttons(), lcd\+\_\+print(), lcd\+\_\+printf(), lcd\+\_\+set\+\_\+backlight(), and promt\+\_\+confirmation().
+Referenced by \textbf{ lcd\+\_\+clear()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, \textbf{ lcd\+\_\+printf()}, \textbf{ lcd\+\_\+set\+\_\+backlight()}, and \textbf{ promt\+\_\+confirmation()}.
 
 
 \begin{DoxyCode}
-13                           \{
-14   \textcolor{keywordflow}{if}(\hyperlink{lcd_8c_a8d2a398462720032706d94d44a82a1f8}{lcd\_port} != NULL) \{
-15     \hyperlink{_a_p_i_8h_a403c82418e475fa4a8273719e6a7f3e6}{printf}(\textcolor{stringliteral}{"LCD NULL!"});
-16     exit(1);
-17   \}
-18 \}
+00013                           \{
+00014   \textcolor{keywordflow}{if}(lcd_port != NULL) \{
+00015     printf(\textcolor{stringliteral}{"LCD NULL!"});
+00016     exit(1);
+00017   \}
+00018 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -135,10 +135,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{lcd_8c_a35c08b1fa742e650f4873939707b893b}\label{lcd_8c_a35c08b1fa742e650f4873939707b893b}} 
+\mbox{\label{lcd_8c_a35c08b1fa742e650f4873939707b893b}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+clear@{lcd\+\_\+clear}}
 \index{lcd\+\_\+clear@{lcd\+\_\+clear}!lcd.\+c@{lcd.\+c}}
-\subsubsection{\texorpdfstring{lcd\+\_\+clear()}{lcd\_clear()}}
+\paragraph{lcd\+\_\+clear()}
 {\footnotesize\ttfamily void lcd\+\_\+clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -153,18 +153,18 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 34 of file lcd.\+c.
+Definition at line \textbf{ 46} of file \textbf{ lcd.\+c}.
 
 
 
-References lcd\+\_\+assert(), lcd\+\_\+port, and lcd\+Clear().
+References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, and \textbf{ lcd\+Clear()}.
 
 
 \begin{DoxyCode}
-34                  \{
-35   \hyperlink{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}{lcd\_assert}();
-36   \hyperlink{_a_p_i_8h_a5fa1d119fe3e836b5519f97eae7a1272}{lcdClear}(\hyperlink{lcd_8c_a8d2a398462720032706d94d44a82a1f8}{lcd\_port});
-37 \}
+00046                  \{
+00047   lcd_assert();
+00048   lcdClear(lcd_port);
+00049 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -173,11 +173,11 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=308pt]{lcd_8c_a35c08b1fa742e650f4873939707b893b_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d}\label{lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d}} 
+\mbox{\label{lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+get\+\_\+pressed\+\_\+buttons@{lcd\+\_\+get\+\_\+pressed\+\_\+buttons}}
 \index{lcd\+\_\+get\+\_\+pressed\+\_\+buttons@{lcd\+\_\+get\+\_\+pressed\+\_\+buttons}!lcd.\+c@{lcd.\+c}}
-\subsubsection{\texorpdfstring{lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}{lcd\_get\_pressed\_buttons()}}
-{\footnotesize\ttfamily \hyperlink{structlcd__buttons}{lcd\+\_\+buttons} lcd\+\_\+get\+\_\+pressed\+\_\+buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\paragraph{lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}
+{\footnotesize\ttfamily \textbf{ lcd\+\_\+buttons} lcd\+\_\+get\+\_\+pressed\+\_\+buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -193,35 +193,35 @@ Chris Jerrett
 9/9/2017 
 \end{DoxyDate}
 \begin{DoxySeeAlso}{See also}
-\hyperlink{structlcd__buttons}{lcd\+\_\+buttons} 
+\doxyref{lcd\+\_\+buttons}{p.}{structlcd__buttons} 
 \end{DoxySeeAlso}
 
 
-Definition at line 20 of file lcd.\+c.
+Definition at line \textbf{ 27} of file \textbf{ lcd.\+c}.
 
 
 
-References lcd\+\_\+assert(), lcd\+\_\+port, lcd\+Read\+Buttons(), lcd\+\_\+buttons\+::left, lcd\+\_\+buttons\+::middle, P\+R\+E\+S\+S\+ED, R\+E\+L\+E\+A\+S\+ED, and lcd\+\_\+buttons\+::right.
+References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, \textbf{ lcd\+Read\+Buttons()}, \textbf{ lcd\+\_\+buttons\+::left}, \textbf{ lcd\+\_\+buttons\+::middle}, \textbf{ P\+R\+E\+S\+S\+ED}, \textbf{ R\+E\+L\+E\+A\+S\+ED}, and \textbf{ lcd\+\_\+buttons\+::right}.
 
 
 
-Referenced by display\+\_\+menu(), and promt\+\_\+confirmation().
+Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ promt\+\_\+confirmation()}.
 
 
 \begin{DoxyCode}
-20                                      \{
-21   \hyperlink{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}{lcd\_assert}();
-22   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} btn\_binary = \hyperlink{_a_p_i_8h_a04541d90f60b1ccd3d036656673c972d}{lcdReadButtons}(\hyperlink{lcd_8c_a8d2a398462720032706d94d44a82a1f8}{lcd\_port});
-23   \textcolor{keywordtype}{bool} left = btn\_binary & 0x1;
-24   \textcolor{keywordtype}{bool} middle = btn\_binary & 0x2;
-25   \textcolor{keywordtype}{bool} right = btn\_binary & 0x4;
-26   \hyperlink{structlcd__buttons}{lcd\_buttons} btns;
-27   btns.\hyperlink{structlcd__buttons_ae385efb5ec794acf5f11027f46c6c039}{left} = left ? \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901}{PRESSED} : \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0}{RELEASED};
-28   btns.\hyperlink{structlcd__buttons_a293342810ac56f73979b08f144d6e6b9}{middle} = middle ? \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901}{PRESSED} : \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0}{RELEASED};
-29   btns.\hyperlink{structlcd__buttons_a2437d744e09ca1bb91ab4ca53ef77198}{right} = right ? \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901}{PRESSED} : \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0}{RELEASED};
-30 
-31   \textcolor{keywordflow}{return} btns;
-32 \}
+00027                                      \{
+00028   lcd_assert();
+00029   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} btn\_binary = lcdReadButtons(lcd_port);
+00030   \textcolor{keywordtype}{bool} left = btn\_binary & 0x1;\textcolor{comment}{//0001}
+00031   \textcolor{keywordtype}{bool} middle = btn\_binary & 0x2;\textcolor{comment}{//0010}
+00032   \textcolor{keywordtype}{bool} right = btn\_binary & 0x4;\textcolor{comment}{//0100}
+00033   lcd_buttons btns;
+00034   btns.left = left ? PRESSED : RELEASED;
+00035   btns.middle = middle ? PRESSED : RELEASED;
+00036   btns.right = right ? PRESSED : RELEASED;
+00037 
+00038   \textcolor{keywordflow}{return} btns;
+00039 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -237,10 +237,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=345pt]{lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{lcd_8c_adabd3f7cdda45119604b488caf22bba8}\label{lcd_8c_adabd3f7cdda45119604b488caf22bba8}} 
+\mbox{\label{lcd_8c_adabd3f7cdda45119604b488caf22bba8}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+print@{lcd\+\_\+print}}
 \index{lcd\+\_\+print@{lcd\+\_\+print}!lcd.\+c@{lcd.\+c}}
-\subsubsection{\texorpdfstring{lcd\+\_\+print()}{lcd\_print()}}
+\paragraph{lcd\+\_\+print()}
 {\footnotesize\ttfamily void lcd\+\_\+print (\begin{DoxyParamCaption}\item[{unsigned int}]{line,  }\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
 
 
@@ -262,22 +262,22 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 45 of file lcd.\+c.
+Definition at line \textbf{ 73} of file \textbf{ lcd.\+c}.
 
 
 
-References lcd\+\_\+assert(), lcd\+\_\+port, and lcd\+Set\+Text().
+References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, and \textbf{ lcd\+Set\+Text()}.
 
 
 
-Referenced by display\+\_\+menu(), and promt\+\_\+confirmation().
+Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ promt\+\_\+confirmation()}.
 
 
 \begin{DoxyCode}
-45                                                     \{
-46   \hyperlink{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}{lcd\_assert}();
-47   \hyperlink{_a_p_i_8h_a5555228be96449af952aed5bcabb6d8d}{lcdSetText}(\hyperlink{lcd_8c_a8d2a398462720032706d94d44a82a1f8}{lcd\_port}, \hyperlink{_a_p_i_8h_a58c3304a90ff2bb7064ff7187b2da466}{line}, str);
-48 \}
+00073                                                    \{
+00074   lcd_assert();
+00075   lcdSetText(lcd_port, line, str);
+00076 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -293,10 +293,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=271pt]{lcd_8c_adabd3f7cdda45119604b488caf22bba8_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{lcd_8c_aa0d4ca88701dfecf98796e2028482b69}\label{lcd_8c_aa0d4ca88701dfecf98796e2028482b69}} 
+\mbox{\label{lcd_8c_aa0d4ca88701dfecf98796e2028482b69}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+printf@{lcd\+\_\+printf}}
 \index{lcd\+\_\+printf@{lcd\+\_\+printf}!lcd.\+c@{lcd.\+c}}
-\subsubsection{\texorpdfstring{lcd\+\_\+printf()}{lcd\_printf()}}
+\paragraph{lcd\+\_\+printf()}
 {\footnotesize\ttfamily void lcd\+\_\+printf (\begin{DoxyParamCaption}\item[{unsigned int}]{line,  }\item[{const char $\ast$}]{format\+\_\+str,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
@@ -318,18 +318,18 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 50 of file lcd.\+c.
+Definition at line \textbf{ 85} of file \textbf{ lcd.\+c}.
 
 
 
-References lcd\+\_\+assert(), and lcd\+\_\+port.
+References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
 
 \begin{DoxyCode}
-50                                                                  \{
-51   \hyperlink{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}{lcd\_assert}();
-52   lcdPrint(\hyperlink{lcd_8c_a8d2a398462720032706d94d44a82a1f8}{lcd\_port}, \hyperlink{_a_p_i_8h_a58c3304a90ff2bb7064ff7187b2da466}{line}, format\_str);
-53 \}
+00085                                                                 \{
+00086   lcd_assert();
+00087   lcdPrint(lcd_port, line, format\_str);
+00088 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -338,10 +338,10 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=308pt]{lcd_8c_aa0d4ca88701dfecf98796e2028482b69_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5}\label{lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5}} 
+\mbox{\label{lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+set\+\_\+backlight@{lcd\+\_\+set\+\_\+backlight}}
 \index{lcd\+\_\+set\+\_\+backlight@{lcd\+\_\+set\+\_\+backlight}!lcd.\+c@{lcd.\+c}}
-\subsubsection{\texorpdfstring{lcd\+\_\+set\+\_\+backlight()}{lcd\_set\_backlight()}}
+\paragraph{lcd\+\_\+set\+\_\+backlight()}
 {\footnotesize\ttfamily void lcd\+\_\+set\+\_\+backlight (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
 
 
@@ -361,18 +361,18 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 55 of file lcd.\+c.
+Definition at line \textbf{ 96} of file \textbf{ lcd.\+c}.
 
 
 
-References lcd\+\_\+assert(), lcd\+\_\+port, and lcd\+Set\+Backlight().
+References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, and \textbf{ lcd\+Set\+Backlight()}.
 
 
 \begin{DoxyCode}
-55                                     \{
-56   \hyperlink{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}{lcd\_assert}();
-57   \hyperlink{_a_p_i_8h_aab53a247d88151a6623c20fa1ea940b0}{lcdSetBacklight}(\hyperlink{lcd_8c_a8d2a398462720032706d94d44a82a1f8}{lcd\_port}, state);
-58 \}
+00096                                    \{
+00097   lcd_assert();
+00098   lcdSetBacklight(lcd_port, state);
+00099 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -381,10 +381,10 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{lcd_8c_a99f4683e1990edf624ab216bf327cba4}\label{lcd_8c_a99f4683e1990edf624ab216bf327cba4}} 
+\mbox{\label{lcd_8c_a99f4683e1990edf624ab216bf327cba4}} 
 \index{lcd.\+c@{lcd.\+c}!promt\+\_\+confirmation@{promt\+\_\+confirmation}}
 \index{promt\+\_\+confirmation@{promt\+\_\+confirmation}!lcd.\+c@{lcd.\+c}}
-\subsubsection{\texorpdfstring{promt\+\_\+confirmation()}{promt\_confirmation()}}
+\paragraph{promt\+\_\+confirmation()}
 {\footnotesize\ttfamily void promt\+\_\+confirmation (\begin{DoxyParamCaption}\item[{const char $\ast$}]{confirm\+\_\+text }\end{DoxyParamCaption})}
 
 
@@ -404,21 +404,21 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 60 of file lcd.\+c.
+Definition at line \textbf{ 110} of file \textbf{ lcd.\+c}.
 
 
 
-References delay(), lcd\+\_\+assert(), lcd\+\_\+get\+\_\+pressed\+\_\+buttons(), lcd\+\_\+print(), and P\+R\+E\+S\+S\+ED.
+References \textbf{ delay()}, \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, and \textbf{ P\+R\+E\+S\+S\+ED}.
 
 
 \begin{DoxyCode}
-60                                                   \{
-61   \hyperlink{lcd_8c_a07f04b524b5ded617d5f193db05ba0ad}{lcd\_assert}();
-62   \hyperlink{lcd_8c_adabd3f7cdda45119604b488caf22bba8}{lcd\_print}(1, confirm\_text);
-63   \textcolor{keywordflow}{while}(\hyperlink{lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d}{lcd\_get\_pressed\_buttons}().middle != \hyperlink{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901}{PRESSED})\{
-64     \hyperlink{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe}{delay}(200);
-65   \}
-66 \}
+00110                                                   \{
+00111   lcd_assert();
+00112   lcd_print(1, confirm\_text);
+00113   \textcolor{keywordflow}{while}(lcd_get_pressed_buttons().middle != PRESSED)\{
+00114     delay(200);
+00115   \}
+00116 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -429,18 +429,18 @@ Here is the call graph for this function\+:\nopagebreak
 \end{figure}
 
 
-\subsection{Variable Documentation}
-\mbox{\Hypertarget{lcd_8c_a8d2a398462720032706d94d44a82a1f8}\label{lcd_8c_a8d2a398462720032706d94d44a82a1f8}} 
+\subsubsection{Variable Documentation}
+\mbox{\label{lcd_8c_a8d2a398462720032706d94d44a82a1f8}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+port@{lcd\+\_\+port}}
 \index{lcd\+\_\+port@{lcd\+\_\+port}!lcd.\+c@{lcd.\+c}}
-\subsubsection{\texorpdfstring{lcd\+\_\+port}{lcd\_port}}
-{\footnotesize\ttfamily \hyperlink{_a_p_i_8h_a3e8cefeee58f762ff50bcef35fa12eec}{F\+I\+LE}$\ast$ lcd\+\_\+port = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
+\paragraph{lcd\+\_\+port}
+{\footnotesize\ttfamily \textbf{ F\+I\+LE}$\ast$ lcd\+\_\+port = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
 
 The port of the initialized lcd 
 
-Definition at line 4 of file lcd.\+c.
+Definition at line \textbf{ 4} of file \textbf{ lcd.\+c}.
 
 
 
-Referenced by init\+\_\+main\+\_\+lcd(), lcd\+\_\+assert(), lcd\+\_\+clear(), lcd\+\_\+get\+\_\+pressed\+\_\+buttons(), lcd\+\_\+print(), lcd\+\_\+printf(), and lcd\+\_\+set\+\_\+backlight().
+Referenced by \textbf{ init\+\_\+main\+\_\+lcd()}, \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+clear()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, \textbf{ lcd\+\_\+printf()}, and \textbf{ lcd\+\_\+set\+\_\+backlight()}.
 

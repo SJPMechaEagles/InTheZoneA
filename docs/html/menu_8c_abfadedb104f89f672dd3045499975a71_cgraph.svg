@@ -168,7 +168,7 @@ var sectionId = 'dynsection-5';
 <!-- Node27 -->
 <g id="node7" class="node">
 <title>Node27</title>
-<g id="a_node7"><a xlink:href="vmath_8h.html#af082905f7eac6d03e92015146bbc1925" target="_top" xlink:title="max">
+<g id="a_node7"><a xlink:href="vmath_8h.html#af082905f7eac6d03e92015146bbc1925" target="_top" xlink:title="the min of two values ">
 <polygon fill="none" stroke="#000000" points="304.4004,-166.5 304.4004,-184.5 339.292,-184.5 339.292,-166.5 304.4004,-166.5"/>
 <text text-anchor="middle" x="321.8462" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">max</text>
 </a>
@@ -183,7 +183,7 @@ var sectionId = 'dynsection-5';
 <!-- Node28 -->
 <g id="node8" class="node">
 <title>Node28</title>
-<g id="a_node8"><a xlink:href="vmath_8h.html#abd8bbcfabb3ddef2ccaafb9928a37b95" target="_top" xlink:title="min">
+<g id="a_node8"><a xlink:href="vmath_8h.html#abd8bbcfabb3ddef2ccaafb9928a37b95" target="_top" xlink:title="the min of two values ">
 <polygon fill="none" stroke="#000000" points="305.7896,-129.5 305.7896,-147.5 337.9028,-147.5 337.9028,-129.5 305.7896,-129.5"/>
 <text text-anchor="middle" x="321.8462" y="-135.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">min</text>
 </a>

@@ -63,7 +63,7 @@ var sectionId = 'dynsection-1';
 <!-- Node3 -->
 <g id="node2" class="node">
 <title>Node3</title>
-<g id="a_node2"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros ">
+<g id="a_node2"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros and functions to assist with usig the vex controllers. ">
 <polygon fill="none" stroke="#000000" points="333.978,-285.5 333.978,-303.5 433.3667,-303.5 433.3667,-285.5 333.978,-285.5"/>
 <text text-anchor="middle" x="383.6724" y="-291.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/controller.h</text>
 </a>
@@ -138,7 +138,7 @@ var sectionId = 'dynsection-1';
 <!-- Node8 -->
 <g id="node7" class="node">
 <title>Node8</title>
-<g id="a_node7"><a xlink:href="lifter_8h.html" target="_top" xlink:title="include/lifter.h">
+<g id="a_node7"><a xlink:href="lifter_8h.html" target="_top" xlink:title="Declarations and macros for controlling and manipulating the lifter. ">
 <polygon fill="none" stroke="#000000" points="117.0962,-110.5 117.0962,-128.5 194.2485,-128.5 194.2485,-110.5 117.0962,-110.5"/>
 <text text-anchor="middle" x="155.6724" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/lifter.h</text>
 </a>
@@ -159,7 +159,7 @@ var sectionId = 'dynsection-1';
 <!-- Node14 -->
 <g id="node13" class="node">
 <title>Node14</title>
-<g id="a_node13"><a xlink:href="claw_8h.html" target="_top" xlink:title="include/claw.h">
+<g id="a_node13"><a xlink:href="claw_8h.html" target="_top" xlink:title="Code for controlling the claw that grabs the cones. ">
 <polygon fill="none" stroke="#000000" points="20.5396,-110.5 20.5396,-128.5 98.8052,-128.5 98.8052,-110.5 20.5396,-110.5"/>
 <text text-anchor="middle" x="59.6724" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/claw.h</text>
 </a>
@@ -256,7 +256,7 @@ var sectionId = 'dynsection-1';
 <!-- Node6 -->
 <g id="node5" class="node">
 <title>Node6</title>
-<g id="a_node5"><a xlink:href="auto_8h.html" target="_top" xlink:title="include/auto.h">
+<g id="a_node5"><a xlink:href="auto_8h.html" target="_top" xlink:title="Autonomous declarations and macros. ">
 <polygon fill="none" stroke="#000000" points="153.5371,-55.5 153.5371,-73.5 231.8076,-73.5 231.8076,-55.5 153.5371,-55.5"/>
 <text text-anchor="middle" x="192.6724" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/auto.h</text>
 </a>

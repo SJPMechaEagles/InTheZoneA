@@ -345,7 +345,7 @@ var sectionId = 'dynsection-18';
 <!-- Node210 -->
 <g id="node21" class="node">
 <title>Node210</title>
-<g id="a_node21"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="set_lifter_motors">
+<g id="a_node21"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="Sets the lifter motors to the given value. ">
 <polygon fill="none" stroke="#000000" points="596.0205,-151.5 596.0205,-169.5 685.9365,-169.5 685.9365,-151.5 596.0205,-151.5"/>
 <text text-anchor="middle" x="640.9785" y="-157.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">set_lifter_motors</text>
 </a>
@@ -429,7 +429,7 @@ var sectionId = 'dynsection-18';
 <!-- Node212 -->
 <g id="node23" class="node">
 <title>Node212</title>
-<g id="a_node23"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="update_lifter">
+<g id="a_node23"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="Updates the lifter in teleop. ">
 <polygon fill="none" stroke="#000000" points="864.8154,-170.5 864.8154,-188.5 935.8545,-188.5 935.8545,-170.5 864.8154,-170.5"/>
 <text text-anchor="middle" x="900.335" y="-176.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_lifter</text>
 </a>
@@ -492,7 +492,7 @@ var sectionId = 'dynsection-18';
 <!-- Node216 -->
 <g id="node27" class="node">
 <title>Node216</title>
-<g id="a_node27"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updateIntake">
+<g id="a_node27"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updates the mobile goal intake in teleop. ">
 <polygon fill="none" stroke="#000000" points="863.4214,-57.5 863.4214,-75.5 937.2485,-75.5 937.2485,-57.5 863.4214,-57.5"/>
 <text text-anchor="middle" x="900.335" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">updateIntake</text>
 </a>

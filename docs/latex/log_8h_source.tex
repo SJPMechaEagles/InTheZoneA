@@ -1,0 +1,34 @@
+\subsection{log.\+h}
+\label{log_8h_source}\index{include/log.\+h@{include/log.\+h}}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#ifndef \_LOG\_H\_}
+00008 \textcolor{preprocessor}{#define \_LOG\_H\_}
+00009 
+00010 \textcolor{preprocessor}{#include <API.h>}
+00011 \textcolor{preprocessor}{#include "lcd.h"}
+00012 
+00019 \textcolor{preprocessor}{#define NONE 0}
+00020 
+00027 \textcolor{preprocessor}{#define ERROR 1}
+00028 
+00035 \textcolor{preprocessor}{#define WARNING 2}
+00036 
+00042 \textcolor{preprocessor}{#define INFO 3}
+00043 
+00050 \textcolor{preprocessor}{#define DEBUG 4}
+00051 
+00060 \textcolor{keywordtype}{void} init_error(\textcolor{keywordtype}{bool} use\_lcd, FILE *lcd);
+00061 
+00070 \textcolor{keywordtype}{void} error(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *error\_message);
+00071 
+00080 \textcolor{keywordtype}{void} warning(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *warning\_message);
+00081 
+00089 \textcolor{keywordtype}{void} info(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *info\_message);
+00090 
+00098 \textcolor{keywordtype}{void} debug(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *debug\_message);
+00099 
+00100 
+00101 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

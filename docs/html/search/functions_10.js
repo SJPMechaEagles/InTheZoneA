@@ -11,7 +11,6 @@ var searchData=
   ['taskresume',['taskResume',['../_a_p_i_8h.html#afa2a4c5236b32bd9983bf19a4ac0cc23',1,'API.h']]],
   ['taskrunloop',['taskRunLoop',['../_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156',1,'API.h']]],
   ['tasksuspend',['taskSuspend',['../_a_p_i_8h.html#ab56a51f337ad1903ad2bbce095744170',1,'API.h']]],
-  ['test',['test',['../namespacetest_math.html#accae4d78fc0739220d35c06c2c0d5822',1,'testMath']]],
   ['tracematrix',['traceMatrix',['../matrix_8h.html#a4794df8b2032f961dd8b2d90276bc417',1,'traceMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#a4794df8b2032f961dd8b2d90276bc417',1,'traceMatrix(matrix *m):&#160;matrix.c']]],
   ['transposematrix',['transposeMatrix',['../matrix_8h.html#a2936260302742748b0639e8ec71d4d9f',1,'transposeMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#a2936260302742748b0639e8ec71d4d9f',1,'transposeMatrix(matrix *m):&#160;matrix.c']]]
 ];

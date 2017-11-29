@@ -1,0 +1,50 @@
+\subsection{toggle.\+h}
+\label{toggle_8h_source}\index{include/toggle.\+h@{include/toggle.\+h}}
+
+\begin{DoxyCode}
+00001 
+00012 \textcolor{preprocessor}{#ifndef BUTTONS\_H\_}
+00013 \textcolor{preprocessor}{#define BUTTONS\_H\_}
+00014 
+00015 \textcolor{preprocessor}{#include <API.h>}
+00016 
+00020 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{
+00021     JOY1_5D = 0,
+00022     JOY1_5U = 1,
+00023     JOY1_6D = 2,
+00024     JOY1_6U = 3,
+00025     JOY1_7U = 4,
+00026     JOY1_7L = 5,
+00027     JOY1_7R = 6,
+00028     JOY1_7D = 7,
+00029     JOY1_8U = 8,
+00030     JOY1_8L = 9,
+00031     JOY1_8R = 10,
+00032     JOY1_8D = 11,
+00033 
+00034     JOY2_5D = 12,
+00035     JOY2_5U = 13,
+00036     JOY2_6D = 14,
+00037     JOY2_6U = 15,
+00038     JOY2_7U = 16,
+00039     JOY2_7L = 17,
+00040     JOY2_7R = 18,
+00041     JOY2_7D = 19,
+00042     JOY2_8U = 20,
+00043     JOY2_8L = 21,
+00044     JOY2_8R = 22,
+00045     JOY2_8D = 23,
+00046 
+00047     LCD_LEFT = 24,
+00048     LCD_CENT = 25,
+00049     LCD_RIGHT = 26
+00050 \} button_t;
+00051 
+00055 \textcolor{keywordtype}{void} buttonInit();
+00056 
+00066 \textcolor{keywordtype}{bool} buttonIsNewPress(button_t);
+00067 
+00076 \textcolor{keywordtype}{bool} buttonGetState(button_t);
+00077 
+00078 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

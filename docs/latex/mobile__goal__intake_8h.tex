@@ -1,4 +1,4 @@
-\hypertarget{mobile__goal__intake_8h}{}\section{include/mobile\+\_\+goal\+\_\+intake.h File Reference}
+\subsection{include/mobile\+\_\+goal\+\_\+intake.h File Reference}
 \label{mobile__goal__intake_8h}\index{include/mobile\+\_\+goal\+\_\+intake.\+h@{include/mobile\+\_\+goal\+\_\+intake.\+h}}
 {\ttfamily \#include \char`\"{}motor\+\_\+ports.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
@@ -17,49 +17,53 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=306pt]{mobile__goal__intake_8h__dep__incl}
 \end{center}
 \end{figure}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{mobile__goal__intake_8h_ad0232c21c5c1ffda603d2b7d61034118}{update\+Intake} ()
-\end{DoxyCompactItemize}
+void \textbf{ update\+Intake} ()
+\begin{DoxyCompactList}\small\item\em updates the mobile goal intake in teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
-\mbox{\Hypertarget{mobile__goal__intake_8h_ad0232c21c5c1ffda603d2b7d61034118}\label{mobile__goal__intake_8h_ad0232c21c5c1ffda603d2b7d61034118}} 
+\subsubsection{Function Documentation}
+\mbox{\label{mobile__goal__intake_8h_ad0232c21c5c1ffda603d2b7d61034118}} 
 \index{mobile\+\_\+goal\+\_\+intake.\+h@{mobile\+\_\+goal\+\_\+intake.\+h}!update\+Intake@{update\+Intake}}
 \index{update\+Intake@{update\+Intake}!mobile\+\_\+goal\+\_\+intake.\+h@{mobile\+\_\+goal\+\_\+intake.\+h}}
-\subsubsection{\texorpdfstring{update\+Intake()}{updateIntake()}}
+\paragraph{update\+Intake()}
 {\footnotesize\ttfamily void update\+Intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 16 of file mobile\+\_\+goal\+\_\+intake.\+c.
+updates the mobile goal intake in teleop. 
 
 
 
-References get\+\_\+mode(), J\+O\+Y\+\_\+\+D\+O\+WN, J\+O\+Y\+\_\+\+UP, joystick\+Get\+Digital(), lower\+\_\+intake(), M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE, M\+A\+S\+T\+ER, P\+A\+R\+T\+N\+ER, P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE, raise\+\_\+intake(), and set\+\_\+intake\+\_\+motor().
+Definition at line \textbf{ 16} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
 
 
 
-Referenced by operator\+Control().
+References \textbf{ get\+\_\+mode()}, \textbf{ J\+O\+Y\+\_\+\+D\+O\+WN}, \textbf{ J\+O\+Y\+\_\+\+UP}, \textbf{ joystick\+Get\+Digital()}, \textbf{ lower\+\_\+intake()}, \textbf{ M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ P\+A\+R\+T\+N\+ER}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ raise\+\_\+intake()}, and \textbf{ set\+\_\+intake\+\_\+motor()}.
+
+
+
+Referenced by \textbf{ operator\+Control()}.
 
 
 \begin{DoxyCode}
-16                     \{
-17   \textcolor{keywordflow}{if}(\hyperlink{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}{joystickGetDigital}(\hyperlink{controller_8h_a3fa2d3bf1901157f734a584d47b25d8b}{MASTER}, 7, \hyperlink{_a_p_i_8h_a85e47af11e6a32e3a819f247d9f619d6}{JOY\_UP}) && (
-      \hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475}{MAIN\_CONTROLLER\_MODE})
-18   || \hyperlink{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}{joystickGetDigital}(\hyperlink{controller_8h_a136e64cf351535da81cacb6a546cade6}{PARTNER}, 6, \hyperlink{_a_p_i_8h_a85e47af11e6a32e3a819f247d9f619d6}{JOY\_UP}) && 
-      \hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7}{PARTNER\_CONTROLLER\_MODE}) \{
-19     \hyperlink{mobile__goal__intake_8c_a4899f9a8621015313e6312ce085da979}{raise\_intake}();
-20   \}
-21   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}{joystickGetDigital}(\hyperlink{controller_8h_a3fa2d3bf1901157f734a584d47b25d8b}{MASTER}, 7, \hyperlink{_a_p_i_8h_a950e3ba6cd65c992b92f36b837c52a0a}{JOY\_DOWN}) && (
-      \hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475}{MAIN\_CONTROLLER\_MODE})
-22   || \hyperlink{_a_p_i_8h_a792f1a80c62a63e764cf64aabf95db92}{joystickGetDigital}(\hyperlink{controller_8h_a136e64cf351535da81cacb6a546cade6}{PARTNER}, 6, \hyperlink{_a_p_i_8h_a950e3ba6cd65c992b92f36b837c52a0a}{JOY\_DOWN}) && 
-      \hyperlink{partner_8h_aacc86d07e59d3b919f5c5eae2ce5d404}{get\_mode}() == \hyperlink{partner_8h_afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7}{PARTNER\_CONTROLLER\_MODE})\{
-23     \hyperlink{mobile__goal__intake_8c_afa91470a9891e48827fd62d18553c6ce}{lower\_intake}();
-24   \}
-25   \textcolor{keywordflow}{else} \hyperlink{mobile__goal__intake_8c_a8f215023832ba515d7b4535e3ae07498}{set\_intake\_motor}(0);
-26 \}
+00016                     \{
+00017   \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY_UP) && (get_mode() == 
+      MAIN_CONTROLLER_MODE)
+00018   || joystickGetDigital(PARTNER, 6, JOY_UP) && get_mode() == 
+      PARTNER_CONTROLLER_MODE) \{
+00019     raise_intake();
+00020   \}
+00021   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY_DOWN) && (get_mode() == 
+      MAIN_CONTROLLER_MODE)
+00022   || joystickGetDigital(PARTNER, 6, JOY_DOWN) && get_mode() == 
+      PARTNER_CONTROLLER_MODE)\{
+00023     lower_intake();
+00024   \}
+00025   \textcolor{keywordflow}{else} set_intake_motor(0);
+00026 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

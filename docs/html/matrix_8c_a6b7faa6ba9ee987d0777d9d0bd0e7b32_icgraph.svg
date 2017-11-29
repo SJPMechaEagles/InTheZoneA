@@ -17,7 +17,7 @@
 <!-- Node83 -->
 <g id="node2" class="node">
 <title>Node83</title>
-<g id="a_node2"><a xlink:href="matrix_8c.html#abbb8d2d20c2dd53a2269d017a336668f" target="_top" xlink:title="copyMatrix">
+<g id="a_node2"><a xlink:href="matrix_8c.html#abbb8d2d20c2dd53a2269d017a336668f" target="_top" xlink:title="Copies a matrix. This function uses scaleMatrix, because scaling matrix by 1 is the same as a copy...">
 <polygon fill="none" stroke="#000000" points="102.5664,-.5 102.5664,-18.5 166.9111,-18.5 166.9111,-.5 102.5664,-.5"/>
 <text text-anchor="middle" x="134.7388" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">copyMatrix</text>
 </a>

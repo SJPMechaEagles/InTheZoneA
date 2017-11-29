@@ -198,7 +198,7 @@ var sectionId = 'dynsection-1';
 <!-- Node26 -->
 <g id="node27" class="node">
 <title>Node26</title>
-<g id="a_node27"><a xlink:href="lifter_8h.html#a16ed2ef406519bbd4d091f6321f4ed8a" target="_top" xlink:title="set_lifter_motors">
+<g id="a_node27"><a xlink:href="lifter_8h.html#a16ed2ef406519bbd4d091f6321f4ed8a" target="_top" xlink:title="Sets the lifter motors to the given value. ">
 <polygon fill="none" stroke="#000000" points="107.0391,-137.691 107.0391,-155.691 196.9551,-155.691 196.9551,-137.691 107.0391,-137.691"/>
 <text text-anchor="middle" x="151.9971" y="-143.691" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">set_lifter_motors</text>
 </a>

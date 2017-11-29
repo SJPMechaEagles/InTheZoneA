@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['l2_5fdistance',['L2_distance',['../matrix_8h.html#a093bef732ee165055061299b41780439',1,'matrix.h']]],
   ['lcd_5fassert',['lcd_assert',['../lcd_8c.html#a07f04b524b5ded617d5f193db05ba0ad',1,'lcd.c']]],
   ['lcd_5fclear',['lcd_clear',['../lcd_8h.html#a35c08b1fa742e650f4873939707b893b',1,'lcd_clear():&#160;lcd.c'],['../lcd_8c.html#a35c08b1fa742e650f4873939707b893b',1,'lcd_clear():&#160;lcd.c']]],
   ['lcd_5fget_5fpressed_5fbuttons',['lcd_get_pressed_buttons',['../lcd_8h.html#ac7b3225ccc82fcbe067ba9da934f010d',1,'lcd_get_pressed_buttons():&#160;lcd.c'],['../lcd_8c.html#ac7b3225ccc82fcbe067ba9da934f010d',1,'lcd_get_pressed_buttons():&#160;lcd.c']]],

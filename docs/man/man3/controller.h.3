@@ -1,0 +1,304 @@
+.TH "include/controller.h" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/controller.h \- controller definitions, macros and functions to assist with usig the vex controllers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'vmath\&.h'\fP
+.br
+\fC#include <API\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLEFT_BUMPERS\fP   6"
+.br
+.ti -1c
+.RI "#define \fBLEFT_BUTTONS\fP   7"
+.br
+.ti -1c
+.RI "#define \fBLEFT_JOY_X\fP   4"
+.br
+.RI "the left x joystick on controller "
+.ti -1c
+.RI "#define \fBLEFT_JOY_Y\fP   3"
+.br
+.RI "the left y joystick on controller "
+.ti -1c
+.RI "#define \fBMASTER\fP   1"
+.br
+.RI "the master controller "
+.ti -1c
+.RI "#define \fBPARTNER\fP   2"
+.br
+.RI "the slave/partner controller "
+.ti -1c
+.RI "#define \fBRIGHT_BUMPERS\fP   5"
+.br
+.ti -1c
+.RI "#define \fBRIGHT_BUTTONS\fP   8"
+.br
+.ti -1c
+.RI "#define \fBRIGHT_JOY_X\fP   1"
+.br
+.RI "the right x joystick on controller "
+.ti -1c
+.RI "#define \fBRIGHT_JOY_Y\fP   2"
+.br
+.RI "the right y joystick on controller "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBjoystick\fP { \fBRIGHT_JOY\fP, \fBLEFT_JOY\fP }
+.RI "Represents a joystick on the controller\&. ""
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcord\fP \fBget_joystick_cord\fP (enum \fBjoystick\fP \fBside\fP, int controller)"
+.br
+.RI "Gets the location of a joystick on the controller\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+controller definitions, macros and functions to assist with usig the vex controllers\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett, Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/9/2017 
+.RE
+.PP
+
+.PP
+Definition in file \fBcontroller\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LEFT_BUMPERS   6"
+
+.PP
+Definition at line 18 of file controller\&.h\&.
+.SS "#define LEFT_BUTTONS   7"
+
+.PP
+Definition at line 16 of file controller\&.h\&.
+.SS "#define LEFT_JOY_X   4"
+
+.PP
+the left x joystick on controller 
+.PP
+\fBDate:\fP
+.RS 4
+9/1/2017 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 53 of file controller\&.h\&.
+.PP
+Referenced by get_joystick_cord()\&.
+.SS "#define LEFT_JOY_Y   3"
+
+.PP
+the left y joystick on controller 
+.PP
+\fBDate:\fP
+.RS 4
+9/1/2017 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 60 of file controller\&.h\&.
+.PP
+Referenced by get_joystick_cord()\&.
+.SS "#define MASTER   1"
+
+.PP
+the master controller 
+.PP
+\fBDate:\fP
+.RS 4
+9/1/2017 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file controller\&.h\&.
+.PP
+Referenced by update_drive_motors(), and updateIntake()\&.
+.SS "#define PARTNER   2"
+
+.PP
+the slave/partner controller 
+.PP
+\fBDate:\fP
+.RS 4
+9/1/2017 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file controller\&.h\&.
+.PP
+Referenced by update_control(), update_drive_motors(), and updateIntake()\&.
+.SS "#define RIGHT_BUMPERS   5"
+
+.PP
+Definition at line 17 of file controller\&.h\&.
+.SS "#define RIGHT_BUTTONS   8"
+
+.PP
+Definition at line 15 of file controller\&.h\&.
+.SS "#define RIGHT_JOY_X   1"
+
+.PP
+the right x joystick on controller 
+.PP
+\fBDate:\fP
+.RS 4
+9/1/2017 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file controller\&.h\&.
+.PP
+Referenced by get_joystick_cord()\&.
+.SS "#define RIGHT_JOY_Y   2"
+
+.PP
+the right y joystick on controller 
+.PP
+\fBDate:\fP
+.RS 4
+9/1/2017 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file controller\&.h\&.
+.PP
+Referenced by get_joystick_cord()\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBjoystick\fP"
+
+.PP
+Represents a joystick on the controller\&. 
+.PP
+\fBDate:\fP
+.RS 4
+9/10/2017 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIRIGHT_JOY \fP\fP
+The right joystick 
+.TP
+\fB\fILEFT_JOY \fP\fP
+The left joystick 
+.PP
+Definition at line 67 of file controller\&.h\&.
+.PP
+.nf
+67               {
+69   RIGHT_JOY,
+71   LEFT_JOY,
+72 };
+.fi
+.SH "Function Documentation"
+.PP 
+.SS "struct \fBcord\fP get_joystick_cord (enum \fBjoystick\fP side, int controller)"
+
+.PP
+Gets the location of a joystick on the controller\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 7 of file controller\&.c\&.
+.PP
+References joystickGetAnalog(), LEFT_JOY_X, LEFT_JOY_Y, RIGHT_JOY, RIGHT_JOY_X, RIGHT_JOY_Y, cord::x, and cord::y\&.
+.PP
+.nf
+7                                                                   {
+8   int x;
+9   int y;
+10   //Get the joystick value for either the right or left,
+11   //depending on the mode
+12   if(side == RIGHT_JOY) {
+13     y = joystickGetAnalog(controller, RIGHT_JOY_X);
+14     x = joystickGetAnalog(controller, RIGHT_JOY_Y);
+15   } else {
+16     y = joystickGetAnalog(controller, LEFT_JOY_X);
+17     x = joystickGetAnalog(controller, LEFT_JOY_Y);
+18   }
+19   //Define a coordinate for the joystick value
+20   struct cord c;
+21   c\&.x = x;
+22   c\&.y = y;
+23   return c;
+24 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

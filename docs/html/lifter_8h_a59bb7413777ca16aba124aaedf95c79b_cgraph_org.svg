@@ -32,7 +32,7 @@
 <!-- Node39 -->
 <g id="node3" class="node">
 <title>Node39</title>
-<g id="a_node3"><a xlink:href="lifter_8c.html#acdf909159b0406c48099843f2306be78" target="_top" xlink:title="getLifterTicks">
+<g id="a_node3"><a xlink:href="lifter_8c.html#acdf909159b0406c48099843f2306be78" target="_top" xlink:title="Gets the value of the lifter pot. ">
 <polygon fill="none" stroke="#000000" points="115.8354,-216.5 115.8354,-234.5 190.9321,-234.5 190.9321,-216.5 115.8354,-216.5"/>
 <text text-anchor="middle" x="153.3838" y="-222.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getLifterTicks</text>
 </a>
@@ -77,7 +77,7 @@
 <!-- Node43 -->
 <g id="node7" class="node">
 <title>Node43</title>
-<g id="a_node7"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="set_lifter_motors">
+<g id="a_node7"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="Sets the lifter motors to the given value. ">
 <polygon fill="none" stroke="#000000" points="235.7285,-103.5 235.7285,-121.5 325.6445,-121.5 325.6445,-103.5 235.7285,-103.5"/>
 <text text-anchor="middle" x="280.6865" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">set_lifter_motors</text>
 </a>

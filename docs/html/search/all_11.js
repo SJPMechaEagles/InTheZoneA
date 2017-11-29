@@ -47,6 +47,5 @@ var searchData=
   ['step',['step',['../structmenu__t.html#adc50450bc59ea66a8d67424adc46e24e',1,'menu_t']]],
   ['step_5ff',['step_f',['../structmenu__t.html#a84cfd9226f6554c63ca9f4b11f94d12d',1,'menu_t']]],
   ['stop_5fone',['STOP_ONE',['../auto_8h.html#a67c9207ce99d4414dce28d8c42ba1d2a',1,'auto.h']]],
-  ['stop_5ftwo',['STOP_TWO',['../auto_8h.html#a48277cb6230d221523bc94b478c1eb0d',1,'auto.h']]],
   ['string_5ftype',['STRING_TYPE',['../menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c',1,'menu.h']]]
 ];

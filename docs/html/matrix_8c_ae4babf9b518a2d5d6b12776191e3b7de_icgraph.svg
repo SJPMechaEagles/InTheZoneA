@@ -17,7 +17,7 @@
 <!-- Node65 -->
 <g id="node2" class="node">
 <title>Node65</title>
-<g id="a_node2"><a xlink:href="matrix_8c.html#ae6dab569959c360cf165136a3b625edd" target="_top" xlink:title="covarianceMatrix">
+<g id="a_node2"><a xlink:href="matrix_8c.html#ae6dab569959c360cf165136a3b625edd" target="_top" xlink:title="returns the covariance of the matrix ">
 <polygon fill="none" stroke="#000000" points="104.2363,-.5 104.2363,-18.5 195.8174,-18.5 195.8174,-.5 104.2363,-.5"/>
 <text text-anchor="middle" x="150.0269" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">covarianceMatrix</text>
 </a>

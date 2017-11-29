@@ -32,7 +32,7 @@
 <!-- Node61 -->
 <g id="node3" class="node">
 <title>Node61</title>
-<g id="a_node3"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updateIntake">
+<g id="a_node3"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updates the mobile goal intake in teleop. ">
 <polygon fill="none" stroke="#000000" points="236.8516,-38.5 236.8516,-56.5 310.6787,-56.5 310.6787,-38.5 236.8516,-38.5"/>
 <text text-anchor="middle" x="273.7651" y="-44.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">updateIntake</text>
 </a>

@@ -17,7 +17,7 @@
 <!-- Node16 -->
 <g id="node2" class="node">
 <title>Node16</title>
-<g id="a_node2"><a xlink:href="matrix_8c.html#a6b7faa6ba9ee987d0777d9d0bd0e7b32" target="_top" xlink:title="scaleMatrix">
+<g id="a_node2"><a xlink:href="matrix_8c.html#a6b7faa6ba9ee987d0777d9d0bd0e7b32" target="_top" xlink:title="scales a matrix. ">
 <polygon fill="none" stroke="#000000" points="100.3447,-.5 100.3447,-18.5 166.9111,-18.5 166.9111,-.5 100.3447,-.5"/>
 <text text-anchor="middle" x="133.6279" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">scaleMatrix</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node17 -->
 <g id="node3" class="node">
 <title>Node17</title>
-<g id="a_node3"><a xlink:href="matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c" target="_top" xlink:title="makeMatrix">
+<g id="a_node3"><a xlink:href="matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c" target="_top" xlink:title="Makes a matrix with a width and height parameters. ">
 <polygon fill="none" stroke="#000000" points="202.9111,-.5 202.9111,-18.5 270.5859,-18.5 270.5859,-.5 202.9111,-.5"/>
 <text text-anchor="middle" x="236.7485" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">makeMatrix</text>
 </a>
@@ -47,7 +47,7 @@
 <!-- Node18 -->
 <g id="node4" class="node">
 <title>Node18</title>
-<g id="a_node4"><a xlink:href="matrix_8c.html#aa40f301fe71dfcea781169d3e6f14025" target="_top" xlink:title="assert">
+<g id="a_node4"><a xlink:href="matrix_8c.html#a8e41e30382335ea89f90b72db0b44d6f" target="_top" xlink:title="Asserts a condition is true. ">
 <polygon fill="none" stroke="#000000" points="306.5859,-.5 306.5859,-18.5 349.8174,-18.5 349.8174,-.5 306.5859,-.5"/>
 <text text-anchor="middle" x="328.2017" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">assert</text>
 </a>

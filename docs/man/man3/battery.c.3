@@ -1,0 +1,110 @@
+.TH "src/battery.c" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/battery.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'battery\&.h'\fP
+.br
+\fC#include <API\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBbackup_battery_voltage\fP ()"
+.br
+.RI "gets the backup battery voltage "
+.ti -1c
+.RI "bool \fBbattery_level_acceptable\fP ()"
+.br
+.RI "returns if the batteries are acceptable "
+.ti -1c
+.RI "double \fBmain_battery_voltage\fP ()"
+.br
+.RI "gets the main battery voltage "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "double backup_battery_voltage ()"
+
+.PP
+gets the backup battery voltage 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file battery\&.c\&.
+.PP
+References powerLevelBackup()\&.
+.PP
+Referenced by battery_level_acceptable()\&.
+.PP
+.nf
+17                                 {
+18   return powerLevelBackup() / 1000\&.0;
+19 }
+.fi
+.SS "bool battery_level_acceptable ()"
+
+.PP
+returns if the batteries are acceptable 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBMIN_MAIN_VOLTAGE\fP 
+.PP
+\fBMIN_BACKUP_VOLTAGE\fP
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file battery\&.c\&.
+.PP
+References backup_battery_voltage(), main_battery_voltage(), MIN_BACKUP_VOLTAGE, and MIN_MAIN_VOLTAGE\&.
+.PP
+.nf
+28                                 {
+29   if(main_battery_voltage() < MIN_MAIN_VOLTAGE) return false;
+30   if(backup_battery_voltage() < MIN_BACKUP_VOLTAGE) return false;
+31   return true;
+32 }
+.fi
+.SS "double main_battery_voltage ()"
+
+.PP
+gets the main battery voltage 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+
+.PP
+Definition at line 9 of file battery\&.c\&.
+.PP
+References powerLevelMain()\&.
+.PP
+Referenced by battery_level_acceptable()\&.
+.PP
+.nf
+9                               {
+10   return powerLevelMain() / 1000\&.0;
+11 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

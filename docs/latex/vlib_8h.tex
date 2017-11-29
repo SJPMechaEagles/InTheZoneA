@@ -1,4 +1,4 @@
-\hypertarget{vlib_8h}{}\section{include/vlib.h File Reference}
+\subsection{include/vlib.h File Reference}
 \label{vlib_8h}\index{include/vlib.\+h@{include/vlib.\+h}}
 
 
@@ -22,20 +22,18 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=350pt]{vlib_8h__dep__incl}
 \end{center}
 \end{figure}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void $\ast$ \hyperlink{vlib_8h_a1115803c6996aebfbf67434810df7b4b}{calloc\+\_\+real} (size\+\_\+t elements, size\+\_\+t size)
-\item 
-void \hyperlink{vlib_8h_a8805990ed667939e615e4a98950b8bd1}{ftoa\+\_\+bad} (float a, char $\ast$buffer, int precision)
+void \textbf{ ftoa\+\_\+bad} (float a, char $\ast$buffer, int precision)
 \begin{DoxyCompactList}\small\item\em converts a float to string. \end{DoxyCompactList}\item 
-int \hyperlink{vlib_8h_a08fa7134f8b9a80eeba25f9feab22892}{itoa\+\_\+bad} (int a, char $\ast$buffer, int digits)
+int \textbf{ itoa\+\_\+bad} (int a, char $\ast$buffer, int digits)
 \begin{DoxyCompactList}\small\item\em converts a int to string. \end{DoxyCompactList}\item 
-void \hyperlink{vlib_8h_aad7fea725cb4b198ace1aa3df5051244}{reverse} (char $\ast$str, int len)
+void \textbf{ reverse} (char $\ast$str, int len)
 \begin{DoxyCompactList}\small\item\em reverses a string \textquotesingle{}str\textquotesingle{} of length \textquotesingle{}len\textquotesingle{} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsubsection{Detailed Description}
 Contains misc helpful functions. 
 
 \begin{DoxyAuthor}{Author}
@@ -46,28 +44,15 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-\subsection{Function Documentation}
-\mbox{\Hypertarget{vlib_8h_a1115803c6996aebfbf67434810df7b4b}\label{vlib_8h_a1115803c6996aebfbf67434810df7b4b}} 
-\index{vlib.\+h@{vlib.\+h}!calloc\+\_\+real@{calloc\+\_\+real}}
-\index{calloc\+\_\+real@{calloc\+\_\+real}!vlib.\+h@{vlib.\+h}}
-\subsubsection{\texorpdfstring{calloc\+\_\+real()}{calloc\_real()}}
-{\footnotesize\ttfamily void$\ast$ calloc\+\_\+real (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{elements,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+Definition in file \textbf{ vlib.\+h}.
 
 
 
-Referenced by init\+\_\+menu\+\_\+var().
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=259pt]{vlib_8h_a1115803c6996aebfbf67434810df7b4b_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{vlib_8h_a8805990ed667939e615e4a98950b8bd1}\label{vlib_8h_a8805990ed667939e615e4a98950b8bd1}} 
+\subsubsection{Function Documentation}
+\mbox{\label{vlib_8h_a8805990ed667939e615e4a98950b8bd1}} 
 \index{vlib.\+h@{vlib.\+h}!ftoa\+\_\+bad@{ftoa\+\_\+bad}}
 \index{ftoa\+\_\+bad@{ftoa\+\_\+bad}!vlib.\+h@{vlib.\+h}}
-\subsubsection{\texorpdfstring{ftoa\+\_\+bad()}{ftoa\_bad()}}
+\paragraph{ftoa\+\_\+bad()}
 {\footnotesize\ttfamily void ftoa\+\_\+bad (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{char $\ast$}]{buffer,  }\item[{int}]{precision }\end{DoxyParamCaption})}
 
 
@@ -91,40 +76,40 @@ Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line 30 of file vlib.\+c.
+Definition at line \textbf{ 30} of file \textbf{ vlib.\+c}.
 
 
 
-References itoa\+\_\+bad().
+References \textbf{ itoa\+\_\+bad()}.
 
 
 
-Referenced by calculate\+\_\+current\+\_\+display().
+Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}.
 
 
 \begin{DoxyCode}
-30                                                     \{
-31   \textcolor{comment}{// Extract integer part}
-32   \textcolor{keywordtype}{int} ipart = (int)a;
-33 
-34   \textcolor{comment}{// Extract floating part}
-35   \textcolor{keywordtype}{float} fpart = a - (float)ipart;
-36 
-37   \textcolor{comment}{// convert integer part to string}
-38   \textcolor{keywordtype}{int} i = \hyperlink{vlib_8c_a08fa7134f8b9a80eeba25f9feab22892}{itoa\_bad}(ipart, buffer, 0);
-39 
-40   \textcolor{comment}{// check for display option after point}
-41   \textcolor{keywordflow}{if}(precision != 0) \{
-42     buffer[i] = \textcolor{charliteral}{'.'};  \textcolor{comment}{// add dot}
-43 
-44     \textcolor{comment}{// Get the value of fraction part up to given num.}
-45     \textcolor{comment}{// of points after dot. The third parameter is needed}
-46     \textcolor{comment}{// to handle cases like 233.007}
-47     fpart = fpart * pow(10, precision);
-48 
-49     \hyperlink{vlib_8c_a08fa7134f8b9a80eeba25f9feab22892}{itoa\_bad}((\textcolor{keywordtype}{int})fpart, buffer + i + 1, precision);
-50   \}
-51 \}
+00030                                                     \{
+00031   \textcolor{comment}{// Extract integer part}
+00032   \textcolor{keywordtype}{int} ipart = (int)a;
+00033 
+00034   \textcolor{comment}{// Extract floating part}
+00035   \textcolor{keywordtype}{float} fpart = a - (float)ipart;
+00036 
+00037   \textcolor{comment}{// convert integer part to string}
+00038   \textcolor{keywordtype}{int} i = itoa_bad(ipart, buffer, 0);
+00039 
+00040   \textcolor{comment}{// check for display option after point}
+00041   \textcolor{keywordflow}{if}(precision != 0) \{
+00042     buffer[i] = \textcolor{charliteral}{'.'};  \textcolor{comment}{// add dot}
+00043 
+00044     \textcolor{comment}{// Get the value of fraction part up to given num.}
+00045     \textcolor{comment}{// of points after dot. The third parameter is needed}
+00046     \textcolor{comment}{// to handle cases like 233.007}
+00047     fpart = fpart * pow(10, precision);
+00048 
+00049     itoa_bad((\textcolor{keywordtype}{int})fpart, buffer + i + 1, precision);
+00050   \}
+00051 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -140,10 +125,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{vlib_8h_a8805990ed667939e615e4a98950b8bd1_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{vlib_8h_a08fa7134f8b9a80eeba25f9feab22892}\label{vlib_8h_a08fa7134f8b9a80eeba25f9feab22892}} 
+\mbox{\label{vlib_8h_a08fa7134f8b9a80eeba25f9feab22892}} 
 \index{vlib.\+h@{vlib.\+h}!itoa\+\_\+bad@{itoa\+\_\+bad}}
 \index{itoa\+\_\+bad@{itoa\+\_\+bad}!vlib.\+h@{vlib.\+h}}
-\subsubsection{\texorpdfstring{itoa\+\_\+bad()}{itoa\_bad()}}
+\paragraph{itoa\+\_\+bad()}
 {\footnotesize\ttfamily int itoa\+\_\+bad (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{char $\ast$}]{buffer,  }\item[{int}]{digits }\end{DoxyParamCaption})}
 
 
@@ -170,34 +155,34 @@ Chris Jerrett, Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line 13 of file vlib.\+c.
+Definition at line \textbf{ 13} of file \textbf{ vlib.\+c}.
 
 
 
-References reverse().
+References \textbf{ reverse()}.
 
 
 
-Referenced by calculate\+\_\+current\+\_\+display(), and ftoa\+\_\+bad().
+Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, and \textbf{ ftoa\+\_\+bad()}.
 
 
 \begin{DoxyCode}
-13                                               \{
-14   \textcolor{keywordtype}{int} i = 0;
-15    \textcolor{keywordflow}{while} (a) \{
-16        buffer[i++] = (a%10) + \textcolor{charliteral}{'0'};
-17        a = a/10;
-18    \}
-19 
-20    \textcolor{comment}{// If number of digits required is more, then}
-21    \textcolor{comment}{// add 0s at the beginning}
-22    \textcolor{keywordflow}{while} (i < digits)
-23        buffer[i++] = \textcolor{charliteral}{'0'};
-24 
-25    \hyperlink{vlib_8c_aad7fea725cb4b198ace1aa3df5051244}{reverse}(buffer, i);
-26    buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
-27    \textcolor{keywordflow}{return} i;
-28 \}
+00013                                               \{
+00014   \textcolor{keywordtype}{int} i = 0;
+00015    \textcolor{keywordflow}{while} (a) \{
+00016        buffer[i++] = (a%10) + \textcolor{charliteral}{'0'};
+00017        a = a/10;
+00018    \}
+00019 
+00020    \textcolor{comment}{// If number of digits required is more, then}
+00021    \textcolor{comment}{// add 0s at the beginning}
+00022    \textcolor{keywordflow}{while} (i < digits)
+00023        buffer[i++] = \textcolor{charliteral}{'0'};
+00024 
+00025    reverse(buffer, i);
+00026    buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
+00027    \textcolor{keywordflow}{return} i;
+00028 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -213,10 +198,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{vlib_8h_a08fa7134f8b9a80eeba25f9feab22892_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{vlib_8h_aad7fea725cb4b198ace1aa3df5051244}\label{vlib_8h_aad7fea725cb4b198ace1aa3df5051244}} 
+\mbox{\label{vlib_8h_aad7fea725cb4b198ace1aa3df5051244}} 
 \index{vlib.\+h@{vlib.\+h}!reverse@{reverse}}
 \index{reverse@{reverse}!vlib.\+h@{vlib.\+h}}
-\subsubsection{\texorpdfstring{reverse()}{reverse()}}
+\paragraph{reverse()}
 {\footnotesize\ttfamily void reverse (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{int}]{len }\end{DoxyParamCaption})}
 
 
@@ -238,23 +223,23 @@ Chris Jerrett
 \end{DoxyParams}
 
 
-Definition at line 3 of file vlib.\+c.
+Definition at line \textbf{ 3} of file \textbf{ vlib.\+c}.
 
 
 
-Referenced by itoa\+\_\+bad().
+Referenced by \textbf{ itoa\+\_\+bad()}.
 
 
 \begin{DoxyCode}
-3                                  \{
-4     \textcolor{keywordtype}{int} i=0, j=len-1, temp;
-5     \textcolor{keywordflow}{while} (i<j) \{
-6         temp = str[i];
-7         str[i] = str[j];
-8         str[j] = temp;
-9         i++; j--;
-10     \}
-11 \}
+00003                                  \{
+00004     \textcolor{keywordtype}{int} i=0, j=len-1, temp;
+00005     \textcolor{keywordflow}{while} (i<j) \{
+00006         temp = str[i];
+00007         str[i] = str[j];
+00008         str[j] = temp;
+00009         i++; j--;
+00010     \}
+00011 \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

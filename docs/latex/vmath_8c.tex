@@ -1,4 +1,4 @@
-\hypertarget{vmath_8c}{}\section{src/vmath.c File Reference}
+\subsection{src/vmath.c File Reference}
 \label{vmath_8c}\index{src/vmath.\+c@{src/vmath.\+c}}
 {\ttfamily \#include \char`\"{}vmath.\+h\char`\"{}}\newline
 Include dependency graph for vmath.\+c\+:\nopagebreak
@@ -8,27 +8,27 @@ Include dependency graph for vmath.\+c\+:\nopagebreak
 \includegraphics[width=147pt]{vmath_8c__incl}
 \end{center}
 \end{figure}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structpolar__cord}{polar\+\_\+cord} \hyperlink{vmath_8c_a832105cf858b3046c57c0d08a4e7c38b}{cartesian\+\_\+cord\+\_\+to\+\_\+polar} (struct \hyperlink{structcord}{cord} cords)
+struct \textbf{ polar\+\_\+cord} \textbf{ cartesian\+\_\+cord\+\_\+to\+\_\+polar} (struct \textbf{ cord} cords)
 \begin{DoxyCompactList}\small\item\em Function to convert x and y 2 dimensional cartesian cordinated to polar coordinates. \end{DoxyCompactList}\item 
-struct \hyperlink{structpolar__cord}{polar\+\_\+cord} \hyperlink{vmath_8c_a1c4a1747b714f5d4654f0614193f9e49}{cartesian\+\_\+to\+\_\+polar} (float x, float y)
+struct \textbf{ polar\+\_\+cord} \textbf{ cartesian\+\_\+to\+\_\+polar} (float x, float y)
 \begin{DoxyCompactList}\small\item\em Function to convert x and y 2 dimensional cartesian coordinated to polar coordinates. \end{DoxyCompactList}\item 
-int \hyperlink{vmath_8c_af082905f7eac6d03e92015146bbc1925}{max} (int a, int b)
-\item 
-int \hyperlink{vmath_8c_abd8bbcfabb3ddef2ccaafb9928a37b95}{min} (int a, int b)
-\item 
-double \hyperlink{vmath_8c_a2b83ceb814c90ebfa042a26d884ac159}{sind} (double angle)
-\end{DoxyCompactItemize}
+int \textbf{ max} (int a, int b)
+\begin{DoxyCompactList}\small\item\em the min of two values \end{DoxyCompactList}\item 
+int \textbf{ min} (int a, int b)
+\begin{DoxyCompactList}\small\item\em the min of two values \end{DoxyCompactList}\item 
+double \textbf{ sind} (double angle)
+\begin{DoxyCompactList}\small\item\em sine of a angle in degrees \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
-\mbox{\Hypertarget{vmath_8c_a832105cf858b3046c57c0d08a4e7c38b}\label{vmath_8c_a832105cf858b3046c57c0d08a4e7c38b}} 
+\subsubsection{Function Documentation}
+\mbox{\label{vmath_8c_a832105cf858b3046c57c0d08a4e7c38b}} 
 \index{vmath.\+c@{vmath.\+c}!cartesian\+\_\+cord\+\_\+to\+\_\+polar@{cartesian\+\_\+cord\+\_\+to\+\_\+polar}}
 \index{cartesian\+\_\+cord\+\_\+to\+\_\+polar@{cartesian\+\_\+cord\+\_\+to\+\_\+polar}!vmath.\+c@{vmath.\+c}}
-\subsubsection{\texorpdfstring{cartesian\+\_\+cord\+\_\+to\+\_\+polar()}{cartesian\_cord\_to\_polar()}}
-{\footnotesize\ttfamily struct \hyperlink{structpolar__cord}{polar\+\_\+cord} cartesian\+\_\+cord\+\_\+to\+\_\+polar (\begin{DoxyParamCaption}\item[{struct \hyperlink{structcord}{cord}}]{cords }\end{DoxyParamCaption})}
+\paragraph{cartesian\+\_\+cord\+\_\+to\+\_\+polar()}
+{\footnotesize\ttfamily struct \textbf{ polar\+\_\+cord} cartesian\+\_\+cord\+\_\+to\+\_\+polar (\begin{DoxyParamCaption}\item[{struct \textbf{ cord}}]{cords }\end{DoxyParamCaption})}
 
 
 
@@ -49,23 +49,23 @@ Christian Desimone
 a struct containing the angle and magnitude. 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
-\hyperlink{structpolar__cord}{polar\+\_\+cord} 
+\doxyref{polar\+\_\+cord}{p.}{structpolar__cord} 
 
-\hyperlink{structcord}{cord} 
+\doxyref{cord}{p.}{structcord} 
 \end{DoxySeeAlso}
 
 
-Definition at line 33 of file vmath.\+c.
+Definition at line \textbf{ 33} of file \textbf{ vmath.\+c}.
 
 
 
-References cartesian\+\_\+to\+\_\+polar().
+References \textbf{ cartesian\+\_\+to\+\_\+polar()}.
 
 
 \begin{DoxyCode}
-33                                                              \{
-34   \textcolor{keywordflow}{return} \hyperlink{vmath_8c_a1c4a1747b714f5d4654f0614193f9e49}{cartesian\_to\_polar}(cords.\hyperlink{structcord_a2eef9b681474b679cf87b0c20eced2cd}{x}, cords.\hyperlink{structcord_a4e7d289c55cfe511532e53a81dc19215}{y});
-35 \}
+00033                                                              \{
+00034   \textcolor{keywordflow}{return} cartesian_to_polar(cords.x, cords.y);
+00035 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -74,11 +74,11 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=338pt]{vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{vmath_8c_a1c4a1747b714f5d4654f0614193f9e49}\label{vmath_8c_a1c4a1747b714f5d4654f0614193f9e49}} 
+\mbox{\label{vmath_8c_a1c4a1747b714f5d4654f0614193f9e49}} 
 \index{vmath.\+c@{vmath.\+c}!cartesian\+\_\+to\+\_\+polar@{cartesian\+\_\+to\+\_\+polar}}
 \index{cartesian\+\_\+to\+\_\+polar@{cartesian\+\_\+to\+\_\+polar}!vmath.\+c@{vmath.\+c}}
-\subsubsection{\texorpdfstring{cartesian\+\_\+to\+\_\+polar()}{cartesian\_to\_polar()}}
-{\footnotesize\ttfamily struct \hyperlink{structpolar__cord}{polar\+\_\+cord} cartesian\+\_\+to\+\_\+polar (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+\paragraph{cartesian\+\_\+to\+\_\+polar()}
+{\footnotesize\ttfamily struct \textbf{ polar\+\_\+cord} cartesian\+\_\+to\+\_\+polar (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
 
 
 
@@ -101,51 +101,51 @@ Christian Desimone
 a struct containing the angle and magnitude. 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
-\hyperlink{structpolar__cord}{polar\+\_\+cord} 
+\doxyref{polar\+\_\+cord}{p.}{structpolar__cord} 
 \end{DoxySeeAlso}
 
 
-Definition at line 3 of file vmath.\+c.
+Definition at line \textbf{ 3} of file \textbf{ vmath.\+c}.
 
 
 
-References polar\+\_\+cord\+::angle, and polar\+\_\+cord\+::magnitue.
+References \textbf{ polar\+\_\+cord\+::angle}, and \textbf{ polar\+\_\+cord\+::magnitue}.
 
 
 
-Referenced by cartesian\+\_\+cord\+\_\+to\+\_\+polar().
+Referenced by \textbf{ cartesian\+\_\+cord\+\_\+to\+\_\+polar()}.
 
 
 \begin{DoxyCode}
-3                                                        \{
-4   \textcolor{keywordtype}{float} degree = 0;
-5   \textcolor{keywordtype}{double} magnitude = sqrt((fabs(\hyperlink{structaccelerometer__odometry_a83af671d99413a7c480678d5abb9c64a}{x}) * fabs(\hyperlink{structaccelerometer__odometry_a83af671d99413a7c480678d5abb9c64a}{x})) + (fabs(\hyperlink{structaccelerometer__odometry_a4d812f516efdd477ae9f74fca2a07a2b}{y}) * fabs(\hyperlink{structaccelerometer__odometry_a4d812f516efdd477ae9f74fca2a07a2b}{y})));
-6 
-7   \textcolor{keywordflow}{if}(\hyperlink{structaccelerometer__odometry_a83af671d99413a7c480678d5abb9c64a}{x} < 0)\{
-8     degree += 180.0;
-9   \}
-10   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{structaccelerometer__odometry_a83af671d99413a7c480678d5abb9c64a}{x} > 0 && \hyperlink{structaccelerometer__odometry_a4d812f516efdd477ae9f74fca2a07a2b}{y} < 0)\{
-11     degree += 360.0;
-12   \}
-13 
-14   \textcolor{keywordflow}{if}(\hyperlink{structaccelerometer__odometry_a83af671d99413a7c480678d5abb9c64a}{x} != 0 && \hyperlink{structaccelerometer__odometry_a4d812f516efdd477ae9f74fca2a07a2b}{y} != 0)\{
-15     degree += atan((\textcolor{keywordtype}{float})\hyperlink{structaccelerometer__odometry_a4d812f516efdd477ae9f74fca2a07a2b}{y} / (\textcolor{keywordtype}{float})\hyperlink{structaccelerometer__odometry_a83af671d99413a7c480678d5abb9c64a}{x});
-16   \}
-17   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{structaccelerometer__odometry_a83af671d99413a7c480678d5abb9c64a}{x} == 0 && \hyperlink{structaccelerometer__odometry_a4d812f516efdd477ae9f74fca2a07a2b}{y} > 0)\{
-18     degree = 90.0;
-19   \}
-20   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{structaccelerometer__odometry_a4d812f516efdd477ae9f74fca2a07a2b}{y} == 0 && \hyperlink{structaccelerometer__odometry_a83af671d99413a7c480678d5abb9c64a}{x} < 0)\{
-21     degree = 180.0;
-22   \}
-23   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{structaccelerometer__odometry_a83af671d99413a7c480678d5abb9c64a}{x} == 0 && \hyperlink{structaccelerometer__odometry_a4d812f516efdd477ae9f74fca2a07a2b}{y} < 0)\{
-24     degree = 270.0;
-25   \}
-26 
-27   \textcolor{keyword}{struct }\hyperlink{structpolar__cord}{polar\_cord} p;
-28   p.\hyperlink{structpolar__cord_a81b3a11d38d76719b02fcd425adaa216}{angle} = degree;
-29   p.magnitue = magnitude;
-30   \textcolor{keywordflow}{return} p;
-31 \}
+00003                                                        \{
+00004   \textcolor{keywordtype}{float} degree = 0;
+00005   \textcolor{keywordtype}{double} magnitude = sqrt((fabs(x) * fabs(x)) + (fabs(y) * fabs(y)));
+00006 
+00007   \textcolor{keywordflow}{if}(x < 0)\{
+00008     degree += 180.0;
+00009   \}
+00010   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x > 0 && y < 0)\{
+00011     degree += 360.0;
+00012   \}
+00013 
+00014   \textcolor{keywordflow}{if}(x != 0 && y != 0)\{
+00015     degree += atan((\textcolor{keywordtype}{float})y / (\textcolor{keywordtype}{float})x);
+00016   \}
+00017   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x == 0 && y > 0)\{
+00018     degree = 90.0;
+00019   \}
+00020   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(y == 0 && x < 0)\{
+00021     degree = 180.0;
+00022   \}
+00023   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x == 0 && y < 0)\{
+00024     degree = 270.0;
+00025   \}
+00026 
+00027   \textcolor{keyword}{struct }polar_cord p;
+00028   p.angle = degree;
+00029   p.magnitue = magnitude;
+00030   \textcolor{keywordflow}{return} p;
+00031 \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -154,26 +154,40 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=338pt]{vmath_8c_a1c4a1747b714f5d4654f0614193f9e49_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{vmath_8c_af082905f7eac6d03e92015146bbc1925}\label{vmath_8c_af082905f7eac6d03e92015146bbc1925}} 
+\mbox{\label{vmath_8c_af082905f7eac6d03e92015146bbc1925}} 
 \index{vmath.\+c@{vmath.\+c}!max@{max}}
 \index{max@{max}!vmath.\+c@{vmath.\+c}}
-\subsubsection{\texorpdfstring{max()}{max()}}
+\paragraph{max()}
 {\footnotesize\ttfamily int max (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
 
 
 
-Definition at line 48 of file vmath.\+c.
+the min of two values 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the first \\
+\hline
+{\em b} & the second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the smaller of a and b 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 48} of file \textbf{ vmath.\+c}.
 
 
 
-Referenced by calculate\+\_\+current\+\_\+display(), init\+\_\+menu\+\_\+float(), and init\+\_\+menu\+\_\+int().
+Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ init\+\_\+menu\+\_\+float()}, and \textbf{ init\+\_\+menu\+\_\+int()}.
 
 
 \begin{DoxyCode}
-48                       \{
-49   \textcolor{keywordflow}{if}(a > b) \textcolor{keywordflow}{return} a;
-50   \textcolor{keywordflow}{return} b;
-51 \}
+00048                       \{
+00049   \textcolor{keywordflow}{if}(a > b) \textcolor{keywordflow}{return} a;
+00050   \textcolor{keywordflow}{return} b;
+00051 \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -182,26 +196,40 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{vmath_8c_af082905f7eac6d03e92015146bbc1925_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{vmath_8c_abd8bbcfabb3ddef2ccaafb9928a37b95}\label{vmath_8c_abd8bbcfabb3ddef2ccaafb9928a37b95}} 
+\mbox{\label{vmath_8c_abd8bbcfabb3ddef2ccaafb9928a37b95}} 
 \index{vmath.\+c@{vmath.\+c}!min@{min}}
 \index{min@{min}!vmath.\+c@{vmath.\+c}}
-\subsubsection{\texorpdfstring{min()}{min()}}
+\paragraph{min()}
 {\footnotesize\ttfamily int min (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
 
 
 
-Definition at line 42 of file vmath.\+c.
+the min of two values 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the first \\
+\hline
+{\em b} & the second \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the smaller of a and b 
+\end{DoxyReturn}
+
+
+Definition at line \textbf{ 42} of file \textbf{ vmath.\+c}.
 
 
 
-Referenced by calculate\+\_\+current\+\_\+display(), init\+\_\+menu\+\_\+float(), and init\+\_\+menu\+\_\+int().
+Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ init\+\_\+menu\+\_\+float()}, and \textbf{ init\+\_\+menu\+\_\+int()}.
 
 
 \begin{DoxyCode}
-42                       \{
-43   \textcolor{keywordflow}{if}(a < b) \textcolor{keywordflow}{return} a;
-44   \textcolor{keywordflow}{return} b;
-45 \}
+00042                       \{
+00043   \textcolor{keywordflow}{if}(a < b) \textcolor{keywordflow}{return} a;
+00044   \textcolor{keywordflow}{return} b;
+00045 \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -210,24 +238,28 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{vmath_8c_abd8bbcfabb3ddef2ccaafb9928a37b95_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{vmath_8c_a2b83ceb814c90ebfa042a26d884ac159}\label{vmath_8c_a2b83ceb814c90ebfa042a26d884ac159}} 
+\mbox{\label{vmath_8c_a2b83ceb814c90ebfa042a26d884ac159}} 
 \index{vmath.\+c@{vmath.\+c}!sind@{sind}}
 \index{sind@{sind}!vmath.\+c@{vmath.\+c}}
-\subsubsection{\texorpdfstring{sind()}{sind()}}
+\paragraph{sind()}
 {\footnotesize\ttfamily double sind (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
 
 
 
-Definition at line 37 of file vmath.\+c.
+sine of a angle in degrees 
 
 
 
-References M\+\_\+\+PI.
+Definition at line \textbf{ 37} of file \textbf{ vmath.\+c}.
+
+
+
+References \textbf{ M\+\_\+\+PI}.
 
 
 \begin{DoxyCode}
-37                           \{
-38     \textcolor{keywordtype}{double} angleradians = \hyperlink{structpolar__cord_a81b3a11d38d76719b02fcd425adaa216}{angle} * \hyperlink{vmath_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\_PI} / 180.0f;
-39     \textcolor{keywordflow}{return} sin(angleradians);
-40 \}
+00037                           \{
+00038     \textcolor{keywordtype}{double} angleradians = angle * M_PI / 180.0f;
+00039     \textcolor{keywordflow}{return} sin(angleradians);
+00040 \}
 \end{DoxyCode}

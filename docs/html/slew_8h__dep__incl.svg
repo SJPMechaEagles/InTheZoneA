@@ -63,7 +63,7 @@ var sectionId = 'dynsection-1';
 <!-- Node10 -->
 <g id="node2" class="node">
 <title>Node10</title>
-<g id="a_node2"><a xlink:href="lifter_8h.html" target="_top" xlink:title="include/lifter.h">
+<g id="a_node2"><a xlink:href="lifter_8h.html" target="_top" xlink:title="Declarations and macros for controlling and manipulating the lifter. ">
 <polygon fill="none" stroke="#000000" points="174.0962,-115.5 174.0962,-133.5 251.2485,-133.5 251.2485,-115.5 174.0962,-115.5"/>
 <text text-anchor="middle" x="212.6724" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/lifter.h</text>
 </a>
@@ -93,7 +93,7 @@ var sectionId = 'dynsection-1';
 <!-- Node15 -->
 <g id="node7" class="node">
 <title>Node15</title>
-<g id="a_node7"><a xlink:href="claw_8h.html" target="_top" xlink:title="include/claw.h">
+<g id="a_node7"><a xlink:href="claw_8h.html" target="_top" xlink:title="Code for controlling the claw that grabs the cones. ">
 <polygon fill="none" stroke="#000000" points="77.5396,-115.5 77.5396,-133.5 155.8052,-133.5 155.8052,-115.5 77.5396,-115.5"/>
 <text text-anchor="middle" x="116.6724" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/claw.h</text>
 </a>
@@ -169,7 +169,7 @@ var sectionId = 'dynsection-1';
 <!-- Node11 -->
 <g id="node3" class="node">
 <title>Node11</title>
-<g id="a_node3"><a xlink:href="auto_8h.html" target="_top" xlink:title="include/auto.h">
+<g id="a_node3"><a xlink:href="auto_8h.html" target="_top" xlink:title="Autonomous declarations and macros. ">
 <polygon fill="none" stroke="#000000" points="77.5371,-55.5 77.5371,-73.5 155.8076,-73.5 155.8076,-55.5 77.5371,-55.5"/>
 <text text-anchor="middle" x="116.6724" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/auto.h</text>
 </a>

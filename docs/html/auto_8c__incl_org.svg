@@ -32,7 +32,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="auto_8h.html" target="_top" xlink:title="auto.h">
+<g id="a_node8"><a xlink:href="auto_8h.html" target="_top" xlink:title="Autonomous declarations and macros. ">
 <polygon fill="none" stroke="#000000" points="239.0986,-330.5 239.0986,-348.5 282.9014,-348.5 282.9014,-330.5 239.0986,-330.5"/>
 <text text-anchor="middle" x="261" y="-336.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">auto.h</text>
 </a>
@@ -140,7 +140,7 @@
 <!-- Node14 -->
 <g id="node15" class="node">
 <title>Node14</title>
-<g id="a_node15"><a xlink:href="lifter_8h.html" target="_top" xlink:title="lifter.h">
+<g id="a_node15"><a xlink:href="lifter_8h.html" target="_top" xlink:title="Declarations and macros for controlling and manipulating the lifter. ">
 <polygon fill="none" stroke="#000000" points="239.6577,-275.5 239.6577,-293.5 282.3423,-293.5 282.3423,-275.5 239.6577,-275.5"/>
 <text text-anchor="middle" x="261" y="-281.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lifter.h</text>
 </a>
@@ -155,7 +155,7 @@
 <!-- Node20 -->
 <g id="node21" class="node">
 <title>Node20</title>
-<g id="a_node21"><a xlink:href="claw_8h.html" target="_top" xlink:title="claw.h">
+<g id="a_node21"><a xlink:href="claw_8h.html" target="_top" xlink:title="Code for controlling the claw that grabs the cones. ">
 <polygon fill="none" stroke="#000000" points="496.1011,-275.5 496.1011,-293.5 539.8989,-293.5 539.8989,-275.5 496.1011,-275.5"/>
 <text text-anchor="middle" x="518" y="-281.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">claw.h</text>
 </a>
@@ -197,7 +197,7 @@
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros ">
+<g id="a_node11"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros and functions to assist with usig the vex controllers. ">
 <polygon fill="none" stroke="#000000" points="251.5396,-110.5 251.5396,-128.5 316.4604,-128.5 316.4604,-110.5 251.5396,-110.5"/>
 <text text-anchor="middle" x="284" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">controller.h</text>
 </a>
@@ -275,7 +275,7 @@
 <!-- Node15 -->
 <g id="node16" class="node">
 <title>Node15</title>
-<g id="a_node16"><a xlink:href="motor__ports_8h.html" target="_top" xlink:title="motor_ports.h">
+<g id="a_node16"><a xlink:href="motor__ports_8h.html" target="_top" xlink:title="The motor port definitionsMacros for the different motors ports. ">
 <polygon fill="none" stroke="#000000" points="446.1528,-220.5 446.1528,-238.5 523.8472,-238.5 523.8472,-220.5 446.1528,-220.5"/>
 <text text-anchor="middle" x="485" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">motor_ports.h</text>
 </a>

@@ -47,7 +47,7 @@
 <!-- Node10 -->
 <g id="node6" class="node">
 <title>Node10</title>
-<g id="a_node6"><a xlink:href="lifter_8c.html#acdf909159b0406c48099843f2306be78" target="_top" xlink:title="getLifterTicks">
+<g id="a_node6"><a xlink:href="lifter_8c.html#acdf909159b0406c48099843f2306be78" target="_top" xlink:title="Gets the value of the lifter pot. ">
 <polygon fill="none" stroke="#000000" points="105.9355,-37.5 105.9355,-55.5 181.0322,-55.5 181.0322,-37.5 105.9355,-37.5"/>
 <text text-anchor="middle" x="143.4839" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getLifterTicks</text>
 </a>
@@ -92,7 +92,7 @@
 <!-- Node11 -->
 <g id="node7" class="node">
 <title>Node11</title>
-<g id="a_node7"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="update_lifter">
+<g id="a_node7"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="Updates the lifter in teleop. ">
 <polygon fill="none" stroke="#000000" points="222.0322,-37.5 222.0322,-55.5 293.0713,-55.5 293.0713,-37.5 222.0322,-37.5"/>
 <text text-anchor="middle" x="257.5518" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_lifter</text>
 </a>
@@ -107,7 +107,7 @@
 <!-- Node12 -->
 <g id="node8" class="node">
 <title>Node12</title>
-<g id="a_node8"><a xlink:href="lifter_8c.html#a2719740958fd8a5926f88f6194e820e3" target="_top" xlink:title="getLifterHeight">
+<g id="a_node8"><a xlink:href="lifter_8c.html#a2719740958fd8a5926f88f6194e820e3" target="_top" xlink:title="Gets the height of the lifter in inches. ">
 <polygon fill="none" stroke="#000000" points="217.0322,-.5 217.0322,-18.5 298.0713,-18.5 298.0713,-.5 217.0322,-.5"/>
 <text text-anchor="middle" x="257.5518" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getLifterHeight</text>
 </a>

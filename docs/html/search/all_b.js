@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['l2_5fdistance',['L2_distance',['../matrix_8h.html#a093bef732ee165055061299b41780439',1,'matrix.h']]],
   ['last_5fcall',['last_call',['../localization_8c.html#a0f327d31da83831114e7417abb7b6b63',1,'localization.c']]],
   ['lcd_2ec',['lcd.c',['../lcd_8c.html',1,'']]],
   ['lcd_2eh',['lcd.h',['../lcd_8h.html',1,'']]],
@@ -31,8 +30,6 @@ var searchData=
   ['left_5fjoy_5fx',['LEFT_JOY_X',['../controller_8h.html#ac055a23829dc64aa20b8e2e1bcfbf316',1,'controller.h']]],
   ['left_5fjoy_5fy',['LEFT_JOY_Y',['../controller_8h.html#ae0a2b64db5fc4f4bf4b169185be93db3',1,'controller.h']]],
   ['length',['length',['../structmenu__t.html#a023063461c4a247e574abd6a55faf765',1,'menu_t']]],
-  ['length_5flong',['LENGTH_LONG',['../lifter_8h.html#a5316887685f2a00f49b20b763265dd82',1,'lifter.h']]],
-  ['length_5fshort',['LENGTH_SHORT',['../lifter_8h.html#a9f5587e68e4a817287ffd37fa03342b4',1,'lifter.h']]],
   ['lifter',['LIFTER',['../sensor__ports_8h.html#a1968b8c13fa0757cc721c96a67407d9b',1,'sensor_ports.h']]],
   ['lifter_2ec',['lifter.c',['../lifter_8c.html',1,'']]],
   ['lifter_2eh',['lifter.h',['../lifter_8h.html',1,'']]],

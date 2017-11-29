@@ -17,7 +17,7 @@
 <!-- Node13 -->
 <g id="node2" class="node">
 <title>Node13</title>
-<g id="a_node2"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="set_lifter_motors">
+<g id="a_node2"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="Sets the lifter motors to the given value. ">
 <polygon fill="none" stroke="#000000" points="100.3496,-103.5 100.3496,-121.5 190.2656,-121.5 190.2656,-103.5 100.3496,-103.5"/>
 <text text-anchor="middle" x="145.3076" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">set_lifter_motors</text>
 </a>

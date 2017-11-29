@@ -1,6 +1,5 @@
 var drive_8h =
 [
-    [ "DEADSPOT", "drive_8h.html#a3d683c4ec93ad778fc5914cd5671a793", null ],
     [ "THRESHOLD", "drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879", null ],
     [ "side_t", "drive_8h.html#a9df2afd2f1acb97019655e5e730609c7", null ],
     [ "side", "drive_8h.html#afc015eff6557e84151d2e53b94375445", [

@@ -1,0 +1,27 @@
+\subsection{drive.\+h}
+\label{drive_8h_source}\index{include/drive.\+h@{include/drive.\+h}}
+
+\begin{DoxyCode}
+00001 
+00008 \textcolor{preprocessor}{#ifndef \_DRIVE\_H\_}
+00009 \textcolor{preprocessor}{#define \_DRIVE\_H\_}
+00010 
+00011 \textcolor{preprocessor}{#include <API.h>}
+00012 \textcolor{preprocessor}{#include "partner.h"}
+00013 
+00018 \textcolor{preprocessor}{#define THRESHOLD 10}
+00019 
+00026 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} side\{
+00027   LEFT,
+00028   BOTH,
+00029   RIGHT
+00030 \} side_t;
+00031 
+00038 \textcolor{keywordtype}{void} set_side_speed(side_t side, \textcolor{keywordtype}{int} speed);
+00039 
+00044 \textcolor{keywordtype}{void} setThresh(\textcolor{keywordtype}{int} t);
+00045 
+00051 \textcolor{keywordtype}{void} update_drive_motors();
+00052 
+00053 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

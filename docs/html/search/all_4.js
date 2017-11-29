@@ -1,7 +1,6 @@
 var searchData=
 [
   ['data',['data',['../struct__matrix.html#ad3fdadaa9e22623d5830e37663d500be',1,'_matrix']]],
-  ['deadspot',['DEADSPOT',['../drive_8h.html#a3d683c4ec93ad778fc5914cd5671a793',1,'drive.h']]],
   ['debug',['debug',['../log_8h.html#af3668f40d1ad1b4f3418869ac9a31f34',1,'debug(const char *debug_message):&#160;log.c'],['../log_8c.html#af3668f40d1ad1b4f3418869ac9a31f34',1,'debug(const char *debug_message):&#160;log.c'],['../log_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'DEBUG():&#160;log.h']]],
   ['deg_5fmax',['DEG_MAX',['../potentiometer_8h.html#ab77b81696cf83be632fca5f56b4c3595',1,'potentiometer.h']]],
   ['deinitslew',['deinitslew',['../slew_8h.html#a981c9990a969d2587e66e550737f7cd9',1,'deinitslew():&#160;slew.c'],['../slew_8c.html#a981c9990a969d2587e66e550737f7cd9',1,'deinitslew():&#160;slew.c']]],

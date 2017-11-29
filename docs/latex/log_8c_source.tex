@@ -1,0 +1,46 @@
+\subsection{log.\+c}
+\label{log_8c_source}\index{src/log.\+c@{src/log.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "log.h"}
+00002 
+00003 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} log_level = INFO;
+00004 \textcolor{keyword}{static} FILE *log_lcd = NULL;
+00005 
+00006 \textcolor{keywordtype}{void} init_error(\textcolor{keywordtype}{bool} use\_lcd, FILE *lcd) \{
+00007   \textcolor{keywordflow}{if}(use\_lcd) \{
+00008     lcdInit(lcd);
+00009     log_lcd = lcd;
+00010   \}
+00011 \}
+00012 
+00013 \textcolor{keyword}{static} \textcolor{keywordtype}{void} log_info(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *mess) \{
+00014   printf(\textcolor{stringliteral}{"[%s]: %s\(\backslash\)n"}, s, mess);
+00015   lcdSetBacklight(log_lcd, \textcolor{keyword}{true});
+00016   lcdClear(log_lcd);
+00017   lcdPrint(log_lcd, TOP_ROW, s);
+00018   lcdPrint(log_lcd, BOTTOM_ROW, mess);
+00019 \}
+00020 
+00021 \textcolor{keywordtype}{void} error(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *error\_message) \{
+00022   \textcolor{keywordflow}{if}(log_level>NONE)
+00023     log_info(\textcolor{stringliteral}{"ERROR"}, error\_message);
+00024 \}
+00025 
+00026 \textcolor{keywordtype}{void} warning(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *warning\_message) \{
+00027   \textcolor{keywordflow}{if}(log_level>WARNING)
+00028     log_info(\textcolor{stringliteral}{"WARNING"}, warning\_message);
+00029 \}
+00030 
+00031 \textcolor{keywordtype}{void} info(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *info\_message) \{
+00032   \textcolor{keywordflow}{if}(log_level>ERROR) \{
+00033     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, info\_message);
+00034   \}
+00035 \}
+00036 
+00037 \textcolor{keywordtype}{void} debug(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *debug\_message) \{
+00038   \textcolor{keywordflow}{if}(log_level>ERROR) \{
+00039     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
+00040   \}
+00041 \}
+\end{DoxyCode}

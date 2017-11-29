@@ -1,0 +1,244 @@
+.TH "src/drive.c" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/drive.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'drive\&.h'\fP
+.br
+\fC#include 'motor_ports\&.h'\fP
+.br
+\fC#include 'vmath\&.h'\fP
+.br
+\fC#include 'controller\&.h'\fP
+.br
+\fC#include 'slew\&.h'\fP
+.br
+\fC#include <API\&.h>\fP
+.br
+\fC#include 'log\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBgetThresh\fP ()"
+.br
+.RI "Gets the deadzone threshhold on the drive\&. "
+.ti -1c
+.RI "static float \fBjoystickExp\fP (int joystickVal)"
+.br
+.RI "Applies exponential scale to a joystick value\&. "
+.ti -1c
+.RI "void \fBset_side_speed\fP (\fBside_t\fP \fBside\fP, int speed)"
+.br
+.RI "sets the speed of one side of the robot\&. "
+.ti -1c
+.RI "void \fBsetThresh\fP (int t)"
+.br
+.RI "Sets the deadzone threshhold on the drive\&. "
+.ti -1c
+.RI "void \fBupdate_drive_motors\fP ()"
+.br
+.RI "Updates the drive motors during teleop\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static int \fBthresh\fP = 30"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int getThresh ()"
+
+.PP
+Gets the deadzone threshhold on the drive\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file drive\&.c\&.
+.PP
+References thresh\&.
+.PP
+.nf
+17                {
+18   return thresh;
+19 }
+.fi
+.SS "static float joystickExp (int joystickVal)\fC [static]\fP"
+
+.PP
+Applies exponential scale to a joystick value\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian DeSimone, Chris Jerrett 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIjoystickVal\fP the analog value from the joystick 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/21/2017 
+.RE
+.PP
+
+.PP
+Definition at line 87 of file drive\&.c\&.
+.PP
+References THRESHOLD\&.
+.PP
+.nf
+87                                           {
+88     //make the offset negative if moving backwards
+89     if (abs(joystickVal) < THRESHOLD) {
+90             return 0;
+91     }
+92 
+93     int offset;
+94   //Use the threshold to ensure the joystick values are significant
+95     if (joystickVal < 0) {
+96         offset = - (THRESHOLD);
+97     } else {
+98         offset = THRESHOLD;
+99     }
+100   //Apply the function ((((x/10)^3)/18) + offset) * 0\&.8 to the joystick value
+101     return (pow(joystickVal/10 , 3) / 18 + offset) * 0\&.8;
+102 }
+.fi
+.SS "void set_side_speed (\fBside_t\fP side, int speed)"
+
+.PP
+sets the speed of one side of the robot\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIside\fP a side enum which indicates the size\&. 
+.br
+\fIspeed\fP the speed of the side\&. Can range from -127 - 127 negative being back and positive forwards 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file drive\&.c\&.
+.PP
+References BOTH, LEFT, MOTOR_BACK_LEFT, MOTOR_BACK_RIGHT, MOTOR_FRONT_LEFT, MOTOR_FRONT_RIGHT, MOTOR_MIDDLE_LEFT, MOTOR_MIDDLE_RIGHT, RIGHT, and set_motor_slew()\&.
+.PP
+Referenced by autonomous(), and update_drive_motors()\&.
+.PP
+.nf
+68                                            {
+69   if(side == RIGHT || side == BOTH){
+70     set_motor_slew(MOTOR_BACK_RIGHT , -speed);
+71     set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
+72     set_motor_slew(MOTOR_MIDDLE_RIGHT, -speed);
+73   }
+74   if(side == LEFT || side == BOTH){
+75     set_motor_slew(MOTOR_BACK_LEFT, speed);
+76     set_motor_slew(MOTOR_MIDDLE_LEFT, speed);
+77     set_motor_slew(MOTOR_FRONT_LEFT, speed);
+78   }
+79 }
+.fi
+.SS "void setThresh (int t)"
+
+.PP
+Sets the deadzone threshhold on the drive\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file drive\&.c\&.
+.PP
+References thresh\&.
+.PP
+.nf
+25                      {
+26   thresh = t;
+27 }
+.fi
+.SS "void update_drive_motors ()"
+
+.PP
+Updates the drive motors during teleop\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/5/17 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file drive\&.c\&.
+.PP
+References get_mode(), joystickGetAnalog(), LEFT, MASTER, PARTNER, PARTNER_CONTROLLER_MODE, RIGHT, set_side_speed(), thresh, cord::x, and cord::y\&.
+.PP
+Referenced by operatorControl()\&.
+.PP
+.nf
+34                           {
+35   //Get the joystick values from the controller
+36   int x = 0;
+37   int y = 0;
+38   if(get_mode() == PARTNER_CONTROLLER_MODE) {
+39     x = (joystickGetAnalog(PARTNER, 3));
+40     y = (joystickGetAnalog(PARTNER, 1));
+41   } else {
+42     x = -(joystickGetAnalog(MASTER, 3));
+43     y = (joystickGetAnalog(MASTER, 1));
+44   }
+45   //Make sure the joystick values are significant enough to change the motors
+46   if(x < thresh && x > -thresh){
+47     x = 0;
+48   }
+49   if(y < thresh && y > -thresh){
+50     y = 0;
+51   }
+52   //Create motor values for the left and right from the x and y of the joystick
+53   int r = (x + y);
+54   int l = -(x - y);
+55 
+56   //Set the drive motors
+57   set_side_speed(LEFT, l);
+58   set_side_speed(RIGHT, -r);
+59 
+60 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "int thresh = 30\fC [static]\fP"
+
+.PP
+Definition at line 10 of file drive\&.c\&.
+.PP
+Referenced by getThresh(), setThresh(), and update_drive_motors()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

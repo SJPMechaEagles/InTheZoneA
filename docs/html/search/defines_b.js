@@ -7,8 +7,6 @@ var searchData=
   ['left_5fbuttons',['LEFT_BUTTONS',['../controller_8h.html#a9b885de9f143efd0c862ceb054256536',1,'controller.h']]],
   ['left_5fjoy_5fx',['LEFT_JOY_X',['../controller_8h.html#ac055a23829dc64aa20b8e2e1bcfbf316',1,'controller.h']]],
   ['left_5fjoy_5fy',['LEFT_JOY_Y',['../controller_8h.html#ae0a2b64db5fc4f4bf4b169185be93db3',1,'controller.h']]],
-  ['length_5flong',['LENGTH_LONG',['../lifter_8h.html#a5316887685f2a00f49b20b763265dd82',1,'lifter.h']]],
-  ['length_5fshort',['LENGTH_SHORT',['../lifter_8h.html#a9f5587e68e4a817287ffd37fa03342b4',1,'lifter.h']]],
   ['lifter',['LIFTER',['../sensor__ports_8h.html#a1968b8c13fa0757cc721c96a67407d9b',1,'sensor_ports.h']]],
   ['lifter_5fd',['LIFTER_D',['../lifter_8h.html#ad03f59237a197767913457abd53f1780',1,'lifter.h']]],
   ['lifter_5fdown',['LIFTER_DOWN',['../lifter_8h.html#a12f8c1de242a92f5694e6b80b990773a',1,'lifter.h']]],

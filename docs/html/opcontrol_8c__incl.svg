@@ -123,7 +123,7 @@ var sectionId = 'dynsection-0';
 <!-- Node15 -->
 <g id="node16" class="node">
 <title>Node15</title>
-<g id="a_node16"><a xlink:href="lifter_8h.html" target="_top" xlink:title="lifter.h">
+<g id="a_node16"><a xlink:href="lifter_8h.html" target="_top" xlink:title="Declarations and macros for controlling and manipulating the lifter. ">
 <polygon fill="none" stroke="#000000" points="416.7252,-275.5 416.7252,-293.5 459.4097,-293.5 459.4097,-275.5 416.7252,-275.5"/>
 <text text-anchor="middle" x="438.0674" y="-281.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lifter.h</text>
 </a>
@@ -138,7 +138,7 @@ var sectionId = 'dynsection-0';
 <!-- Node19 -->
 <g id="node20" class="node">
 <title>Node19</title>
-<g id="a_node20"><a xlink:href="localization_8h.html" target="_top" xlink:title="localization.h">
+<g id="a_node20"><a xlink:href="localization_8h.html" target="_top" xlink:title="Declarations and macros for determining the location of the robot. [WIP]. ">
 <polygon fill="none" stroke="#000000" points="105.1612,-165.5 105.1612,-183.5 178.9737,-183.5 178.9737,-165.5 105.1612,-165.5"/>
 <text text-anchor="middle" x="142.0674" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">localization.h</text>
 </a>
@@ -153,7 +153,7 @@ var sectionId = 'dynsection-0';
 <!-- Node22 -->
 <g id="node23" class="node">
 <title>Node22</title>
-<g id="a_node23"><a xlink:href="claw_8h.html" target="_top" xlink:title="claw.h">
+<g id="a_node23"><a xlink:href="claw_8h.html" target="_top" xlink:title="Code for controlling the claw that grabs the cones. ">
 <polygon fill="none" stroke="#000000" points="574.1685,-220.5 574.1685,-238.5 617.9664,-238.5 617.9664,-220.5 574.1685,-220.5"/>
 <text text-anchor="middle" x="596.0674" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">claw.h</text>
 </a>
@@ -330,7 +330,7 @@ var sectionId = 'dynsection-0';
 <!-- Node13 -->
 <g id="node14" class="node">
 <title>Node13</title>
-<g id="a_node14"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros ">
+<g id="a_node14"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros and functions to assist with usig the vex controllers. ">
 <polygon fill="none" stroke="#000000" points="447.607,-110.5 447.607,-128.5 512.5279,-128.5 512.5279,-110.5 447.607,-110.5"/>
 <text text-anchor="middle" x="480.0674" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">controller.h</text>
 </a>
@@ -393,7 +393,7 @@ var sectionId = 'dynsection-0';
 <!-- Node16 -->
 <g id="node17" class="node">
 <title>Node16</title>
-<g id="a_node17"><a xlink:href="motor__ports_8h.html" target="_top" xlink:title="motor_ports.h">
+<g id="a_node17"><a xlink:href="motor__ports_8h.html" target="_top" xlink:title="The motor port definitionsMacros for the different motors ports. ">
 <polygon fill="none" stroke="#000000" points="575.2203,-165.5 575.2203,-183.5 652.9146,-183.5 652.9146,-165.5 575.2203,-165.5"/>
 <text text-anchor="middle" x="614.0674" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">motor_ports.h</text>
 </a>

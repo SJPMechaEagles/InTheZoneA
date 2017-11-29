@@ -1,76 +1,102 @@
-\hypertarget{battery_8h}{}\section{include/battery.h File Reference}
+\subsection{include/battery.h File Reference}
 \label{battery_8h}\index{include/battery.\+h@{include/battery.\+h}}
+
+
+Battery management related functions.  
+
+
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
-Include dependency graph for battery.\+h\+:
-\nopagebreak
+Include dependency graph for battery.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=338pt]{battery_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=169pt]{battery_8h__dep__incl}
 \end{center}
 \end{figure}
-\subsection*{Macros}
+\subsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{battery_8h_a0713ec94f47c403bf536ab6b11833b81}{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}~7.\+8
-\item 
-\#define \hyperlink{battery_8h_a63f8a91bb74417aa77dc00340b6fd007}{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}~7.\+8
-\end{DoxyCompactItemize}
-\subsection*{Functions}
+\#define \textbf{ M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}~7.\+8
+\begin{DoxyCompactList}\small\item\em The minimum acceptable backup battery voltage beofre a match. \end{DoxyCompactList}\item 
+\#define \textbf{ M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}~7.\+8
+\begin{DoxyCompactList}\small\item\em The minimum acceptable main battery voltage beofre a match. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-double \hyperlink{battery_8h_a9b1c5cf7ddddebf63796050a1d4a9969}{backup\+\_\+battery\+\_\+voltage} ()
+double \textbf{ backup\+\_\+battery\+\_\+voltage} ()
 \begin{DoxyCompactList}\small\item\em gets the backup battery voltage \end{DoxyCompactList}\item 
-bool \hyperlink{battery_8h_a1097bbb878f6e2690f8eea6cd231959a}{battery\+\_\+level\+\_\+acceptable} ()
+bool \textbf{ battery\+\_\+level\+\_\+acceptable} ()
 \begin{DoxyCompactList}\small\item\em returns if the batteries are acceptable \end{DoxyCompactList}\item 
-double \hyperlink{battery_8h_a8c92c389534fdb079698cdebeb7f2efa}{main\+\_\+battery\+\_\+voltage} ()
+double \textbf{ main\+\_\+battery\+\_\+voltage} ()
 \begin{DoxyCompactList}\small\item\em gets the main battery voltage \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Macro Definition Documentation}
-\mbox{\Hypertarget{battery_8h_a0713ec94f47c403bf536ab6b11833b81}\label{battery_8h_a0713ec94f47c403bf536ab6b11833b81}} 
+\subsubsection{Detailed Description}
+Battery management related functions. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/18/2017 
+\end{DoxyDate}
+
+
+Definition in file \textbf{ battery.\+h}.
+
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\label{battery_8h_a0713ec94f47c403bf536ab6b11833b81}} 
 \index{battery.\+h@{battery.\+h}!M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE@{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}}
 \index{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE@{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}!battery.\+h@{battery.\+h}}
-\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}{MIN\_BACKUP\_VOLTAGE}}
+\paragraph{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}
 {\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE~7.\+8}
+
+
 
 The minimum acceptable backup battery voltage beofre a match. 
 
-Definition at line 14 of file battery.\+h.
+
+
+Definition at line \textbf{ 20} of file \textbf{ battery.\+h}.
 
 
 
-Referenced by battery\+\_\+level\+\_\+acceptable().
+Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 
-\mbox{\Hypertarget{battery_8h_a63f8a91bb74417aa77dc00340b6fd007}\label{battery_8h_a63f8a91bb74417aa77dc00340b6fd007}} 
+\mbox{\label{battery_8h_a63f8a91bb74417aa77dc00340b6fd007}} 
 \index{battery.\+h@{battery.\+h}!M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE@{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}}
 \index{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE@{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}!battery.\+h@{battery.\+h}}
-\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}{MIN\_MAIN\_VOLTAGE}}
+\paragraph{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}
 {\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE~7.\+8}
+
+
 
 The minimum acceptable main battery voltage beofre a match. 
 
-Definition at line 9 of file battery.\+h.
+
+
+Definition at line \textbf{ 15} of file \textbf{ battery.\+h}.
 
 
 
-Referenced by battery\+\_\+level\+\_\+acceptable().
+Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 
 
 
-\subsection{Function Documentation}
-\mbox{\Hypertarget{battery_8h_a9b1c5cf7ddddebf63796050a1d4a9969}\label{battery_8h_a9b1c5cf7ddddebf63796050a1d4a9969}} 
+\subsubsection{Function Documentation}
+\mbox{\label{battery_8h_a9b1c5cf7ddddebf63796050a1d4a9969}} 
 \index{battery.\+h@{battery.\+h}!backup\+\_\+battery\+\_\+voltage@{backup\+\_\+battery\+\_\+voltage}}
 \index{backup\+\_\+battery\+\_\+voltage@{backup\+\_\+battery\+\_\+voltage}!battery.\+h@{battery.\+h}}
-\subsubsection{\texorpdfstring{backup\+\_\+battery\+\_\+voltage()}{backup\_battery\_voltage()}}
+\paragraph{backup\+\_\+battery\+\_\+voltage()}
 {\footnotesize\ttfamily double backup\+\_\+battery\+\_\+voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -82,21 +108,21 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line 8 of file battery.\+c.
+Definition at line \textbf{ 17} of file \textbf{ battery.\+c}.
 
 
 
-References power\+Level\+Backup().
+References \textbf{ power\+Level\+Backup()}.
 
 
 
-Referenced by battery\+\_\+level\+\_\+acceptable().
+Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 
 
 \begin{DoxyCode}
-8                                 \{
-9   \textcolor{keywordflow}{return} \hyperlink{_a_p_i_8h_a91ac9eacbf0930cd5f26bc12b90b9efd}{powerLevelBackup}() / 1000.0;
-10 \}
+00017                                 \{
+00018   \textcolor{keywordflow}{return} powerLevelBackup() / 1000.0;
+00019 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -112,10 +138,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{battery_8h_a9b1c5cf7ddddebf63796050a1d4a9969_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{battery_8h_a1097bbb878f6e2690f8eea6cd231959a}\label{battery_8h_a1097bbb878f6e2690f8eea6cd231959a}} 
+\mbox{\label{battery_8h_a1097bbb878f6e2690f8eea6cd231959a}} 
 \index{battery.\+h@{battery.\+h}!battery\+\_\+level\+\_\+acceptable@{battery\+\_\+level\+\_\+acceptable}}
 \index{battery\+\_\+level\+\_\+acceptable@{battery\+\_\+level\+\_\+acceptable}!battery.\+h@{battery.\+h}}
-\subsubsection{\texorpdfstring{battery\+\_\+level\+\_\+acceptable()}{battery\_level\_acceptable()}}
+\paragraph{battery\+\_\+level\+\_\+acceptable()}
 {\footnotesize\ttfamily bool battery\+\_\+level\+\_\+acceptable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -123,28 +149,28 @@ Here is the caller graph for this function\+:\nopagebreak
 returns if the batteries are acceptable 
 
 \begin{DoxySeeAlso}{See also}
-\hyperlink{battery_8h_a63f8a91bb74417aa77dc00340b6fd007}{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE} 
+\doxyref{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}{p.}{battery_8h_a63f8a91bb74417aa77dc00340b6fd007} 
 
-\hyperlink{battery_8h_a0713ec94f47c403bf536ab6b11833b81}{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}
+\doxyref{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}{p.}{battery_8h_a0713ec94f47c403bf536ab6b11833b81}
 \end{DoxySeeAlso}
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 
 
-Definition at line 12 of file battery.\+c.
+Definition at line \textbf{ 28} of file \textbf{ battery.\+c}.
 
 
 
-References backup\+\_\+battery\+\_\+voltage(), main\+\_\+battery\+\_\+voltage(), M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE, and M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE.
+References \textbf{ backup\+\_\+battery\+\_\+voltage()}, \textbf{ main\+\_\+battery\+\_\+voltage()}, \textbf{ M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}, and \textbf{ M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}.
 
 
 \begin{DoxyCode}
-12                                 \{
-13   \textcolor{keywordflow}{if}(\hyperlink{battery_8c_a8c92c389534fdb079698cdebeb7f2efa}{main\_battery\_voltage}() < \hyperlink{battery_8h_a63f8a91bb74417aa77dc00340b6fd007}{MIN\_MAIN\_VOLTAGE}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-14   \textcolor{keywordflow}{if}(\hyperlink{battery_8c_a9b1c5cf7ddddebf63796050a1d4a9969}{backup\_battery\_voltage}() < \hyperlink{battery_8h_a0713ec94f47c403bf536ab6b11833b81}{MIN\_BACKUP\_VOLTAGE}) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-15   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-16 \}
+00028                                 \{
+00029   \textcolor{keywordflow}{if}(main_battery_voltage() < MIN_MAIN_VOLTAGE) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00030   \textcolor{keywordflow}{if}(backup_battery_voltage() < MIN_BACKUP_VOLTAGE) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00031   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00032 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -153,10 +179,10 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{battery_8h_a1097bbb878f6e2690f8eea6cd231959a_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{battery_8h_a8c92c389534fdb079698cdebeb7f2efa}\label{battery_8h_a8c92c389534fdb079698cdebeb7f2efa}} 
+\mbox{\label{battery_8h_a8c92c389534fdb079698cdebeb7f2efa}} 
 \index{battery.\+h@{battery.\+h}!main\+\_\+battery\+\_\+voltage@{main\+\_\+battery\+\_\+voltage}}
 \index{main\+\_\+battery\+\_\+voltage@{main\+\_\+battery\+\_\+voltage}!battery.\+h@{battery.\+h}}
-\subsubsection{\texorpdfstring{main\+\_\+battery\+\_\+voltage()}{main\_battery\_voltage()}}
+\paragraph{main\+\_\+battery\+\_\+voltage()}
 {\footnotesize\ttfamily double main\+\_\+battery\+\_\+voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -168,21 +194,21 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line 4 of file battery.\+c.
+Definition at line \textbf{ 9} of file \textbf{ battery.\+c}.
 
 
 
-References power\+Level\+Main().
+References \textbf{ power\+Level\+Main()}.
 
 
 
-Referenced by battery\+\_\+level\+\_\+acceptable().
+Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 
 
 \begin{DoxyCode}
-4                               \{
-5   \textcolor{keywordflow}{return} \hyperlink{_a_p_i_8h_aeb5efefae0d6fa559dae5a7e5a77c956}{powerLevelMain}() / 1000.0;
-6 \}
+00009                               \{
+00010   \textcolor{keywordflow}{return} powerLevelMain() / 1000.0;
+00011 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

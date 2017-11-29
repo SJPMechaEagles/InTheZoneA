@@ -123,7 +123,7 @@ var sectionId = 'dynsection-7';
 <!-- Node64 -->
 <g id="node12" class="node">
 <title>Node64</title>
-<g id="a_node12"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="set_lifter_motors">
+<g id="a_node12"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="Sets the lifter motors to the given value. ">
 <polygon fill="none" stroke="#000000" points="149.5488,-75.5 149.5488,-93.5 239.4648,-93.5 239.4648,-75.5 149.5488,-75.5"/>
 <text text-anchor="middle" x="194.5068" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">set_lifter_motors</text>
 </a>
@@ -204,7 +204,7 @@ var sectionId = 'dynsection-7';
 <!-- Node62 -->
 <g id="node10" class="node">
 <title>Node62</title>
-<g id="a_node10"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updateIntake">
+<g id="a_node10"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updates the mobile goal intake in teleop. ">
 <polygon fill="none" stroke="#000000" points="385.0039,-150.5 385.0039,-168.5 458.8311,-168.5 458.8311,-150.5 385.0039,-150.5"/>
 <text text-anchor="middle" x="421.9175" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">updateIntake</text>
 </a>
@@ -273,7 +273,7 @@ var sectionId = 'dynsection-7';
 <!-- Node66 -->
 <g id="node14" class="node">
 <title>Node66</title>
-<g id="a_node14"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="update_lifter">
+<g id="a_node14"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="Updates the lifter in teleop. ">
 <polygon fill="none" stroke="#000000" points="386.3979,-56.5 386.3979,-74.5 457.437,-74.5 457.437,-56.5 386.3979,-56.5"/>
 <text text-anchor="middle" x="421.9175" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_lifter</text>
 </a>

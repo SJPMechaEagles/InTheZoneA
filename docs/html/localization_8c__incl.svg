@@ -17,7 +17,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="localization_8h.html" target="_top" xlink:title="localization.h">
+<g id="a_node2"><a xlink:href="localization_8h.html" target="_top" xlink:title="Declarations and macros for determining the location of the robot. [WIP]. ">
 <polygon fill="none" stroke="#000000" points="160.936,-165.5 160.936,-183.5 234.7485,-183.5 234.7485,-165.5 160.936,-165.5"/>
 <text text-anchor="middle" x="197.8423" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">localization.h</text>
 </a>

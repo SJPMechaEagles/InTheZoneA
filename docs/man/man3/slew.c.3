@@ -1,0 +1,264 @@
+.TH "src/slew.c" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/slew.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'slew\&.h'\fP
+.br
+\fC#include 'log\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdeinitslew\fP ()"
+.br
+.RI "Deinitializes the slew rate controller and frees memory\&. "
+.ti -1c
+.RI "void \fBinit_slew\fP ()"
+.br
+.RI "Initializes the slew rate controller\&. "
+.ti -1c
+.RI "void \fBset_motor_immediate\fP (int motor, int speed)"
+.br
+.ti -1c
+.RI "void \fBset_motor_slew\fP (int motor, int speed)"
+.br
+.RI "Sets motor speed wrapped inside the slew rate controller\&. "
+.ti -1c
+.RI "void \fBupdateMotors\fP ()"
+.br
+.RI "Closes the distance between the desired motor value and the current motor value by half for each motor\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBinitialized\fP = false"
+.br
+.ti -1c
+.RI "static int \fBmotors_curr_speeds\fP [10]"
+.br
+.ti -1c
+.RI "static int \fBmotors_set_speeds\fP [10]"
+.br
+.ti -1c
+.RI "static \fBTaskHandle\fP \fBslew\fP = NULL"
+.br
+.ti -1c
+.RI "static \fBMutex\fP \fBspeeds_mutex\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void deinitslew ()"
+
+.PP
+Deinitializes the slew rate controller and frees memory\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/14/17 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file slew\&.c\&.
+.PP
+References initialized, motors_curr_speeds, motors_set_speeds, slew, and taskDelete()\&.
+.PP
+Referenced by autonomous()\&.
+.PP
+.nf
+43                  {
+44   taskDelete(slew);
+45   memset(motors_set_speeds, 0, sizeof(int) * 10);
+46   memset(motors_curr_speeds, 0, sizeof(int) * 10);
+47   initialized = false;
+48 }
+.fi
+.SS "void init_slew ()"
+
+.PP
+Initializes the slew rate controller\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett, Christian DeSimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/14/17 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file slew\&.c\&.
+.PP
+References info(), initialized, motors_curr_speeds, motors_set_speeds, motorStopAll(), mutexCreate(), slew, speeds_mutex, taskRunLoop(), updateMotors(), and warning()\&.
+.PP
+Referenced by autonomous(), operatorControl(), set_motor_immediate(), and set_motor_slew()\&.
+.PP
+.nf
+30                 {
+31   if(initialized) {
+32     warning("Trying to init already init slew");
+33   }
+34   memset(motors_set_speeds, 0, sizeof(int) * 10);
+35   memset(motors_curr_speeds, 0, sizeof(int) * 10);
+36   motorStopAll();
+37   info("Did Init Slew");
+38   speeds_mutex = mutexCreate();
+39   slew = taskRunLoop(updateMotors, 100);
+40   initialized = true;
+41 }
+.fi
+.SS "void set_motor_immediate (int motor, int speed)"
+
+.PP
+Definition at line 60 of file slew\&.c\&.
+.PP
+References debug(), init_slew(), initialized, motors_curr_speeds, motors_set_speeds, motorSet(), mutexGive(), mutexTake(), and speeds_mutex\&.
+.PP
+Referenced by close_claw(), open_claw(), set_claw_motor(), set_intake_motor(), and set_lifter_motors()\&.
+.PP
+.nf
+60                                                {
+61   if(!initialized) {
+62     debug("Slew Not Initialized! Initializing");
+63     init_slew();
+64   }
+65   motorSet(motor, speed);
+66   mutexTake(speeds_mutex, 10);
+67   motors_curr_speeds[motor-1] = speed;
+68   motors_set_speeds[motor-1] = speed;
+69   mutexGive(speeds_mutex);
+70 }
+.fi
+.SS "void set_motor_slew (int motor, int speed)"
+
+.PP
+Sets motor speed wrapped inside the slew rate controller\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImotor\fP the motor port to use 
+.br
+\fIspeed\fP the speed to use, between -127 and 127 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/14/17 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file slew\&.c\&.
+.PP
+References debug(), init_slew(), initialized, motors_set_speeds, mutexGive(), mutexTake(), and speeds_mutex\&.
+.PP
+Referenced by set_side_speed()\&.
+.PP
+.nf
+50                                          {
+51   if(!initialized) {
+52     debug("Slew Not Initialized! Initializing");
+53     init_slew();
+54   }
+55   mutexTake(speeds_mutex, 10);
+56   motors_set_speeds[motor-1] = speed;
+57   mutexGive(speeds_mutex);
+58 }
+.fi
+.SS "void updateMotors ()"
+
+.PP
+Closes the distance between the desired motor value and the current motor value by half for each motor\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/14/17 
+.RE
+.PP
+
+.PP
+Definition at line 13 of file slew\&.c\&.
+.PP
+References motors_curr_speeds, motors_set_speeds, motorSet(), mutexGive(), mutexTake(), and speeds_mutex\&.
+.PP
+Referenced by init_slew()\&.
+.PP
+.nf
+13                    {
+14   //Take back half approach
+15   //Not linear but equal to setSpeed(1-(1/2)^x)
+16   for(unsigned int i = 0; i < 9; i++) {
+17     if(motors_set_speeds[i] == motors_curr_speeds[i]) continue;
+18     mutexTake(speeds_mutex, 10);
+19     int set_speed = (motors_set_speeds[i]);
+20     int curr_speed = motors_curr_speeds[i];
+21     mutexGive(speeds_mutex);
+22     int diff = set_speed - curr_speed;
+23     int offset = diff;
+24     int n = curr_speed + offset;
+25     motors_curr_speeds[i] = n;
+26     motorSet(i+1, n);
+27   }
+28 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "bool initialized = false\fC [static]\fP"
+
+.PP
+Definition at line 11 of file slew\&.c\&.
+.PP
+Referenced by deinitslew(), init_slew(), set_motor_immediate(), and set_motor_slew()\&.
+.SS "int motors_curr_speeds[10]\fC [static]\fP"
+
+.PP
+Definition at line 7 of file slew\&.c\&.
+.PP
+Referenced by deinitslew(), init_slew(), set_motor_immediate(), and updateMotors()\&.
+.SS "int motors_set_speeds[10]\fC [static]\fP"
+
+.PP
+Definition at line 6 of file slew\&.c\&.
+.PP
+Referenced by deinitslew(), init_slew(), set_motor_immediate(), set_motor_slew(), and updateMotors()\&.
+.SS "\fBTaskHandle\fP slew = NULL\fC [static]\fP"
+
+.PP
+Definition at line 9 of file slew\&.c\&.
+.PP
+Referenced by deinitslew(), and init_slew()\&.
+.SS "\fBMutex\fP speeds_mutex\fC [static]\fP"
+
+.PP
+Definition at line 4 of file slew\&.c\&.
+.PP
+Referenced by init_slew(), set_motor_immediate(), set_motor_slew(), and updateMotors()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

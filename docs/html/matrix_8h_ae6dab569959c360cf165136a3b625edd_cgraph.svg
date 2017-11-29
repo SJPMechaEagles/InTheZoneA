@@ -17,7 +17,7 @@
 <!-- Node22 -->
 <g id="node2" class="node">
 <title>Node22</title>
-<g id="a_node2"><a xlink:href="matrix_8c.html#aa40f301fe71dfcea781169d3e6f14025" target="_top" xlink:title="assert">
+<g id="a_node2"><a xlink:href="matrix_8c.html#a8e41e30382335ea89f90b72db0b44d6f" target="_top" xlink:title="Asserts a condition is true. ">
 <polygon fill="none" stroke="#000000" points="335.4922,-38.5 335.4922,-56.5 378.7236,-56.5 378.7236,-38.5 335.4922,-38.5"/>
 <text text-anchor="middle" x="357.1079" y="-44.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">assert</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node24 -->
 <g id="node4" class="node">
 <title>Node24</title>
-<g id="a_node4"><a xlink:href="matrix_8c.html#ae98365c910e9d688d2bdedec50d89a6b" target="_top" xlink:title="freeMatrix">
+<g id="a_node4"><a xlink:href="matrix_8c.html#ae98365c910e9d688d2bdedec50d89a6b" target="_top" xlink:title="Frees the resources of a matrix. ">
 <polygon fill="none" stroke="#000000" points="131.4727,-76.5 131.4727,-94.5 191.9258,-94.5 191.9258,-76.5 131.4727,-76.5"/>
 <text text-anchor="middle" x="161.6992" y="-82.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">freeMatrix</text>
 </a>
@@ -47,7 +47,7 @@
 <!-- Node25 -->
 <g id="node5" class="node">
 <title>Node25</title>
-<g id="a_node5"><a xlink:href="matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c" target="_top" xlink:title="makeMatrix">
+<g id="a_node5"><a xlink:href="matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c" target="_top" xlink:title="Makes a matrix with a width and height parameters. ">
 <polygon fill="none" stroke="#000000" points="231.8174,-38.5 231.8174,-56.5 299.4922,-56.5 299.4922,-38.5 231.8174,-38.5"/>
 <text text-anchor="middle" x="265.6548" y="-44.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">makeMatrix</text>
 </a>
@@ -62,7 +62,7 @@
 <!-- Node26 -->
 <g id="node6" class="node">
 <title>Node26</title>
-<g id="a_node6"><a xlink:href="matrix_8c.html#ae4babf9b518a2d5d6b12776191e3b7de" target="_top" xlink:title="meanMatrix">
+<g id="a_node6"><a xlink:href="matrix_8c.html#ae4babf9b518a2d5d6b12776191e3b7de" target="_top" xlink:title="Given an &quot;m rows by n columns&quot; matrix, return a matrix where each element represents the mean of that...">
 <polygon fill="none" stroke="#000000" points="127.5811,-.5 127.5811,-18.5 195.8174,-18.5 195.8174,-.5 127.5811,-.5"/>
 <text text-anchor="middle" x="161.6992" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">meanMatrix</text>
 </a>

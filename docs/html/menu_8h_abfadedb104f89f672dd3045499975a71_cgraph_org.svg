@@ -92,7 +92,7 @@
 <!-- Node8 -->
 <g id="node3" class="node">
 <title>Node8</title>
-<g id="a_node3"><a xlink:href="vmath_8h.html#abd8bbcfabb3ddef2ccaafb9928a37b95" target="_top" xlink:title="min">
+<g id="a_node3"><a xlink:href="vmath_8h.html#abd8bbcfabb3ddef2ccaafb9928a37b95" target="_top" xlink:title="the min of two values ">
 <polygon fill="none" stroke="#000000" points="305.7896,-242.5 305.7896,-260.5 337.9028,-260.5 337.9028,-242.5 305.7896,-242.5"/>
 <text text-anchor="middle" x="321.8462" y="-248.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">min</text>
 </a>
@@ -107,7 +107,7 @@
 <!-- Node9 -->
 <g id="node4" class="node">
 <title>Node9</title>
-<g id="a_node4"><a xlink:href="vmath_8h.html#af082905f7eac6d03e92015146bbc1925" target="_top" xlink:title="max">
+<g id="a_node4"><a xlink:href="vmath_8h.html#af082905f7eac6d03e92015146bbc1925" target="_top" xlink:title="the min of two values ">
 <polygon fill="none" stroke="#000000" points="304.4004,-205.5 304.4004,-223.5 339.292,-223.5 339.292,-205.5 304.4004,-205.5"/>
 <text text-anchor="middle" x="321.8462" y="-211.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">max</text>
 </a>

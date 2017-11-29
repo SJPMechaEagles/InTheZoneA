@@ -179,7 +179,7 @@
 <!-- Node103 -->
 <g id="node13" class="node">
 <title>Node103</title>
-<g id="a_node13"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="set_lifter_motors">
+<g id="a_node13"><a xlink:href="lifter_8c.html#a2cfc188f60f945c824dd7fe7b0b5f4e4" target="_top" xlink:title="Sets the lifter motors to the given value. ">
 <polygon fill="none" stroke="#000000" points="326.918,-113.5 326.918,-131.5 416.834,-131.5 416.834,-113.5 326.918,-113.5"/>
 <text text-anchor="middle" x="371.876" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">set_lifter_motors</text>
 </a>
@@ -263,7 +263,7 @@
 <!-- Node105 -->
 <g id="node15" class="node">
 <title>Node105</title>
-<g id="a_node15"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="update_lifter">
+<g id="a_node15"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="Updates the lifter in teleop. ">
 <polygon fill="none" stroke="#000000" points="595.7129,-95.5 595.7129,-113.5 666.752,-113.5 666.752,-95.5 595.7129,-95.5"/>
 <text text-anchor="middle" x="631.2324" y="-101.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_lifter</text>
 </a>
@@ -326,7 +326,7 @@
 <!-- Node109 -->
 <g id="node19" class="node">
 <title>Node109</title>
-<g id="a_node19"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updateIntake">
+<g id="a_node19"><a xlink:href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118" target="_top" xlink:title="updates the mobile goal intake in teleop. ">
 <polygon fill="none" stroke="#000000" points="594.3188,-188.5 594.3188,-206.5 668.146,-206.5 668.146,-188.5 594.3188,-188.5"/>
 <text text-anchor="middle" x="631.2324" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">updateIntake</text>
 </a>

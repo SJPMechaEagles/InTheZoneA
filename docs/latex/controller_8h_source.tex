@@ -1,0 +1,37 @@
+\subsection{controller.\+h}
+\label{controller_8h_source}\index{include/controller.\+h@{include/controller.\+h}}
+
+\begin{DoxyCode}
+00001 
+00009 \textcolor{preprocessor}{#ifndef \_CONTROLLER\_H\_}
+00010 \textcolor{preprocessor}{#define \_CONTROLLER\_H\_}
+00011 
+00012 \textcolor{preprocessor}{#include "vmath.h"}
+00013 \textcolor{preprocessor}{#include <API.h>}
+00014 
+00015 \textcolor{preprocessor}{#define RIGHT\_BUTTONS 8}
+00016 \textcolor{preprocessor}{#define LEFT\_BUTTONS 7}
+00017 \textcolor{preprocessor}{#define RIGHT\_BUMPERS 5}
+00018 \textcolor{preprocessor}{#define LEFT\_BUMPERS 6}
+00019 
+00025 \textcolor{preprocessor}{#define MASTER 1}
+00026 
+00032 \textcolor{preprocessor}{#define PARTNER 2}
+00033 
+00039 \textcolor{preprocessor}{#define RIGHT\_JOY\_X 1}
+00040 
+00046 \textcolor{preprocessor}{#define RIGHT\_JOY\_Y 2}
+00047 
+00053 \textcolor{preprocessor}{#define LEFT\_JOY\_X 4}
+00054 
+00060 \textcolor{preprocessor}{#define LEFT\_JOY\_Y 3}
+00061 
+00067 \textcolor{keyword}{enum} joystick \{
+00069   RIGHT_JOY,
+00071   LEFT_JOY,
+00072 \};
+00073 
+00078 \textcolor{keyword}{struct }cord get_joystick_cord(enum joystick side, int controller);
+00079 
+00080 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

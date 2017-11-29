@@ -13,6 +13,5 @@ var searchData=
   ['serial_5fstopbits_5f2',['SERIAL_STOPBITS_2',['../_a_p_i_8h.html#a3051a690103146121c8202301dbc4e79',1,'API.h']]],
   ['stdin',['stdin',['../_a_p_i_8h.html#aaca70138f0cb63ddb026921afc635179',1,'API.h']]],
   ['stdout',['stdout',['../_a_p_i_8h.html#a0c0ef221f95f64e8632451312fd18cc8',1,'API.h']]],
-  ['stop_5fone',['STOP_ONE',['../auto_8h.html#a67c9207ce99d4414dce28d8c42ba1d2a',1,'auto.h']]],
-  ['stop_5ftwo',['STOP_TWO',['../auto_8h.html#a48277cb6230d221523bc94b478c1eb0d',1,'auto.h']]]
+  ['stop_5fone',['STOP_ONE',['../auto_8h.html#a67c9207ce99d4414dce28d8c42ba1d2a',1,'auto.h']]]
 ];
