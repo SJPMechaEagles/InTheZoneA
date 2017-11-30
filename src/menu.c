@@ -3,6 +3,12 @@
 static menu_t* create_menu(enum menu_type type, const char *prompt);
 static void calculate_current_display(char* rtn, menu_t *menu);
 
+/**
+* @brief Static function that handles creation of menu.
+* <em> Menu must be freed or will cause memory leak <em>
+* @author Chris Jerrett
+* @date 9/8/17
+**/
 static menu_t* create_menu(enum menu_type type, const char *prompt) {
   menu_t* menu = (menu_t*) malloc(sizeof(menu_t));
   if (!menu) {
@@ -23,6 +29,18 @@ static menu_t* create_menu(enum menu_type type, const char *prompt) {
   return menu;
 }
 
+/**
+* @brief Creates a menu context, but does not display.
+* <em> Menu must be freed or will cause memory leak <em>
+*
+* @param type the type of menu
+* @see menu_type
+* @param nums the number of elements passed to function
+* @param prompt the prompt to display to user
+* @param options the options to display for user
+* @author Chris Jerrett
+* @date 9/8/17
+**/
 menu_t* init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char* options,...){
   menu_t* menu = create_menu(type, prompt);
   va_list values;
@@ -37,6 +55,19 @@ menu_t* init_menu_var(enum menu_type type, unsigned int nums, const char *prompt
   return menu;
 }
 
+/**
+* @brief Creates a menu context, but does not display.
+* <em> Menu must be freed or will cause memory leak <em>
+*
+* @param type the type of menu
+* @see menu_type
+* @param min the minimum value
+* @param max the maximum value
+* @param step the step value
+* @param prompt the prompt to display to user
+* @author Chris Jerrett
+* @date 9/8/17
+**/
 menu_t* init_menu_int(enum menu_type type, int min, int max, int step, const char* prompt){
   menu_t* menu = create_menu(type, prompt);
   menu->min = min;
@@ -45,6 +76,19 @@ menu_t* init_menu_int(enum menu_type type, int min, int max, int step, const cha
   return menu;
 }
 
+/**
+* @brief Creates a menu context, but does not display.
+* <em> Menu must be freed or will cause memory leak! <em>
+*
+* @param type the type of menu
+* @see menu_type
+* @param min the minimum value
+* @param max the maximum value
+* @param step the step value
+* @param prompt the prompt to display to user
+* @author Chris Jerrett
+* @date 9/8/17
+**/
 menu_t* init_menu_float(enum menu_type type, float min, float max, float step, const char* prompt){
   menu_t* menu = create_menu(type, prompt);
   menu->min_f = min;
@@ -79,7 +123,16 @@ static void calculate_current_display(char* rtn, menu_t *menu) {
   }
 }
 
-
+/**
+* @brief Displays a menu context, but does not display.
+* <em> Menu must be freed or will cause memory leak! <em> Will exit if robot is enabled. This prevents menu
+* from locking up system in even of a reset.
+*
+* @param menu the menu to display
+* @see menu_type
+* @author Chris Jerrett
+* @date 9/8/17
+**/
 int display_menu(menu_t *menu){
   lcd_print(TOP_ROW, menu->prompt);
   //Will exit if teleop or autonomous begin. This is extremely important if robot disconnects or resets.
@@ -98,6 +151,15 @@ int display_menu(menu_t *menu){
   return menu->current;
 }
 
+/**
+* @brief Destroys a menu
+* <em> Menu must be freed or will cause memory leak <em>
+*
+* @param menu the menu to free
+* @see menu
+* @author Chris Jerrett
+* @date 9/8/17
+**/
 void denint_menu(menu_t *menu){
   free(menu->prompt);
   if(menu->options != NULL) free(menu->options);

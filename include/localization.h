@@ -47,4 +47,11 @@ bool init_localization(const unsigned char gyro1, unsigned short multiplier, int
 **/
 struct location get_position();
 
+/**
+* @brief Updates the position from the localization
+*
+* @author Chris Jerrett
+**/
+void update_position();
+
 #endif

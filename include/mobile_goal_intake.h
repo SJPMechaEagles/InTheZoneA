@@ -7,6 +7,8 @@
 
 /**
 * @brief updates the mobile goal intake in teleop.
+*
+* @author Chris Jerrett
 */
 void updateIntake();
 

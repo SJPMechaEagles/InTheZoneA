@@ -23,10 +23,22 @@ void set_lifter_pos(int pos) {
 
 }
 
+/**
+* @brief Raises the lifter
+*
+* @author Christian DeSimone
+* @date 9/12/2017
+**/
 void raise_lifter(){
   set_lifter_motors(MAX_SPEED);
 }
 
+/**
+* @brief Lowers the lifter
+*
+* @author Christian DeSimone
+* @date 9/12/2017
+**/
 void lower_lifter(){
   set_lifter_motors(MIN_SPEED);
 }

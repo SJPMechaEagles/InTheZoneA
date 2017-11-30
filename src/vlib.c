@@ -1,5 +1,12 @@
 #include "vlib.h"
 
+/**
+* @brief reverses a string 'str' of length 'len'
+* @author Chris Jerrett
+* @date 9/9/2017
+* @param str the string to reverse
+* @param len the length
+**/
 void reverse(char *str, int len) {
     int i=0, j=len-1, temp;
     while (i<j) {
@@ -10,6 +17,15 @@ void reverse(char *str, int len) {
     }
 }
 
+/**
+* @brief converts a int to string.
+* @param a the integer
+* @param buffer the string the int will be written to.
+* @param digits the number of digits to be written
+* @return the digits
+* @author Chris Jerrett, Christian DeSimone
+* @date 9/9/2017
+**/
 int itoa_bad(int a, char *buffer, int digits) {
   int i = 0;
    while (a) {
@@ -27,6 +43,14 @@ int itoa_bad(int a, char *buffer, int digits) {
    return i;
 }
 
+/**
+* @brief converts a float to string.
+* @param a the float
+* @param buffer the string the float will be written to.
+* @param precision digits after the decimal to write
+* @author Christian DeSimone
+* @date 9/26/2017
+**/
 void ftoa_bad(float a, char *buffer, int precision) {
   // Extract integer part
   int ipart = (int)a;

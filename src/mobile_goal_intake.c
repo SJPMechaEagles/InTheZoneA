@@ -13,6 +13,9 @@ static void raise_intake() {
   set_intake_motor(-100);
 }
 
+/**
+* @brief updates the mobile goal intake in teleop.
+*/
 void updateIntake() {
   if(joystickGetDigital(MASTER, 7, JOY_UP) && (get_mode() == MAIN_CONTROLLER_MODE)
   || joystickGetDigital(PARTNER, 6, JOY_UP) && get_mode() == PARTNER_CONTROLLER_MODE) {

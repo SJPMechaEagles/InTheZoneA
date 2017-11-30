@@ -22,10 +22,21 @@ struct accelerometer_odometry {
 static double calculate_angle();
 static struct accelerometer_odometry calculate_accelerometer_odemetry();
 
+/**
+* @brief Gets the current posituion of the robot
+*
+* @param gyro1 The first gyro
+* @return the loacation of the robot as a struct.
+**/
 struct location get_position() {
 
 }
 
+/**
+* @brief Updates the position from the localization
+*
+* @author Chris Jerrett
+**/
 void update_position() {
   //int curr_theta = calculate_angle();
 

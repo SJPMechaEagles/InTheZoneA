@@ -91,6 +91,22 @@ void set_lifter_motors(const int);
 void set_lifter_pos(int pos);
 
 /**
+* @brief Raises the lifter
+*
+* @author Christian DeSimone
+* @date 9/12/2017
+**/
+void raise_lifter();
+
+/**
+* @brief Lowers the lifter
+*
+* @author Christian DeSimone
+* @date 9/12/2017
+**/
+void lower_lifter();
+
+/**
 * @brief Updates the lifter in teleop.
 *
 * @author Chris Jerrett
