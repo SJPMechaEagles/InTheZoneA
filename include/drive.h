@@ -1,6 +1,6 @@
 /**
 * @file drive.h
-* @author Christian Desimone
+* @author Chris Jerrett
 * @date 9/9/2017
 * @brief Drive base definitions and enumerations
 **/
@@ -9,9 +9,14 @@
 #define _DRIVE_H_
 
 #include <API.h>
+#include "partner.h"
 
-#define DEADSPOT 30
-#define THRESHOLD 30
+/**
+* @brief The dead spot on the controller to avoid running motors at low
+* speeds.
+**/
+#define THRESHOLD 10
+
 /**
 * @brief enumeration indication side of the robot.
 * @author Christian Desimone
@@ -33,12 +38,10 @@ typedef enum side{
 void set_side_speed(side_t side, int speed);
 
 /**
-* @brief Applies exponential scale to a joystick value.
-* @author Christian DeSimone, Chris Jerrett
-* @param joystickVal the analog value from the joystick
-* @date 9/21/2017
+* @brief Sets the deadzone threshhold on the drive.
+* @author Chris Jerrett
 **/
-float joystickExp(int joystickVal);
+void setThresh(int t);
 
 /**
 * @brief Updates the drive motors during teleop

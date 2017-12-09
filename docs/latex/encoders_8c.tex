@@ -1,23 +1,30 @@
-\hypertarget{encoders_8c}{}\section{src/encoders.c File Reference}
+\subsection{src/encoders.c File Reference}
 \label{encoders_8c}\index{src/encoders.\+c@{src/encoders.\+c}}
 {\ttfamily \#include \char`\"{}encoders.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
-\subsection*{Functions}
+Include dependency graph for encoders.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{encoders_8c__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{encoders_8c_aed261dd4dae33a48c42f2e363c84760f}{get\+\_\+encoder\+\_\+ticks} (unsigned char address)
+int \textbf{ get\+\_\+encoder\+\_\+ticks} (unsigned char address)
 \begin{DoxyCompactList}\small\item\em Gets the encoder ticks since last reset. \end{DoxyCompactList}\item 
-int \hyperlink{encoders_8c_a8e6b77703c5cf18e00709b052fb4bf22}{get\+\_\+encoder\+\_\+velocity} (unsigned char address)
+int \textbf{ get\+\_\+encoder\+\_\+velocity} (unsigned char address)
 \begin{DoxyCompactList}\small\item\em Gets the encoder reads. \end{DoxyCompactList}\item 
-bool \hyperlink{encoders_8c_aa6ec1ca17e907babd52803ecba451cd3}{init\+\_\+encoders} ()
+bool \textbf{ init\+\_\+encoders} ()
 \begin{DoxyCompactList}\small\item\em Initializes all motor encoders. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
-\mbox{\Hypertarget{encoders_8c_aed261dd4dae33a48c42f2e363c84760f}\label{encoders_8c_aed261dd4dae33a48c42f2e363c84760f}} 
+\subsubsection{Function Documentation}
+\mbox{\label{encoders_8c_aed261dd4dae33a48c42f2e363c84760f}} 
 \index{encoders.\+c@{encoders.\+c}!get\+\_\+encoder\+\_\+ticks@{get\+\_\+encoder\+\_\+ticks}}
 \index{get\+\_\+encoder\+\_\+ticks@{get\+\_\+encoder\+\_\+ticks}!encoders.\+c@{encoders.\+c}}
-\subsubsection{\texorpdfstring{get\+\_\+encoder\+\_\+ticks()}{get\_encoder\_ticks()}}
+\paragraph{get\+\_\+encoder\+\_\+ticks()}
 {\footnotesize\ttfamily int get\+\_\+encoder\+\_\+ticks (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
 
 
@@ -32,20 +39,31 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 12 of file encoders.\+c.
+Definition at line \textbf{ 23} of file \textbf{ encoders.\+c}.
+
+
+
+References \textbf{ ime\+Get()}.
 
 
 \begin{DoxyCode}
-12                                              \{
-13   \textcolor{keywordtype}{int} i = 0;
-14   imeGet(address, &i);
-15   \textcolor{keywordflow}{return} i;
-16 \}
+00023                                              \{
+00024   \textcolor{keywordtype}{int} i = 0;
+00025   imeGet(address, &i);
+00026   \textcolor{keywordflow}{return} i;
+00027 \}
 \end{DoxyCode}
-\mbox{\Hypertarget{encoders_8c_a8e6b77703c5cf18e00709b052fb4bf22}\label{encoders_8c_a8e6b77703c5cf18e00709b052fb4bf22}} 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{encoders_8c_aed261dd4dae33a48c42f2e363c84760f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{encoders_8c_a8e6b77703c5cf18e00709b052fb4bf22}} 
 \index{encoders.\+c@{encoders.\+c}!get\+\_\+encoder\+\_\+velocity@{get\+\_\+encoder\+\_\+velocity}}
 \index{get\+\_\+encoder\+\_\+velocity@{get\+\_\+encoder\+\_\+velocity}!encoders.\+c@{encoders.\+c}}
-\subsubsection{\texorpdfstring{get\+\_\+encoder\+\_\+velocity()}{get\_encoder\_velocity()}}
+\paragraph{get\+\_\+encoder\+\_\+velocity()}
 {\footnotesize\ttfamily int get\+\_\+encoder\+\_\+velocity (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
 
 
@@ -60,20 +78,31 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line 18 of file encoders.\+c.
+Definition at line \textbf{ 34} of file \textbf{ encoders.\+c}.
+
+
+
+References \textbf{ ime\+Get\+Velocity()}.
 
 
 \begin{DoxyCode}
-18                                                 \{
-19   \textcolor{keywordtype}{int} i = 0;
-20   imeGetVelocity(address, &i);
-21   \textcolor{keywordflow}{return} i;
-22 \}
+00034                                                 \{
+00035   \textcolor{keywordtype}{int} i = 0;
+00036   imeGetVelocity(address, &i);
+00037   \textcolor{keywordflow}{return} i;
+00038 \}
 \end{DoxyCode}
-\mbox{\Hypertarget{encoders_8c_aa6ec1ca17e907babd52803ecba451cd3}\label{encoders_8c_aa6ec1ca17e907babd52803ecba451cd3}} 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{encoders_8c_a8e6b77703c5cf18e00709b052fb4bf22_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{encoders_8c_aa6ec1ca17e907babd52803ecba451cd3}} 
 \index{encoders.\+c@{encoders.\+c}!init\+\_\+encoders@{init\+\_\+encoders}}
 \index{init\+\_\+encoders@{init\+\_\+encoders}!encoders.\+c@{encoders.\+c}}
-\subsubsection{\texorpdfstring{init\+\_\+encoders()}{init\_encoders()}}
+\paragraph{init\+\_\+encoders()}
 {\footnotesize\ttfamily bool init\+\_\+encoders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -87,27 +116,30 @@ Chris Jerrett
 9/9/2017 
 \end{DoxyDate}
 \begin{DoxySeeAlso}{See also}
-\hyperlink{encoders_8h_a87db35d2735ef045f57d446b3bfe8d48}{I\+M\+E\+\_\+\+N\+U\+M\+B\+ER} 
+\doxyref{I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}{p.}{encoders_8h_a87db35d2735ef045f57d446b3bfe8d48} 
 \end{DoxySeeAlso}
 
 
-Definition at line 4 of file encoders.\+c.
+Definition at line \textbf{ 10} of file \textbf{ encoders.\+c}.
 
 
 
-References I\+M\+E\+\_\+\+N\+U\+M\+B\+ER.
-
-
-
-Referenced by initialize().
+References \textbf{ I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}, and \textbf{ ime\+Initialize\+All()}.
 
 
 \begin{DoxyCode}
-4                      \{
-5 \textcolor{preprocessor}{  #ifdef IME\_NUMBER}
-6   \textcolor{keywordflow}{return} imeInitializeAll() == \hyperlink{encoders_8h_a87db35d2735ef045f57d446b3bfe8d48}{IME\_NUMBER};
-7 \textcolor{preprocessor}{  #else}
-8   \textcolor{keywordflow}{return} imeInitializeAll();
-9 \textcolor{preprocessor}{  #endif}
-10 \}
+00010                      \{
+00011 \textcolor{preprocessor}{  #ifdef IME\_NUMBER}
+00012   \textcolor{keywordflow}{return} imeInitializeAll() == IME_NUMBER;
+00013 \textcolor{preprocessor}{  #else}
+00014   \textcolor{keywordflow}{return} imeInitializeAll();
+00015 \textcolor{preprocessor}{  #endif}
+00016 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{encoders_8c_aa6ec1ca17e907babd52803ecba451cd3_cgraph}
+\end{center}
+\end{figure}

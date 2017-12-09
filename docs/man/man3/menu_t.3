@@ -1,0 +1,321 @@
+.TH "menu_t" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+menu_t \- Represents a specific instance of a menu\&. Will cause a memory leak if not deinitialized via denint_menu\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include 'menu\&.h'\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "int \fBcurrent\fP"
+.br
+.RI "contains the current index of menu\&. "
+.ti -1c
+.RI "unsigned int \fBlength\fP"
+.br
+.RI "contains the length of options char**\&. "
+.ti -1c
+.RI "int \fBmax\fP"
+.br
+.RI "contains the maximum int value of menu\&. Defaults to minimum int value "
+.ti -1c
+.RI "float \fBmax_f\fP"
+.br
+.RI "contains the maximum float value of menu\&. Defaults to minimum int value "
+.ti -1c
+.RI "int \fBmin\fP"
+.br
+.RI "contains the minimum int value of menu\&. Defaults to minimum int value "
+.ti -1c
+.RI "float \fBmin_f\fP"
+.br
+.RI "contains the minimum float value of menu\&. Defaults to minimum int value "
+.ti -1c
+.RI "char ** \fBoptions\fP"
+.br
+.RI "contains the array of string options\&. "
+.ti -1c
+.RI "char * \fBprompt\fP"
+.br
+.RI "contains the prompt to display on the first line\&. Step is how much the int menu will increase of decrease with each press\&. Defaults to one "
+.ti -1c
+.RI "int \fBstep\fP"
+.br
+.RI "contains the step int value of menu\&. Step is how much the int menu will increase of decrease with each press\&. Defaults to one "
+.ti -1c
+.RI "float \fBstep_f\fP"
+.br
+.RI "contains the step float value of menu\&. Step is how much the int menu will increase of decrease with each press\&. Defaults to 1\&.0f "
+.ti -1c
+.RI "enum \fBmenu_type\fP \fBtype\fP"
+.br
+.RI "contains the type of menu\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents a specific instance of a menu\&. Will cause a memory leak if not deinitialized via denint_menu\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBmenu\&.h\fP 
+.PP
+\fBmenu_t\fP 
+.PP
+\fBcreate_menu\fP 
+.PP
+init_menu 
+.PP
+\fBdisplay_menu\fP 
+.PP
+\fBmenu_type\fP 
+.PP
+\fBdenint_menu\fP 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file menu\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "int menu_t::current"
+
+.PP
+contains the current index of menu\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 140 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), and display_menu()\&.
+.SS "unsigned int menu_t::length"
+
+.PP
+contains the length of options char**\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 86 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), and init_menu_var()\&.
+.SS "int menu_t::max"
+
+.PP
+contains the maximum int value of menu\&. Defaults to minimum int value 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), create_menu(), and init_menu_int()\&.
+.SS "float menu_t::max_f"
+
+.PP
+contains the maximum float value of menu\&. Defaults to minimum int value 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 126 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), create_menu(), and init_menu_float()\&.
+.SS "int menu_t::min"
+
+.PP
+contains the minimum int value of menu\&. Defaults to minimum int value 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), create_menu(), and init_menu_int()\&.
+.SS "float menu_t::min_f"
+
+.PP
+contains the minimum float value of menu\&. Defaults to minimum int value 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), create_menu(), and init_menu_float()\&.
+.SS "char** menu_t::options"
+
+.PP
+contains the array of string options\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 79 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), denint_menu(), and init_menu_var()\&.
+.SS "char* menu_t::prompt"
+
+.PP
+contains the prompt to display on the first line\&. Step is how much the int menu will increase of decrease with each press\&. Defaults to one 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 147 of file menu\&.h\&.
+.PP
+Referenced by create_menu(), denint_menu(), and display_menu()\&.
+.SS "int menu_t::step"
+
+.PP
+contains the step int value of menu\&. Step is how much the int menu will increase of decrease with each press\&. Defaults to one 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 110 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), create_menu(), and init_menu_int()\&.
+.SS "float menu_t::step_f"
+
+.PP
+contains the step float value of menu\&. Step is how much the int menu will increase of decrease with each press\&. Defaults to 1\&.0f 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 134 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), create_menu(), and init_menu_float()\&.
+.SS "enum \fBmenu_type\fP menu_t::type"
+
+.PP
+contains the type of menu\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/8/17 
+.RE
+.PP
+
+.PP
+Definition at line 72 of file menu\&.h\&.
+.PP
+Referenced by calculate_current_display(), and create_menu()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

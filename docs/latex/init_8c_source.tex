@@ -1,0 +1,46 @@
+\subsection{init.\+c}
+\label{init_8c_source}\index{src/init.\+c@{src/init.\+c}}
+
+\begin{DoxyCode}
+00001 
+00012 \textcolor{preprocessor}{#include "main.h"}
+00013 \textcolor{preprocessor}{#include "slew.h"}
+00014 \textcolor{preprocessor}{#include "lcd.h"}
+00015 \textcolor{preprocessor}{#include "log.h"}
+00016 \textcolor{preprocessor}{#include "encoders.h"}
+00017 \textcolor{preprocessor}{#include "menu.h"}
+00018 
+00019 \textcolor{comment}{/*}
+00020 \textcolor{comment}{ * Runs pre-initialization code. This function will be started in kernel mode one time while the}
+00021 \textcolor{comment}{ * VEX Cortex is starting up. As the scheduler is still paused, most API functions will fail.}
+00022 \textcolor{comment}{ *}
+00023 \textcolor{comment}{ * The purpose of this function is solely to set the default pin modes (pinMode()) and port}
+00024 \textcolor{comment}{ * states (digitalWrite()) of limit switches, push buttons, and solenoids. It can also safely}
+00025 \textcolor{comment}{ * configure a UART port (usartOpen()) but cannot set up an LCD (lcdInit()).}
+00026 \textcolor{comment}{ *}
+00027 \textcolor{comment}{ * AKA DON'T USE}
+00028 \textcolor{comment}{ * -Chris}
+00029 \textcolor{comment}{ */}
+00030 \textcolor{keywordtype}{void} initializeIO() \{
+00031     watchdogInit();
+00032 \}
+00033 
+00034 \textcolor{comment}{/*}
+00035 \textcolor{comment}{ * Runs user initialization code. This function will be started in its own task with the default}
+00036 \textcolor{comment}{ * priority and stack size once when the robot is starting up. It is possible that the VEXnet}
+00037 \textcolor{comment}{ * communication link may not be fully established at this time, so reading from the VEX}
+00038 \textcolor{comment}{ * Joystick may fail.}
+00039 \textcolor{comment}{ *}
+00040 \textcolor{comment}{ * This function should initialize most sensors (gyro, encoders, ultrasonics), LCDs, global}
+00041 \textcolor{comment}{ * variables, and IMEs.}
+00042 \textcolor{comment}{ *}
+00043 \textcolor{comment}{ * This function must exit relatively promptly, or the operatorControl() and autonomous() tasks}
+00044 \textcolor{comment}{ * will not start. An autonomous mode selection menu like the pre\_auton() in other environments}
+00045 \textcolor{comment}{ * can be implemented in this task if desired.}
+00046 \textcolor{comment}{ */}
+00047 \textcolor{keywordtype}{void} initialize() \{
+00048   \textcolor{keywordtype}{int} c = imeInitializeAll();
+00049   setTeamName(\textcolor{stringliteral}{"9228A"});
+00050   printf(\textcolor{stringliteral}{"Counts : %d\(\backslash\)n"}, c);
+00051 \}
+\end{DoxyCode}

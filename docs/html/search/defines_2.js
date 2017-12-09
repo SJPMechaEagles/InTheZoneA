@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['deadspot',['DEADSPOT',['../drive_8h.html#a3d683c4ec93ad778fc5914cd5671a793',1,'drive.h']]],
-  ['debug',['DEBUG',['../log_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'log.h']]]
+  ['board_5fnr_5fadc_5fpins',['BOARD_NR_ADC_PINS',['../_a_p_i_8h.html#ae0f99ae5d6aae10845f04e642560e702',1,'API.h']]],
+  ['board_5fnr_5fgpio_5fpins',['BOARD_NR_GPIO_PINS',['../_a_p_i_8h.html#ae61940b1dacc12c437f11082a6018a1c',1,'API.h']]],
+  ['bottom_5frow',['BOTTOM_ROW',['../lcd_8h.html#a7b55e87550874687b3e25a64e1cfda9d',1,'lcd.h']]]
 ];

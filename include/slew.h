@@ -31,7 +31,7 @@
 * @author Chris Jerrett
 * @date 9/14/17
 **/
-#define RAMP_PROPORTION 2
+#define RAMP_PROPORTION 1
 
 /**
 * @brief Closes the distance between the desired motor value and the current motor value by half for each motor
@@ -62,5 +62,14 @@ void init_slew();
 *@date 9/14/17
 **/
 void set_motor_slew(int motor, int speed);
+
+/**
+* @brief Sets the motor speed ignoring the slew controller
+* @param motor the motor port to use
+* @param speed the speed to use, between -127 and 127
+* @author Chris Jerrett
+* @date 9/14/17
+**/
+void set_motor_immediate(int motor, int speed);
 
 #endif

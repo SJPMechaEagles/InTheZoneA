@@ -1,0 +1,73 @@
+.TH "src/partner.c" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/partner.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'partner\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCONTROLL_MODE\fP \fBget_mode\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdate_control\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static enum \fBCONTROLL_MODE\fP \fBmode\fP = \fBMAIN_CONTROLLER_MODE\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "enum \fBCONTROLL_MODE\fP get_mode ()"
+
+.PP
+Definition at line 5 of file partner\&.c\&.
+.PP
+References mode\&.
+.PP
+Referenced by update_drive_motors(), update_lifter(), and updateIntake()\&.
+.PP
+.nf
+5                               {
+6   return mode;
+7 }
+.fi
+.SS "void update_control ()"
+
+.PP
+Definition at line 9 of file partner\&.c\&.
+.PP
+References JOY_LEFT, JOY_RIGHT, joystickGetDigital(), MAIN_CONTROLLER_MODE, mode, PARTNER, and PARTNER_CONTROLLER_MODE\&.
+.PP
+Referenced by operatorControl()\&.
+.PP
+.nf
+9                       {
+10   if(joystickGetDigital(PARTNER, 7, JOY_LEFT)) {
+11     mode = MAIN_CONTROLLER_MODE;
+12   } else if(joystickGetDigital(PARTNER, 7, JOY_RIGHT)) {
+13     mode = PARTNER_CONTROLLER_MODE;
+14   }
+15 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "enum \fBCONTROLL_MODE\fP mode = \fBMAIN_CONTROLLER_MODE\fP\fC [static]\fP"
+
+.PP
+Definition at line 3 of file partner\&.c\&.
+.PP
+Referenced by get_mode(), and update_control()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

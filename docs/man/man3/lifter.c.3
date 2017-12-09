@@ -1,0 +1,333 @@
+.TH "src/lifter.c" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/lifter.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'lifter\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBgetLifterHeight\fP ()"
+.br
+.RI "Gets the height of the lifter in inches\&. "
+.ti -1c
+.RI "int \fBgetLifterTicks\fP ()"
+.br
+.RI "Gets the value of the lifter pot\&. "
+.ti -1c
+.RI "float \fBlifterPotentiometerToDegree\fP (int x)"
+.br
+.RI "height of the lifter in degrees from 0 height "
+.ti -1c
+.RI "void \fBlower_lifter\fP ()"
+.br
+.ti -1c
+.RI "void \fBraise_lifter\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_lifter_motors\fP (const int v)"
+.br
+.RI "Sets the lifter motors to the given value\&. "
+.ti -1c
+.RI "void \fBset_lifter_pos\fP (int pos)"
+.br
+.RI "Sets the lifter positions to the given value\&. "
+.ti -1c
+.RI "void \fBupdate_lifter\fP ()"
+.br
+.RI "Updates the lifter in teleop\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "double getLifterHeight ()"
+
+.PP
+Gets the height of the lifter in inches\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the height of the lifter\&. 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/17/2017 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file lifter\&.c\&.
+.PP
+References getLifterTicks()\&.
+.PP
+.nf
+137                          {
+138   unsigned int ticks = getLifterTicks();
+139   return (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) + 0\&.0198 * ticks + 2\&.3033);
+140 }
+.fi
+.SS "int getLifterTicks ()"
+
+.PP
+Gets the value of the lifter pot\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+the value of the pot\&. 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/9/2017 
+.RE
+.PP
+
+.PP
+Definition at line 126 of file lifter\&.c\&.
+.PP
+References analogRead(), and LIFTER\&.
+.PP
+Referenced by getLifterHeight(), and update_lifter()\&.
+.PP
+.nf
+126                      {
+127   return analogRead(LIFTER);
+128 }
+.fi
+.SS "float lifterPotentiometerToDegree (int x)"
+
+.PP
+height of the lifter in degrees from 0 height 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP the pot value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the positions in degrees 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+10/13/2017 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file lifter\&.c\&.
+.PP
+References DEG_MAX, INIT_ROTATION, and TICK_MAX\&.
+.PP
+.nf
+115                                         {
+116   return (x - INIT_ROTATION) / TICK_MAX * DEG_MAX;
+117 }
+.fi
+.SS "void lower_lifter ()"
+
+.PP
+Definition at line 30 of file lifter\&.c\&.
+.PP
+References MIN_SPEED, and set_lifter_motors()\&.
+.PP
+Referenced by update_lifter()\&.
+.PP
+.nf
+30                    {
+31   set_lifter_motors(MIN_SPEED);
+32 }
+.fi
+.SS "void raise_lifter ()"
+
+.PP
+Definition at line 26 of file lifter\&.c\&.
+.PP
+References MAX_SPEED, and set_lifter_motors()\&.
+.PP
+Referenced by update_lifter()\&.
+.PP
+.nf
+26                    {
+27   set_lifter_motors(MAX_SPEED);
+28 }
+.fi
+.SS "void set_lifter_motors (const int v)"
+
+.PP
+Sets the lifter motors to the given value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIv\fP value for the lifter motor\&. Between -128 - 127, any values outside are clamped\&. 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/9/2017 
+.RE
+.PP
+
+.PP
+Definition at line 10 of file lifter\&.c\&.
+.PP
+References MOTOR_LIFT_TOP_LEFT, MOTOR_LIFT_TOP_RIGHT, and set_motor_immediate()\&.
+.PP
+Referenced by autonomous(), lower_lifter(), raise_lifter(), and update_lifter()\&.
+.PP
+.nf
+10                                     {
+11   set_motor_immediate(MOTOR_LIFT_TOP_RIGHT, -v);
+12   set_motor_immediate(MOTOR_LIFT_TOP_LEFT, -v);
+13 }
+.fi
+.SS "void set_lifter_pos (int pos)"
+
+.PP
+Sets the lifter positions to the given value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpos\fP The height in inches 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/12/2017 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file lifter\&.c\&.
+.PP
+.nf
+22                              {
+23 
+24 }
+.fi
+.SS "void update_lifter ()"
+
+.PP
+Updates the lifter in teleop\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/9/2017 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file lifter\&.c\&.
+.PP
+References get_mode(), getLifterTicks(), joystickGetDigital(), LIFTER_D, LIFTER_DOWN, LIFTER_DOWN_PARTNER, LIFTER_DRIVER_LOAD, LIFTER_I, LIFTER_P, LIFTER_UP, LIFTER_UP_PARTNER, lower_lifter(), MAIN_CONTROLLER_MODE, PARTNER_CONTROLLER_MODE, raise_lifter(), set_lifter_motors(), and THRESHOLD\&.
+.PP
+Referenced by operatorControl()\&.
+.PP
+.nf
+40                      {
+41   //Establish variables to be used repeatedly
+42   static bool changed = true;
+43   static unsigned int target = 0;
+44   static bool first_run = true;
+45   //Set the target to the current height for the first run
+46   if(first_run) {
+47     target = getLifterTicks();
+48     first_run = false;
+49   }
+50   //Establish the error as 0
+51   static int last_error = 0;
+52   static long long i = 0;
+53   //Check the buttons on the controller indicated by the controller mode
+54   if((joystickGetDigital(LIFTER_UP) && get_mode() == MAIN_CONTROLLER_MODE)
+55    || (joystickGetDigital(LIFTER_UP_PARTNER) && get_mode() == PARTNER_CONTROLLER_MODE)){
+56     changed = true;
+57     i = 0;
+58     //Change the target and start the motion
+59     target = getLifterTicks() + 200;
+60     lower_lifter();
+61   }
+62   else if((joystickGetDigital(LIFTER_DOWN) && get_mode() == MAIN_CONTROLLER_MODE)
+63    || (joystickGetDigital(LIFTER_DOWN_PARTNER) && get_mode() == PARTNER_CONTROLLER_MODE)) {
+64     changed = true;
+65     i = 0;
+66     //Change the target and start the motion
+67     target = getLifterTicks();
+68     raise_lifter();
+69   }
+70   //Raise the lifter to the driver load height
+71   else if(joystickGetDigital(LIFTER_DRIVER_LOAD) && get_mode() == MAIN_CONTROLLER_MODE){
+72     changed = true;
+73     i = 0;
+74     int k = 0;
+75     if(getLifterTicks() < 1270){
+76       lower_lifter();
+77 
+78     }
+79     if(getLifterTicks() > 1230){
+80       raise_lifter();
+81     }
+82     target = 1250;
+83   }
+84   //Change lifter motor values based upon the target
+85   else {
+86     //Don't if we are using the partner controller
+87     if(get_mode() == PARTNER_CONTROLLER_MODE){
+88       set_lifter_motors(0);
+89       return;
+90     }
+91     //Define the proportion, derivative, and integral to be used in the motor speed
+92     int p = getLifterTicks() - target;
+93     int d = p - last_error;
+94     last_error = p;
+95     i += p;
+96     int motor = LIFTER_P * p + LIFTER_D * d + LIFTER_I * i;
+97     //Avoid wasting battery if value is insignificant
+98     if (motor < THRESHOLD) {
+99         set_lifter_motors(0);
+100     } else {
+101         set_lifter_motors(motor);
+102     }
+103 
+104   }
+105 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

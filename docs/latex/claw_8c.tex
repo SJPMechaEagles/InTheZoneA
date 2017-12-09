@@ -1,0 +1,279 @@
+\subsection{src/claw.c File Reference}
+\label{claw_8c}\index{src/claw.\+c@{src/claw.\+c}}
+{\ttfamily \#include \char`\"{}claw.\+h\char`\"{}}\newline
+Include dependency graph for claw.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ close\+\_\+claw} ()
+\begin{DoxyCompactList}\small\item\em Drives the motors to close the claw. \end{DoxyCompactList}\item 
+unsigned int \textbf{ get\+Claw\+Ticks} ()
+\begin{DoxyCompactList}\small\item\em Gets the claw position in potentiometer ticks. \end{DoxyCompactList}\item 
+void \textbf{ open\+\_\+claw} ()
+\begin{DoxyCompactList}\small\item\em Drives the motors to open the claw. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+claw\+\_\+motor} (const int v)
+\begin{DoxyCompactList}\small\item\em sets the claw motor speed \end{DoxyCompactList}\item 
+void \textbf{ update\+\_\+claw} ()
+\begin{DoxyCompactList}\small\item\em Updates the claw motor values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{claw_8c_ac42dd40dbb37219295286859c6b068c2}} 
+\index{claw.\+c@{claw.\+c}!close\+\_\+claw@{close\+\_\+claw}}
+\index{close\+\_\+claw@{close\+\_\+claw}!claw.\+c@{claw.\+c}}
+\paragraph{close\+\_\+claw()}
+{\footnotesize\ttfamily void close\+\_\+claw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drives the motors to close the claw. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 67} of file \textbf{ claw.\+c}.
+
+
+
+References \textbf{ C\+L\+A\+W\+\_\+\+M\+O\+T\+OR}, \textbf{ M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00067                   \{
+00068   set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED);
+00069 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_ac42dd40dbb37219295286859c6b068c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{claw_8c_ac42dd40dbb37219295286859c6b068c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{claw_8c_addd2004effae7c94400aed1fe6a90ead}} 
+\index{claw.\+c@{claw.\+c}!get\+Claw\+Ticks@{get\+Claw\+Ticks}}
+\index{get\+Claw\+Ticks@{get\+Claw\+Ticks}!claw.\+c@{claw.\+c}}
+\paragraph{get\+Claw\+Ticks()}
+{\footnotesize\ttfamily unsigned int get\+Claw\+Ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the claw position in potentiometer ticks. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 51} of file \textbf{ claw.\+c}.
+
+
+
+References \textbf{ analog\+Read()}, and \textbf{ C\+L\+A\+W\+\_\+\+P\+OT}.
+
+
+
+Referenced by \textbf{ update\+\_\+claw()}.
+
+
+\begin{DoxyCode}
+00051                            \{
+00052   \textcolor{keywordflow}{return} analogRead(CLAW_POT);
+00053 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{claw_8c_addd2004effae7c94400aed1fe6a90ead_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_addd2004effae7c94400aed1fe6a90ead_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{claw_8c_a03023ca28f671b9fa7bac07782ccd8c1}} 
+\index{claw.\+c@{claw.\+c}!open\+\_\+claw@{open\+\_\+claw}}
+\index{open\+\_\+claw@{open\+\_\+claw}!claw.\+c@{claw.\+c}}
+\paragraph{open\+\_\+claw()}
+{\footnotesize\ttfamily void open\+\_\+claw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drives the motors to open the claw. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 59} of file \textbf{ claw.\+c}.
+
+
+
+References \textbf{ C\+L\+A\+W\+\_\+\+M\+O\+T\+OR}, \textbf{ M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00059                  \{
+00060   set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED);
+00061 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_a03023ca28f671b9fa7bac07782ccd8c1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{claw_8c_a03023ca28f671b9fa7bac07782ccd8c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{claw_8c_a3a57f998b1884d39b0cc786689f7086f}} 
+\index{claw.\+c@{claw.\+c}!set\+\_\+claw\+\_\+motor@{set\+\_\+claw\+\_\+motor}}
+\index{set\+\_\+claw\+\_\+motor@{set\+\_\+claw\+\_\+motor}!claw.\+c@{claw.\+c}}
+\paragraph{set\+\_\+claw\+\_\+motor()}
+{\footnotesize\ttfamily void set\+\_\+claw\+\_\+motor (\begin{DoxyParamCaption}\item[{const int}]{v }\end{DoxyParamCaption})}
+
+
+
+sets the claw motor speed 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 43} of file \textbf{ claw.\+c}.
+
+
+
+References \textbf{ C\+L\+A\+W\+\_\+\+M\+O\+T\+OR}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
+
+
+
+Referenced by \textbf{ update\+\_\+claw()}.
+
+
+\begin{DoxyCode}
+00043                                 \{
+00044   set_motor_immediate(CLAW_MOTOR, v);
+00045 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_a3a57f998b1884d39b0cc786689f7086f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_a3a57f998b1884d39b0cc786689f7086f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{claw_8c_a0122b78972344264b8a276a559cfce4a}} 
+\index{claw.\+c@{claw.\+c}!update\+\_\+claw@{update\+\_\+claw}}
+\index{update\+\_\+claw@{update\+\_\+claw}!claw.\+c@{claw.\+c}}
+\paragraph{update\+\_\+claw()}
+{\footnotesize\ttfamily void update\+\_\+claw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the claw motor values. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 7} of file \textbf{ claw.\+c}.
+
+
+
+References \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+SE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+V\+AL}, \textbf{ C\+L\+A\+W\+\_\+D}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+EN}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+V\+AL}, \textbf{ C\+L\+A\+W\+\_\+P}, \textbf{ get\+Claw\+Ticks()}, \textbf{ joystick\+Get\+Digital()}, and \textbf{ set\+\_\+claw\+\_\+motor()}.
+
+
+
+Referenced by \textbf{ operator\+Control()}.
+
+
+\begin{DoxyCode}
+00007                    \{
+00008   \textcolor{comment}{//Set the Error used in calculating d}
+00009   \textcolor{keyword}{static} \textcolor{keywordtype}{int} last\_error = 0;
+00010   \textcolor{comment}{//Set the initial claw state to open}
+00011   \textcolor{keyword}{static} \textcolor{keyword}{enum} claw_state state = CLAW_OPEN_STATE;
+00012   \textcolor{comment}{//Listen for input and either close or open the claw}
+00013   \textcolor{keywordflow}{if}(joystickGetDigital(CLAW_CLOSE))\{
+00014     state = CLAW_CLOSE_STATE;
+00015   \}
+00016   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(CLAW_OPEN))\{
+00017     state = CLAW_OPEN_STATE;
+00018   \} \textcolor{keywordflow}{else} \{
+00019     \textcolor{comment}{//set the default motor speed}
+00020     \textcolor{keywordtype}{int} p = 0;
+00021     \textcolor{comment}{//Change the base speed to the difference between the target}
+00022     \textcolor{comment}{// and the current value}
+00023     \textcolor{keywordflow}{if}(state == CLAW_OPEN_STATE) \{
+00024       p = getClawTicks() - CLAW_OPEN_VAL;
+00025     \} \textcolor{keywordflow}{else} \{
+00026       p = getClawTicks() - CLAW_CLOSE_VAL;
+00027     \}
+00028     \textcolor{comment}{//Set the d value to the difference between the current p and the last p}
+00029     \textcolor{keywordtype}{int} d = (p - last\_error);
+00030     \textcolor{comment}{//Set last error for use the next time the function is run}
+00031     last\_error = p;
+00032     \textcolor{comment}{//Construct the final motor speed value}
+00033     \textcolor{keywordtype}{int} motor = CLAW_P * p + CLAW_D * d;
+00034     \textcolor{comment}{//Set the motor speed}
+00035     set_claw_motor(motor);
+00036   \}
+00037 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_a0122b78972344264b8a276a559cfce4a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{claw_8c_a0122b78972344264b8a276a559cfce4a_icgraph}
+\end{center}
+\end{figure}

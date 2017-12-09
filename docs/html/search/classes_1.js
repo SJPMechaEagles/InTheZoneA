@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lcd_5fbuttons',['lcd_buttons',['../structlcd__buttons.html',1,'']]]
+  ['accelerometer_5fodometry',['accelerometer_odometry',['../structaccelerometer__odometry.html',1,'']]]
 ];

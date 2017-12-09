@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gyro',['Gyro',['../_a_p_i_8h.html#a04e06985633aa933343fcfa3d7fb268d',1,'API.h']]]
+  ['interrupthandler',['InterruptHandler',['../_a_p_i_8h.html#a5bbb1ca889e36aec7b4fce324c2662c4',1,'API.h']]]
 ];

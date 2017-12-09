@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: src/drive.c File Reference</title>
+<title>Vex Team 9228A: src/drive.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.7</span>
+   <div id="projectname">Vex Team 9228A
+   &#160;<span id="projectnumber">1.1.4</span>
    </div>
+   <div id="projectbrief">Code for VRC team 9228A for 2017-2018 game &quot;In The Zone&quot;</div>
   </td>
  </tr>
  </tbody>
@@ -81,71 +83,78 @@ $(document).ready(function(){initNavTree('drive_8c.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">drive.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="drive_8h_source.html">drive.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ports_8h_source.html">ports.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="vmath_8h_source.html">vmath.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="controller_8h_source.html">controller.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="slew_8h_source.html">slew.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="_a_p_i_8h_source.html">API.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="log_8h_source.html">log.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for drive.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="drive_8c__incl.svg" width="479" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="drive_8c__incl.svg" width="640" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="drive_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9c6ff5e12027f5d580a33abb9b608400"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drive_8c.html#a9c6ff5e12027f5d580a33abb9b608400">deadspot</a> (int val)</td></tr>
-<tr class="separator:a9c6ff5e12027f5d580a33abb9b608400"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c46e0951d154140f0fd2f07cfcbc61"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drive_8c.html#a64c46e0951d154140f0fd2f07cfcbc61">joystick_interpolate</a> (int val)</td></tr>
-<tr class="separator:a64c46e0951d154140f0fd2f07cfcbc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9caa5e772598f9182c9ec84cf8c351ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drive_8c.html#a9caa5e772598f9182c9ec84cf8c351ee">getThresh</a> ()</td></tr>
+<tr class="memdesc:a9caa5e772598f9182c9ec84cf8c351ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the deadzone threshhold on the drive.  <a href="#a9caa5e772598f9182c9ec84cf8c351ee">More...</a><br /></td></tr>
+<tr class="separator:a9caa5e772598f9182c9ec84cf8c351ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de4fbb9197f2f350c53a9f8bf23a8f1"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drive_8c.html#a6de4fbb9197f2f350c53a9f8bf23a8f1">joystickExp</a> (int joystickVal)</td></tr>
+<tr class="memdesc:a6de4fbb9197f2f350c53a9f8bf23a8f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies exponential scale to a joystick value.  <a href="#a6de4fbb9197f2f350c53a9f8bf23a8f1">More...</a><br /></td></tr>
+<tr class="separator:a6de4fbb9197f2f350c53a9f8bf23a8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8df41fd50094c065eedc81fc5e6595d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drive_8c.html#a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</a> (<a class="el" href="drive_8h.html#a9df2afd2f1acb97019655e5e730609c7">side_t</a> <a class="el" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a>, int speed)</td></tr>
 <tr class="memdesc:a8df41fd50094c065eedc81fc5e6595d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the speed of one side of the robot.  <a href="#a8df41fd50094c065eedc81fc5e6595d1">More...</a><br /></td></tr>
 <tr class="separator:a8df41fd50094c065eedc81fc5e6595d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d6e35d53ec3e0b1b1c489d8203f204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drive_8c.html#a53d6e35d53ec3e0b1b1c489d8203f204">setThresh</a> (int t)</td></tr>
+<tr class="memdesc:a53d6e35d53ec3e0b1b1c489d8203f204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the deadzone threshhold on the drive.  <a href="#a53d6e35d53ec3e0b1b1c489d8203f204">More...</a><br /></td></tr>
+<tr class="separator:a53d6e35d53ec3e0b1b1c489d8203f204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8224a4626a934d30ed587671b7004bf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drive_8c.html#a8224a4626a934d30ed587671b7004bf8">update_drive_motors</a> ()</td></tr>
 <tr class="memdesc:a8224a4626a934d30ed587671b7004bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the drive motors during teleop.  <a href="#a8224a4626a934d30ed587671b7004bf8">More...</a><br /></td></tr>
 <tr class="separator:a8224a4626a934d30ed587671b7004bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6cf8bf160a02413bc3d5d18b0294b581"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581">thresh</a> = 30</td></tr>
+<tr class="separator:a6cf8bf160a02413bc3d5d18b0294b581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9c6ff5e12027f5d580a33abb9b608400"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c6ff5e12027f5d580a33abb9b608400">&#9670;&nbsp;</a></span>deadspot()</h2>
+<a id="a9caa5e772598f9182c9ec84cf8c351ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9caa5e772598f9182c9ec84cf8c351ee">&#9670;&nbsp;</a></span>getThresh()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int deadspot </td>
+          <td class="memname">int getThresh </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00024">24</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
+<p>Gets the deadzone threshhold on the drive. </p>
+<dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
 
-<p class="reference">References <a class="el" href="drive_8h_source.html#l00013">DEADSPOT</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                             {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> abs(val) &gt; <a class="code" href="drive_8h.html#a3d683c4ec93ad778fc5914cd5671a793">DEADSPOT</a> ? val : 0;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div><div class="ttc" id="drive_8h_html_a3d683c4ec93ad778fc5914cd5671a793"><div class="ttname"><a href="drive_8h.html#a3d683c4ec93ad778fc5914cd5671a793">DEADSPOT</a></div><div class="ttdeci">#define DEADSPOT</div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00013">drive.h:13</a></div></div>
+<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00017">17</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
+
+<p class="reference">References <a class="el" href="drive_8c_source.html#l00010">thresh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;               {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581">thresh</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div><div class="ttc" id="drive_8c_html_a6cf8bf160a02413bc3d5d18b0294b581"><div class="ttname"><a href="drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581">thresh</a></div><div class="ttdeci">static int thresh</div><div class="ttdef"><b>Definition:</b> <a href="drive_8c_source.html#l00010">drive.c:10</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a64c46e0951d154140f0fd2f07cfcbc61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64c46e0951d154140f0fd2f07cfcbc61">&#9670;&nbsp;</a></span>joystick_interpolate()</h2>
+<a id="a6de4fbb9197f2f350c53a9f8bf23a8f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de4fbb9197f2f350c53a9f8bf23a8f1">&#9670;&nbsp;</a></span>joystickExp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,10 +163,10 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int joystick_interpolate </td>
+          <td class="memname">static float joystickExp </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
+          <td class="paramname"><em>joystickVal</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -168,8 +177,21 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00020">20</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                         {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div></div><!-- fragment -->
+<p>Applies exponential scale to a joystick value. </p>
+<dl class="section author"><dt>Author</dt><dd>Christian DeSimone, Chris Jerrett </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">joystickVal</td><td>the analog value from the joystick </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>Date</dt><dd>9/21/2017 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00087">87</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
+
+<p class="reference">References <a class="el" href="drive_8h_source.html#l00018">THRESHOLD</a>.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                          {</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//make the offset negative if moving backwards</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (abs(joystickVal) &lt; <a class="code" href="drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879">THRESHOLD</a>) {</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> offset;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="comment">//Use the threshold to ensure the joystick values are significant</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span> (joystickVal &lt; 0) {</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        offset = - (<a class="code" href="drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879">THRESHOLD</a>);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        offset = <a class="code" href="drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879">THRESHOLD</a>;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">//Apply the function ((((x/10)^3)/18) + offset) * 0.8 to the joystick value</span></div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">return</span> (pow(joystickVal/10 , 3) / 18 + offset) * 0.8;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div><div class="ttc" id="drive_8h_html_a4679d8ea8690999a6c6c7c0cb245c879"><div class="ttname"><a href="drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879">THRESHOLD</a></div><div class="ttdeci">#define THRESHOLD</div><div class="ttdoc">The dead spot on the controller to avoid running motors at low speeds. </div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00018">drive.h:18</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8df41fd50094c065eedc81fc5e6595d1"></a>
@@ -208,24 +230,59 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00007">7</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00068">68</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
 
-<p class="reference">References <a class="el" href="drive_8h_source.html#l00023">BOTH</a>, <a class="el" href="drive_8h_source.html#l00022">LEFT</a>, <a class="el" href="ports_8h_source.html#l00059">MOTOR_BACK_LEFT</a>, <a class="el" href="ports_8h_source.html#l00053">MOTOR_BACK_RIGHT</a>, <a class="el" href="ports_8h_source.html#l00025">MOTOR_FRONT_RIGHT</a>, <a class="el" href="ports_8h_source.html#l00039">MOTOR_MIDDLE_RIGHT</a>, <a class="el" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet()</a>, and <a class="el" href="drive_8h_source.html#l00024">RIGHT</a>.</p>
-<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                           {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</a> || <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</a>){</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a>(<a class="code" href="ports_8h.html#ad85c5f3d6a2d00789c8c67b960c46c2b">MOTOR_BACK_RIGHT</a> , speed);</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a>(<a class="code" href="ports_8h.html#a6f48bcc6d5fce24caeae0b17954c277a">MOTOR_FRONT_RIGHT</a>, speed);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a>(<a class="code" href="ports_8h.html#a0da3f792b8f28ab09b339295859d8334">MOTOR_MIDDLE_RIGHT</a>, speed);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</a> || <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</a>){</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a>(<a class="code" href="ports_8h.html#a36e9fda07b5cd4408170fe907b75a8b7">MOTOR_BACK_LEFT</a>, speed);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a>(<a class="code" href="ports_8h.html#a36e9fda07b5cd4408170fe907b75a8b7">MOTOR_BACK_LEFT</a>, speed);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a>(<a class="code" href="ports_8h.html#a36e9fda07b5cd4408170fe907b75a8b7">MOTOR_BACK_LEFT</a>, speed);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  }</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div><div class="ttc" id="ports_8h_html_a0da3f792b8f28ab09b339295859d8334"><div class="ttname"><a href="ports_8h.html#a0da3f792b8f28ab09b339295859d8334">MOTOR_MIDDLE_RIGHT</a></div><div class="ttdeci">#define MOTOR_MIDDLE_RIGHT</div><div class="ttdoc">Middle right drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="ports_8h_source.html#l00039">ports.h:39</a></div></div>
-<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</a></div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00023">drive.h:23</a></div></div>
-<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</a></div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00022">drive.h:22</a></div></div>
-<div class="ttc" id="ports_8h_html_ad85c5f3d6a2d00789c8c67b960c46c2b"><div class="ttname"><a href="ports_8h.html#ad85c5f3d6a2d00789c8c67b960c46c2b">MOTOR_BACK_RIGHT</a></div><div class="ttdeci">#define MOTOR_BACK_RIGHT</div><div class="ttdoc">Back right drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="ports_8h_source.html#l00053">ports.h:53</a></div></div>
-<div class="ttc" id="ports_8h_html_a36e9fda07b5cd4408170fe907b75a8b7"><div class="ttname"><a href="ports_8h.html#a36e9fda07b5cd4408170fe907b75a8b7">MOTOR_BACK_LEFT</a></div><div class="ttdeci">#define MOTOR_BACK_LEFT</div><div class="ttdoc">Back left drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="ports_8h_source.html#l00059">ports.h:59</a></div></div>
-<div class="ttc" id="_a_p_i_8h_html_a03c5b04b472d024281f62d7af8854a8e"><div class="ttname"><a href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e">motorSet</a></div><div class="ttdeci">void motorSet(unsigned char channel, int speed)</div></div>
-<div class="ttc" id="ports_8h_html_a6f48bcc6d5fce24caeae0b17954c277a"><div class="ttname"><a href="ports_8h.html#a6f48bcc6d5fce24caeae0b17954c277a">MOTOR_FRONT_RIGHT</a></div><div class="ttdeci">#define MOTOR_FRONT_RIGHT</div><div class="ttdoc">Front right drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="ports_8h_source.html#l00025">ports.h:25</a></div></div>
-<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a></div><div class="ttdeci">side</div><div class="ttdoc">enumeration indication side of the robot. </div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00021">drive.h:21</a></div></div>
-<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00024">drive.h:24</a></div></div>
+<p class="reference">References <a class="el" href="drive_8h_source.html#l00028">BOTH</a>, <a class="el" href="drive_8h_source.html#l00027">LEFT</a>, <a class="el" href="motor__ports_8h_source.html#l00054">MOTOR_BACK_LEFT</a>, <a class="el" href="motor__ports_8h_source.html#l00048">MOTOR_BACK_RIGHT</a>, <a class="el" href="motor__ports_8h_source.html#l00027">MOTOR_FRONT_LEFT</a>, <a class="el" href="motor__ports_8h_source.html#l00020">MOTOR_FRONT_RIGHT</a>, <a class="el" href="motor__ports_8h_source.html#l00041">MOTOR_MIDDLE_LEFT</a>, <a class="el" href="motor__ports_8h_source.html#l00034">MOTOR_MIDDLE_RIGHT</a>, <a class="el" href="drive_8h_source.html#l00029">RIGHT</a>, and <a class="el" href="slew_8c_source.html#l00050">set_motor_slew()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00030">autonomous()</a>, and <a class="el" href="drive_8c_source.html#l00034">update_drive_motors()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                           {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</a> || <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</a>){</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="slew_8h.html#a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</a>(<a class="code" href="motor__ports_8h.html#ad85c5f3d6a2d00789c8c67b960c46c2b">MOTOR_BACK_RIGHT</a> , -speed);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="slew_8h.html#a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</a>(<a class="code" href="motor__ports_8h.html#a6f48bcc6d5fce24caeae0b17954c277a">MOTOR_FRONT_RIGHT</a>, -speed);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="slew_8h.html#a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</a>(<a class="code" href="motor__ports_8h.html#a0da3f792b8f28ab09b339295859d8334">MOTOR_MIDDLE_RIGHT</a>, -speed);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</a> || <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</a>){</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="slew_8h.html#a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</a>(<a class="code" href="motor__ports_8h.html#a36e9fda07b5cd4408170fe907b75a8b7">MOTOR_BACK_LEFT</a>, speed);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="slew_8h.html#a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</a>(<a class="code" href="motor__ports_8h.html#ac7dd3397e2f909b4dc11f2a2e6f28800">MOTOR_MIDDLE_LEFT</a>, speed);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="slew_8h.html#a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</a>(<a class="code" href="motor__ports_8h.html#a743b47e164fb23b30f4f2f228db0b338">MOTOR_FRONT_LEFT</a>, speed);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div><div class="ttc" id="motor__ports_8h_html_a0da3f792b8f28ab09b339295859d8334"><div class="ttname"><a href="motor__ports_8h.html#a0da3f792b8f28ab09b339295859d8334">MOTOR_MIDDLE_RIGHT</a></div><div class="ttdeci">#define MOTOR_MIDDLE_RIGHT</div><div class="ttdoc">Middle right drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00034">motor_ports.h:34</a></div></div>
+<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</a></div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00028">drive.h:28</a></div></div>
+<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</a></div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00027">drive.h:27</a></div></div>
+<div class="ttc" id="motor__ports_8h_html_a36e9fda07b5cd4408170fe907b75a8b7"><div class="ttname"><a href="motor__ports_8h.html#a36e9fda07b5cd4408170fe907b75a8b7">MOTOR_BACK_LEFT</a></div><div class="ttdeci">#define MOTOR_BACK_LEFT</div><div class="ttdoc">Back left drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00054">motor_ports.h:54</a></div></div>
+<div class="ttc" id="motor__ports_8h_html_a6f48bcc6d5fce24caeae0b17954c277a"><div class="ttname"><a href="motor__ports_8h.html#a6f48bcc6d5fce24caeae0b17954c277a">MOTOR_FRONT_RIGHT</a></div><div class="ttdeci">#define MOTOR_FRONT_RIGHT</div><div class="ttdoc">Front right drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00020">motor_ports.h:20</a></div></div>
+<div class="ttc" id="motor__ports_8h_html_ac7dd3397e2f909b4dc11f2a2e6f28800"><div class="ttname"><a href="motor__ports_8h.html#ac7dd3397e2f909b4dc11f2a2e6f28800">MOTOR_MIDDLE_LEFT</a></div><div class="ttdeci">#define MOTOR_MIDDLE_LEFT</div><div class="ttdoc">Middle left drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00041">motor_ports.h:41</a></div></div>
+<div class="ttc" id="slew_8h_html_a7dff2b79dffe55fb936d977594d7c01d"><div class="ttname"><a href="slew_8h.html#a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</a></div><div class="ttdeci">void set_motor_slew(int motor, int speed)</div><div class="ttdoc">Sets motor speed wrapped inside the slew rate controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00050">slew.c:50</a></div></div>
+<div class="ttc" id="motor__ports_8h_html_a743b47e164fb23b30f4f2f228db0b338"><div class="ttname"><a href="motor__ports_8h.html#a743b47e164fb23b30f4f2f228db0b338">MOTOR_FRONT_LEFT</a></div><div class="ttdeci">#define MOTOR_FRONT_LEFT</div><div class="ttdoc">Front left drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00027">motor_ports.h:27</a></div></div>
+<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a></div><div class="ttdeci">side</div><div class="ttdoc">enumeration indication side of the robot. </div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00026">drive.h:26</a></div></div>
+<div class="ttc" id="motor__ports_8h_html_ad85c5f3d6a2d00789c8c67b960c46c2b"><div class="ttname"><a href="motor__ports_8h.html#ad85c5f3d6a2d00789c8c67b960c46c2b">MOTOR_BACK_RIGHT</a></div><div class="ttdeci">#define MOTOR_BACK_RIGHT</div><div class="ttdoc">Back right drive motor of robot base. </div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00048">motor_ports.h:48</a></div></div>
+<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00029">drive.h:29</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="drive_8c_a8df41fd50094c065eedc81fc5e6595d1_cgraph.svg" width="250" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="drive_8c_a8df41fd50094c065eedc81fc5e6595d1_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="drive_8c_a8df41fd50094c065eedc81fc5e6595d1_icgraph.svg" width="482" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
+</div>
+</div>
+<a id="a53d6e35d53ec3e0b1b1c489d8203f204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d6e35d53ec3e0b1b1c489d8203f204">&#9670;&nbsp;</a></span>setThresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setThresh </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the deadzone threshhold on the drive. </p>
+<dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00025">25</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
+
+<p class="reference">References <a class="el" href="drive_8c_source.html#l00010">thresh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                     {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581">thresh</a> = t;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div><div class="ttc" id="drive_8c_html_a6cf8bf160a02413bc3d5d18b0294b581"><div class="ttname"><a href="drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581">thresh</a></div><div class="ttdeci">static int thresh</div><div class="ttdef"><b>Definition:</b> <a href="drive_8c_source.html#l00010">drive.c:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8224a4626a934d30ed587671b7004bf8"></a>
@@ -247,20 +304,59 @@ Here is the call graph for this function:</div>
 <dl class="section author"><dt>Author</dt><dd>Christian Desimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/5/17 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00028">28</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00034">34</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
 
-<p class="reference">References <a class="el" href="vmath_8c_source.html#l00033">cartesian_cord_to_polar()</a>, <a class="el" href="controller_8c_source.html#l00003">get_joystick_cord()</a>, <a class="el" href="controller_8h_source.html#l00019">MASTER</a>, and <a class="el" href="controller_8h_source.html#l00063">RIGHT_JOY</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                          {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">struct </span><a class="code" href="structpolar__cord.html">polar_cord</a> <a class="code" href="structcord.html">cord</a> = <a class="code" href="vmath_8h.html#a832105cf858b3046c57c0d08a4e7c38b">cartesian_cord_to_polar</a>(<a class="code" href="controller_8h.html#a0ce0176099c0bb15ad8c36123222059d">get_joystick_cord</a>(<a class="code" href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a>, <a class="code" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>));</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div><div class="ttc" id="structpolar__cord_html"><div class="ttname"><a href="structpolar__cord.html">polar_cord</a></div><div class="ttdoc">A struct that contains polar coordinates. </div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00019">vmath.h:19</a></div></div>
-<div class="ttc" id="structcord_html"><div class="ttname"><a href="structcord.html">cord</a></div><div class="ttdoc">A struct that contains cartesian coordinates. </div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00031">vmath.h:31</a></div></div>
-<div class="ttc" id="controller_8h_html_a3fa2d3bf1901157f734a584d47b25d8b"><div class="ttname"><a href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a></div><div class="ttdeci">#define MASTER</div><div class="ttdoc">the master controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00019">controller.h:19</a></div></div>
-<div class="ttc" id="vmath_8h_html_a832105cf858b3046c57c0d08a4e7c38b"><div class="ttname"><a href="vmath_8h.html#a832105cf858b3046c57c0d08a4e7c38b">cartesian_cord_to_polar</a></div><div class="ttdeci">struct polar_cord cartesian_cord_to_polar(struct cord cords)</div><div class="ttdoc">Function to convert x and y 2 dimensional cartesian cordinated to polar coordinates. </div><div class="ttdef"><b>Definition:</b> <a href="vmath_8c_source.html#l00033">vmath.c:33</a></div></div>
-<div class="ttc" id="controller_8h_html_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe"><div class="ttname"><a href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00063">controller.h:63</a></div></div>
-<div class="ttc" id="controller_8h_html_a0ce0176099c0bb15ad8c36123222059d"><div class="ttname"><a href="controller_8h.html#a0ce0176099c0bb15ad8c36123222059d">get_joystick_cord</a></div><div class="ttdeci">struct cord get_joystick_cord(enum joystick side, int controller)</div><div class="ttdef"><b>Definition:</b> <a href="controller_8c_source.html#l00003">controller.c:3</a></div></div>
+<p class="reference">References <a class="el" href="partner_8c_source.html#l00005">get_mode()</a>, <a class="el" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog()</a>, <a class="el" href="drive_8h_source.html#l00027">LEFT</a>, <a class="el" href="controller_8h_source.html#l00025">MASTER</a>, <a class="el" href="controller_8h_source.html#l00032">PARTNER</a>, <a class="el" href="partner_8h_source.html#l00009">PARTNER_CONTROLLER_MODE</a>, <a class="el" href="drive_8h_source.html#l00029">RIGHT</a>, <a class="el" href="drive_8c_source.html#l00068">set_side_speed()</a>, <a class="el" href="drive_8c_source.html#l00010">thresh</a>, <a class="el" href="vmath_8h_source.html#l00034">cord::x</a>, and <a class="el" href="vmath_8h_source.html#l00036">cord::y</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00040">operatorControl()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                          {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">//Get the joystick values from the controller</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">x</a> = 0;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structcord.html#a4e7d289c55cfe511532e53a81dc19215">y</a> = 0;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="partner_8h.html#aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</a>() == <a class="code" href="partner_8h.html#afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7">PARTNER_CONTROLLER_MODE</a>) {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    x = (<a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(<a class="code" href="controller_8h.html#a136e64cf351535da81cacb6a546cade6">PARTNER</a>, 3));</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    y = (<a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(<a class="code" href="controller_8h.html#a136e64cf351535da81cacb6a546cade6">PARTNER</a>, 1));</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    x = -(<a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(<a class="code" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 3));</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    y = (<a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(<a class="code" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 1));</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">//Make sure the joystick values are significant enough to change the motors</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">if</span>(x &lt; thresh &amp;&amp; x &gt; -<a class="code" href="drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581">thresh</a>){</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    x = 0;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span>(y &lt; thresh &amp;&amp; y &gt; -<a class="code" href="drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581">thresh</a>){</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    y = 0;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">//Create motor values for the left and right from the x and y of the joystick</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">int</span> r = (x + <a class="code" href="structcord.html#a4e7d289c55cfe511532e53a81dc19215">y</a>);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">int</span> l = -(x - <a class="code" href="structcord.html#a4e7d289c55cfe511532e53a81dc19215">y</a>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">//Set the drive motors</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="drive_8c.html#a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</a>(<a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</a>, l);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="drive_8c.html#a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</a>(<a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, -r);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_ad56fcec15d1a48deb8780bb0fc38be4d"><div class="ttname"><a href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a></div><div class="ttdeci">int joystickGetAnalog(unsigned char joystick, unsigned char axis)</div></div>
+<div class="ttc" id="partner_8h_html_aacc86d07e59d3b919f5c5eae2ce5d404"><div class="ttname"><a href="partner_8h.html#aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</a></div><div class="ttdeci">enum CONTROLL_MODE get_mode()</div><div class="ttdef"><b>Definition:</b> <a href="partner_8c_source.html#l00005">partner.c:5</a></div></div>
+<div class="ttc" id="structcord_html_a2eef9b681474b679cf87b0c20eced2cd"><div class="ttname"><a href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">cord::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00034">vmath.h:34</a></div></div>
+<div class="ttc" id="controller_8h_html_a3fa2d3bf1901157f734a584d47b25d8b"><div class="ttname"><a href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a></div><div class="ttdeci">#define MASTER</div><div class="ttdoc">the master controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00025">controller.h:25</a></div></div>
+<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</a></div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00027">drive.h:27</a></div></div>
+<div class="ttc" id="structcord_html_a4e7d289c55cfe511532e53a81dc19215"><div class="ttname"><a href="structcord.html#a4e7d289c55cfe511532e53a81dc19215">cord::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00036">vmath.h:36</a></div></div>
+<div class="ttc" id="partner_8h_html_afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7"><div class="ttname"><a href="partner_8h.html#afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7">PARTNER_CONTROLLER_MODE</a></div><div class="ttdef"><b>Definition:</b> <a href="partner_8h_source.html#l00009">partner.h:9</a></div></div>
+<div class="ttc" id="drive_8c_html_a8df41fd50094c065eedc81fc5e6595d1"><div class="ttname"><a href="drive_8c.html#a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</a></div><div class="ttdeci">void set_side_speed(side_t side, int speed)</div><div class="ttdoc">sets the speed of one side of the robot. </div><div class="ttdef"><b>Definition:</b> <a href="drive_8c_source.html#l00068">drive.c:68</a></div></div>
+<div class="ttc" id="controller_8h_html_a136e64cf351535da81cacb6a546cade6"><div class="ttname"><a href="controller_8h.html#a136e64cf351535da81cacb6a546cade6">PARTNER</a></div><div class="ttdeci">#define PARTNER</div><div class="ttdoc">the slave/partner controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00032">controller.h:32</a></div></div>
+<div class="ttc" id="drive_8c_html_a6cf8bf160a02413bc3d5d18b0294b581"><div class="ttname"><a href="drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581">thresh</a></div><div class="ttdeci">static int thresh</div><div class="ttdef"><b>Definition:</b> <a href="drive_8c_source.html#l00010">drive.c:10</a></div></div>
+<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00029">drive.h:29</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="drive_8c_a8224a4626a934d30ed587671b7004bf8_cgraph.svg" width="550" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="drive_8c_a8224a4626a934d30ed587671b7004bf8_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="drive_8c_a8224a4626a934d30ed587671b7004bf8_icgraph.svg" width="319" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a6cf8bf160a02413bc3d5d18b0294b581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf8bf160a02413bc3d5d18b0294b581">&#9670;&nbsp;</a></span>thresh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int thresh = 30</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="drive_8c_source.html#l00010">10</a> of file <a class="el" href="drive_8c_source.html">drive.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00017">getThresh()</a>, <a class="el" href="drive_8c_source.html#l00025">setThresh()</a>, and <a class="el" href="drive_8c_source.html#l00034">update_drive_motors()</a>.</p>
 
 </div>
 </div>

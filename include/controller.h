@@ -1,8 +1,9 @@
 /**
 * @file controller.h
-* @author Chris Jerrett
+* @author Chris Jerrett, Christian Desimone
 * @date 9/9/2017
-* @brief controller definitions, macros
+* @brief controller definitions, macros and functions to assist with usig the
+* vex controllers.
 **/
 
 #ifndef _CONTROLLER_H_
@@ -10,6 +11,11 @@
 
 #include "vmath.h"
 #include <API.h>
+
+#define RIGHT_BUTTONS 8
+#define LEFT_BUTTONS 7
+#define RIGHT_BUMPERS 5
+#define LEFT_BUMPERS 6
 
 /**
 * @brief the master controller
@@ -64,6 +70,11 @@ enum joystick {
   /** The left joystick **/
   LEFT_JOY,
 };
+
+/**
+* @brief Gets the location of a joystick on the controller
+* @author Chris Jerrett
+**/
 struct cord get_joystick_cord(enum joystick side, int controller);
 
 #endif

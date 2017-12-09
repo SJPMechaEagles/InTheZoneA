@@ -1,0 +1,225 @@
+.TH "src/toggle.c" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/toggle.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'toggle\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBbuttonGetState\fP (\fBbutton_t\fP button)"
+.br
+.RI "Returns the current status of a button (pressed or not pressed) "
+.ti -1c
+.RI "void \fBbuttonInit\fP ()"
+.br
+.RI "Initializes the buttons array\&. "
+.ti -1c
+.RI "bool \fBbuttonIsNewPress\fP (\fBbutton_t\fP button)"
+.br
+.RI "Detects if button is a new press from most recent check by comparing previous value to current value\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "bool \fBbuttonPressed\fP [27]"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "bool buttonGetState (\fBbutton_t\fP)"
+
+.PP
+Returns the current status of a button (pressed or not pressed) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbutton\fP The button to detect from the Buttons enumeration\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true (pressed) or false (not pressed) 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file toggle\&.c\&.
+.PP
+References JOY_DOWN, JOY_LEFT, JOY_RIGHT, JOY_UP, joystickGetDigital(), LCD_BTN_CENTER, LCD_BTN_LEFT, LCD_BTN_RIGHT, LCD_CENT, LCD_LEFT, LCD_RIGHT, lcdReadButtons(), and uart1\&.
+.PP
+Referenced by buttonIsNewPress()\&.
+.PP
+.nf
+25                                      {
+26     bool currentButton = false;
+27 
+28     // Determine how to get the current button value (from what function) and where it
+29     // is, then get it\&.
+30     if (button < LCD_LEFT) {
+31         // button is a joystick button
+32         unsigned char joystick;
+33         unsigned char buttonGroup;
+34         unsigned char buttonLocation;
+35 
+36         button_t newButton;
+37         if (button <= 11) {
+38             // button is on joystick 1
+39             joystick = 1;
+40             newButton = button;
+41         }
+42         else {
+43             // button is on joystick 2
+44             joystick = 2;
+45             // shift button down to joystick 1 buttons in order to
+46             // detect which button on joystick is queried
+47             newButton = (button_t)(button - 12);
+48         }
+49 
+50         switch (newButton) {
+51         case 0:
+52             buttonGroup = 5;
+53             buttonLocation = JOY_DOWN;
+54             break;
+55         case 1:
+56             buttonGroup = 5;
+57             buttonLocation = JOY_UP;
+58             break;
+59         case 2:
+60             buttonGroup = 6;
+61             buttonLocation = JOY_DOWN;
+62             break;
+63         case 3:
+64             buttonGroup = 6;
+65             buttonLocation = JOY_UP;
+66             break;
+67         case 4:
+68             buttonGroup = 7;
+69             buttonLocation = JOY_UP;
+70             break;
+71         case 5:
+72             buttonGroup = 7;
+73             buttonLocation = JOY_LEFT;
+74             break;
+75         case 6:
+76             buttonGroup = 7;
+77             buttonLocation = JOY_RIGHT;
+78             break;
+79         case 7:
+80             buttonGroup = 7;
+81             buttonLocation = JOY_DOWN;
+82             break;
+83         case 8:
+84             buttonGroup = 8;
+85             buttonLocation = JOY_UP;
+86             break;
+87         case 9:
+88             buttonGroup = 8;
+89             buttonLocation = JOY_LEFT;
+90             break;
+91         case 10:
+92             buttonGroup = 8;
+93             buttonLocation = JOY_RIGHT;
+94             break;
+95         case 11:
+96             buttonGroup = 8;
+97             buttonLocation = JOY_DOWN;
+98             break;
+99         default:
+100             break;
+101         }
+102         currentButton = joystickGetDigital(joystick, buttonGroup, buttonLocation);
+103     }
+104     else {
+105         // button is on LCD
+106         if (button == LCD_LEFT)
+107             currentButton = (lcdReadButtons(uart1) == LCD_BTN_LEFT);
+108 
+109         if (button == LCD_CENT)
+110             currentButton = (lcdReadButtons(uart1) == LCD_BTN_CENTER);
+111 
+112         if (button == LCD_RIGHT)
+113             currentButton = (lcdReadButtons(uart1) == LCD_BTN_RIGHT);
+114     }
+115     return currentButton;
+116 }
+.fi
+.SS "void buttonInit ()"
+
+.PP
+Initializes the buttons array\&. Initializes the buttons\&. 
+.PP
+Definition at line 20 of file toggle\&.c\&.
+.PP
+References buttonPressed\&.
+.PP
+.nf
+20                   {
+21     for (int i = 0; i < 27; i++)
+22         buttonPressed[i] = false;
+23 }
+.fi
+.SS "bool buttonIsNewPress (\fBbutton_t\fP button)"
+
+.PP
+Detects if button is a new press from most recent check by comparing previous value to current value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbutton\fP The button to detect from the Buttons enumeration (see include/buttons\&.h)\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true or false depending on if there was a change in button state\&.
+.RE
+.PP
+Example code: 
+.PP
+.nf
+\&.\&.\&.
+if(buttonIsNewPress(JOY1_8D))
+    digitalWrite(1, !digitalRead(1));
+\&.\&.\&.
+
+.fi
+.PP
+ 
+.PP
+Definition at line 135 of file toggle\&.c\&.
+.PP
+References buttonGetState(), and buttonPressed\&.
+.PP
+.nf
+135                                        {
+136     bool currentButton = buttonGetState(button);
+137 
+138     if (!currentButton) // buttons is not currently pressed
+139         buttonPressed[button] = false;
+140 
+141     if (currentButton && !buttonPressed[button]) {
+142         // button is currently pressed and was not detected as being pressed during last check
+143         buttonPressed[button] = true;
+144         return true;
+145     }
+146     else return false; // button is not pressed or was already detected
+147 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "bool buttonPressed[27]"
+Represents the array of 'wasPressed' for all 27 available buttons\&. 
+.PP
+Definition at line 15 of file toggle\&.c\&.
+.PP
+Referenced by buttonInit(), and buttonIsNewPress()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

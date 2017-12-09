@@ -1,0 +1,257 @@
+.TH "include/drive.h" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/drive.h \- Drive base definitions and enumerations\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <API\&.h>\fP
+.br
+\fC#include 'partner\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTHRESHOLD\fP   10"
+.br
+.RI "The dead spot on the controller to avoid running motors at low speeds\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBside\fP \fBside_t\fP"
+.br
+.RI "enumeration indication side of the robot\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBside\fP { \fBLEFT\fP, \fBBOTH\fP, \fBRIGHT\fP }
+.RI "enumeration indication side of the robot\&. ""
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBset_side_speed\fP (\fBside_t\fP \fBside\fP, int speed)"
+.br
+.RI "sets the speed of one side of the robot\&. "
+.ti -1c
+.RI "void \fBsetThresh\fP (int t)"
+.br
+.RI "Sets the deadzone threshhold on the drive\&. "
+.ti -1c
+.RI "void \fBupdate_drive_motors\fP ()"
+.br
+.RI "Updates the drive motors during teleop\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Drive base definitions and enumerations\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/9/2017 
+.RE
+.PP
+
+.PP
+Definition in file \fBdrive\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define THRESHOLD   10"
+
+.PP
+The dead spot on the controller to avoid running motors at low speeds\&. 
+.PP
+Definition at line 18 of file drive\&.h\&.
+.PP
+Referenced by joystickExp(), and update_lifter()\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBside\fP  \fBside_t\fP"
+
+.PP
+enumeration indication side of the robot\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 Side can be right, both of left\&. Contained in side typedef, so enum is unnecessary\&. 
+.RE
+.PP
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBside\fP"
+
+.PP
+enumeration indication side of the robot\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 Side can be right, both of left\&. Contained in side typedef, so enum is unnecessary\&. 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILEFT \fP\fP
+.TP
+\fB\fIBOTH \fP\fP
+.TP
+\fB\fIRIGHT \fP\fP
+.PP
+Definition at line 26 of file drive\&.h\&.
+.PP
+.nf
+26                  {
+27   LEFT,
+28   BOTH,
+29   RIGHT
+30 } side_t;
+.fi
+.SH "Function Documentation"
+.PP 
+.SS "void set_side_speed (\fBside_t\fP side, int speed)"
+
+.PP
+sets the speed of one side of the robot\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIside\fP a side enum which indicates the size\&. 
+.br
+\fIspeed\fP the speed of the side\&. Can range from -127 - 127 negative being back and positive forwards 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file drive\&.c\&.
+.PP
+References BOTH, LEFT, MOTOR_BACK_LEFT, MOTOR_BACK_RIGHT, MOTOR_FRONT_LEFT, MOTOR_FRONT_RIGHT, MOTOR_MIDDLE_LEFT, MOTOR_MIDDLE_RIGHT, RIGHT, and set_motor_slew()\&.
+.PP
+Referenced by autonomous(), and update_drive_motors()\&.
+.PP
+.nf
+68                                            {
+69   if(side == RIGHT || side == BOTH){
+70     set_motor_slew(MOTOR_BACK_RIGHT , -speed);
+71     set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
+72     set_motor_slew(MOTOR_MIDDLE_RIGHT, -speed);
+73   }
+74   if(side == LEFT || side == BOTH){
+75     set_motor_slew(MOTOR_BACK_LEFT, speed);
+76     set_motor_slew(MOTOR_MIDDLE_LEFT, speed);
+77     set_motor_slew(MOTOR_FRONT_LEFT, speed);
+78   }
+79 }
+.fi
+.SS "void setThresh (int t)"
+
+.PP
+Sets the deadzone threshhold on the drive\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Chris Jerrett
+.PP
+Christian Desimone 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file drive\&.c\&.
+.PP
+References thresh\&.
+.PP
+.nf
+25                      {
+26   thresh = t;
+27 }
+.fi
+.SS "void update_drive_motors ()"
+
+.PP
+Updates the drive motors during teleop\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/5/17 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file drive\&.c\&.
+.PP
+References get_mode(), joystickGetAnalog(), LEFT, MASTER, PARTNER, PARTNER_CONTROLLER_MODE, RIGHT, set_side_speed(), thresh, cord::x, and cord::y\&.
+.PP
+Referenced by operatorControl()\&.
+.PP
+.nf
+34                           {
+35   //Get the joystick values from the controller
+36   int x = 0;
+37   int y = 0;
+38   if(get_mode() == PARTNER_CONTROLLER_MODE) {
+39     x = (joystickGetAnalog(PARTNER, 3));
+40     y = (joystickGetAnalog(PARTNER, 1));
+41   } else {
+42     x = -(joystickGetAnalog(MASTER, 3));
+43     y = (joystickGetAnalog(MASTER, 1));
+44   }
+45   //Make sure the joystick values are significant enough to change the motors
+46   if(x < thresh && x > -thresh){
+47     x = 0;
+48   }
+49   if(y < thresh && y > -thresh){
+50     y = 0;
+51   }
+52   //Create motor values for the left and right from the x and y of the joystick
+53   int r = (x + y);
+54   int l = -(x - y);
+55 
+56   //Set the drive motors
+57   set_side_speed(LEFT, l);
+58   set_side_speed(RIGHT, -r);
+59 
+60 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

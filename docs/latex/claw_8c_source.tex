@@ -1,0 +1,54 @@
+\subsection{claw.\+c}
+\label{claw_8c_source}\index{src/claw.\+c@{src/claw.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "claw.h"}
+00002 
+00007 \textcolor{keywordtype}{void} update_claw() \{
+00008   \textcolor{comment}{//Set the Error used in calculating d}
+00009   \textcolor{keyword}{static} \textcolor{keywordtype}{int} last\_error = 0;
+00010   \textcolor{comment}{//Set the initial claw state to open}
+00011   \textcolor{keyword}{static} \textcolor{keyword}{enum} claw_state state = CLAW_OPEN_STATE;
+00012   \textcolor{comment}{//Listen for input and either close or open the claw}
+00013   \textcolor{keywordflow}{if}(joystickGetDigital(CLAW_CLOSE))\{
+00014     state = CLAW_CLOSE_STATE;
+00015   \}
+00016   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(CLAW_OPEN))\{
+00017     state = CLAW_OPEN_STATE;
+00018   \} \textcolor{keywordflow}{else} \{
+00019     \textcolor{comment}{//set the default motor speed}
+00020     \textcolor{keywordtype}{int} p = 0;
+00021     \textcolor{comment}{//Change the base speed to the difference between the target}
+00022     \textcolor{comment}{// and the current value}
+00023     \textcolor{keywordflow}{if}(state == CLAW_OPEN_STATE) \{
+00024       p = getClawTicks() - CLAW_OPEN_VAL;
+00025     \} \textcolor{keywordflow}{else} \{
+00026       p = getClawTicks() - CLAW_CLOSE_VAL;
+00027     \}
+00028     \textcolor{comment}{//Set the d value to the difference between the current p and the last p}
+00029     \textcolor{keywordtype}{int} d = (p - last\_error);
+00030     \textcolor{comment}{//Set last error for use the next time the function is run}
+00031     last\_error = p;
+00032     \textcolor{comment}{//Construct the final motor speed value}
+00033     \textcolor{keywordtype}{int} motor = CLAW_P * p + CLAW_D * d;
+00034     \textcolor{comment}{//Set the motor speed}
+00035     set_claw_motor(motor);
+00036   \}
+00037 \}
+00038 
+00043 \textcolor{keywordtype}{void} set_claw_motor(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v)\{
+00044   set_motor_immediate(CLAW_MOTOR, v);
+00045 \}
+00046 
+00051 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getClawTicks()\{
+00052   \textcolor{keywordflow}{return} analogRead(CLAW_POT);
+00053 \}
+00054 
+00059 \textcolor{keywordtype}{void} open_claw() \{
+00060   set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED);
+00061 \}
+00062 
+00067 \textcolor{keywordtype}{void} close_claw() \{
+00068   set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED);
+00069 \}
+\end{DoxyCode}

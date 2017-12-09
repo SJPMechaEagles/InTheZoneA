@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: include/controller.h File Reference</title>
+<title>Vex Team 9228A: include/controller.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.7</span>
+   <div id="projectname">Vex Team 9228A
+   &#160;<span id="projectnumber">1.1.4</span>
    </div>
+   <div id="projectbrief">Code for VRC team 9228A for 2017-2018 game &quot;In The Zone&quot;</div>
   </td>
  </tr>
  </tbody>
@@ -89,7 +91,7 @@ $(document).ready(function(){initNavTree('controller_8h.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>controller definitions, macros  
+<p>controller definitions, macros and functions to assist with usig the vex controllers.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="vmath_8h_source.html">vmath.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="_a_p_i_8h_source.html">API.h</a>&gt;</code><br />
@@ -101,13 +103,17 @@ Include dependency graph for controller.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="controller_8h__dep__incl.svg" width="224" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="controller_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="controller_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:ad61eb6d28a76985afb8d39ef925541bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controller_8h.html#ad61eb6d28a76985afb8d39ef925541bb">LEFT_BUMPERS</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:ad61eb6d28a76985afb8d39ef925541bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b885de9f143efd0c862ceb054256536"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controller_8h.html#a9b885de9f143efd0c862ceb054256536">LEFT_BUTTONS</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a9b885de9f143efd0c862ceb054256536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac055a23829dc64aa20b8e2e1bcfbf316"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controller_8h.html#ac055a23829dc64aa20b8e2e1bcfbf316">LEFT_JOY_X</a>&#160;&#160;&#160;4</td></tr>
 <tr class="memdesc:ac055a23829dc64aa20b8e2e1bcfbf316"><td class="mdescLeft">&#160;</td><td class="mdescRight">the left x joystick on controller  <a href="#ac055a23829dc64aa20b8e2e1bcfbf316">More...</a><br /></td></tr>
 <tr class="separator:ac055a23829dc64aa20b8e2e1bcfbf316"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,6 +126,10 @@ Macros</h2></td></tr>
 <tr class="memitem:a136e64cf351535da81cacb6a546cade6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controller_8h.html#a136e64cf351535da81cacb6a546cade6">PARTNER</a>&#160;&#160;&#160;2</td></tr>
 <tr class="memdesc:a136e64cf351535da81cacb6a546cade6"><td class="mdescLeft">&#160;</td><td class="mdescRight">the slave/partner controller  <a href="#a136e64cf351535da81cacb6a546cade6">More...</a><br /></td></tr>
 <tr class="separator:a136e64cf351535da81cacb6a546cade6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a635896b08789914290171051d1b82465"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controller_8h.html#a635896b08789914290171051d1b82465">RIGHT_BUMPERS</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a635896b08789914290171051d1b82465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68881b6085c880930037b20764fe5aee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controller_8h.html#a68881b6085c880930037b20764fe5aee">RIGHT_BUTTONS</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a68881b6085c880930037b20764fe5aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74f84aad465437cc1e0f914dbd6fab5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controller_8h.html#ad74f84aad465437cc1e0f914dbd6fab5">RIGHT_JOY_X</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:ad74f84aad465437cc1e0f914dbd6fab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">the right x joystick on controller  <a href="#ad74f84aad465437cc1e0f914dbd6fab5">More...</a><br /></td></tr>
 <tr class="separator:ad74f84aad465437cc1e0f914dbd6fab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,15 +148,48 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0ce0176099c0bb15ad8c36123222059d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structcord.html">cord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controller_8h.html#a0ce0176099c0bb15ad8c36123222059d">get_joystick_cord</a> (enum <a class="el" href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5a">joystick</a> <a class="el" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a>, int controller)</td></tr>
+<tr class="memdesc:a0ce0176099c0bb15ad8c36123222059d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the location of a joystick on the controller.  <a href="#a0ce0176099c0bb15ad8c36123222059d">More...</a><br /></td></tr>
 <tr class="separator:a0ce0176099c0bb15ad8c36123222059d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>controller definitions, macros </p>
-<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<div class="textblock"><p>controller definitions, macros and functions to assist with usig the vex controllers. </p>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett, Christian Desimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad61eb6d28a76985afb8d39ef925541bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61eb6d28a76985afb8d39ef925541bb">&#9670;&nbsp;</a></span>LEFT_BUMPERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEFT_BUMPERS&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00018">18</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+
+</div>
+</div>
+<a id="a9b885de9f143efd0c862ceb054256536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b885de9f143efd0c862ceb054256536">&#9670;&nbsp;</a></span>LEFT_BUTTONS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEFT_BUTTONS&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00016">16</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+
+</div>
+</div>
 <a id="ac055a23829dc64aa20b8e2e1bcfbf316"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac055a23829dc64aa20b8e2e1bcfbf316">&#9670;&nbsp;</a></span>LEFT_JOY_X</h2>
 
@@ -163,9 +206,9 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/1/2017 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00047">47</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00053">53</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="controller_8c_source.html#l00003">get_joystick_cord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="controller_8c_source.html#l00007">get_joystick_cord()</a>.</p>
 
 </div>
 </div>
@@ -185,9 +228,9 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/1/2017 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00054">54</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00060">60</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="controller_8c_source.html#l00003">get_joystick_cord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="controller_8c_source.html#l00007">get_joystick_cord()</a>.</p>
 
 </div>
 </div>
@@ -207,9 +250,9 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/1/2017 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00019">19</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00025">25</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00028">update_drive_motors()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00034">update_drive_motors()</a>, and <a class="el" href="mobile__goal__intake_8c_source.html#l00016">updateIntake()</a>.</p>
 
 </div>
 </div>
@@ -229,7 +272,41 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/1/2017 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00026">26</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00032">32</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="partner_8c_source.html#l00009">update_control()</a>, <a class="el" href="drive_8c_source.html#l00034">update_drive_motors()</a>, and <a class="el" href="mobile__goal__intake_8c_source.html#l00016">updateIntake()</a>.</p>
+
+</div>
+</div>
+<a id="a635896b08789914290171051d1b82465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a635896b08789914290171051d1b82465">&#9670;&nbsp;</a></span>RIGHT_BUMPERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RIGHT_BUMPERS&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00017">17</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+
+</div>
+</div>
+<a id="a68881b6085c880930037b20764fe5aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68881b6085c880930037b20764fe5aee">&#9670;&nbsp;</a></span>RIGHT_BUTTONS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RIGHT_BUTTONS&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00015">15</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
 
 </div>
 </div>
@@ -249,9 +326,9 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/1/2017 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00033">33</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00039">39</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="controller_8c_source.html#l00003">get_joystick_cord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="controller_8c_source.html#l00007">get_joystick_cord()</a>.</p>
 
 </div>
 </div>
@@ -271,9 +348,9 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/1/2017 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00040">40</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00046">46</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="controller_8c_source.html#l00003">get_joystick_cord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="controller_8c_source.html#l00007">get_joystick_cord()</a>.</p>
 
 </div>
 </div>
@@ -300,9 +377,9 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00061">61</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;              {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a>,</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9">LEFT_JOY</a>,</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div><div class="ttc" id="controller_8h_html_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe"><div class="ttname"><a href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00063">controller.h:63</a></div></div>
-<div class="ttc" id="controller_8h_html_ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9"><div class="ttname"><a href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9">LEFT_JOY</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00065">controller.h:65</a></div></div>
+<p class="definition">Definition at line <a class="el" href="controller_8h_source.html#l00067">67</a> of file <a class="el" href="controller_8h_source.html">controller.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;              {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a>,</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9">LEFT_JOY</a>,</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div><div class="ttc" id="controller_8h_html_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe"><div class="ttname"><a href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00069">controller.h:69</a></div></div>
+<div class="ttc" id="controller_8h_html_ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9"><div class="ttname"><a href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9">LEFT_JOY</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00071">controller.h:71</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -333,30 +410,26 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8c_source.html#l00003">3</a> of file <a class="el" href="controller_8c_source.html">controller.c</a>.</p>
+<p>Gets the location of a joystick on the controller. </p>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="reference">References <a class="el" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog()</a>, <a class="el" href="controller_8h_source.html#l00047">LEFT_JOY_X</a>, <a class="el" href="controller_8h_source.html#l00054">LEFT_JOY_Y</a>, <a class="el" href="controller_8h_source.html#l00063">RIGHT_JOY</a>, <a class="el" href="controller_8h_source.html#l00033">RIGHT_JOY_X</a>, <a class="el" href="controller_8h_source.html#l00040">RIGHT_JOY_Y</a>, <a class="el" href="vmath_8h_source.html#l00033">cord::x</a>, and <a class="el" href="vmath_8h_source.html#l00035">cord::y</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8c_source.html#l00007">7</a> of file <a class="el" href="controller_8c_source.html">controller.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="drive_8c_source.html#l00028">update_drive_motors()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                                                                  {</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">int</span> x;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">int</span> y;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a>) {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    y = <a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(controller, <a class="code" href="controller_8h.html#ad74f84aad465437cc1e0f914dbd6fab5">RIGHT_JOY_X</a>);</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    x = <a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(controller, <a class="code" href="controller_8h.html#a99457bf9dee795334411ea77f0858b16">RIGHT_JOY_Y</a>);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    y = <a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(controller, <a class="code" href="controller_8h.html#ac055a23829dc64aa20b8e2e1bcfbf316">LEFT_JOY_X</a>);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    x = <a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(controller, <a class="code" href="controller_8h.html#ae0a2b64db5fc4f4bf4b169185be93db3">LEFT_JOY_Y</a>);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">struct </span><a class="code" href="structcord.html">cord</a> c;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  c.<a class="code" href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">x</a> = <a class="code" href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">x</a>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  c.y = <a class="code" href="structcord.html#a4e7d289c55cfe511532e53a81dc19215">y</a>;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">return</span> c;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_ad56fcec15d1a48deb8780bb0fc38be4d"><div class="ttname"><a href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a></div><div class="ttdeci">int joystickGetAnalog(unsigned char joystick, unsigned char axis)</div></div>
-<div class="ttc" id="controller_8h_html_ae0a2b64db5fc4f4bf4b169185be93db3"><div class="ttname"><a href="controller_8h.html#ae0a2b64db5fc4f4bf4b169185be93db3">LEFT_JOY_Y</a></div><div class="ttdeci">#define LEFT_JOY_Y</div><div class="ttdoc">the left y joystick on controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00054">controller.h:54</a></div></div>
-<div class="ttc" id="structcord_html_a2eef9b681474b679cf87b0c20eced2cd"><div class="ttname"><a href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">cord::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00033">vmath.h:33</a></div></div>
-<div class="ttc" id="controller_8h_html_ac055a23829dc64aa20b8e2e1bcfbf316"><div class="ttname"><a href="controller_8h.html#ac055a23829dc64aa20b8e2e1bcfbf316">LEFT_JOY_X</a></div><div class="ttdeci">#define LEFT_JOY_X</div><div class="ttdoc">the left x joystick on controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00047">controller.h:47</a></div></div>
-<div class="ttc" id="structcord_html"><div class="ttname"><a href="structcord.html">cord</a></div><div class="ttdoc">A struct that contains cartesian coordinates. </div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00031">vmath.h:31</a></div></div>
-<div class="ttc" id="structcord_html_a4e7d289c55cfe511532e53a81dc19215"><div class="ttname"><a href="structcord.html#a4e7d289c55cfe511532e53a81dc19215">cord::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00035">vmath.h:35</a></div></div>
-<div class="ttc" id="controller_8h_html_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe"><div class="ttname"><a href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00063">controller.h:63</a></div></div>
-<div class="ttc" id="controller_8h_html_a99457bf9dee795334411ea77f0858b16"><div class="ttname"><a href="controller_8h.html#a99457bf9dee795334411ea77f0858b16">RIGHT_JOY_Y</a></div><div class="ttdeci">#define RIGHT_JOY_Y</div><div class="ttdoc">the right y joystick on controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00040">controller.h:40</a></div></div>
-<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a></div><div class="ttdeci">side</div><div class="ttdoc">enumeration indication side of the robot. </div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00021">drive.h:21</a></div></div>
-<div class="ttc" id="controller_8h_html_ad74f84aad465437cc1e0f914dbd6fab5"><div class="ttname"><a href="controller_8h.html#ad74f84aad465437cc1e0f914dbd6fab5">RIGHT_JOY_X</a></div><div class="ttdeci">#define RIGHT_JOY_X</div><div class="ttdoc">the right x joystick on controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00033">controller.h:33</a></div></div>
+<p class="reference">References <a class="el" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog()</a>, <a class="el" href="controller_8h_source.html#l00053">LEFT_JOY_X</a>, <a class="el" href="controller_8h_source.html#l00060">LEFT_JOY_Y</a>, <a class="el" href="controller_8h_source.html#l00069">RIGHT_JOY</a>, <a class="el" href="controller_8h_source.html#l00039">RIGHT_JOY_X</a>, <a class="el" href="controller_8h_source.html#l00046">RIGHT_JOY_Y</a>, <a class="el" href="vmath_8h_source.html#l00034">cord::x</a>, and <a class="el" href="vmath_8h_source.html#l00036">cord::y</a>.</p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                                                  {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">int</span> x;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">int</span> y;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="comment">//Get the joystick value for either the right or left,</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="comment">//depending on the mode</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a> == <a class="code" href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a>) {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    y = <a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(controller, <a class="code" href="controller_8h.html#ad74f84aad465437cc1e0f914dbd6fab5">RIGHT_JOY_X</a>);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    x = <a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(controller, <a class="code" href="controller_8h.html#a99457bf9dee795334411ea77f0858b16">RIGHT_JOY_Y</a>);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    y = <a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(controller, <a class="code" href="controller_8h.html#ac055a23829dc64aa20b8e2e1bcfbf316">LEFT_JOY_X</a>);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    x = <a class="code" href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a>(controller, <a class="code" href="controller_8h.html#ae0a2b64db5fc4f4bf4b169185be93db3">LEFT_JOY_Y</a>);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">//Define a coordinate for the joystick value</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">struct </span><a class="code" href="structcord.html">cord</a> c;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  c.<a class="code" href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">x</a> = <a class="code" href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">x</a>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  c.y = <a class="code" href="structcord.html#a4e7d289c55cfe511532e53a81dc19215">y</a>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">return</span> c;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_ad56fcec15d1a48deb8780bb0fc38be4d"><div class="ttname"><a href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</a></div><div class="ttdeci">int joystickGetAnalog(unsigned char joystick, unsigned char axis)</div></div>
+<div class="ttc" id="controller_8h_html_ae0a2b64db5fc4f4bf4b169185be93db3"><div class="ttname"><a href="controller_8h.html#ae0a2b64db5fc4f4bf4b169185be93db3">LEFT_JOY_Y</a></div><div class="ttdeci">#define LEFT_JOY_Y</div><div class="ttdoc">the left y joystick on controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00060">controller.h:60</a></div></div>
+<div class="ttc" id="structcord_html_a2eef9b681474b679cf87b0c20eced2cd"><div class="ttname"><a href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">cord::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00034">vmath.h:34</a></div></div>
+<div class="ttc" id="controller_8h_html_ac055a23829dc64aa20b8e2e1bcfbf316"><div class="ttname"><a href="controller_8h.html#ac055a23829dc64aa20b8e2e1bcfbf316">LEFT_JOY_X</a></div><div class="ttdeci">#define LEFT_JOY_X</div><div class="ttdoc">the left x joystick on controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00053">controller.h:53</a></div></div>
+<div class="ttc" id="structcord_html"><div class="ttname"><a href="structcord.html">cord</a></div><div class="ttdoc">A struct that contains cartesian coordinates. </div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00032">vmath.h:32</a></div></div>
+<div class="ttc" id="structcord_html_a4e7d289c55cfe511532e53a81dc19215"><div class="ttname"><a href="structcord.html#a4e7d289c55cfe511532e53a81dc19215">cord::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00036">vmath.h:36</a></div></div>
+<div class="ttc" id="controller_8h_html_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe"><div class="ttname"><a href="controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00069">controller.h:69</a></div></div>
+<div class="ttc" id="controller_8h_html_a99457bf9dee795334411ea77f0858b16"><div class="ttname"><a href="controller_8h.html#a99457bf9dee795334411ea77f0858b16">RIGHT_JOY_Y</a></div><div class="ttdeci">#define RIGHT_JOY_Y</div><div class="ttdoc">the right y joystick on controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00046">controller.h:46</a></div></div>
+<div class="ttc" id="drive_8h_html_afc015eff6557e84151d2e53b94375445"><div class="ttname"><a href="drive_8h.html#afc015eff6557e84151d2e53b94375445">side</a></div><div class="ttdeci">side</div><div class="ttdoc">enumeration indication side of the robot. </div><div class="ttdef"><b>Definition:</b> <a href="drive_8h_source.html#l00026">drive.h:26</a></div></div>
+<div class="ttc" id="controller_8h_html_ad74f84aad465437cc1e0f914dbd6fab5"><div class="ttname"><a href="controller_8h.html#ad74f84aad465437cc1e0f914dbd6fab5">RIGHT_JOY_X</a></div><div class="ttdeci">#define RIGHT_JOY_X</div><div class="ttdoc">the right x joystick on controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00039">controller.h:39</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="controller_8h_a0ce0176099c0bb15ad8c36123222059d_cgraph.svg" width="311" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="controller_8h_a0ce0176099c0bb15ad8c36123222059d_icgraph.svg" width="330" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

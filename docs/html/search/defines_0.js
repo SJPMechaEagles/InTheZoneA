@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['accel_5fx',['ACCEL_X',['../_a_p_i_8h.html#af4cc2866af9a3674feedf15a2bb2b540',1,'API.h']]],
-  ['accel_5fy',['ACCEL_Y',['../_a_p_i_8h.html#a73df2dcbe32c4a51551b34034093c37f',1,'API.h']]]
+  ['_5fmotor_5fports_5fh_5f',['_MOTOR_PORTS_H_',['../motor__ports_8h.html#a96b0e64c39730b0c4ca0d9e493bc0f58',1,'motor_ports.h']]]
 ];

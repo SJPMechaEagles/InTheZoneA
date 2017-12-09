@@ -25,6 +25,14 @@ var searchData=
   ['taskresume',['taskResume',['../_a_p_i_8h.html#afa2a4c5236b32bd9983bf19a4ac0cc23',1,'API.h']]],
   ['taskrunloop',['taskRunLoop',['../_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156',1,'API.h']]],
   ['tasksuspend',['taskSuspend',['../_a_p_i_8h.html#ab56a51f337ad1903ad2bbce095744170',1,'API.h']]],
+  ['theta',['theta',['../structlocation.html#a4b415222b4dcf34e49dacd22384be9eb',1,'location::theta()'],['../structencoder__odemtry.html#af1a1e2a2a7a2f89138a8c261a3b82898',1,'encoder_odemtry::theta()']]],
+  ['thresh',['thresh',['../drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581',1,'drive.c']]],
+  ['threshold',['THRESHOLD',['../drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879',1,'THRESHOLD():&#160;drive.h'],['../lifter_8h.html#a4679d8ea8690999a6c6c7c0cb245c879',1,'THRESHOLD():&#160;lifter.h']]],
+  ['tick_5fmax',['TICK_MAX',['../potentiometer_8h.html#ad40f2bbc4e57baed2d9e900750d94a7f',1,'potentiometer.h']]],
+  ['toggle_2ec',['toggle.c',['../toggle_8c.html',1,'']]],
+  ['toggle_2eh',['toggle.h',['../toggle_8h.html',1,'']]],
   ['top_5frow',['TOP_ROW',['../lcd_8h.html#a18bab754c6ad16bc35c48333091516c9',1,'lcd.h']]],
+  ['tracematrix',['traceMatrix',['../matrix_8h.html#a4794df8b2032f961dd8b2d90276bc417',1,'traceMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#a4794df8b2032f961dd8b2d90276bc417',1,'traceMatrix(matrix *m):&#160;matrix.c']]],
+  ['transposematrix',['transposeMatrix',['../matrix_8h.html#a2936260302742748b0639e8ec71d4d9f',1,'transposeMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#a2936260302742748b0639e8ec71d4d9f',1,'transposeMatrix(matrix *m):&#160;matrix.c']]],
   ['type',['type',['../structmenu__t.html#a110244ceb7d2a7cba95cfc5758d61c01',1,'menu_t']]]
 ];

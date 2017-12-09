@@ -1,0 +1,82 @@
+\subsection{drive.\+c}
+\label{drive_8c_source}\index{src/drive.\+c@{src/drive.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "drive.h"}
+00002 \textcolor{preprocessor}{#include "motor_ports.h"}
+00003 \textcolor{preprocessor}{#include "vmath.h"}
+00004 \textcolor{preprocessor}{#include "controller.h"}
+00005 \textcolor{preprocessor}{#include "slew.h"}
+00006 \textcolor{preprocessor}{#include "controller.h"}
+00007 \textcolor{preprocessor}{#include <API.h>}
+00008 \textcolor{preprocessor}{#include "log.h"}
+00009 
+00010 \textcolor{keyword}{static} \textcolor{keywordtype}{int} thresh = 30;
+00011 
+00012 
+00017 \textcolor{keywordtype}{int} getThresh()\{
+00018   \textcolor{keywordflow}{return} thresh;
+00019 \}
+00020 
+00025 \textcolor{keywordtype}{void} setThresh(\textcolor{keywordtype}{int} t)\{
+00026   thresh = t;
+00027 \}
+00028 
+00034 \textcolor{keywordtype}{void} update_drive_motors()\{
+00035   \textcolor{comment}{//Get the joystick values from the controller}
+00036   \textcolor{keywordtype}{int} x = 0;
+00037   \textcolor{keywordtype}{int} y = 0;
+00038   \textcolor{keywordflow}{if}(get_mode() == PARTNER_CONTROLLER_MODE) \{
+00039     x = (joystickGetAnalog(PARTNER, 3));
+00040     y = (joystickGetAnalog(PARTNER, 1));
+00041   \} \textcolor{keywordflow}{else} \{
+00042     x = -(joystickGetAnalog(MASTER, 3));
+00043     y = (joystickGetAnalog(MASTER, 1));
+00044   \}
+00045   \textcolor{comment}{//Make sure the joystick values are significant enough to change the motors}
+00046   \textcolor{keywordflow}{if}(x < thresh && x > -thresh)\{
+00047     x = 0;
+00048   \}
+00049   \textcolor{keywordflow}{if}(y < thresh && y > -thresh)\{
+00050     y = 0;
+00051   \}
+00052   \textcolor{comment}{//Create motor values for the left and right from the x and y of the joystick}
+00053   \textcolor{keywordtype}{int} r = (x + y);
+00054   \textcolor{keywordtype}{int} l = -(x - y);
+00055 
+00056   \textcolor{comment}{//Set the drive motors}
+00057   set_side_speed(LEFT, l);
+00058   set_side_speed(RIGHT, -r);
+00059 
+00060 \}
+00061 
+00068 \textcolor{keywordtype}{void} set_side_speed(side_t side, \textcolor{keywordtype}{int} speed)\{
+00069   \textcolor{keywordflow}{if}(side == RIGHT || side == BOTH)\{
+00070     set_motor_slew(MOTOR_BACK_RIGHT , -speed);
+00071     set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
+00072     set_motor_slew(MOTOR_MIDDLE_RIGHT, -speed);
+00073   \}
+00074   \textcolor{keywordflow}{if}(side == LEFT || side == BOTH)\{
+00075     set_motor_slew(MOTOR_BACK_LEFT, speed);
+00076     set_motor_slew(MOTOR_MIDDLE_LEFT, speed);
+00077     set_motor_slew(MOTOR_FRONT_LEFT, speed);
+00078   \}
+00079 \}
+00080 
+00087 \textcolor{keyword}{static} \textcolor{keywordtype}{float} joystickExp(\textcolor{keywordtype}{int} joystickVal) \{
+00088     \textcolor{comment}{//make the offset negative if moving backwards}
+00089     \textcolor{keywordflow}{if} (abs(joystickVal) < THRESHOLD) \{
+00090             \textcolor{keywordflow}{return} 0;
+00091     \}
+00092 
+00093     \textcolor{keywordtype}{int} offset;
+00094   \textcolor{comment}{//Use the threshold to ensure the joystick values are significant}
+00095     \textcolor{keywordflow}{if} (joystickVal < 0) \{
+00096         offset = - (THRESHOLD);
+00097     \} \textcolor{keywordflow}{else} \{
+00098         offset = THRESHOLD;
+00099     \}
+00100   \textcolor{comment}{//Apply the function ((((x/10)^3)/18) + offset) * 0.8 to the joystick value}
+00101     \textcolor{keywordflow}{return} (pow(joystickVal/10 , 3) / 18 + offset) * 0.8;
+00102 \}
+\end{DoxyCode}

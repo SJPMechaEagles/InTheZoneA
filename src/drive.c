@@ -5,58 +5,98 @@
 #include "slew.h"
 #include "controller.h"
 #include <API.h>
+#include "log.h"
 
-void updateDrive(){
+static int thresh = 30;
 
-  int x = joystickExp(joystickGetAnalog(MASTER, RIGHT_JOY_X));
-  int y = joystickExp(joystickGetAnalog(MASTER, RIGHT_JOY_Y));
 
-  int r = -(y + x);
-  int l = -(y - x);
+/**
+* @brief Gets the deadzone threshhold on the drive.
+* @author Christian Desimone
+**/
+int getThresh(){
+  return thresh;
+}
 
+/**
+* @brief Sets the deadzone threshhold on the drive.
+* @author Christian Desimone
+**/
+void setThresh(int t){
+  thresh = t;
+}
+
+/**
+* @brief Updates the drive motors during teleop
+* @author Christian Desimone
+* @date 9/5/17
+**/
+void update_drive_motors(){
+  //Get the joystick values from the controller
+  int x = 0;
+  int y = 0;
+  if(get_mode() == PARTNER_CONTROLLER_MODE) {
+    x = (joystickGetAnalog(PARTNER, 3));
+    y = (joystickGetAnalog(PARTNER, 1));
+  } else {
+    x = -(joystickGetAnalog(MASTER, 3));
+    y = (joystickGetAnalog(MASTER, 1));
+  }
+  //Make sure the joystick values are significant enough to change the motors
+  if(x < thresh && x > -thresh){
+    x = 0;
+  }
+  if(y < thresh && y > -thresh){
+    y = 0;
+  }
+  //Create motor values for the left and right from the x and y of the joystick
+  int r = (x + y);
+  int l = -(x - y);
+
+  //Set the drive motors
   set_side_speed(LEFT, l);
-  set_side_speed(RIGHT, r);
+  set_side_speed(RIGHT, -r);
 
 }
 
+/**
+* @brief sets the speed of one side of the robot.
+* @author Christian Desimone
+* @param side a side enum which indicates the size.
+* @param speed the speed of the side. Can range from -127 - 127 negative being back and positive forwards
+**/
 void set_side_speed(side_t side, int speed){
   if(side == RIGHT || side == BOTH){
-    set_motor_slew(MOTOR_BACK_RIGHT , speed);
-    set_motor_slew(MOTOR_FRONT_RIGHT, speed);
-    set_motor_slew(MOTOR_MIDDLE_RIGHT, speed);
+    set_motor_slew(MOTOR_BACK_RIGHT , -speed);
+    set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
+    set_motor_slew(MOTOR_MIDDLE_RIGHT, -speed);
   }
   if(side == LEFT || side == BOTH){
     set_motor_slew(MOTOR_BACK_LEFT, speed);
-    set_motor_slew(MOTOR_BACK_LEFT, speed);
-    set_motor_slew(MOTOR_BACK_LEFT, speed);
+    set_motor_slew(MOTOR_MIDDLE_LEFT, speed);
+    set_motor_slew(MOTOR_FRONT_LEFT, speed);
   }
 }
 
-static int joystick_interpolate(int val) {
-
-}
-
-float joystickExp(int joystickVal) {
+/**
+* @brief Applies exponential scale to a joystick value.
+* @author Christian DeSimone, Chris Jerrett
+* @param joystickVal the analog value from the joystick
+* @date 9/21/2017
+**/
+static float joystickExp(int joystickVal) {
 	//make the offset negative if moving backwards
 	if (abs(joystickVal) < THRESHOLD) {
 			return 0;
 	}
 
 	int offset;
+  //Use the threshold to ensure the joystick values are significant
 	if (joystickVal < 0) {
 		offset = - (THRESHOLD);
 	} else {
 		offset = THRESHOLD;
 	}
-
-
+  //Apply the function ((((x/10)^3)/18) + offset) * 0.8 to the joystick value
 	return (pow(joystickVal/10 , 3) / 18 + offset) * 0.8;
-}
-
-static int deadspot(int val) {
-  return abs(val) > DEADSPOT ? val : 0;
-}
-
-void update_drive_motors(){
-  struct polar_cord cord = cartesian_cord_to_polar(get_joystick_cord(RIGHT_JOY, MASTER));
 }

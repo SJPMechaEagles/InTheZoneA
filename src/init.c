@@ -15,6 +15,7 @@
 #include "log.h"
 #include "encoders.h"
 #include "menu.h"
+
 /*
  * Runs pre-initialization code. This function will be started in kernel mode one time while the
  * VEX Cortex is starting up. As the scheduler is still paused, most API functions will fail.
@@ -44,6 +45,7 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
+<<<<<<< HEAD
   /*setTeamName("9228A");
   init_slew();
   init_main_lcd(uart1);
@@ -61,4 +63,9 @@ void initialize() {
     promt_confirmation("Check Backup");s
     warning("Checkbackup bat");s
   }*/
+=======
+  int c = imeInitializeAll();
+  setTeamName("9228A");
+  printf("Counts : %d\n", c);
+>>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
 }

@@ -1,0 +1,56 @@
+\subsection{vmath.\+c}
+\label{vmath_8c_source}\index{src/vmath.\+c@{src/vmath.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "vmath.h"}
+00002 
+00003 \textcolor{keyword}{struct }polar_cord cartesian_to_polar(float x, float y) \{
+00004   \textcolor{keywordtype}{float} degree = 0;
+00005   \textcolor{keywordtype}{double} magnitude = sqrt((fabs(x) * fabs(x)) + (fabs(y) * fabs(y)));
+00006 
+00007   \textcolor{keywordflow}{if}(x < 0)\{
+00008     degree += 180.0;
+00009   \}
+00010   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x > 0 && y < 0)\{
+00011     degree += 360.0;
+00012   \}
+00013 
+00014   \textcolor{keywordflow}{if}(x != 0 && y != 0)\{
+00015     degree += atan((\textcolor{keywordtype}{float})y / (\textcolor{keywordtype}{float})x);
+00016   \}
+00017   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x == 0 && y > 0)\{
+00018     degree = 90.0;
+00019   \}
+00020   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(y == 0 && x < 0)\{
+00021     degree = 180.0;
+00022   \}
+00023   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x == 0 && y < 0)\{
+00024     degree = 270.0;
+00025   \}
+00026 
+00027   \textcolor{keyword}{struct }polar_cord p;
+00028   p.angle = degree;
+00029   p.magnitue = magnitude;
+00030   \textcolor{keywordflow}{return} p;
+00031 \}
+00032 
+00033 \textcolor{keyword}{struct }polar_cord cartesian_cord_to_polar(struct cord cords) \{
+00034   \textcolor{keywordflow}{return} cartesian_to_polar(cords.x, cords.y);
+00035 \}
+00036 
+00037 \textcolor{keywordtype}{double} sind(\textcolor{keywordtype}{double} angle) \{
+00038     \textcolor{keywordtype}{double} angleradians = angle * M_PI / 180.0f;
+00039     \textcolor{keywordflow}{return} sin(angleradians);
+00040 \}
+00041 
+00042 \textcolor{keywordtype}{int} min(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} b) \{
+00043   \textcolor{keywordflow}{if}(a < b) \textcolor{keywordflow}{return} a;
+00044   \textcolor{keywordflow}{return} b;
+00045 \}
+00046 
+00047 
+00048 \textcolor{keywordtype}{int} max(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} b) \{
+00049   \textcolor{keywordflow}{if}(a > b) \textcolor{keywordflow}{return} a;
+00050   \textcolor{keywordflow}{return} b;
+00051 \}
+\end{DoxyCode}

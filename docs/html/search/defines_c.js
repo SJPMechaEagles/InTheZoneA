@@ -1,6 +1,24 @@
 var searchData=
 [
-  ['ramp_5fproportion',['RAMP_PROPORTION',['../slew_8h.html#a4a3ff8667251227c99f8f4c81e9ff467',1,'slew.h']]],
-  ['right_5fjoy_5fx',['RIGHT_JOY_X',['../controller_8h.html#ad74f84aad465437cc1e0f914dbd6fab5',1,'controller.h']]],
-  ['right_5fjoy_5fy',['RIGHT_JOY_Y',['../controller_8h.html#a99457bf9dee795334411ea77f0858b16',1,'controller.h']]]
+  ['m_5fpi',['M_PI',['../vmath_8h.html#ae71449b1cc6e6250b91f539153a7a0d3',1,'vmath.h']]],
+  ['master',['MASTER',['../controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b',1,'controller.h']]],
+  ['max_5fclaw_5fspeed',['MAX_CLAW_SPEED',['../claw_8h.html#ae3be50b28977dac719f086e131ba8fd7',1,'claw.h']]],
+  ['max_5fspeed',['MAX_SPEED',['../motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26',1,'motor_ports.h']]],
+  ['mid_5fleft_5fdrive',['MID_LEFT_DRIVE',['../auto_8h.html#a811b1777cccc7f0e3abbec1874715f0a',1,'auto.h']]],
+  ['mid_5fright_5fdrive',['MID_RIGHT_DRIVE',['../auto_8h.html#a2919b1b6b7bf06fab5b5bbf09d8d2761',1,'auto.h']]],
+  ['min_5fbackup_5fvoltage',['MIN_BACKUP_VOLTAGE',['../battery_8h.html#a0713ec94f47c403bf536ab6b11833b81',1,'battery.h']]],
+  ['min_5fclaw_5fspeed',['MIN_CLAW_SPEED',['../claw_8h.html#a7306e61a4209c74862aa81d7b3de74e5',1,'claw.h']]],
+  ['min_5fmain_5fvoltage',['MIN_MAIN_VOLTAGE',['../battery_8h.html#a63f8a91bb74417aa77dc00340b6fd007',1,'battery.h']]],
+  ['min_5fspeed',['MIN_SPEED',['../motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e',1,'motor_ports.h']]],
+  ['motor_5fback_5fleft',['MOTOR_BACK_LEFT',['../motor__ports_8h.html#a36e9fda07b5cd4408170fe907b75a8b7',1,'motor_ports.h']]],
+  ['motor_5fback_5fright',['MOTOR_BACK_RIGHT',['../motor__ports_8h.html#ad85c5f3d6a2d00789c8c67b960c46c2b',1,'motor_ports.h']]],
+  ['motor_5ffront_5fleft',['MOTOR_FRONT_LEFT',['../motor__ports_8h.html#a743b47e164fb23b30f4f2f228db0b338',1,'motor_ports.h']]],
+  ['motor_5ffront_5fright',['MOTOR_FRONT_RIGHT',['../motor__ports_8h.html#a6f48bcc6d5fce24caeae0b17954c277a',1,'motor_ports.h']]],
+  ['motor_5flift_5fbottom_5fleft',['MOTOR_LIFT_BOTTOM_LEFT',['../motor__ports_8h.html#a6d665064ab6c8be6066d33461ac45cc8',1,'motor_ports.h']]],
+  ['motor_5flift_5fbottom_5fright',['MOTOR_LIFT_BOTTOM_RIGHT',['../motor__ports_8h.html#a6a3fabdaeec7212af915f47f57177fc5',1,'motor_ports.h']]],
+  ['motor_5flift_5ftop_5fleft',['MOTOR_LIFT_TOP_LEFT',['../motor__ports_8h.html#afad261ce61b31db241510a6784798f0c',1,'motor_ports.h']]],
+  ['motor_5flift_5ftop_5fright',['MOTOR_LIFT_TOP_RIGHT',['../motor__ports_8h.html#add81e70dc9a7ed2aa5d86e807fb27b02',1,'motor_ports.h']]],
+  ['motor_5fmiddle_5fleft',['MOTOR_MIDDLE_LEFT',['../motor__ports_8h.html#ac7dd3397e2f909b4dc11f2a2e6f28800',1,'motor_ports.h']]],
+  ['motor_5fmiddle_5fright',['MOTOR_MIDDLE_RIGHT',['../motor__ports_8h.html#a0da3f792b8f28ab09b339295859d8334',1,'motor_ports.h']]],
+  ['motor_5fports',['MOTOR_PORTS',['../slew_8h.html#ad1ad4b29af4180aa00713599367fbc98',1,'slew.h']]]
 ];

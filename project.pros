@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"py/state": {"output": "bin/output.bin", "kernel": "2.12.0", "libraries": []}, "py/object": "prosconfig.ProjectConfig"}
+=======
+{"py/object": "prosconfig.ProjectConfig", "py/state": {"kernel": "2.12.1", "libraries": [], "output": "bin/output.bin"}}
+>>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['float_5ftype',['FLOAT_TYPE',['../menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62ab2a272a88abadbaa481269e2506345c5',1,'menu.h']]]
+  ['claw_5fclose_5fstate',['CLAW_CLOSE_STATE',['../claw_8h.html#a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f',1,'claw.h']]],
+  ['claw_5fopen_5fstate',['CLAW_OPEN_STATE',['../claw_8h.html#a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd',1,'claw.h']]]
 ];

@@ -1,0 +1,251 @@
+.TH "include/motor_ports.h" 3 "Tue Nov 28 2017" "Version 1.1.4" "Vex Team 9228A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/motor_ports.h \- The motor port definitions
+.PP
+Macros for the different motors ports\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_MOTOR_PORTS_H_\fP"
+.br
+.ti -1c
+.RI "#define \fBCLAW_MOTOR\fP   10"
+.br
+.ti -1c
+.RI "#define \fBINTAKE_MOTOR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBMAX_SPEED\fP   127"
+.br
+.RI "Max motor speed\&. "
+.ti -1c
+.RI "#define \fBMIN_SPEED\fP   \-127"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_BACK_LEFT\fP   5"
+.br
+.RI "Back left drive motor of robot base\&. "
+.ti -1c
+.RI "#define \fBMOTOR_BACK_RIGHT\fP   4"
+.br
+.RI "Back right drive motor of robot base\&. "
+.ti -1c
+.RI "#define \fBMOTOR_FRONT_LEFT\fP   7"
+.br
+.RI "Front left drive motor of robot base\&. "
+.ti -1c
+.RI "#define \fBMOTOR_FRONT_RIGHT\fP   2"
+.br
+.RI "Front right drive motor of robot base\&. "
+.ti -1c
+.RI "#define \fBMOTOR_LIFT_BOTTOM_LEFT\fP   9"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_LIFT_BOTTOM_RIGHT\fP   8"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_LIFT_TOP_LEFT\fP   9"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_LIFT_TOP_RIGHT\fP   8"
+.br
+.ti -1c
+.RI "#define \fBMOTOR_MIDDLE_LEFT\fP   6"
+.br
+.RI "Middle left drive motor of robot base\&. "
+.ti -1c
+.RI "#define \fBMOTOR_MIDDLE_RIGHT\fP   3"
+.br
+.RI "Middle right drive motor of robot base\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The motor port definitions
+.PP
+Macros for the different motors ports\&. 
+
+
+.PP
+Definition in file \fBmotor_ports\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define _MOTOR_PORTS_H_"
+
+.PP
+Definition at line 7 of file motor_ports\&.h\&.
+.SS "#define CLAW_MOTOR   10"
+
+.PP
+Definition at line 61 of file motor_ports\&.h\&.
+.PP
+Referenced by close_claw(), open_claw(), and set_claw_motor()\&.
+.SS "#define INTAKE_MOTOR   1"
+
+.PP
+Definition at line 62 of file motor_ports\&.h\&.
+.PP
+Referenced by set_intake_motor()\&.
+.SS "#define MAX_SPEED   127"
+
+.PP
+Max motor speed\&. 
+.PP
+Definition at line 12 of file motor_ports\&.h\&.
+.PP
+Referenced by raise_lifter()\&.
+.SS "#define MIN_SPEED   \-127"
+
+.PP
+Definition at line 13 of file motor_ports\&.h\&.
+.PP
+Referenced by lower_lifter()\&.
+.SS "#define MOTOR_BACK_LEFT   5"
+
+.PP
+Back left drive motor of robot base\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file motor_ports\&.h\&.
+.PP
+Referenced by set_side_speed()\&.
+.SS "#define MOTOR_BACK_RIGHT   4"
+
+.PP
+Back right drive motor of robot base\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 48 of file motor_ports\&.h\&.
+.PP
+Referenced by set_side_speed()\&.
+.SS "#define MOTOR_FRONT_LEFT   7"
+
+.PP
+Front left drive motor of robot base\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 27 of file motor_ports\&.h\&.
+.PP
+Referenced by set_side_speed()\&.
+.SS "#define MOTOR_FRONT_RIGHT   2"
+
+.PP
+Front right drive motor of robot base\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file motor_ports\&.h\&.
+.PP
+Referenced by set_side_speed()\&.
+.SS "#define MOTOR_LIFT_BOTTOM_LEFT   9"
+
+.PP
+Definition at line 57 of file motor_ports\&.h\&.
+.SS "#define MOTOR_LIFT_BOTTOM_RIGHT   8"
+
+.PP
+Definition at line 56 of file motor_ports\&.h\&.
+.SS "#define MOTOR_LIFT_TOP_LEFT   9"
+
+.PP
+Definition at line 59 of file motor_ports\&.h\&.
+.PP
+Referenced by set_lifter_motors()\&.
+.SS "#define MOTOR_LIFT_TOP_RIGHT   8"
+
+.PP
+Definition at line 58 of file motor_ports\&.h\&.
+.PP
+Referenced by set_lifter_motors()\&.
+.SS "#define MOTOR_MIDDLE_LEFT   6"
+
+.PP
+Middle left drive motor of robot base\&. 
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file motor_ports\&.h\&.
+.PP
+Referenced by set_side_speed()\&.
+.SS "#define MOTOR_MIDDLE_RIGHT   3"
+
+.PP
+Middle right drive motor of robot base\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Christian Desimone 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+9/7/2017 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file motor_ports\&.h\&.
+.PP
+Referenced by set_side_speed()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Vex Team 9228A from the source code\&.

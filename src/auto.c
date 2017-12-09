@@ -11,6 +11,7 @@
  */
 
 #include "main.h"
+#include "auto.h"
 
 /*
  * Runs the user autonomous code. This function will be started in its own task with the default
@@ -27,4 +28,50 @@
  * so, the robot will await a switch to another mode or disable/enable cycle.
  */
 void autonomous() {
+  init_slew();
+
+  delay(10);
+  printf("auto\n");
+  //How far the left wheels have gone
+  int counts_drive_left;
+  //How far the right wheels have gone
+  int counts_drive_right;
+  //The average distance traveled forward
+  int counts_drive;
+
+  //Reset the integrated motor controllers
+  imeReset(MID_LEFT_DRIVE);
+  imeReset(MID_RIGHT_DRIVE);
+  //Set initial values for how far the wheels have gone
+  imeGet(MID_LEFT_DRIVE, &counts_drive_left);
+  imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
+  counts_drive = counts_drive_left + counts_drive_right;
+  counts_drive /= 2;
+
+  //Grab pre-load cone
+  close_claw();
+  delay(300);
+
+  //Raise the lifter
+  while(analogRead(LIFTER) < GOAL_HEIGHT){
+    set_lifter_motors(-127);
+  }
+  set_lifter_motors(0);
+  //Drive towards the goal
+  while(counts_drive < 530){
+    set_side_speed(BOTH, 127);
+    //Restablish the distance traveled
+    imeGet(MID_LEFT_DRIVE, &counts_drive_left);
+    imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
+    counts_drive = counts_drive_left + counts_drive_right;
+    counts_drive /= 2;
+  }
+  //Stop moving
+  set_side_speed(BOTH, 0);
+  delay(1000);
+
+  //Drop the cone on the goal
+  open_claw();
+  delay(1000);
+  deinitslew();
 }

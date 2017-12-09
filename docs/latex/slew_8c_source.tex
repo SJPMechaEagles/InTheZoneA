@@ -1,0 +1,75 @@
+\subsection{slew.\+c}
+\label{slew_8c_source}\index{src/slew.\+c@{src/slew.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "slew.h"}
+00002 \textcolor{preprocessor}{#include "log.h"}
+00003 
+00004 \textcolor{keyword}{static} Mutex speeds_mutex;
+00005 
+00006 \textcolor{keyword}{static} \textcolor{keywordtype}{int} motors_set_speeds[10];
+00007 \textcolor{keyword}{static} \textcolor{keywordtype}{int} motors_curr_speeds[10];
+00008 
+00009 \textcolor{keyword}{static} TaskHandle slew = NULL; \textcolor{comment}{//TaskHandle is of type void*}
+00010 
+00011 \textcolor{keyword}{static} \textcolor{keywordtype}{bool} initialized = \textcolor{keyword}{false};
+00012 
+00013 \textcolor{keywordtype}{void} updateMotors()\{
+00014   \textcolor{comment}{//Take back half approach}
+00015   \textcolor{comment}{//Not linear but equal to setSpeed(1-(1/2)^x)}
+00016   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < 9; i++) \{
+00017     \textcolor{keywordflow}{if}(motors_set_speeds[i] == motors_curr_speeds[i]) \textcolor{keywordflow}{continue};
+00018     mutexTake(speeds_mutex, 10);
+00019     \textcolor{keywordtype}{int} set\_speed = (motors_set_speeds[i]);
+00020     \textcolor{keywordtype}{int} curr\_speed = motors_curr_speeds[i];
+00021     mutexGive(speeds_mutex);
+00022     \textcolor{keywordtype}{int} diff = set\_speed - curr\_speed;
+00023     \textcolor{keywordtype}{int} offset = diff;
+00024     \textcolor{keywordtype}{int} n = curr\_speed + offset;
+00025     motors_curr_speeds[i] = n;
+00026     motorSet(i+1, n);
+00027   \}
+00028 \}
+00029 
+00030 \textcolor{keywordtype}{void} init_slew()\{
+00031   \textcolor{keywordflow}{if}(initialized) \{
+00032     warning(\textcolor{stringliteral}{"Trying to init already init slew"});
+00033   \}
+00034   memset(motors_set_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00035   memset(motors_curr_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00036   motorStopAll();
+00037   info(\textcolor{stringliteral}{"Did Init Slew"});
+00038   speeds_mutex = mutexCreate();
+00039   slew = taskRunLoop(updateMotors, 100);
+00040   initialized = \textcolor{keyword}{true};
+00041 \}
+00042 
+00043 \textcolor{keywordtype}{void} deinitslew()\{
+00044   taskDelete(slew);
+00045   memset(motors_set_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00046   memset(motors_curr_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00047   initialized = \textcolor{keyword}{false};
+00048 \}
+00049 
+00050 \textcolor{keywordtype}{void} set_motor_slew(\textcolor{keywordtype}{int} motor, \textcolor{keywordtype}{int} speed)\{
+00051   \textcolor{keywordflow}{if}(!initialized) \{
+00052     debug(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
+00053     init_slew();
+00054   \}
+00055   mutexTake(speeds_mutex, 10);
+00056   motors_set_speeds[motor-1] = speed;
+00057   mutexGive(speeds_mutex);
+00058 \}
+00059 
+00060 \textcolor{keywordtype}{void} set_motor_immediate(\textcolor{keywordtype}{int} motor, \textcolor{keywordtype}{int} speed) \{
+00061   \textcolor{keywordflow}{if}(!initialized) \{
+00062     debug(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
+00063     init_slew();
+00064   \}
+00065   motorSet(motor, speed);
+00066   mutexTake(speeds_mutex, 10);
+00067   motors_curr_speeds[motor-1] = speed;
+00068   motors_set_speeds[motor-1] = speed;
+00069   mutexGive(speeds_mutex);
+00070 \}
+\end{DoxyCode}
