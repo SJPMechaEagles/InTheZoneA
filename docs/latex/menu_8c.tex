@@ -1,4 +1,4 @@
-\subsection{src/menu.c File Reference}
+\section{src/menu.c File Reference}
 \label{menu_8c}\index{src/menu.\+c@{src/menu.\+c}}
 {\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
 Include dependency graph for menu.\+c\+:\nopagebreak
@@ -8,13 +8,13 @@ Include dependency graph for menu.\+c\+:\nopagebreak
 \includegraphics[width=350pt]{menu_8c__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \textbf{ calculate\+\_\+current\+\_\+display} (char $\ast$rtn, \textbf{ menu\+\_\+t} $\ast$menu)
 \item 
 static \textbf{ menu\+\_\+t} $\ast$ \textbf{ create\+\_\+menu} (enum \textbf{ menu\+\_\+type} type, const char $\ast$prompt)
-\item 
+\begin{DoxyCompactList}\small\item\em Static function that handles creation of menu. {\itshape  Menu must be freed or will cause memory leak {\itshape  }}\end{DoxyCompactList}\item 
 void \textbf{ denint\+\_\+menu} (\textbf{ menu\+\_\+t} $\ast$menu)
 \begin{DoxyCompactList}\small\item\em Destroys a menu {\itshape  Menu must be freed or will cause memory leak {\itshape  }}\end{DoxyCompactList}\item 
 int \textbf{ display\+\_\+menu} (\textbf{ menu\+\_\+t} $\ast$menu)
@@ -27,16 +27,16 @@ int \textbf{ display\+\_\+menu} (\textbf{ menu\+\_\+t} $\ast$menu)
 \begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak {\itshape  }}\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{menu_8c_a0fb55c1213b23963d509b974d1254567}} 
 \index{menu.\+c@{menu.\+c}!calculate\+\_\+current\+\_\+display@{calculate\+\_\+current\+\_\+display}}
 \index{calculate\+\_\+current\+\_\+display@{calculate\+\_\+current\+\_\+display}!menu.\+c@{menu.\+c}}
-\paragraph{calculate\+\_\+current\+\_\+display()}
+\subsubsection{calculate\+\_\+current\+\_\+display()}
 {\footnotesize\ttfamily static void calculate\+\_\+current\+\_\+display (\begin{DoxyParamCaption}\item[{char $\ast$}]{rtn,  }\item[{\textbf{ menu\+\_\+t} $\ast$}]{menu }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \textbf{ 56} of file \textbf{ menu.\+c}.
+Definition at line \textbf{ 100} of file \textbf{ menu.\+c}.
 
 
 
@@ -48,55 +48,51 @@ Referenced by \textbf{ display\+\_\+menu()}.
 
 
 \begin{DoxyCode}
-00056                                                                \{
-00057   \textcolor{keywordflow}{if}(menu->type == STRING_TYPE)\{
-00058     \textcolor{comment}{//Ignore warning}
-00059     rtn = (menu->options[menu->current % (menu->length)]);
-00060   \}
-00061   \textcolor{keywordflow}{if}(menu->type == INT_TYPE) \{
-00062     \textcolor{keywordtype}{int} step = (menu->step);
-00063     \textcolor{keywordtype}{int} min = (menu->min);
-00064     \textcolor{keywordtype}{int} max = (menu->max);
-00065     \textcolor{keywordtype}{int} value = menu->current * step;
-00066     value = value < min ? min : value;
-00067     value = value > max ? max : value;
-00068     itoa_bad(value, rtn, 4);
-00069   \}
-00070   \textcolor{keywordflow}{if}(menu->type == FLOAT_TYPE) \{
-00071     \textcolor{keywordtype}{float} step = (menu->step_f);
-00072     \textcolor{keywordtype}{float} min = (menu->min_f);
-00073     \textcolor{keywordtype}{float} max = (menu->max_f);
-00074     \textcolor{keywordtype}{float} value = menu->current * step;
-00075     value = value < min ? min : value;
-00076     value = value > max ? max : value;
-00077 
-00078     ftoa_bad(value, rtn, 5);
-00079   \}
-00080 \}
+00100                                                                \{
+00101   \textcolor{keywordflow}{if}(menu->type == STRING_TYPE)\{
+00102     \textcolor{comment}{//Ignore warning}
+00103     rtn = (menu->options[menu->current % (menu->length)]);
+00104   \}
+00105   \textcolor{keywordflow}{if}(menu->type == INT_TYPE) \{
+00106     \textcolor{keywordtype}{int} step = (menu->step);
+00107     \textcolor{keywordtype}{int} min = (menu->min);
+00108     \textcolor{keywordtype}{int} max = (menu->max);
+00109     \textcolor{keywordtype}{int} value = menu->current * step;
+00110     value = value < min ? min : value;
+00111     value = value > max ? max : value;
+00112     itoa_bad(value, rtn, 4);
+00113   \}
+00114   \textcolor{keywordflow}{if}(menu->type == FLOAT_TYPE) \{
+00115     \textcolor{keywordtype}{float} step = (menu->step_f);
+00116     \textcolor{keywordtype}{float} min = (menu->min_f);
+00117     \textcolor{keywordtype}{float} max = (menu->max_f);
+00118     \textcolor{keywordtype}{float} value = menu->current * step;
+00119     value = value < min ? min : value;
+00120     value = value > max ? max : value;
+00121 
+00122     ftoa_bad(value, rtn, 5);
+00123   \}
+00124 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{menu_8c_a0fb55c1213b23963d509b974d1254567_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=323pt]{menu_8c_a0fb55c1213b23963d509b974d1254567_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{menu_8c_aff4fd27ff7707295d91c67fa52a6b021}} 
 \index{menu.\+c@{menu.\+c}!create\+\_\+menu@{create\+\_\+menu}}
 \index{create\+\_\+menu@{create\+\_\+menu}!menu.\+c@{menu.\+c}}
-\paragraph{create\+\_\+menu()}
+\subsubsection{create\+\_\+menu()}
 {\footnotesize\ttfamily static \textbf{ menu\+\_\+t} $\ast$ create\+\_\+menu (\begin{DoxyParamCaption}\item[{enum \textbf{ menu\+\_\+type}}]{type,  }\item[{const char $\ast$}]{prompt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \textbf{ 6} of file \textbf{ menu.\+c}.
+Static function that handles creation of menu. {\itshape  Menu must be freed or will cause memory leak {\itshape  }}
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/8/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 12} of file \textbf{ menu.\+c}.
 
 
 
@@ -108,44 +104,30 @@ Referenced by \textbf{ init\+\_\+menu\+\_\+float()}, \textbf{ init\+\_\+menu\+\_
 
 
 \begin{DoxyCode}
-00006                                                                     \{
-00007   menu_t* menu = (menu_t*) malloc(\textcolor{keyword}{sizeof}(menu_t));
-00008   \textcolor{keywordflow}{if} (!menu) \{
-00009     error(\textcolor{stringliteral}{"Menu Malloc"});
-00010   \}
-00011   menu->type = type;
-00012   \textcolor{comment}{// Add one for null terminator}
-00013   \textcolor{keywordtype}{size\_t} strlength = strlen(prompt) + 1;
-00014   menu->prompt = (\textcolor{keywordtype}{char}*) malloc(strlength * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
-00015   memcpy(menu->prompt, prompt, strlength);
-00016   menu->max = INT\_MAX;
-00017   menu->min = INT\_MIN;
-00018   menu->step = 1;
-00019   menu->min_f = FLT\_MIN;
-00020   menu->max_f = FLT\_MAX;
-00021   menu->step_f = 1;
-00022 
-00023   \textcolor{keywordflow}{return} menu;
-00024 \}
+00012                                                                     \{
+00013   menu_t* menu = (menu_t*) malloc(\textcolor{keyword}{sizeof}(menu_t));
+00014   \textcolor{keywordflow}{if} (!menu) \{
+00015     error(\textcolor{stringliteral}{"Menu Malloc"});
+00016   \}
+00017   menu->type = type;
+00018   \textcolor{comment}{// Add one for null terminator}
+00019   \textcolor{keywordtype}{size\_t} strlength = strlen(prompt) + 1;
+00020   menu->prompt = (\textcolor{keywordtype}{char}*) malloc(strlength * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+00021   memcpy(menu->prompt, prompt, strlength);
+00022   menu->max = INT\_MAX;
+00023   menu->min = INT\_MIN;
+00024   menu->step = 1;
+00025   menu->min_f = FLT\_MIN;
+00026   menu->max_f = FLT\_MAX;
+00027   menu->step_f = 1;
+00028 
+00029   \textcolor{keywordflow}{return} menu;
+00030 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{menu_8c_aff4fd27ff7707295d91c67fa52a6b021_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=274pt]{menu_8c_aff4fd27ff7707295d91c67fa52a6b021_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{menu_8c_a05a36619ac6c9ba4544eddb83ee2a50d}} 
 \index{menu.\+c@{menu.\+c}!denint\+\_\+menu@{denint\+\_\+menu}}
 \index{denint\+\_\+menu@{denint\+\_\+menu}!menu.\+c@{menu.\+c}}
-\paragraph{denint\+\_\+menu()}
+\subsubsection{denint\+\_\+menu()}
 {\footnotesize\ttfamily void denint\+\_\+menu (\begin{DoxyParamCaption}\item[{\textbf{ menu\+\_\+t} $\ast$}]{menu }\end{DoxyParamCaption})}
 
 
@@ -168,7 +150,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 101} of file \textbf{ menu.\+c}.
+Definition at line \textbf{ 163} of file \textbf{ menu.\+c}.
 
 
 
@@ -176,16 +158,16 @@ References \textbf{ menu\+\_\+t\+::options}, and \textbf{ menu\+\_\+t\+::prompt}
 
 
 \begin{DoxyCode}
-00101                               \{
-00102   free(menu->prompt);
-00103   \textcolor{keywordflow}{if}(menu->options != NULL) free(menu->options);
-00104   free(menu);
-00105 \}
+00163                               \{
+00164   free(menu->prompt);
+00165   \textcolor{keywordflow}{if}(menu->options != NULL) free(menu->options);
+00166   free(menu);
+00167 \}
 \end{DoxyCode}
 \mbox{\label{menu_8c_abfadedb104f89f672dd3045499975a71}} 
 \index{menu.\+c@{menu.\+c}!display\+\_\+menu@{display\+\_\+menu}}
 \index{display\+\_\+menu@{display\+\_\+menu}!menu.\+c@{menu.\+c}}
-\paragraph{display\+\_\+menu()}
+\subsubsection{display\+\_\+menu()}
 {\footnotesize\ttfamily int display\+\_\+menu (\begin{DoxyParamCaption}\item[{\textbf{ menu\+\_\+t} $\ast$}]{menu }\end{DoxyParamCaption})}
 
 
@@ -208,43 +190,36 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 83} of file \textbf{ menu.\+c}.
+Definition at line \textbf{ 136} of file \textbf{ menu.\+c}.
 
 
 
-References \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ menu\+\_\+t\+::current}, \textbf{ delay()}, \textbf{ is\+Enabled()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, \textbf{ P\+R\+E\+S\+S\+ED}, \textbf{ menu\+\_\+t\+::prompt}, \textbf{ R\+E\+L\+E\+A\+S\+ED}, and \textbf{ T\+O\+P\+\_\+\+R\+OW}.
+References \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ menu\+\_\+t\+::current}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, \textbf{ P\+R\+E\+S\+S\+ED}, \textbf{ menu\+\_\+t\+::prompt}, \textbf{ R\+E\+L\+E\+A\+S\+ED}, and \textbf{ T\+O\+P\+\_\+\+R\+OW}.
 
 
 \begin{DoxyCode}
-00083                               \{
-00084   lcd_print(TOP_ROW, menu->prompt);
-00085   \textcolor{comment}{//Will exit if teleop or autonomous begin. This is extremely important if robot disconnects or resets.}
-00086   \textcolor{keywordflow}{while}(lcd_get_pressed_buttons().middle == RELEASED && !isEnabled()) \{
-00087     \textcolor{keywordtype}{char} val[16];
-00088     calculate_current_display(val, menu);
-00089 
-00090     \textcolor{keywordflow}{if}(lcd_get_pressed_buttons().right == PRESSED) \{
-00091       menu->current += 1;
-00092     \}
-00093     \textcolor{keywordflow}{if}(lcd_get_pressed_buttons().left == PRESSED) \{
-00094       menu->current -= 1;
-00095     \}
-00096     delay(500);
-00097   \}
-00098   \textcolor{keywordflow}{return} menu->current;
-00099 \}
+00136                               \{
+00137   lcd_print(TOP_ROW, menu->prompt);
+00138   \textcolor{comment}{//Will exit if teleop or autonomous begin. This is extremely important if robot disconnects or resets.}
+00139   \textcolor{keywordflow}{while}(lcd_get_pressed_buttons().middle == RELEASED && !isEnabled()) \{
+00140     \textcolor{keywordtype}{char} val[16];
+00141     calculate_current_display(val, menu);
+00142 
+00143     \textcolor{keywordflow}{if}(lcd_get_pressed_buttons().right == PRESSED) \{
+00144       menu->current += 1;
+00145     \}
+00146     \textcolor{keywordflow}{if}(lcd_get_pressed_buttons().left == PRESSED) \{
+00147       menu->current -= 1;
+00148     \}
+00149     delay(500);
+00150   \}
+00151   \textcolor{keywordflow}{return} menu->current;
+00152 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{menu_8c_abfadedb104f89f672dd3045499975a71_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{menu_8c_a5abb752733423805f59ef3b92e3c2e57}} 
 \index{menu.\+c@{menu.\+c}!init\+\_\+menu\+\_\+float@{init\+\_\+menu\+\_\+float}}
 \index{init\+\_\+menu\+\_\+float@{init\+\_\+menu\+\_\+float}!menu.\+c@{menu.\+c}}
-\paragraph{init\+\_\+menu\+\_\+float()}
+\subsubsection{init\+\_\+menu\+\_\+float()}
 {\footnotesize\ttfamily \textbf{ menu\+\_\+t}$\ast$ init\+\_\+menu\+\_\+float (\begin{DoxyParamCaption}\item[{enum \textbf{ menu\+\_\+type}}]{type,  }\item[{float}]{min,  }\item[{float}]{max,  }\item[{float}]{step,  }\item[{const char $\ast$}]{prompt }\end{DoxyParamCaption})}
 
 
@@ -278,7 +253,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 48} of file \textbf{ menu.\+c}.
+Definition at line \textbf{ 92} of file \textbf{ menu.\+c}.
 
 
 
@@ -286,25 +261,18 @@ References \textbf{ create\+\_\+menu()}, \textbf{ max()}, \textbf{ menu\+\_\+t\+
 
 
 \begin{DoxyCode}
-00048                                                                                                   \{
-00049   menu_t* menu = create_menu(type, prompt);
-00050   menu->min_f = min;
-00051   menu->max_f = max;
-00052   menu->step_f = step;
-00053   \textcolor{keywordflow}{return} menu;
-00054 \}
+00092                                                                                                   \{
+00093   menu_t* menu = create_menu(type, prompt);
+00094   menu->min_f = min;
+00095   menu->max_f = max;
+00096   menu->step_f = step;
+00097   \textcolor{keywordflow}{return} menu;
+00098 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{menu_8c_a5abb752733423805f59ef3b92e3c2e57_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{menu_8c_ac8efedba760ec35ebf841ab19543ba5a}} 
 \index{menu.\+c@{menu.\+c}!init\+\_\+menu\+\_\+int@{init\+\_\+menu\+\_\+int}}
 \index{init\+\_\+menu\+\_\+int@{init\+\_\+menu\+\_\+int}!menu.\+c@{menu.\+c}}
-\paragraph{init\+\_\+menu\+\_\+int()}
+\subsubsection{init\+\_\+menu\+\_\+int()}
 {\footnotesize\ttfamily \textbf{ menu\+\_\+t}$\ast$ init\+\_\+menu\+\_\+int (\begin{DoxyParamCaption}\item[{enum \textbf{ menu\+\_\+type}}]{type,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{int}]{step,  }\item[{const char $\ast$}]{prompt }\end{DoxyParamCaption})}
 
 
@@ -338,7 +306,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 40} of file \textbf{ menu.\+c}.
+Definition at line \textbf{ 71} of file \textbf{ menu.\+c}.
 
 
 
@@ -346,25 +314,18 @@ References \textbf{ create\+\_\+menu()}, \textbf{ max()}, \textbf{ menu\+\_\+t\+
 
 
 \begin{DoxyCode}
-00040                                                                                           \{
-00041   menu_t* menu = create_menu(type, prompt);
-00042   menu->min = min;
-00043   menu->max = max;
-00044   menu->step = step;
-00045   \textcolor{keywordflow}{return} menu;
-00046 \}
+00071                                                                                           \{
+00072   menu_t* menu = create_menu(type, prompt);
+00073   menu->min = min;
+00074   menu->max = max;
+00075   menu->step = step;
+00076   \textcolor{keywordflow}{return} menu;
+00077 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{menu_8c_ac8efedba760ec35ebf841ab19543ba5a_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{menu_8c_a3529988b0a7c12cb3f2ebb3cf5595594}} 
 \index{menu.\+c@{menu.\+c}!init\+\_\+menu\+\_\+var@{init\+\_\+menu\+\_\+var}}
 \index{init\+\_\+menu\+\_\+var@{init\+\_\+menu\+\_\+var}!menu.\+c@{menu.\+c}}
-\paragraph{init\+\_\+menu\+\_\+var()}
+\subsubsection{init\+\_\+menu\+\_\+var()}
 {\footnotesize\ttfamily \textbf{ menu\+\_\+t}$\ast$ init\+\_\+menu\+\_\+var (\begin{DoxyParamCaption}\item[{enum \textbf{ menu\+\_\+type}}]{type,  }\item[{unsigned int}]{nums,  }\item[{const char $\ast$}]{prompt,  }\item[{char $\ast$}]{options,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
@@ -396,7 +357,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 26} of file \textbf{ menu.\+c}.
+Definition at line \textbf{ 44} of file \textbf{ menu.\+c}.
 
 
 
@@ -404,24 +365,17 @@ References \textbf{ create\+\_\+menu()}, \textbf{ menu\+\_\+t\+::length}, and \t
 
 
 \begin{DoxyCode}
-00026                                                                                                     \{
-00027   menu_t* menu = create_menu(type, prompt);
-00028   va\_list values;
-00029   \textcolor{keywordtype}{char} **options\_array = (\textcolor{keywordtype}{char}**)calloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*), nums);
-00030   va\_start(values, options);
-00031   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < nums; i++)\{
-00032     options\_array[i] = va\_arg(values, \textcolor{keywordtype}{char}*);
-00033   \}
-00034   va\_end(values);
-00035   menu->options = options\_array;
-00036   menu->length = nums;
-00037   \textcolor{keywordflow}{return} menu;
-00038 \}
+00044                                                                                                     \{
+00045   menu_t* menu = create_menu(type, prompt);
+00046   va\_list values;
+00047   \textcolor{keywordtype}{char} **options\_array = (\textcolor{keywordtype}{char}**)calloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*), nums);
+00048   va\_start(values, options);
+00049   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < nums; i++)\{
+00050     options\_array[i] = va\_arg(values, \textcolor{keywordtype}{char}*);
+00051   \}
+00052   va\_end(values);
+00053   menu->options = options\_array;
+00054   menu->length = nums;
+00055   \textcolor{keywordflow}{return} menu;
+00056 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{menu_8c_a3529988b0a7c12cb3f2ebb3cf5595594_cgraph}
-\end{center}
-\end{figure}

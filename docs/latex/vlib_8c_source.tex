@@ -1,56 +1,56 @@
-\subsection{vlib.\+c}
+\section{vlib.\+c}
 \label{vlib_8c_source}\index{src/vlib.\+c@{src/vlib.\+c}}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "vlib.h"}
 00002 
-00003 \textcolor{keywordtype}{void} reverse(\textcolor{keywordtype}{char} *str, \textcolor{keywordtype}{int} len) \{
-00004     \textcolor{keywordtype}{int} i=0, j=len-1, temp;
-00005     \textcolor{keywordflow}{while} (i<j) \{
-00006         temp = str[i];
-00007         str[i] = str[j];
-00008         str[j] = temp;
-00009         i++; j--;
-00010     \}
-00011 \}
-00012 
-00013 \textcolor{keywordtype}{int} itoa_bad(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{char} *buffer, \textcolor{keywordtype}{int} digits) \{
-00014   \textcolor{keywordtype}{int} i = 0;
-00015    \textcolor{keywordflow}{while} (a) \{
-00016        buffer[i++] = (a%10) + \textcolor{charliteral}{'0'};
-00017        a = a/10;
-00018    \}
+00010 \textcolor{keywordtype}{void} reverse(\textcolor{keywordtype}{char} *str, \textcolor{keywordtype}{int} len) \{
+00011     \textcolor{keywordtype}{int} i=0, j=len-1, temp;
+00012     \textcolor{keywordflow}{while} (i<j) \{
+00013         temp = str[i];
+00014         str[i] = str[j];
+00015         str[j] = temp;
+00016         i++; j--;
+00017     \}
+00018 \}
 00019 
-00020    \textcolor{comment}{// If number of digits required is more, then}
-00021    \textcolor{comment}{// add 0s at the beginning}
-00022    \textcolor{keywordflow}{while} (i < digits)
-00023        buffer[i++] = \textcolor{charliteral}{'0'};
-00024 
-00025    reverse(buffer, i);
-00026    buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
-00027    \textcolor{keywordflow}{return} i;
-00028 \}
-00029 
-00030 \textcolor{keywordtype}{void} ftoa_bad(\textcolor{keywordtype}{float} a, \textcolor{keywordtype}{char} *buffer, \textcolor{keywordtype}{int} precision) \{
-00031   \textcolor{comment}{// Extract integer part}
-00032   \textcolor{keywordtype}{int} ipart = (int)a;
-00033 
-00034   \textcolor{comment}{// Extract floating part}
-00035   \textcolor{keywordtype}{float} fpart = a - (float)ipart;
-00036 
-00037   \textcolor{comment}{// convert integer part to string}
-00038   \textcolor{keywordtype}{int} i = itoa_bad(ipart, buffer, 0);
-00039 
-00040   \textcolor{comment}{// check for display option after point}
-00041   \textcolor{keywordflow}{if}(precision != 0) \{
-00042     buffer[i] = \textcolor{charliteral}{'.'};  \textcolor{comment}{// add dot}
-00043 
-00044     \textcolor{comment}{// Get the value of fraction part up to given num.}
-00045     \textcolor{comment}{// of points after dot. The third parameter is needed}
-00046     \textcolor{comment}{// to handle cases like 233.007}
-00047     fpart = fpart * pow(10, precision);
-00048 
-00049     itoa_bad((\textcolor{keywordtype}{int})fpart, buffer + i + 1, precision);
-00050   \}
-00051 \}
+00029 \textcolor{keywordtype}{int} itoa_bad(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{char} *buffer, \textcolor{keywordtype}{int} digits) \{
+00030   \textcolor{keywordtype}{int} i = 0;
+00031    \textcolor{keywordflow}{while} (a) \{
+00032        buffer[i++] = (a%10) + \textcolor{charliteral}{'0'};
+00033        a = a/10;
+00034    \}
+00035 
+00036    \textcolor{comment}{// If number of digits required is more, then}
+00037    \textcolor{comment}{// add 0s at the beginning}
+00038    \textcolor{keywordflow}{while} (i < digits)
+00039        buffer[i++] = \textcolor{charliteral}{'0'};
+00040 
+00041    reverse(buffer, i);
+00042    buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
+00043    \textcolor{keywordflow}{return} i;
+00044 \}
+00045 
+00054 \textcolor{keywordtype}{void} ftoa(\textcolor{keywordtype}{float} a, \textcolor{keywordtype}{char} *buffer, \textcolor{keywordtype}{int} precision) \{
+00055   \textcolor{comment}{// Extract integer part}
+00056   \textcolor{keywordtype}{int} ipart = (int)a;
+00057 
+00058   \textcolor{comment}{// Extract floating part}
+00059   \textcolor{keywordtype}{float} fpart = a - (float)ipart;
+00060 
+00061   \textcolor{comment}{// convert integer part to string}
+00062   \textcolor{keywordtype}{int} i = itoa_bad(ipart, buffer, 0);
+00063 
+00064   \textcolor{comment}{// check for display option after point}
+00065   \textcolor{keywordflow}{if}(precision != 0) \{
+00066     buffer[i] = \textcolor{charliteral}{'.'};  \textcolor{comment}{// add dot}
+00067 
+00068     \textcolor{comment}{// Get the value of fraction part up to given num.}
+00069     \textcolor{comment}{// of points after dot. The third parameter is needed}
+00070     \textcolor{comment}{// to handle cases like 233.007}
+00071     fpart = fpart * pow(10, precision);
+00072 
+00073     itoa_bad((\textcolor{keywordtype}{int})fpart, buffer + i + 1, precision);
+00074   \}
+00075 \}
 \end{DoxyCode}

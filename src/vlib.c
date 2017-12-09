@@ -51,7 +51,7 @@ int itoa_bad(int a, char *buffer, int digits) {
 * @author Christian DeSimone
 * @date 9/26/2017
 **/
-void ftoa_bad(float a, char *buffer, int precision) {
+void ftoa(float a, char *buffer, int precision) {
   // Extract integer part
   int ipart = (int)a;
 

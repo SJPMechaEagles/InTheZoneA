@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['get_5fencoder_5fticks',['get_encoder_ticks',['../encoders_8h.html#aed261dd4dae33a48c42f2e363c84760f',1,'get_encoder_ticks(unsigned char address):&#160;encoders.c'],['../encoders_8c.html#aed261dd4dae33a48c42f2e363c84760f',1,'get_encoder_ticks(unsigned char address):&#160;encoders.c']]],
-  ['get_5fencoder_5fvelocity',['get_encoder_velocity',['../encoders_8h.html#a8e6b77703c5cf18e00709b052fb4bf22',1,'get_encoder_velocity(unsigned char address):&#160;encoders.c'],['../encoders_8c.html#a8e6b77703c5cf18e00709b052fb4bf22',1,'get_encoder_velocity(unsigned char address):&#160;encoders.c']]],
-  ['get_5fjoystick_5fcord',['get_joystick_cord',['../controller_8h.html#a0ce0176099c0bb15ad8c36123222059d',1,'get_joystick_cord(enum joystick side, int controller):&#160;controller.c'],['../controller_8c.html#a0ce0176099c0bb15ad8c36123222059d',1,'get_joystick_cord(enum joystick side, int controller):&#160;controller.c']]],
-  ['get_5fmode',['get_mode',['../partner_8h.html#aacc86d07e59d3b919f5c5eae2ce5d404',1,'get_mode():&#160;partner.c'],['../partner_8c.html#aacc86d07e59d3b919f5c5eae2ce5d404',1,'get_mode():&#160;partner.c']]],
-  ['get_5fposition',['get_position',['../localization_8h.html#aadbff35bb757f60bc348d4d778f57a2f',1,'get_position():&#160;localization.c'],['../localization_8c.html#aadbff35bb757f60bc348d4d778f57a2f',1,'get_position():&#160;localization.c']]],
-  ['getchar',['getchar',['../_a_p_i_8h.html#ac45fdeab51c3197c1e7c4ec7beabaca9',1,'API.h']]],
-  ['getclawticks',['getClawTicks',['../claw_8h.html#addd2004effae7c94400aed1fe6a90ead',1,'getClawTicks():&#160;claw.c'],['../claw_8c.html#addd2004effae7c94400aed1fe6a90ead',1,'getClawTicks():&#160;claw.c']]],
-  ['getlifterheight',['getLifterHeight',['../lifter_8h.html#a2719740958fd8a5926f88f6194e820e3',1,'getLifterHeight():&#160;lifter.c'],['../lifter_8c.html#a2719740958fd8a5926f88f6194e820e3',1,'getLifterHeight():&#160;lifter.c']]],
-  ['getlifterticks',['getLifterTicks',['../lifter_8h.html#acdf909159b0406c48099843f2306be78',1,'getLifterTicks():&#160;lifter.c'],['../lifter_8c.html#acdf909159b0406c48099843f2306be78',1,'getLifterTicks():&#160;lifter.c']]],
-  ['getthresh',['getThresh',['../drive_8c.html#a9caa5e772598f9182c9ec84cf8c351ee',1,'drive.c']]],
-  ['gyroget',['gyroGet',['../_a_p_i_8h.html#a0ae2ca5d2fd99f33aaef38786bb8ee59',1,'API.h']]],
-  ['gyroinit',['gyroInit',['../_a_p_i_8h.html#a17270080a32b64937a3669089a80120f',1,'API.h']]],
-  ['gyroreset',['gyroReset',['../_a_p_i_8h.html#a5de4afb9c6bd747e8d7664e1c72390b2',1,'API.h']]],
-  ['gyroshutdown',['gyroShutdown',['../_a_p_i_8h.html#a4e50e79b76d956dd9d466a582a5bb7b5',1,'API.h']]]
+  ['identitymatrix',['identityMatrix',['../matrix_8h.html#aa3f5e409b1641373be7cf7284e216d1a',1,'identityMatrix(int n):&#160;matrix.c'],['../matrix_8c.html#aa3f5e409b1641373be7cf7284e216d1a',1,'identityMatrix(int n):&#160;matrix.c']]],
+  ['info',['info',['../log_8h.html#a1606d750e1bb8de9f9e917172bba3382',1,'info(const char *info_message):&#160;log.c'],['../log_8c.html#a1606d750e1bb8de9f9e917172bba3382',1,'info(const char *info_message):&#160;log.c']]],
+  ['init_5fencoders',['init_encoders',['../encoders_8h.html#aa6ec1ca17e907babd52803ecba451cd3',1,'init_encoders():&#160;encoders.c'],['../encoders_8c.html#aa6ec1ca17e907babd52803ecba451cd3',1,'init_encoders():&#160;encoders.c']]],
+  ['init_5ferror',['init_error',['../log_8h.html#a163f389b4f5cf440a807d8fb48aaa006',1,'init_error(bool use_lcd, FILE *lcd):&#160;log.c'],['../log_8c.html#a163f389b4f5cf440a807d8fb48aaa006',1,'init_error(bool use_lcd, FILE *lcd):&#160;log.c']]],
+  ['init_5flocalization',['init_localization',['../localization_8h.html#afdd0147de6aa15957e9a125f9cd20578',1,'init_localization(const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta):&#160;localization.c'],['../localization_8c.html#afdd0147de6aa15957e9a125f9cd20578',1,'init_localization(const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta):&#160;localization.c']]],
+  ['init_5fmain_5flcd',['init_main_lcd',['../lcd_8h.html#a93b26f37d6b1687ad54c90feedfd29ca',1,'init_main_lcd(FILE *lcd):&#160;lcd.c'],['../lcd_8c.html#a93b26f37d6b1687ad54c90feedfd29ca',1,'init_main_lcd(FILE *lcd):&#160;lcd.c']]],
+  ['init_5fmenu_5ffloat',['init_menu_float',['../menu_8h.html#a5abb752733423805f59ef3b92e3c2e57',1,'init_menu_float(enum menu_type type, float min, float max, float step, const char *prompt):&#160;menu.c'],['../menu_8c.html#a5abb752733423805f59ef3b92e3c2e57',1,'init_menu_float(enum menu_type type, float min, float max, float step, const char *prompt):&#160;menu.c']]],
+  ['init_5fmenu_5fint',['init_menu_int',['../menu_8h.html#ac8efedba760ec35ebf841ab19543ba5a',1,'init_menu_int(enum menu_type type, int min, int max, int step, const char *prompt):&#160;menu.c'],['../menu_8c.html#ac8efedba760ec35ebf841ab19543ba5a',1,'init_menu_int(enum menu_type type, int min, int max, int step, const char *prompt):&#160;menu.c']]],
+  ['init_5fmenu_5fvar',['init_menu_var',['../menu_8h.html#a3529988b0a7c12cb3f2ebb3cf5595594',1,'init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char *options,...):&#160;menu.c'],['../menu_8c.html#a3529988b0a7c12cb3f2ebb3cf5595594',1,'init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char *options,...):&#160;menu.c']]],
+  ['init_5fslew',['init_slew',['../slew_8h.html#a321758941d88b75783955c819bb75005',1,'init_slew():&#160;slew.c'],['../slew_8c.html#a321758941d88b75783955c819bb75005',1,'init_slew():&#160;slew.c']]],
+  ['initialize',['initialize',['../main_8h.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;init.c'],['../init_8c.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;init.c']]],
+  ['initializeio',['initializeIO',['../main_8h.html#ad9cda921edb01125bb13c2f86bcf624b',1,'initializeIO():&#160;init.c'],['../init_8c.html#ad9cda921edb01125bb13c2f86bcf624b',1,'initializeIO():&#160;init.c']]],
+  ['integrate_5fgyro_5fw',['integrate_gyro_w',['../localization_8c.html#ac103fff038e59ff45f292b9b5138182e',1,'localization.c']]],
+  ['itoa_5fbad',['itoa_bad',['../vlib_8h.html#a08fa7134f8b9a80eeba25f9feab22892',1,'itoa_bad(int a, char *buffer, int digits):&#160;vlib.c'],['../vlib_8c.html#a08fa7134f8b9a80eeba25f9feab22892',1,'itoa_bad(int a, char *buffer, int digits):&#160;vlib.c']]]
 ];

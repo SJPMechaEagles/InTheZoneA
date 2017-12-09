@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['last_5fcall',['last_call',['../localization_8c.html#a0f327d31da83831114e7417abb7b6b63',1,'localization.c']]],
-  ['lcd_5fport',['lcd_port',['../lcd_8c.html#a8d2a398462720032706d94d44a82a1f8',1,'lcd.c']]],
-  ['left',['left',['../structlcd__buttons.html#ae385efb5ec794acf5f11027f46c6c039',1,'lcd_buttons']]],
-  ['length',['length',['../structmenu__t.html#a023063461c4a247e574abd6a55faf765',1,'menu_t']]],
-  ['line',['line',['../_a_p_i_8h.html#a58c3304a90ff2bb7064ff7187b2da466',1,'API.h']]],
-  ['localization_5ftask',['localization_task',['../localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488',1,'localization.c']]],
-  ['log_5flcd',['log_lcd',['../log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a',1,'log.c']]],
-  ['log_5flevel',['log_level',['../log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5',1,'log.c']]]
+  ['magnitue',['magnitue',['../structpolar__cord.html#aec2e25fecc82af176f0fcd23f1e02f0c',1,'polar_cord']]],
+  ['max',['max',['../structmenu__t.html#ace9cbaecd7bf311be0ef230da657f406',1,'menu_t']]],
+  ['max_5ff',['max_f',['../structmenu__t.html#a14b11d0a7610484462c8a6e93068a2c1',1,'menu_t']]],
+  ['middle',['middle',['../structlcd__buttons.html#a293342810ac56f73979b08f144d6e6b9',1,'lcd_buttons']]],
+  ['min',['min',['../structmenu__t.html#a6891bc6c94f1e995cc62a05b13328de5',1,'menu_t']]],
+  ['min_5ff',['min_f',['../structmenu__t.html#a0a6e4f711992fb69e8a57c2af1ab7a05',1,'menu_t']]],
+  ['mode',['mode',['../partner_8c.html#ac57f7e8cb1c4e638c8c477740314a109',1,'partner.c']]],
+  ['motors_5fcurr_5fspeeds',['motors_curr_speeds',['../slew_8c.html#a69e0d1204ea4d87b7366c9cd79527984',1,'slew.c']]],
+  ['motors_5fset_5fspeeds',['motors_set_speeds',['../slew_8c.html#acf7558ed17fdecd298ea7eb82291c7d0',1,'slew.c']]]
 ];

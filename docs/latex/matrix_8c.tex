@@ -1,4 +1,4 @@
-\subsection{src/matrix.c File Reference}
+\section{src/matrix.c File Reference}
 \label{matrix_8c}\index{src/matrix.\+c@{src/matrix.\+c}}
 {\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -11,7 +11,7 @@ Include dependency graph for matrix.\+c\+:\nopagebreak
 \includegraphics[width=328pt]{matrix_8c__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ assert} (int assertion, const char $\ast$message)
@@ -46,11 +46,11 @@ double \textbf{ trace\+Matrix} (\textbf{ matrix} $\ast$m)
 \begin{DoxyCompactList}\small\item\em returns the transpose matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{matrix_8c_a8e41e30382335ea89f90b72db0b44d6f}} 
 \index{matrix.\+c@{matrix.\+c}!assert@{assert}}
 \index{assert@{assert}!matrix.\+c@{matrix.\+c}}
-\paragraph{assert()}
+\subsubsection{assert()}
 {\footnotesize\ttfamily void assert (\begin{DoxyParamCaption}\item[{int}]{assertion,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
 
 
@@ -60,10 +60,6 @@ Asserts a condition is true.
 If the assertion is non-\/zero (i.\+e. true), then it returns. If the assertion is zero (i.\+e. false), then it display the string and aborts the program. This is ment to act like Python\textquotesingle{}s assert keyword. 
 
 Definition at line \textbf{ 14} of file \textbf{ matrix.\+c}.
-
-
-
-References \textbf{ fprintf()}.
 
 
 
@@ -78,24 +74,10 @@ Referenced by \textbf{ covariance\+Matrix()}, \textbf{ dot\+Diagonal\+Matrix()},
 00018     \}
 00019 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=200pt]{matrix_8c_a8e41e30382335ea89f90b72db0b44d6f_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_a8e41e30382335ea89f90b72db0b44d6f_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_abbb8d2d20c2dd53a2269d017a336668f}} 
 \index{matrix.\+c@{matrix.\+c}!copy\+Matrix@{copy\+Matrix}}
 \index{copy\+Matrix@{copy\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{copy\+Matrix()}
+\subsubsection{copy\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ copy\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -124,17 +106,10 @@ References \textbf{ scale\+Matrix()}.
 00053     \textcolor{keywordflow}{return} scaleMatrix(m, 1);
 00054 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_abbb8d2d20c2dd53a2269d017a336668f_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_ae6dab569959c360cf165136a3b625edd}} 
 \index{matrix.\+c@{matrix.\+c}!covariance\+Matrix@{covariance\+Matrix}}
 \index{covariance\+Matrix@{covariance\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{covariance\+Matrix()}
+\subsubsection{covariance\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ covariance\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -192,17 +167,10 @@ References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ free\+Ma
 00198     \textcolor{keywordflow}{return} out;
 00199 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_ae6dab569959c360cf165136a3b625edd_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_af49b525d7476c365833db9acd975e3a5}} 
 \index{matrix.\+c@{matrix.\+c}!dot\+Diagonal\+Matrix@{dot\+Diagonal\+Matrix}}
 \index{dot\+Diagonal\+Matrix@{dot\+Diagonal\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{dot\+Diagonal\+Matrix()}
+\subsubsection{dot\+Diagonal\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ dot\+Diagonal\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{a,  }\item[{\textbf{ matrix} $\ast$}]{b }\end{DoxyParamCaption})}
 
 
@@ -266,17 +234,10 @@ References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+ma
 00416     \textcolor{keywordflow}{return} out;
 00417 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_af49b525d7476c365833db9acd975e3a5_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_a0b568a64e81a56779c2141b424475976}} 
 \index{matrix.\+c@{matrix.\+c}!dot\+Product\+Matrix@{dot\+Product\+Matrix}}
 \index{dot\+Product\+Matrix@{dot\+Product\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{dot\+Product\+Matrix()}
+\subsubsection{dot\+Product\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ dot\+Product\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{a,  }\item[{\textbf{ matrix} $\ast$}]{b }\end{DoxyParamCaption})}
 
 
@@ -343,17 +304,10 @@ References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+ma
 00368     \textcolor{keywordflow}{return} out;
 00369 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_a0b568a64e81a56779c2141b424475976_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_ae98365c910e9d688d2bdedec50d89a6b}} 
 \index{matrix.\+c@{matrix.\+c}!free\+Matrix@{free\+Matrix}}
 \index{free\+Matrix@{free\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{free\+Matrix()}
+\subsubsection{free\+Matrix()}
 {\footnotesize\ttfamily void free\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -390,17 +344,10 @@ Referenced by \textbf{ covariance\+Matrix()}.
 00068     \textcolor{keywordflow}{return};
 00069 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=268pt]{matrix_8c_ae98365c910e9d688d2bdedec50d89a6b_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_aa3f5e409b1641373be7cf7284e216d1a}} 
 \index{matrix.\+c@{matrix.\+c}!identity\+Matrix@{identity\+Matrix}}
 \index{identity\+Matrix@{identity\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{identity\+Matrix()}
+\subsubsection{identity\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ identity\+Matrix (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
@@ -442,17 +389,10 @@ References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, and \textbf{ make
 00108     \textcolor{keywordflow}{return} out;
 00109 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_aa3f5e409b1641373be7cf7284e216d1a_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}} 
 \index{matrix.\+c@{matrix.\+c}!make\+Matrix@{make\+Matrix}}
 \index{make\+Matrix@{make\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{make\+Matrix()}
+\subsubsection{make\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ make\+Matrix (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
 
 
@@ -501,24 +441,10 @@ Referenced by \textbf{ covariance\+Matrix()}, \textbf{ dot\+Diagonal\+Matrix()},
 00042     \textcolor{keywordflow}{return} out;
 00043 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=304pt]{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_ae4babf9b518a2d5d6b12776191e3b7de}} 
 \index{matrix.\+c@{matrix.\+c}!mean\+Matrix@{mean\+Matrix}}
 \index{mean\+Matrix@{mean\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{mean\+Matrix()}
+\subsubsection{mean\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ mean\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -563,24 +489,10 @@ Referenced by \textbf{ covariance\+Matrix()}.
 00160     \textcolor{keywordflow}{return} out;
 00161 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_ae4babf9b518a2d5d6b12776191e3b7de_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=276pt]{matrix_8c_ae4babf9b518a2d5d6b12776191e3b7de_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_a63ed5c518b34768e9ef8e9d5f7d0b534}} 
 \index{matrix.\+c@{matrix.\+c}!multiply\+Matrix@{multiply\+Matrix}}
 \index{multiply\+Matrix@{multiply\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{multiply\+Matrix()}
+\subsubsection{multiply\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ multiply\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{a,  }\item[{\textbf{ matrix} $\ast$}]{b }\end{DoxyParamCaption})}
 
 
@@ -635,17 +547,10 @@ References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+ma
 00258     \textcolor{keywordflow}{return} out;
 00259 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_a63ed5c518b34768e9ef8e9d5f7d0b534_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_a50ab2b1ac33d6993d93522fc4f30a051}} 
 \index{matrix.\+c@{matrix.\+c}!print\+Matrix@{print\+Matrix}}
 \index{print\+Matrix@{print\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{print\+Matrix()}
+\subsubsection{print\+Matrix()}
 {\footnotesize\ttfamily void print\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -663,7 +568,7 @@ Definition at line \textbf{ 75} of file \textbf{ matrix.\+c}.
 
 
 
-References \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, \textbf{ printf()}, and \textbf{ \+\_\+matrix\+::width}.
+References \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, and \textbf{ \+\_\+matrix\+::width}.
 
 
 \begin{DoxyCode}
@@ -680,17 +585,10 @@ References \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, \te
 00085     \textcolor{keywordflow}{return};
 00086 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=217pt]{matrix_8c_a50ab2b1ac33d6993d93522fc4f30a051_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_acdd57777a972ce339153878fa917db14}} 
 \index{matrix.\+c@{matrix.\+c}!row\+Swap@{row\+Swap}}
 \index{row\+Swap@{row\+Swap}!matrix.\+c@{matrix.\+c}}
-\paragraph{row\+Swap()}
+\subsubsection{row\+Swap()}
 {\footnotesize\ttfamily void row\+Swap (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{a,  }\item[{int}]{p,  }\item[{int}]{q }\end{DoxyParamCaption})}
 
 
@@ -745,17 +643,10 @@ References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+ma
 00316     \textcolor{keywordflow}{return};
 00317 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=293pt]{matrix_8c_acdd57777a972ce339153878fa917db14_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_a6b7faa6ba9ee987d0777d9d0bd0e7b32}} 
 \index{matrix.\+c@{matrix.\+c}!scale\+Matrix@{scale\+Matrix}}
 \index{scale\+Matrix@{scale\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{scale\+Matrix()}
+\subsubsection{scale\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ scale\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m,  }\item[{double}]{value }\end{DoxyParamCaption})}
 
 
@@ -799,24 +690,10 @@ Referenced by \textbf{ copy\+Matrix()}.
 00278     \textcolor{keywordflow}{return} out;
 00279 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_a6b7faa6ba9ee987d0777d9d0bd0e7b32_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=247pt]{matrix_8c_a6b7faa6ba9ee987d0777d9d0bd0e7b32_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{matrix_8c_a4794df8b2032f961dd8b2d90276bc417}} 
 \index{matrix.\+c@{matrix.\+c}!trace\+Matrix@{trace\+Matrix}}
 \index{trace\+Matrix@{trace\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{trace\+Matrix()}
+\subsubsection{trace\+Matrix()}
 {\footnotesize\ttfamily double trace\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -862,7 +739,7 @@ References \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, and
 \mbox{\label{matrix_8c_a2936260302742748b0639e8ec71d4d9f}} 
 \index{matrix.\+c@{matrix.\+c}!transpose\+Matrix@{transpose\+Matrix}}
 \index{transpose\+Matrix@{transpose\+Matrix}!matrix.\+c@{matrix.\+c}}
-\paragraph{transpose\+Matrix()}
+\subsubsection{transpose\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ transpose\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -905,10 +782,3 @@ References \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, \te
 00221     \textcolor{keywordflow}{return} out;
 00222 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{matrix_8c_a2936260302742748b0639e8ec71d4d9f_cgraph}
-\end{center}
-\end{figure}

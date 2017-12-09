@@ -1,4 +1,4 @@
-\subsection{src/battery.c File Reference}
+\section{src/battery.c File Reference}
 \label{battery_8c}\index{src/battery.\+c@{src/battery.\+c}}
 {\ttfamily \#include \char`\"{}battery.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
@@ -9,7 +9,7 @@ Include dependency graph for battery.\+c\+:\nopagebreak
 \includegraphics[width=338pt]{battery_8c__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 double \textbf{ backup\+\_\+battery\+\_\+voltage} ()
@@ -20,11 +20,11 @@ double \textbf{ main\+\_\+battery\+\_\+voltage} ()
 \begin{DoxyCompactList}\small\item\em gets the main battery voltage \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{battery_8c_a9b1c5cf7ddddebf63796050a1d4a9969}} 
 \index{battery.\+c@{battery.\+c}!backup\+\_\+battery\+\_\+voltage@{backup\+\_\+battery\+\_\+voltage}}
 \index{backup\+\_\+battery\+\_\+voltage@{backup\+\_\+battery\+\_\+voltage}!battery.\+c@{battery.\+c}}
-\paragraph{backup\+\_\+battery\+\_\+voltage()}
+\subsubsection{backup\+\_\+battery\+\_\+voltage()}
 {\footnotesize\ttfamily double backup\+\_\+battery\+\_\+voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -40,10 +40,6 @@ Definition at line \textbf{ 17} of file \textbf{ battery.\+c}.
 
 
 
-References \textbf{ power\+Level\+Backup()}.
-
-
-
 Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 
 
@@ -52,24 +48,10 @@ Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 00018   \textcolor{keywordflow}{return} powerLevelBackup() / 1000.0;
 00019 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=339pt]{battery_8c_a9b1c5cf7ddddebf63796050a1d4a9969_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{battery_8c_a9b1c5cf7ddddebf63796050a1d4a9969_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{battery_8c_a1097bbb878f6e2690f8eea6cd231959a}} 
 \index{battery.\+c@{battery.\+c}!battery\+\_\+level\+\_\+acceptable@{battery\+\_\+level\+\_\+acceptable}}
 \index{battery\+\_\+level\+\_\+acceptable@{battery\+\_\+level\+\_\+acceptable}!battery.\+c@{battery.\+c}}
-\paragraph{battery\+\_\+level\+\_\+acceptable()}
+\subsubsection{battery\+\_\+level\+\_\+acceptable()}
 {\footnotesize\ttfamily bool battery\+\_\+level\+\_\+acceptable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -100,17 +82,10 @@ References \textbf{ backup\+\_\+battery\+\_\+voltage()}, \textbf{ main\+\_\+batt
 00031   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 00032 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{battery_8c_a1097bbb878f6e2690f8eea6cd231959a_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{battery_8c_a8c92c389534fdb079698cdebeb7f2efa}} 
 \index{battery.\+c@{battery.\+c}!main\+\_\+battery\+\_\+voltage@{main\+\_\+battery\+\_\+voltage}}
 \index{main\+\_\+battery\+\_\+voltage@{main\+\_\+battery\+\_\+voltage}!battery.\+c@{battery.\+c}}
-\paragraph{main\+\_\+battery\+\_\+voltage()}
+\subsubsection{main\+\_\+battery\+\_\+voltage()}
 {\footnotesize\ttfamily double main\+\_\+battery\+\_\+voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -126,10 +101,6 @@ Definition at line \textbf{ 9} of file \textbf{ battery.\+c}.
 
 
 
-References \textbf{ power\+Level\+Main()}.
-
-
-
 Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 
 
@@ -138,17 +109,3 @@ Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 00010   \textcolor{keywordflow}{return} powerLevelMain() / 1000.0;
 00011 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=316pt]{battery_8c_a8c92c389534fdb079698cdebeb7f2efa_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{battery_8c_a8c92c389534fdb079698cdebeb7f2efa_icgraph}
-\end{center}
-\end{figure}

@@ -1,4 +1,4 @@
-\subsection{include/drive.h File Reference}
+\section{include/drive.h File Reference}
 \label{drive_8h}\index{include/drive.\+h@{include/drive.\+h}}
 
 
@@ -11,7 +11,7 @@ Include dependency graph for drive.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{drive_8h__incl}
+\includegraphics[width=223pt]{drive_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
@@ -21,17 +21,17 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=350pt]{drive_8h__dep__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Macros}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \textbf{ T\+H\+R\+E\+S\+H\+O\+LD}~10
 \begin{DoxyCompactList}\small\item\em The dead spot on the controller to avoid running motors at low speeds. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsubsection*{Typedefs}
+\subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef enum \textbf{ side} \textbf{ side\+\_\+t}
 \begin{DoxyCompactList}\small\item\em enumeration indication side of the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsubsection*{Enumerations}
+\subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum \textbf{ side} \{ \textbf{ L\+E\+FT}, 
@@ -39,7 +39,7 @@ enum \textbf{ side} \{ \textbf{ L\+E\+FT},
 \textbf{ R\+I\+G\+HT}
  \}\begin{DoxyCompactList}\small\item\em enumeration indication side of the robot. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ set\+\_\+side\+\_\+speed} (\textbf{ side\+\_\+t} \textbf{ side}, int speed)
@@ -50,7 +50,7 @@ void \textbf{ update\+\_\+drive\+\_\+motors} ()
 \begin{DoxyCompactList}\small\item\em Updates the drive motors during teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Detailed Description}
+\subsection{Detailed Description}
 Drive base definitions and enumerations. 
 
 \begin{DoxyAuthor}{Author}
@@ -65,11 +65,11 @@ Definition in file \textbf{ drive.\+h}.
 
 
 
-\subsubsection{Macro Definition Documentation}
+\subsection{Macro Definition Documentation}
 \mbox{\label{drive_8h_a4679d8ea8690999a6c6c7c0cb245c879}} 
 \index{drive.\+h@{drive.\+h}!T\+H\+R\+E\+S\+H\+O\+LD@{T\+H\+R\+E\+S\+H\+O\+LD}}
 \index{T\+H\+R\+E\+S\+H\+O\+LD@{T\+H\+R\+E\+S\+H\+O\+LD}!drive.\+h@{drive.\+h}}
-\paragraph{T\+H\+R\+E\+S\+H\+O\+LD}
+\subsubsection{T\+H\+R\+E\+S\+H\+O\+LD}
 {\footnotesize\ttfamily \#define T\+H\+R\+E\+S\+H\+O\+LD~10}
 
 
@@ -86,11 +86,11 @@ Referenced by \textbf{ joystick\+Exp()}, and \textbf{ update\+\_\+lifter()}.
 
 
 
-\subsubsection{Typedef Documentation}
+\subsection{Typedef Documentation}
 \mbox{\label{drive_8h_a9df2afd2f1acb97019655e5e730609c7}} 
 \index{drive.\+h@{drive.\+h}!side\+\_\+t@{side\+\_\+t}}
 \index{side\+\_\+t@{side\+\_\+t}!drive.\+h@{drive.\+h}}
-\paragraph{side\+\_\+t}
+\subsubsection{side\+\_\+t}
 {\footnotesize\ttfamily typedef enum \textbf{ side}  \textbf{ side\+\_\+t}}
 
 
@@ -105,11 +105,11 @@ Christian Desimone
 \end{DoxyDate}
 
 
-\subsubsection{Enumeration Type Documentation}
+\subsection{Enumeration Type Documentation}
 \mbox{\label{drive_8h_afc015eff6557e84151d2e53b94375445}} 
 \index{drive.\+h@{drive.\+h}!side@{side}}
 \index{side@{side}!drive.\+h@{drive.\+h}}
-\paragraph{side}
+\subsubsection{side}
 {\footnotesize\ttfamily enum \textbf{ side}}
 
 
@@ -150,11 +150,11 @@ Definition at line \textbf{ 26} of file \textbf{ drive.\+h}.
 \end{DoxyCode}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{drive_8h_a8df41fd50094c065eedc81fc5e6595d1}} 
 \index{drive.\+h@{drive.\+h}!set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}}
 \index{set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}!drive.\+h@{drive.\+h}}
-\paragraph{set\+\_\+side\+\_\+speed()}
+\subsubsection{set\+\_\+side\+\_\+speed()}
 {\footnotesize\ttfamily void set\+\_\+side\+\_\+speed (\begin{DoxyParamCaption}\item[{\textbf{ side\+\_\+t}}]{side,  }\item[{int}]{speed }\end{DoxyParamCaption})}
 
 
@@ -198,24 +198,10 @@ Referenced by \textbf{ autonomous()}, and \textbf{ update\+\_\+drive\+\_\+motors
 00078   \}
 00079 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{drive_8h_a8df41fd50094c065eedc81fc5e6595d1_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{drive_8h_a8df41fd50094c065eedc81fc5e6595d1_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{drive_8h_a53d6e35d53ec3e0b1b1c489d8203f204}} 
 \index{drive.\+h@{drive.\+h}!set\+Thresh@{set\+Thresh}}
 \index{set\+Thresh@{set\+Thresh}!drive.\+h@{drive.\+h}}
-\paragraph{set\+Thresh()}
+\subsubsection{set\+Thresh()}
 {\footnotesize\ttfamily void set\+Thresh (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
 
 
@@ -244,7 +230,7 @@ References \textbf{ thresh}.
 \mbox{\label{drive_8h_a8224a4626a934d30ed587671b7004bf8}} 
 \index{drive.\+h@{drive.\+h}!update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}}
 \index{update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}!drive.\+h@{drive.\+h}}
-\paragraph{update\+\_\+drive\+\_\+motors()}
+\subsubsection{update\+\_\+drive\+\_\+motors()}
 {\footnotesize\ttfamily void update\+\_\+drive\+\_\+motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -263,7 +249,7 @@ Definition at line \textbf{ 34} of file \textbf{ drive.\+c}.
 
 
 
-References \textbf{ get\+\_\+mode()}, \textbf{ joystick\+Get\+Analog()}, \textbf{ L\+E\+FT}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ P\+A\+R\+T\+N\+ER}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ R\+I\+G\+HT}, \textbf{ set\+\_\+side\+\_\+speed()}, \textbf{ thresh}, \textbf{ cord\+::x}, and \textbf{ cord\+::y}.
+References \textbf{ get\+\_\+mode()}, \textbf{ L\+E\+FT}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ P\+A\+R\+T\+N\+ER}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ R\+I\+G\+HT}, \textbf{ set\+\_\+side\+\_\+speed()}, \textbf{ thresh}, \textbf{ cord\+::x}, and \textbf{ cord\+::y}.
 
 
 
@@ -299,17 +285,3 @@ Referenced by \textbf{ operator\+Control()}.
 00059 
 00060 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{drive_8h_a8224a4626a934d30ed587671b7004bf8_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=311pt]{drive_8h_a8224a4626a934d30ed587671b7004bf8_icgraph}
-\end{center}
-\end{figure}

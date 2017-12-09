@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['formatstring',['formatString',['../_a_p_i_8h.html#aa3800794cdb71dc374a5ce3e645e4bb4',1,'API.h']]]
+  ['g1',['g1',['../localization_8c.html#a46b8f25ffa3bbee071a0468eac654393',1,'localization.c']]]
 ];

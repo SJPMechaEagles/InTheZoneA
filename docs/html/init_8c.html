@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team 9228A: src/init.c File Reference</title>
+<title>Vex Team A: src/init.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,12 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team 9228A
-   &#160;<span id="projectnumber">1.1.4</span>
+   <div id="projectname">Vex Team A
+   &#160;<span id="projectnumber">1.0.2</span>
    </div>
-   <div id="projectbrief">Code for VRC team 9228A for 2017-2018 game &quot;In The Zone&quot;</div>
   </td>
  </tr>
  </tbody>
@@ -139,17 +137,7 @@ Functions</h2></td></tr>
 <p>This function must exit relatively promptly, or the <a class="el" href="main_8h.html#ac71a94af413917f27d108e95c4d6f6a7">operatorControl()</a> and <a class="el" href="main_8h.html#a3c7ca506bbc071fa740de13805b7f376">autonomous()</a> tasks will not start. An autonomous mode selection menu like the pre_auton() in other environments can be implemented in this task if desired. </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00047">47</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-
-<p class="reference">References <a class="el" href="_a_p_i_8h.html#a868ab46aa5992e60829936c0109160bf">imeInitializeAll()</a>, <a class="el" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf()</a>, and <a class="el" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                  {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">int</span> c = <a class="code" href="_a_p_i_8h.html#a868ab46aa5992e60829936c0109160bf">imeInitializeAll</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName</a>(<span class="stringliteral">&quot;9228A&quot;</span>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a>(<span class="stringliteral">&quot;Counts : %d\n&quot;</span>, c);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a22269cefc22e487f7acdcc4737d58c4a"><div class="ttname"><a href="_a_p_i_8h.html#a22269cefc22e487f7acdcc4737d58c4a">setTeamName</a></div><div class="ttdeci">void setTeamName(const char *name)</div></div>
-<div class="ttc" id="_a_p_i_8h_html_a403c82418e475fa4a8273719e6a7f3e6"><div class="ttname"><a href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a></div><div class="ttdeci">int printf(const char *formatString,...)</div></div>
-<div class="ttc" id="_a_p_i_8h_html_a868ab46aa5992e60829936c0109160bf"><div class="ttname"><a href="_a_p_i_8h.html#a868ab46aa5992e60829936c0109160bf">imeInitializeAll</a></div><div class="ttdeci">unsigned int imeInitializeAll()</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_a25a40b6614565f755233080a384c35f1_cgraph.svg" width="235" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                  {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">int</span> c = imeInitializeAll();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  setTeamName(<span class="stringliteral">&quot;9228A&quot;</span>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  printf(<span class="stringliteral">&quot;Counts : %d\n&quot;</span>, c);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ad9cda921edb01125bb13c2f86bcf624b"></a>
@@ -167,18 +155,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <p>Runs pre-initialization code. This function will be started in kernel mode one time while the VEX Cortex is starting up. As the scheduler is still paused, most API functions will fail.</p>
-<p>The purpose of this function is solely to set the default pin modes (<a class="el" href="_a_p_i_8h.html#a1875409d12eee562555bda94cad7f973">pinMode()</a>) and port states (<a class="el" href="_a_p_i_8h.html#a23e767e5b47fa61d4e2cc02e6f15c7ab">digitalWrite()</a>) of limit switches, push buttons, and solenoids. It can also safely configure a UART port (usartOpen()) but cannot set up an LCD (<a class="el" href="_a_p_i_8h.html#a43dc11a67b697c0d32315ea5a9af85f9">lcdInit()</a>). </p>
+<p>The purpose of this function is solely to set the default pin modes (pinMode()) and port states (digitalWrite()) of limit switches, push buttons, and solenoids. It can also safely configure a UART port (usartOpen()) but cannot set up an LCD (lcdInit()). </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00030">30</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-
-<p class="reference">References <a class="el" href="_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e">watchdogInit()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e">watchdogInit</a>();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a8c2e4902f39a7abdea20cdf04007bb8e"><div class="ttname"><a href="_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e">watchdogInit</a></div><div class="ttdeci">void watchdogInit()</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_ad9cda921edb01125bb13c2f86bcf624b_cgraph.svg" width="238" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    watchdogInit();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

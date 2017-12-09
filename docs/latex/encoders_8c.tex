@@ -1,4 +1,4 @@
-\subsection{src/encoders.c File Reference}
+\section{src/encoders.c File Reference}
 \label{encoders_8c}\index{src/encoders.\+c@{src/encoders.\+c}}
 {\ttfamily \#include \char`\"{}encoders.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
@@ -9,7 +9,7 @@ Include dependency graph for encoders.\+c\+:\nopagebreak
 \includegraphics[width=338pt]{encoders_8c__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \textbf{ get\+\_\+encoder\+\_\+ticks} (unsigned char address)
@@ -20,11 +20,11 @@ bool \textbf{ init\+\_\+encoders} ()
 \begin{DoxyCompactList}\small\item\em Initializes all motor encoders. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{encoders_8c_aed261dd4dae33a48c42f2e363c84760f}} 
 \index{encoders.\+c@{encoders.\+c}!get\+\_\+encoder\+\_\+ticks@{get\+\_\+encoder\+\_\+ticks}}
 \index{get\+\_\+encoder\+\_\+ticks@{get\+\_\+encoder\+\_\+ticks}!encoders.\+c@{encoders.\+c}}
-\paragraph{get\+\_\+encoder\+\_\+ticks()}
+\subsubsection{get\+\_\+encoder\+\_\+ticks()}
 {\footnotesize\ttfamily int get\+\_\+encoder\+\_\+ticks (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
 
 
@@ -42,10 +42,6 @@ Chris Jerrett
 Definition at line \textbf{ 23} of file \textbf{ encoders.\+c}.
 
 
-
-References \textbf{ ime\+Get()}.
-
-
 \begin{DoxyCode}
 00023                                              \{
 00024   \textcolor{keywordtype}{int} i = 0;
@@ -53,17 +49,10 @@ References \textbf{ ime\+Get()}.
 00026   \textcolor{keywordflow}{return} i;
 00027 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=261pt]{encoders_8c_aed261dd4dae33a48c42f2e363c84760f_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{encoders_8c_a8e6b77703c5cf18e00709b052fb4bf22}} 
 \index{encoders.\+c@{encoders.\+c}!get\+\_\+encoder\+\_\+velocity@{get\+\_\+encoder\+\_\+velocity}}
 \index{get\+\_\+encoder\+\_\+velocity@{get\+\_\+encoder\+\_\+velocity}!encoders.\+c@{encoders.\+c}}
-\paragraph{get\+\_\+encoder\+\_\+velocity()}
+\subsubsection{get\+\_\+encoder\+\_\+velocity()}
 {\footnotesize\ttfamily int get\+\_\+encoder\+\_\+velocity (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
 
 
@@ -81,10 +70,6 @@ Chris Jerrett
 Definition at line \textbf{ 34} of file \textbf{ encoders.\+c}.
 
 
-
-References \textbf{ ime\+Get\+Velocity()}.
-
-
 \begin{DoxyCode}
 00034                                                 \{
 00035   \textcolor{keywordtype}{int} i = 0;
@@ -92,17 +77,10 @@ References \textbf{ ime\+Get\+Velocity()}.
 00037   \textcolor{keywordflow}{return} i;
 00038 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=309pt]{encoders_8c_a8e6b77703c5cf18e00709b052fb4bf22_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{encoders_8c_aa6ec1ca17e907babd52803ecba451cd3}} 
 \index{encoders.\+c@{encoders.\+c}!init\+\_\+encoders@{init\+\_\+encoders}}
 \index{init\+\_\+encoders@{init\+\_\+encoders}!encoders.\+c@{encoders.\+c}}
-\paragraph{init\+\_\+encoders()}
+\subsubsection{init\+\_\+encoders()}
 {\footnotesize\ttfamily bool init\+\_\+encoders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -124,7 +102,7 @@ Definition at line \textbf{ 10} of file \textbf{ encoders.\+c}.
 
 
 
-References \textbf{ I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}, and \textbf{ ime\+Initialize\+All()}.
+References \textbf{ I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}.
 
 
 \begin{DoxyCode}
@@ -136,10 +114,3 @@ References \textbf{ I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}, and \textbf{ ime\+Initialize
 00015 \textcolor{preprocessor}{  #endif}
 00016 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=271pt]{encoders_8c_aa6ec1ca17e907babd52803ecba451cd3_cgraph}
-\end{center}
-\end{figure}

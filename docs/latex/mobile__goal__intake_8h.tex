@@ -1,4 +1,4 @@
-\subsection{include/mobile\+\_\+goal\+\_\+intake.h File Reference}
+\section{include/mobile\+\_\+goal\+\_\+intake.h File Reference}
 \label{mobile__goal__intake_8h}\index{include/mobile\+\_\+goal\+\_\+intake.\+h@{include/mobile\+\_\+goal\+\_\+intake.\+h}}
 {\ttfamily \#include \char`\"{}motor\+\_\+ports.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
@@ -17,31 +17,34 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=306pt]{mobile__goal__intake_8h__dep__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ update\+Intake} ()
 \begin{DoxyCompactList}\small\item\em updates the mobile goal intake in teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{mobile__goal__intake_8h_ad0232c21c5c1ffda603d2b7d61034118}} 
 \index{mobile\+\_\+goal\+\_\+intake.\+h@{mobile\+\_\+goal\+\_\+intake.\+h}!update\+Intake@{update\+Intake}}
 \index{update\+Intake@{update\+Intake}!mobile\+\_\+goal\+\_\+intake.\+h@{mobile\+\_\+goal\+\_\+intake.\+h}}
-\paragraph{update\+Intake()}
+\subsubsection{update\+Intake()}
 {\footnotesize\ttfamily void update\+Intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 updates the mobile goal intake in teleop. 
 
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
 
 
-Definition at line \textbf{ 16} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
+Definition at line \textbf{ 19} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
 
 
 
-References \textbf{ get\+\_\+mode()}, \textbf{ J\+O\+Y\+\_\+\+D\+O\+WN}, \textbf{ J\+O\+Y\+\_\+\+UP}, \textbf{ joystick\+Get\+Digital()}, \textbf{ lower\+\_\+intake()}, \textbf{ M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ P\+A\+R\+T\+N\+ER}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ raise\+\_\+intake()}, and \textbf{ set\+\_\+intake\+\_\+motor()}.
+References \textbf{ get\+\_\+mode()}, \textbf{ lower\+\_\+intake()}, \textbf{ M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ P\+A\+R\+T\+N\+ER}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ raise\+\_\+intake()}, and \textbf{ set\+\_\+intake\+\_\+motor()}.
 
 
 
@@ -49,33 +52,19 @@ Referenced by \textbf{ operator\+Control()}.
 
 
 \begin{DoxyCode}
-00016                     \{
-00017   \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY_UP) && (get_mode() == 
+00019                     \{
+00020   \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_UP) && (get_mode() == 
       MAIN_CONTROLLER_MODE)
-00018   || joystickGetDigital(PARTNER, 6, JOY_UP) && get_mode() == 
+00021   || joystickGetDigital(PARTNER, 6, JOY\_UP) && get_mode() == 
       PARTNER_CONTROLLER_MODE) \{
-00019     raise_intake();
-00020   \}
-00021   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY_DOWN) && (get_mode() == 
+00022     raise_intake();
+00023   \}
+00024   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_DOWN) && (get_mode() == 
       MAIN_CONTROLLER_MODE)
-00022   || joystickGetDigital(PARTNER, 6, JOY_DOWN) && get_mode() == 
+00025   || joystickGetDigital(PARTNER, 6, JOY\_DOWN) && get_mode() == 
       PARTNER_CONTROLLER_MODE)\{
-00023     lower_intake();
-00024   \}
-00025   \textcolor{keywordflow}{else} set_intake_motor(0);
-00026 \}
+00026     lower_intake();
+00027   \}
+00028   \textcolor{keywordflow}{else} set_intake_motor(0);
+00029 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{mobile__goal__intake_8h_ad0232c21c5c1ffda603d2b7d61034118_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=275pt]{mobile__goal__intake_8h_ad0232c21c5c1ffda603d2b7d61034118_icgraph}
-\end{center}
-\end{figure}

@@ -1,4 +1,4 @@
-\subsection{lifter.\+c}
+\section{lifter.\+c}
 \label{lifter_8c_source}\index{src/lifter.\+c@{src/lifter.\+c}}
 
 \begin{DoxyCode}
@@ -13,94 +13,94 @@
 00023 
 00024 \}
 00025 
-00026 \textcolor{keywordtype}{void} raise_lifter()\{
-00027   set_lifter_motors(MAX_SPEED);
-00028 \}
-00029 
-00030 \textcolor{keywordtype}{void} lower_lifter()\{
-00031   set_lifter_motors(MIN_SPEED);
-00032 \}
-00033 
-00040 \textcolor{keywordtype}{void} update_lifter() \{
-00041   \textcolor{comment}{//Establish variables to be used repeatedly}
-00042   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} changed = \textcolor{keyword}{true};
-00043   \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} target = 0;
-00044   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} first\_run = \textcolor{keyword}{true};
-00045   \textcolor{comment}{//Set the target to the current height for the first run}
-00046   \textcolor{keywordflow}{if}(first\_run) \{
-00047     target = getLifterTicks();
-00048     first\_run = \textcolor{keyword}{false};
-00049   \}
-00050   \textcolor{comment}{//Establish the error as 0}
-00051   \textcolor{keyword}{static} \textcolor{keywordtype}{int} last\_error = 0;
-00052   \textcolor{keyword}{static} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} i = 0;
-00053   \textcolor{comment}{//Check the buttons on the controller indicated by the controller mode}
-00054   \textcolor{keywordflow}{if}((joystickGetDigital(LIFTER_UP) && get_mode() == MAIN_CONTROLLER_MODE)
-00055    || (joystickGetDigital(LIFTER_UP_PARTNER) && get_mode() == 
-      PARTNER_CONTROLLER_MODE))\{
-00056     changed = \textcolor{keyword}{true};
-00057     i = 0;
-00058     \textcolor{comment}{//Change the target and start the motion}
-00059     target = getLifterTicks() + 200;
-00060     lower_lifter();
+00032 \textcolor{keywordtype}{void} raise_lifter()\{
+00033   set_lifter_motors(MAX_SPEED);
+00034 \}
+00035 
+00042 \textcolor{keywordtype}{void} lower_lifter()\{
+00043   set_lifter_motors(MIN_SPEED);
+00044 \}
+00045 
+00052 \textcolor{keywordtype}{void} update_lifter() \{
+00053   \textcolor{comment}{//Establish variables to be used repeatedly}
+00054   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} changed = \textcolor{keyword}{true};
+00055   \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} target = 0;
+00056   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} first\_run = \textcolor{keyword}{true};
+00057   \textcolor{comment}{//Set the target to the current height for the first run}
+00058   \textcolor{keywordflow}{if}(first\_run) \{
+00059     target = getLifterTicks();
+00060     first\_run = \textcolor{keyword}{false};
 00061   \}
-00062   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((joystickGetDigital(LIFTER_DOWN) && get_mode() == MAIN_CONTROLLER_MODE)
-00063    || (joystickGetDigital(LIFTER_DOWN_PARTNER) && get_mode() == 
+00062   \textcolor{comment}{//Establish the error as 0}
+00063   \textcolor{keyword}{static} \textcolor{keywordtype}{int} last\_error = 0;
+00064   \textcolor{keyword}{static} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} i = 0;
+00065   \textcolor{comment}{//Check the buttons on the controller indicated by the controller mode}
+00066   \textcolor{keywordflow}{if}((joystickGetDigital(LIFTER_UP) && get_mode() == MAIN_CONTROLLER_MODE)
+00067    || (joystickGetDigital(LIFTER_UP_PARTNER) && get_mode() == 
+      PARTNER_CONTROLLER_MODE))\{
+00068     changed = \textcolor{keyword}{true};
+00069     i = 0;
+00070     \textcolor{comment}{//Change the target and start the motion}
+00071     target = getLifterTicks() + 200;
+00072     lower_lifter();
+00073   \}
+00074   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((joystickGetDigital(LIFTER_DOWN) && get_mode() == MAIN_CONTROLLER_MODE)
+00075    || (joystickGetDigital(LIFTER_DOWN_PARTNER) && get_mode() == 
       PARTNER_CONTROLLER_MODE)) \{
-00064     changed = \textcolor{keyword}{true};
-00065     i = 0;
-00066     \textcolor{comment}{//Change the target and start the motion}
-00067     target = getLifterTicks();
-00068     raise_lifter();
-00069   \}
-00070   \textcolor{comment}{//Raise the lifter to the driver load height}
-00071   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_DRIVER_LOAD) && get_mode() == 
+00076     changed = \textcolor{keyword}{true};
+00077     i = 0;
+00078     \textcolor{comment}{//Change the target and start the motion}
+00079     target = getLifterTicks();
+00080     raise_lifter();
+00081   \}
+00082   \textcolor{comment}{//Raise the lifter to the driver load height}
+00083   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_DRIVER_LOAD) && get_mode() == 
       MAIN_CONTROLLER_MODE)\{
-00072     changed = \textcolor{keyword}{true};
-00073     i = 0;
-00074     \textcolor{keywordtype}{int} k = 0;
-00075     \textcolor{keywordflow}{if}(getLifterTicks() < 1270)\{
-00076       lower_lifter();
-00077 
-00078     \}
-00079     \textcolor{keywordflow}{if}(getLifterTicks() > 1230)\{
-00080       raise_lifter();
-00081     \}
-00082     target = 1250;
-00083   \}
-00084   \textcolor{comment}{//Change lifter motor values based upon the target}
-00085   \textcolor{keywordflow}{else} \{
-00086     \textcolor{comment}{//Don't if we are using the partner controller}
-00087     \textcolor{keywordflow}{if}(get_mode() == PARTNER_CONTROLLER_MODE)\{
-00088       set_lifter_motors(0);
-00089       \textcolor{keywordflow}{return};
+00084     changed = \textcolor{keyword}{true};
+00085     i = 0;
+00086     \textcolor{keywordtype}{int} k = 0;
+00087     \textcolor{keywordflow}{if}(getLifterTicks() < 1270)\{
+00088       lower_lifter();
+00089 
 00090     \}
-00091     \textcolor{comment}{//Define the proportion, derivative, and integral to be used in the motor speed}
-00092     \textcolor{keywordtype}{int} p = getLifterTicks() - target;
-00093     \textcolor{keywordtype}{int} d = p - last\_error;
-00094     last\_error = p;
-00095     i += p;
-00096     \textcolor{keywordtype}{int} motor = LIFTER_P * p + LIFTER_D * d + LIFTER_I * i;
-00097     \textcolor{comment}{//Avoid wasting battery if value is insignificant}
-00098     \textcolor{keywordflow}{if} (motor < THRESHOLD) \{
-00099         set_lifter_motors(0);
-00100     \} \textcolor{keywordflow}{else} \{
-00101         set_lifter_motors(motor);
+00091     \textcolor{keywordflow}{if}(getLifterTicks() > 1230)\{
+00092       raise_lifter();
+00093     \}
+00094     target = 1250;
+00095   \}
+00096   \textcolor{comment}{//Change lifter motor values based upon the target}
+00097   \textcolor{keywordflow}{else} \{
+00098     \textcolor{comment}{//Don't if we are using the partner controller}
+00099     \textcolor{keywordflow}{if}(get_mode() == PARTNER_CONTROLLER_MODE)\{
+00100       set_lifter_motors(0);
+00101       \textcolor{keywordflow}{return};
 00102     \}
-00103 
-00104   \}
-00105 \}
-00106 
-00115 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x)\{
-00116   \textcolor{keywordflow}{return} (x - INIT_ROTATION) / TICK_MAX * DEG_MAX;
+00103     \textcolor{comment}{//Define the proportion, derivative, and integral to be used in the motor speed}
+00104     \textcolor{keywordtype}{int} p = getLifterTicks() - target;
+00105     \textcolor{keywordtype}{int} d = p - last\_error;
+00106     last\_error = p;
+00107     i += p;
+00108     \textcolor{keywordtype}{int} motor = LIFTER_P * p + LIFTER_D * d + LIFTER_I * i;
+00109     \textcolor{comment}{//Avoid wasting battery if value is insignificant}
+00110     \textcolor{keywordflow}{if} (motor < THRESHOLD) \{
+00111         set_lifter_motors(0);
+00112     \} \textcolor{keywordflow}{else} \{
+00113         set_lifter_motors(motor);
+00114     \}
+00115 
+00116   \}
 00117 \}
 00118 
-00126 \textcolor{keywordtype}{int} getLifterTicks() \{
-00127   \textcolor{keywordflow}{return} analogRead(LIFTER);
-00128 \}
-00129 
-00137 \textcolor{keywordtype}{double} getLifterHeight() \{
-00138   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ticks = getLifterTicks();
-00139   \textcolor{keywordflow}{return} (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) + 0.0198 * ticks + 2.3033);
+00127 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x)\{
+00128   \textcolor{keywordflow}{return} (x - INIT_ROTATION) / TICK_MAX * DEG_MAX;
+00129 \}
+00130 
+00138 \textcolor{keywordtype}{int} getLifterTicks() \{
+00139   \textcolor{keywordflow}{return} analogRead(LIFTER);
 00140 \}
+00141 
+00149 \textcolor{keywordtype}{double} getLifterHeight() \{
+00150   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ticks = getLifterTicks();
+00151   \textcolor{keywordflow}{return} (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) + 0.0198 * ticks + 2.3033);
+00152 \}
 \end{DoxyCode}

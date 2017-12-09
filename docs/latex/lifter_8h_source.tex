@@ -1,4 +1,4 @@
-\subsection{lifter.\+h}
+\section{lifter.\+h}
 \label{lifter_8h_source}\index{include/lifter.\+h@{include/lifter.\+h}}
 
 \begin{DoxyCode}
@@ -42,13 +42,17 @@
 00083 
 00091 \textcolor{keywordtype}{void} set_lifter_pos(\textcolor{keywordtype}{int} pos);
 00092 
-00099 \textcolor{keywordtype}{void} update_lifter();
+00099 \textcolor{keywordtype}{void} raise_lifter();
 00100 
-00109 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x);
-00110 
-00118 \textcolor{keywordtype}{double} getLifterHeight();
-00119 
-00127 \textcolor{keywordtype}{int} getLifterTicks();
-00128 
-00129 \textcolor{preprocessor}{#endif}
+00107 \textcolor{keywordtype}{void} lower_lifter();
+00108 
+00115 \textcolor{keywordtype}{void} update_lifter();
+00116 
+00125 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x);
+00126 
+00134 \textcolor{keywordtype}{double} getLifterHeight();
+00135 
+00143 \textcolor{keywordtype}{int} getLifterTicks();
+00144 
+00145 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

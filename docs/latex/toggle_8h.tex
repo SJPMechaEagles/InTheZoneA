@@ -1,4 +1,4 @@
-\subsection{include/toggle.h File Reference}
+\section{include/toggle.h File Reference}
 \label{toggle_8h}\index{include/toggle.\+h@{include/toggle.\+h}}
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
 Include dependency graph for toggle.\+h\+:\nopagebreak
@@ -15,7 +15,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=166pt]{toggle_8h__dep__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Enumerations}
+\subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum \textbf{ button\+\_\+t} \{ \newline
@@ -54,7 +54,7 @@ enum \textbf{ button\+\_\+t} \{ \newline
 \textbf{ L\+C\+D\+\_\+\+R\+I\+G\+HT} = 26
  \}
 \end{DoxyCompactItemize}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \textbf{ button\+Get\+State} (\textbf{ button\+\_\+t})
@@ -65,11 +65,11 @@ bool \textbf{ button\+Is\+New\+Press} (\textbf{ button\+\_\+t})
 \begin{DoxyCompactList}\small\item\em Detects if button is a new press from most recent check by comparing previous value to current value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Enumeration Type Documentation}
+\subsection{Enumeration Type Documentation}
 \mbox{\label{toggle_8h_a7754652ebe470fb6cc5d30b4cd258660}} 
 \index{toggle.\+h@{toggle.\+h}!button\+\_\+t@{button\+\_\+t}}
 \index{button\+\_\+t@{button\+\_\+t}!toggle.\+h@{toggle.\+h}}
-\paragraph{button\+\_\+t}
+\subsubsection{button\+\_\+t}
 {\footnotesize\ttfamily enum \textbf{ button\+\_\+t}}
 
 Renames the input channels \begin{DoxyEnumFields}{Enumerator}
@@ -222,11 +222,11 @@ Definition at line \textbf{ 20} of file \textbf{ toggle.\+h}.
 \end{DoxyCode}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{toggle_8h_a72989c21af9d14672f6e59c44a2b59bc}} 
 \index{toggle.\+h@{toggle.\+h}!button\+Get\+State@{button\+Get\+State}}
 \index{button\+Get\+State@{button\+Get\+State}!toggle.\+h@{toggle.\+h}}
-\paragraph{button\+Get\+State()}
+\subsubsection{button\+Get\+State()}
 {\footnotesize\ttfamily bool button\+Get\+State (\begin{DoxyParamCaption}\item[{\textbf{ button\+\_\+t}}]{ }\end{DoxyParamCaption})}
 
 
@@ -247,7 +247,7 @@ Definition at line \textbf{ 25} of file \textbf{ toggle.\+c}.
 
 
 
-References \textbf{ J\+O\+Y\+\_\+\+D\+O\+WN}, \textbf{ J\+O\+Y\+\_\+\+L\+E\+FT}, \textbf{ J\+O\+Y\+\_\+\+R\+I\+G\+HT}, \textbf{ J\+O\+Y\+\_\+\+UP}, \textbf{ joystick\+Get\+Digital()}, \textbf{ L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+ER}, \textbf{ L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+L\+E\+FT}, \textbf{ L\+C\+D\+\_\+\+B\+T\+N\+\_\+\+R\+I\+G\+HT}, \textbf{ L\+C\+D\+\_\+\+C\+E\+NT}, \textbf{ L\+C\+D\+\_\+\+L\+E\+FT}, \textbf{ L\+C\+D\+\_\+\+R\+I\+G\+HT}, \textbf{ lcd\+Read\+Buttons()}, and \textbf{ uart1}.
+References \textbf{ L\+C\+D\+\_\+\+C\+E\+NT}, \textbf{ L\+C\+D\+\_\+\+L\+E\+FT}, and \textbf{ L\+C\+D\+\_\+\+R\+I\+G\+HT}.
 
 
 
@@ -283,51 +283,51 @@ Referenced by \textbf{ button\+Is\+New\+Press()}.
 00050         \textcolor{keywordflow}{switch} (newButton) \{
 00051         \textcolor{keywordflow}{case} 0:
 00052             buttonGroup = 5;
-00053             buttonLocation = JOY_DOWN;
+00053             buttonLocation = JOY\_DOWN;
 00054             \textcolor{keywordflow}{break};
 00055         \textcolor{keywordflow}{case} 1:
 00056             buttonGroup = 5;
-00057             buttonLocation = JOY_UP;
+00057             buttonLocation = JOY\_UP;
 00058             \textcolor{keywordflow}{break};
 00059         \textcolor{keywordflow}{case} 2:
 00060             buttonGroup = 6;
-00061             buttonLocation = JOY_DOWN;
+00061             buttonLocation = JOY\_DOWN;
 00062             \textcolor{keywordflow}{break};
 00063         \textcolor{keywordflow}{case} 3:
 00064             buttonGroup = 6;
-00065             buttonLocation = JOY_UP;
+00065             buttonLocation = JOY\_UP;
 00066             \textcolor{keywordflow}{break};
 00067         \textcolor{keywordflow}{case} 4:
 00068             buttonGroup = 7;
-00069             buttonLocation = JOY_UP;
+00069             buttonLocation = JOY\_UP;
 00070             \textcolor{keywordflow}{break};
 00071         \textcolor{keywordflow}{case} 5:
 00072             buttonGroup = 7;
-00073             buttonLocation = JOY_LEFT;
+00073             buttonLocation = JOY\_LEFT;
 00074             \textcolor{keywordflow}{break};
 00075         \textcolor{keywordflow}{case} 6:
 00076             buttonGroup = 7;
-00077             buttonLocation = JOY_RIGHT;
+00077             buttonLocation = JOY\_RIGHT;
 00078             \textcolor{keywordflow}{break};
 00079         \textcolor{keywordflow}{case} 7:
 00080             buttonGroup = 7;
-00081             buttonLocation = JOY_DOWN;
+00081             buttonLocation = JOY\_DOWN;
 00082             \textcolor{keywordflow}{break};
 00083         \textcolor{keywordflow}{case} 8:
 00084             buttonGroup = 8;
-00085             buttonLocation = JOY_UP;
+00085             buttonLocation = JOY\_UP;
 00086             \textcolor{keywordflow}{break};
 00087         \textcolor{keywordflow}{case} 9:
 00088             buttonGroup = 8;
-00089             buttonLocation = JOY_LEFT;
+00089             buttonLocation = JOY\_LEFT;
 00090             \textcolor{keywordflow}{break};
 00091         \textcolor{keywordflow}{case} 10:
 00092             buttonGroup = 8;
-00093             buttonLocation = JOY_RIGHT;
+00093             buttonLocation = JOY\_RIGHT;
 00094             \textcolor{keywordflow}{break};
 00095         \textcolor{keywordflow}{case} 11:
 00096             buttonGroup = 8;
-00097             buttonLocation = JOY_DOWN;
+00097             buttonLocation = JOY\_DOWN;
 00098             \textcolor{keywordflow}{break};
 00099         \textcolor{keywordflow}{default}:
 00100             \textcolor{keywordflow}{break};
@@ -337,35 +337,21 @@ Referenced by \textbf{ button\+Is\+New\+Press()}.
 00104     \textcolor{keywordflow}{else} \{
 00105         \textcolor{comment}{// button is on LCD}
 00106         \textcolor{keywordflow}{if} (button == LCD_LEFT)
-00107             currentButton = (lcdReadButtons(uart1) == LCD_BTN_LEFT);
+00107             currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_LEFT);
 00108 
 00109         \textcolor{keywordflow}{if} (button == LCD_CENT)
-00110             currentButton = (lcdReadButtons(uart1) == LCD_BTN_CENTER);
+00110             currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_CENTER);
 00111 
 00112         \textcolor{keywordflow}{if} (button == LCD_RIGHT)
-00113             currentButton = (lcdReadButtons(uart1) == LCD_BTN_RIGHT);
+00113             currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_RIGHT);
 00114     \}
 00115     \textcolor{keywordflow}{return} currentButton;
 00116 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=292pt]{toggle_8h_a72989c21af9d14672f6e59c44a2b59bc_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=296pt]{toggle_8h_a72989c21af9d14672f6e59c44a2b59bc_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{toggle_8h_a2b3d226371575c894979ab84bce95626}} 
 \index{toggle.\+h@{toggle.\+h}!button\+Init@{button\+Init}}
 \index{button\+Init@{button\+Init}!toggle.\+h@{toggle.\+h}}
-\paragraph{button\+Init()}
+\subsubsection{button\+Init()}
 {\footnotesize\ttfamily void button\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -390,7 +376,7 @@ References \textbf{ button\+Pressed}.
 \mbox{\label{toggle_8h_ae819f86fad1b51d66f4294140b53ff77}} 
 \index{toggle.\+h@{toggle.\+h}!button\+Is\+New\+Press@{button\+Is\+New\+Press}}
 \index{button\+Is\+New\+Press@{button\+Is\+New\+Press}!toggle.\+h@{toggle.\+h}}
-\paragraph{button\+Is\+New\+Press()}
+\subsubsection{button\+Is\+New\+Press()}
 {\footnotesize\ttfamily bool button\+Is\+New\+Press (\begin{DoxyParamCaption}\item[{\textbf{ button\+\_\+t}}]{button }\end{DoxyParamCaption})}
 
 
@@ -444,10 +430,3 @@ References \textbf{ button\+Get\+State()}, and \textbf{ button\+Pressed}.
 00146     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// button is not pressed or was already detected}
 00147 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{toggle_8h_ae819f86fad1b51d66f4294140b53ff77_cgraph}
-\end{center}
-\end{figure}

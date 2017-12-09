@@ -1,32 +1,4 @@
 var searchData=
 [
-  ['i2cread',['i2cRead',['../_a_p_i_8h.html#a591bdbd4df72ac4231feba723faac640',1,'API.h']]],
-  ['i2creadregister',['i2cReadRegister',['../_a_p_i_8h.html#a69670b44b640e824da387a6616dc2f9a',1,'API.h']]],
-  ['i2cwrite',['i2cWrite',['../_a_p_i_8h.html#a2d286627370658ecee04a18335b91c39',1,'API.h']]],
-  ['i2cwriteregister',['i2cWriteRegister',['../_a_p_i_8h.html#a51385d22e08f52852c85ad675e3523a9',1,'API.h']]],
-  ['identitymatrix',['identityMatrix',['../matrix_8h.html#aa3f5e409b1641373be7cf7284e216d1a',1,'identityMatrix(int n):&#160;matrix.c'],['../matrix_8c.html#aa3f5e409b1641373be7cf7284e216d1a',1,'identityMatrix(int n):&#160;matrix.c']]],
-  ['imeget',['imeGet',['../_a_p_i_8h.html#ac4f1500418a729ac3ee95bce9768b20c',1,'API.h']]],
-  ['imegetvelocity',['imeGetVelocity',['../_a_p_i_8h.html#a2dfd22ed31510b48a91bd9cd3d04a72f',1,'API.h']]],
-  ['imeinitializeall',['imeInitializeAll',['../_a_p_i_8h.html#a868ab46aa5992e60829936c0109160bf',1,'API.h']]],
-  ['imereset',['imeReset',['../_a_p_i_8h.html#ab1ef9ee5f8878856896a6c920ed762fc',1,'API.h']]],
-  ['imeshutdown',['imeShutdown',['../_a_p_i_8h.html#a19de5a557348a6b4931c89eb82eb8fb7',1,'API.h']]],
-  ['info',['info',['../log_8h.html#a1606d750e1bb8de9f9e917172bba3382',1,'info(const char *info_message):&#160;log.c'],['../log_8c.html#a1606d750e1bb8de9f9e917172bba3382',1,'info(const char *info_message):&#160;log.c']]],
-  ['init_5fencoders',['init_encoders',['../encoders_8h.html#aa6ec1ca17e907babd52803ecba451cd3',1,'init_encoders():&#160;encoders.c'],['../encoders_8c.html#aa6ec1ca17e907babd52803ecba451cd3',1,'init_encoders():&#160;encoders.c']]],
-  ['init_5ferror',['init_error',['../log_8h.html#a163f389b4f5cf440a807d8fb48aaa006',1,'init_error(bool use_lcd, FILE *lcd):&#160;log.c'],['../log_8c.html#a163f389b4f5cf440a807d8fb48aaa006',1,'init_error(bool use_lcd, FILE *lcd):&#160;log.c']]],
-  ['init_5flocalization',['init_localization',['../localization_8h.html#afdd0147de6aa15957e9a125f9cd20578',1,'init_localization(const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta):&#160;localization.c'],['../localization_8c.html#afdd0147de6aa15957e9a125f9cd20578',1,'init_localization(const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta):&#160;localization.c']]],
-  ['init_5fmain_5flcd',['init_main_lcd',['../lcd_8h.html#a93b26f37d6b1687ad54c90feedfd29ca',1,'init_main_lcd(FILE *lcd):&#160;lcd.c'],['../lcd_8c.html#a93b26f37d6b1687ad54c90feedfd29ca',1,'init_main_lcd(FILE *lcd):&#160;lcd.c']]],
-  ['init_5fmenu_5ffloat',['init_menu_float',['../menu_8h.html#a5abb752733423805f59ef3b92e3c2e57',1,'init_menu_float(enum menu_type type, float min, float max, float step, const char *prompt):&#160;menu.c'],['../menu_8c.html#a5abb752733423805f59ef3b92e3c2e57',1,'init_menu_float(enum menu_type type, float min, float max, float step, const char *prompt):&#160;menu.c']]],
-  ['init_5fmenu_5fint',['init_menu_int',['../menu_8h.html#ac8efedba760ec35ebf841ab19543ba5a',1,'init_menu_int(enum menu_type type, int min, int max, int step, const char *prompt):&#160;menu.c'],['../menu_8c.html#ac8efedba760ec35ebf841ab19543ba5a',1,'init_menu_int(enum menu_type type, int min, int max, int step, const char *prompt):&#160;menu.c']]],
-  ['init_5fmenu_5fvar',['init_menu_var',['../menu_8h.html#a3529988b0a7c12cb3f2ebb3cf5595594',1,'init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char *options,...):&#160;menu.c'],['../menu_8c.html#a3529988b0a7c12cb3f2ebb3cf5595594',1,'init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char *options,...):&#160;menu.c']]],
-  ['init_5fslew',['init_slew',['../slew_8h.html#a321758941d88b75783955c819bb75005',1,'init_slew():&#160;slew.c'],['../slew_8c.html#a321758941d88b75783955c819bb75005',1,'init_slew():&#160;slew.c']]],
-  ['initialize',['initialize',['../main_8h.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;init.c'],['../init_8c.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;init.c']]],
-  ['initializeio',['initializeIO',['../main_8h.html#ad9cda921edb01125bb13c2f86bcf624b',1,'initializeIO():&#160;init.c'],['../init_8c.html#ad9cda921edb01125bb13c2f86bcf624b',1,'initializeIO():&#160;init.c']]],
-  ['integrate_5fgyro_5fw',['integrate_gyro_w',['../localization_8c.html#ac103fff038e59ff45f292b9b5138182e',1,'localization.c']]],
-  ['ioclearinterrupt',['ioClearInterrupt',['../_a_p_i_8h.html#a9291f71712cfb21e9bfd51682260fa73',1,'API.h']]],
-  ['iosetinterrupt',['ioSetInterrupt',['../_a_p_i_8h.html#a8d0fd8e69a4c4c5aba981d106ee7f9ac',1,'API.h']]],
-  ['isautonomous',['isAutonomous',['../_a_p_i_8h.html#aad3f43faea37dc2eddaf4ba0926a511f',1,'API.h']]],
-  ['isenabled',['isEnabled',['../_a_p_i_8h.html#a56722b6f1c22da04885bc9853148bb71',1,'API.h']]],
-  ['isjoystickconnected',['isJoystickConnected',['../_a_p_i_8h.html#a72aa0bce6b1d8ee298a60617f8fa74da',1,'API.h']]],
-  ['isonline',['isOnline',['../_a_p_i_8h.html#a1eceab28885f971892b9d4fc76e0e542',1,'API.h']]],
-  ['itoa_5fbad',['itoa_bad',['../vlib_8h.html#a08fa7134f8b9a80eeba25f9feab22892',1,'itoa_bad(int a, char *buffer, int digits):&#160;vlib.c'],['../vlib_8c.html#a08fa7134f8b9a80eeba25f9feab22892',1,'itoa_bad(int a, char *buffer, int digits):&#160;vlib.c']]]
+  ['joystickexp',['joystickExp',['../drive_8c.html#a6de4fbb9197f2f350c53a9f8bf23a8f1',1,'drive.c']]]
 ];

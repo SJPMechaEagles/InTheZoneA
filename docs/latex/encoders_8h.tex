@@ -1,4 +1,4 @@
-\subsection{include/encoders.h File Reference}
+\section{include/encoders.h File Reference}
 \label{encoders_8h}\index{include/encoders.\+h@{include/encoders.\+h}}
 
 
@@ -10,7 +10,7 @@ Include dependency graph for encoders.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{encoders_8h__incl}
+\includegraphics[width=180pt]{encoders_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
@@ -20,12 +20,12 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=350pt]{encoders_8h__dep__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Macros}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \textbf{ I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}~6
 \begin{DoxyCompactList}\small\item\em The number of I\+M\+Es. This number is compared against the number detect in init\+\_\+encoders. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \textbf{ get\+\_\+encoder\+\_\+ticks} (unsigned char address)
@@ -36,7 +36,7 @@ bool \textbf{ init\+\_\+encoders} ()
 \begin{DoxyCompactList}\small\item\em Initializes all motor encoders. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Detailed Description}
+\subsection{Detailed Description}
 wrapper around encoder functions 
 
 \begin{DoxyAuthor}{Author}
@@ -51,11 +51,11 @@ Definition in file \textbf{ encoders.\+h}.
 
 
 
-\subsubsection{Macro Definition Documentation}
+\subsection{Macro Definition Documentation}
 \mbox{\label{encoders_8h_a87db35d2735ef045f57d446b3bfe8d48}} 
 \index{encoders.\+h@{encoders.\+h}!I\+M\+E\+\_\+\+N\+U\+M\+B\+ER@{I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}}
 \index{I\+M\+E\+\_\+\+N\+U\+M\+B\+ER@{I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}!encoders.\+h@{encoders.\+h}}
-\paragraph{I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}
+\subsubsection{I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}
 {\footnotesize\ttfamily \#define I\+M\+E\+\_\+\+N\+U\+M\+B\+ER~6}
 
 
@@ -84,11 +84,11 @@ Referenced by \textbf{ init\+\_\+encoders()}.
 
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{encoders_8h_aed261dd4dae33a48c42f2e363c84760f}} 
 \index{encoders.\+h@{encoders.\+h}!get\+\_\+encoder\+\_\+ticks@{get\+\_\+encoder\+\_\+ticks}}
 \index{get\+\_\+encoder\+\_\+ticks@{get\+\_\+encoder\+\_\+ticks}!encoders.\+h@{encoders.\+h}}
-\paragraph{get\+\_\+encoder\+\_\+ticks()}
+\subsubsection{get\+\_\+encoder\+\_\+ticks()}
 {\footnotesize\ttfamily int get\+\_\+encoder\+\_\+ticks (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
 
 
@@ -106,10 +106,6 @@ Chris Jerrett
 Definition at line \textbf{ 23} of file \textbf{ encoders.\+c}.
 
 
-
-References \textbf{ ime\+Get()}.
-
-
 \begin{DoxyCode}
 00023                                              \{
 00024   \textcolor{keywordtype}{int} i = 0;
@@ -117,17 +113,10 @@ References \textbf{ ime\+Get()}.
 00026   \textcolor{keywordflow}{return} i;
 00027 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=261pt]{encoders_8h_aed261dd4dae33a48c42f2e363c84760f_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{encoders_8h_a8e6b77703c5cf18e00709b052fb4bf22}} 
 \index{encoders.\+h@{encoders.\+h}!get\+\_\+encoder\+\_\+velocity@{get\+\_\+encoder\+\_\+velocity}}
 \index{get\+\_\+encoder\+\_\+velocity@{get\+\_\+encoder\+\_\+velocity}!encoders.\+h@{encoders.\+h}}
-\paragraph{get\+\_\+encoder\+\_\+velocity()}
+\subsubsection{get\+\_\+encoder\+\_\+velocity()}
 {\footnotesize\ttfamily int get\+\_\+encoder\+\_\+velocity (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
 
 
@@ -145,10 +134,6 @@ Chris Jerrett
 Definition at line \textbf{ 34} of file \textbf{ encoders.\+c}.
 
 
-
-References \textbf{ ime\+Get\+Velocity()}.
-
-
 \begin{DoxyCode}
 00034                                                 \{
 00035   \textcolor{keywordtype}{int} i = 0;
@@ -156,17 +141,10 @@ References \textbf{ ime\+Get\+Velocity()}.
 00037   \textcolor{keywordflow}{return} i;
 00038 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=309pt]{encoders_8h_a8e6b77703c5cf18e00709b052fb4bf22_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{encoders_8h_aa6ec1ca17e907babd52803ecba451cd3}} 
 \index{encoders.\+h@{encoders.\+h}!init\+\_\+encoders@{init\+\_\+encoders}}
 \index{init\+\_\+encoders@{init\+\_\+encoders}!encoders.\+h@{encoders.\+h}}
-\paragraph{init\+\_\+encoders()}
+\subsubsection{init\+\_\+encoders()}
 {\footnotesize\ttfamily bool init\+\_\+encoders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -188,7 +166,7 @@ Definition at line \textbf{ 10} of file \textbf{ encoders.\+c}.
 
 
 
-References \textbf{ I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}, and \textbf{ ime\+Initialize\+All()}.
+References \textbf{ I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}.
 
 
 \begin{DoxyCode}
@@ -200,10 +178,3 @@ References \textbf{ I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}, and \textbf{ ime\+Initialize
 00015 \textcolor{preprocessor}{  #endif}
 00016 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=271pt]{encoders_8h_aa6ec1ca17e907babd52803ecba451cd3_cgraph}
-\end{center}
-\end{figure}

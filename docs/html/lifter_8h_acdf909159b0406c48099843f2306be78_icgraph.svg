@@ -8,54 +8,54 @@
  viewBox="0.00 0.00 321.62 64.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 60)">
 <title>getLifterTicks</title>
-<!-- Node6 -->
+<!-- Node4 -->
 <g id="node1" class="node">
-<title>Node6</title>
+<title>Node4</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-18.5 0,-36.5 75.0967,-36.5 75.0967,-18.5 0,-18.5"/>
 <text text-anchor="middle" x="37.5483" y="-24.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getLifterTicks</text>
 </g>
-<!-- Node7 -->
+<!-- Node5 -->
 <g id="node2" class="node">
-<title>Node7</title>
-<g id="a_node2"><a xlink:href="lifter_8c.html#a2719740958fd8a5926f88f6194e820e3" target="_top" xlink:title="Gets the height of the lifter in inches. ">
+<title>Node5</title>
+<g id="a_node2"><a xlink:href="$lifter_8c.html#a2719740958fd8a5926f88f6194e820e3" xlink:title="Gets the height of the lifter in inches. ">
 <polygon fill="none" stroke="#000000" points="111.0967,-37.5 111.0967,-55.5 192.1357,-55.5 192.1357,-37.5 111.0967,-37.5"/>
 <text text-anchor="middle" x="151.6162" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">getLifterHeight</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node7 -->
+<!-- Node4&#45;&gt;Node5 -->
 <g id="edge1" class="edge">
-<title>Node6&#45;&gt;Node7</title>
+<title>Node4&#45;&gt;Node5</title>
 <path fill="none" stroke="#191970" d="M85.0823,-35.4176C93.644,-36.8437 102.4996,-38.3188 110.8478,-39.7093"/>
 <polygon fill="#191970" stroke="#191970" points="85.6537,-31.9647 75.2146,-33.774 84.5036,-38.8695 85.6537,-31.9647"/>
 </g>
-<!-- Node8 -->
+<!-- Node6 -->
 <g id="node3" class="node">
-<title>Node8</title>
-<g id="a_node3"><a xlink:href="lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" target="_top" xlink:title="Updates the lifter in teleop. ">
+<title>Node6</title>
+<g id="a_node3"><a xlink:href="$lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b" xlink:title="Updates the lifter in teleop. ">
 <polygon fill="none" stroke="#000000" points="116.0967,-.5 116.0967,-18.5 187.1357,-18.5 187.1357,-.5 116.0967,-.5"/>
 <text text-anchor="middle" x="151.6162" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_lifter</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node8 -->
+<!-- Node4&#45;&gt;Node6 -->
 <g id="edge2" class="edge">
-<title>Node6&#45;&gt;Node8</title>
+<title>Node4&#45;&gt;Node6</title>
 <path fill="none" stroke="#191970" d="M85.2854,-19.9671C95.5446,-18.3481 106.2163,-16.6641 115.9241,-15.1322"/>
 <polygon fill="#191970" stroke="#191970" points="84.5467,-16.5402 75.2146,-21.5562 85.6379,-23.4547 84.5467,-16.5402"/>
 </g>
-<!-- Node9 -->
+<!-- Node7 -->
 <g id="node4" class="node">
-<title>Node9</title>
-<g id="a_node4"><a xlink:href="opcontrol_8c.html#ac71a94af413917f27d108e95c4d6f6a7" target="_top" xlink:title="operatorControl">
+<title>Node7</title>
+<g id="a_node4"><a xlink:href="$opcontrol_8c.html#ac71a94af413917f27d108e95c4d6f6a7" xlink:title="operatorControl">
 <polygon fill="none" stroke="#000000" points="228.1357,-.5 228.1357,-18.5 313.6182,-18.5 313.6182,-.5 228.1357,-.5"/>
 <text text-anchor="middle" x="270.877" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">operatorControl</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
+<!-- Node6&#45;&gt;Node7 -->
 <g id="edge3" class="edge">
-<title>Node8&#45;&gt;Node9</title>
+<title>Node6&#45;&gt;Node7</title>
 <path fill="none" stroke="#191970" d="M197.5661,-9.5C207.5597,-9.5 218.0953,-9.5 227.9659,-9.5"/>
 <polygon fill="#191970" stroke="#191970" points="197.3984,-6.0001 187.3984,-9.5 197.3983,-13.0001 197.3984,-6.0001"/>
 </g>

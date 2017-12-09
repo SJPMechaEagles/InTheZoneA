@@ -1,4 +1,4 @@
-\subsection{include/localization.h File Reference}
+\section{include/localization.h File Reference}
 \label{localization_8h}\index{include/localization.\+h@{include/localization.\+h}}
 
 
@@ -13,7 +13,7 @@ Include dependency graph for localization.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{localization_8h__incl}
+\includegraphics[width=298pt]{localization_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
@@ -23,26 +23,28 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=268pt]{localization_8h__dep__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Data Structures}
+\subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ location}
 \end{DoxyCompactItemize}
-\subsubsection*{Macros}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \textbf{ L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}~0.\+500
 \end{DoxyCompactItemize}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ location} \textbf{ get\+\_\+position} ()
 \begin{DoxyCompactList}\small\item\em Gets the current posituion of the robot. \end{DoxyCompactList}\item 
 bool \textbf{ init\+\_\+localization} (const unsigned char gyro1, unsigned short multiplier, int start\+\_\+x, int start\+\_\+y, int start\+\_\+theta)
-\begin{DoxyCompactList}\small\item\em Starts the localization process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Starts the localization process. \end{DoxyCompactList}\item 
+void \textbf{ update\+\_\+position} ()
+\begin{DoxyCompactList}\small\item\em Updates the position from the localization. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Detailed Description}
+\subsection{Detailed Description}
 Declarations and macros for determining the location of the robot. [W\+IP]. 
 
 \begin{DoxyAuthor}{Author}
@@ -57,11 +59,11 @@ Definition in file \textbf{ localization.\+h}.
 
 
 
-\subsubsection{Macro Definition Documentation}
+\subsection{Macro Definition Documentation}
 \mbox{\label{localization_8h_a4fa0a97f6aafe983a46ffc7188d1fab5}} 
 \index{localization.\+h@{localization.\+h}!L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}
 \index{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}!localization.\+h@{localization.\+h}}
-\paragraph{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}
+\subsubsection{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}
 {\footnotesize\ttfamily \#define L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY~0.\+500}
 
 How often the localization code updates the position. 
@@ -74,11 +76,11 @@ Referenced by \textbf{ calculate\+\_\+gryo\+\_\+anglular\+\_\+velocity()}, \text
 
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{localization_8h_aadbff35bb757f60bc348d4d778f57a2f}} 
 \index{localization.\+h@{localization.\+h}!get\+\_\+position@{get\+\_\+position}}
 \index{get\+\_\+position@{get\+\_\+position}!localization.\+h@{localization.\+h}}
-\paragraph{get\+\_\+position()}
+\subsubsection{get\+\_\+position()}
 {\footnotesize\ttfamily struct \textbf{ location} get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -95,18 +97,18 @@ the loacation of the robot as a struct.
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 25} of file \textbf{ localization.\+c}.
+Definition at line \textbf{ 31} of file \textbf{ localization.\+c}.
 
 
 \begin{DoxyCode}
-00025                                \{
-00026 
-00027 \}
+00031                                \{
+00032 
+00033 \}
 \end{DoxyCode}
 \mbox{\label{localization_8h_afdd0147de6aa15957e9a125f9cd20578}} 
 \index{localization.\+h@{localization.\+h}!init\+\_\+localization@{init\+\_\+localization}}
 \index{init\+\_\+localization@{init\+\_\+localization}!localization.\+h@{localization.\+h}}
-\paragraph{init\+\_\+localization()}
+\subsubsection{init\+\_\+localization()}
 {\footnotesize\ttfamily bool init\+\_\+localization (\begin{DoxyParamCaption}\item[{const unsigned char}]{gyro1,  }\item[{unsigned short}]{multiplier,  }\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{start\+\_\+theta }\end{DoxyParamCaption})}
 
 
@@ -123,30 +125,70 @@ Chris Jerrett
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 89} of file \textbf{ localization.\+c}.
+Definition at line \textbf{ 100} of file \textbf{ localization.\+c}.
 
 
 
-References \textbf{ g1}, \textbf{ gyro\+Init()}, \textbf{ last\+\_\+call}, \textbf{ localization\+\_\+task}, \textbf{ L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}, \textbf{ make\+Matrix()}, \textbf{ millis()}, \textbf{ task\+Run\+Loop()}, and \textbf{ update\+\_\+position()}.
+References \textbf{ g1}, \textbf{ last\+\_\+call}, \textbf{ localization\+\_\+task}, \textbf{ L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}, \textbf{ make\+Matrix()}, and \textbf{ update\+\_\+position()}.
 
 
 \begin{DoxyCode}
-00089                                                                                                            
+00100                                                                                                            
                     \{
-00090   g1 = gyroInit(gyro1, multiplier);
-00091   \textcolor{comment}{//init state matrix}
-00092 
-00093   \textcolor{comment}{//one dimensional vector with x, y, theta, acceleration in x and y}
-00094   state_matrix = makeMatrix(1, 5);
-00095   localization_task = taskRunLoop(update_position, LOCALIZATION_UPDATE_FREQUENCY * 1000);
-00096   last_call = millis();
-00097   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-00098 \}
+00101   g1 = gyroInit(gyro1, multiplier);
+00102   \textcolor{comment}{//init state matrix}
+00103 
+00104   \textcolor{comment}{//one dimensional vector with x, y, theta, acceleration in x and y}
+00105   state_matrix = makeMatrix(1, 5);
+00106   localization_task = taskRunLoop(update_position, LOCALIZATION_UPDATE_FREQUENCY * 1000);
+00107   last_call = millis();
+00108   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00109 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{localization_8h_afdd0147de6aa15957e9a125f9cd20578_cgraph}
-\end{center}
-\end{figure}
+\mbox{\label{localization_8h_afacd5e0b3d5e677df26a4402bbd9ec9e}} 
+\index{localization.\+h@{localization.\+h}!update\+\_\+position@{update\+\_\+position}}
+\index{update\+\_\+position@{update\+\_\+position}!localization.\+h@{localization.\+h}}
+\subsubsection{update\+\_\+position()}
+{\footnotesize\ttfamily void update\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the position from the localization. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 40} of file \textbf{ localization.\+c}.
+
+
+
+References \textbf{ calculate\+\_\+accelerometer\+\_\+odemetry()}, and \textbf{ last\+\_\+call}.
+
+
+
+Referenced by \textbf{ init\+\_\+localization()}.
+
+
+\begin{DoxyCode}
+00040                        \{
+00041   \textcolor{comment}{//int curr\_theta = calculate\_angle();}
+00042 
+00043   \textcolor{keyword}{struct }accelerometer_odometry oddem = calculate_accelerometer_odemetry();
+00044   \textcolor{comment}{//printf("x: %d y: %d T: %d\(\backslash\)n", a.x, a.y, 0);}
+00045 
+00046   \textcolor{comment}{/*int l = 1;}
+00047 \textcolor{comment}{  int vr = get\_encoder\_velocity(1);}
+00048 \textcolor{comment}{  int vl = get\_encoder\_velocity(2);}
+00049 \textcolor{comment}{  int theta\_dot = (vr - vl) / l;}
+00050 \textcolor{comment}{  int curr\_theta = theta + theta\_dot;}
+00051 \textcolor{comment}{  double dt = LOCALIZATION\_UPDATE\_FREQUENCY;}
+00052 \textcolor{comment}{  double v\_tot = (vr+vl)/2.0;}
+00053 \textcolor{comment}{  int x\_curr = x - v\_tot*dt*sin(curr\_theta);}
+00054 \textcolor{comment}{  int y\_curr = y + v\_tot*dt*cos(curr\_theta);}
+00055 \textcolor{comment}{  x = x\_curr;}
+00056 \textcolor{comment}{  y = y\_curr;*/}
+00057   last_call = millis();
+00058 \}
+\end{DoxyCode}

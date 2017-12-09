@@ -1,4 +1,4 @@
-\subsection{src/claw.c File Reference}
+\section{src/claw.c File Reference}
 \label{claw_8c}\index{src/claw.\+c@{src/claw.\+c}}
 {\ttfamily \#include \char`\"{}claw.\+h\char`\"{}}\newline
 Include dependency graph for claw.\+c\+:\nopagebreak
@@ -8,7 +8,7 @@ Include dependency graph for claw.\+c\+:\nopagebreak
 \includegraphics[width=350pt]{claw_8c__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ close\+\_\+claw} ()
@@ -23,11 +23,11 @@ void \textbf{ update\+\_\+claw} ()
 \begin{DoxyCompactList}\small\item\em Updates the claw motor values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{claw_8c_ac42dd40dbb37219295286859c6b068c2}} 
 \index{claw.\+c@{claw.\+c}!close\+\_\+claw@{close\+\_\+claw}}
 \index{close\+\_\+claw@{close\+\_\+claw}!claw.\+c@{claw.\+c}}
-\paragraph{close\+\_\+claw()}
+\subsubsection{close\+\_\+claw()}
 {\footnotesize\ttfamily void close\+\_\+claw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -55,24 +55,10 @@ Referenced by \textbf{ autonomous()}.
 00068   set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED);
 00069 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{claw_8c_ac42dd40dbb37219295286859c6b068c2_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=252pt]{claw_8c_ac42dd40dbb37219295286859c6b068c2_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{claw_8c_addd2004effae7c94400aed1fe6a90ead}} 
 \index{claw.\+c@{claw.\+c}!get\+Claw\+Ticks@{get\+Claw\+Ticks}}
 \index{get\+Claw\+Ticks@{get\+Claw\+Ticks}!claw.\+c@{claw.\+c}}
-\paragraph{get\+Claw\+Ticks()}
+\subsubsection{get\+Claw\+Ticks()}
 {\footnotesize\ttfamily unsigned int get\+Claw\+Ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -88,7 +74,7 @@ Definition at line \textbf{ 51} of file \textbf{ claw.\+c}.
 
 
 
-References \textbf{ analog\+Read()}, and \textbf{ C\+L\+A\+W\+\_\+\+P\+OT}.
+References \textbf{ C\+L\+A\+W\+\_\+\+P\+OT}.
 
 
 
@@ -100,24 +86,10 @@ Referenced by \textbf{ update\+\_\+claw()}.
 00052   \textcolor{keywordflow}{return} analogRead(CLAW_POT);
 00053 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=261pt]{claw_8c_addd2004effae7c94400aed1fe6a90ead_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{claw_8c_addd2004effae7c94400aed1fe6a90ead_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{claw_8c_a03023ca28f671b9fa7bac07782ccd8c1}} 
 \index{claw.\+c@{claw.\+c}!open\+\_\+claw@{open\+\_\+claw}}
 \index{open\+\_\+claw@{open\+\_\+claw}!claw.\+c@{claw.\+c}}
-\paragraph{open\+\_\+claw()}
+\subsubsection{open\+\_\+claw()}
 {\footnotesize\ttfamily void open\+\_\+claw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -145,24 +117,10 @@ Referenced by \textbf{ autonomous()}.
 00060   set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED);
 00061 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{claw_8c_a03023ca28f671b9fa7bac07782ccd8c1_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=251pt]{claw_8c_a03023ca28f671b9fa7bac07782ccd8c1_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{claw_8c_a3a57f998b1884d39b0cc786689f7086f}} 
 \index{claw.\+c@{claw.\+c}!set\+\_\+claw\+\_\+motor@{set\+\_\+claw\+\_\+motor}}
 \index{set\+\_\+claw\+\_\+motor@{set\+\_\+claw\+\_\+motor}!claw.\+c@{claw.\+c}}
-\paragraph{set\+\_\+claw\+\_\+motor()}
+\subsubsection{set\+\_\+claw\+\_\+motor()}
 {\footnotesize\ttfamily void set\+\_\+claw\+\_\+motor (\begin{DoxyParamCaption}\item[{const int}]{v }\end{DoxyParamCaption})}
 
 
@@ -190,24 +148,10 @@ Referenced by \textbf{ update\+\_\+claw()}.
 00044   set_motor_immediate(CLAW_MOTOR, v);
 00045 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{claw_8c_a3a57f998b1884d39b0cc786689f7086f_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{claw_8c_a3a57f998b1884d39b0cc786689f7086f_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{claw_8c_a0122b78972344264b8a276a559cfce4a}} 
 \index{claw.\+c@{claw.\+c}!update\+\_\+claw@{update\+\_\+claw}}
 \index{update\+\_\+claw@{update\+\_\+claw}!claw.\+c@{claw.\+c}}
-\paragraph{update\+\_\+claw()}
+\subsubsection{update\+\_\+claw()}
 {\footnotesize\ttfamily void update\+\_\+claw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -223,7 +167,7 @@ Definition at line \textbf{ 7} of file \textbf{ claw.\+c}.
 
 
 
-References \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+SE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+V\+AL}, \textbf{ C\+L\+A\+W\+\_\+D}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+EN}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+V\+AL}, \textbf{ C\+L\+A\+W\+\_\+P}, \textbf{ get\+Claw\+Ticks()}, \textbf{ joystick\+Get\+Digital()}, and \textbf{ set\+\_\+claw\+\_\+motor()}.
+References \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+SE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+V\+AL}, \textbf{ C\+L\+A\+W\+\_\+D}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+EN}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+V\+AL}, \textbf{ C\+L\+A\+W\+\_\+P}, \textbf{ get\+Claw\+Ticks()}, and \textbf{ set\+\_\+claw\+\_\+motor()}.
 
 
 
@@ -263,17 +207,3 @@ Referenced by \textbf{ operator\+Control()}.
 00036   \}
 00037 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{claw_8c_a0122b78972344264b8a276a559cfce4a_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=274pt]{claw_8c_a0122b78972344264b8a276a559cfce4a_icgraph}
-\end{center}
-\end{figure}

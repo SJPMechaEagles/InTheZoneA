@@ -1,4 +1,4 @@
-\subsection{menu.\+c}
+\section{menu.\+c}
 \label{menu_8c_source}\index{src/menu.\+c@{src/menu.\+c}}
 
 \begin{DoxyCode}
@@ -7,104 +7,103 @@
 00003 \textcolor{keyword}{static} menu_t* create_menu(\textcolor{keyword}{enum} menu_type type, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt);
 00004 \textcolor{keyword}{static} \textcolor{keywordtype}{void} calculate_current_display(\textcolor{keywordtype}{char}* rtn, menu_t *menu);
 00005 
-00006 \textcolor{keyword}{static} menu_t* create_menu(\textcolor{keyword}{enum} menu_type type, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt) \{
-00007   menu_t* menu = (menu_t*) malloc(\textcolor{keyword}{sizeof}(menu_t));
-00008   \textcolor{keywordflow}{if} (!menu) \{
-00009     error(\textcolor{stringliteral}{"Menu Malloc"});
-00010   \}
-00011   menu->type = type;
-00012   \textcolor{comment}{// Add one for null terminator}
-00013   \textcolor{keywordtype}{size\_t} strlength = strlen(prompt) + 1;
-00014   menu->prompt = (\textcolor{keywordtype}{char}*) malloc(strlength * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
-00015   memcpy(menu->prompt, prompt, strlength);
-00016   menu->max = INT\_MAX;
-00017   menu->min = INT\_MIN;
-00018   menu->step = 1;
-00019   menu->min_f = FLT\_MIN;
-00020   menu->max_f = FLT\_MAX;
-00021   menu->step_f = 1;
-00022 
-00023   \textcolor{keywordflow}{return} menu;
-00024 \}
-00025 
-00026 menu_t* init_menu_var(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nums, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt, \textcolor{keywordtype}{char}* options,...)\{
-00027   menu_t* menu = create_menu(type, prompt);
-00028   va\_list values;
-00029   \textcolor{keywordtype}{char} **options\_array = (\textcolor{keywordtype}{char}**)calloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*), nums);
-00030   va\_start(values, options);
-00031   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < nums; i++)\{
-00032     options\_array[i] = va\_arg(values, \textcolor{keywordtype}{char}*);
-00033   \}
-00034   va\_end(values);
-00035   menu->options = options\_array;
-00036   menu->length = nums;
-00037   \textcolor{keywordflow}{return} menu;
-00038 \}
-00039 
-00040 menu_t* init_menu_int(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{int} min, \textcolor{keywordtype}{int} max, \textcolor{keywordtype}{int} step, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prompt)\{
-00041   menu_t* menu = create_menu(type, prompt);
-00042   menu->min = min;
-00043   menu->max = max;
-00044   menu->step = step;
-00045   \textcolor{keywordflow}{return} menu;
-00046 \}
-00047 
-00048 menu_t* init_menu_float(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{float} min, \textcolor{keywordtype}{float} max, \textcolor{keywordtype}{float} step, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prompt)\{
-00049   menu_t* menu = create_menu(type, prompt);
-00050   menu->min_f = min;
-00051   menu->max_f = max;
-00052   menu->step_f = step;
-00053   \textcolor{keywordflow}{return} menu;
-00054 \}
-00055 
-00056 \textcolor{keyword}{static} \textcolor{keywordtype}{void} calculate_current_display(\textcolor{keywordtype}{char}* rtn, menu_t *menu) \{
-00057   \textcolor{keywordflow}{if}(menu->type == STRING_TYPE)\{
-00058     \textcolor{comment}{//Ignore warning}
-00059     rtn = (menu->options[menu->current % (menu->length)]);
-00060   \}
-00061   \textcolor{keywordflow}{if}(menu->type == INT_TYPE) \{
-00062     \textcolor{keywordtype}{int} step = (menu->step);
-00063     \textcolor{keywordtype}{int} min = (menu->min);
-00064     \textcolor{keywordtype}{int} max = (menu->max);
-00065     \textcolor{keywordtype}{int} value = menu->current * step;
-00066     value = value < min ? min : value;
-00067     value = value > max ? max : value;
-00068     itoa_bad(value, rtn, 4);
-00069   \}
-00070   \textcolor{keywordflow}{if}(menu->type == FLOAT_TYPE) \{
-00071     \textcolor{keywordtype}{float} step = (menu->step_f);
-00072     \textcolor{keywordtype}{float} min = (menu->min_f);
-00073     \textcolor{keywordtype}{float} max = (menu->max_f);
-00074     \textcolor{keywordtype}{float} value = menu->current * step;
-00075     value = value < min ? min : value;
-00076     value = value > max ? max : value;
-00077 
-00078     ftoa_bad(value, rtn, 5);
-00079   \}
-00080 \}
-00081 
-00082 
-00083 \textcolor{keywordtype}{int} display_menu(menu_t *menu)\{
-00084   lcd_print(TOP_ROW, menu->prompt);
-00085   \textcolor{comment}{//Will exit if teleop or autonomous begin. This is extremely important if robot disconnects or resets.}
-00086   \textcolor{keywordflow}{while}(lcd_get_pressed_buttons().middle == RELEASED && !isEnabled()) \{
-00087     \textcolor{keywordtype}{char} val[16];
-00088     calculate_current_display(val, menu);
-00089 
-00090     \textcolor{keywordflow}{if}(lcd_get_pressed_buttons().right == PRESSED) \{
-00091       menu->current += 1;
-00092     \}
-00093     \textcolor{keywordflow}{if}(lcd_get_pressed_buttons().left == PRESSED) \{
-00094       menu->current -= 1;
-00095     \}
-00096     delay(500);
-00097   \}
-00098   \textcolor{keywordflow}{return} menu->current;
-00099 \}
-00100 
-00101 \textcolor{keywordtype}{void} denint_menu(menu_t *menu)\{
-00102   free(menu->prompt);
-00103   \textcolor{keywordflow}{if}(menu->options != NULL) free(menu->options);
-00104   free(menu);
-00105 \}
+00012 \textcolor{keyword}{static} menu_t* create_menu(\textcolor{keyword}{enum} menu_type type, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt) \{
+00013   menu_t* menu = (menu_t*) malloc(\textcolor{keyword}{sizeof}(menu_t));
+00014   \textcolor{keywordflow}{if} (!menu) \{
+00015     error(\textcolor{stringliteral}{"Menu Malloc"});
+00016   \}
+00017   menu->type = type;
+00018   \textcolor{comment}{// Add one for null terminator}
+00019   \textcolor{keywordtype}{size\_t} strlength = strlen(prompt) + 1;
+00020   menu->prompt = (\textcolor{keywordtype}{char}*) malloc(strlength * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+00021   memcpy(menu->prompt, prompt, strlength);
+00022   menu->max = INT\_MAX;
+00023   menu->min = INT\_MIN;
+00024   menu->step = 1;
+00025   menu->min_f = FLT\_MIN;
+00026   menu->max_f = FLT\_MAX;
+00027   menu->step_f = 1;
+00028 
+00029   \textcolor{keywordflow}{return} menu;
+00030 \}
+00031 
+00044 menu_t* init_menu_var(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} nums, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt, \textcolor{keywordtype}{char}* options,...)\{
+00045   menu_t* menu = create_menu(type, prompt);
+00046   va\_list values;
+00047   \textcolor{keywordtype}{char} **options\_array = (\textcolor{keywordtype}{char}**)calloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*), nums);
+00048   va\_start(values, options);
+00049   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < nums; i++)\{
+00050     options\_array[i] = va\_arg(values, \textcolor{keywordtype}{char}*);
+00051   \}
+00052   va\_end(values);
+00053   menu->options = options\_array;
+00054   menu->length = nums;
+00055   \textcolor{keywordflow}{return} menu;
+00056 \}
+00057 
+00071 menu_t* init_menu_int(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{int} min, \textcolor{keywordtype}{int} max, \textcolor{keywordtype}{int} step, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prompt)\{
+00072   menu_t* menu = create_menu(type, prompt);
+00073   menu->min = min;
+00074   menu->max = max;
+00075   menu->step = step;
+00076   \textcolor{keywordflow}{return} menu;
+00077 \}
+00078 
+00092 menu_t* init_menu_float(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{float} min, \textcolor{keywordtype}{float} max, \textcolor{keywordtype}{float} step, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* prompt)\{
+00093   menu_t* menu = create_menu(type, prompt);
+00094   menu->min_f = min;
+00095   menu->max_f = max;
+00096   menu->step_f = step;
+00097   \textcolor{keywordflow}{return} menu;
+00098 \}
+00099 
+00100 \textcolor{keyword}{static} \textcolor{keywordtype}{void} calculate_current_display(\textcolor{keywordtype}{char}* rtn, menu_t *menu) \{
+00101   \textcolor{keywordflow}{if}(menu->type == STRING_TYPE)\{
+00102     \textcolor{comment}{//Ignore warning}
+00103     rtn = (menu->options[menu->current % (menu->length)]);
+00104   \}
+00105   \textcolor{keywordflow}{if}(menu->type == INT_TYPE) \{
+00106     \textcolor{keywordtype}{int} step = (menu->step);
+00107     \textcolor{keywordtype}{int} min = (menu->min);
+00108     \textcolor{keywordtype}{int} max = (menu->max);
+00109     \textcolor{keywordtype}{int} value = menu->current * step;
+00110     value = value < min ? min : value;
+00111     value = value > max ? max : value;
+00112     itoa_bad(value, rtn, 4);
+00113   \}
+00114   \textcolor{keywordflow}{if}(menu->type == FLOAT_TYPE) \{
+00115     \textcolor{keywordtype}{float} step = (menu->step_f);
+00116     \textcolor{keywordtype}{float} min = (menu->min_f);
+00117     \textcolor{keywordtype}{float} max = (menu->max_f);
+00118     \textcolor{keywordtype}{float} value = menu->current * step;
+00119     value = value < min ? min : value;
+00120     value = value > max ? max : value;
+00121 
+00122     ftoa_bad(value, rtn, 5);
+00123   \}
+00124 \}
+00125 
+00136 \textcolor{keywordtype}{int} display_menu(menu_t *menu)\{
+00137   lcd_print(TOP_ROW, menu->prompt);
+00138   \textcolor{comment}{//Will exit if teleop or autonomous begin. This is extremely important if robot disconnects or resets.}
+00139   \textcolor{keywordflow}{while}(lcd_get_pressed_buttons().middle == RELEASED && !isEnabled()) \{
+00140     \textcolor{keywordtype}{char} val[16];
+00141     calculate_current_display(val, menu);
+00142 
+00143     \textcolor{keywordflow}{if}(lcd_get_pressed_buttons().right == PRESSED) \{
+00144       menu->current += 1;
+00145     \}
+00146     \textcolor{keywordflow}{if}(lcd_get_pressed_buttons().left == PRESSED) \{
+00147       menu->current -= 1;
+00148     \}
+00149     delay(500);
+00150   \}
+00151   \textcolor{keywordflow}{return} menu->current;
+00152 \}
+00153 
+00163 \textcolor{keywordtype}{void} denint_menu(menu_t *menu)\{
+00164   free(menu->prompt);
+00165   \textcolor{keywordflow}{if}(menu->options != NULL) free(menu->options);
+00166   free(menu);
+00167 \}
 \end{DoxyCode}

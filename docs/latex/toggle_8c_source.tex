@@ -1,4 +1,4 @@
-\subsection{toggle.\+c}
+\section{toggle.\+c}
 \label{toggle_8c_source}\index{src/toggle.\+c@{src/toggle.\+c}}
 
 \begin{DoxyCode}
@@ -40,51 +40,51 @@
 00050         \textcolor{keywordflow}{switch} (newButton) \{
 00051         \textcolor{keywordflow}{case} 0:
 00052             buttonGroup = 5;
-00053             buttonLocation = JOY_DOWN;
+00053             buttonLocation = JOY\_DOWN;
 00054             \textcolor{keywordflow}{break};
 00055         \textcolor{keywordflow}{case} 1:
 00056             buttonGroup = 5;
-00057             buttonLocation = JOY_UP;
+00057             buttonLocation = JOY\_UP;
 00058             \textcolor{keywordflow}{break};
 00059         \textcolor{keywordflow}{case} 2:
 00060             buttonGroup = 6;
-00061             buttonLocation = JOY_DOWN;
+00061             buttonLocation = JOY\_DOWN;
 00062             \textcolor{keywordflow}{break};
 00063         \textcolor{keywordflow}{case} 3:
 00064             buttonGroup = 6;
-00065             buttonLocation = JOY_UP;
+00065             buttonLocation = JOY\_UP;
 00066             \textcolor{keywordflow}{break};
 00067         \textcolor{keywordflow}{case} 4:
 00068             buttonGroup = 7;
-00069             buttonLocation = JOY_UP;
+00069             buttonLocation = JOY\_UP;
 00070             \textcolor{keywordflow}{break};
 00071         \textcolor{keywordflow}{case} 5:
 00072             buttonGroup = 7;
-00073             buttonLocation = JOY_LEFT;
+00073             buttonLocation = JOY\_LEFT;
 00074             \textcolor{keywordflow}{break};
 00075         \textcolor{keywordflow}{case} 6:
 00076             buttonGroup = 7;
-00077             buttonLocation = JOY_RIGHT;
+00077             buttonLocation = JOY\_RIGHT;
 00078             \textcolor{keywordflow}{break};
 00079         \textcolor{keywordflow}{case} 7:
 00080             buttonGroup = 7;
-00081             buttonLocation = JOY_DOWN;
+00081             buttonLocation = JOY\_DOWN;
 00082             \textcolor{keywordflow}{break};
 00083         \textcolor{keywordflow}{case} 8:
 00084             buttonGroup = 8;
-00085             buttonLocation = JOY_UP;
+00085             buttonLocation = JOY\_UP;
 00086             \textcolor{keywordflow}{break};
 00087         \textcolor{keywordflow}{case} 9:
 00088             buttonGroup = 8;
-00089             buttonLocation = JOY_LEFT;
+00089             buttonLocation = JOY\_LEFT;
 00090             \textcolor{keywordflow}{break};
 00091         \textcolor{keywordflow}{case} 10:
 00092             buttonGroup = 8;
-00093             buttonLocation = JOY_RIGHT;
+00093             buttonLocation = JOY\_RIGHT;
 00094             \textcolor{keywordflow}{break};
 00095         \textcolor{keywordflow}{case} 11:
 00096             buttonGroup = 8;
-00097             buttonLocation = JOY_DOWN;
+00097             buttonLocation = JOY\_DOWN;
 00098             \textcolor{keywordflow}{break};
 00099         \textcolor{keywordflow}{default}:
 00100             \textcolor{keywordflow}{break};
@@ -94,13 +94,13 @@
 00104     \textcolor{keywordflow}{else} \{
 00105         \textcolor{comment}{// button is on LCD}
 00106         \textcolor{keywordflow}{if} (button == LCD_LEFT)
-00107             currentButton = (lcdReadButtons(uart1) == LCD_BTN_LEFT);
+00107             currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_LEFT);
 00108 
 00109         \textcolor{keywordflow}{if} (button == LCD_CENT)
-00110             currentButton = (lcdReadButtons(uart1) == LCD_BTN_CENTER);
+00110             currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_CENTER);
 00111 
 00112         \textcolor{keywordflow}{if} (button == LCD_RIGHT)
-00113             currentButton = (lcdReadButtons(uart1) == LCD_BTN_RIGHT);
+00113             currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_RIGHT);
 00114     \}
 00115     \textcolor{keywordflow}{return} currentButton;
 00116 \}

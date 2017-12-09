@@ -1,7 +1,14 @@
 var NAVTREE =
 [
-  [ "Vex Team 9228A", "index.html", [
+  [ "Vex Team A", "index.html", [
     [ "InTheZoneA", "md__r_e_a_d_m_e.html", null ],
+    [ "Namespaces", null, [
+      [ "Namespace List", "namespaces.html", "namespaces" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ]
+      ] ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -14,7 +21,7 @@ var NAVTREE =
       [ "File List", "files.html", "files" ],
       [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", "globals_func" ],
+        [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
@@ -27,9 +34,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_a_p_i_8h.html",
-"drive_8h.html#a4679d8ea8690999a6c6c7c0cb245c879",
-"motor__ports_8h.html#a6f48bcc6d5fce24caeae0b17954c277a"
+"annotated.html",
+"matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

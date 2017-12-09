@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['eof',['EOF',['../_a_p_i_8h.html#a59adc4c82490d23754cd39c2fb99b0da',1,'API.h']]],
-  ['error',['ERROR',['../log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5',1,'log.h']]]
+  ['front_5fleft_5fime',['FRONT_LEFT_IME',['../auto_8h.html#a7bc3203ebc61f8414788156a8616047c',1,'auto.h']]]
 ];

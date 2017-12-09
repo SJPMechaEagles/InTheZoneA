@@ -1,4 +1,4 @@
-\subsection{src/auto.c File Reference}
+\section{src/auto.c File Reference}
 \label{auto_8c}\index{src/auto.\+c@{src/auto.\+c}}
 
 
@@ -14,14 +14,14 @@ Include dependency graph for auto.\+c\+:\nopagebreak
 \includegraphics[width=350pt]{auto_8c__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ autonomous} ()
 \end{DoxyCompactItemize}
 
 
-\subsubsection{Detailed Description}
+\subsection{Detailed Description}
 File for autonomous code. 
 
 This file should contain the user \doxyref{autonomous()}{p.}{auto_8c_a3c7ca506bbc071fa740de13805b7f376} function and any functions related to it.
@@ -34,11 +34,11 @@ Definition in file \textbf{ auto.\+c}.
 
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{auto_8c_a3c7ca506bbc071fa740de13805b7f376}} 
 \index{auto.\+c@{auto.\+c}!autonomous@{autonomous}}
 \index{autonomous@{autonomous}!auto.\+c@{auto.\+c}}
-\paragraph{autonomous()}
+\subsubsection{autonomous()}
 {\footnotesize\ttfamily void autonomous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Runs the user autonomous code. This function will be started in its own task with the default priority and stack size whenever the robot is enabled via the Field Management System or the V\+EX Competition Switch in the autonomous mode. If the robot is disabled or communications is lost, the autonomous task will be stopped by the kernel. Re-\/enabling the robot will restart the task, not re-\/start it from where it left off.
@@ -51,7 +51,7 @@ Definition at line \textbf{ 30} of file \textbf{ auto.\+c}.
 
 
 
-References \textbf{ analog\+Read()}, \textbf{ B\+O\+TH}, \textbf{ close\+\_\+claw()}, \textbf{ deinitslew()}, \textbf{ delay()}, \textbf{ G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ ime\+Get()}, \textbf{ ime\+Reset()}, \textbf{ init\+\_\+slew()}, \textbf{ L\+I\+F\+T\+ER}, \textbf{ M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ open\+\_\+claw()}, \textbf{ printf()}, \textbf{ set\+\_\+lifter\+\_\+motors()}, and \textbf{ set\+\_\+side\+\_\+speed()}.
+References \textbf{ B\+O\+TH}, \textbf{ close\+\_\+claw()}, \textbf{ deinitslew()}, \textbf{ G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ init\+\_\+slew()}, \textbf{ L\+I\+F\+T\+ER}, \textbf{ M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ open\+\_\+claw()}, \textbf{ set\+\_\+lifter\+\_\+motors()}, and \textbf{ set\+\_\+side\+\_\+speed()}.
 
 
 \begin{DoxyCode}
@@ -104,10 +104,3 @@ References \textbf{ analog\+Read()}, \textbf{ B\+O\+TH}, \textbf{ close\+\_\+cla
 00076   deinitslew();
 00077 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{auto_8c_a3c7ca506bbc071fa740de13805b7f376_cgraph}
-\end{center}
-\end{figure}

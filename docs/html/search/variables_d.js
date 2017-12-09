@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['slew',['slew',['../slew_8c.html#a9dc30877eadbb32ceb6bede027c9a93f',1,'slew.c']]],
-  ['speeds_5fmutex',['speeds_mutex',['../slew_8c.html#a29ddd4c66a52ff81b441d04f9f6d9318',1,'slew.c']]],
-  ['state_5fmatrix',['state_matrix',['../localization_8c.html#a424e677cc0238390cb4a3068a6f3518c',1,'localization.c']]],
-  ['step',['step',['../structmenu__t.html#adc50450bc59ea66a8d67424adc46e24e',1,'menu_t']]],
-  ['step_5ff',['step_f',['../structmenu__t.html#a84cfd9226f6554c63ca9f4b11f94d12d',1,'menu_t']]]
+  ['theta',['theta',['../structlocation.html#a4b415222b4dcf34e49dacd22384be9eb',1,'location::theta()'],['../structencoder__odemtry.html#af1a1e2a2a7a2f89138a8c261a3b82898',1,'encoder_odemtry::theta()']]],
+  ['thresh',['thresh',['../drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581',1,'drive.c']]],
+  ['type',['type',['../structmenu__t.html#a110244ceb7d2a7cba95cfc5758d61c01',1,'menu_t']]]
 ];

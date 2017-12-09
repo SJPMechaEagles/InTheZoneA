@@ -1,4 +1,4 @@
-\subsection{src/drive.c File Reference}
+\section{src/drive.c File Reference}
 \label{drive_8c}\index{src/drive.\+c@{src/drive.\+c}}
 {\ttfamily \#include \char`\"{}drive.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}motor\+\_\+ports.\+h\char`\"{}}\newline
@@ -14,7 +14,7 @@ Include dependency graph for drive.\+c\+:\nopagebreak
 \includegraphics[width=350pt]{drive_8c__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \textbf{ get\+Thresh} ()
@@ -27,18 +27,18 @@ void \textbf{ set\+Thresh} (int t)
 \begin{DoxyCompactList}\small\item\em Sets the deadzone threshhold on the drive. \end{DoxyCompactList}\item 
 void \textbf{ update\+\_\+drive\+\_\+motors} ()
 \begin{DoxyCompactList}\small\item\em Updates the drive motors during teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsubsection*{Variables}
+\subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 static int \textbf{ thresh} = 30
 \end{DoxyCompactItemize}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{drive_8c_a9caa5e772598f9182c9ec84cf8c351ee}} 
 \index{drive.\+c@{drive.\+c}!get\+Thresh@{get\+Thresh}}
 \index{get\+Thresh@{get\+Thresh}!drive.\+c@{drive.\+c}}
-\paragraph{get\+Thresh()}
+\subsubsection{get\+Thresh()}
 {\footnotesize\ttfamily int get\+Thresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -65,7 +65,7 @@ References \textbf{ thresh}.
 \mbox{\label{drive_8c_a6de4fbb9197f2f350c53a9f8bf23a8f1}} 
 \index{drive.\+c@{drive.\+c}!joystick\+Exp@{joystick\+Exp}}
 \index{joystick\+Exp@{joystick\+Exp}!drive.\+c@{drive.\+c}}
-\paragraph{joystick\+Exp()}
+\subsubsection{joystick\+Exp()}
 {\footnotesize\ttfamily static float joystick\+Exp (\begin{DoxyParamCaption}\item[{int}]{joystick\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -113,7 +113,7 @@ References \textbf{ T\+H\+R\+E\+S\+H\+O\+LD}.
 \mbox{\label{drive_8c_a8df41fd50094c065eedc81fc5e6595d1}} 
 \index{drive.\+c@{drive.\+c}!set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}}
 \index{set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}!drive.\+c@{drive.\+c}}
-\paragraph{set\+\_\+side\+\_\+speed()}
+\subsubsection{set\+\_\+side\+\_\+speed()}
 {\footnotesize\ttfamily void set\+\_\+side\+\_\+speed (\begin{DoxyParamCaption}\item[{\textbf{ side\+\_\+t}}]{side,  }\item[{int}]{speed }\end{DoxyParamCaption})}
 
 
@@ -157,24 +157,10 @@ Referenced by \textbf{ autonomous()}, and \textbf{ update\+\_\+drive\+\_\+motors
 00078   \}
 00079 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{drive_8c_a8df41fd50094c065eedc81fc5e6595d1_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{drive_8c_a8df41fd50094c065eedc81fc5e6595d1_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{drive_8c_a53d6e35d53ec3e0b1b1c489d8203f204}} 
 \index{drive.\+c@{drive.\+c}!set\+Thresh@{set\+Thresh}}
 \index{set\+Thresh@{set\+Thresh}!drive.\+c@{drive.\+c}}
-\paragraph{set\+Thresh()}
+\subsubsection{set\+Thresh()}
 {\footnotesize\ttfamily void set\+Thresh (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
 
 
@@ -201,7 +187,7 @@ References \textbf{ thresh}.
 \mbox{\label{drive_8c_a8224a4626a934d30ed587671b7004bf8}} 
 \index{drive.\+c@{drive.\+c}!update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}}
 \index{update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}!drive.\+c@{drive.\+c}}
-\paragraph{update\+\_\+drive\+\_\+motors()}
+\subsubsection{update\+\_\+drive\+\_\+motors()}
 {\footnotesize\ttfamily void update\+\_\+drive\+\_\+motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -220,7 +206,7 @@ Definition at line \textbf{ 34} of file \textbf{ drive.\+c}.
 
 
 
-References \textbf{ get\+\_\+mode()}, \textbf{ joystick\+Get\+Analog()}, \textbf{ L\+E\+FT}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ P\+A\+R\+T\+N\+ER}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ R\+I\+G\+HT}, \textbf{ set\+\_\+side\+\_\+speed()}, \textbf{ thresh}, \textbf{ cord\+::x}, and \textbf{ cord\+::y}.
+References \textbf{ get\+\_\+mode()}, \textbf{ L\+E\+FT}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ P\+A\+R\+T\+N\+ER}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ R\+I\+G\+HT}, \textbf{ set\+\_\+side\+\_\+speed()}, \textbf{ thresh}, \textbf{ cord\+::x}, and \textbf{ cord\+::y}.
 
 
 
@@ -256,27 +242,13 @@ Referenced by \textbf{ operator\+Control()}.
 00059 
 00060 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{drive_8c_a8224a4626a934d30ed587671b7004bf8_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=311pt]{drive_8c_a8224a4626a934d30ed587671b7004bf8_icgraph}
-\end{center}
-\end{figure}
 
 
-\subsubsection{Variable Documentation}
+\subsection{Variable Documentation}
 \mbox{\label{drive_8c_a6cf8bf160a02413bc3d5d18b0294b581}} 
 \index{drive.\+c@{drive.\+c}!thresh@{thresh}}
 \index{thresh@{thresh}!drive.\+c@{drive.\+c}}
-\paragraph{thresh}
+\subsubsection{thresh}
 {\footnotesize\ttfamily int thresh = 30\hspace{0.3cm}{\ttfamily [static]}}
 
 

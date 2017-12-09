@@ -8,231 +8,231 @@
  viewBox="0.00 0.00 415.08 348.02" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 344.0219)">
 <title>assert</title>
-<!-- Node2 -->
+<!-- Node1 -->
 <g id="node1" class="node">
-<title>Node2</title>
+<title>Node1</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-133.5 0,-151.5 43.2314,-151.5 43.2314,-133.5 0,-133.5"/>
 <text text-anchor="middle" x="21.6157" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">assert</text>
 </g>
-<!-- Node3 -->
+<!-- Node2 -->
 <g id="node2" class="node">
-<title>Node3</title>
-<g id="a_node2"><a xlink:href="matrix_8c.html#ae6dab569959c360cf165136a3b625edd" target="_top" xlink:title="returns the covariance of the matrix ">
+<title>Node2</title>
+<g id="a_node2"><a xlink:href="$matrix_8c.html#ae6dab569959c360cf165136a3b625edd" xlink:title="returns the covariance of the matrix ">
 <polygon fill="none" stroke="#000000" points="315.502,-265.5 315.502,-283.5 407.083,-283.5 407.083,-265.5 315.502,-265.5"/>
 <text text-anchor="middle" x="361.2925" y="-271.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">covarianceMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node3 -->
+<!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
-<title>Node2&#45;&gt;Node3</title>
+<title>Node1&#45;&gt;Node2</title>
 <path fill="none" stroke="#191970" d="M27.4642,-161.1954C35.8706,-185.8305 53.2718,-229.5382 79.2314,-259.5 115.8016,-301.7082 129.5573,-313.9834 182.9063,-330.5 223.9172,-343.1968 238.4903,-343.1946 279.502,-330.5 309.422,-321.2386 338.139,-296.8416 352.241,-283.5109"/>
 <polygon fill="#191970" stroke="#191970" points="30.7656,-160.0302 24.3246,-151.618 24.1139,-162.2108 30.7656,-160.0302"/>
 </g>
-<!-- Node4 -->
+<!-- Node3 -->
 <g id="node3" class="node">
-<title>Node4</title>
-<g id="a_node3"><a xlink:href="matrix_8c.html#af49b525d7476c365833db9acd975e3a5" target="_top" xlink:title="performs a diagonial matrix dot product. Given a two matrices (or the same matrix twice) with identic...">
+<title>Node3</title>
+<g id="a_node3"><a xlink:href="$matrix_8c.html#af49b525d7476c365833db9acd975e3a5" xlink:title="performs a diagonial matrix dot product. Given a two matrices (or the same matrix twice) with identic...">
 <polygon fill="none" stroke="#000000" points="182.9063,-302.5 182.9063,-320.5 279.502,-320.5 279.502,-302.5 182.9063,-302.5"/>
 <text text-anchor="middle" x="231.2041" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">dotDiagonalMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node4 -->
+<!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
-<title>Node2&#45;&gt;Node4</title>
+<title>Node1&#45;&gt;Node3</title>
 <path fill="none" stroke="#191970" d="M32.703,-160.3966C43.4018,-176.8437 60.67,-201.3511 79.2314,-219.5 119.709,-259.0778 132.9117,-266.941 182.9063,-293.5 189.2283,-296.8585 196.3156,-299.8758 203.0726,-302.4371"/>
 <polygon fill="#191970" stroke="#191970" points="35.5244,-158.3108 27.2028,-151.7532 29.6187,-162.0689 35.5244,-158.3108"/>
 </g>
-<!-- Node5 -->
+<!-- Node4 -->
 <g id="node4" class="node">
-<title>Node5</title>
-<g id="a_node4"><a xlink:href="matrix_8c.html#a0b568a64e81a56779c2141b424475976" target="_top" xlink:title="returns the matrix dot product. Given a two matrices (or the same matrix twice) with identical widths...">
+<title>Node4</title>
+<g id="a_node4"><a xlink:href="$matrix_8c.html#a0b568a64e81a56779c2141b424475976" xlink:title="returns the matrix dot product. Given a two matrices (or the same matrix twice) with identical widths...">
 <polygon fill="none" stroke="#000000" points="185.4111,-78.5 185.4111,-96.5 276.9971,-96.5 276.9971,-78.5 185.4111,-78.5"/>
 <text text-anchor="middle" x="231.2041" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">dotProductMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node5 -->
+<!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
-<title>Node2&#45;&gt;Node5</title>
+<title>Node1&#45;&gt;Node4</title>
 <path fill="none" stroke="#191970" d="M53.3928,-134.1611C91.9482,-124.0434 156.7198,-107.0461 196.5342,-96.598"/>
 <polygon fill="#191970" stroke="#191970" points="52.04,-130.8975 43.256,-136.8212 53.8169,-137.6682 52.04,-130.8975"/>
 </g>
-<!-- Node6 -->
+<!-- Node5 -->
 <g id="node5" class="node">
-<title>Node6</title>
-<g id="a_node5"><a xlink:href="matrix_8c.html#aa3f5e409b1641373be7cf7284e216d1a" target="_top" xlink:title="Returns an identity matrix of size n by n. ">
+<title>Node5</title>
+<g id="a_node5"><a xlink:href="$matrix_8c.html#aa3f5e409b1641373be7cf7284e216d1a" xlink:title="Returns an identity matrix of size n by n. ">
 <polygon fill="none" stroke="#000000" points="193.751,-41.5 193.751,-59.5 268.6572,-59.5 268.6572,-41.5 193.751,-41.5"/>
 <text text-anchor="middle" x="231.2041" y="-47.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">identityMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node6 -->
+<!-- Node1&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
-<title>Node2&#45;&gt;Node6</title>
+<title>Node1&#45;&gt;Node5</title>
 <path fill="none" stroke="#191970" d="M42.2097,-127.6765C52.914,-120.3903 66.4097,-111.8374 79.2314,-105.5 119.4778,-85.6074 168.7806,-69.0962 200.0979,-59.5102"/>
 <polygon fill="#191970" stroke="#191970" points="40.1605,-124.8383 33.9507,-133.4225 44.1583,-130.5845 40.1605,-124.8383"/>
 </g>
-<!-- Node7 -->
+<!-- Node6 -->
 <g id="node6" class="node">
-<title>Node7</title>
-<g id="a_node6"><a xlink:href="matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c" target="_top" xlink:title="Makes a matrix with a width and height parameters. ">
+<title>Node6</title>
+<g id="a_node6"><a xlink:href="$matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c" xlink:title="Makes a matrix with a width and height parameters. ">
 <polygon fill="none" stroke="#000000" points="79.2314,-152.5 79.2314,-170.5 146.9063,-170.5 146.9063,-152.5 79.2314,-152.5"/>
 <text text-anchor="middle" x="113.0688" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">makeMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node7 -->
+<!-- Node1&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
-<title>Node2&#45;&gt;Node7</title>
+<title>Node1&#45;&gt;Node6</title>
 <path fill="none" stroke="#191970" d="M53.3435,-149.0916C61.6429,-150.8159 70.6234,-152.6817 79.0374,-154.4297"/>
 <polygon fill="#191970" stroke="#191970" points="53.7917,-145.6101 43.2888,-147.0027 52.3678,-152.4638 53.7917,-145.6101"/>
 </g>
-<!-- Node9 -->
+<!-- Node8 -->
 <g id="node8" class="node">
-<title>Node9</title>
-<g id="a_node8"><a xlink:href="matrix_8c.html#ae4babf9b518a2d5d6b12776191e3b7de" target="_top" xlink:title="Given an &quot;m rows by n columns&quot; matrix, return a matrix where each element represents the mean of that...">
+<title>Node8</title>
+<g id="a_node8"><a xlink:href="$matrix_8c.html#ae4babf9b518a2d5d6b12776191e3b7de" xlink:title="Given an &quot;m rows by n columns&quot; matrix, return a matrix where each element represents the mean of that...">
 <polygon fill="none" stroke="#000000" points="197.0859,-265.5 197.0859,-283.5 265.3223,-283.5 265.3223,-265.5 197.0859,-265.5"/>
 <text text-anchor="middle" x="231.2041" y="-271.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">meanMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node9 -->
+<!-- Node1&#45;&gt;Node8 -->
 <g id="edge17" class="edge">
-<title>Node2&#45;&gt;Node9</title>
+<title>Node1&#45;&gt;Node8</title>
 <path fill="none" stroke="#191970" d="M42.7806,-157.6092C73.1662,-179.0523 131.1957,-219.0843 182.9063,-249.5 192.5095,-255.1485 203.5213,-260.9014 212.6028,-265.4623"/>
 <polygon fill="#191970" stroke="#191970" points="44.4585,-154.5085 34.2757,-151.5825 40.4113,-160.2199 44.4585,-154.5085"/>
 </g>
-<!-- Node11 -->
+<!-- Node10 -->
 <g id="node10" class="node">
-<title>Node11</title>
-<g id="a_node10"><a xlink:href="matrix_8c.html#a63ed5c518b34768e9ef8e9d5f7d0b534" target="_top" xlink:title="Given a two matrices, returns the multiplication of the two. ">
+<title>Node10</title>
+<g id="a_node10"><a xlink:href="$matrix_8c.html#a63ed5c518b34768e9ef8e9d5f7d0b534" xlink:title="Given a two matrices, returns the multiplication of the two. ">
 <polygon fill="none" stroke="#000000" points="192.645,-4.5 192.645,-22.5 269.7632,-22.5 269.7632,-4.5 192.645,-4.5"/>
 <text text-anchor="middle" x="231.2041" y="-10.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">multiplyMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node11 -->
+<!-- Node1&#45;&gt;Node10 -->
 <g id="edge18" class="edge">
-<title>Node2&#45;&gt;Node11</title>
+<title>Node1&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M32.849,-124.6221C43.2633,-109.2872 60.0164,-87.5096 79.2314,-73.5 114.0709,-48.0987 161.1148,-31.7091 193.5881,-22.5847"/>
 <polygon fill="#191970" stroke="#191970" points="29.7741,-122.9287 27.2184,-133.2107 35.6282,-126.7666 29.7741,-122.9287"/>
 </g>
-<!-- Node14 -->
+<!-- Node13 -->
 <g id="node13" class="node">
-<title>Node14</title>
-<g id="a_node13"><a xlink:href="matrix_8c.html#acdd57777a972ce339153878fa917db14" target="_top" xlink:title="swaps the rows of a matrix. This method changes the input matrix. Given a matrix, this algorithm will...">
+<title>Node13</title>
+<g id="a_node13"><a xlink:href="$matrix_8c.html#acdd57777a972ce339153878fa917db14" xlink:title="swaps the rows of a matrix. This method changes the input matrix. Given a matrix, this algorithm will...">
 <polygon fill="none" stroke="#000000" points="84.5049,-.5 84.5049,-18.5 141.6328,-18.5 141.6328,-.5 84.5049,-.5"/>
 <text text-anchor="middle" x="113.0688" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">rowSwap</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node14 -->
+<!-- Node1&#45;&gt;Node13 -->
 <g id="edge19" class="edge">
-<title>Node2&#45;&gt;Node14</title>
+<title>Node1&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M28.3454,-123.8509C37.3331,-100.7718 54.9831,-61.1436 79.2314,-33.5 84.2658,-27.7608 90.9324,-22.6596 97.0164,-18.6521"/>
 <polygon fill="#191970" stroke="#191970" points="24.9768,-122.8655 24.7352,-133.4576 31.5294,-125.328 24.9768,-122.8655"/>
 </g>
-<!-- Node7&#45;&gt;Node3 -->
+<!-- Node6&#45;&gt;Node2 -->
 <g id="edge10" class="edge">
-<title>Node7&#45;&gt;Node3</title>
+<title>Node6&#45;&gt;Node2</title>
 <path fill="none" stroke="#191970" d="M129.6656,-177.753C143.0782,-190.1217 162.9479,-206.7883 182.9063,-217.5 226.4501,-240.8701 281.1737,-256.5829 318.4503,-265.4926"/>
 <polygon fill="#191970" stroke="#191970" points="131.8764,-175.0265 122.2058,-170.6988 127.0669,-180.1126 131.8764,-175.0265"/>
 </g>
-<!-- Node7&#45;&gt;Node4 -->
+<!-- Node6&#45;&gt;Node3 -->
 <g id="edge16" class="edge">
-<title>Node7&#45;&gt;Node4</title>
+<title>Node6&#45;&gt;Node3</title>
 <path fill="none" stroke="#191970" d="M118.3329,-180.4746C127.1389,-208.8688 147.473,-262.3942 182.9063,-293.5 187.0756,-297.1602 192.0584,-300.1032 197.2159,-302.4619"/>
 <polygon fill="#191970" stroke="#191970" points="121.6095,-179.211 115.4272,-170.6069 114.8946,-181.1884 121.6095,-179.211"/>
 </g>
-<!-- Node7&#45;&gt;Node5 -->
+<!-- Node6&#45;&gt;Node4 -->
 <g id="edge15" class="edge">
-<title>Node7&#45;&gt;Node5</title>
+<title>Node6&#45;&gt;Node4</title>
 <path fill="none" stroke="#191970" d="M134.9405,-146.4416C138.9692,-143.5402 143.1022,-140.4763 146.9063,-137.5 163.5358,-124.489 164.8271,-117.4074 182.9063,-106.5 189.3098,-102.6366 196.6381,-99.2812 203.6182,-96.5104"/>
 <polygon fill="#191970" stroke="#191970" points="132.6034,-143.8073 126.4562,-152.4364 136.6429,-149.5242 132.6034,-143.8073"/>
 </g>
-<!-- Node7&#45;&gt;Node6 -->
+<!-- Node6&#45;&gt;Node5 -->
 <g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node6</title>
+<title>Node6&#45;&gt;Node5</title>
 <path fill="none" stroke="#191970" d="M122.7203,-143.4159C134.4746,-122.9366 156.1169,-89.7872 182.9063,-69.5 188.2218,-65.4746 194.5,-62.1888 200.7401,-59.5513"/>
 <polygon fill="#191970" stroke="#191970" points="119.5598,-141.898 117.765,-152.3397 125.6796,-145.2963 119.5598,-141.898"/>
 </g>
-<!-- Node8 -->
+<!-- Node7 -->
 <g id="node7" class="node">
-<title>Node8</title>
-<g id="a_node7"><a xlink:href="localization_8c.html#afdd0147de6aa15957e9a125f9cd20578" target="_top" xlink:title="Starts the localization process. ">
+<title>Node7</title>
+<g id="a_node7"><a xlink:href="$localization_8c.html#afdd0147de6aa15957e9a125f9cd20578" xlink:title="Starts the localization process. ">
 <polygon fill="none" stroke="#000000" points="189.2954,-115.5 189.2954,-133.5 273.1128,-133.5 273.1128,-115.5 189.2954,-115.5"/>
 <text text-anchor="middle" x="231.2041" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">init_localization</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node8 -->
+<!-- Node6&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
-<title>Node7&#45;&gt;Node8</title>
+<title>Node6&#45;&gt;Node7</title>
 <path fill="none" stroke="#191970" d="M151.8221,-149.3625C168.2286,-144.2239 187.0161,-138.3397 202.1939,-133.586"/>
 <polygon fill="#191970" stroke="#191970" points="150.4648,-146.1199 141.968,-152.4488 152.557,-152.7999 150.4648,-146.1199"/>
 </g>
-<!-- Node7&#45;&gt;Node9 -->
+<!-- Node6&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
-<title>Node7&#45;&gt;Node9</title>
+<title>Node6&#45;&gt;Node8</title>
 <path fill="none" stroke="#191970" d="M126.6883,-178.7857C132.865,-186.6307 140.2591,-196.0297 146.9063,-204.5 162.9335,-224.9231 162.7845,-234.096 182.9063,-250.5 190.3086,-256.5347 199.4796,-261.5705 207.8347,-265.4455"/>
 <polygon fill="#191970" stroke="#191970" points="129.2737,-176.4116 120.3367,-170.7212 123.7745,-180.7428 129.2737,-176.4116"/>
 </g>
-<!-- Node10 -->
+<!-- Node9 -->
 <g id="node9" class="node">
-<title>Node10</title>
-<g id="a_node9"><a xlink:href="matrix_8c.html#a2936260302742748b0639e8ec71d4d9f" target="_top" xlink:title="returns the transpose matrix. ">
+<title>Node9</title>
+<g id="a_node9"><a xlink:href="$matrix_8c.html#a2936260302742748b0639e8ec71d4d9f" xlink:title="returns the transpose matrix. ">
 <polygon fill="none" stroke="#000000" points="187.6353,-189.5 187.6353,-207.5 274.7729,-207.5 274.7729,-189.5 187.6353,-189.5"/>
 <text text-anchor="middle" x="231.2041" y="-195.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">transposeMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node10 -->
+<!-- Node6&#45;&gt;Node9 -->
 <g id="edge11" class="edge">
-<title>Node7&#45;&gt;Node10</title>
+<title>Node6&#45;&gt;Node9</title>
 <path fill="none" stroke="#191970" d="M151.8221,-173.6375C168.2286,-178.7761 187.0161,-184.6603 202.1939,-189.414"/>
 <polygon fill="#191970" stroke="#191970" points="152.557,-170.2001 141.968,-170.5512 150.4648,-176.8801 152.557,-170.2001"/>
 </g>
-<!-- Node7&#45;&gt;Node11 -->
+<!-- Node6&#45;&gt;Node10 -->
 <g id="edge12" class="edge">
-<title>Node7&#45;&gt;Node11</title>
+<title>Node6&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M118.5444,-142.402C127.5242,-114.3333 147.9649,-61.9784 182.9063,-31.5 187.0872,-27.8531 192.0759,-24.9168 197.2359,-22.5609"/>
 <polygon fill="#191970" stroke="#191970" points="115.1294,-141.6022 115.5671,-152.188 121.8263,-143.6397 115.1294,-141.6022"/>
 </g>
-<!-- Node12 -->
+<!-- Node11 -->
 <g id="node11" class="node">
-<title>Node12</title>
-<g id="a_node11"><a xlink:href="matrix_8c.html#a6b7faa6ba9ee987d0777d9d0bd0e7b32" target="_top" xlink:title="scales a matrix. ">
+<title>Node11</title>
+<g id="a_node11"><a xlink:href="$matrix_8c.html#a6b7faa6ba9ee987d0777d9d0bd0e7b32" xlink:title="scales a matrix. ">
 <polygon fill="none" stroke="#000000" points="197.9209,-152.5 197.9209,-170.5 264.4873,-170.5 264.4873,-152.5 197.9209,-152.5"/>
 <text text-anchor="middle" x="231.2041" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">scaleMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node12 -->
+<!-- Node6&#45;&gt;Node11 -->
 <g id="edge13" class="edge">
-<title>Node7&#45;&gt;Node12</title>
+<title>Node6&#45;&gt;Node11</title>
 <path fill="none" stroke="#191970" d="M156.9668,-161.5C170.4582,-161.5 185.0821,-161.5 197.7548,-161.5"/>
 <polygon fill="#191970" stroke="#191970" points="156.9217,-158.0001 146.9217,-161.5 156.9216,-165.0001 156.9217,-158.0001"/>
 </g>
-<!-- Node9&#45;&gt;Node3 -->
+<!-- Node8&#45;&gt;Node2 -->
 <g id="edge9" class="edge">
-<title>Node9&#45;&gt;Node3</title>
+<title>Node8&#45;&gt;Node2</title>
 <path fill="none" stroke="#191970" d="M275.7341,-274.5C288.4406,-274.5 302.3108,-274.5 315.1134,-274.5"/>
 <polygon fill="#191970" stroke="#191970" points="275.3833,-271.0001 265.3833,-274.5 275.3833,-278.0001 275.3833,-271.0001"/>
 </g>
-<!-- Node13 -->
+<!-- Node12 -->
 <g id="node12" class="node">
-<title>Node13</title>
-<g id="a_node12"><a xlink:href="matrix_8c.html#abbb8d2d20c2dd53a2269d017a336668f" target="_top" xlink:title="Copies a matrix. This function uses scaleMatrix, because scaling matrix by 1 is the same as a copy...">
+<title>Node12</title>
+<g id="a_node12"><a xlink:href="$matrix_8c.html#abbb8d2d20c2dd53a2269d017a336668f" xlink:title="Copies a matrix. This function uses scaleMatrix, because scaling matrix by 1 is the same as a copy...">
 <polygon fill="none" stroke="#000000" points="329.1201,-152.5 329.1201,-170.5 393.4648,-170.5 393.4648,-152.5 329.1201,-152.5"/>
 <text text-anchor="middle" x="361.2925" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">copyMatrix</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node13 -->
+<!-- Node11&#45;&gt;Node12 -->
 <g id="edge14" class="edge">
-<title>Node12&#45;&gt;Node13</title>
+<title>Node11&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M274.7793,-161.5C292.4339,-161.5 312.4653,-161.5 328.8039,-161.5"/>
 <polygon fill="#191970" stroke="#191970" points="274.7051,-158.0001 264.7051,-161.5 274.7051,-165.0001 274.7051,-158.0001"/>
 </g>

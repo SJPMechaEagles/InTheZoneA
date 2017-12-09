@@ -1,4 +1,4 @@
-\subsection{partner.\+c}
+\section{partner.\+c}
 \label{partner_8c_source}\index{src/partner.\+c@{src/partner.\+c}}
 
 \begin{DoxyCode}
@@ -11,9 +11,9 @@
 00007 \}
 00008 
 00009 \textcolor{keywordtype}{void} update_control() \{
-00010   \textcolor{keywordflow}{if}(joystickGetDigital(PARTNER, 7, JOY_LEFT)) \{
+00010   \textcolor{keywordflow}{if}(joystickGetDigital(PARTNER, 7, JOY\_LEFT)) \{
 00011     mode = MAIN_CONTROLLER_MODE;
-00012   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(PARTNER, 7, JOY_RIGHT)) \{
+00012   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(PARTNER, 7, JOY\_RIGHT)) \{
 00013     mode = PARTNER_CONTROLLER_MODE;
 00014   \}
 00015 \}

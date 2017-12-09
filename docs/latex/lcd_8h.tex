@@ -1,4 +1,4 @@
-\subsection{include/lcd.h File Reference}
+\section{include/lcd.h File Reference}
 \label{lcd_8h}\index{include/lcd.\+h@{include/lcd.\+h}}
 
 
@@ -10,7 +10,7 @@ Include dependency graph for lcd.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{lcd_8h__incl}
+\includegraphics[width=152pt]{lcd_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
@@ -20,37 +20,37 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=350pt]{lcd_8h__dep__incl}
 \end{center}
 \end{figure}
-\subsubsection*{Data Structures}
+\subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ lcd\+\_\+buttons}
 \begin{DoxyCompactList}\small\item\em represents the state of the lcd buttons \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsubsection*{Macros}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \textbf{ B\+O\+T\+T\+O\+M\+\_\+\+R\+OW}~2
 \begin{DoxyCompactList}\small\item\em The bottom row on the lcd screen. \end{DoxyCompactList}\item 
 \#define \textbf{ T\+O\+P\+\_\+\+R\+OW}~1
 \begin{DoxyCompactList}\small\item\em The top row on the lcd screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsubsection*{Enumerations}
+\subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum \textbf{ button\+\_\+state} \{ \textbf{ R\+E\+L\+E\+A\+S\+ED} = false, 
 \textbf{ P\+R\+E\+S\+S\+ED} = true
  \}\begin{DoxyCompactList}\small\item\em Represents the state of a button. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
-\subsubsection*{Functions}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ init\+\_\+main\+\_\+lcd} (\textbf{ F\+I\+LE} $\ast$lcd)
+void \textbf{ init\+\_\+main\+\_\+lcd} (F\+I\+LE $\ast$lcd)
 \begin{DoxyCompactList}\small\item\em Initializes the lcd screen. Also will initialize the lcd\+\_\+port var. Must be called before any lcd function can be called. \end{DoxyCompactList}\item 
 void \textbf{ lcd\+\_\+clear} ()
 \begin{DoxyCompactList}\small\item\em Clears the lcd. \end{DoxyCompactList}\item 
 \textbf{ lcd\+\_\+buttons} \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons} ()
 \begin{DoxyCompactList}\small\item\em Returns the pressed buttons. \end{DoxyCompactList}\item 
-void \textbf{ lcd\+\_\+print} (unsigned int \textbf{ line}, const char $\ast$str)
+void \textbf{ lcd\+\_\+print} (unsigned int line, const char $\ast$str)
 \begin{DoxyCompactList}\small\item\em prints a string to a line on the lcd \end{DoxyCompactList}\item 
-void \textbf{ lcd\+\_\+printf} (unsigned int \textbf{ line}, const char $\ast$format\+\_\+str,...)
+void \textbf{ lcd\+\_\+printf} (unsigned int line, const char $\ast$format\+\_\+str,...)
 \begin{DoxyCompactList}\small\item\em prints a formated string to a line on the lcd. Smilar to printf \end{DoxyCompactList}\item 
 void \textbf{ lcd\+\_\+set\+\_\+backlight} (bool state)
 \begin{DoxyCompactList}\small\item\em sets the backlight of the lcd \end{DoxyCompactList}\item 
@@ -58,7 +58,7 @@ void \textbf{ promt\+\_\+confirmation} (const char $\ast$confirm\+\_\+text)
 \begin{DoxyCompactList}\small\item\em Prompts the user to confirm a string. User must press middle button to confirm. Function is not thread safe and will stall a thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Detailed Description}
+\subsection{Detailed Description}
 L\+CD wrapper functions and macros. 
 
 \begin{DoxyAuthor}{Author}
@@ -73,11 +73,11 @@ Definition in file \textbf{ lcd.\+h}.
 
 
 
-\subsubsection{Macro Definition Documentation}
+\subsection{Macro Definition Documentation}
 \mbox{\label{lcd_8h_a7b55e87550874687b3e25a64e1cfda9d}} 
 \index{lcd.\+h@{lcd.\+h}!B\+O\+T\+T\+O\+M\+\_\+\+R\+OW@{B\+O\+T\+T\+O\+M\+\_\+\+R\+OW}}
 \index{B\+O\+T\+T\+O\+M\+\_\+\+R\+OW@{B\+O\+T\+T\+O\+M\+\_\+\+R\+OW}!lcd.\+h@{lcd.\+h}}
-\paragraph{B\+O\+T\+T\+O\+M\+\_\+\+R\+OW}
+\subsubsection{B\+O\+T\+T\+O\+M\+\_\+\+R\+OW}
 {\footnotesize\ttfamily \#define B\+O\+T\+T\+O\+M\+\_\+\+R\+OW~2}
 
 
@@ -101,7 +101,7 @@ Referenced by \textbf{ log\+\_\+info()}.
 \mbox{\label{lcd_8h_a18bab754c6ad16bc35c48333091516c9}} 
 \index{lcd.\+h@{lcd.\+h}!T\+O\+P\+\_\+\+R\+OW@{T\+O\+P\+\_\+\+R\+OW}}
 \index{T\+O\+P\+\_\+\+R\+OW@{T\+O\+P\+\_\+\+R\+OW}!lcd.\+h@{lcd.\+h}}
-\paragraph{T\+O\+P\+\_\+\+R\+OW}
+\subsubsection{T\+O\+P\+\_\+\+R\+OW}
 {\footnotesize\ttfamily \#define T\+O\+P\+\_\+\+R\+OW~1}
 
 
@@ -124,11 +124,11 @@ Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ log\+\_\+info()}.
 
 
 
-\subsubsection{Enumeration Type Documentation}
+\subsection{Enumeration Type Documentation}
 \mbox{\label{lcd_8h_a0bbab92f5605e16a4162b6c5ccc2c29b}} 
 \index{lcd.\+h@{lcd.\+h}!button\+\_\+state@{button\+\_\+state}}
 \index{button\+\_\+state@{button\+\_\+state}!lcd.\+h@{lcd.\+h}}
-\paragraph{button\+\_\+state}
+\subsubsection{button\+\_\+state}
 {\footnotesize\ttfamily enum \textbf{ button\+\_\+state}}
 
 
@@ -166,12 +166,12 @@ Definition at line \textbf{ 36} of file \textbf{ lcd.\+h}.
 \end{DoxyCode}
 
 
-\subsubsection{Function Documentation}
+\subsection{Function Documentation}
 \mbox{\label{lcd_8h_a93b26f37d6b1687ad54c90feedfd29ca}} 
 \index{lcd.\+h@{lcd.\+h}!init\+\_\+main\+\_\+lcd@{init\+\_\+main\+\_\+lcd}}
 \index{init\+\_\+main\+\_\+lcd@{init\+\_\+main\+\_\+lcd}!lcd.\+h@{lcd.\+h}}
-\paragraph{init\+\_\+main\+\_\+lcd()}
-{\footnotesize\ttfamily void init\+\_\+main\+\_\+lcd (\begin{DoxyParamCaption}\item[{\textbf{ F\+I\+LE} $\ast$}]{lcd }\end{DoxyParamCaption})}
+\subsubsection{init\+\_\+main\+\_\+lcd()}
+{\footnotesize\ttfamily void init\+\_\+main\+\_\+lcd (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{lcd }\end{DoxyParamCaption})}
 
 
 
@@ -183,9 +183,9 @@ Initializes the lcd screen. Also will initialize the lcd\+\_\+port var. Must be 
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
-\doxyref{uart1}{p.}{_a_p_i_8h_ad94ac6d5e345a1f794174d9bb7c6f69c} 
+uart1 
 
-\doxyref{uart2}{p.}{_a_p_i_8h_a001e6f2f6c87e1e2bcff741ab586024e} 
+uart2 
 \end{DoxySeeAlso}
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
@@ -199,7 +199,7 @@ Definition at line \textbf{ 60} of file \textbf{ lcd.\+c}.
 
 
 
-References \textbf{ lcd\+\_\+port}, \textbf{ lcd\+Clear()}, and \textbf{ lcd\+Init()}.
+References \textbf{ lcd\+\_\+port}.
 
 
 \begin{DoxyCode}
@@ -209,17 +209,10 @@ References \textbf{ lcd\+\_\+port}, \textbf{ lcd\+Clear()}, and \textbf{ lcd\+In
 00063   lcd_port = lcd;
 00064 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=243pt]{lcd_8h_a93b26f37d6b1687ad54c90feedfd29ca_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{lcd_8h_a35c08b1fa742e650f4873939707b893b}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+clear@{lcd\+\_\+clear}}
 \index{lcd\+\_\+clear@{lcd\+\_\+clear}!lcd.\+h@{lcd.\+h}}
-\paragraph{lcd\+\_\+clear()}
+\subsubsection{lcd\+\_\+clear()}
 {\footnotesize\ttfamily void lcd\+\_\+clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -238,7 +231,7 @@ Definition at line \textbf{ 46} of file \textbf{ lcd.\+c}.
 
 
 
-References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, and \textbf{ lcd\+Clear()}.
+References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
 
 \begin{DoxyCode}
@@ -247,17 +240,10 @@ References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, and \textbf{ lc
 00048   lcdClear(lcd_port);
 00049 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=308pt]{lcd_8h_a35c08b1fa742e650f4873939707b893b_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+get\+\_\+pressed\+\_\+buttons@{lcd\+\_\+get\+\_\+pressed\+\_\+buttons}}
 \index{lcd\+\_\+get\+\_\+pressed\+\_\+buttons@{lcd\+\_\+get\+\_\+pressed\+\_\+buttons}!lcd.\+h@{lcd.\+h}}
-\paragraph{lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}
+\subsubsection{lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}
 {\footnotesize\ttfamily \textbf{ lcd\+\_\+buttons} lcd\+\_\+get\+\_\+pressed\+\_\+buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -282,7 +268,7 @@ Definition at line \textbf{ 27} of file \textbf{ lcd.\+c}.
 
 
 
-References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, \textbf{ lcd\+Read\+Buttons()}, \textbf{ lcd\+\_\+buttons\+::left}, \textbf{ lcd\+\_\+buttons\+::middle}, \textbf{ P\+R\+E\+S\+S\+ED}, \textbf{ R\+E\+L\+E\+A\+S\+ED}, and \textbf{ lcd\+\_\+buttons\+::right}.
+References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, \textbf{ lcd\+\_\+buttons\+::left}, \textbf{ lcd\+\_\+buttons\+::middle}, \textbf{ P\+R\+E\+S\+S\+ED}, \textbf{ R\+E\+L\+E\+A\+S\+ED}, and \textbf{ lcd\+\_\+buttons\+::right}.
 
 
 
@@ -304,24 +290,10 @@ Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ promt\+\_\+confirmatio
 00038   \textcolor{keywordflow}{return} btns;
 00039 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=345pt]{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{lcd_8h_adabd3f7cdda45119604b488caf22bba8}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+print@{lcd\+\_\+print}}
 \index{lcd\+\_\+print@{lcd\+\_\+print}!lcd.\+h@{lcd.\+h}}
-\paragraph{lcd\+\_\+print()}
+\subsubsection{lcd\+\_\+print()}
 {\footnotesize\ttfamily void lcd\+\_\+print (\begin{DoxyParamCaption}\item[{unsigned int}]{line,  }\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
 
 
@@ -347,7 +319,7 @@ Definition at line \textbf{ 73} of file \textbf{ lcd.\+c}.
 
 
 
-References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, and \textbf{ lcd\+Set\+Text()}.
+References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
 
 
@@ -360,24 +332,10 @@ Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ promt\+\_\+confirmatio
 00075   lcdSetText(lcd_port, line, str);
 00076 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=306pt]{lcd_8h_adabd3f7cdda45119604b488caf22bba8_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=271pt]{lcd_8h_adabd3f7cdda45119604b488caf22bba8_icgraph}
-\end{center}
-\end{figure}
 \mbox{\label{lcd_8h_aa0d4ca88701dfecf98796e2028482b69}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+printf@{lcd\+\_\+printf}}
 \index{lcd\+\_\+printf@{lcd\+\_\+printf}!lcd.\+h@{lcd.\+h}}
-\paragraph{lcd\+\_\+printf()}
+\subsubsection{lcd\+\_\+printf()}
 {\footnotesize\ttfamily void lcd\+\_\+printf (\begin{DoxyParamCaption}\item[{unsigned int}]{line,  }\item[{const char $\ast$}]{format\+\_\+str,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
@@ -412,17 +370,10 @@ References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 00087   lcdPrint(lcd_port, line, format\_str);
 00088 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=308pt]{lcd_8h_aa0d4ca88701dfecf98796e2028482b69_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{lcd_8h_a245902a4d48a6d9bd1ab308bf9b7e6b5}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+set\+\_\+backlight@{lcd\+\_\+set\+\_\+backlight}}
 \index{lcd\+\_\+set\+\_\+backlight@{lcd\+\_\+set\+\_\+backlight}!lcd.\+h@{lcd.\+h}}
-\paragraph{lcd\+\_\+set\+\_\+backlight()}
+\subsubsection{lcd\+\_\+set\+\_\+backlight()}
 {\footnotesize\ttfamily void lcd\+\_\+set\+\_\+backlight (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
 
 
@@ -446,7 +397,7 @@ Definition at line \textbf{ 96} of file \textbf{ lcd.\+c}.
 
 
 
-References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, and \textbf{ lcd\+Set\+Backlight()}.
+References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
 
 \begin{DoxyCode}
@@ -455,17 +406,10 @@ References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, and \textbf{ lc
 00098   lcdSetBacklight(lcd_port, state);
 00099 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{lcd_8h_a245902a4d48a6d9bd1ab308bf9b7e6b5_cgraph}
-\end{center}
-\end{figure}
 \mbox{\label{lcd_8h_a99f4683e1990edf624ab216bf327cba4}} 
 \index{lcd.\+h@{lcd.\+h}!promt\+\_\+confirmation@{promt\+\_\+confirmation}}
 \index{promt\+\_\+confirmation@{promt\+\_\+confirmation}!lcd.\+h@{lcd.\+h}}
-\paragraph{promt\+\_\+confirmation()}
+\subsubsection{promt\+\_\+confirmation()}
 {\footnotesize\ttfamily void promt\+\_\+confirmation (\begin{DoxyParamCaption}\item[{const char $\ast$}]{confirm\+\_\+text }\end{DoxyParamCaption})}
 
 
@@ -489,7 +433,7 @@ Definition at line \textbf{ 110} of file \textbf{ lcd.\+c}.
 
 
 
-References \textbf{ delay()}, \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, and \textbf{ P\+R\+E\+S\+S\+ED}.
+References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, and \textbf{ P\+R\+E\+S\+S\+ED}.
 
 
 \begin{DoxyCode}
@@ -501,10 +445,3 @@ References \textbf{ delay()}, \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+get
 00115   \}
 00116 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{lcd_8h_a99f4683e1990edf624ab216bf327cba4_cgraph}
-\end{center}
-\end{figure}

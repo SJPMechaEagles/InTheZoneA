@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['goal_5fheight',['GOAL_HEIGHT',['../auto_8h.html#a83cf08759ac4ffc3ea6e3b7f9c406b3c',1,'auto.h']]]
+  ['height',['HEIGHT',['../lifter_8h.html#aed89bd71aee8be823e8a20ec4e093c1e',1,'lifter.h']]]
 ];
