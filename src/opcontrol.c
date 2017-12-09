@@ -12,6 +12,7 @@
 
 #include "main.h"
 #include "slew.h"
+#include "drive.h"
 
 /**
  * Runs the user operator control code. This function will be started in its own task with the
@@ -28,11 +29,12 @@
  * the scheduler is operational. However, proper use of delay() or taskDelayUntil() is highly
  * recommended to give other tasks (including system tasks such as updating LCDs) time to run.
  *
- * This task should never exit; it should end with some kind of infinite loop, even if empty.
+ * This task should never exit; its should end with some kind of infinite loop, even if empty.
  */
 void operatorControl() {
+	delay(1000);
 	while (1) {
-		set_motor_slew(2, 100);
+		update_drive_motors();
 		delay(20);
 	}
 }

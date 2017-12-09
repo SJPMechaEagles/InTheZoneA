@@ -13,6 +13,7 @@
 #include <limits.h>
 #include <float.h>
 #include <vlib.h>
+//#include <stdlib.h>
 #include "log.h"
 
 /**

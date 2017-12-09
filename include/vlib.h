@@ -30,7 +30,7 @@ void reverse(char *str, int len);
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
-int itoa(int a, char *buffer, int digits);
+int itoaa(int a, char *buffer, int digits);
 
 /**
 * @brief converts a float to string.
@@ -38,7 +38,7 @@ int itoa(int a, char *buffer, int digits);
 * @param buffer the string the float will be written to.
 * @param precision digits after the decimal to write
 **/
-void ftoa(float a, char *buffer, int precision);
+void ftoaa(float a, char *buffer, int precision);
 
 void *calloc_real(size_t elements, size_t size);
 

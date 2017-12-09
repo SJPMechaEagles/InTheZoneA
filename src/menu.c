@@ -62,7 +62,7 @@ static void calculate_current_display(char* rtn, menu_t *menu) {
     int value = menu->current * step;
     value = value < min ? min : value;
     value = value > max ? max : value;
-    itoa(value, rtn, 4);
+    itoaa(value, rtn, 4);
   }
   if(menu->type == FLOAT_TYPE) {
     float step = (menu->step_f);
@@ -72,7 +72,7 @@ static void calculate_current_display(char* rtn, menu_t *menu) {
     value = value < min ? min : value;
     value = value > max ? max : value;
 
-    ftoa(value, rtn, 5);
+    ftoaa(value, rtn, 5);
   }
 }
 

@@ -44,7 +44,7 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
-  setTeamName("9228A");
+  /*setTeamName("9228A");
   init_slew();
   init_main_lcd(uart1);
   init_error(true, uart2);
@@ -58,7 +58,7 @@ void initialize() {
   }
 
   if(powerLevelBackup()/1000 == 0) {
-    promt_confirmation("Check Backup");
-    warning("Checkbackup bat");
-  }
+    promt_confirmation("Check Backup");s
+    warning("Checkbackup bat");s
+  }*/
 }

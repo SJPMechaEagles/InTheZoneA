@@ -10,7 +10,7 @@ void reverse(char *str, int len) {
     }
 }
 
-int itoa(int a, char *buffer, int digits) {
+int itoaa(int a, char *buffer, int digits) {
   int i = 0;
    while (a) {
        buffer[i++] = (a%10) + '0';
@@ -27,7 +27,7 @@ int itoa(int a, char *buffer, int digits) {
    return i;
 }
 
-void ftoa(float a, char *buffer, int precision) {
+void ftoaa(float a, char *buffer, int precision) {
   // Extract integer part
   int ipart = (int)a;
 
