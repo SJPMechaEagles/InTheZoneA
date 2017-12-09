@@ -30,7 +30,11 @@ void reverse(char *str, int len);
 * @author Chris Jerrett, Christian DeSimone
 * @date 9/9/2017
 **/
+<<<<<<< HEAD
+int itoaa(int a, char *buffer, int digits);
+=======
 int itoa_bad(int a, char *buffer, int digits);
+>>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
 
 /**
 * @brief converts a float to string.
@@ -40,6 +44,12 @@ int itoa_bad(int a, char *buffer, int digits);
 * @author Christian DeSimone
 * @date 9/26/2017
 **/
+<<<<<<< HEAD
+void ftoaa(float a, char *buffer, int precision);
+
+void *calloc_real(size_t elements, size_t size);
+=======
 void ftoa_bad(float a, char *buffer, int precision);
+>>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
 
 #endif

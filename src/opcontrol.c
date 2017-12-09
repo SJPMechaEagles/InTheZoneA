@@ -13,12 +13,15 @@
 #include "main.h"
 #include "slew.h"
 #include "drive.h"
+<<<<<<< HEAD
+=======
 #include "lifter.h"
 #include "localization.h"
 #include "claw.h"
 #include "mobile_goal_intake.h"
 #include "vmath.h"
 #include "lifter.h"
+>>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
 
 /**
  * Runs the user operator control code. This function will be started in its own task with the
@@ -35,9 +38,15 @@
  * the scheduler is operational. However, proper use of delay() or taskDelayUntil() is highly
  * recommended to give other tasks (including system tasks such as updating LCDs) time to run.
  *
- * This task should never exit; it should end with some kind of infinite loop, even if empty.
+ * This task should never exit; its should end with some kind of infinite loop, even if empty.
  */
 void operatorControl() {
+<<<<<<< HEAD
+	delay(1000);
+	while (1) {
+		update_drive_motors();
+		delay(20);
+=======
 	init_slew();
 	delay(10);
 	while (1) {
@@ -47,5 +56,6 @@ void operatorControl() {
 		updateIntake();
 		update_control();
 		delay(25);
+>>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
 	}
 }

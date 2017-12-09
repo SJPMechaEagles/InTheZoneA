@@ -45,7 +45,27 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
+<<<<<<< HEAD
+  /*setTeamName("9228A");
+  init_slew();
+  init_main_lcd(uart1);
+  init_error(true, uart2);
+
+  menu_t *t = init_menu_int(INT_TYPE, -1, 100, 1, "Times to kill");
+  display_menu(t);
+
+  if(!init_encoders()) {
+    promt_confirmation("Check IME");
+    warning("CHECK IME");
+  }
+
+  if(powerLevelBackup()/1000 == 0) {
+    promt_confirmation("Check Backup");s
+    warning("Checkbackup bat");s
+  }*/
+=======
   int c = imeInitializeAll();
   setTeamName("9228A");
   printf("Counts : %d\n", c);
+>>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
 }

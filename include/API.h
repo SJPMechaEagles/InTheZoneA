@@ -7,8 +7,10 @@
  * include main.h instead of referencing API.h by name, to better handle any nomenclature
  * changes to this file or its contents.
  *
- * Copyright (c) 2011-2016, Purdue University ACM SIGBots.
+ * Copyright (c) 2011-2017, Purdue University ACM SIGBots.
  * All rights reserved.
+ *
+ * PROS Kernel v.2.12.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -752,7 +754,11 @@ typedef int PROS_FILE;
 
 #ifndef FILE
 /**
+<<<<<<< HEAD
+ * For convenience, FILE is defined as PROS_FILE if it wasn't already defined. This provides 
+=======
  * For convenience, FILE is defined as PROS_FILE if it wasn't already defined. This provides
+>>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
  * backwards compatability with PROS, but also allows libraries such as newlib to be incorporated
  * into PROS projects. If you're not using C++/newlib, you can disregard this and just use FILE.
  */
