@@ -45,27 +45,11 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
-
-  /*setTeamName("9228A");
-  init_slew();
   init_main_lcd(uart1);
-  init_error(true, uart2);
-
-  menu_t *t = init_menu_int(INT_TYPE, -1, 100, 1, "Times to kill");
+  menu_t *t = init_menu_int(INT_TYPE, 0, 1000, 500, "const char *prompt");//, "Kill Gavin?", 3, "yes", "hell yes", "absolutely");
   display_menu(t);
 
-  if(!init_encoders()) {
-    promt_confirmation("Check IME");
-    warning("CHECK IME");
-  }
-
-  if(powerLevelBackup()/1000 == 0) {
-    promt_confirmation("Check Backup");s
-    warning("Checkbackup bat");s
-  }*/
-
-  int c = imeInitializeAll();
   setTeamName("9228A");
-  printf("Counts : %d\n", c);
-
+  printf("TEST\n");
+  delay(50000);
 }

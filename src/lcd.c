@@ -10,11 +10,12 @@ static FILE *lcd_port = NULL;
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
- static void lcd_assert() {
-  if(lcd_port != NULL) {
+ static bool lcd_assert() {
+  if(lcd_port == NULL) {
     printf("LCD NULL!");
-    exit(1);
+    return false;
   }
+  return true;
 }
 
 /**
@@ -58,9 +59,9 @@ void lcd_clear() {
 * @date 9/9/2017
 **/
 void init_main_lcd(FILE *lcd) {
-  lcdInit(lcd);
-  lcdClear(lcd);
   lcd_port = lcd;
+  lcdInit(lcd);
+  lcd_clear();
 }
 
 /**

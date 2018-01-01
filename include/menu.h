@@ -168,7 +168,7 @@ static menu_t* create_menu(enum menu_type type, const char *prompt);
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-menu_t* init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char* options,...);
+menu_t* init_menu_var(enum menu_type type, const char *prompt, int nums,...);
 
 /**
 * @brief Creates a menu context, but does not display.

@@ -25,6 +25,7 @@ static menu_t* create_menu(enum menu_type type, const char *prompt) {
   menu->min_f = FLT_MIN;
   menu->max_f = FLT_MAX;
   menu->step_f = 1;
+  menu->current = 0;
 
   return menu;
 }
@@ -41,15 +42,16 @@ static menu_t* create_menu(enum menu_type type, const char *prompt) {
 * @author Chris Jerrett
 * @date 9/8/17
 **/
-menu_t* init_menu_var(enum menu_type type, unsigned int nums, const char *prompt, char* options,...){
+menu_t* init_menu_var(enum menu_type type, const char *prompt, int nums,...){
   menu_t* menu = create_menu(type, prompt);
-  va_list values;
+  va_list ap;
   char **options_array = (char**)calloc(sizeof(char*), nums);
-  va_start(values, options);
-  for(unsigned int i = 0; i < nums; i++){
-    options_array[i] = va_arg(values, char*);
+  va_start(ap, nums);
+  for(int i = 0; i < nums; i++){
+    options_array[i] = (char*) va_arg(ap, char*);
+    printf("%s\n", options_array[i]);
   }
-  va_end(values);
+  va_end(ap);
   menu->options = options_array;
   menu->length = nums;
   return menu;
@@ -73,6 +75,7 @@ menu_t* init_menu_int(enum menu_type type, int min, int max, int step, const cha
   menu->min = min;
   menu->max = max;
   menu->step = step;
+  menu->current = 0;
   return menu;
 }
 
@@ -99,18 +102,25 @@ menu_t* init_menu_float(enum menu_type type, float min, float max, float step, c
 
 static void calculate_current_display(char* rtn, menu_t *menu) {
   if(menu->type == STRING_TYPE){
-    //Ignore warning
-    rtn = (menu->options[menu->current % (menu->length)]);
+  int index = menu->current % menu->length;
+  sprintf(rtn, "%s", menu->options[index]);
+  printf("%s\n", rtn);
+  return;
   }
   if(menu->type == INT_TYPE) {
     int step = (menu->step);
     int min = (menu->min);
     int max = (menu->max);
     int value = menu->current * step;
-    value = value < min ? min : value;
-    value = value > max ? max : value;
-
-    itoaa(value, rtn, 4);
+    if(value < min) {
+      value = min;
+      menu->current++;
+    }
+    if(value > max) {
+      value = max;
+      menu->current--;
+    }
+    sprintf(rtn, "%d", value);
   }
   if(menu->type == FLOAT_TYPE) {
     float step = (menu->step_f);
@@ -122,7 +132,6 @@ static void calculate_current_display(char* rtn, menu_t *menu) {
 
 
     ftoaa(value, rtn, 5);
-
   }
 }
 
@@ -138,9 +147,10 @@ static void calculate_current_display(char* rtn, menu_t *menu) {
 **/
 int display_menu(menu_t *menu){
   lcd_print(TOP_ROW, menu->prompt);
+  printf("printed prompt\n");
   //Will exit if teleop or autonomous begin. This is extremely important if robot disconnects or resets.
-  while(lcd_get_pressed_buttons().middle == RELEASED && !isEnabled()) {
-    char val[16];
+  char val[16];
+  while(lcd_get_pressed_buttons().middle == RELEASED) {
     calculate_current_display(val, menu);
 
     if(lcd_get_pressed_buttons().right == PRESSED) {
@@ -149,8 +159,18 @@ int display_menu(menu_t *menu){
     if(lcd_get_pressed_buttons().left == PRESSED) {
       menu->current -= 1;
     }
-    delay(500);
+    printf("%s\n", val);
+    printf("%d\n",menu->current);
+    lcd_print(2, val);
+    delay(300);
   }
+  printf("%d\n", menu->current);
+  printf("return\n");
+  lcd_clear();
+  lcd_print(1, "Thk Cm Agn");
+  lcd_print(2, val);
+  delay(800);
+  lcd_clear();
   return menu->current;
 }
 

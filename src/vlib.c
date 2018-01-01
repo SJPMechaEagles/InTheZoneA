@@ -52,7 +52,7 @@ int itoaa(int a, char *buffer, int digits) {
 * @author Christian DeSimone
 * @date 9/26/2017
 **/
-void ftoa(float a, char *buffer, int precision) {
+void ftoaa(float a, char *buffer, int precision) {
 
   // Extract integer part
   int ipart = (int)a;
