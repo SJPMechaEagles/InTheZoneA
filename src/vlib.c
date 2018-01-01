@@ -61,7 +61,7 @@ void ftoa(float a, char *buffer, int precision) {
   float fpart = a - (float)ipart;
 
   // convert integer part to string
-  int i = itoa_bad(ipart, buffer, 0);
+  int i = itoaa(ipart, buffer, 0);
 
   // check for display option after point
   if(precision != 0) {
@@ -72,6 +72,6 @@ void ftoa(float a, char *buffer, int precision) {
     // to handle cases like 233.007
     fpart = fpart * pow(10, precision);
 
-    itoa_bad((int)fpart, buffer + i + 1, precision);
+    itoaa((int)fpart, buffer + i + 1, precision);
   }
 }
