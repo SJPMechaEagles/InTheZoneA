@@ -7,10 +7,8 @@
  * include main.h instead of referencing API.h by name, to better handle any nomenclature
  * changes to this file or its contents.
  *
- * Copyright (c) 2011-2017, Purdue University ACM SIGBots.
+ * Copyright (c) 2011-2016, Purdue University ACM SIGBots.
  * All rights reserved.
- *
- * PROS Kernel v.2.12.0
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
