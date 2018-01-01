@@ -754,11 +754,7 @@ typedef int PROS_FILE;
 
 #ifndef FILE
 /**
-<<<<<<< HEAD
- * For convenience, FILE is defined as PROS_FILE if it wasn't already defined. This provides 
-=======
  * For convenience, FILE is defined as PROS_FILE if it wasn't already defined. This provides
->>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
  * backwards compatability with PROS, but also allows libraries such as newlib to be incorporated
  * into PROS projects. If you're not using C++/newlib, you can disregard this and just use FILE.
  */

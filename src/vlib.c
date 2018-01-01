@@ -17,9 +17,7 @@ void reverse(char *str, int len) {
     }
 }
 
-<<<<<<< HEAD
-int itoaa(int a, char *buffer, int digits) {
-=======
+
 /**
 * @brief converts a int to string.
 * @param a the integer
@@ -29,8 +27,7 @@ int itoaa(int a, char *buffer, int digits) {
 * @author Chris Jerrett, Christian DeSimone
 * @date 9/9/2017
 **/
-int itoa_bad(int a, char *buffer, int digits) {
->>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
+int itoaa(int a, char *buffer, int digits) {
   int i = 0;
    while (a) {
        buffer[i++] = (a%10) + '0';
@@ -47,9 +44,6 @@ int itoa_bad(int a, char *buffer, int digits) {
    return i;
 }
 
-<<<<<<< HEAD
-void ftoaa(float a, char *buffer, int precision) {
-=======
 /**
 * @brief converts a float to string.
 * @param a the float
@@ -58,12 +52,8 @@ void ftoaa(float a, char *buffer, int precision) {
 * @author Christian DeSimone
 * @date 9/26/2017
 **/
-<<<<<<< HEAD
 void ftoa(float a, char *buffer, int precision) {
-=======
-void ftoa_bad(float a, char *buffer, int precision) {
->>>>>>> ded3f5b4ae2b95c32256269a5d5319f4c4e5d2e2
->>>>>>> refs/remotes/origin/master
+
   // Extract integer part
   int ipart = (int)a;
 
