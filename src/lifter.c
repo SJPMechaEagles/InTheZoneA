@@ -1,15 +1,26 @@
 #include "lifter.h"
+#include "log.h"
 
 /**
-* @brief Sets the lifter motors to the given value
+* @brief Sets the secondary lifter motors to the given value
+*
+* @param v value for the lifter motor. Between -128 - 127, any values outside are clamped.
+* @author Chris Jerrett
+* @date 1/6/2018
+**/
+void set_secondary_lifter_motors(const int v) {
+  set_motor_immediate(MOTOR_SECONDARY_LIFTER, v);
+}
+
+/**
+* @brief Sets the main lifter motors to the given value
 *
 * @param v value for the lifter motor. Between -128 - 127, any values outside are clamped.
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
-void set_lifter_motors(const int v) {
-  set_motor_immediate(MOTOR_LIFT_TOP_RIGHT, -v);
-  set_motor_immediate(MOTOR_LIFT_TOP_LEFT, -v);
+void set_main_lifter_motors(const int v) {
+  set_motor_immediate(MOTOR_LIFT, v);
 }
 
 /**
@@ -24,23 +35,43 @@ void set_lifter_pos(int pos) {
 }
 
 /**
-* @brief Raises the lifter
+* @brief Raises the main lifter
 *
 * @author Christian DeSimone
 * @date 9/12/2017
 **/
-void raise_lifter(){
-  set_lifter_motors(MAX_SPEED);
+void raise_main_lifter(){
+  set_main_lifter_motors(MAX_SPEED);
 }
 
 /**
-* @brief Lowers the lifter
+* @brief Lowers the main lifter
 *
 * @author Christian DeSimone
 * @date 9/12/2017
 **/
-void lower_lifter(){
-  set_lifter_motors(MIN_SPEED);
+void lower_main_lifter(){
+  set_main_lifter_motors(MIN_SPEED);
+}
+
+/**
+* @brief Raises the main lifter
+*
+* @author Christian DeSimone
+* @date 9/12/2017
+**/
+void raise_secondary_lifter(){
+  set_secondary_lifter_motors(MAX_SPEED);
+}
+
+/**
+* @brief Lowers the secondary lifter
+*
+* @author Christian DeSimone
+* @date 9/12/2017
+**/
+void lower_secondary_lifter(){
+  set_secondary_lifter_motors(MIN_SPEED);
 }
 
 /**
@@ -50,69 +81,24 @@ void lower_lifter(){
 * @date 9/9/2017
 **/
 void update_lifter() {
-  //Establish variables to be used repeatedly
-  static bool changed = true;
-  static unsigned int target = 0;
-  static bool first_run = true;
-  //Set the target to the current height for the first run
-  if(first_run) {
-    target = getLifterTicks();
-    first_run = false;
+  if(joystickGetDigital(LIFTER_DOWN) && analogRead(MAIN_LIFTER_POT) < MAIN_LIFTER_MIN_HEIGHT) {
+    set_secondary_lifter_motors(MAX_SPEED);
+    set_main_lifter_motors(MIN_SPEED);
+  } else if(joystickGetDigital(LIFTER_DOWN) && analogRead(MAIN_LIFTER_POT) >= MAIN_LIFTER_MIN_HEIGHT) {
+    set_secondary_lifter_motors(MAX_SPEED);
+    set_main_lifter_motors(0);
+  } else if(joystickGetDigital(LIFTER_UP) && analogRead(SECONDARY_LIFTER_POT_PORT) < SECONDARY_LIFTER_MAX_HEIGHT) {
+    set_secondary_lifter_motors(MIN_SPEED);
+    set_main_lifter_motors(0);
+  } else if(joystickGetDigital(LIFTER_UP) && analogRead(SECONDARY_LIFTER_POT_PORT) >= SECONDARY_LIFTER_MAX_HEIGHT) {
+    set_main_lifter_motors(MAX_SPEED);
+    set_secondary_lifter_motors(MIN_SPEED);
+  } else {
+    set_secondary_lifter_motors(0);
+    set_main_lifter_motors(0);
   }
-  //Establish the error as 0
-  static int last_error = 0;
-  static long long i = 0;
-  //Check the buttons on the controller indicated by the controller mode
-  if((joystickGetDigital(LIFTER_UP) && get_mode() == MAIN_CONTROLLER_MODE)
-   || (joystickGetDigital(LIFTER_UP_PARTNER) && get_mode() == PARTNER_CONTROLLER_MODE)){
-    changed = true;
-    i = 0;
-    //Change the target and start the motion
-    target = getLifterTicks() + 200;
-    lower_lifter();
-  }
-  else if((joystickGetDigital(LIFTER_DOWN) && get_mode() == MAIN_CONTROLLER_MODE)
-   || (joystickGetDigital(LIFTER_DOWN_PARTNER) && get_mode() == PARTNER_CONTROLLER_MODE)) {
-    changed = true;
-    i = 0;
-    //Change the target and start the motion
-    target = getLifterTicks();
-    raise_lifter();
-  }
-  //Raise the lifter to the driver load height
-  else if(joystickGetDigital(LIFTER_DRIVER_LOAD) && get_mode() == MAIN_CONTROLLER_MODE){
-    changed = true;
-    i = 0;
-    int k = 0;
-    if(getLifterTicks() < 1270){
-      lower_lifter();
-
-    }
-    if(getLifterTicks() > 1230){
-      raise_lifter();
-    }
-    target = 1250;
-  }
-  //Change lifter motor values based upon the target
-  else {
-    //Don't if we are using the partner controller
-    if(get_mode() == PARTNER_CONTROLLER_MODE){
-      set_lifter_motors(0);
-      return;
-    }
-    //Define the proportion, derivative, and integral to be used in the motor speed
-    int p = getLifterTicks() - target;
-    int d = p - last_error;
-    last_error = p;
-    i += p;
-    int motor = LIFTER_P * p + LIFTER_D * d + LIFTER_I * i;
-    //Avoid wasting battery if value is insignificant
-    if (motor < THRESHOLD) {
-        set_lifter_motors(0);
-    } else {
-        set_lifter_motors(motor);
-    }
-
+  if(joystickGetDigital(LIFTER_DOWN) && analogRead(SECONDARY_LIFTER_POT_PORT) < SECONDARY_LIFTER_MIN_HEIGHT) {
+    set_secondary_lifter_motors(0);
   }
 }
 

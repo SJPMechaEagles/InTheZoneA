@@ -12,38 +12,33 @@
 00013 \textcolor{preprocessor}{#include "motor_ports.h"}
 00014 \textcolor{preprocessor}{#include "sensor_ports.h"}
 00015 
-00020 \textcolor{preprocessor}{#define CLAW\_P .1}
+00020 \textcolor{preprocessor}{#define MAX\_CLAW\_SPEED 127}
 00021 
-00025 \textcolor{preprocessor}{#define CLAW\_D .1}
+00025 \textcolor{preprocessor}{#define MIN\_CLAW\_SPEED -127}
 00026 
-00030 \textcolor{preprocessor}{#define CLAW\_I 0}
-00031 
-00036 \textcolor{preprocessor}{#define MAX\_CLAW\_SPEED 50}
-00037 
-00041 \textcolor{preprocessor}{#define MIN\_CLAW\_SPEED -50}
-00042 
-00047 \textcolor{preprocessor}{#define CLAW\_CLOSE MASTER, 6, JOY\_UP}
-00048 
-00053 \textcolor{preprocessor}{#define CLAW\_OPEN MASTER, 6, JOY\_DOWN}
-00054 
-00059 \textcolor{preprocessor}{#define CLAW\_CLOSE\_VAL 3000}
-00060 
-00065 \textcolor{preprocessor}{#define CLAW\_OPEN\_VAL 1500}
-00066 
-00071 \textcolor{keywordtype}{void} update_claw();
-00072 
-00077 \textcolor{keywordtype}{void} set_claw_motor(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v);
-00078 
-00083 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getClawTicks();
-00084 
-00089 \textcolor{keywordtype}{void} open_claw();
+00031 \textcolor{preprocessor}{#define CLAW\_CLOSE MASTER, 6, JOY\_UP}
+00032 
+00037 \textcolor{preprocessor}{#define CLAW\_OPEN MASTER, 6, JOY\_DOWN}
+00038 
+00043 \textcolor{preprocessor}{#define CLAW\_CLOSE\_VAL 3000}
+00044 
+00049 \textcolor{preprocessor}{#define CLAW\_OPEN\_VAL 1500}
+00050 
+00055 \textcolor{keywordtype}{void} update_claw();
+00056 
+00061 \textcolor{keywordtype}{void} set_claw_motor(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v);
+00062 
+00067 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getClawTicks();
+00068 
+00073 \textcolor{keywordtype}{void} open_claw();
+00074 
+00079 \textcolor{keywordtype}{void} close_claw();
+00080 
+00085 \textcolor{keyword}{enum} claw_state \{
+00086   CLAW_OPEN_STATE,
+00087   CLAW_CLOSE_STATE,
+00088   CLAW_NEUTRAL_STATE
+00089 \};
 00090 
-00095 \textcolor{keywordtype}{void} close_claw();
-00096 
-00101 \textcolor{keyword}{enum} claw_state \{
-00102   CLAW_OPEN_STATE,
-00103   CLAW_CLOSE_STATE
-00104 \};
-00105 
-00106 \textcolor{preprocessor}{#endif}
+00091 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

@@ -9,10 +9,8 @@ var motor__ports_8h =
     [ "MOTOR_BACK_RIGHT", "motor__ports_8h.html#ad85c5f3d6a2d00789c8c67b960c46c2b", null ],
     [ "MOTOR_FRONT_LEFT", "motor__ports_8h.html#a743b47e164fb23b30f4f2f228db0b338", null ],
     [ "MOTOR_FRONT_RIGHT", "motor__ports_8h.html#a6f48bcc6d5fce24caeae0b17954c277a", null ],
-    [ "MOTOR_LIFT_BOTTOM_LEFT", "motor__ports_8h.html#a6d665064ab6c8be6066d33461ac45cc8", null ],
-    [ "MOTOR_LIFT_BOTTOM_RIGHT", "motor__ports_8h.html#a6a3fabdaeec7212af915f47f57177fc5", null ],
-    [ "MOTOR_LIFT_TOP_LEFT", "motor__ports_8h.html#afad261ce61b31db241510a6784798f0c", null ],
-    [ "MOTOR_LIFT_TOP_RIGHT", "motor__ports_8h.html#add81e70dc9a7ed2aa5d86e807fb27b02", null ],
+    [ "MOTOR_LIFT", "motor__ports_8h.html#a0cbefbf749abca03437a97c9ca45863a", null ],
     [ "MOTOR_MIDDLE_LEFT", "motor__ports_8h.html#ac7dd3397e2f909b4dc11f2a2e6f28800", null ],
-    [ "MOTOR_MIDDLE_RIGHT", "motor__ports_8h.html#a0da3f792b8f28ab09b339295859d8334", null ]
+    [ "MOTOR_MIDDLE_RIGHT", "motor__ports_8h.html#a0da3f792b8f28ab09b339295859d8334", null ],
+    [ "MOTOR_SECONDARY_LIFTER", "motor__ports_8h.html#a85596f3eea4e187ef652eac88014726f", null ]
 ];

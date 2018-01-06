@@ -47,9 +47,9 @@
 00054 
 00055   \textcolor{comment}{//Raise the lifter}
 00056   \textcolor{keywordflow}{while}(analogRead(LIFTER) < GOAL_HEIGHT)\{
-00057     set_lifter_motors(-127);
+00057     \textcolor{comment}{//set\_lifter\_motors(-127);}
 00058   \}
-00059   set_lifter_motors(0);
+00059   \textcolor{comment}{//set\_lifter\_motors(0);}
 00060   \textcolor{comment}{//Drive towards the goal}
 00061   \textcolor{keywordflow}{while}(counts\_drive < 530)\{
 00062     set_side_speed(BOTH, 127);

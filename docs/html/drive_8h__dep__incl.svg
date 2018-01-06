@@ -17,7 +17,7 @@
 <!-- Node7 -->
 <g id="node2" class="node">
 <title>Node7</title>
-<g id="a_node2"><a xlink:href="$auto_8h.html" xlink:title="Autonomous declarations and macros. ">
+<g id="a_node2"><a xlink:href="auto_8h.html" target="_top" xlink:title="Autonomous declarations and macros. ">
 <polygon fill="none" stroke="#000000" points="0,-55.5 0,-73.5 78.2705,-73.5 78.2705,-55.5 0,-55.5"/>
 <text text-anchor="middle" x="39.1353" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/auto.h</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node9 -->
 <g id="node4" class="node">
 <title>Node9</title>
-<g id="a_node4"><a xlink:href="$lifter_8h.html" xlink:title="Declarations and macros for controlling and manipulating the lifter. ">
+<g id="a_node4"><a xlink:href="lifter_8h.html" target="_top" xlink:title="Declarations and macros for controlling and manipulating the lifter. ">
 <polygon fill="none" stroke="#000000" points="86.5591,-110.5 86.5591,-128.5 163.7114,-128.5 163.7114,-110.5 86.5591,-110.5"/>
 <text text-anchor="middle" x="125.1353" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/lifter.h</text>
 </a>
@@ -47,7 +47,7 @@
 <!-- Node11 -->
 <g id="node6" class="node">
 <title>Node11</title>
-<g id="a_node6"><a xlink:href="$opcontrol_8c.html" xlink:title="File for operator control code. ">
+<g id="a_node6"><a xlink:href="opcontrol_8c.html" target="_top" xlink:title="File for operator control code. ">
 <polygon fill="none" stroke="#000000" points="172.623,-55.5 172.623,-73.5 253.6475,-73.5 253.6475,-55.5 172.623,-55.5"/>
 <text text-anchor="middle" x="213.1353" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/opcontrol.c</text>
 </a>
@@ -62,7 +62,7 @@
 <!-- Node12 -->
 <g id="node7" class="node">
 <title>Node12</title>
-<g id="a_node7"><a xlink:href="$drive_8c.html" xlink:title="src/drive.c">
+<g id="a_node7"><a xlink:href="drive_8c.html" target="_top" xlink:title="src/drive.c">
 <polygon fill="none" stroke="#000000" points="220.3545,-110.5 220.3545,-128.5 281.916,-128.5 281.916,-110.5 220.3545,-110.5"/>
 <text text-anchor="middle" x="251.1353" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/drive.c</text>
 </a>
@@ -77,7 +77,7 @@
 <!-- Node8 -->
 <g id="node3" class="node">
 <title>Node8</title>
-<g id="a_node3"><a xlink:href="$auto_8c.html" xlink:title="File for autonomous code. ">
+<g id="a_node3"><a xlink:href="auto_8c.html" target="_top" xlink:title="File for autonomous code. ">
 <polygon fill="none" stroke="#000000" points="9.4604,-.5 9.4604,-18.5 68.8101,-18.5 68.8101,-.5 9.4604,-.5"/>
 <text text-anchor="middle" x="39.1353" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/auto.c</text>
 </a>
@@ -98,7 +98,7 @@
 <!-- Node10 -->
 <g id="node5" class="node">
 <title>Node10</title>
-<g id="a_node5"><a xlink:href="$lifter_8c.html" xlink:title="src/lifter.c">
+<g id="a_node5"><a xlink:href="lifter_8c.html" target="_top" xlink:title="src/lifter.c">
 <polygon fill="none" stroke="#000000" points="96.0195,-55.5 96.0195,-73.5 154.251,-73.5 154.251,-55.5 96.0195,-55.5"/>
 <text text-anchor="middle" x="125.1353" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/lifter.c</text>
 </a>

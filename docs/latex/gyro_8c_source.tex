@@ -1,0 +1,20 @@
+\section{gyro.\+c}
+\label{gyro_8c_source}\index{src/gyro.\+c@{src/gyro.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "gyro.h"}
+00002 
+00003 \textcolor{keyword}{static} Gyro main_gyro;
+00004 
+00005 \textcolor{keywordtype}{bool} init_main_gyro() \{
+00006   main_gyro = gyroInit(GYRO_PORT, GYRO_MULTIPLIER);
+00007   \textcolor{keywordflow}{return} main_gyro != NULL;
+00008 \}
+00009 
+00010 
+00011 \textcolor{keywordtype}{float} get_main_gyro_angluar_velocity() \{
+00012   uint32\_t port = GYRO_PORT;
+00013   int32\_t reading = (int32\_t)analogReadCalibratedHR(port + 1);
+00014     \textcolor{keywordflow}{return} 0;
+00015 \}
+\end{DoxyCode}

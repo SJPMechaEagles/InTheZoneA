@@ -44,11 +44,13 @@ void operatorControl() {
 	init_slew();
 	delay(10);
 	while (1) {
-		update_drive_motors();
-		update_lifter();
 		update_claw();
-		updateIntake();
-		update_control();
+		delay(5);
+		update_intake();
+		delay(5);
+		update_lifter();
+		delay(5);
+		update_drive_motors();
 		delay(25);
 
 	}

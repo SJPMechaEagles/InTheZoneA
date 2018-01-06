@@ -1,30 +1,31 @@
 \section{src/vlib.c File Reference}
 \label{vlib_8c}\index{src/vlib.\+c@{src/vlib.\+c}}
 {\ttfamily \#include \char`\"{}vlib.\+h\char`\"{}}\newline
-Include dependency graph for vlib.\+c\+:\nopagebreak
+Include dependency graph for vlib.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{vlib_8c__incl}
+\includegraphics[width=253pt]{vlib_8c__incl}
 \end{center}
 \end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ ftoa} (float a, char $\ast$buffer, int precision)
+void \textbf{ ftoaa} (float a, char $\ast$buffer, int precision)
 \begin{DoxyCompactList}\small\item\em converts a float to string. \end{DoxyCompactList}\item 
-int \textbf{ itoa\+\_\+bad} (int a, char $\ast$buffer, int digits)
+int \textbf{ itoaa} (int a, char $\ast$buffer, int digits)
 \begin{DoxyCompactList}\small\item\em converts a int to string. \end{DoxyCompactList}\item 
 void \textbf{ reverse} (char $\ast$str, int len)
 \begin{DoxyCompactList}\small\item\em reverses a string \textquotesingle{}str\textquotesingle{} of length \textquotesingle{}len\textquotesingle{} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\mbox{\label{vlib_8c_a1c3b16ce8c66ade17aca0f267027b855}} 
-\index{vlib.\+c@{vlib.\+c}!ftoa@{ftoa}}
-\index{ftoa@{ftoa}!vlib.\+c@{vlib.\+c}}
-\subsubsection{ftoa()}
-{\footnotesize\ttfamily void ftoa (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{char $\ast$}]{buffer,  }\item[{int}]{precision }\end{DoxyParamCaption})}
+\mbox{\label{vlib_8c_a4d26b0ac2f26341d827e0a13a0bd49b6}} 
+\index{vlib.\+c@{vlib.\+c}!ftoaa@{ftoaa}}
+\index{ftoaa@{ftoaa}!vlib.\+c@{vlib.\+c}}
+\subsubsection{ftoaa()}
+{\footnotesize\ttfamily void ftoaa (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{char $\ast$}]{buffer,  }\item[{int}]{precision }\end{DoxyParamCaption})}
 
 
 
@@ -47,42 +48,47 @@ Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 54} of file \textbf{ vlib.\+c}.
+Definition at line \textbf{ 55} of file \textbf{ vlib.\+c}.
 
 
 
-References \textbf{ itoa\+\_\+bad()}.
+References \textbf{ itoaa()}.
+
+
+
+Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}.
 
 
 \begin{DoxyCode}
-00054                                                 \{
-00055   \textcolor{comment}{// Extract integer part}
-00056   \textcolor{keywordtype}{int} ipart = (int)a;
-00057 
-00058   \textcolor{comment}{// Extract floating part}
-00059   \textcolor{keywordtype}{float} fpart = a - (float)ipart;
-00060 
-00061   \textcolor{comment}{// convert integer part to string}
-00062   \textcolor{keywordtype}{int} i = itoa_bad(ipart, buffer, 0);
-00063 
-00064   \textcolor{comment}{// check for display option after point}
-00065   \textcolor{keywordflow}{if}(precision != 0) \{
-00066     buffer[i] = \textcolor{charliteral}{'.'};  \textcolor{comment}{// add dot}
-00067 
-00068     \textcolor{comment}{// Get the value of fraction part up to given num.}
-00069     \textcolor{comment}{// of points after dot. The third parameter is needed}
-00070     \textcolor{comment}{// to handle cases like 233.007}
-00071     fpart = fpart * pow(10, precision);
-00072 
-00073     itoa_bad((\textcolor{keywordtype}{int})fpart, buffer + i + 1, precision);
-00074   \}
-00075 \}
+00055                                                  \{
+00056 
+00057   \textcolor{comment}{// Extract integer part}
+00058   \textcolor{keywordtype}{int} ipart = (int)a;
+00059 
+00060   \textcolor{comment}{// Extract floating part}
+00061   \textcolor{keywordtype}{float} fpart = a - (float)ipart;
+00062 
+00063   \textcolor{comment}{// convert integer part to string}
+00064   \textcolor{keywordtype}{int} i = itoaa(ipart, buffer, 0);
+00065 
+00066   \textcolor{comment}{// check for display option after point}
+00067   \textcolor{keywordflow}{if}(precision != 0) \{
+00068     buffer[i] = \textcolor{charliteral}{'.'};  \textcolor{comment}{// add dot}
+00069 
+00070     \textcolor{comment}{// Get the value of fraction part up to given num.}
+00071     \textcolor{comment}{// of points after dot. The third parameter is needed}
+00072     \textcolor{comment}{// to handle cases like 233.007}
+00073     fpart = fpart * pow(10, precision);
+00074 
+00075     itoaa((\textcolor{keywordtype}{int})fpart, buffer + i + 1, precision);
+00076   \}
+00077 \}
 \end{DoxyCode}
-\mbox{\label{vlib_8c_a08fa7134f8b9a80eeba25f9feab22892}} 
-\index{vlib.\+c@{vlib.\+c}!itoa\+\_\+bad@{itoa\+\_\+bad}}
-\index{itoa\+\_\+bad@{itoa\+\_\+bad}!vlib.\+c@{vlib.\+c}}
-\subsubsection{itoa\+\_\+bad()}
-{\footnotesize\ttfamily int itoa\+\_\+bad (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{char $\ast$}]{buffer,  }\item[{int}]{digits }\end{DoxyParamCaption})}
+\mbox{\label{vlib_8c_a28dc918c0df16add26908891a4aa190e}} 
+\index{vlib.\+c@{vlib.\+c}!itoaa@{itoaa}}
+\index{itoaa@{itoaa}!vlib.\+c@{vlib.\+c}}
+\subsubsection{itoaa()}
+{\footnotesize\ttfamily int itoaa (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{char $\ast$}]{buffer,  }\item[{int}]{digits }\end{DoxyParamCaption})}
 
 
 
@@ -108,7 +114,7 @@ Chris Jerrett, Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 29} of file \textbf{ vlib.\+c}.
+Definition at line \textbf{ 30} of file \textbf{ vlib.\+c}.
 
 
 
@@ -116,26 +122,26 @@ References \textbf{ reverse()}.
 
 
 
-Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, and \textbf{ ftoa()}.
+Referenced by \textbf{ ftoaa()}.
 
 
 \begin{DoxyCode}
-00029                                               \{
-00030   \textcolor{keywordtype}{int} i = 0;
-00031    \textcolor{keywordflow}{while} (a) \{
-00032        buffer[i++] = (a%10) + \textcolor{charliteral}{'0'};
-00033        a = a/10;
-00034    \}
-00035 
-00036    \textcolor{comment}{// If number of digits required is more, then}
-00037    \textcolor{comment}{// add 0s at the beginning}
-00038    \textcolor{keywordflow}{while} (i < digits)
-00039        buffer[i++] = \textcolor{charliteral}{'0'};
-00040 
-00041    reverse(buffer, i);
-00042    buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
-00043    \textcolor{keywordflow}{return} i;
-00044 \}
+00030                                            \{
+00031   \textcolor{keywordtype}{int} i = 0;
+00032    \textcolor{keywordflow}{while} (a) \{
+00033        buffer[i++] = (a%10) + \textcolor{charliteral}{'0'};
+00034        a = a/10;
+00035    \}
+00036 
+00037    \textcolor{comment}{// If number of digits required is more, then}
+00038    \textcolor{comment}{// add 0s at the beginning}
+00039    \textcolor{keywordflow}{while} (i < digits)
+00040        buffer[i++] = \textcolor{charliteral}{'0'};
+00041 
+00042    reverse(buffer, i);
+00043    buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
+00044    \textcolor{keywordflow}{return} i;
+00045 \}
 \end{DoxyCode}
 \mbox{\label{vlib_8c_aad7fea725cb4b198ace1aa3df5051244}} 
 \index{vlib.\+c@{vlib.\+c}!reverse@{reverse}}
@@ -166,7 +172,7 @@ Definition at line \textbf{ 10} of file \textbf{ vlib.\+c}.
 
 
 
-Referenced by \textbf{ itoa\+\_\+bad()}.
+Referenced by \textbf{ itoaa()}.
 
 
 \begin{DoxyCode}

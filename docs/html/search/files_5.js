@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['init_2ec',['init.c',['../init_8c.html',1,'']]]
+  ['gyro_2ec',['gyro.c',['../gyro_8c.html',1,'']]],
+  ['gyro_2eh',['gyro.h',['../gyro_8h.html',1,'']]]
 ];

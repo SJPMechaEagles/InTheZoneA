@@ -14,31 +14,15 @@
 #include "sensor_ports.h"
 
 /**
-* @brief The proportional constant for the claw PID controller.
-* @author Chris Jerrett
-**/
-#define CLAW_P .1
-/**
-* @brief The derivative constant for the claw PID controller.
-* @author Chris Jerrett
-**/
-#define CLAW_D .1
-/**
-* @brief The integral constant for the claw PID controller.
-* @author Chris Jerrett
-**/
-#define CLAW_I 0
-
-/**
 * @brief The max motor vlaue of the claw.
 * @author Chris Jerrett
 **/
-#define MAX_CLAW_SPEED 50
+#define MAX_CLAW_SPEED 127
 /**
 * @brief The min motor vlaue of the claw.
 * @author Chris Jerrett
 **/
-#define MIN_CLAW_SPEED -50
+#define MIN_CLAW_SPEED -127
 
 /**
 * @brief The joystick parameters for closing the claw
@@ -100,7 +84,8 @@ void close_claw();
 **/
 enum claw_state {
   CLAW_OPEN_STATE,
-  CLAW_CLOSE_STATE
+  CLAW_CLOSE_STATE,
+  CLAW_NEUTRAL_STATE
 };
 
 #endif

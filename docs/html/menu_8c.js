@@ -6,5 +6,5 @@ var menu_8c =
     [ "display_menu", "menu_8c.html#abfadedb104f89f672dd3045499975a71", null ],
     [ "init_menu_float", "menu_8c.html#a5abb752733423805f59ef3b92e3c2e57", null ],
     [ "init_menu_int", "menu_8c.html#ac8efedba760ec35ebf841ab19543ba5a", null ],
-    [ "init_menu_var", "menu_8c.html#a3529988b0a7c12cb3f2ebb3cf5595594", null ]
+    [ "init_menu_var", "menu_8c.html#af1bb786cb6014dcbfdb146878e713a3d", null ]
 ];

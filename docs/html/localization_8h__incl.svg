@@ -29,7 +29,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="$encoders_8h.html" xlink:title="wrapper around encoder functions ">
+<g id="a_node3"><a xlink:href="encoders_8h.html" target="_top" xlink:title="wrapper around encoder functions ">
 <polygon fill="none" stroke="#000000" points="18.4902,-55.5 18.4902,-73.5 83.9678,-73.5 83.9678,-55.5 18.4902,-55.5"/>
 <text text-anchor="middle" x="51.229" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">encoders.h</text>
 </a>
@@ -56,7 +56,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="$matrix_8h.html" xlink:title="Various Matrix operations.None of the matrix operations below change the input matrices if an input i...">
+<g id="a_node5"><a xlink:href="matrix_8h.html" target="_top" xlink:title="Various Matrix operations.None of the matrix operations below change the input matrices if an input i...">
 <polygon fill="none" stroke="#000000" points="166.4482,-55.5 166.4482,-73.5 218.0098,-73.5 218.0098,-55.5 166.4482,-55.5"/>
 <text text-anchor="middle" x="192.229" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">matrix.h</text>
 </a>

@@ -17,7 +17,7 @@
 <!-- Node11 -->
 <g id="node2" class="node">
 <title>Node11</title>
-<g id="a_node2"><a xlink:href="$auto_8h.html" xlink:title="Autonomous declarations and macros. ">
+<g id="a_node2"><a xlink:href="auto_8h.html" target="_top" xlink:title="Autonomous declarations and macros. ">
 <polygon fill="none" stroke="#000000" points="0,-55.5 0,-73.5 78.2705,-73.5 78.2705,-55.5 0,-55.5"/>
 <text text-anchor="middle" x="39.1353" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/auto.h</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node13 -->
 <g id="node4" class="node">
 <title>Node13</title>
-<g id="a_node4"><a xlink:href="$claw_8c.html" xlink:title="src/claw.c">
+<g id="a_node4"><a xlink:href="claw_8c.html" target="_top" xlink:title="src/claw.c">
 <polygon fill="none" stroke="#000000" points="96.4629,-55.5 96.4629,-73.5 155.8076,-73.5 155.8076,-55.5 96.4629,-55.5"/>
 <text text-anchor="middle" x="126.1353" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/claw.c</text>
 </a>
@@ -47,7 +47,7 @@
 <!-- Node14 -->
 <g id="node5" class="node">
 <title>Node14</title>
-<g id="a_node5"><a xlink:href="$opcontrol_8c.html" xlink:title="File for operator control code. ">
+<g id="a_node5"><a xlink:href="opcontrol_8c.html" target="_top" xlink:title="File for operator control code. ">
 <polygon fill="none" stroke="#000000" points="173.623,-55.5 173.623,-73.5 254.6475,-73.5 254.6475,-55.5 173.623,-55.5"/>
 <text text-anchor="middle" x="214.1353" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/opcontrol.c</text>
 </a>
@@ -62,7 +62,7 @@
 <!-- Node12 -->
 <g id="node3" class="node">
 <title>Node12</title>
-<g id="a_node3"><a xlink:href="$auto_8c.html" xlink:title="File for autonomous code. ">
+<g id="a_node3"><a xlink:href="auto_8c.html" target="_top" xlink:title="File for autonomous code. ">
 <polygon fill="none" stroke="#000000" points="9.4604,-.5 9.4604,-18.5 68.8101,-18.5 68.8101,-.5 9.4604,-.5"/>
 <text text-anchor="middle" x="39.1353" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/auto.c</text>
 </a>

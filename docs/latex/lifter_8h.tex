@@ -13,14 +13,16 @@ Declarations and macros for controlling and manipulating the lifter.
 {\ttfamily \#include \char`\"{}potentiometer.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}partner.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}drive.\+h\char`\"{}}\newline
-Include dependency graph for lifter.\+h\+:\nopagebreak
+Include dependency graph for lifter.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{lifter_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -50,6 +52,16 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactList}\small\item\em The lifter up controller params. \end{DoxyCompactList}\item 
 \#define \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+U\+P\+\_\+\+P\+A\+R\+T\+N\+ER}~\textbf{ P\+A\+R\+T\+N\+ER}, 5, J\+O\+Y\+\_\+\+UP
 \begin{DoxyCompactList}\small\item\em The lifter up controller params for the partner. \end{DoxyCompactList}\item 
+\#define \textbf{ M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}~1700
+\item 
+\#define \textbf{ M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT}~1
+\item 
+\#define \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}~2500
+\item 
+\#define \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}~1300
+\item 
+\#define \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT}~2
+\item 
 \#define \textbf{ T\+H\+R\+E\+S\+H\+O\+LD}~10
 \begin{DoxyCompactList}\small\item\em The threshold of a signficant speed for the lifter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -61,14 +73,20 @@ int \textbf{ get\+Lifter\+Ticks} ()
 \begin{DoxyCompactList}\small\item\em Gets the value of the lifter pot. \end{DoxyCompactList}\item 
 float \textbf{ lifter\+Potentiometer\+To\+Degree} (int x)
 \begin{DoxyCompactList}\small\item\em height of the lifter in degrees from 0 height \end{DoxyCompactList}\item 
-void \textbf{ lower\+\_\+lifter} ()
-\begin{DoxyCompactList}\small\item\em Lowers the lifter. \end{DoxyCompactList}\item 
-void \textbf{ raise\+\_\+lifter} ()
-\begin{DoxyCompactList}\small\item\em Raises the lifter. \end{DoxyCompactList}\item 
-void \textbf{ set\+\_\+lifter\+\_\+motors} (const int)
-\begin{DoxyCompactList}\small\item\em Sets the lifter motors to the given value. \end{DoxyCompactList}\item 
+void \textbf{ lower\+\_\+main\+\_\+lifter} ()
+\begin{DoxyCompactList}\small\item\em Lowers the main lifter. \end{DoxyCompactList}\item 
+void \textbf{ lower\+\_\+secondary\+\_\+lifter} ()
+\begin{DoxyCompactList}\small\item\em Lowers the secondary lifter. \end{DoxyCompactList}\item 
+void \textbf{ raise\+\_\+main\+\_\+lifter} ()
+\begin{DoxyCompactList}\small\item\em Raises the main lifter. \end{DoxyCompactList}\item 
+void \textbf{ raise\+\_\+secondary\+\_\+lifter} ()
+\begin{DoxyCompactList}\small\item\em Raises the main lifter. \end{DoxyCompactList}\item 
 void \textbf{ set\+\_\+lifter\+\_\+pos} (int pos)
 \begin{DoxyCompactList}\small\item\em Sets the lifter positions to the given value. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors} (const int v)
+\begin{DoxyCompactList}\small\item\em Sets the main lifter motors to the given value. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors} (const int v)
+\begin{DoxyCompactList}\small\item\em Sets the secondary lifter motors to the given value. \end{DoxyCompactList}\item 
 void \textbf{ update\+\_\+lifter} ()
 \begin{DoxyCompactList}\small\item\em Updates the lifter in teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -135,10 +153,6 @@ The derivative constant for the lifter P\+ID.
 
 Definition at line \textbf{ 32} of file \textbf{ lifter.\+h}.
 
-
-
-Referenced by \textbf{ update\+\_\+lifter()}.
-
 \mbox{\label{lifter_8h_a12f8c1de242a92f5694e6b80b990773a}} 
 \index{lifter.\+h@{lifter.\+h}!L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+WN@{L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+WN}}
 \index{L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+WN@{L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+WN}!lifter.\+h@{lifter.\+h}}
@@ -171,10 +185,6 @@ The lifter down controller params for the partner.
 
 Definition at line \textbf{ 73} of file \textbf{ lifter.\+h}.
 
-
-
-Referenced by \textbf{ update\+\_\+lifter()}.
-
 \mbox{\label{lifter_8h_ad4a88f04887d4f1f4e5fa057b29f68e9}} 
 \index{lifter.\+h@{lifter.\+h}!L\+I\+F\+T\+E\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+AD@{L\+I\+F\+T\+E\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+AD}}
 \index{L\+I\+F\+T\+E\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+AD@{L\+I\+F\+T\+E\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+AD}!lifter.\+h@{lifter.\+h}}
@@ -188,10 +198,6 @@ Height to raise lifter to driver preload height.
 
 
 Definition at line \textbf{ 63} of file \textbf{ lifter.\+h}.
-
-
-
-Referenced by \textbf{ update\+\_\+lifter()}.
 
 \mbox{\label{lifter_8h_a4950feabec4e85bf27c1f2e4ec98755a}} 
 \index{lifter.\+h@{lifter.\+h}!L\+I\+F\+T\+E\+R\+\_\+I@{L\+I\+F\+T\+E\+R\+\_\+I}}
@@ -207,10 +213,6 @@ The integral constant for the lifter P\+ID.
 
 Definition at line \textbf{ 42} of file \textbf{ lifter.\+h}.
 
-
-
-Referenced by \textbf{ update\+\_\+lifter()}.
-
 \mbox{\label{lifter_8h_ae5623433650815b810d784e0da176e3c}} 
 \index{lifter.\+h@{lifter.\+h}!L\+I\+F\+T\+E\+R\+\_\+P@{L\+I\+F\+T\+E\+R\+\_\+P}}
 \index{L\+I\+F\+T\+E\+R\+\_\+P@{L\+I\+F\+T\+E\+R\+\_\+P}!lifter.\+h@{lifter.\+h}}
@@ -224,10 +226,6 @@ The proportional constant for the lifter P\+ID.
 
 
 Definition at line \textbf{ 27} of file \textbf{ lifter.\+h}.
-
-
-
-Referenced by \textbf{ update\+\_\+lifter()}.
 
 \mbox{\label{lifter_8h_a96a5c0bbb7527bf1d45818fc4db97b68}} 
 \index{lifter.\+h@{lifter.\+h}!L\+I\+F\+T\+E\+R\+\_\+\+UP@{L\+I\+F\+T\+E\+R\+\_\+\+UP}}
@@ -260,6 +258,68 @@ The lifter up controller params for the partner.
 
 
 Definition at line \textbf{ 68} of file \textbf{ lifter.\+h}.
+
+\mbox{\label{lifter_8h_a54af37b0a6c7c352ba160922243a5c33}} 
+\index{lifter.\+h@{lifter.\+h}!M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}}
+\index{M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}!lifter.\+h@{lifter.\+h}}
+\subsubsection{M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}
+{\footnotesize\ttfamily \#define M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT~1700}
+
+
+
+Definition at line \textbf{ 83} of file \textbf{ lifter.\+h}.
+
+
+
+Referenced by \textbf{ update\+\_\+lifter()}.
+
+\mbox{\label{lifter_8h_a82799bdc8f8a1a7a38785b446bdd6a9a}} 
+\index{lifter.\+h@{lifter.\+h}!M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT@{M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT}}
+\index{M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT@{M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT}!lifter.\+h@{lifter.\+h}}
+\subsubsection{M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT}
+{\footnotesize\ttfamily \#define M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT~1}
+
+
+
+Definition at line \textbf{ 81} of file \textbf{ lifter.\+h}.
+
+
+
+Referenced by \textbf{ update\+\_\+lifter()}.
+
+\mbox{\label{lifter_8h_a1577e085f9f697084436d412ac4bb838}} 
+\index{lifter.\+h@{lifter.\+h}!S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+H\+E\+I\+G\+HT@{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}}
+\index{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+H\+E\+I\+G\+HT@{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}!lifter.\+h@{lifter.\+h}}
+\subsubsection{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}
+{\footnotesize\ttfamily \#define S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+H\+E\+I\+G\+HT~2500}
+
+
+
+Definition at line \textbf{ 77} of file \textbf{ lifter.\+h}.
+
+
+
+Referenced by \textbf{ update\+\_\+lifter()}.
+
+\mbox{\label{lifter_8h_ab3698510d2e3be839cbfb090f101cfcf}} 
+\index{lifter.\+h@{lifter.\+h}!S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT@{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}}
+\index{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT@{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}!lifter.\+h@{lifter.\+h}}
+\subsubsection{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}
+{\footnotesize\ttfamily \#define S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT~1300}
+
+
+
+Definition at line \textbf{ 79} of file \textbf{ lifter.\+h}.
+
+\mbox{\label{lifter_8h_a72522c3c839198d275d956af1b759ff3}} 
+\index{lifter.\+h@{lifter.\+h}!S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT@{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT}}
+\index{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT@{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT}!lifter.\+h@{lifter.\+h}}
+\subsubsection{S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT}
+{\footnotesize\ttfamily \#define S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT~2}
+
+
+
+Definition at line \textbf{ 75} of file \textbf{ lifter.\+h}.
 
 
 
@@ -303,7 +363,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 149} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 133} of file \textbf{ lifter.\+c}.
 
 
 
@@ -311,10 +371,10 @@ References \textbf{ get\+Lifter\+Ticks()}.
 
 
 \begin{DoxyCode}
-00149                          \{
-00150   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ticks = getLifterTicks();
-00151   \textcolor{keywordflow}{return} (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) + 0.0198 * ticks + 2.3033);
-00152 \}
+00133                          \{
+00134   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ticks = getLifterTicks();
+00135   \textcolor{keywordflow}{return} (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) + 0.0198 * ticks + 2.3033);
+00136 \}
 \end{DoxyCode}
 \mbox{\label{lifter_8h_acdf909159b0406c48099843f2306be78}} 
 \index{lifter.\+h@{lifter.\+h}!get\+Lifter\+Ticks@{get\+Lifter\+Ticks}}
@@ -337,7 +397,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 138} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 122} of file \textbf{ lifter.\+c}.
 
 
 
@@ -345,13 +405,13 @@ References \textbf{ L\+I\+F\+T\+ER}.
 
 
 
-Referenced by \textbf{ get\+Lifter\+Height()}, and \textbf{ update\+\_\+lifter()}.
+Referenced by \textbf{ get\+Lifter\+Height()}.
 
 
 \begin{DoxyCode}
-00138                      \{
-00139   \textcolor{keywordflow}{return} analogRead(LIFTER);
-00140 \}
+00122                      \{
+00123   \textcolor{keywordflow}{return} analogRead(LIFTER);
+00124 \}
 \end{DoxyCode}
 \mbox{\label{lifter_8h_ab0460888f3213e5510bd25ae1e152a75}} 
 \index{lifter.\+h@{lifter.\+h}!lifter\+Potentiometer\+To\+Degree@{lifter\+Potentiometer\+To\+Degree}}
@@ -379,7 +439,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 127} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 111} of file \textbf{ lifter.\+c}.
 
 
 
@@ -387,19 +447,19 @@ References \textbf{ D\+E\+G\+\_\+\+M\+AX}, \textbf{ I\+N\+I\+T\+\_\+\+R\+O\+T\+A
 
 
 \begin{DoxyCode}
-00127                                         \{
-00128   \textcolor{keywordflow}{return} (x - INIT_ROTATION) / TICK_MAX * DEG_MAX;
-00129 \}
+00111                                         \{
+00112   \textcolor{keywordflow}{return} (x - INIT_ROTATION) / TICK_MAX * DEG_MAX;
+00113 \}
 \end{DoxyCode}
-\mbox{\label{lifter_8h_aa7d2d04059f57cc5b8582f6fd0726dc1}} 
-\index{lifter.\+h@{lifter.\+h}!lower\+\_\+lifter@{lower\+\_\+lifter}}
-\index{lower\+\_\+lifter@{lower\+\_\+lifter}!lifter.\+h@{lifter.\+h}}
-\subsubsection{lower\+\_\+lifter()}
-{\footnotesize\ttfamily void lower\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\label{lifter_8h_ad36c37086a91046af4e6f619618b7719}} 
+\index{lifter.\+h@{lifter.\+h}!lower\+\_\+main\+\_\+lifter@{lower\+\_\+main\+\_\+lifter}}
+\index{lower\+\_\+main\+\_\+lifter@{lower\+\_\+main\+\_\+lifter}!lifter.\+h@{lifter.\+h}}
+\subsubsection{lower\+\_\+main\+\_\+lifter()}
+{\footnotesize\ttfamily void lower\+\_\+main\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Lowers the lifter. 
+Lowers the main lifter. 
 
 \begin{DoxyAuthor}{Author}
 Christian De\+Simone 
@@ -409,31 +469,27 @@ Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 42} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 53} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+lifter\+\_\+motors()}.
-
-
-
-Referenced by \textbf{ update\+\_\+lifter()}.
+References \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}.
 
 
 \begin{DoxyCode}
-00042                    \{
-00043   set_lifter_motors(MIN_SPEED);
-00044 \}
+00053                         \{
+00054   set_main_lifter_motors(MIN_SPEED);
+00055 \}
 \end{DoxyCode}
-\mbox{\label{lifter_8h_a7452163ed7946b6262f41de51c62dfd4}} 
-\index{lifter.\+h@{lifter.\+h}!raise\+\_\+lifter@{raise\+\_\+lifter}}
-\index{raise\+\_\+lifter@{raise\+\_\+lifter}!lifter.\+h@{lifter.\+h}}
-\subsubsection{raise\+\_\+lifter()}
-{\footnotesize\ttfamily void raise\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\label{lifter_8h_af76abbd394bf206ab56fa237d776f2b3}} 
+\index{lifter.\+h@{lifter.\+h}!lower\+\_\+secondary\+\_\+lifter@{lower\+\_\+secondary\+\_\+lifter}}
+\index{lower\+\_\+secondary\+\_\+lifter@{lower\+\_\+secondary\+\_\+lifter}!lifter.\+h@{lifter.\+h}}
+\subsubsection{lower\+\_\+secondary\+\_\+lifter()}
+{\footnotesize\ttfamily void lower\+\_\+secondary\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Raises the lifter. 
+Lowers the secondary lifter. 
 
 \begin{DoxyAuthor}{Author}
 Christian De\+Simone 
@@ -443,61 +499,77 @@ Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 32} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 73} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+lifter\+\_\+motors()}.
-
-
-
-Referenced by \textbf{ update\+\_\+lifter()}.
+References \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
 
 
 \begin{DoxyCode}
-00032                    \{
-00033   set_lifter_motors(MAX_SPEED);
-00034 \}
+00073                              \{
+00074   set_secondary_lifter_motors(MIN_SPEED);
+00075 \}
 \end{DoxyCode}
-\mbox{\label{lifter_8h_a16ed2ef406519bbd4d091f6321f4ed8a}} 
-\index{lifter.\+h@{lifter.\+h}!set\+\_\+lifter\+\_\+motors@{set\+\_\+lifter\+\_\+motors}}
-\index{set\+\_\+lifter\+\_\+motors@{set\+\_\+lifter\+\_\+motors}!lifter.\+h@{lifter.\+h}}
-\subsubsection{set\+\_\+lifter\+\_\+motors()}
-{\footnotesize\ttfamily void set\+\_\+lifter\+\_\+motors (\begin{DoxyParamCaption}\item[{const int}]{v }\end{DoxyParamCaption})}
+\mbox{\label{lifter_8h_a2e2bd38b5b8b52378f3510368bf8aa0a}} 
+\index{lifter.\+h@{lifter.\+h}!raise\+\_\+main\+\_\+lifter@{raise\+\_\+main\+\_\+lifter}}
+\index{raise\+\_\+main\+\_\+lifter@{raise\+\_\+main\+\_\+lifter}!lifter.\+h@{lifter.\+h}}
+\subsubsection{raise\+\_\+main\+\_\+lifter()}
+{\footnotesize\ttfamily void raise\+\_\+main\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Sets the lifter motors to the given value. 
+Raises the main lifter. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em v} & value for the lifter motor. Between -\/128 -\/ 127, any values outside are clamped. \\
-\hline
-\end{DoxyParams}
 \begin{DoxyAuthor}{Author}
-Chris Jerrett 
+Christian De\+Simone 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-9/9/2017 
+9/12/2017 
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 10} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 43} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ M\+O\+T\+O\+R\+\_\+\+L\+I\+F\+T\+\_\+\+T\+O\+P\+\_\+\+L\+E\+FT}, \textbf{ M\+O\+T\+O\+R\+\_\+\+L\+I\+F\+T\+\_\+\+T\+O\+P\+\_\+\+R\+I\+G\+HT}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
-
-
-
-Referenced by \textbf{ autonomous()}, \textbf{ lower\+\_\+lifter()}, \textbf{ raise\+\_\+lifter()}, and \textbf{ update\+\_\+lifter()}.
+References \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}.
 
 
 \begin{DoxyCode}
-00010                                     \{
-00011   set_motor_immediate(MOTOR_LIFT_TOP_RIGHT, -v);
-00012   set_motor_immediate(MOTOR_LIFT_TOP_LEFT, -v);
-00013 \}
+00043                         \{
+00044   set_main_lifter_motors(MAX_SPEED);
+00045 \}
+\end{DoxyCode}
+\mbox{\label{lifter_8h_a786f679ea48bb8c80e00fbac9a69911b}} 
+\index{lifter.\+h@{lifter.\+h}!raise\+\_\+secondary\+\_\+lifter@{raise\+\_\+secondary\+\_\+lifter}}
+\index{raise\+\_\+secondary\+\_\+lifter@{raise\+\_\+secondary\+\_\+lifter}!lifter.\+h@{lifter.\+h}}
+\subsubsection{raise\+\_\+secondary\+\_\+lifter()}
+{\footnotesize\ttfamily void raise\+\_\+secondary\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Raises the main lifter. 
+
+\begin{DoxyAuthor}{Author}
+Christian De\+Simone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/12/2017 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 63} of file \textbf{ lifter.\+c}.
+
+
+
+References \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+
+
+\begin{DoxyCode}
+00063                              \{
+00064   set_secondary_lifter_motors(MAX_SPEED);
+00065 \}
 \end{DoxyCode}
 \mbox{\label{lifter_8h_abddc7cb502e12fa277b627c90a45efb1}} 
 \index{lifter.\+h@{lifter.\+h}!set\+\_\+lifter\+\_\+pos@{set\+\_\+lifter\+\_\+pos}}
@@ -522,13 +594,91 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 22} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 33} of file \textbf{ lifter.\+c}.
 
 
 \begin{DoxyCode}
-00022                              \{
-00023 
+00033                              \{
+00034 
+00035 \}
+\end{DoxyCode}
+\mbox{\label{lifter_8h_ad00a195af30f246924d6e1a30095b882}} 
+\index{lifter.\+h@{lifter.\+h}!set\+\_\+main\+\_\+lifter\+\_\+motors@{set\+\_\+main\+\_\+lifter\+\_\+motors}}
+\index{set\+\_\+main\+\_\+lifter\+\_\+motors@{set\+\_\+main\+\_\+lifter\+\_\+motors}!lifter.\+h@{lifter.\+h}}
+\subsubsection{set\+\_\+main\+\_\+lifter\+\_\+motors()}
+{\footnotesize\ttfamily void set\+\_\+main\+\_\+lifter\+\_\+motors (\begin{DoxyParamCaption}\item[{const int}]{v }\end{DoxyParamCaption})}
+
+
+
+Sets the main lifter motors to the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & value for the lifter motor. Between -\/128 -\/ 127, any values outside are clamped. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/9/2017 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 22} of file \textbf{ lifter.\+c}.
+
+
+
+References \textbf{ M\+O\+T\+O\+R\+\_\+\+L\+I\+FT}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
+
+
+
+Referenced by \textbf{ lower\+\_\+main\+\_\+lifter()}, \textbf{ raise\+\_\+main\+\_\+lifter()}, and \textbf{ update\+\_\+lifter()}.
+
+
+\begin{DoxyCode}
+00022                                          \{
+00023   set_motor_immediate(MOTOR_LIFT, v);
 00024 \}
+\end{DoxyCode}
+\mbox{\label{lifter_8h_a78640d547d9361951a92d0bc00939536}} 
+\index{lifter.\+h@{lifter.\+h}!set\+\_\+secondary\+\_\+lifter\+\_\+motors@{set\+\_\+secondary\+\_\+lifter\+\_\+motors}}
+\index{set\+\_\+secondary\+\_\+lifter\+\_\+motors@{set\+\_\+secondary\+\_\+lifter\+\_\+motors}!lifter.\+h@{lifter.\+h}}
+\subsubsection{set\+\_\+secondary\+\_\+lifter\+\_\+motors()}
+{\footnotesize\ttfamily void set\+\_\+secondary\+\_\+lifter\+\_\+motors (\begin{DoxyParamCaption}\item[{const int}]{v }\end{DoxyParamCaption})}
+
+
+
+Sets the secondary lifter motors to the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & value for the lifter motor. Between -\/128 -\/ 127, any values outside are clamped. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/6/2018 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 11} of file \textbf{ lifter.\+c}.
+
+
+
+References \textbf{ M\+O\+T\+O\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+ER}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
+
+
+
+Referenced by \textbf{ lower\+\_\+secondary\+\_\+lifter()}, \textbf{ raise\+\_\+secondary\+\_\+lifter()}, and \textbf{ update\+\_\+lifter()}.
+
+
+\begin{DoxyCode}
+00011                                               \{
+00012   set_motor_immediate(MOTOR_SECONDARY_LIFTER, v);
+00013 \}
 \end{DoxyCode}
 \mbox{\label{lifter_8h_a59bb7413777ca16aba124aaedf95c79b}} 
 \index{lifter.\+h@{lifter.\+h}!update\+\_\+lifter@{update\+\_\+lifter}}
@@ -548,11 +698,11 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 52} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 83} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ get\+\_\+mode()}, \textbf{ get\+Lifter\+Ticks()}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+D}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+WN}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+W\+N\+\_\+\+P\+A\+R\+T\+N\+ER}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+AD}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+I}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+P}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+UP}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+U\+P\+\_\+\+P\+A\+R\+T\+N\+ER}, \textbf{ lower\+\_\+lifter()}, \textbf{ M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ raise\+\_\+lifter()}, \textbf{ set\+\_\+lifter\+\_\+motors()}, and \textbf{ T\+H\+R\+E\+S\+H\+O\+LD}.
+References \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+WN}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+UP}, \textbf{ M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+I\+N\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT}, \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT}, \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
 
 
 
@@ -560,73 +710,27 @@ Referenced by \textbf{ operator\+Control()}.
 
 
 \begin{DoxyCode}
-00052                      \{
-00053   \textcolor{comment}{//Establish variables to be used repeatedly}
-00054   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} changed = \textcolor{keyword}{true};
-00055   \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} target = 0;
-00056   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} first\_run = \textcolor{keyword}{true};
-00057   \textcolor{comment}{//Set the target to the current height for the first run}
-00058   \textcolor{keywordflow}{if}(first\_run) \{
-00059     target = getLifterTicks();
-00060     first\_run = \textcolor{keyword}{false};
-00061   \}
-00062   \textcolor{comment}{//Establish the error as 0}
-00063   \textcolor{keyword}{static} \textcolor{keywordtype}{int} last\_error = 0;
-00064   \textcolor{keyword}{static} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} i = 0;
-00065   \textcolor{comment}{//Check the buttons on the controller indicated by the controller mode}
-00066   \textcolor{keywordflow}{if}((joystickGetDigital(LIFTER_UP) && get_mode() == MAIN_CONTROLLER_MODE)
-00067    || (joystickGetDigital(LIFTER_UP_PARTNER) && get_mode() == 
-      PARTNER_CONTROLLER_MODE))\{
-00068     changed = \textcolor{keyword}{true};
-00069     i = 0;
-00070     \textcolor{comment}{//Change the target and start the motion}
-00071     target = getLifterTicks() + 200;
-00072     lower_lifter();
-00073   \}
-00074   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((joystickGetDigital(LIFTER_DOWN) && get_mode() == MAIN_CONTROLLER_MODE)
-00075    || (joystickGetDigital(LIFTER_DOWN_PARTNER) && get_mode() == 
-      PARTNER_CONTROLLER_MODE)) \{
-00076     changed = \textcolor{keyword}{true};
-00077     i = 0;
-00078     \textcolor{comment}{//Change the target and start the motion}
-00079     target = getLifterTicks();
-00080     raise_lifter();
-00081   \}
-00082   \textcolor{comment}{//Raise the lifter to the driver load height}
-00083   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_DRIVER_LOAD) && get_mode() == 
-      MAIN_CONTROLLER_MODE)\{
-00084     changed = \textcolor{keyword}{true};
-00085     i = 0;
-00086     \textcolor{keywordtype}{int} k = 0;
-00087     \textcolor{keywordflow}{if}(getLifterTicks() < 1270)\{
-00088       lower_lifter();
-00089 
-00090     \}
-00091     \textcolor{keywordflow}{if}(getLifterTicks() > 1230)\{
-00092       raise_lifter();
-00093     \}
-00094     target = 1250;
-00095   \}
-00096   \textcolor{comment}{//Change lifter motor values based upon the target}
-00097   \textcolor{keywordflow}{else} \{
-00098     \textcolor{comment}{//Don't if we are using the partner controller}
-00099     \textcolor{keywordflow}{if}(get_mode() == PARTNER_CONTROLLER_MODE)\{
-00100       set_lifter_motors(0);
-00101       \textcolor{keywordflow}{return};
-00102     \}
-00103     \textcolor{comment}{//Define the proportion, derivative, and integral to be used in the motor speed}
-00104     \textcolor{keywordtype}{int} p = getLifterTicks() - target;
-00105     \textcolor{keywordtype}{int} d = p - last\_error;
-00106     last\_error = p;
-00107     i += p;
-00108     \textcolor{keywordtype}{int} motor = LIFTER_P * p + LIFTER_D * d + LIFTER_I * i;
-00109     \textcolor{comment}{//Avoid wasting battery if value is insignificant}
-00110     \textcolor{keywordflow}{if} (motor < THRESHOLD) \{
-00111         set_lifter_motors(0);
-00112     \} \textcolor{keywordflow}{else} \{
-00113         set_lifter_motors(motor);
-00114     \}
-00115 
-00116   \}
-00117 \}
+00083                      \{
+00084   printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, analogRead(1));
+00085   \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_DOWN) && analogRead(MAIN_LIFTER_POT) < 
+      MAIN_LIFTER_MIN_HEIGHT) \{
+00086     set_secondary_lifter_motors(MAX_SPEED);
+00087     set_main_lifter_motors(MIN_SPEED);
+00088   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_DOWN) && analogRead(MAIN_LIFTER_POT) >= 
+      MAIN_LIFTER_MIN_HEIGHT) \{
+00089     set_secondary_lifter_motors(MAX_SPEED);
+00090     set_main_lifter_motors(0);
+00091   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_UP) && analogRead(
+      SECONDARY_LIFTER_POT_PORT) < SECONDARY_LIFTER_MAX_HEIGHT) \{
+00092     set_secondary_lifter_motors(MIN_SPEED);
+00093     set_main_lifter_motors(0);
+00094   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_UP) && analogRead(
+      SECONDARY_LIFTER_POT_PORT) >= SECONDARY_LIFTER_MAX_HEIGHT) \{
+00095     set_main_lifter_motors(MAX_SPEED);
+00096     set_secondary_lifter_motors(MIN_SPEED);
+00097   \} \textcolor{keywordflow}{else} \{
+00098     set_secondary_lifter_motors(0);
+00099     set_main_lifter_motors(0);
+00100   \}
+00101 \}
 \end{DoxyCode}

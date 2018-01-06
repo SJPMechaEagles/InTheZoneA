@@ -6,6 +6,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "controller.c", "controller_8c.html", "controller_8c" ],
     [ "drive.c", "drive_8c.html", "drive_8c" ],
     [ "encoders.c", "encoders_8c.html", "encoders_8c" ],
+    [ "gyro.c", "gyro_8c.html", "gyro_8c" ],
     [ "init.c", "init_8c.html", "init_8c" ],
     [ "lcd.c", "lcd_8c.html", "lcd_8c" ],
     [ "lifter.c", "lifter_8c.html", "lifter_8c" ],

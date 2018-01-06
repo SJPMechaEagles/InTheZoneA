@@ -17,7 +17,7 @@
 <!-- Node6 -->
 <g id="node2" class="node">
 <title>Node6</title>
-<g id="a_node2"><a xlink:href="$localization_8c.html" xlink:title="src/localization.c">
+<g id="a_node2"><a xlink:href="localization_8c.html" target="_top" xlink:title="src/localization.c">
 <polygon fill="none" stroke="#000000" points="0,-.5 0,-18.5 89.3594,-18.5 89.3594,-.5 0,-.5"/>
 <text text-anchor="middle" x="44.6797" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/localization.c</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node7 -->
 <g id="node3" class="node">
 <title>Node7</title>
-<g id="a_node3"><a xlink:href="$opcontrol_8c.html" xlink:title="File for operator control code. ">
+<g id="a_node3"><a xlink:href="opcontrol_8c.html" target="_top" xlink:title="File for operator control code. ">
 <polygon fill="none" stroke="#000000" points="107.1675,-.5 107.1675,-18.5 188.1919,-18.5 188.1919,-.5 107.1675,-.5"/>
 <text text-anchor="middle" x="147.6797" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/opcontrol.c</text>
 </a>

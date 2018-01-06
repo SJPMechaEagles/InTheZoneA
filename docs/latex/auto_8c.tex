@@ -7,7 +7,8 @@ File for autonomous code.
 
 {\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}auto.\+h\char`\"{}}\newline
-Include dependency graph for auto.\+c\+:\nopagebreak
+Include dependency graph for auto.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -51,7 +52,7 @@ Definition at line \textbf{ 30} of file \textbf{ auto.\+c}.
 
 
 
-References \textbf{ B\+O\+TH}, \textbf{ close\+\_\+claw()}, \textbf{ deinitslew()}, \textbf{ G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ init\+\_\+slew()}, \textbf{ L\+I\+F\+T\+ER}, \textbf{ M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ open\+\_\+claw()}, \textbf{ set\+\_\+lifter\+\_\+motors()}, and \textbf{ set\+\_\+side\+\_\+speed()}.
+References \textbf{ B\+O\+TH}, \textbf{ close\+\_\+claw()}, \textbf{ deinitslew()}, \textbf{ G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ init\+\_\+slew()}, \textbf{ L\+I\+F\+T\+ER}, \textbf{ M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ open\+\_\+claw()}, and \textbf{ set\+\_\+side\+\_\+speed()}.
 
 
 \begin{DoxyCode}
@@ -82,9 +83,9 @@ References \textbf{ B\+O\+TH}, \textbf{ close\+\_\+claw()}, \textbf{ deinitslew(
 00054 
 00055   \textcolor{comment}{//Raise the lifter}
 00056   \textcolor{keywordflow}{while}(analogRead(LIFTER) < GOAL_HEIGHT)\{
-00057     set_lifter_motors(-127);
+00057     \textcolor{comment}{//set\_lifter\_motors(-127);}
 00058   \}
-00059   set_lifter_motors(0);
+00059   \textcolor{comment}{//set\_lifter\_motors(0);}
 00060   \textcolor{comment}{//Drive towards the goal}
 00061   \textcolor{keywordflow}{while}(counts\_drive < 530)\{
 00062     set_side_speed(BOTH, 127);

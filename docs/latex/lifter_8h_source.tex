@@ -38,21 +38,38 @@
 00069 
 00073 \textcolor{preprocessor}{#define LIFTER\_DOWN\_PARTNER PARTNER, 5, JOY\_DOWN}
 00074 
-00082 \textcolor{keywordtype}{void} set_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int});
-00083 
-00091 \textcolor{keywordtype}{void} set_lifter_pos(\textcolor{keywordtype}{int} pos);
-00092 
-00099 \textcolor{keywordtype}{void} raise_lifter();
-00100 
-00107 \textcolor{keywordtype}{void} lower_lifter();
-00108 
-00115 \textcolor{keywordtype}{void} update_lifter();
-00116 
-00125 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x);
-00126 
-00134 \textcolor{keywordtype}{double} getLifterHeight();
+00075 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_POT\_PORT 2}
+00076 
+00077 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_MAX\_HEIGHT 2500}
+00078 
+00079 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_MIN\_HEIGHT 1300}
+00080 
+00081 \textcolor{preprocessor}{#define MAIN\_LIFTER\_POT 1}
+00082 
+00083 \textcolor{preprocessor}{#define MAIN\_LIFTER\_MIN\_HEIGHT 1700}
+00084 
+00092 \textcolor{keywordtype}{void} set_secondary_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v);
+00093 
+00101 \textcolor{keywordtype}{void} set_main_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v);
+00102 
+00110 \textcolor{keywordtype}{void} set_lifter_pos(\textcolor{keywordtype}{int} pos);
+00111 
+00118 \textcolor{keywordtype}{void} raise_main_lifter();
+00119 
+00126 \textcolor{keywordtype}{void} lower_main_lifter();
+00127 
+00134 \textcolor{keywordtype}{void} raise_secondary_lifter();
 00135 
-00143 \textcolor{keywordtype}{int} getLifterTicks();
-00144 
-00145 \textcolor{preprocessor}{#endif}
+00142 \textcolor{keywordtype}{void} lower_secondary_lifter();
+00143 
+00150 \textcolor{keywordtype}{void} update_lifter();
+00151 
+00160 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x);
+00161 
+00169 \textcolor{keywordtype}{int} getLifterTicks();
+00170 
+00178 \textcolor{keywordtype}{double} getLifterHeight();
+00179 
+00180 
+00181 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

@@ -211,7 +211,7 @@ menu_t* init_menu_float(enum menu_type type, float min, float max, float step, c
 static void calculate_current_display(char* rtn, menu_t *menu);
 
 /**
-* @brief Displays a menu context, but does not display.
+* @brief Displays a menu contex.
 * <em> Menu must be freed or will cause memory leak! <em> Will exit if robot is enabled. This prevents menu
 * from locking up system in even of a reset.
 *

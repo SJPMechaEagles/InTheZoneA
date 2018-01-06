@@ -1,6 +1,8 @@
 var searchData=
 [
   ['m_5fpi',['M_PI',['../vmath_8h.html#ae71449b1cc6e6250b91f539153a7a0d3',1,'vmath.h']]],
+  ['main_5flifter_5fmin_5fheight',['MAIN_LIFTER_MIN_HEIGHT',['../lifter_8h.html#a54af37b0a6c7c352ba160922243a5c33',1,'lifter.h']]],
+  ['main_5flifter_5fpot',['MAIN_LIFTER_POT',['../lifter_8h.html#a82799bdc8f8a1a7a38785b446bdd6a9a',1,'lifter.h']]],
   ['master',['MASTER',['../controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b',1,'controller.h']]],
   ['max_5fclaw_5fspeed',['MAX_CLAW_SPEED',['../claw_8h.html#ae3be50b28977dac719f086e131ba8fd7',1,'claw.h']]],
   ['max_5fspeed',['MAX_SPEED',['../motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26',1,'motor_ports.h']]],
@@ -14,11 +16,9 @@ var searchData=
   ['motor_5fback_5fright',['MOTOR_BACK_RIGHT',['../motor__ports_8h.html#ad85c5f3d6a2d00789c8c67b960c46c2b',1,'motor_ports.h']]],
   ['motor_5ffront_5fleft',['MOTOR_FRONT_LEFT',['../motor__ports_8h.html#a743b47e164fb23b30f4f2f228db0b338',1,'motor_ports.h']]],
   ['motor_5ffront_5fright',['MOTOR_FRONT_RIGHT',['../motor__ports_8h.html#a6f48bcc6d5fce24caeae0b17954c277a',1,'motor_ports.h']]],
-  ['motor_5flift_5fbottom_5fleft',['MOTOR_LIFT_BOTTOM_LEFT',['../motor__ports_8h.html#a6d665064ab6c8be6066d33461ac45cc8',1,'motor_ports.h']]],
-  ['motor_5flift_5fbottom_5fright',['MOTOR_LIFT_BOTTOM_RIGHT',['../motor__ports_8h.html#a6a3fabdaeec7212af915f47f57177fc5',1,'motor_ports.h']]],
-  ['motor_5flift_5ftop_5fleft',['MOTOR_LIFT_TOP_LEFT',['../motor__ports_8h.html#afad261ce61b31db241510a6784798f0c',1,'motor_ports.h']]],
-  ['motor_5flift_5ftop_5fright',['MOTOR_LIFT_TOP_RIGHT',['../motor__ports_8h.html#add81e70dc9a7ed2aa5d86e807fb27b02',1,'motor_ports.h']]],
+  ['motor_5flift',['MOTOR_LIFT',['../motor__ports_8h.html#a0cbefbf749abca03437a97c9ca45863a',1,'motor_ports.h']]],
   ['motor_5fmiddle_5fleft',['MOTOR_MIDDLE_LEFT',['../motor__ports_8h.html#ac7dd3397e2f909b4dc11f2a2e6f28800',1,'motor_ports.h']]],
   ['motor_5fmiddle_5fright',['MOTOR_MIDDLE_RIGHT',['../motor__ports_8h.html#a0da3f792b8f28ab09b339295859d8334',1,'motor_ports.h']]],
-  ['motor_5fports',['MOTOR_PORTS',['../slew_8h.html#ad1ad4b29af4180aa00713599367fbc98',1,'slew.h']]]
+  ['motor_5fports',['MOTOR_PORTS',['../slew_8h.html#ad1ad4b29af4180aa00713599367fbc98',1,'slew.h']]],
+  ['motor_5fsecondary_5flifter',['MOTOR_SECONDARY_LIFTER',['../motor__ports_8h.html#a85596f3eea4e187ef652eac88014726f',1,'motor_ports.h']]]
 ];

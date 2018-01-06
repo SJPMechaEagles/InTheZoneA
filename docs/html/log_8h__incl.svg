@@ -29,7 +29,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="$lcd_8h.html" xlink:title="LCD wrapper functions and macros. ">
+<g id="a_node3"><a xlink:href="lcd_8h.html" target="_top" xlink:title="LCD wrapper functions and macros. ">
 <polygon fill="none" stroke="#000000" points="41.5146,-55.5 41.5146,-73.5 78.6377,-73.5 78.6377,-55.5 41.5146,-55.5"/>
 <text text-anchor="middle" x="60.0762" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcd.h</text>
 </a>

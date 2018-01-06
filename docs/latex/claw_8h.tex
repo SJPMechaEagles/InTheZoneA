@@ -10,14 +10,16 @@ Code for controlling the claw that grabs the cones.
 {\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}motor\+\_\+ports.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sensor\+\_\+ports.\+h\char`\"{}}\newline
-Include dependency graph for claw.\+h\+:\nopagebreak
+Include dependency graph for claw.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{claw_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,25 +33,20 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactList}\small\item\em The joystick parameters for closing the claw. \end{DoxyCompactList}\item 
 \#define \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+V\+AL}~3000
 \begin{DoxyCompactList}\small\item\em The potentiometer value for a closed claw. \end{DoxyCompactList}\item 
-\#define \textbf{ C\+L\+A\+W\+\_\+D}~.\+1
-\begin{DoxyCompactList}\small\item\em The derivative constant for the claw P\+ID controller. \end{DoxyCompactList}\item 
-\#define \textbf{ C\+L\+A\+W\+\_\+I}~0
-\begin{DoxyCompactList}\small\item\em The integral constant for the claw P\+ID controller. \end{DoxyCompactList}\item 
 \#define \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+EN}~\textbf{ M\+A\+S\+T\+ER}, 6, J\+O\+Y\+\_\+\+D\+O\+WN
 \begin{DoxyCompactList}\small\item\em The joystick parameters for opening the claw. \end{DoxyCompactList}\item 
 \#define \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+V\+AL}~1500
 \begin{DoxyCompactList}\small\item\em The potentiometer value for a open claw. \end{DoxyCompactList}\item 
-\#define \textbf{ C\+L\+A\+W\+\_\+P}~.\+1
-\begin{DoxyCompactList}\small\item\em The proportional constant for the claw P\+ID controller. \end{DoxyCompactList}\item 
-\#define \textbf{ M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}~50
+\#define \textbf{ M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}~127
 \begin{DoxyCompactList}\small\item\em The max motor vlaue of the claw. \end{DoxyCompactList}\item 
-\#define \textbf{ M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}~-\/50
+\#define \textbf{ M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}~-\/127
 \begin{DoxyCompactList}\small\item\em The min motor vlaue of the claw. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum \textbf{ claw\+\_\+state} \{ \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE}, 
-\textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}
+\textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}, 
+\textbf{ C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE}
  \}\begin{DoxyCompactList}\small\item\em The different states of the claw. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -98,7 +95,7 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 47} of file \textbf{ claw.\+h}.
+Definition at line \textbf{ 31} of file \textbf{ claw.\+h}.
 
 
 
@@ -119,49 +116,7 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 59} of file \textbf{ claw.\+h}.
-
-
-
-Referenced by \textbf{ update\+\_\+claw()}.
-
-\mbox{\label{claw_8h_afa5b4892ddbbfd14068e08422386bc3f}} 
-\index{claw.\+h@{claw.\+h}!C\+L\+A\+W\+\_\+D@{C\+L\+A\+W\+\_\+D}}
-\index{C\+L\+A\+W\+\_\+D@{C\+L\+A\+W\+\_\+D}!claw.\+h@{claw.\+h}}
-\subsubsection{C\+L\+A\+W\+\_\+D}
-{\footnotesize\ttfamily \#define C\+L\+A\+W\+\_\+D~.\+1}
-
-
-
-The derivative constant for the claw P\+ID controller. 
-
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 25} of file \textbf{ claw.\+h}.
-
-
-
-Referenced by \textbf{ update\+\_\+claw()}.
-
-\mbox{\label{claw_8h_a012d8ac544ee8a7a6413cee1b456773c}} 
-\index{claw.\+h@{claw.\+h}!C\+L\+A\+W\+\_\+I@{C\+L\+A\+W\+\_\+I}}
-\index{C\+L\+A\+W\+\_\+I@{C\+L\+A\+W\+\_\+I}!claw.\+h@{claw.\+h}}
-\subsubsection{C\+L\+A\+W\+\_\+I}
-{\footnotesize\ttfamily \#define C\+L\+A\+W\+\_\+I~0}
-
-
-
-The integral constant for the claw P\+ID controller. 
-
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 30} of file \textbf{ claw.\+h}.
+Definition at line \textbf{ 43} of file \textbf{ claw.\+h}.
 
 \mbox{\label{claw_8h_ae42993ee3f6f4a0e47f99060fe736ba0}} 
 \index{claw.\+h@{claw.\+h}!C\+L\+A\+W\+\_\+\+O\+P\+EN@{C\+L\+A\+W\+\_\+\+O\+P\+EN}}
@@ -178,7 +133,7 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 53} of file \textbf{ claw.\+h}.
+Definition at line \textbf{ 37} of file \textbf{ claw.\+h}.
 
 
 
@@ -199,38 +154,13 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 65} of file \textbf{ claw.\+h}.
-
-
-
-Referenced by \textbf{ update\+\_\+claw()}.
-
-\mbox{\label{claw_8h_a1f95cce21c67a6f43850ab9660c2d68a}} 
-\index{claw.\+h@{claw.\+h}!C\+L\+A\+W\+\_\+P@{C\+L\+A\+W\+\_\+P}}
-\index{C\+L\+A\+W\+\_\+P@{C\+L\+A\+W\+\_\+P}!claw.\+h@{claw.\+h}}
-\subsubsection{C\+L\+A\+W\+\_\+P}
-{\footnotesize\ttfamily \#define C\+L\+A\+W\+\_\+P~.\+1}
-
-
-
-The proportional constant for the claw P\+ID controller. 
-
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 20} of file \textbf{ claw.\+h}.
-
-
-
-Referenced by \textbf{ update\+\_\+claw()}.
+Definition at line \textbf{ 49} of file \textbf{ claw.\+h}.
 
 \mbox{\label{claw_8h_ae3be50b28977dac719f086e131ba8fd7}} 
 \index{claw.\+h@{claw.\+h}!M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED@{M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}}
 \index{M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED@{M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}!claw.\+h@{claw.\+h}}
 \subsubsection{M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}
-{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED~50}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED~127}
 
 
 
@@ -241,17 +171,17 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 36} of file \textbf{ claw.\+h}.
+Definition at line \textbf{ 20} of file \textbf{ claw.\+h}.
 
 
 
-Referenced by \textbf{ open\+\_\+claw()}.
+Referenced by \textbf{ open\+\_\+claw()}, and \textbf{ update\+\_\+claw()}.
 
 \mbox{\label{claw_8h_a7306e61a4209c74862aa81d7b3de74e5}} 
 \index{claw.\+h@{claw.\+h}!M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED@{M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}}
 \index{M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED@{M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}!claw.\+h@{claw.\+h}}
 \subsubsection{M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}
-{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED~-\/50}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED~-\/127}
 
 
 
@@ -262,11 +192,11 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 41} of file \textbf{ claw.\+h}.
+Definition at line \textbf{ 25} of file \textbf{ claw.\+h}.
 
 
 
-Referenced by \textbf{ close\+\_\+claw()}.
+Referenced by \textbf{ close\+\_\+claw()}, and \textbf{ update\+\_\+claw()}.
 
 
 
@@ -293,17 +223,22 @@ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE&\\
 C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE@{C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE}!claw.\+h@{claw.\+h}}\index{claw.\+h@{claw.\+h}!C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE@{C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE}}}\mbox{\label{claw_8h_a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650}} 
+C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE&\\
+\hline
+
 \end{DoxyEnumFields}
 
 
-Definition at line \textbf{ 101} of file \textbf{ claw.\+h}.
+Definition at line \textbf{ 85} of file \textbf{ claw.\+h}.
 
 
 \begin{DoxyCode}
-00101                 \{
-00102   CLAW_OPEN_STATE,
-00103   CLAW_CLOSE_STATE
-00104 \};
+00085                 \{
+00086   CLAW_OPEN_STATE,
+00087   CLAW_CLOSE_STATE,
+00088   CLAW_NEUTRAL_STATE
+00089 \};
 \end{DoxyCode}
 
 
@@ -323,7 +258,7 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 67} of file \textbf{ claw.\+c}.
+Definition at line \textbf{ 48} of file \textbf{ claw.\+c}.
 
 
 
@@ -335,9 +270,9 @@ Referenced by \textbf{ autonomous()}.
 
 
 \begin{DoxyCode}
-00067                   \{
-00068   set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED);
-00069 \}
+00048                   \{
+00049   set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED);
+00050 \}
 \end{DoxyCode}
 \mbox{\label{claw_8h_addd2004effae7c94400aed1fe6a90ead}} 
 \index{claw.\+h@{claw.\+h}!get\+Claw\+Ticks@{get\+Claw\+Ticks}}
@@ -352,24 +287,6 @@ Gets the claw position in potentiometer ticks.
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
-
-
-Definition at line \textbf{ 51} of file \textbf{ claw.\+c}.
-
-
-
-References \textbf{ C\+L\+A\+W\+\_\+\+P\+OT}.
-
-
-
-Referenced by \textbf{ update\+\_\+claw()}.
-
-
-\begin{DoxyCode}
-00051                            \{
-00052   \textcolor{keywordflow}{return} analogRead(CLAW_POT);
-00053 \}
-\end{DoxyCode}
 \mbox{\label{claw_8h_a03023ca28f671b9fa7bac07782ccd8c1}} 
 \index{claw.\+h@{claw.\+h}!open\+\_\+claw@{open\+\_\+claw}}
 \index{open\+\_\+claw@{open\+\_\+claw}!claw.\+h@{claw.\+h}}
@@ -385,7 +302,7 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 59} of file \textbf{ claw.\+c}.
+Definition at line \textbf{ 40} of file \textbf{ claw.\+c}.
 
 
 
@@ -397,9 +314,9 @@ Referenced by \textbf{ autonomous()}.
 
 
 \begin{DoxyCode}
-00059                  \{
-00060   set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED);
-00061 \}
+00040                  \{
+00041   set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED);
+00042 \}
 \end{DoxyCode}
 \mbox{\label{claw_8h_a3a57f998b1884d39b0cc786689f7086f}} 
 \index{claw.\+h@{claw.\+h}!set\+\_\+claw\+\_\+motor@{set\+\_\+claw\+\_\+motor}}
@@ -416,7 +333,7 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 43} of file \textbf{ claw.\+c}.
+Definition at line \textbf{ 31} of file \textbf{ claw.\+c}.
 
 
 
@@ -428,9 +345,9 @@ Referenced by \textbf{ update\+\_\+claw()}.
 
 
 \begin{DoxyCode}
-00043                                 \{
-00044   set_motor_immediate(CLAW_MOTOR, v);
-00045 \}
+00031                                 \{
+00032   set_motor_immediate(CLAW_MOTOR, v);
+00033 \}
 \end{DoxyCode}
 \mbox{\label{claw_8h_a0122b78972344264b8a276a559cfce4a}} 
 \index{claw.\+h@{claw.\+h}!update\+\_\+claw@{update\+\_\+claw}}
@@ -447,11 +364,11 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 7} of file \textbf{ claw.\+c}.
+Definition at line \textbf{ 9} of file \textbf{ claw.\+c}.
 
 
 
-References \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+SE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+V\+AL}, \textbf{ C\+L\+A\+W\+\_\+D}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+EN}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+V\+AL}, \textbf{ C\+L\+A\+W\+\_\+P}, \textbf{ get\+Claw\+Ticks()}, and \textbf{ set\+\_\+claw\+\_\+motor()}.
+References \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+SE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+EN}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE}, \textbf{ M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}, \textbf{ M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}, \textbf{ set\+\_\+claw\+\_\+motor()}, and \textbf{ state}.
 
 
 
@@ -459,35 +376,21 @@ Referenced by \textbf{ operator\+Control()}.
 
 
 \begin{DoxyCode}
-00007                    \{
-00008   \textcolor{comment}{//Set the Error used in calculating d}
-00009   \textcolor{keyword}{static} \textcolor{keywordtype}{int} last\_error = 0;
-00010   \textcolor{comment}{//Set the initial claw state to open}
-00011   \textcolor{keyword}{static} \textcolor{keyword}{enum} claw_state state = CLAW_OPEN_STATE;
-00012   \textcolor{comment}{//Listen for input and either close or open the claw}
-00013   \textcolor{keywordflow}{if}(joystickGetDigital(CLAW_CLOSE))\{
-00014     state = CLAW_CLOSE_STATE;
-00015   \}
-00016   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(CLAW_OPEN))\{
-00017     state = CLAW_OPEN_STATE;
-00018   \} \textcolor{keywordflow}{else} \{
-00019     \textcolor{comment}{//set the default motor speed}
-00020     \textcolor{keywordtype}{int} p = 0;
-00021     \textcolor{comment}{//Change the base speed to the difference between the target}
-00022     \textcolor{comment}{// and the current value}
-00023     \textcolor{keywordflow}{if}(state == CLAW_OPEN_STATE) \{
-00024       p = getClawTicks() - CLAW_OPEN_VAL;
-00025     \} \textcolor{keywordflow}{else} \{
-00026       p = getClawTicks() - CLAW_CLOSE_VAL;
-00027     \}
-00028     \textcolor{comment}{//Set the d value to the difference between the current p and the last p}
-00029     \textcolor{keywordtype}{int} d = (p - last\_error);
-00030     \textcolor{comment}{//Set last error for use the next time the function is run}
-00031     last\_error = p;
-00032     \textcolor{comment}{//Construct the final motor speed value}
-00033     \textcolor{keywordtype}{int} motor = CLAW_P * p + CLAW_D * d;
-00034     \textcolor{comment}{//Set the motor speed}
-00035     set_claw_motor(motor);
-00036   \}
-00037 \}
+00009                    \{
+00010   \textcolor{keywordflow}{if}(joystickGetDigital(CLAW_CLOSE)) \{
+00011     state = CLAW_CLOSE_STATE;
+00012   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(CLAW_OPEN)) \{
+00013     state = CLAW_OPEN_STATE;
+00014   \} \textcolor{keywordflow}{else} \{
+00015     state = CLAW_NEUTRAL_STATE;
+00016   \}
+00017 
+00018   \textcolor{keywordflow}{if}(state == CLAW_CLOSE_STATE) \{
+00019     set_claw_motor(MAX_CLAW_SPEED);
+00020   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(state == CLAW_OPEN_STATE) \{
+00021     set_claw_motor(MIN_CLAW_SPEED);
+00022   \} \textcolor{keywordflow}{else} \{
+00023     set_claw_motor(0);
+00024   \}
+00025 \}
 \end{DoxyCode}

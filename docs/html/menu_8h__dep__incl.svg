@@ -17,7 +17,7 @@
 <!-- Node10 -->
 <g id="node2" class="node">
 <title>Node10</title>
-<g id="a_node2"><a xlink:href="$init_8c.html" xlink:title="File for initialization code. ">
+<g id="a_node2"><a xlink:href="init_8c.html" target="_top" xlink:title="File for initialization code. ">
 <polygon fill="none" stroke="#000000" points="0,-.5 0,-18.5 52.6699,-18.5 52.6699,-.5 0,-.5"/>
 <text text-anchor="middle" x="26.335" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/init.c</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node11 -->
 <g id="node3" class="node">
 <title>Node11</title>
-<g id="a_node3"><a xlink:href="$menu_8c.html" xlink:title="src/menu.c">
+<g id="a_node3"><a xlink:href="menu_8c.html" target="_top" xlink:title="src/menu.c">
 <polygon fill="none" stroke="#000000" points="70.8843,-.5 70.8843,-18.5 135.7856,-18.5 135.7856,-.5 70.8843,-.5"/>
 <text text-anchor="middle" x="103.335" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/menu.c</text>
 </a>

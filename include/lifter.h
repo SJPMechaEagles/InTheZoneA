@@ -72,14 +72,33 @@
 **/
 #define LIFTER_DOWN_PARTNER PARTNER, 5, JOY_DOWN
 
+#define SECONDARY_LIFTER_POT_PORT 2
+
+#define SECONDARY_LIFTER_MAX_HEIGHT 3100
+
+#define SECONDARY_LIFTER_MIN_HEIGHT 2000
+
+#define MAIN_LIFTER_POT 1
+
+#define MAIN_LIFTER_MIN_HEIGHT 1700
+
 /**
-* @brief Sets the lifter motors to the given value
+* @brief Sets the secondary lifter motors to the given value
+*
+* @param v value for the lifter motor. Between -128 - 127, any values outside are clamped.
+* @author Chris Jerrett
+* @date 1/6/2018
+**/
+void set_secondary_lifter_motors(const int v);
+
+/**
+* @brief Sets the main lifter motors to the given value
 *
 * @param v value for the lifter motor. Between -128 - 127, any values outside are clamped.
 * @author Chris Jerrett
 * @date 9/9/2017
 **/
-void set_lifter_motors(const int);
+void set_main_lifter_motors(const int v);
 
 /**
 * @brief Sets the lifter positions to the given value
@@ -91,20 +110,36 @@ void set_lifter_motors(const int);
 void set_lifter_pos(int pos);
 
 /**
-* @brief Raises the lifter
+* @brief Raises the main lifter
 *
 * @author Christian DeSimone
 * @date 9/12/2017
 **/
-void raise_lifter();
+void raise_main_lifter();
 
 /**
-* @brief Lowers the lifter
+* @brief Lowers the main lifter
 *
 * @author Christian DeSimone
 * @date 9/12/2017
 **/
-void lower_lifter();
+void lower_main_lifter();
+
+/**
+* @brief Raises the main lifter
+*
+* @author Christian DeSimone
+* @date 9/12/2017
+**/
+void raise_secondary_lifter();
+
+/**
+* @brief Lowers the secondary lifter
+*
+* @author Christian DeSimone
+* @date 9/12/2017
+**/
+void lower_secondary_lifter();
 
 /**
 * @brief Updates the lifter in teleop.
@@ -125,6 +160,15 @@ void update_lifter();
 float lifterPotentiometerToDegree(int x);
 
 /**
+* @brief Gets the value of the lifter pot.
+*
+* @return the value of the pot.
+* @author Chris Jerrett
+* @date 9/9/2017
+**/
+int getLifterTicks();
+
+/**
 * @brief Gets the height of the lifter in inches.
 *
 * @return the height of the lifter.
@@ -133,13 +177,5 @@ float lifterPotentiometerToDegree(int x);
 **/
 double getLifterHeight();
 
-/**
-* @brief Gets the value of the lifter pot.
-*
-* @return the value of the pot.
-* @author Chris Jerrett
-* @date 9/9/2017
-**/
-int getLifterTicks();
 
 #endif

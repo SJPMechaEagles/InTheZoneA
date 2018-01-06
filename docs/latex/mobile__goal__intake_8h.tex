@@ -3,14 +3,16 @@
 {\ttfamily \#include \char`\"{}motor\+\_\+ports.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}slew.\+h\char`\"{}}\newline
-Include dependency graph for mobile\+\_\+goal\+\_\+intake.\+h\+:\nopagebreak
+Include dependency graph for mobile\+\_\+goal\+\_\+intake.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{mobile__goal__intake_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,16 +22,16 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ update\+Intake} ()
+void \textbf{ update\+\_\+intake} ()
 \begin{DoxyCompactList}\small\item\em updates the mobile goal intake in teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\mbox{\label{mobile__goal__intake_8h_ad0232c21c5c1ffda603d2b7d61034118}} 
-\index{mobile\+\_\+goal\+\_\+intake.\+h@{mobile\+\_\+goal\+\_\+intake.\+h}!update\+Intake@{update\+Intake}}
-\index{update\+Intake@{update\+Intake}!mobile\+\_\+goal\+\_\+intake.\+h@{mobile\+\_\+goal\+\_\+intake.\+h}}
-\subsubsection{update\+Intake()}
-{\footnotesize\ttfamily void update\+Intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\label{mobile__goal__intake_8h_a5d7bad8a208988af743fd2e68f111286}} 
+\index{mobile\+\_\+goal\+\_\+intake.\+h@{mobile\+\_\+goal\+\_\+intake.\+h}!update\+\_\+intake@{update\+\_\+intake}}
+\index{update\+\_\+intake@{update\+\_\+intake}!mobile\+\_\+goal\+\_\+intake.\+h@{mobile\+\_\+goal\+\_\+intake.\+h}}
+\subsubsection{update\+\_\+intake()}
+{\footnotesize\ttfamily void update\+\_\+intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -40,11 +42,11 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 19} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
+Definition at line \textbf{ 20} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
 
 
 
-References \textbf{ get\+\_\+mode()}, \textbf{ lower\+\_\+intake()}, \textbf{ M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ P\+A\+R\+T\+N\+ER}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ raise\+\_\+intake()}, and \textbf{ set\+\_\+intake\+\_\+motor()}.
+References \textbf{ lower\+\_\+intake()}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ raise\+\_\+intake()}, and \textbf{ set\+\_\+intake\+\_\+motor()}.
 
 
 
@@ -52,19 +54,13 @@ Referenced by \textbf{ operator\+Control()}.
 
 
 \begin{DoxyCode}
-00019                     \{
-00020   \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_UP) && (get_mode() == 
-      MAIN_CONTROLLER_MODE)
-00021   || joystickGetDigital(PARTNER, 6, JOY\_UP) && get_mode() == 
-      PARTNER_CONTROLLER_MODE) \{
+00020                      \{
+00021   \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_UP)) \{
 00022     raise_intake();
 00023   \}
-00024   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_DOWN) && (get_mode() == 
-      MAIN_CONTROLLER_MODE)
-00025   || joystickGetDigital(PARTNER, 6, JOY\_DOWN) && get_mode() == 
-      PARTNER_CONTROLLER_MODE)\{
-00026     lower_intake();
-00027   \}
-00028   \textcolor{keywordflow}{else} set_intake_motor(0);
-00029 \}
+00024   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_DOWN))\{
+00025     lower_intake();
+00026   \}
+00027   \textcolor{keywordflow}{else} set_intake_motor(0);
+00028 \}
 \end{DoxyCode}

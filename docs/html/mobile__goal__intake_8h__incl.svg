@@ -18,7 +18,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="$motor__ports_8h.html" xlink:title="The motor port definitionsMacros for the different motors ports. ">
+<g id="a_node2"><a xlink:href="motor__ports_8h.html" target="_top" xlink:title="The motor port definitionsMacros for the different motors ports. ">
 <polygon fill="none" stroke="#000000" points="0,-110.5 0,-128.5 77.6943,-128.5 77.6943,-110.5 0,-110.5"/>
 <text text-anchor="middle" x="38.8472" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">motor_ports.h</text>
 </a>
@@ -33,7 +33,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="$controller_8h.html" xlink:title="controller definitions, macros and functions to assist with usig the vex controllers. ">
+<g id="a_node3"><a xlink:href="controller_8h.html" target="_top" xlink:title="controller definitions, macros and functions to assist with usig the vex controllers. ">
 <polygon fill="none" stroke="#000000" points="95.3867,-110.5 95.3867,-128.5 160.3076,-128.5 160.3076,-110.5 95.3867,-110.5"/>
 <text text-anchor="middle" x="127.8472" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">controller.h</text>
 </a>
@@ -48,7 +48,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="$slew_8h.html" xlink:title="Contains the slew rate controller wrapper for the motors. ">
+<g id="a_node7"><a xlink:href="slew_8h.html" target="_top" xlink:title="Contains the slew rate controller wrapper for the motors. ">
 <polygon fill="none" stroke="#000000" points="177.9482,-110.5 177.9482,-128.5 221.7461,-128.5 221.7461,-110.5 177.9482,-110.5"/>
 <text text-anchor="middle" x="199.8472" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">slew.h</text>
 </a>
@@ -63,7 +63,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="$vmath_8h.html" xlink:title="Vex Specific Math Functions, includes: Cartesian to polar cordinates. ">
+<g id="a_node4"><a xlink:href="vmath_8h.html" target="_top" xlink:title="Vex Specific Math Functions, includes: Cartesian to polar cordinates. ">
 <polygon fill="none" stroke="#000000" points="72.0615,-55.5 72.0615,-73.5 123.6328,-73.5 123.6328,-55.5 72.0615,-55.5"/>
 <text text-anchor="middle" x="97.8472" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">vmath.h</text>
 </a>
@@ -114,7 +114,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="$vlib_8h.html" xlink:title="Contains misc helpful functions. ">
+<g id="a_node8"><a xlink:href="vlib_8h.html" target="_top" xlink:title="Contains misc helpful functions. ">
 <polygon fill="none" stroke="#000000" points="180.1748,-55.5 180.1748,-73.5 219.5195,-73.5 219.5195,-55.5 180.1748,-55.5"/>
 <text text-anchor="middle" x="199.8472" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">vlib.h</text>
 </a>

@@ -13,7 +13,8 @@ File for operator control code.
 {\ttfamily \#include \char`\"{}claw.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}mobile\+\_\+goal\+\_\+intake.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}vmath.\+h\char`\"{}}\newline
-Include dependency graph for opcontrol.\+c\+:\nopagebreak
+Include dependency graph for opcontrol.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -53,26 +54,30 @@ If no V\+EX Competition Switch or Field Management system is plugged in, the V\+
 
 Code running in this task can take almost any action, as the V\+EX Joystick is available and the scheduler is operational. However, proper use of delay() or task\+Delay\+Until() is highly recommended to give other tasks (including system tasks such as updating L\+C\+Ds) time to run.
 
-This task should never exit; it should end with some kind of infinite loop, even if empty. 
+This task should never exit; its should end with some kind of infinite loop, even if empty. 
 
-Definition at line \textbf{ 40} of file \textbf{ opcontrol.\+c}.
+Definition at line \textbf{ 42} of file \textbf{ opcontrol.\+c}.
 
 
 
-References \textbf{ init\+\_\+slew()}, \textbf{ update\+\_\+claw()}, \textbf{ update\+\_\+control()}, \textbf{ update\+\_\+drive\+\_\+motors()}, \textbf{ update\+\_\+lifter()}, and \textbf{ update\+Intake()}.
+References \textbf{ init\+\_\+slew()}, \textbf{ update\+\_\+claw()}, \textbf{ update\+\_\+drive\+\_\+motors()}, \textbf{ update\+\_\+intake()}, and \textbf{ update\+\_\+lifter()}.
 
 
 \begin{DoxyCode}
-00040                        \{
-00041     init_slew();
-00042     delay(10);
-00043     \textcolor{keywordflow}{while} (1) \{
-00044         update_drive_motors();
-00045         update_lifter();
-00046         update_claw();
-00047         updateIntake();
-00048         update_control();
-00049         delay(25);
-00050     \}
-00051 \}
+00042                        \{
+00043 
+00044     init_slew();
+00045     delay(10);
+00046     \textcolor{keywordflow}{while} (1) \{
+00047         update_claw();
+00048         delay(5);
+00049         update_intake();
+00050         delay(5);
+00051         update_lifter();
+00052         delay(5);
+00053         update_drive_motors();
+00054         delay(25);
+00055 
+00056     \}
+00057 \}
 \end{DoxyCode}

@@ -17,7 +17,7 @@
 <!-- Node6 -->
 <g id="node2" class="node">
 <title>Node6</title>
-<g id="a_node2"><a xlink:href="$drive_8h.html" xlink:title="Drive base definitions and enumerations. ">
+<g id="a_node2"><a xlink:href="drive_8h.html" target="_top" xlink:title="Drive base definitions and enumerations. ">
 <polygon fill="none" stroke="#000000" points="135.8745,-165.5 135.8745,-183.5 216.3569,-183.5 216.3569,-165.5 135.8745,-165.5"/>
 <text text-anchor="middle" x="176.1157" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/drive.h</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node9 -->
 <g id="node5" class="node">
 <title>Node9</title>
-<g id="a_node5"><a xlink:href="$lifter_8h.html" xlink:title="Declarations and macros for controlling and manipulating the lifter. ">
+<g id="a_node5"><a xlink:href="lifter_8h.html" target="_top" xlink:title="Declarations and macros for controlling and manipulating the lifter. ">
 <polygon fill="none" stroke="#000000" points="69.5396,-110.5 69.5396,-128.5 146.6919,-128.5 146.6919,-110.5 69.5396,-110.5"/>
 <text text-anchor="middle" x="108.1157" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/lifter.h</text>
 </a>
@@ -47,7 +47,7 @@
 <!-- Node13 -->
 <g id="node9" class="node">
 <title>Node13</title>
-<g id="a_node9"><a xlink:href="$mobile__goal__intake_8c.html" xlink:title="src/mobile_goal_intake.c">
+<g id="a_node9"><a xlink:href="mobile__goal__intake_8c.html" target="_top" xlink:title="src/mobile_goal_intake.c">
 <polygon fill="none" stroke="#000000" points="234.0864,-165.5 234.0864,-183.5 360.145,-183.5 360.145,-165.5 234.0864,-165.5"/>
 <text text-anchor="middle" x="297.1157" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/mobile_goal_intake.c</text>
 </a>
@@ -62,7 +62,7 @@
 <!-- Node14 -->
 <g id="node10" class="node">
 <title>Node14</title>
-<g id="a_node10"><a xlink:href="$partner_8c.html" xlink:title="src/partner.c">
+<g id="a_node10"><a xlink:href="partner_8c.html" target="_top" xlink:title="src/partner.c">
 <polygon fill="none" stroke="#000000" points="378.6035,-165.5 378.6035,-183.5 449.6279,-183.5 449.6279,-165.5 378.6035,-165.5"/>
 <text text-anchor="middle" x="414.1157" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/partner.c</text>
 </a>
@@ -77,7 +77,7 @@
 <!-- Node7 -->
 <g id="node3" class="node">
 <title>Node7</title>
-<g id="a_node3"><a xlink:href="$auto_8h.html" xlink:title="Autonomous declarations and macros. ">
+<g id="a_node3"><a xlink:href="auto_8h.html" target="_top" xlink:title="Autonomous declarations and macros. ">
 <polygon fill="none" stroke="#000000" points="75.9805,-55.5 75.9805,-73.5 154.251,-73.5 154.251,-55.5 75.9805,-55.5"/>
 <text text-anchor="middle" x="115.1157" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/auto.h</text>
 </a>
@@ -98,7 +98,7 @@
 <!-- Node11 -->
 <g id="node7" class="node">
 <title>Node11</title>
-<g id="a_node7"><a xlink:href="$opcontrol_8c.html" xlink:title="File for operator control code. ">
+<g id="a_node7"><a xlink:href="opcontrol_8c.html" target="_top" xlink:title="File for operator control code. ">
 <polygon fill="none" stroke="#000000" points="172.6035,-55.5 172.6035,-73.5 253.6279,-73.5 253.6279,-55.5 172.6035,-55.5"/>
 <text text-anchor="middle" x="213.1157" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/opcontrol.c</text>
 </a>
@@ -113,7 +113,7 @@
 <!-- Node12 -->
 <g id="node8" class="node">
 <title>Node12</title>
-<g id="a_node8"><a xlink:href="$drive_8c.html" xlink:title="src/drive.c">
+<g id="a_node8"><a xlink:href="drive_8c.html" target="_top" xlink:title="src/drive.c">
 <polygon fill="none" stroke="#000000" points="241.335,-110.5 241.335,-128.5 302.8965,-128.5 302.8965,-110.5 241.335,-110.5"/>
 <text text-anchor="middle" x="272.1157" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/drive.c</text>
 </a>
@@ -128,7 +128,7 @@
 <!-- Node8 -->
 <g id="node4" class="node">
 <title>Node8</title>
-<g id="a_node4"><a xlink:href="$auto_8c.html" xlink:title="File for autonomous code. ">
+<g id="a_node4"><a xlink:href="auto_8c.html" target="_top" xlink:title="File for autonomous code. ">
 <polygon fill="none" stroke="#000000" points="85.4409,-.5 85.4409,-18.5 144.7905,-18.5 144.7905,-.5 85.4409,-.5"/>
 <text text-anchor="middle" x="115.1157" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/auto.c</text>
 </a>
@@ -149,7 +149,7 @@
 <!-- Node10 -->
 <g id="node6" class="node">
 <title>Node10</title>
-<g id="a_node6"><a xlink:href="$lifter_8c.html" xlink:title="src/lifter.c">
+<g id="a_node6"><a xlink:href="lifter_8c.html" target="_top" xlink:title="src/lifter.c">
 <polygon fill="none" stroke="#000000" points="0,-55.5 0,-73.5 58.2314,-73.5 58.2314,-55.5 0,-55.5"/>
 <text text-anchor="middle" x="29.1157" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/lifter.c</text>
 </a>

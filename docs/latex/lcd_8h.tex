@@ -6,14 +6,16 @@ L\+CD wrapper functions and macros.
 
 
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
-Include dependency graph for lcd.\+h\+:\nopagebreak
+Include dependency graph for lcd.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=152pt]{lcd_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -52,7 +54,7 @@ void \textbf{ lcd\+\_\+print} (unsigned int line, const char $\ast$str)
 \begin{DoxyCompactList}\small\item\em prints a string to a line on the lcd \end{DoxyCompactList}\item 
 void \textbf{ lcd\+\_\+printf} (unsigned int line, const char $\ast$format\+\_\+str,...)
 \begin{DoxyCompactList}\small\item\em prints a formated string to a line on the lcd. Smilar to printf \end{DoxyCompactList}\item 
-void \textbf{ lcd\+\_\+set\+\_\+backlight} (bool state)
+void \textbf{ lcd\+\_\+set\+\_\+backlight} (bool \textbf{ state})
 \begin{DoxyCompactList}\small\item\em sets the backlight of the lcd \end{DoxyCompactList}\item 
 void \textbf{ promt\+\_\+confirmation} (const char $\ast$confirm\+\_\+text)
 \begin{DoxyCompactList}\small\item\em Prompts the user to confirm a string. User must press middle button to confirm. Function is not thread safe and will stall a thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -195,19 +197,23 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 60} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 61} of file \textbf{ lcd.\+c}.
 
 
 
-References \textbf{ lcd\+\_\+port}.
+References \textbf{ lcd\+\_\+clear()}, and \textbf{ lcd\+\_\+port}.
+
+
+
+Referenced by \textbf{ initialize()}.
 
 
 \begin{DoxyCode}
-00060                               \{
-00061   lcdInit(lcd);
-00062   lcdClear(lcd);
-00063   lcd_port = lcd;
-00064 \}
+00061                               \{
+00062   lcd_port = lcd;
+00063   lcdInit(lcd);
+00064   lcd_clear();
+00065 \}
 \end{DoxyCode}
 \mbox{\label{lcd_8h_a35c08b1fa742e650f4873939707b893b}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+clear@{lcd\+\_\+clear}}
@@ -227,18 +233,22 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 46} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 47} of file \textbf{ lcd.\+c}.
 
 
 
 References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
 
+
+Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ init\+\_\+main\+\_\+lcd()}.
+
+
 \begin{DoxyCode}
-00046                  \{
-00047   lcd_assert();
-00048   lcdClear(lcd_port);
-00049 \}
+00047                  \{
+00048   lcd_assert();
+00049   lcdClear(lcd_port);
+00050 \}
 \end{DoxyCode}
 \mbox{\label{lcd_8h_ac7b3225ccc82fcbe067ba9da934f010d}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+get\+\_\+pressed\+\_\+buttons@{lcd\+\_\+get\+\_\+pressed\+\_\+buttons}}
@@ -264,7 +274,7 @@ Chris Jerrett
 \end{DoxySeeAlso}
 
 
-Definition at line \textbf{ 27} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 28} of file \textbf{ lcd.\+c}.
 
 
 
@@ -276,19 +286,19 @@ Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ promt\+\_\+confirmatio
 
 
 \begin{DoxyCode}
-00027                                      \{
-00028   lcd_assert();
-00029   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} btn\_binary = lcdReadButtons(lcd_port);
-00030   \textcolor{keywordtype}{bool} left = btn\_binary & 0x1;\textcolor{comment}{//0001}
-00031   \textcolor{keywordtype}{bool} middle = btn\_binary & 0x2;\textcolor{comment}{//0010}
-00032   \textcolor{keywordtype}{bool} right = btn\_binary & 0x4;\textcolor{comment}{//0100}
-00033   lcd_buttons btns;
-00034   btns.left = left ? PRESSED : RELEASED;
-00035   btns.middle = middle ? PRESSED : RELEASED;
-00036   btns.right = right ? PRESSED : RELEASED;
-00037 
-00038   \textcolor{keywordflow}{return} btns;
-00039 \}
+00028                                      \{
+00029   lcd_assert();
+00030   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} btn\_binary = lcdReadButtons(lcd_port);
+00031   \textcolor{keywordtype}{bool} left = btn\_binary & 0x1;\textcolor{comment}{//0001}
+00032   \textcolor{keywordtype}{bool} middle = btn\_binary & 0x2;\textcolor{comment}{//0010}
+00033   \textcolor{keywordtype}{bool} right = btn\_binary & 0x4;\textcolor{comment}{//0100}
+00034   lcd_buttons btns;
+00035   btns.left = left ? PRESSED : RELEASED;
+00036   btns.middle = middle ? PRESSED : RELEASED;
+00037   btns.right = right ? PRESSED : RELEASED;
+00038 
+00039   \textcolor{keywordflow}{return} btns;
+00040 \}
 \end{DoxyCode}
 \mbox{\label{lcd_8h_adabd3f7cdda45119604b488caf22bba8}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+print@{lcd\+\_\+print}}
@@ -315,7 +325,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 73} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 74} of file \textbf{ lcd.\+c}.
 
 
 
@@ -327,10 +337,10 @@ Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ promt\+\_\+confirmatio
 
 
 \begin{DoxyCode}
-00073                                                    \{
-00074   lcd_assert();
-00075   lcdSetText(lcd_port, line, str);
-00076 \}
+00074                                                    \{
+00075   lcd_assert();
+00076   lcdSetText(lcd_port, line, str);
+00077 \}
 \end{DoxyCode}
 \mbox{\label{lcd_8h_aa0d4ca88701dfecf98796e2028482b69}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+printf@{lcd\+\_\+printf}}
@@ -357,7 +367,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 85} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 86} of file \textbf{ lcd.\+c}.
 
 
 
@@ -365,10 +375,10 @@ References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
 
 \begin{DoxyCode}
-00085                                                                 \{
-00086   lcd_assert();
-00087   lcdPrint(lcd_port, line, format\_str);
-00088 \}
+00086                                                                 \{
+00087   lcd_assert();
+00088   lcdPrint(lcd_port, line, format\_str);
+00089 \}
 \end{DoxyCode}
 \mbox{\label{lcd_8h_a245902a4d48a6d9bd1ab308bf9b7e6b5}} 
 \index{lcd.\+h@{lcd.\+h}!lcd\+\_\+set\+\_\+backlight@{lcd\+\_\+set\+\_\+backlight}}
@@ -393,7 +403,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 96} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 97} of file \textbf{ lcd.\+c}.
 
 
 
@@ -401,10 +411,10 @@ References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
 
 \begin{DoxyCode}
-00096                                    \{
-00097   lcd_assert();
-00098   lcdSetBacklight(lcd_port, state);
-00099 \}
+00097                                    \{
+00098   lcd_assert();
+00099   lcdSetBacklight(lcd_port, state);
+00100 \}
 \end{DoxyCode}
 \mbox{\label{lcd_8h_a99f4683e1990edf624ab216bf327cba4}} 
 \index{lcd.\+h@{lcd.\+h}!promt\+\_\+confirmation@{promt\+\_\+confirmation}}
@@ -429,7 +439,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 110} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 111} of file \textbf{ lcd.\+c}.
 
 
 
@@ -437,11 +447,11 @@ References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+
 
 
 \begin{DoxyCode}
-00110                                                   \{
-00111   lcd_assert();
-00112   lcd_print(1, confirm\_text);
-00113   \textcolor{keywordflow}{while}(lcd_get_pressed_buttons().middle != PRESSED)\{
-00114     delay(200);
-00115   \}
-00116 \}
+00111                                                   \{
+00112   lcd_assert();
+00113   lcd_print(1, confirm\_text);
+00114   \textcolor{keywordflow}{while}(lcd_get_pressed_buttons().middle != PRESSED)\{
+00115     delay(200);
+00116   \}
+00117 \}
 \end{DoxyCode}

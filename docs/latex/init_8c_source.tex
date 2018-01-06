@@ -39,8 +39,11 @@
 00045 \textcolor{comment}{ * can be implemented in this task if desired.}
 00046 \textcolor{comment}{ */}
 00047 \textcolor{keywordtype}{void} initialize() \{
-00048   \textcolor{keywordtype}{int} c = imeInitializeAll();
-00049   setTeamName(\textcolor{stringliteral}{"9228A"});
-00050   printf(\textcolor{stringliteral}{"Counts : %d\(\backslash\)n"}, c);
-00051 \}
+00048   init_main_lcd(uart1);
+00049   info(\textcolor{stringliteral}{"LCD Init"});
+00050   menu_t *t = init_menu_var(STRING_TYPE, \textcolor{stringliteral}{"TEST Menu"}, 5, \textcolor{stringliteral}{"1"},\textcolor{stringliteral}{"2"},\textcolor{stringliteral}{"3"},\textcolor{stringliteral}{"4"},\textcolor{stringliteral}{"5"});
+00051   init_error(\textcolor{keyword}{true}, uart2);
+00052   display_menu(t);
+00053   setTeamName(\textcolor{stringliteral}{"9228A"});
+00054 \}
 \end{DoxyCode}

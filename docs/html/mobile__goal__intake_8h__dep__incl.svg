@@ -18,7 +18,7 @@
 <!-- Node10 -->
 <g id="node2" class="node">
 <title>Node10</title>
-<g id="a_node2"><a xlink:href="$mobile__goal__intake_8c.html" xlink:title="src/mobile_goal_intake.c">
+<g id="a_node2"><a xlink:href="mobile__goal__intake_8c.html" target="_top" xlink:title="src/mobile_goal_intake.c">
 <polygon fill="none" stroke="#000000" points="0,-.5 0,-18.5 126.0586,-18.5 126.0586,-.5 0,-.5"/>
 <text text-anchor="middle" x="63.0293" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/mobile_goal_intake.c</text>
 </a>
@@ -33,7 +33,7 @@
 <!-- Node11 -->
 <g id="node3" class="node">
 <title>Node11</title>
-<g id="a_node3"><a xlink:href="$opcontrol_8c.html" xlink:title="File for operator control code. ">
+<g id="a_node3"><a xlink:href="opcontrol_8c.html" target="_top" xlink:title="File for operator control code. ">
 <polygon fill="none" stroke="#000000" points="144.5171,-.5 144.5171,-18.5 225.5415,-18.5 225.5415,-.5 144.5171,-.5"/>
 <text text-anchor="middle" x="185.0293" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/opcontrol.c</text>
 </a>

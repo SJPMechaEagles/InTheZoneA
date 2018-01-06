@@ -46,10 +46,9 @@ void initializeIO() {
  */
 void initialize() {
   init_main_lcd(uart1);
-  menu_t *t = init_menu_int(INT_TYPE, 0, 1000, 500, "const char *prompt");//, "Kill Gavin?", 3, "yes", "hell yes", "absolutely");
+  info("LCD Init");
+  menu_t *t = init_menu_var(STRING_TYPE, "TEST Menu", 5, "1","2","3","4","5");
+  init_error(true, uart2);
   display_menu(t);
-
   setTeamName("9228A");
-  printf("TEST\n");
-  delay(50000);
 }

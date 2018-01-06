@@ -17,7 +17,7 @@
 <!-- Node3 -->
 <g id="node2" class="node">
 <title>Node3</title>
-<g id="a_node2"><a xlink:href="$localization_8h.html" xlink:title="Declarations and macros for determining the location of the robot. [WIP]. ">
+<g id="a_node2"><a xlink:href="localization_8h.html" target="_top" xlink:title="Declarations and macros for determining the location of the robot. [WIP]. ">
 <polygon fill="none" stroke="#000000" points="41.5396,-55.5 41.5396,-73.5 149.8198,-73.5 149.8198,-55.5 41.5396,-55.5"/>
 <text text-anchor="middle" x="95.6797" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">include/localization.h</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node6 -->
 <g id="node5" class="node">
 <title>Node6</title>
-<g id="a_node5"><a xlink:href="$encoders_8c.html" xlink:title="src/encoders.c">
+<g id="a_node5"><a xlink:href="encoders_8c.html" target="_top" xlink:title="src/encoders.c">
 <polygon fill="none" stroke="#000000" points="168.1675,-55.5 168.1675,-73.5 249.1919,-73.5 249.1919,-55.5 168.1675,-55.5"/>
 <text text-anchor="middle" x="208.6797" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/encoders.c</text>
 </a>
@@ -47,7 +47,7 @@
 <!-- Node7 -->
 <g id="node6" class="node">
 <title>Node7</title>
-<g id="a_node6"><a xlink:href="$init_8c.html" xlink:title="File for initialization code. ">
+<g id="a_node6"><a xlink:href="init_8c.html" target="_top" xlink:title="File for initialization code. ">
 <polygon fill="none" stroke="#000000" points="267.3447,-55.5 267.3447,-73.5 320.0146,-73.5 320.0146,-55.5 267.3447,-55.5"/>
 <text text-anchor="middle" x="293.6797" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/init.c</text>
 </a>
@@ -62,7 +62,7 @@
 <!-- Node4 -->
 <g id="node3" class="node">
 <title>Node4</title>
-<g id="a_node3"><a xlink:href="$localization_8c.html" xlink:title="src/localization.c">
+<g id="a_node3"><a xlink:href="localization_8c.html" target="_top" xlink:title="src/localization.c">
 <polygon fill="none" stroke="#000000" points="0,-.5 0,-18.5 89.3594,-18.5 89.3594,-.5 0,-.5"/>
 <text text-anchor="middle" x="44.6797" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/localization.c</text>
 </a>
@@ -77,7 +77,7 @@
 <!-- Node5 -->
 <g id="node4" class="node">
 <title>Node5</title>
-<g id="a_node4"><a xlink:href="$opcontrol_8c.html" xlink:title="File for operator control code. ">
+<g id="a_node4"><a xlink:href="opcontrol_8c.html" target="_top" xlink:title="File for operator control code. ">
 <polygon fill="none" stroke="#000000" points="107.1675,-.5 107.1675,-18.5 188.1919,-18.5 188.1919,-.5 107.1675,-.5"/>
 <text text-anchor="middle" x="147.6797" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/opcontrol.c</text>
 </a>

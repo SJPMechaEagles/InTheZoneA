@@ -6,6 +6,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "controller.h", "controller_8h.html", "controller_8h" ],
     [ "drive.h", "drive_8h.html", "drive_8h" ],
     [ "encoders.h", "encoders_8h.html", "encoders_8h" ],
+    [ "gyro.h", "gyro_8h.html", "gyro_8h" ],
     [ "lcd.h", "lcd_8h.html", "lcd_8h" ],
     [ "lifter.h", "lifter_8h.html", "lifter_8h" ],
     [ "localization.h", "localization_8h.html", "localization_8h" ],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['magnitue',['magnitue',['../structpolar__cord.html#aec2e25fecc82af176f0fcd23f1e02f0c',1,'polar_cord']]],
+  ['main_5fgyro',['main_gyro',['../gyro_8c.html#ab848a00cddfc20556aef426cf11f9a85',1,'gyro.c']]],
   ['max',['max',['../structmenu__t.html#ace9cbaecd7bf311be0ef230da657f406',1,'menu_t']]],
   ['max_5ff',['max_f',['../structmenu__t.html#a14b11d0a7610484462c8a6e93068a2c1',1,'menu_t']]],
   ['middle',['middle',['../structlcd__buttons.html#a293342810ac56f73979b08f144d6e6b9',1,'lcd_buttons']]],

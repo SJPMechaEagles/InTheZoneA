@@ -1,0 +1,28 @@
+\section{test\+Math.\+py}
+\label{test__code_2test_math_8py_source}\index{test\+\_\+code/test\+Math.\+py@{test\+\_\+code/test\+Math.\+py}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{from} math \textcolor{keyword}{import} *
+00002 
+00003 \textcolor{keyword}{def }test(l1, l2):
+00004     print(l1, l2)
+00005     print(\textcolor{stringliteral}{"\(\backslash\)n"})
+00006     theta = l1-l2
+00007     x = ((l2)/(theta) + .5) - ((l2)/(theta) + .5) * cos(theta)
+00008     y = ((l2)/(theta) + .5) * sin(theta)
+00009     print(x)
+00010     print(y)
+00011     print(degrees(theta))
+00012     print(\textcolor{stringliteral}{"\(\backslash\)n"})
+00013     print(\textcolor{stringliteral}{"\(\backslash\)n"})
+00014 
+00015 test(1.0, .5)
+00016 test(.5, 1.0)
+00017 test(2.0, .5)
+00018 test(.5, 2.0)
+00019 test(1.0, 3.5)
+00020 test(3.5, 1.0)
+00021 test(5, .3) 
+00022 test(.3, 5)
+00023 test(1.0, 0)
+\end{DoxyCode}

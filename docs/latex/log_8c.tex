@@ -1,11 +1,12 @@
 \section{src/log.c File Reference}
 \label{log_8c}\index{src/log.\+c@{src/log.\+c}}
 {\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
-Include dependency graph for log.\+c\+:\nopagebreak
+Include dependency graph for log.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{log_8c__incl}
+\includegraphics[width=149pt]{log_8c__incl}
 \end{center}
 \end{figure}
 \subsection*{Functions}
@@ -53,7 +54,7 @@ Only will print and display if log\+\_\+level is greater than info \begin{DoxySe
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 75} of file \textbf{ log.\+c}.
+Definition at line \textbf{ 77} of file \textbf{ log.\+c}.
 
 
 
@@ -65,11 +66,11 @@ Referenced by \textbf{ set\+\_\+motor\+\_\+immediate()}, and \textbf{ set\+\_\+m
 
 
 \begin{DoxyCode}
-00075                                       \{
-00076   \textcolor{keywordflow}{if}(log_level>ERROR) \{
-00077     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
-00078   \}
-00079 \}
+00077                                       \{
+00078   \textcolor{keywordflow}{if}(log_level>ERROR) \{
+00079     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
+00080   \}
+00081 \}
 \end{DoxyCode}
 \mbox{\label{log_8c_a8e5bb8a2a372f5b066ff7af7044584c1}} 
 \index{log.\+c@{log.\+c}!error@{error}}
@@ -97,7 +98,7 @@ Chris Jerrett
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 37} of file \textbf{ log.\+c}.
+Definition at line \textbf{ 39} of file \textbf{ log.\+c}.
 
 
 
@@ -109,10 +110,10 @@ Referenced by \textbf{ create\+\_\+menu()}.
 
 
 \begin{DoxyCode}
-00037                                       \{
-00038   \textcolor{keywordflow}{if}(log_level>NONE)
-00039     log_info(\textcolor{stringliteral}{"ERROR"}, error\_message);
-00040 \}
+00039                                       \{
+00040   \textcolor{keywordflow}{if}(log_level>NONE)
+00041     log_info(\textcolor{stringliteral}{"ERROR"}, error\_message);
+00042 \}
 \end{DoxyCode}
 \mbox{\label{log_8c_a1606d750e1bb8de9f9e917172bba3382}} 
 \index{log.\+c@{log.\+c}!info@{info}}
@@ -134,23 +135,23 @@ Only will print and display if log\+\_\+level is greater than E\+R\+R\+OR \begin
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 62} of file \textbf{ log.\+c}.
+Definition at line \textbf{ 64} of file \textbf{ log.\+c}.
 
 
 
-References \textbf{ E\+R\+R\+OR}, and \textbf{ log\+\_\+level}.
+References \textbf{ E\+R\+R\+OR}, \textbf{ log\+\_\+info()}, and \textbf{ log\+\_\+level}.
 
 
 
-Referenced by \textbf{ init\+\_\+slew()}.
+Referenced by \textbf{ init\+\_\+slew()}, and \textbf{ initialize()}.
 
 
 \begin{DoxyCode}
-00062                                     \{
-00063   \textcolor{keywordflow}{if}(log_level>ERROR) \{
-00064     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, info\_message);
-00065   \}
-00066 \}
+00064                                     \{
+00065   \textcolor{keywordflow}{if}(log_level>ERROR) \{
+00066     log_info(\textcolor{stringliteral}{"INFO"}, info\_message);
+00067   \}
+00068 \}
 \end{DoxyCode}
 \mbox{\label{log_8c_a163f389b4f5cf440a807d8fb48aaa006}} 
 \index{log.\+c@{log.\+c}!init\+\_\+error@{init\+\_\+error}}
@@ -184,13 +185,19 @@ Definition at line \textbf{ 14} of file \textbf{ log.\+c}.
 References \textbf{ log\+\_\+lcd}.
 
 
+
+Referenced by \textbf{ initialize()}.
+
+
 \begin{DoxyCode}
 00014                                          \{
 00015   \textcolor{keywordflow}{if}(use\_lcd) \{
 00016     lcdInit(lcd);
 00017     log_lcd = lcd;
-00018   \}
-00019 \}
+00018     lcdClear(log_lcd);
+00019     printf(\textcolor{stringliteral}{"LCD Init\(\backslash\)n"});
+00020   \}
+00021 \}
 \end{DoxyCode}
 \mbox{\label{log_8c_afff22aff6749311a684a559cac3ac8bd}} 
 \index{log.\+c@{log.\+c}!log\+\_\+info@{log\+\_\+info}}
@@ -200,7 +207,7 @@ References \textbf{ log\+\_\+lcd}.
 
 
 
-Definition at line \textbf{ 21} of file \textbf{ log.\+c}.
+Definition at line \textbf{ 23} of file \textbf{ log.\+c}.
 
 
 
@@ -208,17 +215,17 @@ References \textbf{ B\+O\+T\+T\+O\+M\+\_\+\+R\+OW}, \textbf{ log\+\_\+lcd}, and 
 
 
 
-Referenced by \textbf{ error()}, and \textbf{ warning()}.
+Referenced by \textbf{ error()}, \textbf{ info()}, and \textbf{ warning()}.
 
 
 \begin{DoxyCode}
-00021                                                       \{
-00022   printf(\textcolor{stringliteral}{"[%s]: %s\(\backslash\)n"}, s, mess);
-00023   lcdSetBacklight(log_lcd, \textcolor{keyword}{true});
-00024   lcdClear(log_lcd);
-00025   lcdPrint(log_lcd, TOP_ROW, s);
-00026   lcdPrint(log_lcd, BOTTOM_ROW, mess);
-00027 \}
+00023                                                       \{
+00024   printf(\textcolor{stringliteral}{"[%s]: %s\(\backslash\)n"}, s, mess);
+00025   lcdSetBacklight(log_lcd, \textcolor{keyword}{false});
+00026   lcdClear(log_lcd);
+00027   lcdPrint(log_lcd, TOP_ROW, s);
+00028   lcdPrint(log_lcd, BOTTOM_ROW, mess);
+00029 \}
 \end{DoxyCode}
 \mbox{\label{log_8c_a0bec2cf5fff7f607bc510b74aba9887c}} 
 \index{log.\+c@{log.\+c}!warning@{warning}}
@@ -246,7 +253,7 @@ Chris Jerrett
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 50} of file \textbf{ log.\+c}.
+Definition at line \textbf{ 52} of file \textbf{ log.\+c}.
 
 
 
@@ -258,10 +265,10 @@ Referenced by \textbf{ init\+\_\+slew()}.
 
 
 \begin{DoxyCode}
-00050                                           \{
-00051   \textcolor{keywordflow}{if}(log_level>WARNING)
-00052     log_info(\textcolor{stringliteral}{"WARNING"}, warning\_message);
-00053 \}
+00052                                           \{
+00053   \textcolor{keywordflow}{if}(log_level>WARNING)
+00054     log_info(\textcolor{stringliteral}{"WARNING"}, warning\_message);
+00055 \}
 \end{DoxyCode}
 
 

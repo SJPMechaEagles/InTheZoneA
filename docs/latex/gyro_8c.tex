@@ -1,0 +1,86 @@
+\section{src/gyro.c File Reference}
+\label{gyro_8c}\index{src/gyro.\+c@{src/gyro.\+c}}
+{\ttfamily \#include \char`\"{}gyro.\+h\char`\"{}}\newline
+Include dependency graph for gyro.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{gyro_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \textbf{ get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity} ()
+\item 
+bool \textbf{ init\+\_\+main\+\_\+gyro} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static Gyro \textbf{ main\+\_\+gyro}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{gyro_8c_aec0963ebe3eb6cdfd7edaf486bbb0a87}} 
+\index{gyro.\+c@{gyro.\+c}!get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity@{get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity}}
+\index{get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity@{get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity}!gyro.\+c@{gyro.\+c}}
+\subsubsection{get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity()}
+{\footnotesize\ttfamily float get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 11} of file \textbf{ gyro.\+c}.
+
+
+
+References \textbf{ G\+Y\+R\+O\+\_\+\+P\+O\+RT}.
+
+
+\begin{DoxyCode}
+00011                                        \{
+00012   uint32\_t port = GYRO_PORT;
+00013   int32\_t reading = (int32\_t)analogReadCalibratedHR(port + 1);
+00014     \textcolor{keywordflow}{return} 0;
+00015 \}
+\end{DoxyCode}
+\mbox{\label{gyro_8c_a47c0a78a867be91a28e278bf433d699c}} 
+\index{gyro.\+c@{gyro.\+c}!init\+\_\+main\+\_\+gyro@{init\+\_\+main\+\_\+gyro}}
+\index{init\+\_\+main\+\_\+gyro@{init\+\_\+main\+\_\+gyro}!gyro.\+c@{gyro.\+c}}
+\subsubsection{init\+\_\+main\+\_\+gyro()}
+{\footnotesize\ttfamily bool init\+\_\+main\+\_\+gyro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 5} of file \textbf{ gyro.\+c}.
+
+
+
+References \textbf{ G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}, \textbf{ G\+Y\+R\+O\+\_\+\+P\+O\+RT}, and \textbf{ main\+\_\+gyro}.
+
+
+\begin{DoxyCode}
+00005                       \{
+00006   main_gyro = gyroInit(GYRO_PORT, GYRO_MULTIPLIER);
+00007   \textcolor{keywordflow}{return} main_gyro != NULL;
+00008 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\label{gyro_8c_ab848a00cddfc20556aef426cf11f9a85}} 
+\index{gyro.\+c@{gyro.\+c}!main\+\_\+gyro@{main\+\_\+gyro}}
+\index{main\+\_\+gyro@{main\+\_\+gyro}!gyro.\+c@{gyro.\+c}}
+\subsubsection{main\+\_\+gyro}
+{\footnotesize\ttfamily Gyro main\+\_\+gyro\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \textbf{ 3} of file \textbf{ gyro.\+c}.
+
+
+
+Referenced by \textbf{ init\+\_\+main\+\_\+gyro()}.
+

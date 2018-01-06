@@ -10,6 +10,6 @@
 *
 * @author Chris Jerrett
 */
-void updateIntake();
+void update_intake();
 
 #endif

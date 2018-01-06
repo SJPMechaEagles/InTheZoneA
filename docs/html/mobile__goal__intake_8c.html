@@ -88,10 +88,11 @@ $(document).ready(function(){initNavTree('mobile__goal__intake_8c.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="mobile__goal__intake_8h_source.html">mobile_goal_intake.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="partner_8h_source.html">partner.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="log_8h_source.html">log.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mobile_goal_intake.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="mobile__goal__intake_8c__incl.svg" width="435" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="mobile__goal__intake_8c__incl.svg" width="448" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="mobile__goal__intake_8c_source.html">Go to the source code of this file.</a></p>
@@ -104,9 +105,9 @@ Functions</h2></td></tr>
 <tr class="separator:a4899f9a8621015313e6312ce085da979"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f215023832ba515d7b4535e3ae07498"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a> (int n)</td></tr>
 <tr class="separator:a8f215023832ba515d7b4535e3ae07498"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0232c21c5c1ffda603d2b7d61034118"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mobile__goal__intake_8c.html#ad0232c21c5c1ffda603d2b7d61034118">updateIntake</a> ()</td></tr>
-<tr class="memdesc:ad0232c21c5c1ffda603d2b7d61034118"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the mobile goal intake in teleop.  <a href="#ad0232c21c5c1ffda603d2b7d61034118">More...</a><br /></td></tr>
-<tr class="separator:ad0232c21c5c1ffda603d2b7d61034118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7bad8a208988af743fd2e68f111286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mobile__goal__intake_8c.html#a5d7bad8a208988af743fd2e68f111286">update_intake</a> ()</td></tr>
+<tr class="memdesc:a5d7bad8a208988af743fd2e68f111286"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the mobile goal intake in teleop.  <a href="#a5d7bad8a208988af743fd2e68f111286">More...</a><br /></td></tr>
+<tr class="separator:a5d7bad8a208988af743fd2e68f111286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="afa91470a9891e48827fd62d18553c6ce"></a>
@@ -132,12 +133,12 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mobile__goal__intake_8c_source.html#l00008">8</a> of file <a class="el" href="mobile__goal__intake_8c_source.html">mobile_goal_intake.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mobile__goal__intake_8c_source.html#l00009">9</a> of file <a class="el" href="mobile__goal__intake_8c_source.html">mobile_goal_intake.c</a>.</p>
 
-<p class="reference">References <a class="el" href="mobile__goal__intake_8c_source.html#l00004">set_intake_motor()</a>.</p>
+<p class="reference">References <a class="el" href="mobile__goal__intake_8c_source.html#l00005">set_intake_motor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mobile__goal__intake_8c_source.html#l00019">updateIntake()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                           {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <a class="code" href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a>(100);</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div><div class="ttc" id="mobile__goal__intake_8c_html_a8f215023832ba515d7b4535e3ae07498"><div class="ttname"><a href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a></div><div class="ttdeci">static void set_intake_motor(int n)</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00004">mobile_goal_intake.c:4</a></div></div>
+<p class="reference">Referenced by <a class="el" href="mobile__goal__intake_8c_source.html#l00020">update_intake()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                           {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <a class="code" href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a>(-100);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div><div class="ttc" id="mobile__goal__intake_8c_html_a8f215023832ba515d7b4535e3ae07498"><div class="ttname"><a href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a></div><div class="ttdeci">static void set_intake_motor(int n)</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00005">mobile_goal_intake.c:5</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -164,12 +165,12 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mobile__goal__intake_8c_source.html#l00012">12</a> of file <a class="el" href="mobile__goal__intake_8c_source.html">mobile_goal_intake.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mobile__goal__intake_8c_source.html#l00013">13</a> of file <a class="el" href="mobile__goal__intake_8c_source.html">mobile_goal_intake.c</a>.</p>
 
-<p class="reference">References <a class="el" href="mobile__goal__intake_8c_source.html#l00004">set_intake_motor()</a>.</p>
+<p class="reference">References <a class="el" href="mobile__goal__intake_8c_source.html#l00005">set_intake_motor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mobile__goal__intake_8c_source.html#l00019">updateIntake()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                           {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a>(-100);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div><div class="ttc" id="mobile__goal__intake_8c_html_a8f215023832ba515d7b4535e3ae07498"><div class="ttname"><a href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a></div><div class="ttdeci">static void set_intake_motor(int n)</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00004">mobile_goal_intake.c:4</a></div></div>
+<p class="reference">Referenced by <a class="el" href="mobile__goal__intake_8c_source.html#l00020">update_intake()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                           {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a>(100);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div><div class="ttc" id="mobile__goal__intake_8c_html_a8f215023832ba515d7b4535e3ae07498"><div class="ttname"><a href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a></div><div class="ttdeci">static void set_intake_motor(int n)</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00005">mobile_goal_intake.c:5</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -197,24 +198,24 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mobile__goal__intake_8c_source.html#l00004">4</a> of file <a class="el" href="mobile__goal__intake_8c_source.html">mobile_goal_intake.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mobile__goal__intake_8c_source.html#l00005">5</a> of file <a class="el" href="mobile__goal__intake_8c_source.html">mobile_goal_intake.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00062">INTAKE_MOTOR</a>, and <a class="el" href="slew_8c_source.html#l00089">set_motor_immediate()</a>.</p>
+<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00060">INTAKE_MOTOR</a>, and <a class="el" href="slew_8c_source.html#l00089">set_motor_immediate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mobile__goal__intake_8c_source.html#l00008">lower_intake()</a>, <a class="el" href="mobile__goal__intake_8c_source.html#l00012">raise_intake()</a>, and <a class="el" href="mobile__goal__intake_8c_source.html#l00019">updateIntake()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                    {</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <a class="code" href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a>(<a class="code" href="motor__ports_8h.html#a2badb0c22cf65b0e81743c90de9a3b41">INTAKE_MOTOR</a>, n);</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div><div class="ttc" id="slew_8h_html_a9f8b8ae577ef938622024545711f0151"><div class="ttname"><a href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a></div><div class="ttdeci">void set_motor_immediate(int motor, int speed)</div><div class="ttdoc">Sets the motor speed ignoring the slew controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00089">slew.c:89</a></div></div>
-<div class="ttc" id="motor__ports_8h_html_a2badb0c22cf65b0e81743c90de9a3b41"><div class="ttname"><a href="motor__ports_8h.html#a2badb0c22cf65b0e81743c90de9a3b41">INTAKE_MOTOR</a></div><div class="ttdeci">#define INTAKE_MOTOR</div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00062">motor_ports.h:62</a></div></div>
+<p class="reference">Referenced by <a class="el" href="mobile__goal__intake_8c_source.html#l00009">lower_intake()</a>, <a class="el" href="mobile__goal__intake_8c_source.html#l00013">raise_intake()</a>, and <a class="el" href="mobile__goal__intake_8c_source.html#l00020">update_intake()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                    {</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <a class="code" href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a>(<a class="code" href="motor__ports_8h.html#a2badb0c22cf65b0e81743c90de9a3b41">INTAKE_MOTOR</a>, n);</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div><div class="ttc" id="slew_8h_html_a9f8b8ae577ef938622024545711f0151"><div class="ttname"><a href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a></div><div class="ttdeci">void set_motor_immediate(int motor, int speed)</div><div class="ttdoc">Sets the motor speed ignoring the slew controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00089">slew.c:89</a></div></div>
+<div class="ttc" id="motor__ports_8h_html_a2badb0c22cf65b0e81743c90de9a3b41"><div class="ttname"><a href="motor__ports_8h.html#a2badb0c22cf65b0e81743c90de9a3b41">INTAKE_MOTOR</a></div><div class="ttdeci">#define INTAKE_MOTOR</div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00060">motor_ports.h:60</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ad0232c21c5c1ffda603d2b7d61034118"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0232c21c5c1ffda603d2b7d61034118">&#9670;&nbsp;</a></span>updateIntake()</h2>
+<a id="a5d7bad8a208988af743fd2e68f111286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d7bad8a208988af743fd2e68f111286">&#9670;&nbsp;</a></span>update_intake()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void updateIntake </td>
+          <td class="memname">void update_intake </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -225,19 +226,15 @@ Functions</h2></td></tr>
 <p>updates the mobile goal intake in teleop. </p>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mobile__goal__intake_8c_source.html#l00019">19</a> of file <a class="el" href="mobile__goal__intake_8c_source.html">mobile_goal_intake.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mobile__goal__intake_8c_source.html#l00020">20</a> of file <a class="el" href="mobile__goal__intake_8c_source.html">mobile_goal_intake.c</a>.</p>
 
-<p class="reference">References <a class="el" href="partner_8c_source.html#l00005">get_mode()</a>, <a class="el" href="mobile__goal__intake_8c_source.html#l00008">lower_intake()</a>, <a class="el" href="partner_8h_source.html#l00008">MAIN_CONTROLLER_MODE</a>, <a class="el" href="controller_8h_source.html#l00025">MASTER</a>, <a class="el" href="controller_8h_source.html#l00032">PARTNER</a>, <a class="el" href="partner_8h_source.html#l00009">PARTNER_CONTROLLER_MODE</a>, <a class="el" href="mobile__goal__intake_8c_source.html#l00012">raise_intake()</a>, and <a class="el" href="mobile__goal__intake_8c_source.html#l00004">set_intake_motor()</a>.</p>
+<p class="reference">References <a class="el" href="mobile__goal__intake_8c_source.html#l00009">lower_intake()</a>, <a class="el" href="controller_8h_source.html#l00025">MASTER</a>, <a class="el" href="mobile__goal__intake_8c_source.html#l00013">raise_intake()</a>, and <a class="el" href="mobile__goal__intake_8c_source.html#l00005">set_intake_motor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00040">operatorControl()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                    {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span>(joystickGetDigital(<a class="code" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 7, JOY_UP) &amp;&amp; (<a class="code" href="partner_8h.html#aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</a>() == <a class="code" href="partner_8h.html#afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475">MAIN_CONTROLLER_MODE</a>)</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  || joystickGetDigital(<a class="code" href="controller_8h.html#a136e64cf351535da81cacb6a546cade6">PARTNER</a>, 6, JOY_UP) &amp;&amp; <a class="code" href="partner_8h.html#aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</a>() == <a class="code" href="partner_8h.html#afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7">PARTNER_CONTROLLER_MODE</a>) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="mobile__goal__intake_8c.html#a4899f9a8621015313e6312ce085da979">raise_intake</a>();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(<a class="code" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 7, JOY_DOWN) &amp;&amp; (<a class="code" href="partner_8h.html#aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</a>() == <a class="code" href="partner_8h.html#afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475">MAIN_CONTROLLER_MODE</a>)</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  || joystickGetDigital(<a class="code" href="controller_8h.html#a136e64cf351535da81cacb6a546cade6">PARTNER</a>, 6, JOY_DOWN) &amp;&amp; <a class="code" href="partner_8h.html#aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</a>() == <a class="code" href="partner_8h.html#afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7">PARTNER_CONTROLLER_MODE</a>){</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="mobile__goal__intake_8c.html#afa91470a9891e48827fd62d18553c6ce">lower_intake</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">else</span> <a class="code" href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a>(0);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="ttc" id="mobile__goal__intake_8c_html_afa91470a9891e48827fd62d18553c6ce"><div class="ttname"><a href="mobile__goal__intake_8c.html#afa91470a9891e48827fd62d18553c6ce">lower_intake</a></div><div class="ttdeci">static void lower_intake()</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00008">mobile_goal_intake.c:8</a></div></div>
-<div class="ttc" id="partner_8h_html_aacc86d07e59d3b919f5c5eae2ce5d404"><div class="ttname"><a href="partner_8h.html#aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</a></div><div class="ttdeci">enum CONTROLL_MODE get_mode()</div><div class="ttdef"><b>Definition:</b> <a href="partner_8c_source.html#l00005">partner.c:5</a></div></div>
+<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00042">operatorControl()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                     {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">if</span>(joystickGetDigital(<a class="code" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 7, JOY_UP)) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="mobile__goal__intake_8c.html#a4899f9a8621015313e6312ce085da979">raise_intake</a>();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(<a class="code" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 7, JOY_DOWN)){</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="mobile__goal__intake_8c.html#afa91470a9891e48827fd62d18553c6ce">lower_intake</a>();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">else</span> <a class="code" href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a>(0);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div><div class="ttc" id="mobile__goal__intake_8c_html_afa91470a9891e48827fd62d18553c6ce"><div class="ttname"><a href="mobile__goal__intake_8c.html#afa91470a9891e48827fd62d18553c6ce">lower_intake</a></div><div class="ttdeci">static void lower_intake()</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00009">mobile_goal_intake.c:9</a></div></div>
 <div class="ttc" id="controller_8h_html_a3fa2d3bf1901157f734a584d47b25d8b"><div class="ttname"><a href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a></div><div class="ttdeci">#define MASTER</div><div class="ttdoc">the master controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00025">controller.h:25</a></div></div>
-<div class="ttc" id="partner_8h_html_afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475"><div class="ttname"><a href="partner_8h.html#afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475">MAIN_CONTROLLER_MODE</a></div><div class="ttdef"><b>Definition:</b> <a href="partner_8h_source.html#l00008">partner.h:8</a></div></div>
-<div class="ttc" id="mobile__goal__intake_8c_html_a4899f9a8621015313e6312ce085da979"><div class="ttname"><a href="mobile__goal__intake_8c.html#a4899f9a8621015313e6312ce085da979">raise_intake</a></div><div class="ttdeci">static void raise_intake()</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00012">mobile_goal_intake.c:12</a></div></div>
-<div class="ttc" id="partner_8h_html_afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7"><div class="ttname"><a href="partner_8h.html#afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7">PARTNER_CONTROLLER_MODE</a></div><div class="ttdef"><b>Definition:</b> <a href="partner_8h_source.html#l00009">partner.h:9</a></div></div>
-<div class="ttc" id="controller_8h_html_a136e64cf351535da81cacb6a546cade6"><div class="ttname"><a href="controller_8h.html#a136e64cf351535da81cacb6a546cade6">PARTNER</a></div><div class="ttdeci">#define PARTNER</div><div class="ttdoc">the slave/partner controller </div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00032">controller.h:32</a></div></div>
-<div class="ttc" id="mobile__goal__intake_8c_html_a8f215023832ba515d7b4535e3ae07498"><div class="ttname"><a href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a></div><div class="ttdeci">static void set_intake_motor(int n)</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00004">mobile_goal_intake.c:4</a></div></div>
+<div class="ttc" id="mobile__goal__intake_8c_html_a4899f9a8621015313e6312ce085da979"><div class="ttname"><a href="mobile__goal__intake_8c.html#a4899f9a8621015313e6312ce085da979">raise_intake</a></div><div class="ttdeci">static void raise_intake()</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00013">mobile_goal_intake.c:13</a></div></div>
+<div class="ttc" id="mobile__goal__intake_8c_html_a8f215023832ba515d7b4535e3ae07498"><div class="ttname"><a href="mobile__goal__intake_8c.html#a8f215023832ba515d7b4535e3ae07498">set_intake_motor</a></div><div class="ttdeci">static void set_intake_motor(int n)</div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00005">mobile_goal_intake.c:5</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

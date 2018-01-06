@@ -54,9 +54,9 @@ void autonomous() {
 
   //Raise the lifter
   while(analogRead(LIFTER) < GOAL_HEIGHT){
-    set_lifter_motors(-127);
+    //set_lifter_motors(-127);
   }
-  set_lifter_motors(0);
+  //set_lifter_motors(0);
   //Drive towards the goal
   while(counts_drive < 530){
     set_side_speed(BOTH, 127);
