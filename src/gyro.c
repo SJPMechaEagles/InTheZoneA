@@ -7,9 +7,8 @@ bool init_main_gyro() {
   return main_gyro != NULL;
 }
 
-
 float get_main_gyro_angluar_velocity() {
   uint32_t port = GYRO_PORT;
   int32_t reading = (int32_t)analogReadCalibratedHR(port + 1);
-	return 0;
+  return 0;
 }
