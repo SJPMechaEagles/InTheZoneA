@@ -20,7 +20,7 @@
 #include "mobile_goal_intake.h"
 #include "vmath.h"
 #include "lifter.h"
-
+#include "toggle.h"
 
 /**
  * Runs the user operator control code. This function will be started in its own task with the
@@ -40,8 +40,8 @@
  * This task should never exit; its should end with some kind of infinite loop, even if empty.
  */
 void operatorControl() {
-
 	init_slew();
+	buttonInit();
 	delay(10);
 	while (1) {
 		update_claw();

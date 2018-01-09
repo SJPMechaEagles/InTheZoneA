@@ -22,24 +22,39 @@
 #define INIT_ROTATION 680
 
 /**
- * @brief The proportional constant for the lifter PID
+ * @brief The proportional constant for the secondary lifter PID
  **/
-#define LIFTER_P .15
+#define SECONDARY_LIFTER_P .02
 
 /**
- * @brief The derivative constant for the lifter PID
+ * @brief The derivative constant for the secondary lifter PID
  **/
-#define LIFTER_D 0
+#define SECONDARY_LIFTER_D .01
+
+/**
+ * @brief The integral constant for the secondary lifter PID
+ **/
+#define SECONDARY_LIFTER_I .0005
+
+/**
+ * @brief The proportional constant for the main lifter PID
+ **/
+#define MAIN_LIFTER_P .15
+
+/**
+ * @brief The derivative constant for the main lifter PID
+ **/
+#define MAIN_LIFTER_D 0
+
+/**
+ * @brief The integral constant for the main lifter PID
+ **/
+#define MAIN_LIFTER_I 0
 
 /**
  * @brief The threshold of a signficant speed for the lifter
  **/
 #define THRESHOLD 10
-
-/**
- * @brief The integral constant for the lifter PID
- **/
-#define LIFTER_I 0
 
 /**
  * @brief The integral constant for the lifter PID
@@ -55,6 +70,16 @@
  * @brief The lifter down controller params
  **/
 #define LIFTER_DOWN MASTER, 5, JOY_DOWN
+
+/**
+* @brief The secondary lifter up controller params
+**/
+#define SECONDARY_LIFTER_UP MASTER, 8, JOY_UP
+
+/**
+* @brief The secondary lifter down controller params
+**/
+#define SECONDARY_LIFTER_DOWN MASTER, 8, JOY_DOWN
 
 /**
  * @brief Height to raise lifter to driver preload height

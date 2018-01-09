@@ -1,5 +1,6 @@
 #include "claw.h"
 #include "log.h"
+#include "toggle.h"
 static enum claw_state state = CLAW_NEUTRAL_STATE;
 
 /**
