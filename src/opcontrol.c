@@ -21,6 +21,8 @@
 #include "vmath.h"
 #include "lifter.h"
 #include "toggle.h"
+#include "routines.h"
+#include "log.h"
 
 /**
  * Runs the user operator control code. This function will be started in its own task with the
@@ -39,19 +41,20 @@
  *
  * This task should never exit; its should end with some kind of infinite loop, even if empty.
  */
+void test() {
+	printf("TEST");
+}
+
 void operatorControl() {
-	init_slew();
 	buttonInit();
+	init_routine();
+	register_routine(&test, JOY1_7L, NULL);
+	init_slew();
 	delay(10);
 	while (1) {
 		update_claw();
-		delay(5);
 		update_intake();
-		delay(5);
 		update_lifter();
-		delay(5);
 		update_drive_motors();
-		delay(25);
-
 	}
 }

@@ -46,7 +46,6 @@ void init_slew() {
   memset(motors_set_speeds, 0, sizeof(int) * 10);
   memset(motors_curr_speeds, 0, sizeof(int) * 10);
   motorStopAll();
-  info("Did Init Slew");
   speeds_mutex = mutexCreate();
   slew = taskRunLoop(updateMotors, 100);
   initialized = true;

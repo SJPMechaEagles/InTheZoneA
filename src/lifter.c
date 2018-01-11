@@ -64,6 +64,75 @@ void raise_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
  **/
 void lower_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
 
+static void main_lifter_update() {
+  static int count = 0;
+  static bool pid_on = false;
+  static int main_target = 0;
+  int main_motor_speed = 0;
+  static long long main_i = 0;
+  if(count == 20) {
+    main_target = analogRead(MAIN_LIFTER_POT);
+  }
+  if(pid_on && count > 20) {
+    int curr = analogRead(MAIN_LIFTER_POT);
+    static int main_last_p = 0;
+    int main_p = curr - main_target;
+    main_i += main_p;
+    int main_d = main_last_p - main_p;
+    main_motor_speed = MAIN_LIFTER_P * main_p + MAIN_LIFTER_I * main_i + MAIN_LIFTER_D * main_d;
+    main_last_p = main_p;
+  } else {
+    main_i = 0;
+    count++;
+  }
+
+  if(joystickGetDigital(LIFTER_UP)){
+    main_motor_speed = MAX_SPEED;
+    count = 0;
+  } else if(joystickGetDigital(LIFTER_DOWN)){
+    main_motor_speed = MIN_SPEED;
+    count = 0;
+  }
+  set_main_lifter_motors(main_motor_speed);
+  pid_on = true;
+}
+
+static void secondary_lifter_update() {
+  static int count = 0;
+  static bool pid_on = false;
+  static int second_target = 0;
+  int second_motor_speed = 0;
+  static long long second_i = 0;
+  if(count == 20) {
+    second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
+  }
+  if(pid_on && count > 20) {
+    int curr = analogRead(SECONDARY_LIFTER_POT_PORT);
+    static int second_last_p = 0;
+    int second_p = curr - second_target;
+    second_i += second_p;
+    int second_d = second_last_p - second_p;
+    second_motor_speed = SECONDARY_LIFTER_P * second_p + SECONDARY_LIFTER_I * second_i + SECONDARY_LIFTER_D * second_d;
+    second_last_p = second_p;
+  } else {
+    second_i = 0;
+    count++;
+  }
+
+  if(joystickGetDigital(SECONDARY_LIFTER_DOWN)){
+    second_motor_speed = MAX_SPEED;
+    count = 0;
+  } else if(joystickGetDigital(SECONDARY_LIFTER_UP)){
+    second_motor_speed = MIN_SPEED;
+    count = 0;
+    second_target = second_target > 3000 ? 4095 : second_target;
+  } else{
+    second_target = second_target > 3000 ? 4095 : second_target;
+  }
+  set_secondary_lifter_motors(second_motor_speed);
+  pid_on = true;
+}
+
 /**
  * @brief Updates the lifter in teleop.
  *
@@ -71,39 +140,8 @@ void lower_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
  * @date 9/9/2017
  **/
 void update_lifter() {
-  static bool pid_on = false;
-  static int second_target = 0;
-  int second_motor_speed = 0;
-  if(pid_on) {
-    int curr = analogRead(SECONDARY_LIFTER_POT_PORT);
-    static long long second_i = 0;
-    static int second_last_p = 0;
-    int second_p = curr - second_target;
-    second_i += second_p;
-    int second_d = second_last_p - second_p;
-    second_motor_speed = SECONDARY_LIFTER_P * second_p + SECONDARY_LIFTER_I * second_i + SECONDARY_LIFTER_D * second_d;
-    second_last_p = second_p;
-  }
-
-  if(joystickGetDigital(LIFTER_UP)){
-    set_main_lifter_motors(MAX_SPEED);
-  } else if(joystickGetDigital(LIFTER_DOWN)){
-    set_main_lifter_motors(MIN_SPEED);
-  }
-  else{
-    set_main_lifter_motors(0);
-  }
-  if(joystickGetDigital(SECONDARY_LIFTER_UP)){
-    second_motor_speed = MIN_SPEED;
-    second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
-  }
-  else if(joystickGetDigital(SECONDARY_LIFTER_DOWN)){
-    second_motor_speed = MAX_SPEED;
-    second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
-  }
-  set_secondary_lifter_motors(second_motor_speed);
-  printf("motor speed: %d\n", second_motor_speed);
-  pid_on = true;
+  main_lifter_update();
+  secondary_lifter_update();
 }
 /**
  * @brief height of the lifter in degrees from 0 height

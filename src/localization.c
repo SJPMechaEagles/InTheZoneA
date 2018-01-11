@@ -1,4 +1,5 @@
 #include "localization.h"
+#include "vmath.h"
 #include <inttypes.h>
 
 static Gyro g1;
@@ -94,6 +95,19 @@ static double calculate_gryo_anglular_velocity() {
   // Calculate w (angluar velocity in degrees per second)
   double w = (current - last_gyro) / (LOCALIZATION_UPDATE_FREQUENCY / 1000.0);
   return w;
+}
+
+static void calculate_encoder_odemetry() {
+  #define WIDTH 13.5
+  #define CPR 392.0
+  #define WHEEL_RADIUS 2
+
+  int dist_r = get_encoder_ticks(0) / CPR;
+  int dist_l = get_encoder_ticks(1) / CPR;
+  printf("dist_r: %d dist_l: %d\n", dist_r, dist_l);
+  int theta = (dist_l - dist_r)/WIDTH;
+  printf("theta: %d\n", theta);
+  int arc_length = ((M_PI * theta) * (WIDTH * WIDTH)/(8));
 }
 
 bool init_localization(const unsigned char gyro1, unsigned short multiplier,

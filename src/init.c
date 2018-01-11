@@ -49,6 +49,6 @@ void initialize() {
   info("LCD Init");
   menu_t *t = init_menu_var(STRING_TYPE, "TEST Menu", 5, "1","2","3","4","5");
   init_error(true, uart2);
-  display_menu(t);
   setTeamName("9228A");
+  //init_encoders();
 }
