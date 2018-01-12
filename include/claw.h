@@ -28,13 +28,13 @@
  * @brief The joystick parameters for closing the claw
  * @author Chris Jerrett
  **/
-#define CLAW_CLOSE MASTER, 6, JOY_UP
+#define CLAW_CLOSE MASTER, 5, JOY_UP
 
 /**
  * @brief The joystick parameters for opening the claw
  * @author Chris Jerrett
  **/
-#define CLAW_OPEN MASTER, 6, JOY_DOWN
+#define CLAW_OPEN MASTER, 5, JOY_DOWN
 
 /**
  * @brief The potentiometer value for a closed claw

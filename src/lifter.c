@@ -21,7 +21,7 @@ void set_secondary_lifter_motors(const int v) {
  * @author Chris Jerrett
  * @date 9/9/2017
  **/
-void set_main_lifter_motors(const int v) { set_motor_immediate(MOTOR_LIFT, v); }
+void set_main_lifter_motors(const int v) { set_motor_slew(MOTOR_LIFT, v); }
 
 /**
  * @brief Sets the lifter positions to the given value
@@ -79,7 +79,7 @@ static void main_lifter_update() {
     int main_p = curr - main_target;
     main_i += main_p;
     int main_d = main_last_p - main_p;
-    main_motor_speed = MAIN_LIFTER_P * main_p + MAIN_LIFTER_I * main_i + MAIN_LIFTER_D * main_d;
+    //main_motor_speed = MAIN_LIFTER_P * main_p + MAIN_LIFTER_I * main_i + MAIN_LIFTER_D * main_d;
     main_last_p = main_p;
   } else {
     main_i = 0;
@@ -104,7 +104,7 @@ static void secondary_lifter_update() {
   int second_motor_speed = 0;
   static long long second_i = 0;
 
-    if(count < 20){
+    if(count < 10){
       second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
       count ++;
     }
@@ -120,18 +120,23 @@ static void secondary_lifter_update() {
 
 
   if(joystickGetDigital(SECONDARY_LIFTER_DOWN)){
-    second_motor_speed = MAX_SPEED/1.5;
+    second_motor_speed = MAX_SPEED;
     count = 0;
     second_i = 0;
     second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
   } else if(joystickGetDigital(SECONDARY_LIFTER_UP)){
-    second_motor_speed = MIN_SPEED/1.5;
+    second_motor_speed = MIN_SPEED;
     count = 0;
     second_i = 0;
     second_target = second_target > 3000 ? 4095 : analogRead(SECONDARY_LIFTER_POT_PORT);;
   } else{
     second_target = second_target > 3000 ? 4095 : second_target;
   }
+  second_target = second_target < 10 ? 0 : second_target;
+  printf("Motor %d \n", second_motor_speed);
+  printf("P %d \n", second_p);
+  printf("I %lld \n", second_i);
+  printf("D %d \n", second_d);
   set_secondary_lifter_motors(second_motor_speed);
 
 }

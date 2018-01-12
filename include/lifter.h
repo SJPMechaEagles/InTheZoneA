@@ -29,27 +29,27 @@
 /**
  * @brief The derivative constant for the secondary lifter PID
  **/
-#define SECONDARY_LIFTER_D 0.25
+#define SECONDARY_LIFTER_D 0.3
 
 /**
  * @brief The integral constant for the secondary lifter PID
  **/
-#define SECONDARY_LIFTER_I 0.00002
+#define SECONDARY_LIFTER_I 0.0000
 
 /**
  * @brief The proportional constant for the main lifter PID
  **/
-#define MAIN_LIFTER_P .5
+#define MAIN_LIFTER_P 0
 
 /**
  * @brief The derivative constant for the main lifter PID
  **/
-#define MAIN_LIFTER_D .2
+#define MAIN_LIFTER_D 0
 
 /**
  * @brief The integral constant for the main lifter PID
  **/
-#define MAIN_LIFTER_I 0
+#define MAIN_LIFTER_I 0.0000001
 
 /**
  * @brief The threshold of a signficant speed for the lifter
@@ -64,12 +64,12 @@
 /**
  * @brief The lifter up controller params
  **/
-#define LIFTER_UP MASTER, 5, JOY_UP
+#define LIFTER_UP MASTER, 6, JOY_UP
 
 /**
  * @brief The lifter down controller params
  **/
-#define LIFTER_DOWN MASTER, 5, JOY_DOWN
+#define LIFTER_DOWN MASTER, 6, JOY_DOWN
 
 /**
 * @brief The secondary lifter up controller params
@@ -98,7 +98,7 @@
 
 #define SECONDARY_LIFTER_POT_PORT 2
 
-#define SECONDARY_LIFTER_MAX_HEIGHT 3100
+#define SECONDARY_LIFTER_MAX_HEIGHT 3120
 
 #define SECONDARY_LIFTER_MIN_HEIGHT 2000
 
