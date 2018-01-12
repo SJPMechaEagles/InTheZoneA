@@ -23,6 +23,7 @@ void routine_task() {
       }
     }
   }
+  list_iterator_destroy(it);
 }
 
 void init_routine() {
