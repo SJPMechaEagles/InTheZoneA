@@ -120,12 +120,12 @@ static void secondary_lifter_update() {
 
 
   if(joystickGetDigital(SECONDARY_LIFTER_DOWN)){
-    second_motor_speed = MAX_SPEED;
+    second_motor_speed = MAX_SPEED/1.5;
     count = 0;
     second_i = 0;
     second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
   } else if(joystickGetDigital(SECONDARY_LIFTER_UP)){
-    second_motor_speed = MIN_SPEED;
+    second_motor_speed = MIN_SPEED/1.5;
     count = 0;
     second_i = 0;
     second_target = second_target > 3000 ? 4095 : analogRead(SECONDARY_LIFTER_POT_PORT);;
