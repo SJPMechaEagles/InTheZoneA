@@ -99,14 +99,16 @@ static void main_lifter_update() {
 
 static void secondary_lifter_update() {
   static int count = 0;
-  static bool pid_on = false;
+  //static bool pid_on = false;
   static int second_target = 0;
   int second_motor_speed = 0;
   static long long second_i = 0;
-  if(count == 20) {
-    second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
-  }
-  if(pid_on && count > 20) {
+
+    if(count < 20){
+      second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
+      count ++;
+    }
+
     int curr = analogRead(SECONDARY_LIFTER_POT_PORT);
     static int second_last_p = 0;
     int second_p = curr - second_target;
@@ -114,23 +116,24 @@ static void secondary_lifter_update() {
     int second_d = second_last_p - second_p;
     second_motor_speed = SECONDARY_LIFTER_P * second_p + SECONDARY_LIFTER_I * second_i + SECONDARY_LIFTER_D * second_d;
     second_last_p = second_p;
-  } else {
-    second_i = 0;
-    count++;
-  }
+
+
 
   if(joystickGetDigital(SECONDARY_LIFTER_DOWN)){
     second_motor_speed = MAX_SPEED;
     count = 0;
+    second_i = 0;
+    second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
   } else if(joystickGetDigital(SECONDARY_LIFTER_UP)){
     second_motor_speed = MIN_SPEED;
     count = 0;
-    second_target = second_target > 3000 ? 4095 : second_target;
+    second_i = 0;
+    second_target = second_target > 3000 ? 4095 : analogRead(SECONDARY_LIFTER_POT_PORT);;
   } else{
     second_target = second_target > 3000 ? 4095 : second_target;
   }
   set_secondary_lifter_motors(second_motor_speed);
-  pid_on = true;
+
 }
 
 /**
