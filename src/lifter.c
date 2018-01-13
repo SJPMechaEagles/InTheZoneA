@@ -64,6 +64,8 @@ void raise_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
  **/
 void lower_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
 
+extern Ultrasonic lifter_ultrasonic;
+
 static void main_lifter_update() {
   static int count = 0;
   static bool pid_on = false;
@@ -88,6 +90,10 @@ static void main_lifter_update() {
 
   if(joystickGetDigital(LIFTER_UP)){
     main_motor_speed = MAX_SPEED;
+    if(ultrasonicGet(lifter_ultrasonic) > 11) {
+      raise_secondary_lifter();
+      printf("Raising\n");
+    }
     count = 0;
   } else if(joystickGetDigital(LIFTER_DOWN)){
     main_motor_speed = MIN_SPEED;
@@ -104,20 +110,18 @@ static void secondary_lifter_update() {
   int second_motor_speed = 0;
   static long long second_i = 0;
 
-    if(count < 10){
-      second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
-      count ++;
-    }
+  if(count < 10){
+    second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
+    count ++;
+  }
 
-    int curr = analogRead(SECONDARY_LIFTER_POT_PORT);
-    static int second_last_p = 0;
-    int second_p = curr - second_target;
-    second_i += second_p;
-    int second_d = second_last_p - second_p;
-    second_motor_speed = SECONDARY_LIFTER_P * second_p + SECONDARY_LIFTER_I * second_i + SECONDARY_LIFTER_D * second_d;
-    second_last_p = second_p;
-
-
+  int curr = analogRead(SECONDARY_LIFTER_POT_PORT);
+  static int second_last_p = 0;
+  int second_p = curr - second_target;
+  second_i += second_p;
+  int second_d = second_last_p - second_p;
+  second_motor_speed = SECONDARY_LIFTER_P * second_p + SECONDARY_LIFTER_I * second_i + SECONDARY_LIFTER_D * second_d;
+  second_last_p = second_p;
 
   if(joystickGetDigital(SECONDARY_LIFTER_DOWN)){
     second_motor_speed = MAX_SPEED;
@@ -148,8 +152,8 @@ static void secondary_lifter_update() {
  * @date 9/9/2017
  **/
 void update_lifter() {
-  main_lifter_update();
   secondary_lifter_update();
+  main_lifter_update();
 }
 /**
  * @brief height of the lifter in degrees from 0 height

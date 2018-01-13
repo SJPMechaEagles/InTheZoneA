@@ -24,6 +24,8 @@
 #include "routines.h"
 #include "log.h"
 
+Ultrasonic lifter_ultrasonic;
+
 /**
  * Runs the user operator control code. This function will be started in its own task with the
  * default priority and stack size whenever the robot is enabled via the Field Management System
@@ -43,14 +45,12 @@
  */
 
 void operatorControl() {
-	Ultrasonic sonar;
-	sonar = ultrasonicInit(4, 5);
+	lifter_ultrasonic = ultrasonicInit(4, 5);
 	buttonInit();
 	init_routine();
 	init_slew();
 	delay(10);
 	while (1) {
-		printf("Ultrasonic get: %d\n",sonar);
 		update_claw();
 		update_intake();
 		update_lifter();
