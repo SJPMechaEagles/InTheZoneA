@@ -90,9 +90,14 @@ static void main_lifter_update() {
 
   if(joystickGetDigital(LIFTER_UP)){
     main_motor_speed = MAX_SPEED;
-    if(ultrasonicGet(lifter_ultrasonic) > 11) {
+    int ultra = ultrasonicGet(lifter_ultrasonic);
+    if(ultra > 11) {
       raise_secondary_lifter();
       printf("Raising\n");
+    } else {
+      char c[20];
+      sprintf(c, "%d", ultra);
+      info(c);
     }
     count = 0;
   } else if(joystickGetDigital(LIFTER_DOWN)){
@@ -137,10 +142,10 @@ static void secondary_lifter_update() {
     second_target = second_target > 3000 ? 4095 : second_target;
   }
   second_motor_speed = abs(second_motor_speed) < 20 ? 0 : second_motor_speed;
-  printf("Motor %d \n", second_motor_speed);
+  /*printf("Motor %d \n", second_motor_speed);
   printf("P %d \n", second_p);
   printf("I %lld \n", second_i);
-  printf("D %d \n", second_d);
+  printf("D %d \n", second_d);*/
   set_secondary_lifter_motors(second_motor_speed);
 
 }

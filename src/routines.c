@@ -10,7 +10,6 @@ static list_t* routine_list;
 static TaskHandle routine_task_var;
 
 void routine_task() {
-  printf("test 3\n");
   list_node_t *node;
   list_iterator_t *it = list_iterator_new(routine_list, LIST_HEAD);
   if(it != NULL) {
