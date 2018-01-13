@@ -43,11 +43,14 @@
  */
 
 void operatorControl() {
+	Ultrasonic sonar;
+	sonar = ultrasonicInit(4, 5);
 	buttonInit();
 	init_routine();
 	init_slew();
 	delay(10);
 	while (1) {
+		printf("Ultrasonic get: %d\n",sonar);
 		update_claw();
 		update_intake();
 		update_lifter();
