@@ -41,14 +41,10 @@
  *
  * This task should never exit; its should end with some kind of infinite loop, even if empty.
  */
-void test() {
-	printf("TEST");
-}
 
 void operatorControl() {
 	buttonInit();
 	init_routine();
-	register_routine(&test, JOY1_7L, NULL);
 	init_slew();
 	delay(10);
 	while (1) {
