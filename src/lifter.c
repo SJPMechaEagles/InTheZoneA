@@ -46,7 +46,7 @@ void raise_main_lifter() { set_main_lifter_motors(MAX_SPEED); }
  * @author Christian DeSimone
  * @date 9/12/2017
  **/
-void lower_main_lifter() { set_main_lifter_motors(MIN_SPEED); }
+void lower_main_lifter() { set_main_lifter_motors(MAX_SPEED); }
 
 /**
  * @brief Raises the main lifter
@@ -54,7 +54,7 @@ void lower_main_lifter() { set_main_lifter_motors(MIN_SPEED); }
  * @author Christian DeSimone
  * @date 9/12/2017
  **/
-void raise_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
+void raise_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED/1.5); }
 
 /**
  * @brief Lowers the secondary lifter
@@ -65,6 +65,8 @@ void raise_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
 void lower_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
 
 extern Ultrasonic lifter_ultrasonic;
+
+static bool secondary_override = false;
 
 static void main_lifter_update() {
   static int count = 0;
@@ -89,21 +91,15 @@ static void main_lifter_update() {
   }
 
   if(joystickGetDigital(LIFTER_UP)){
-    main_motor_speed = MAX_SPEED;
     int ultra = ultrasonicGet(lifter_ultrasonic);
-    if((ultra > 9 || ultra) == -1 && analogRead(SECONDARY_LIFTER_POT_PORT) < 3200) {
-      raise_secondary_lifter();
-      info("Raising\n");
-    } else {
-      set_secondary_lifter_motors(0);
-      char c[20];
-      sprintf(c, "%d", ultra);
-      info(c);
-    }
+    main_motor_speed = MAX_SPEED;
     count = 0;
   } else if(joystickGetDigital(LIFTER_DOWN)){
     main_motor_speed = MIN_SPEED;
     count = 0;
+    secondary_override = false;
+  } else {
+    secondary_override = false;
   }
   set_main_lifter_motors(main_motor_speed);
   pid_on = true;
@@ -158,8 +154,8 @@ static void secondary_lifter_update() {
  * @date 9/9/2017
  **/
 void update_lifter() {
-  secondary_lifter_update();
   main_lifter_update();
+  if(!secondary_override) secondary_lifter_update();
 }
 /**
  * @brief height of the lifter in degrees from 0 height
