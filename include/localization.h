@@ -57,4 +57,6 @@ struct location get_position();
  **/
 void update_position();
 
+int calculate_encoder_angle();
+
 #endif

@@ -48,17 +48,40 @@ void autonomous() {
   counts_drive = counts_drive_left + counts_drive_right;
   counts_drive /= 2;
 
+  //Deploy claw
+  while(analogRead(SECONDARY_LIFTER_POT_PORT) < DEPLOY_HEIGHT){
+
+    set_secondary_lifter_motors(MAX_SPEED);
+
+  }
+  set_secondary_lifter_motors(0);
+
+  while(analogRead(SECONDARY_LIFTER_POT_PORT)> LOWEST_HEIGHT){
+    set_secondary_lifter_motors(MIN_SPEED);
+  }
+  set_secondary_lifter_motors(0);
+
   //Grab pre-load cone
   close_claw();
   delay(300);
+  set_claw_motor(0);
 
-  //Raise the lifter
-  while(analogRead(LIFTER) < GOAL_HEIGHT){
-    //set_lifter_motors(-127);
+  while(analogRead(SECONDARY_LIFTER_POT_PORT) < MAX_HEIGHT){
+    set_secondary_lifter_motors(MAX_SPEED);
   }
-  //set_lifter_motors(0);
+  set_secondary_lifter_motors(0);
+  //Raise the lifter
+  while(analogRead(MAIN_LIFTER_POT) < MOBILE_GOAL_HEIGHT){
+    set_main_lifter_motors(MAX_SPEED);
+  }
+  set_main_lifter_motors(0);
   //Drive towards the goal
-  while(counts_drive < 530){
+
+  lower_intake();
+  delay(300);
+  set_intake_motor(0);
+
+  while(counts_drive < MOBILE_GOAL_DISTANCE){
     set_side_speed(BOTH, 127);
     //Restablish the distance traveled
     imeGet(MID_LEFT_DRIVE, &counts_drive_left);
@@ -70,8 +93,41 @@ void autonomous() {
   set_side_speed(BOTH, 0);
   delay(1000);
 
+  raise_intake();
+  delay(300);
+  set_intake_motor(0);
+
+
   //Drop the cone on the goal
   open_claw();
   delay(1000);
+
+  int ang = 0;
+  while(ang < HALF_ROTATE){
+    ang += calculate_encoder_angle();
+    set_side_speed(LEFT, MAX_SPEED);
+    set_side_speed(RIGHT, MIN_SPEED);
+  }
+  set_side_speed(BOTH, 0);
+
+  counts_drive = 0;
+
+  while(counts_drive < MOBILE_GOAL_DISTANCE + ZONE_DISTANCE){
+    set_side_speed(BOTH, 127);
+    //Restablish the distance traveled
+    imeGet(MID_LEFT_DRIVE, &counts_drive_left);
+    imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
+    counts_drive = counts_drive_left + counts_drive_right;
+    counts_drive /= 2;
+  }
+
+  lower_intake();
+  delay(300);
+  set_intake_motor(0);
+
+  set_side_speed(BOTH, MIN_SPEED);
+  delay(1000);
+  set_side_speed(BOTH, 0);
+
   deinitslew();
 }

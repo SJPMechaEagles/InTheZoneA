@@ -2,11 +2,11 @@
 #include "log.h"
 #include "partner.h"
 
-static void set_intake_motor(int n) { set_motor_immediate(INTAKE_MOTOR, n); }
+void set_intake_motor(int n) { set_motor_immediate(INTAKE_MOTOR, n); }
 
-static void lower_intake() { set_intake_motor(-100); }
+void lower_intake() { set_intake_motor(-100); }
 
-static void raise_intake() { set_intake_motor(100); }
+void raise_intake() { set_intake_motor(100); }
 
 /**
  * @brief updates the mobile goal intake in teleop.
