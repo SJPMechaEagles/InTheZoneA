@@ -68,7 +68,8 @@ static struct accelerometer_odometry calculate_accelerometer_odemetry() {
 
   double delta_time = ((millis() - last_call) / 1000.0);
   // double accel_x_abs = (accel_x_rel *  cos(theta) + accel_y_rel * sin(theta))
-  // * delta_time;  double accel_y_abs = (accel_y_rel *  cos(theta) + accel_x_rel
+  // * delta_time;  double accel_y_abs = (accel_y_rel *  cos(theta) +
+  // accel_x_rel
   // * sin(theta)) * delta_time;
 
   // vel_acumm_x += accel_x_abs;
@@ -97,28 +98,26 @@ static double calculate_gryo_anglular_velocity() {
   return w;
 }
 
-int calculate_encoder_angle()
-{
-  #define WIDTH 13.5
-  #define CPR 392.0
-  #define WHEEL_RADIUS 2
+int calculate_encoder_angle() {
+#define WIDTH 13.5
+#define CPR 392.0
+#define WHEEL_RADIUS 2
   int dist_r = get_encoder_ticks(0) / CPR;
   int dist_l = get_encoder_ticks(1) / CPR;
-  return((dist_r-dist_l)/WIDTH);
-
+  return ((dist_r - dist_l) / WIDTH);
 }
 
 static void calculate_encoder_odemetry() {
-  #define WIDTH 13.5
-  #define CPR 392.0
-  #define WHEEL_RADIUS 2
+#define WIDTH 13.5
+#define CPR 392.0
+#define WHEEL_RADIUS 2
 
   int dist_r = get_encoder_ticks(0) / CPR;
   int dist_l = get_encoder_ticks(1) / CPR;
   printf("dist_r: %d dist_l: %d\n", dist_r, dist_l);
-  int theta = (dist_l - dist_r)/WIDTH;
+  int theta = (dist_l - dist_r) / WIDTH;
   printf("theta: %d\n", theta);
-  int arc_length = ((M_PI * theta) * (WIDTH * WIDTH)/(8));
+  int arc_length = ((M_PI * theta) * (WIDTH * WIDTH) / (8));
 }
 
 bool init_localization(const unsigned char gyro1, unsigned short multiplier,

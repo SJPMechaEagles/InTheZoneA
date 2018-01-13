@@ -7,10 +7,14 @@
 #define _MOTOR_PORTS_H_
 
 /**
- * @brief Max motor speed
+ * @brief The max speed of a motor
  **/
 #define MAX_SPEED 127
-#define MIN_SPEED -127
+
+/**
+ * @brief The min speed of a motor
+ **/
+#define MIN_SPEED -128
 
 /**
  * @brief Front right drive motor of robot base

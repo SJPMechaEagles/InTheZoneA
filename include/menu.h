@@ -14,7 +14,6 @@
 #include <limits.h>
 #include <string.h>
 #include <vlib.h>
-//#include <stdlib.h>
 #include "log.h"
 
 /**
@@ -152,14 +151,6 @@ typedef struct menu_t {
 } menu_t;
 
 /**
- * @brief Static function that handles creation of menu.
- * <em> Menu must be freed or will cause memory leak <em>
- * @author Chris Jerrett
- * @date 9/8/17
- **/
-static menu_t *create_menu(enum menu_type type, const char *prompt);
-
-/**
  * @brief Creates a menu context, but does not display.
  * <em> Menu must be freed or will cause memory leak <em>
  *
@@ -204,16 +195,6 @@ menu_t *init_menu_int(enum menu_type type, int min, int max, int step,
  **/
 menu_t *init_menu_float(enum menu_type type, float min, float max, float step,
                         const char *prompt);
-
-/**
- * @brief Static function that calculates the string from menu
- *
- * @param rtn the string to be written to
- * @param menu the menu for prompt to be calculated from
- * @author Chris Jerrett
- * @date 9/8/17
- **/
-static void calculate_current_display(char *rtn, menu_t *menu);
 
 /**
  * @brief Displays a menu contex.

@@ -13,9 +13,8 @@
 #ifndef BUTTONS_H_
 #define BUTTONS_H_
 
-#include "controller.h"
-
 #include <API.h>
+#include "controller.h"
 
 /**
  * @brief Initializes the buttons

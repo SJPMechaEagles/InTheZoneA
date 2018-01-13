@@ -1,22 +1,22 @@
 #include "routines.h"
 #include "controller.h"
 #include "list.h"
+#include "log.h"
 #include "toggle.h"
 #include <API.h>
-#include "log.h"
 
-static list_t* routine_list;
+static list_t *routine_list;
 
 static TaskHandle routine_task_var;
 
 void routine_task() {
   list_node_t *node;
   list_iterator_t *it = list_iterator_new(routine_list, LIST_HEAD);
-  if(it != NULL) {
+  if (it != NULL) {
     while (node = list_iterator_next(it)) {
-      if(node->val != NULL) {
-        routine_t *routine = (routine_t*)(node->val);
-        if(buttonIsNewPress(routine->on_button)){
+      if (node->val != NULL) {
+        routine_t *routine = (routine_t *)(node->val);
+        if (buttonIsNewPress(routine->on_button)) {
           routine->routine();
         }
       }
@@ -30,12 +30,11 @@ void init_routine() {
   routine_task_var = taskRunLoop(routine_task, 20);
 }
 
-void deinit_routines() {
-  list_destroy(routine_list);
-}
+void deinit_routines() { list_destroy(routine_list); }
 
-void register_routine(void(*routine)(), button_t on_buttons, button_t *prohibited_buttons) {
-  struct routine_t *r = (struct routine_t*) malloc(sizeof(routine_t));
+void register_routine(void (*routine)(), button_t on_buttons,
+                      button_t *prohibited_buttons) {
+  struct routine_t *r = (struct routine_t *)malloc(sizeof(routine_t));
   r->blocked_buttons = prohibited_buttons;
   r->routine = routine;
   r->on_button = on_buttons;

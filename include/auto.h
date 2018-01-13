@@ -54,6 +54,6 @@
 
 #define ZONE_DISTANCE 1000
 
-#define HALF_ROTATE PI
+#define HALF_ROTATE M_PI
 
 #endif

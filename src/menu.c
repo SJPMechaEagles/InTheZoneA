@@ -1,6 +1,21 @@
 #include "menu.h"
 
+/**
+ * @brief Static function that handles creation of menu.
+ * <em> Menu must be freed or will cause memory leak <em>
+ * @author Chris Jerrett
+ * @date 9/8/17
+ **/
 static menu_t *create_menu(enum menu_type type, const char *prompt);
+
+/**
+ * @brief Static function that calculates the string from menu
+ *
+ * @param rtn the string to be written to
+ * @param menu the menu for the display to be calculated from
+ * @author Chris Jerrett
+ * @date 9/8/17
+ **/
 static void calculate_current_display(char *rtn, menu_t *menu);
 
 /**

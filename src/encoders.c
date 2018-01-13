@@ -1,6 +1,6 @@
 #include "encoders.h"
-#include <API.h>
 #include "log.h"
+#include <API.h>
 
 /**
  * @brief Initializes all motor encoders
@@ -11,7 +11,7 @@
 bool init_encoders() {
 #ifdef IME_NUMBER
   int count = imeInitializeAll();
-  if(count != IME_NUMBER){
+  if (count != IME_NUMBER) {
     printf("detected only %d\n", count);
     error("Wrong Number of IMEs Connected");
     return false;
