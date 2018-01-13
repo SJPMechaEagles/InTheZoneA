@@ -132,7 +132,7 @@ static void secondary_lifter_update() {
   } else{
     second_target = second_target > 3000 ? 4095 : second_target;
   }
-  second_motor_speed = abs(second_motor_speed) < 10 ? 0 : second_motor_speed;
+  second_motor_speed = abs(second_motor_speed) < 20 ? 0 : second_motor_speed;
   printf("Motor %d \n", second_motor_speed);
   printf("P %d \n", second_p);
   printf("I %lld \n", second_i);

@@ -29,12 +29,12 @@
 /**
  * @brief The derivative constant for the secondary lifter PID
  **/
-#define SECONDARY_LIFTER_D 0.3
+#define SECONDARY_LIFTER_D 0
 
 /**
  * @brief The integral constant for the secondary lifter PID
  **/
-#define SECONDARY_LIFTER_I 0.0001
+#define SECONDARY_LIFTER_I 0.000
 
 /**
  * @brief The proportional constant for the main lifter PID
