@@ -11,6 +11,8 @@
 #include "drive.h"
 #include "lifter.h"
 #include "sensor_ports.h"
+#include "mobile_goal_intake.h"
+#include "localization.h"
 
 /**
  * @brief Front left motor integrated motor encoder
@@ -36,5 +38,22 @@
  * @brief The height of the goal using potentiometer readings.
  **/
 #define GOAL_HEIGHT 1325
+
+/**
+* @brief height at which rubber bands do a do
+**/
+#define DEPLOY_HEIGHT 500
+
+#define LOWEST_HEIGHT 0
+
+#define MOBILE_GOAL_HEIGHT 3090
+
+#define MOBILE_GOAL_DISTANCE 4000
+
+#define MAX_HEIGHT 3090
+
+#define ZONE_DISTANCE 1000
+
+#define HALF_ROTATE PI
 
 #endif

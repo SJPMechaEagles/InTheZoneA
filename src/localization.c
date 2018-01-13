@@ -97,6 +97,17 @@ static double calculate_gryo_anglular_velocity() {
   return w;
 }
 
+int calculate_encoder_angle()
+{
+  #define WIDTH 13.5
+  #define CPR 392.0
+  #define WHEEL_RADIUS 2
+  int dist_r = get_encoder_ticks(0) / CPR;
+  int dist_l = get_encoder_ticks(1) / CPR;
+  return((dist_r-dist_l)/WIDTH);
+
+}
+
 static void calculate_encoder_odemetry() {
   #define WIDTH 13.5
   #define CPR 392.0
