@@ -54,7 +54,7 @@ void lower_main_lifter() { set_main_lifter_motors(MIN_SPEED); }
  * @author Christian DeSimone
  * @date 9/12/2017
  **/
-void raise_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
+void raise_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
 
 /**
  * @brief Lowers the secondary lifter
@@ -62,7 +62,7 @@ void raise_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
  * @author Christian DeSimone
  * @date 9/12/2017
  **/
-void lower_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
+void lower_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
 
 extern Ultrasonic lifter_ultrasonic;
 
@@ -91,10 +91,11 @@ static void main_lifter_update() {
   if(joystickGetDigital(LIFTER_UP)){
     main_motor_speed = MAX_SPEED;
     int ultra = ultrasonicGet(lifter_ultrasonic);
-    if(ultra > 11) {
+    if((ultra > 9 || ultra) == -1 && analogRead(SECONDARY_LIFTER_POT_PORT) < 3200) {
       raise_secondary_lifter();
-      printf("Raising\n");
+      info("Raising\n");
     } else {
+      set_secondary_lifter_motors(0);
       char c[20];
       sprintf(c, "%d", ultra);
       info(c);
