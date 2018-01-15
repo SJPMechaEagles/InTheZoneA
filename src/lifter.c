@@ -1,6 +1,27 @@
 #include "lifter.h"
 #include "log.h"
 
+Ultrasonic lifter_ultrasonic;
+
+static bool lifter_autostack_running = false;
+static bool lifter_autostack_routine_interupt = false;
+
+void autostack_routine() {
+  int instruction_couter = 0;
+  bool routine_complete = false;
+  while (true) {
+    if (instruction_couter == 0) {
+      int dist = ultrasonicGet(lifter_ultrasonic) if (dist < 11 || dist == -1) {
+        raise_main_lifter();
+      }
+      else {
+        set_main_lifter_motors(0);
+        instruction_couter = 1;
+      }
+    }
+  }
+}
+
 /**
  * @brief Sets the secondary lifter motors to the given value
  *
@@ -64,11 +85,11 @@ void raise_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED / 1.5); }
  **/
 void lower_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
 
-extern Ultrasonic lifter_ultrasonic;
-
 static bool secondary_override = false;
 
 static void main_lifter_update() {
+  if (lifter_autostack_running)
+    return;
   static int count = 0;
   static bool pid_on = false;
   static int main_target = 0;
@@ -107,6 +128,8 @@ static void main_lifter_update() {
 }
 
 static void secondary_lifter_update() {
+  if (lifter_autostack_running)
+    return;
   static int count = 0;
   // static bool pid_on = false;
   static int second_target = 0;
