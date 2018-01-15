@@ -18,6 +18,8 @@
 #include "menu.h"
 #include "slew.h"
 
+extern Ultrasonic lifter_ultrasonic;
+
 /*
  * Runs pre-initialization code. This function will be started in kernel mode
  * one time while the VEX Cortex is starting up. As the scheduler is still
