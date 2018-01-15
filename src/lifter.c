@@ -11,10 +11,10 @@ void autostack_routine() {
   bool routine_complete = false;
   while (true) {
     if (instruction_couter == 0) {
-      int dist = ultrasonicGet(lifter_ultrasonic) if (dist < 11 || dist == -1) {
+      int dist = ultrasonicGet(lifter_ultrasonic);
+      if (dist < 11 || dist == -1) {
         raise_main_lifter();
-      }
-      else {
+      } else {
         set_main_lifter_motors(0);
         instruction_couter = 1;
       }
