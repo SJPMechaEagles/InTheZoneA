@@ -1,4 +1,4 @@
-\section{log.\+c}
+\subsection{log.\+c}
 \label{log_8c_source}\index{src/log.\+c@{src/log.\+c}}
 
 \begin{DoxyCode}
@@ -8,7 +8,7 @@
 00004 \textcolor{keyword}{static} FILE *log_lcd = NULL;
 00005 
 00014 \textcolor{keywordtype}{void} init_error(\textcolor{keywordtype}{bool} use\_lcd, FILE *lcd) \{
-00015   \textcolor{keywordflow}{if}(use\_lcd) \{
+00015   \textcolor{keywordflow}{if} (use\_lcd) \{
 00016     lcdInit(lcd);
 00017     log_lcd = lcd;
 00018     lcdClear(log_lcd);
@@ -25,23 +25,23 @@
 00029 \}
 00030 
 00039 \textcolor{keywordtype}{void} error(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *error\_message) \{
-00040   \textcolor{keywordflow}{if}(log_level>NONE)
+00040   \textcolor{keywordflow}{if} (log_level > NONE)
 00041     log_info(\textcolor{stringliteral}{"ERROR"}, error\_message);
 00042 \}
 00043 
 00052 \textcolor{keywordtype}{void} warning(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *warning\_message) \{
-00053   \textcolor{keywordflow}{if}(log_level>WARNING)
+00053   \textcolor{keywordflow}{if} (log_level > WARNING)
 00054     log_info(\textcolor{stringliteral}{"WARNING"}, warning\_message);
 00055 \}
 00056 
 00064 \textcolor{keywordtype}{void} info(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *info\_message) \{
-00065   \textcolor{keywordflow}{if}(log_level>ERROR) \{
+00065   \textcolor{keywordflow}{if} (log_level > ERROR) \{
 00066     log_info(\textcolor{stringliteral}{"INFO"}, info\_message);
 00067   \}
 00068 \}
 00069 
 00077 \textcolor{keywordtype}{void} debug(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *debug\_message) \{
-00078   \textcolor{keywordflow}{if}(log_level>ERROR) \{
+00078   \textcolor{keywordflow}{if} (log_level > ERROR) \{
 00079     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
 00080   \}
 00081 \}

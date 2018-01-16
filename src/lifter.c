@@ -7,17 +7,23 @@ static bool lifter_autostack_running = false;
 static bool lifter_autostack_routine_interupt = false;
 
 void autostack_routine() {
-  int instruction_couter = 0;
-  bool routine_complete = false;
-  while (true) {
-    if (instruction_couter == 0) {
-      int dist = ultrasonicGet(lifter_ultrasonic);
-      if (dist > 11 || dist == -1) {
-        raise_main_lifter();
-      } else {
-        set_main_lifter_motors(0);
-        instruction_couter = 1;
-      }
+  raise_secondary_lifter();
+  while (!lifter_autostack_routine_interupt) {
+    if (ultrasonicGet(lifter_ultrasonic) < 11 ||
+        ultrasonicGet(lifter_ultrasonic) == ULTRA_BAD_RESPONSE) {
+      raise_main_lifter();
+    } else {
+      set_main_lifter_motors(0);
+    }
+    if (analogRead(SECONDARY_LIFTER_POT_PORT) > 1500)
+      set_secondary_lifter_motors(0);
+    if (!(ultrasonicGet(lifter_ultrasonic) < 11 ||
+          ultrasonicGet(lifter_ultrasonic) == ULTRA_BAD_RESPONSE)) {
+      set_main_lifter_motors(0);
+      set_secondary_lifter_motors(MIN_SPEED);
+    }
+    if (analogRead(SECONDARY_LIFTER_POT_PORT) > 3500) {
+      set_secondary_lifter_motors(0);
     }
   }
 }

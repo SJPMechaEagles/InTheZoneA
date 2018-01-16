@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="log_8h">
+    <title>log.h File Reference</title>
+    <programlisting>#include &quot;lcd.h&quot;</programlisting>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="log_8h_1ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</link> 4<para><emphasis>logging only info debug.
+most verbose level</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="log_8h_1a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</link> 1<para><emphasis>logging only errors.
+Also displays error to lcd</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="log_8h_1ae1103fea1e1b3c41ca3322d5389f7162">INFO</link> 3<para><emphasis>logging only info messages and higher.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="log_8h_1a655c84af1b0034986ff56e12e84f983d">NONE</link> 0<para><emphasis>No logging.
+Should be used in competition to reduce serial communication.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="log_8h_1a5cb439d9f933fde4cf23caa370c030e7">WARNING</link> 2<para><emphasis>logs errors and warnings.
+Also displays error to lcd</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="log_8h_1af3668f40d1ad1b4f3418869ac9a31f34">debug</link> (
+const char * debug_message)<para><emphasis>prints a info message</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="log_8h_1a8e5bb8a2a372f5b066ff7af7044584c1">error</link> (
+const char * error_message)<para><emphasis>prints a error message and displays on lcd.
+Only will print and display if log_level is greater than NONE</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="log_8h_1a1606d750e1bb8de9f9e917172bba3382">info</link> (
+const char * info_message)<para><emphasis>prints a info message</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="log_8h_1a163f389b4f5cf440a807d8fb48aaa006">init_error</link> (
+bool use_lcd, FILE * lcd)<para><emphasis>Initializes the error lcd system
+Only required if using lcd.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="log_8h_1a0bec2cf5fff7f607bc510b74aba9887c">warning</link> (
+const char * warning_message)<para><emphasis>prints a warning message and displays on lcd.
+Only will print and display if log_level is greater than NONE</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Contains logging functions. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/16/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/log.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+7 <emphasis class="preprocessor">#ifndef&#32;_LOG_H_</emphasis>
+8 <emphasis class="preprocessor">#define&#32;_LOG_H_</emphasis>
+9 
+10 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="lcd_8h">lcd.h</link>&quot;</emphasis>
+11 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+12 
+<link linkend="log_8h_1a655c84af1b0034986ff56e12e84f983d">19 </link><emphasis class="preprocessor">#define&#32;NONE&#32;0</emphasis>
+20 
+<link linkend="log_8h_1a8fe83ac76edc595f6b98cd4a4127aed5">27 </link><emphasis class="preprocessor">#define&#32;ERROR&#32;1</emphasis>
+28 
+<link linkend="log_8h_1a5cb439d9f933fde4cf23caa370c030e7">35 </link><emphasis class="preprocessor">#define&#32;WARNING&#32;2</emphasis>
+36 
+<link linkend="log_8h_1ae1103fea1e1b3c41ca3322d5389f7162">42 </link><emphasis class="preprocessor">#define&#32;INFO&#32;3</emphasis>
+43 
+<link linkend="log_8h_1ad72dbcf6d0153db1b8d8a58001feed83">50 </link><emphasis class="preprocessor">#define&#32;DEBUG&#32;4</emphasis>
+51 
+60 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8h_1a163f389b4f5cf440a807d8fb48aaa006">init_error</link>(<emphasis class="keywordtype">bool</emphasis>&#32;use_lcd,&#32;FILE&#32;*lcd);
+61 
+70 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8h_1a8e5bb8a2a372f5b066ff7af7044584c1">error</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*error_message);
+71 
+80 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8h_1a0bec2cf5fff7f607bc510b74aba9887c">warning</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*warning_message);
+81 
+89 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8h_1a1606d750e1bb8de9f9e917172bba3382">info</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*info_message);
+90 
+98 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8h_1af3668f40d1ad1b4f3418869ac9a31f34">debug</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*debug_message);
+99 
+100 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

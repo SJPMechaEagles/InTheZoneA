@@ -1,0 +1,238 @@
+\subsection{include/auto.h File Reference}
+\label{a00002}\index{include/auto.\+h@{include/auto.\+h}}
+
+
+Autonomous declarations and macros.  
+
+
+{\ttfamily \#include \char`\"{}claw.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drive.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lifter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sensor\+\_\+ports.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mobile\+\_\+goal\+\_\+intake.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}localization.\+h\char`\"{}}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ D\+E\+P\+L\+O\+Y\+\_\+\+H\+E\+I\+G\+HT}~500
+\begin{DoxyCompactList}\small\item\em height at which rubber bands do a do \end{DoxyCompactList}\item 
+\#define \textbf{ F\+R\+O\+N\+T\+\_\+\+L\+E\+F\+T\+\_\+\+I\+ME}~0
+\begin{DoxyCompactList}\small\item\em Front left motor integrated motor encoder. \end{DoxyCompactList}\item 
+\#define \textbf{ G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}~1325
+\begin{DoxyCompactList}\small\item\em The height of the goal using potentiometer readings. \end{DoxyCompactList}\item 
+\#define \textbf{ H\+A\+L\+F\+\_\+\+R\+O\+T\+A\+TE}~\textbf{ M\+\_\+\+PI}
+\item 
+\#define \textbf{ L\+O\+W\+E\+S\+T\+\_\+\+H\+E\+I\+G\+HT}~0
+\item 
+\#define \textbf{ M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}~3090
+\item 
+\#define \textbf{ M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}~1
+\begin{DoxyCompactList}\small\item\em Middle left motor integrated motor encoder. \end{DoxyCompactList}\item 
+\#define \textbf{ M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}~4
+\begin{DoxyCompactList}\small\item\em Middle right motor integrated motor encoder. \end{DoxyCompactList}\item 
+\#define \textbf{ M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE}~4000
+\item 
+\#define \textbf{ M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}~3090
+\item 
+\#define \textbf{ S\+T\+O\+P\+\_\+\+O\+NE}~500
+\begin{DoxyCompactList}\small\item\em First Stop position for stationary autonomous. \end{DoxyCompactList}\item 
+\#define \textbf{ Z\+O\+N\+E\+\_\+\+D\+I\+S\+T\+A\+N\+CE}~1000
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Autonomous declarations and macros. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/18/2017 
+\end{DoxyDate}
+
+
+Definition in file \textbf{ auto.\+h}.
+
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\label{a00002_afe2ab4383f3cf46d67e74834f691976f}} 
+\index{auto.\+h@{auto.\+h}!D\+E\+P\+L\+O\+Y\+\_\+\+H\+E\+I\+G\+HT@{D\+E\+P\+L\+O\+Y\+\_\+\+H\+E\+I\+G\+HT}}
+\index{D\+E\+P\+L\+O\+Y\+\_\+\+H\+E\+I\+G\+HT@{D\+E\+P\+L\+O\+Y\+\_\+\+H\+E\+I\+G\+HT}!auto.\+h@{auto.\+h}}
+\paragraph{D\+E\+P\+L\+O\+Y\+\_\+\+H\+E\+I\+G\+HT}
+{\footnotesize\ttfamily \#define D\+E\+P\+L\+O\+Y\+\_\+\+H\+E\+I\+G\+HT~500}
+
+
+
+height at which rubber bands do a do 
+
+
+
+Definition at line \textbf{ 45} of file \textbf{ auto.\+h}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+\mbox{\label{a00002_a7bc3203ebc61f8414788156a8616047c}} 
+\index{auto.\+h@{auto.\+h}!F\+R\+O\+N\+T\+\_\+\+L\+E\+F\+T\+\_\+\+I\+ME@{F\+R\+O\+N\+T\+\_\+\+L\+E\+F\+T\+\_\+\+I\+ME}}
+\index{F\+R\+O\+N\+T\+\_\+\+L\+E\+F\+T\+\_\+\+I\+ME@{F\+R\+O\+N\+T\+\_\+\+L\+E\+F\+T\+\_\+\+I\+ME}!auto.\+h@{auto.\+h}}
+\paragraph{F\+R\+O\+N\+T\+\_\+\+L\+E\+F\+T\+\_\+\+I\+ME}
+{\footnotesize\ttfamily \#define F\+R\+O\+N\+T\+\_\+\+L\+E\+F\+T\+\_\+\+I\+ME~0}
+
+
+
+Front left motor integrated motor encoder. 
+
+
+
+Definition at line \textbf{ 20} of file \textbf{ auto.\+h}.
+
+\mbox{\label{a00002_a83cf08759ac4ffc3ea6e3b7f9c406b3c}} 
+\index{auto.\+h@{auto.\+h}!G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT@{G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}}
+\index{G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT@{G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}!auto.\+h@{auto.\+h}}
+\paragraph{G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}
+{\footnotesize\ttfamily \#define G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT~1325}
+
+
+
+The height of the goal using potentiometer readings. 
+
+
+
+Definition at line \textbf{ 40} of file \textbf{ auto.\+h}.
+
+\mbox{\label{a00002_a57b89da6e342bd7556800463135d03ee}} 
+\index{auto.\+h@{auto.\+h}!H\+A\+L\+F\+\_\+\+R\+O\+T\+A\+TE@{H\+A\+L\+F\+\_\+\+R\+O\+T\+A\+TE}}
+\index{H\+A\+L\+F\+\_\+\+R\+O\+T\+A\+TE@{H\+A\+L\+F\+\_\+\+R\+O\+T\+A\+TE}!auto.\+h@{auto.\+h}}
+\paragraph{H\+A\+L\+F\+\_\+\+R\+O\+T\+A\+TE}
+{\footnotesize\ttfamily \#define H\+A\+L\+F\+\_\+\+R\+O\+T\+A\+TE~\textbf{ M\+\_\+\+PI}}
+
+
+
+Definition at line \textbf{ 57} of file \textbf{ auto.\+h}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+\mbox{\label{a00002_af364d4d51593fe601f20090221f9ddab}} 
+\index{auto.\+h@{auto.\+h}!L\+O\+W\+E\+S\+T\+\_\+\+H\+E\+I\+G\+HT@{L\+O\+W\+E\+S\+T\+\_\+\+H\+E\+I\+G\+HT}}
+\index{L\+O\+W\+E\+S\+T\+\_\+\+H\+E\+I\+G\+HT@{L\+O\+W\+E\+S\+T\+\_\+\+H\+E\+I\+G\+HT}!auto.\+h@{auto.\+h}}
+\paragraph{L\+O\+W\+E\+S\+T\+\_\+\+H\+E\+I\+G\+HT}
+{\footnotesize\ttfamily \#define L\+O\+W\+E\+S\+T\+\_\+\+H\+E\+I\+G\+HT~0}
+
+
+
+Definition at line \textbf{ 47} of file \textbf{ auto.\+h}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+\mbox{\label{a00002_a9059fa76eb5e8e86f870405d63e72c4c}} 
+\index{auto.\+h@{auto.\+h}!M\+A\+X\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}}
+\index{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}!auto.\+h@{auto.\+h}}
+\paragraph{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+H\+E\+I\+G\+HT~3090}
+
+
+
+Definition at line \textbf{ 53} of file \textbf{ auto.\+h}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+\mbox{\label{a00002_a811b1777cccc7f0e3abbec1874715f0a}} 
+\index{auto.\+h@{auto.\+h}!M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE@{M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}}
+\index{M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE@{M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}!auto.\+h@{auto.\+h}}
+\paragraph{M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}
+{\footnotesize\ttfamily \#define M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE~1}
+
+
+
+Middle left motor integrated motor encoder. 
+
+
+
+Definition at line \textbf{ 25} of file \textbf{ auto.\+h}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+\mbox{\label{a00002_a2919b1b6b7bf06fab5b5bbf09d8d2761}} 
+\index{auto.\+h@{auto.\+h}!M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE@{M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}}
+\index{M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE@{M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}!auto.\+h@{auto.\+h}}
+\paragraph{M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}
+{\footnotesize\ttfamily \#define M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE~4}
+
+
+
+Middle right motor integrated motor encoder. 
+
+
+
+Definition at line \textbf{ 30} of file \textbf{ auto.\+h}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+\mbox{\label{a00002_a504fa7d477dd649d731953ec495b1492}} 
+\index{auto.\+h@{auto.\+h}!M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE}}
+\index{M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE}!auto.\+h@{auto.\+h}}
+\paragraph{M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE}
+{\footnotesize\ttfamily \#define M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE~4000}
+
+
+
+Definition at line \textbf{ 51} of file \textbf{ auto.\+h}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+\mbox{\label{a00002_ad266821cf9c9fa6af01be95baed80644}} 
+\index{auto.\+h@{auto.\+h}!M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT@{M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}}
+\index{M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT@{M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}!auto.\+h@{auto.\+h}}
+\paragraph{M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}
+{\footnotesize\ttfamily \#define M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT~3090}
+
+
+
+Definition at line \textbf{ 49} of file \textbf{ auto.\+h}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+\mbox{\label{a00002_a67c9207ce99d4414dce28d8c42ba1d2a}} 
+\index{auto.\+h@{auto.\+h}!S\+T\+O\+P\+\_\+\+O\+NE@{S\+T\+O\+P\+\_\+\+O\+NE}}
+\index{S\+T\+O\+P\+\_\+\+O\+NE@{S\+T\+O\+P\+\_\+\+O\+NE}!auto.\+h@{auto.\+h}}
+\paragraph{S\+T\+O\+P\+\_\+\+O\+NE}
+{\footnotesize\ttfamily \#define S\+T\+O\+P\+\_\+\+O\+NE~500}
+
+
+
+First Stop position for stationary autonomous. 
+
+
+
+Definition at line \textbf{ 35} of file \textbf{ auto.\+h}.
+
+\mbox{\label{a00002_abe0d1da59836694bca507d0a5b61423b}} 
+\index{auto.\+h@{auto.\+h}!Z\+O\+N\+E\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{Z\+O\+N\+E\+\_\+\+D\+I\+S\+T\+A\+N\+CE}}
+\index{Z\+O\+N\+E\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{Z\+O\+N\+E\+\_\+\+D\+I\+S\+T\+A\+N\+CE}!auto.\+h@{auto.\+h}}
+\paragraph{Z\+O\+N\+E\+\_\+\+D\+I\+S\+T\+A\+N\+CE}
+{\footnotesize\ttfamily \#define Z\+O\+N\+E\+\_\+\+D\+I\+S\+T\+A\+N\+CE~1000}
+
+
+
+Definition at line \textbf{ 55} of file \textbf{ auto.\+h}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+

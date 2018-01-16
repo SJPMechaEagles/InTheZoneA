@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="partner_8h">
+    <title>partner.h File Reference</title>
+    <programlisting>#include &quot;API.h&quot;</programlisting>
+    <programlisting>#include &quot;controller.h&quot;</programlisting>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324">CONTROLL_MODE</link> {
+<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475">MAIN_CONTROLLER_MODE</link>,
+<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7">PARTNER_CONTROLLER_MODE</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>enum <link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324">CONTROLL_MODE</link> <link linkend="partner_8h_1aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="partner_8h_1ab2c78903a76d2ed8969271803c78368a">update_control</link> (
+)<para><emphasis>Updates the controller mode between Driver and Partner modes.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/partner.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#ifndef&#32;_PARTNER_H_</emphasis>
+2 <emphasis class="preprocessor">#define&#32;_PARTNER_H_</emphasis>
+3 
+4 <emphasis class="preprocessor">#include&#32;&quot;API.h&quot;</emphasis>
+5 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="controller_8h">controller.h</link>&quot;</emphasis>
+6 
+<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7">7 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324">CONTROLL_MODE</link>&#32;{&#32;<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475">MAIN_CONTROLLER_MODE</link>,&#32;<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7">PARTNER_CONTROLLER_MODE</link>&#32;};
+13 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="partner_8h_1ab2c78903a76d2ed8969271803c78368a">update_control</link>();
+14 
+15 <emphasis class="keyword">enum</emphasis>&#32;<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324">CONTROLL_MODE</link>&#32;<link linkend="partner_8h_1aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</link>();
+16 
+17 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

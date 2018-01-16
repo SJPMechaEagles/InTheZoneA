@@ -1,35 +1,53 @@
-\section{src/mobile\+\_\+goal\+\_\+intake.c File Reference}
+\subsection{src/mobile\+\_\+goal\+\_\+intake.c File Reference}
 \label{mobile__goal__intake_8c}\index{src/mobile\+\_\+goal\+\_\+intake.\+c@{src/mobile\+\_\+goal\+\_\+intake.\+c}}
 {\ttfamily \#include \char`\"{}mobile\+\_\+goal\+\_\+intake.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}partner.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
-Include dependency graph for mobile\+\_\+goal\+\_\+intake.\+c\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{mobile__goal__intake_8c__incl}
-\end{center}
-\end{figure}
-\subsection*{Functions}
+{\ttfamily \#include \char`\"{}partner.\+h\char`\"{}}\newline
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \textbf{ lower\+\_\+intake} ()
-\item 
-static void \textbf{ raise\+\_\+intake} ()
-\item 
-static void \textbf{ set\+\_\+intake\+\_\+motor} (int n)
-\item 
+void \textbf{ lower\+\_\+intake} ()
+\begin{DoxyCompactList}\small\item\em lowers the intake \end{DoxyCompactList}\item 
+void \textbf{ raise\+\_\+intake} ()
+\begin{DoxyCompactList}\small\item\em raises the intake \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+intake\+\_\+motor} (int n)
+\begin{DoxyCompactList}\small\item\em sets the intake motor \end{DoxyCompactList}\item 
 void \textbf{ update\+\_\+intake} ()
 \begin{DoxyCompactList}\small\item\em updates the mobile goal intake in teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
-\mbox{\label{mobile__goal__intake_8c_afa91470a9891e48827fd62d18553c6ce}} 
+\subsubsection{Function Documentation}
+\mbox{\label{mobile__goal__intake_8c_aef03134014e51a6a90dd3824f09f4d6c}} 
 \index{mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}!lower\+\_\+intake@{lower\+\_\+intake}}
 \index{lower\+\_\+intake@{lower\+\_\+intake}!mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}}
-\subsubsection{lower\+\_\+intake()}
-{\footnotesize\ttfamily static void lower\+\_\+intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\paragraph{lower\+\_\+intake()}
+{\footnotesize\ttfamily void lower\+\_\+intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+lowers the intake 
+
+
+
+Definition at line \textbf{ 7} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
+
+
+
+References \textbf{ set\+\_\+intake\+\_\+motor()}.
+
+
+
+Referenced by \textbf{ autonomous()}, and \textbf{ update\+\_\+intake()}.
+
+\mbox{\label{mobile__goal__intake_8c_aa46a9341d1eb7b39a2ef4cc5079ee3ca}} 
+\index{mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}!raise\+\_\+intake@{raise\+\_\+intake}}
+\index{raise\+\_\+intake@{raise\+\_\+intake}!mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}}
+\paragraph{raise\+\_\+intake()}
+{\footnotesize\ttfamily void raise\+\_\+intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+raises the intake 
 
 
 
@@ -41,44 +59,21 @@ References \textbf{ set\+\_\+intake\+\_\+motor()}.
 
 
 
-Referenced by \textbf{ update\+\_\+intake()}.
+Referenced by \textbf{ autonomous()}, and \textbf{ update\+\_\+intake()}.
 
-
-\begin{DoxyCode}
-00009                            \{
-00010   set_intake_motor(-100);
-00011 \}
-\end{DoxyCode}
-\mbox{\label{mobile__goal__intake_8c_a4899f9a8621015313e6312ce085da979}} 
-\index{mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}!raise\+\_\+intake@{raise\+\_\+intake}}
-\index{raise\+\_\+intake@{raise\+\_\+intake}!mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}}
-\subsubsection{raise\+\_\+intake()}
-{\footnotesize\ttfamily static void raise\+\_\+intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Definition at line \textbf{ 13} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
-
-
-
-References \textbf{ set\+\_\+intake\+\_\+motor()}.
-
-
-
-Referenced by \textbf{ update\+\_\+intake()}.
-
-
-\begin{DoxyCode}
-00013                            \{
-00014   set_intake_motor(100);
-00015 \}
-\end{DoxyCode}
-\mbox{\label{mobile__goal__intake_8c_a8f215023832ba515d7b4535e3ae07498}} 
+\mbox{\label{mobile__goal__intake_8c_ab31e12bb0fa46c77906a048666b699d5}} 
 \index{mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}!set\+\_\+intake\+\_\+motor@{set\+\_\+intake\+\_\+motor}}
 \index{set\+\_\+intake\+\_\+motor@{set\+\_\+intake\+\_\+motor}!mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}}
-\subsubsection{set\+\_\+intake\+\_\+motor()}
-{\footnotesize\ttfamily static void set\+\_\+intake\+\_\+motor (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\paragraph{set\+\_\+intake\+\_\+motor()}
+{\footnotesize\ttfamily void set\+\_\+intake\+\_\+motor (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
+
+
+sets the intake motor 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
 
 
 Definition at line \textbf{ 5} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
@@ -89,18 +84,12 @@ References \textbf{ I\+N\+T\+A\+K\+E\+\_\+\+M\+O\+T\+OR}, and \textbf{ set\+\_\+
 
 
 
-Referenced by \textbf{ lower\+\_\+intake()}, \textbf{ raise\+\_\+intake()}, and \textbf{ update\+\_\+intake()}.
+Referenced by \textbf{ autonomous()}, \textbf{ lower\+\_\+intake()}, \textbf{ raise\+\_\+intake()}, and \textbf{ update\+\_\+intake()}.
 
-
-\begin{DoxyCode}
-00005                                     \{
-00006   set_motor_immediate(INTAKE_MOTOR, n);
-00007 \}
-\end{DoxyCode}
 \mbox{\label{mobile__goal__intake_8c_a5d7bad8a208988af743fd2e68f111286}} 
 \index{mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}!update\+\_\+intake@{update\+\_\+intake}}
 \index{update\+\_\+intake@{update\+\_\+intake}!mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}}
-\subsubsection{update\+\_\+intake()}
+\paragraph{update\+\_\+intake()}
 {\footnotesize\ttfamily void update\+\_\+intake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -112,7 +101,7 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 20} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
+Definition at line \textbf{ 14} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
 
 
 
@@ -122,15 +111,3 @@ References \textbf{ lower\+\_\+intake()}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ rai
 
 Referenced by \textbf{ operator\+Control()}.
 
-
-\begin{DoxyCode}
-00020                      \{
-00021   \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_UP)) \{
-00022     raise_intake();
-00023   \}
-00024   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_DOWN))\{
-00025     lower_intake();
-00026   \}
-00027   \textcolor{keywordflow}{else} set_intake_motor(0);
-00028 \}
-\end{DoxyCode}

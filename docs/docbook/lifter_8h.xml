@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="lifter_8h">
+    <title>lifter.h File Reference</title>
+    <programlisting>#include &quot;controller.h&quot;</programlisting>
+    <programlisting>#include &quot;drive.h&quot;</programlisting>
+    <programlisting>#include &quot;motor_ports.h&quot;</programlisting>
+    <programlisting>#include &quot;partner.h&quot;</programlisting>
+    <programlisting>#include &quot;potentiometer.h&quot;</programlisting>
+    <programlisting>#include &quot;sensor_ports.h&quot;</programlisting>
+    <programlisting>#include &quot;slew.h&quot;</programlisting>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</link> 19.1 - 3.8<para><emphasis>The integral constant for the lifter PID.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a0685a3cee7d5cabe98d2c9c97bed5727">INIT_ROTATION</link> 680<para><emphasis>The initial rotation of the lifter potentiometer at height zero.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a12f8c1de242a92f5694e6b80b990773a">LIFTER_DOWN</link> <link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link>, 6, JOY_DOWN<para><emphasis>The lifter down controller params.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a40a0b4dc0172c4133a34d5e3d8b69f9a">LIFTER_DOWN_PARTNER</link> <link linkend="controller_8h_1a136e64cf351535da81cacb6a546cade6">PARTNER</link>, 5, JOY_DOWN<para><emphasis>The lifter down controller params for the partner.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1ad4a88f04887d4f1f4e5fa057b29f68e9">LIFTER_DRIVER_LOAD</link> <link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link>, <link linkend="controller_8h_1a68881b6085c880930037b20764fe5aee">RIGHT_BUTTONS</link>, JOY_RIGHT<para><emphasis>Height to raise lifter to driver preload height.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a96a5c0bbb7527bf1d45818fc4db97b68">LIFTER_UP</link> <link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link>, 6, JOY_UP<para><emphasis>The lifter up controller params.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1adbb0a4048f612d2042be2b1d2644a16e">LIFTER_UP_PARTNER</link> <link linkend="controller_8h_1a136e64cf351535da81cacb6a546cade6">PARTNER</link>, 5, JOY_UP<para><emphasis>The lifter up controller params for the partner.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1ab6fa1d908306aad3eede033d59f2885e">MAIN_LIFTER_D</link> 0<para><emphasis>The derivative constant for the main lifter PID.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1adf35babe449f468876c16d77c0465821">MAIN_LIFTER_I</link> 0.0000001<para><emphasis>The integral constant for the main lifter PID.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a54af37b0a6c7c352ba160922243a5c33">MAIN_LIFTER_MIN_HEIGHT</link> 1700</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a018488685535fd70bf59e3c5616140c1">MAIN_LIFTER_P</link> 0<para><emphasis>The proportional constant for the main lifter PID.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a82799bdc8f8a1a7a38785b446bdd6a9a">MAIN_LIFTER_POT</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a3ff007feb4abe2a93cb3a25f4808c787">SECONDARY_LIFTER_D</link> 0<para><emphasis>The derivative constant for the secondary lifter PID.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a18b69ad14b64769ce9e96b5a3046c0d9">SECONDARY_LIFTER_DOWN</link> <link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link>, 8, JOY_DOWN<para><emphasis>The secondary lifter down controller params.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a7d8b61f7c2fc97e6cfeb3feabd3b8260">SECONDARY_LIFTER_I</link> 0.000<para><emphasis>The integral constant for the secondary lifter PID.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a1577e085f9f697084436d412ac4bb838">SECONDARY_LIFTER_MAX_HEIGHT</link> 3120</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1ab3698510d2e3be839cbfb090f101cfcf">SECONDARY_LIFTER_MIN_HEIGHT</link> 2000</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a63dd166fe901eb29af4888c0c1a74117">SECONDARY_LIFTER_P</link> .05<para><emphasis>The proportional constant for the secondary lifter PID.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a72522c3c839198d275d956af1b759ff3">SECONDARY_LIFTER_POT_PORT</link> 2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a69dbccd126807ef1c7b3994bb96c687d">SECONDARY_LIFTER_UP</link> <link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link>, 8, JOY_UP<para><emphasis>The secondary lifter up controller params.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="lifter_8h_1a4679d8ea8690999a6c6c7c0cb245c879">THRESHOLD</link> 10<para><emphasis>The threshold of a signficant speed for the lifter.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="lifter_8h_1a2719740958fd8a5926f88f6194e820e3">getLifterHeight</link> (
+)<para><emphasis>Gets the height of the lifter in inches.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="lifter_8h_1acdf909159b0406c48099843f2306be78">getLifterTicks</link> (
+)<para><emphasis>Gets the value of the lifter pot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="lifter_8h_1ab0460888f3213e5510bd25ae1e152a75">lifterPotentiometerToDegree</link> (
+int x)<para><emphasis>height of the lifter in degrees from 0 height</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lifter_8h_1ad36c37086a91046af4e6f619618b7719">lower_main_lifter</link> (
+)<para><emphasis>Lowers the main lifter.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lifter_8h_1af76abbd394bf206ab56fa237d776f2b3">lower_secondary_lifter</link> (
+)<para><emphasis>Lowers the secondary lifter.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lifter_8h_1a2e2bd38b5b8b52378f3510368bf8aa0a">raise_main_lifter</link> (
+)<para><emphasis>Raises the main lifter.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lifter_8h_1a786f679ea48bb8c80e00fbac9a69911b">raise_secondary_lifter</link> (
+)<para><emphasis>Raises the main lifter.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lifter_8h_1abddc7cb502e12fa277b627c90a45efb1">set_lifter_pos</link> (
+int pos)<para><emphasis>Sets the lifter positions to the given value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lifter_8h_1ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</link> (
+const int v)<para><emphasis>Sets the main lifter motors to the given value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lifter_8h_1a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</link> (
+const int v)<para><emphasis>Sets the secondary lifter motors to the given value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lifter_8h_1a59bb7413777ca16aba124aaedf95c79b">update_lifter</link> (
+)<para><emphasis>Updates the lifter in teleop.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Declarations and macros for controlling and manipulating the lifter. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett, Christian Desimone </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>8/27/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/lifter.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+7 <emphasis class="preprocessor">#ifndef&#32;_LIFTER_H_</emphasis>
+8 <emphasis class="preprocessor">#define&#32;_LIFTER_H_</emphasis>
+9 
+10 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="controller_8h">controller.h</link>&quot;</emphasis>
+11 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="drive_8h">drive.h</link>&quot;</emphasis>
+12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="motor__ports_8h">motor_ports.h</link>&quot;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="partner_8h">partner.h</link>&quot;</emphasis>
+14 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="potentiometer_8h">potentiometer.h</link>&quot;</emphasis>
+15 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="sensor__ports_8h">sensor_ports.h</link>&quot;</emphasis>
+16 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="slew_8h">slew.h</link>&quot;</emphasis>
+17 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+18 
+<link linkend="lifter_8h_1a0685a3cee7d5cabe98d2c9c97bed5727">22 </link><emphasis class="preprocessor">#define&#32;INIT_ROTATION&#32;680</emphasis>
+23 
+<link linkend="lifter_8h_1a63dd166fe901eb29af4888c0c1a74117">27 </link><emphasis class="preprocessor">#define&#32;SECONDARY_LIFTER_P&#32;.05</emphasis>
+28 
+<link linkend="lifter_8h_1a3ff007feb4abe2a93cb3a25f4808c787">32 </link><emphasis class="preprocessor">#define&#32;SECONDARY_LIFTER_D&#32;0</emphasis>
+33 
+<link linkend="lifter_8h_1a7d8b61f7c2fc97e6cfeb3feabd3b8260">37 </link><emphasis class="preprocessor">#define&#32;SECONDARY_LIFTER_I&#32;0.000</emphasis>
+38 
+<link linkend="lifter_8h_1a018488685535fd70bf59e3c5616140c1">42 </link><emphasis class="preprocessor">#define&#32;MAIN_LIFTER_P&#32;0</emphasis>
+43 
+<link linkend="lifter_8h_1ab6fa1d908306aad3eede033d59f2885e">47 </link><emphasis class="preprocessor">#define&#32;MAIN_LIFTER_D&#32;0</emphasis>
+48 
+<link linkend="lifter_8h_1adf35babe449f468876c16d77c0465821">52 </link><emphasis class="preprocessor">#define&#32;MAIN_LIFTER_I&#32;0.0000001</emphasis>
+53 
+<link linkend="lifter_8h_1a4679d8ea8690999a6c6c7c0cb245c879">57 </link><emphasis class="preprocessor">#define&#32;THRESHOLD&#32;10</emphasis>
+58 
+<link linkend="lifter_8h_1aed89bd71aee8be823e8a20ec4e093c1e">62 </link><emphasis class="preprocessor">#define&#32;HEIGHT&#32;19.1&#32;-&#32;3.8</emphasis>
+63 
+<link linkend="lifter_8h_1a96a5c0bbb7527bf1d45818fc4db97b68">67 </link><emphasis class="preprocessor">#define&#32;LIFTER_UP&#32;MASTER,&#32;6,&#32;JOY_UP</emphasis>
+68 
+<link linkend="lifter_8h_1a12f8c1de242a92f5694e6b80b990773a">72 </link><emphasis class="preprocessor">#define&#32;LIFTER_DOWN&#32;MASTER,&#32;6,&#32;JOY_DOWN</emphasis>
+73 
+<link linkend="lifter_8h_1a69dbccd126807ef1c7b3994bb96c687d">77 </link><emphasis class="preprocessor">#define&#32;SECONDARY_LIFTER_UP&#32;MASTER,&#32;8,&#32;JOY_UP</emphasis>
+78 
+<link linkend="lifter_8h_1a18b69ad14b64769ce9e96b5a3046c0d9">82 </link><emphasis class="preprocessor">#define&#32;SECONDARY_LIFTER_DOWN&#32;MASTER,&#32;8,&#32;JOY_DOWN</emphasis>
+83 
+<link linkend="lifter_8h_1ad4a88f04887d4f1f4e5fa057b29f68e9">87 </link><emphasis class="preprocessor">#define&#32;LIFTER_DRIVER_LOAD&#32;MASTER,&#32;RIGHT_BUTTONS,&#32;JOY_RIGHT</emphasis>
+88 
+<link linkend="lifter_8h_1adbb0a4048f612d2042be2b1d2644a16e">92 </link><emphasis class="preprocessor">#define&#32;LIFTER_UP_PARTNER&#32;PARTNER,&#32;5,&#32;JOY_UP</emphasis>
+93 
+<link linkend="lifter_8h_1a40a0b4dc0172c4133a34d5e3d8b69f9a">97 </link><emphasis class="preprocessor">#define&#32;LIFTER_DOWN_PARTNER&#32;PARTNER,&#32;5,&#32;JOY_DOWN</emphasis>
+98 
+<link linkend="lifter_8h_1a72522c3c839198d275d956af1b759ff3">99 </link><emphasis class="preprocessor">#define&#32;SECONDARY_LIFTER_POT_PORT&#32;2</emphasis>
+100 
+<link linkend="lifter_8h_1a1577e085f9f697084436d412ac4bb838">101 </link><emphasis class="preprocessor">#define&#32;SECONDARY_LIFTER_MAX_HEIGHT&#32;3120</emphasis>
+102 
+<link linkend="lifter_8h_1ab3698510d2e3be839cbfb090f101cfcf">103 </link><emphasis class="preprocessor">#define&#32;SECONDARY_LIFTER_MIN_HEIGHT&#32;2000</emphasis>
+104 
+<link linkend="lifter_8h_1a82799bdc8f8a1a7a38785b446bdd6a9a">105 </link><emphasis class="preprocessor">#define&#32;MAIN_LIFTER_POT&#32;1</emphasis>
+106 
+<link linkend="lifter_8h_1a54af37b0a6c7c352ba160922243a5c33">107 </link><emphasis class="preprocessor">#define&#32;MAIN_LIFTER_MIN_HEIGHT&#32;1700</emphasis>
+108 
+117 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lifter_8h_1a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;v);
+118 
+127 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lifter_8h_1ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;v);
+128 
+136 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lifter_8h_1abddc7cb502e12fa277b627c90a45efb1">set_lifter_pos</link>(<emphasis class="keywordtype">int</emphasis>&#32;pos);
+137 
+144 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lifter_8h_1a2e2bd38b5b8b52378f3510368bf8aa0a">raise_main_lifter</link>();
+145 
+152 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lifter_8h_1ad36c37086a91046af4e6f619618b7719">lower_main_lifter</link>();
+153 
+160 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lifter_8h_1a786f679ea48bb8c80e00fbac9a69911b">raise_secondary_lifter</link>();
+161 
+168 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lifter_8h_1af76abbd394bf206ab56fa237d776f2b3">lower_secondary_lifter</link>();
+169 
+176 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lifter_8h_1a59bb7413777ca16aba124aaedf95c79b">update_lifter</link>();
+177 
+186 <emphasis class="keywordtype">float</emphasis>&#32;<link linkend="lifter_8h_1ab0460888f3213e5510bd25ae1e152a75">lifterPotentiometerToDegree</link>(<emphasis class="keywordtype">int</emphasis>&#32;x);
+187 
+195 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="lifter_8h_1acdf909159b0406c48099843f2306be78">getLifterTicks</link>();
+196 
+204 <emphasis class="keywordtype">double</emphasis>&#32;<link linkend="lifter_8h_1a2719740958fd8a5926f88f6194e820e3">getLifterHeight</link>();
+205 
+206 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

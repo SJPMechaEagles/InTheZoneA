@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="battery_8c">
+    <title>battery.c File Reference</title>
+    <programlisting>#include &quot;battery.h&quot;</programlisting>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="battery_8c_1a9b1c5cf7ddddebf63796050a1d4a9969">backup_battery_voltage</link> (
+)<para><emphasis>gets the backup battery voltage</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="battery_8c_1a1097bbb878f6e2690f8eea6cd231959a">battery_level_acceptable</link> (
+)<para><emphasis>returns if the batteries are acceptable</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="battery_8c_1a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</link> (
+)<para><emphasis>gets the main battery voltage</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/battery.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="battery_8h">battery.h</link>&quot;</emphasis>
+2 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+3 
+<link linkend="battery_8c_1a8c92c389534fdb079698cdebeb7f2efa">8 </link><emphasis class="keywordtype">double</emphasis>&#32;<link linkend="battery_8c_1a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</link>()&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;powerLevelMain()&#32;/&#32;1000.0;&#32;}
+9 
+<link linkend="battery_8c_1a9b1c5cf7ddddebf63796050a1d4a9969">14 </link><emphasis class="keywordtype">double</emphasis>&#32;<link linkend="battery_8c_1a9b1c5cf7ddddebf63796050a1d4a9969">backup_battery_voltage</link>()&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;powerLevelBackup()&#32;/&#32;1000.0;&#32;}
+15 
+<link linkend="battery_8c_1a1097bbb878f6e2690f8eea6cd231959a">23 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="battery_8c_1a1097bbb878f6e2690f8eea6cd231959a">battery_level_acceptable</link>()&#32;{
+24 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="battery_8c_1a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</link>()&#32;&lt;&#32;<link linkend="battery_8h_1a63f8a91bb74417aa77dc00340b6fd007">MIN_MAIN_VOLTAGE</link>)
+25 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">false</emphasis>;
+26 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="battery_8c_1a9b1c5cf7ddddebf63796050a1d4a9969">backup_battery_voltage</link>()&#32;&lt;&#32;<link linkend="battery_8h_1a0713ec94f47c403bf536ab6b11833b81">MIN_BACKUP_VOLTAGE</link>)
+27 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">false</emphasis>;
+28 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">true</emphasis>;
+29 }
+    </computeroutput></literallayout>
+</section>

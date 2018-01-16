@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.2</span>
+   &#160;<span id="projectnumber">1.5.8</span>
    </div>
   </td>
  </tr>
@@ -88,11 +89,6 @@ $(document).ready(function(){initNavTree('log_8c.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="log_8h_source.html">log.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for log.c:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="log_8c__incl.svg" width="103" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div>
 <p><a href="log_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -153,10 +149,8 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="log_8h_source.html#l00027">ERROR</a>, and <a class="el" href="log_8c_source.html#l00003">log_level</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00089">set_motor_immediate()</a>, and <a class="el" href="slew_8c_source.html#l00072">set_motor_slew()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                      {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a>&gt;<a class="code" href="log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>) {</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    printf(<span class="stringliteral">&quot;[INFO]: %s\n&quot;</span>, debug_message);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div><div class="ttc" id="log_8h_html_a8fe83ac76edc595f6b98cd4a4127aed5"><div class="ttname"><a href="log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a></div><div class="ttdeci">#define ERROR</div><div class="ttdoc">logging only errors. Also displays error to lcd </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00027">log.h:27</a></div></div>
-<div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00090">set_motor_immediate()</a>, and <a class="el" href="slew_8c_source.html#l00073">set_motor_slew()</a>.</p>
+
 </div>
 </div>
 <a id="a8e5bb8a2a372f5b066ff7af7044584c1"></a>
@@ -190,11 +184,8 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="log_8c_source.html#l00023">log_info()</a>, <a class="el" href="log_8c_source.html#l00003">log_level</a>, and <a class="el" href="log_8h_source.html#l00019">NONE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00012">create_menu()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                      {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a>&gt;<a class="code" href="log_8h.html#a655c84af1b0034986ff56e12e84f983d">NONE</a>)</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a>(<span class="stringliteral">&quot;ERROR&quot;</span>, error_message);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
-<div class="ttc" id="log_8c_html_afff22aff6749311a684a559cac3ac8bd"><div class="ttname"><a href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a></div><div class="ttdeci">static void log_info(const char *s, const char *mess)</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00023">log.c:23</a></div></div>
-<div class="ttc" id="log_8h_html_a655c84af1b0034986ff56e12e84f983d"><div class="ttname"><a href="log_8h.html#a655c84af1b0034986ff56e12e84f983d">NONE</a></div><div class="ttdeci">#define NONE</div><div class="ttdoc">No logging. Should be used in competition to reduce serial communication. </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00019">log.h:19</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="matrix_8c_source.html#l00015">assert()</a>, <a class="el" href="menu_8c_source.html#l00027">create_menu()</a>, <a class="el" href="encoders_8c_source.html#l00011">init_encoders()</a>, and <a class="el" href="init_8c_source.html#l00050">initialize()</a>.</p>
+
 </div>
 </div>
 <a id="a1606d750e1bb8de9f9e917172bba3382"></a>
@@ -226,11 +217,8 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="log_8h_source.html#l00027">ERROR</a>, <a class="el" href="log_8c_source.html#l00023">log_info()</a>, and <a class="el" href="log_8c_source.html#l00003">log_level</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00040">init_slew()</a>, and <a class="el" href="init_8c_source.html#l00047">initialize()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                    {</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a>&gt;<a class="code" href="log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>) {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a>(<span class="stringliteral">&quot;INFO&quot;</span>, info_message);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div><div class="ttc" id="log_8h_html_a8fe83ac76edc595f6b98cd4a4127aed5"><div class="ttname"><a href="log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a></div><div class="ttdeci">#define ERROR</div><div class="ttdoc">logging only errors. Also displays error to lcd </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00027">log.h:27</a></div></div>
-<div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
-<div class="ttc" id="log_8c_html_afff22aff6749311a684a559cac3ac8bd"><div class="ttname"><a href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a></div><div class="ttdeci">static void log_info(const char *s, const char *mess)</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00023">log.c:23</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00050">initialize()</a>.</p>
+
 </div>
 </div>
 <a id="a163f389b4f5cf440a807d8fb48aaa006"></a>
@@ -274,9 +262,8 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="log_8c_source.html#l00004">log_lcd</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00047">initialize()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                         {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">if</span>(use_lcd) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    lcdInit(lcd);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a> = lcd;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    lcdClear(<a class="code" href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a>);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    printf(<span class="stringliteral">&quot;LCD Init\n&quot;</span>);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="ttc" id="log_8c_html_ac1b33b9fa813506300fa09c1b21ed20a"><div class="ttname"><a href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a></div><div class="ttdeci">static FILE * log_lcd</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00004">log.c:4</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00050">initialize()</a>.</p>
+
 </div>
 </div>
 <a id="afff22aff6749311a684a559cac3ac8bd"></a>
@@ -318,10 +305,7 @@ Variables</h2></td></tr>
 <p class="reference">References <a class="el" href="lcd_8h_source.html#l00025">BOTTOM_ROW</a>, <a class="el" href="log_8c_source.html#l00004">log_lcd</a>, and <a class="el" href="lcd_8h_source.html#l00018">TOP_ROW</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="log_8c_source.html#l00039">error()</a>, <a class="el" href="log_8c_source.html#l00064">info()</a>, and <a class="el" href="log_8c_source.html#l00052">warning()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                                      {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  printf(<span class="stringliteral">&quot;[%s]: %s\n&quot;</span>, s, mess);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  lcdSetBacklight(<a class="code" href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a>, <span class="keyword">false</span>);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  lcdClear(<a class="code" href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a>);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  lcdPrint(<a class="code" href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a>, <a class="code" href="lcd_8h.html#a18bab754c6ad16bc35c48333091516c9">TOP_ROW</a>, s);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  lcdPrint(<a class="code" href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a>, <a class="code" href="lcd_8h.html#a7b55e87550874687b3e25a64e1cfda9d">BOTTOM_ROW</a>, mess);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="ttc" id="lcd_8h_html_a18bab754c6ad16bc35c48333091516c9"><div class="ttname"><a href="lcd_8h.html#a18bab754c6ad16bc35c48333091516c9">TOP_ROW</a></div><div class="ttdeci">#define TOP_ROW</div><div class="ttdoc">The top row on the lcd screen. </div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00018">lcd.h:18</a></div></div>
-<div class="ttc" id="lcd_8h_html_a7b55e87550874687b3e25a64e1cfda9d"><div class="ttname"><a href="lcd_8h.html#a7b55e87550874687b3e25a64e1cfda9d">BOTTOM_ROW</a></div><div class="ttdeci">#define BOTTOM_ROW</div><div class="ttdoc">The bottom row on the lcd screen. </div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00025">lcd.h:25</a></div></div>
-<div class="ttc" id="log_8c_html_ac1b33b9fa813506300fa09c1b21ed20a"><div class="ttname"><a href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a></div><div class="ttdeci">static FILE * log_lcd</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00004">log.c:4</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0bec2cf5fff7f607bc510b74aba9887c"></a>
@@ -355,11 +339,8 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="log_8c_source.html#l00023">log_info()</a>, <a class="el" href="log_8c_source.html#l00003">log_level</a>, and <a class="el" href="log_8h_source.html#l00035">WARNING</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00040">init_slew()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                          {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a>&gt;<a class="code" href="log_8h.html#a5cb439d9f933fde4cf23caa370c030e7">WARNING</a>)</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a>(<span class="stringliteral">&quot;WARNING&quot;</span>, warning_message);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
-<div class="ttc" id="log_8h_html_a5cb439d9f933fde4cf23caa370c030e7"><div class="ttname"><a href="log_8h.html#a5cb439d9f933fde4cf23caa370c030e7">WARNING</a></div><div class="ttdeci">#define WARNING</div><div class="ttdoc">logs errors and warnings. Also displays error to lcd </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00035">log.h:35</a></div></div>
-<div class="ttc" id="log_8c_html_afff22aff6749311a684a559cac3ac8bd"><div class="ttname"><a href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a></div><div class="ttdeci">static void log_info(const char *s, const char *mess)</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00023">log.c:23</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00042">init_slew()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>

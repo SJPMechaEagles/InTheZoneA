@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.2</span>
+   &#160;<span id="projectnumber">1.5.8</span>
    </div>
   </td>
  </tr>
@@ -89,19 +90,17 @@ $(document).ready(function(){initNavTree('opcontrol_8c.html','');});
 
 <p>File for operator control code.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="drive_8h_source.html">drive.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="slew_8h_source.html">slew.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="drive_8h_source.html">drive.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="claw_8h_source.html">claw.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lifter_8h_source.html">lifter.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="localization_8h_source.html">localization.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="claw_8h_source.html">claw.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="log_8h_source.html">log.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mobile__goal__intake_8h_source.html">mobile_goal_intake.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="routines_8h_source.html">routines.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="toggle_8h_source.html">toggle.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="vmath_8h_source.html">vmath.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for opcontrol.c:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="opcontrol_8c__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
 </div>
 <p><a href="opcontrol_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -137,15 +136,10 @@ Functions</h2></td></tr>
 <p>Code running in this task can take almost any action, as the VEX Joystick is available and the scheduler is operational. However, proper use of delay() or taskDelayUntil() is highly recommended to give other tasks (including system tasks such as updating LCDs) time to run.</p>
 <p>This task should never exit; its should end with some kind of infinite loop, even if empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="opcontrol_8c_source.html#l00042">42</a> of file <a class="el" href="opcontrol_8c_source.html">opcontrol.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="opcontrol_8c_source.html#l00049">49</a> of file <a class="el" href="opcontrol_8c_source.html">opcontrol.c</a>.</p>
 
-<p class="reference">References <a class="el" href="slew_8c_source.html#l00040">init_slew()</a>, <a class="el" href="claw_8c_source.html#l00009">update_claw()</a>, <a class="el" href="drive_8c_source.html#l00034">update_drive_motors()</a>, <a class="el" href="mobile__goal__intake_8c_source.html#l00020">update_intake()</a>, and <a class="el" href="lifter_8c_source.html#l00083">update_lifter()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                       {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="slew_8h.html#a321758941d88b75783955c819bb75005">init_slew</a>();</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    delay(10);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">while</span> (1) {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="claw_8h.html#a0122b78972344264b8a276a559cfce4a">update_claw</a>();</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        delay(5);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="mobile__goal__intake_8h.html#a5d7bad8a208988af743fd2e68f111286">update_intake</a>();</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        delay(5);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="lifter_8h.html#a59bb7413777ca16aba124aaedf95c79b">update_lifter</a>();</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        delay(5);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="drive_8h.html#a8224a4626a934d30ed587671b7004bf8">update_drive_motors</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        delay(25);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div><div class="ttc" id="slew_8h_html_a321758941d88b75783955c819bb75005"><div class="ttname"><a href="slew_8h.html#a321758941d88b75783955c819bb75005">init_slew</a></div><div class="ttdeci">void init_slew()</div><div class="ttdoc">Initializes the slew rate controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00040">slew.c:40</a></div></div>
-<div class="ttc" id="mobile__goal__intake_8h_html_a5d7bad8a208988af743fd2e68f111286"><div class="ttname"><a href="mobile__goal__intake_8h.html#a5d7bad8a208988af743fd2e68f111286">update_intake</a></div><div class="ttdeci">void update_intake()</div><div class="ttdoc">updates the mobile goal intake in teleop. </div><div class="ttdef"><b>Definition:</b> <a href="mobile__goal__intake_8c_source.html#l00020">mobile_goal_intake.c:20</a></div></div>
-<div class="ttc" id="claw_8h_html_a0122b78972344264b8a276a559cfce4a"><div class="ttname"><a href="claw_8h.html#a0122b78972344264b8a276a559cfce4a">update_claw</a></div><div class="ttdeci">void update_claw()</div><div class="ttdoc">Updates the claw motor values. </div><div class="ttdef"><b>Definition:</b> <a href="claw_8c_source.html#l00009">claw.c:9</a></div></div>
-<div class="ttc" id="lifter_8h_html_a59bb7413777ca16aba124aaedf95c79b"><div class="ttname"><a href="lifter_8h.html#a59bb7413777ca16aba124aaedf95c79b">update_lifter</a></div><div class="ttdeci">void update_lifter()</div><div class="ttdoc">Updates the lifter in teleop. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8c_source.html#l00083">lifter.c:83</a></div></div>
-<div class="ttc" id="drive_8h_html_a8224a4626a934d30ed587671b7004bf8"><div class="ttname"><a href="drive_8h.html#a8224a4626a934d30ed587671b7004bf8">update_drive_motors</a></div><div class="ttdeci">void update_drive_motors()</div><div class="ttdoc">Updates the drive motors during teleop. </div><div class="ttdef"><b>Definition:</b> <a href="drive_8c_source.html#l00034">drive.c:34</a></div></div>
-</div><!-- fragment -->
+<p class="reference">References <a class="el" href="toggle_8c_source.html#l00022">buttonInit()</a>, <a class="el" href="routines_8c_source.html#l00028">init_routine()</a>, <a class="el" href="slew_8c_source.html#l00042">init_slew()</a>, <a class="el" href="claw_8c_source.html#l00010">update_claw()</a>, <a class="el" href="drive_8c_source.html#l00028">update_drive_motors()</a>, <a class="el" href="mobile__goal__intake_8c_source.html#l00014">update_intake()</a>, and <a class="el" href="lifter_8c_source.html#l00183">update_lifter()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

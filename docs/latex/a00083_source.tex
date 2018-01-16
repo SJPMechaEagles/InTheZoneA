@@ -1,0 +1,19 @@
+\subsection{battery.\+c}
+\label{a00083_source}\index{src/battery.\+c@{src/battery.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "battery.h"}
+00002 \textcolor{preprocessor}{#include <API.h>}
+00003 
+00008 \textcolor{keywordtype}{double} main_battery_voltage() \{ \textcolor{keywordflow}{return} powerLevelMain() / 1000.0; \}
+00009 
+00014 \textcolor{keywordtype}{double} backup_battery_voltage() \{ \textcolor{keywordflow}{return} powerLevelBackup() / 1000.0; \}
+00015 
+00023 \textcolor{keywordtype}{bool} battery_level_acceptable() \{
+00024   \textcolor{keywordflow}{if} (main_battery_voltage() < MIN_MAIN_VOLTAGE)
+00025     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00026   \textcolor{keywordflow}{if} (backup_battery_voltage() < MIN_BACKUP_VOLTAGE)
+00027     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00028   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00029 \}
+\end{DoxyCode}

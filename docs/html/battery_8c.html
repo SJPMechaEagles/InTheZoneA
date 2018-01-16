@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.2</span>
+   &#160;<span id="projectnumber">1.5.8</span>
    </div>
   </td>
  </tr>
@@ -88,11 +89,6 @@ $(document).ready(function(){initNavTree('battery_8c.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="battery_8h_source.html">battery.h</a>&quot;</code><br />
 <code>#include &lt;API.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for battery.c:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="battery_8c__incl.svg" width="130" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div>
 <p><a href="battery_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -127,10 +123,10 @@ Functions</h2></td></tr>
 <p>gets the backup battery voltage </p>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="battery_8c_source.html#l00017">17</a> of file <a class="el" href="battery_8c_source.html">battery.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="battery_8c_source.html#l00014">14</a> of file <a class="el" href="battery_8c_source.html">battery.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="battery_8c_source.html#l00028">battery_level_acceptable()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">return</span> powerLevelBackup() / 1000.0;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div></div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="battery_8c_source.html#l00023">battery_level_acceptable()</a>.</p>
+
 </div>
 </div>
 <a id="a1097bbb878f6e2690f8eea6cd231959a"></a>
@@ -154,14 +150,12 @@ Functions</h2></td></tr>
 <a class="el" href="battery_8h.html#a0713ec94f47c403bf536ab6b11833b81" title="The minimum acceptable backup battery voltage beofre a match. ">MIN_BACKUP_VOLTAGE</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="battery_8c_source.html#l00028">28</a> of file <a class="el" href="battery_8c_source.html">battery.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="battery_8c_source.html#l00023">23</a> of file <a class="el" href="battery_8c_source.html">battery.c</a>.</p>
 
-<p class="reference">References <a class="el" href="battery_8c_source.html#l00017">backup_battery_voltage()</a>, <a class="el" href="battery_8c_source.html#l00009">main_battery_voltage()</a>, <a class="el" href="battery_8h_source.html#l00020">MIN_BACKUP_VOLTAGE</a>, and <a class="el" href="battery_8h_source.html#l00015">MIN_MAIN_VOLTAGE</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="battery_8c.html#a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</a>() &lt; <a class="code" href="battery_8h.html#a63f8a91bb74417aa77dc00340b6fd007">MIN_MAIN_VOLTAGE</a>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="battery_8c.html#a9b1c5cf7ddddebf63796050a1d4a9969">backup_battery_voltage</a>() &lt; <a class="code" href="battery_8h.html#a0713ec94f47c403bf536ab6b11833b81">MIN_BACKUP_VOLTAGE</a>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div><div class="ttc" id="battery_8c_html_a8c92c389534fdb079698cdebeb7f2efa"><div class="ttname"><a href="battery_8c.html#a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</a></div><div class="ttdeci">double main_battery_voltage()</div><div class="ttdoc">gets the main battery voltage </div><div class="ttdef"><b>Definition:</b> <a href="battery_8c_source.html#l00009">battery.c:9</a></div></div>
-<div class="ttc" id="battery_8h_html_a0713ec94f47c403bf536ab6b11833b81"><div class="ttname"><a href="battery_8h.html#a0713ec94f47c403bf536ab6b11833b81">MIN_BACKUP_VOLTAGE</a></div><div class="ttdeci">#define MIN_BACKUP_VOLTAGE</div><div class="ttdoc">The minimum acceptable backup battery voltage beofre a match. </div><div class="ttdef"><b>Definition:</b> <a href="battery_8h_source.html#l00020">battery.h:20</a></div></div>
-<div class="ttc" id="battery_8h_html_a63f8a91bb74417aa77dc00340b6fd007"><div class="ttname"><a href="battery_8h.html#a63f8a91bb74417aa77dc00340b6fd007">MIN_MAIN_VOLTAGE</a></div><div class="ttdeci">#define MIN_MAIN_VOLTAGE</div><div class="ttdoc">The minimum acceptable main battery voltage beofre a match. </div><div class="ttdef"><b>Definition:</b> <a href="battery_8h_source.html#l00015">battery.h:15</a></div></div>
-<div class="ttc" id="battery_8c_html_a9b1c5cf7ddddebf63796050a1d4a9969"><div class="ttname"><a href="battery_8c.html#a9b1c5cf7ddddebf63796050a1d4a9969">backup_battery_voltage</a></div><div class="ttdeci">double backup_battery_voltage()</div><div class="ttdoc">gets the backup battery voltage </div><div class="ttdef"><b>Definition:</b> <a href="battery_8c_source.html#l00017">battery.c:17</a></div></div>
-</div><!-- fragment -->
+<p class="reference">References <a class="el" href="battery_8c_source.html#l00014">backup_battery_voltage()</a>, <a class="el" href="battery_8c_source.html#l00008">main_battery_voltage()</a>, <a class="el" href="battery_8h_source.html#l00020">MIN_BACKUP_VOLTAGE</a>, and <a class="el" href="battery_8h_source.html#l00015">MIN_MAIN_VOLTAGE</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00050">initialize()</a>.</p>
+
 </div>
 </div>
 <a id="a8c92c389534fdb079698cdebeb7f2efa"></a>
@@ -182,10 +176,10 @@ Functions</h2></td></tr>
 <p>gets the main battery voltage </p>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="battery_8c_source.html#l00009">9</a> of file <a class="el" href="battery_8c_source.html">battery.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="battery_8c_source.html#l00008">8</a> of file <a class="el" href="battery_8c_source.html">battery.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="battery_8c_source.html#l00028">battery_level_acceptable()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                              {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordflow">return</span> powerLevelMain() / 1000.0;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div></div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="battery_8c_source.html#l00023">battery_level_acceptable()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

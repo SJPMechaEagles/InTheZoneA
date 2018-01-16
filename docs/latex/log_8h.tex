@@ -1,29 +1,13 @@
-\section{include/log.h File Reference}
+\subsection{include/log.h File Reference}
 \label{log_8h}\index{include/log.\+h@{include/log.\+h}}
 
 
 Contains logging functions.  
 
 
-{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
-Include dependency graph for log.\+h\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=159pt]{log_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{log_8h__dep__incl}
-\end{center}
-\end{figure}
-\subsection*{Macros}
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+\subsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \textbf{ D\+E\+B\+UG}~4
@@ -36,7 +20,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactList}\small\item\em No logging. Should be used in competition to reduce serial communication. \end{DoxyCompactList}\item 
 \#define \textbf{ W\+A\+R\+N\+I\+NG}~2
 \begin{DoxyCompactList}\small\item\em logs errors and warnings. Also displays error to lcd \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ debug} (const char $\ast$debug\+\_\+message)
@@ -51,7 +35,7 @@ void \textbf{ warning} (const char $\ast$warning\+\_\+message)
 \begin{DoxyCompactList}\small\item\em prints a warning message and displays on lcd. Only will print and display if log\+\_\+level is greater than N\+O\+NE \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsubsection{Detailed Description}
 Contains logging functions. 
 
 \begin{DoxyAuthor}{Author}
@@ -66,11 +50,11 @@ Definition in file \textbf{ log.\+h}.
 
 
 
-\subsection{Macro Definition Documentation}
+\subsubsection{Macro Definition Documentation}
 \mbox{\label{log_8h_ad72dbcf6d0153db1b8d8a58001feed83}} 
 \index{log.\+h@{log.\+h}!D\+E\+B\+UG@{D\+E\+B\+UG}}
 \index{D\+E\+B\+UG@{D\+E\+B\+UG}!log.\+h@{log.\+h}}
-\subsubsection{D\+E\+B\+UG}
+\paragraph{D\+E\+B\+UG}
 {\footnotesize\ttfamily \#define D\+E\+B\+UG~4}
 
 
@@ -90,7 +74,7 @@ Definition at line \textbf{ 50} of file \textbf{ log.\+h}.
 \mbox{\label{log_8h_a8fe83ac76edc595f6b98cd4a4127aed5}} 
 \index{log.\+h@{log.\+h}!E\+R\+R\+OR@{E\+R\+R\+OR}}
 \index{E\+R\+R\+OR@{E\+R\+R\+OR}!log.\+h@{log.\+h}}
-\subsubsection{E\+R\+R\+OR}
+\paragraph{E\+R\+R\+OR}
 {\footnotesize\ttfamily \#define E\+R\+R\+OR~1}
 
 
@@ -114,7 +98,7 @@ Referenced by \textbf{ debug()}, and \textbf{ info()}.
 \mbox{\label{log_8h_ae1103fea1e1b3c41ca3322d5389f7162}} 
 \index{log.\+h@{log.\+h}!I\+N\+FO@{I\+N\+FO}}
 \index{I\+N\+FO@{I\+N\+FO}!log.\+h@{log.\+h}}
-\subsubsection{I\+N\+FO}
+\paragraph{I\+N\+FO}
 {\footnotesize\ttfamily \#define I\+N\+FO~3}
 
 
@@ -134,7 +118,7 @@ Definition at line \textbf{ 42} of file \textbf{ log.\+h}.
 \mbox{\label{log_8h_a655c84af1b0034986ff56e12e84f983d}} 
 \index{log.\+h@{log.\+h}!N\+O\+NE@{N\+O\+NE}}
 \index{N\+O\+NE@{N\+O\+NE}!log.\+h@{log.\+h}}
-\subsubsection{N\+O\+NE}
+\paragraph{N\+O\+NE}
 {\footnotesize\ttfamily \#define N\+O\+NE~0}
 
 
@@ -158,7 +142,7 @@ Referenced by \textbf{ error()}.
 \mbox{\label{log_8h_a5cb439d9f933fde4cf23caa370c030e7}} 
 \index{log.\+h@{log.\+h}!W\+A\+R\+N\+I\+NG@{W\+A\+R\+N\+I\+NG}}
 \index{W\+A\+R\+N\+I\+NG@{W\+A\+R\+N\+I\+NG}!log.\+h@{log.\+h}}
-\subsubsection{W\+A\+R\+N\+I\+NG}
+\paragraph{W\+A\+R\+N\+I\+NG}
 {\footnotesize\ttfamily \#define W\+A\+R\+N\+I\+NG~2}
 
 
@@ -181,11 +165,11 @@ Referenced by \textbf{ warning()}.
 
 
 
-\subsection{Function Documentation}
+\subsubsection{Function Documentation}
 \mbox{\label{log_8h_af3668f40d1ad1b4f3418869ac9a31f34}} 
 \index{log.\+h@{log.\+h}!debug@{debug}}
 \index{debug@{debug}!log.\+h@{log.\+h}}
-\subsubsection{debug()}
+\paragraph{debug()}
 {\footnotesize\ttfamily void debug (\begin{DoxyParamCaption}\item[{const char $\ast$}]{debug\+\_\+message }\end{DoxyParamCaption})}
 
 
@@ -212,18 +196,10 @@ References \textbf{ E\+R\+R\+OR}, and \textbf{ log\+\_\+level}.
 
 Referenced by \textbf{ set\+\_\+motor\+\_\+immediate()}, and \textbf{ set\+\_\+motor\+\_\+slew()}.
 
-
-\begin{DoxyCode}
-00077                                       \{
-00078   \textcolor{keywordflow}{if}(log_level>ERROR) \{
-00079     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
-00080   \}
-00081 \}
-\end{DoxyCode}
 \mbox{\label{log_8h_a8e5bb8a2a372f5b066ff7af7044584c1}} 
 \index{log.\+h@{log.\+h}!error@{error}}
 \index{error@{error}!log.\+h@{log.\+h}}
-\subsubsection{error()}
+\paragraph{error()}
 {\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{error\+\_\+message }\end{DoxyParamCaption})}
 
 
@@ -254,19 +230,12 @@ References \textbf{ log\+\_\+info()}, \textbf{ log\+\_\+level}, and \textbf{ N\+
 
 
 
-Referenced by \textbf{ create\+\_\+menu()}.
+Referenced by \textbf{ assert()}, \textbf{ create\+\_\+menu()}, \textbf{ init\+\_\+encoders()}, and \textbf{ initialize()}.
 
-
-\begin{DoxyCode}
-00039                                       \{
-00040   \textcolor{keywordflow}{if}(log_level>NONE)
-00041     log_info(\textcolor{stringliteral}{"ERROR"}, error\_message);
-00042 \}
-\end{DoxyCode}
 \mbox{\label{log_8h_a1606d750e1bb8de9f9e917172bba3382}} 
 \index{log.\+h@{log.\+h}!info@{info}}
 \index{info@{info}!log.\+h@{log.\+h}}
-\subsubsection{info()}
+\paragraph{info()}
 {\footnotesize\ttfamily void info (\begin{DoxyParamCaption}\item[{const char $\ast$}]{info\+\_\+message }\end{DoxyParamCaption})}
 
 
@@ -291,20 +260,12 @@ References \textbf{ E\+R\+R\+OR}, \textbf{ log\+\_\+info()}, and \textbf{ log\+\
 
 
 
-Referenced by \textbf{ init\+\_\+slew()}, and \textbf{ initialize()}.
+Referenced by \textbf{ initialize()}.
 
-
-\begin{DoxyCode}
-00064                                     \{
-00065   \textcolor{keywordflow}{if}(log_level>ERROR) \{
-00066     log_info(\textcolor{stringliteral}{"INFO"}, info\_message);
-00067   \}
-00068 \}
-\end{DoxyCode}
 \mbox{\label{log_8h_a163f389b4f5cf440a807d8fb48aaa006}} 
 \index{log.\+h@{log.\+h}!init\+\_\+error@{init\+\_\+error}}
 \index{init\+\_\+error@{init\+\_\+error}!log.\+h@{log.\+h}}
-\subsubsection{init\+\_\+error()}
+\paragraph{init\+\_\+error()}
 {\footnotesize\ttfamily void init\+\_\+error (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+lcd,  }\item[{F\+I\+LE $\ast$}]{lcd }\end{DoxyParamCaption})}
 
 
@@ -336,21 +297,10 @@ References \textbf{ log\+\_\+lcd}.
 
 Referenced by \textbf{ initialize()}.
 
-
-\begin{DoxyCode}
-00014                                          \{
-00015   \textcolor{keywordflow}{if}(use\_lcd) \{
-00016     lcdInit(lcd);
-00017     log_lcd = lcd;
-00018     lcdClear(log_lcd);
-00019     printf(\textcolor{stringliteral}{"LCD Init\(\backslash\)n"});
-00020   \}
-00021 \}
-\end{DoxyCode}
 \mbox{\label{log_8h_a0bec2cf5fff7f607bc510b74aba9887c}} 
 \index{log.\+h@{log.\+h}!warning@{warning}}
 \index{warning@{warning}!log.\+h@{log.\+h}}
-\subsubsection{warning()}
+\paragraph{warning()}
 {\footnotesize\ttfamily void warning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{warning\+\_\+message }\end{DoxyParamCaption})}
 
 
@@ -383,10 +333,3 @@ References \textbf{ log\+\_\+info()}, \textbf{ log\+\_\+level}, and \textbf{ W\+
 
 Referenced by \textbf{ init\+\_\+slew()}.
 
-
-\begin{DoxyCode}
-00052                                           \{
-00053   \textcolor{keywordflow}{if}(log_level>WARNING)
-00054     log_info(\textcolor{stringliteral}{"WARNING"}, warning\_message);
-00055 \}
-\end{DoxyCode}

@@ -1,0 +1,128 @@
+\subsection{list.\+h}
+\label{a00029_source}\index{include/list.\+h@{include/list.\+h}}
+
+\begin{DoxyCode}
+00001 
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{// list.h}
+00004 \textcolor{comment}{//}
+00005 \textcolor{comment}{// Copyright (c) 2010 TJ Holowaychuk <tj@vision-media.ca>}
+00006 \textcolor{comment}{//}
+00007 
+00008 \textcolor{preprocessor}{#ifndef LIST\_H}
+00009 \textcolor{preprocessor}{#define LIST\_H}
+00010 
+00011 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
+00012 \textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \{
+00013 \textcolor{preprocessor}{#endif}
+00014 
+00015 \textcolor{preprocessor}{#include <stdlib.h>}
+00016 
+00017 \textcolor{comment}{// Library version}
+00018 
+00019 \textcolor{preprocessor}{#define LIST\_VERSION "0.0.5"}
+00020 
+00021 \textcolor{comment}{// Memory management macros}
+00022 
+00023 \textcolor{preprocessor}{#ifndef LIST\_MALLOC}
+00024 \textcolor{preprocessor}{#define LIST\_MALLOC malloc}
+00025 \textcolor{preprocessor}{#endif}
+00026 
+00027 \textcolor{preprocessor}{#ifndef LIST\_FREE}
+00028 \textcolor{preprocessor}{#define LIST\_FREE free}
+00029 \textcolor{preprocessor}{#endif}
+00030 
+00031 \textcolor{comment}{/*}
+00032 \textcolor{comment}{ * list\_t iterator direction.}
+00033 \textcolor{comment}{ */}
+00034 
+00035 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{
+00036     LIST_HEAD
+00037   , LIST_TAIL
+00038 \} list_direction_t;
+00039 
+00040 \textcolor{comment}{/*}
+00041 \textcolor{comment}{ * list\_t node struct.}
+00042 \textcolor{comment}{ */}
+00043 
+00044 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }list_node \{
+00045   \textcolor{keyword}{struct }list_node *prev;
+00046   \textcolor{keyword}{struct }list_node *next;
+00047   \textcolor{keywordtype}{void} *val;
+00048 \} list_node_t;
+00049 
+00050 \textcolor{comment}{/*}
+00051 \textcolor{comment}{ * list\_t struct.}
+00052 \textcolor{comment}{ */}
+00053 
+00054 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{
+00055   list_node_t *head;
+00056   list_node_t *tail;
+00057   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} len;
+00058   void (*free)(\textcolor{keywordtype}{void} *val);
+00059   int (*match)(\textcolor{keywordtype}{void} *a, \textcolor{keywordtype}{void} *b);
+00060 \} list_t;
+00061 
+00062 \textcolor{comment}{/*}
+00063 \textcolor{comment}{ * list\_t iterator struct.}
+00064 \textcolor{comment}{ */}
+00065 
+00066 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{
+00067   list_node_t *next;
+00068   list\_direction\_t direction;
+00069 \} list_iterator_t;
+00070 
+00071 \textcolor{comment}{// Node prototypes.}
+00072 
+00073 list_node_t *
+00074 list_node_new(\textcolor{keywordtype}{void} *val);
+00075 
+00076 \textcolor{comment}{// list\_t prototypes.}
+00077 
+00078 list_t *
+00079 list_new();
+00080 
+00081 list_node_t *
+00082 list_rpush(list_t *\textcolor{keyword}{self}, list_node_t *node);
+00083 
+00084 list_node_t *
+00085 list_lpush(list_t *\textcolor{keyword}{self}, list_node_t *node);
+00086 
+00087 list_node_t *
+00088 list_find(list_t *\textcolor{keyword}{self}, \textcolor{keywordtype}{void} *val);
+00089 
+00090 list_node_t *
+00091 list_at(list_t *\textcolor{keyword}{self}, \textcolor{keywordtype}{int} index);
+00092 
+00093 list_node_t *
+00094 list_rpop(list_t *\textcolor{keyword}{self});
+00095 
+00096 list_node_t *
+00097 list_lpop(list_t *\textcolor{keyword}{self});
+00098 
+00099 \textcolor{keywordtype}{void}
+00100 list_remove(list_t *\textcolor{keyword}{self}, list_node_t *node);
+00101 
+00102 \textcolor{keywordtype}{void}
+00103 list_destroy(list_t *\textcolor{keyword}{self});
+00104 
+00105 \textcolor{comment}{// list\_t iterator prototypes.}
+00106 
+00107 list_iterator_t *
+00108 list_iterator_new(list_t *list, list\_direction\_t direction);
+00109 
+00110 list_iterator_t *
+00111 list_iterator_new_from_node(list_node_t *node, list\_direction\_t direction);
+00112 
+00113 list_node_t *
+00114 list_iterator_next(list_iterator_t *\textcolor{keyword}{self});
+00115 
+00116 \textcolor{keywordtype}{void}
+00117 list_iterator_destroy(list_iterator_t *\textcolor{keyword}{self});
+00118 
+00119 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
+00120 \}
+00121 \textcolor{preprocessor}{#endif}
+00122 
+00123 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* LIST\_H */}\textcolor{preprocessor}{}
+\end{DoxyCode}

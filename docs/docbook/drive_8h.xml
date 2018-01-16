@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="drive_8h">
+    <title>drive.h File Reference</title>
+    <programlisting>#include &quot;partner.h&quot;</programlisting>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="drive_8h_1a4679d8ea8690999a6c6c7c0cb245c879">THRESHOLD</link> 10<para><emphasis>The dead spot on the controller to avoid running motors at low
+speeds.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">side</link> {
+<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</link>,
+<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,
+<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</link>
+}</literallayout>
+<para><emphasis>enumeration indication side of the robot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef enum <link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">side</link>  <link linkend="drive_8h_1a9df2afd2f1acb97019655e5e730609c7">side_t</link><para><emphasis>enumeration indication side of the robot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link> (
+<link linkend="drive_8h_1a9df2afd2f1acb97019655e5e730609c7">side_t</link> side, int speed)<para><emphasis>sets the speed of one side of the robot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="drive_8h_1a53d6e35d53ec3e0b1b1c489d8203f204">setThresh</link> (
+int t)<para><emphasis>Sets the deadzone threshhold on the drive.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="drive_8h_1a8224a4626a934d30ed587671b7004bf8">update_drive_motors</link> (
+)<para><emphasis>Updates the drive motors during teleop.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Drive base definitions and enumerations. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/9/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/drive.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+8 <emphasis class="preprocessor">#ifndef&#32;_DRIVE_H_</emphasis>
+9 <emphasis class="preprocessor">#define&#32;_DRIVE_H_</emphasis>
+10 
+11 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="partner_8h">partner.h</link>&quot;</emphasis>
+12 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+13 
+<link linkend="drive_8h_1a4679d8ea8690999a6c6c7c0cb245c879">18 </link><emphasis class="preprocessor">#define&#32;THRESHOLD&#32;10</emphasis>
+19 
+<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">27 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">side</link>&#32;{&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</link>,&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</link>&#32;}&#32;<link linkend="drive_8h_1a9df2afd2f1acb97019655e5e730609c7">side_t</link>;
+28 
+36 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1a9df2afd2f1acb97019655e5e730609c7">side_t</link>&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">side</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed);
+37 
+42 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="drive_8h_1a53d6e35d53ec3e0b1b1c489d8203f204">setThresh</link>(<emphasis class="keywordtype">int</emphasis>&#32;t);
+43 
+49 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="drive_8h_1a8224a4626a934d30ed587671b7004bf8">update_drive_motors</link>();
+50 
+51 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

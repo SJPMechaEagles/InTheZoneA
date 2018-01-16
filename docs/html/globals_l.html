@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.2</span>
+   &#160;<span id="projectnumber">1.5.8</span>
    </div>
   </td>
  </tr>
@@ -90,7 +91,7 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 : <a class="el" href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd.c</a>
 </li>
 <li>LCD_CENT
-: <a class="el" href="toggle_8h.html#a7754652ebe470fb6cc5d30b4cd258660a71f1177926300c37f76f2b634cffd9cc">toggle.h</a>
+: <a class="el" href="controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660a71f1177926300c37f76f2b634cffd9cc">controller.h</a>
 </li>
 <li>lcd_clear()
 : <a class="el" href="lcd_8h.html#a35c08b1fa742e650f4873939707b893b">lcd.h</a>
@@ -101,7 +102,7 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 , <a class="el" href="lcd_8c.html#ac7b3225ccc82fcbe067ba9da934f010d">lcd.c</a>
 </li>
 <li>LCD_LEFT
-: <a class="el" href="toggle_8h.html#a7754652ebe470fb6cc5d30b4cd258660af74b6b5e3b92936d9d906ed8dd2fe0da">toggle.h</a>
+: <a class="el" href="controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660af74b6b5e3b92936d9d906ed8dd2fe0da">controller.h</a>
 </li>
 <li>lcd_port
 : <a class="el" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd.c</a>
@@ -115,7 +116,7 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 , <a class="el" href="lcd_8c.html#aa0d4ca88701dfecf98796e2028482b69">lcd.c</a>
 </li>
 <li>LCD_RIGHT
-: <a class="el" href="toggle_8h.html#a7754652ebe470fb6cc5d30b4cd258660a2dff7dd85658b97c4309b10e7506491e">toggle.h</a>
+: <a class="el" href="controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660a2dff7dd85658b97c4309b10e7506491e">controller.h</a>
 </li>
 <li>lcd_set_backlight()
 : <a class="el" href="lcd_8c.html#a245902a4d48a6d9bd1ab308bf9b7e6b5">lcd.c</a>
@@ -142,8 +143,11 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 <li>LIFTER
 : <a class="el" href="sensor__ports_8h.html#a1968b8c13fa0757cc721c96a67407d9b">sensor_ports.h</a>
 </li>
-<li>LIFTER_D
-: <a class="el" href="lifter_8h.html#ad03f59237a197767913457abd53f1780">lifter.h</a>
+<li>lifter_autostack_routine_interupt
+: <a class="el" href="lifter_8c.html#afbf11bb950aeb7975e91d0675a0820bc">lifter.c</a>
+</li>
+<li>lifter_autostack_running
+: <a class="el" href="lifter_8c.html#ae1fc3deab25f0b9e6f636bb83e9bf5c2">lifter.c</a>
 </li>
 <li>LIFTER_DOWN
 : <a class="el" href="lifter_8h.html#a12f8c1de242a92f5694e6b80b990773a">lifter.h</a>
@@ -154,11 +158,9 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 <li>LIFTER_DRIVER_LOAD
 : <a class="el" href="lifter_8h.html#ad4a88f04887d4f1f4e5fa057b29f68e9">lifter.h</a>
 </li>
-<li>LIFTER_I
-: <a class="el" href="lifter_8h.html#a4950feabec4e85bf27c1f2e4ec98755a">lifter.h</a>
-</li>
-<li>LIFTER_P
-: <a class="el" href="lifter_8h.html#ae5623433650815b810d784e0da176e3c">lifter.h</a>
+<li>lifter_ultrasonic
+: <a class="el" href="init_8c.html#a5dfaf05eb7e97b2e29d04eb068f9c240">init.c</a>
+, <a class="el" href="lifter_8c.html#a5dfaf05eb7e97b2e29d04eb068f9c240">lifter.c</a>
 </li>
 <li>LIFTER_UP
 : <a class="el" href="lifter_8h.html#a96a5c0bbb7527bf1d45818fc4db97b68">lifter.h</a>
@@ -169,6 +171,80 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 <li>lifterPotentiometerToDegree()
 : <a class="el" href="lifter_8h.html#ab0460888f3213e5510bd25ae1e152a75">lifter.h</a>
 , <a class="el" href="lifter_8c.html#ab0460888f3213e5510bd25ae1e152a75">lifter.c</a>
+</li>
+<li>list_at()
+: <a class="el" href="list_8h.html#ab3dacc64ceb63b0a0849312b0a14c91c">list.h</a>
+, <a class="el" href="list_8c.html#ab3dacc64ceb63b0a0849312b0a14c91c">list.c</a>
+</li>
+<li>list_destroy()
+: <a class="el" href="list_8h.html#ac2d2be572a896cccd0e76d56eeefcbdb">list.h</a>
+, <a class="el" href="list_8c.html#ac2d2be572a896cccd0e76d56eeefcbdb">list.c</a>
+</li>
+<li>list_direction_t
+: <a class="el" href="list_8h.html#a2c3af7de0b7ab9c3a84fbc039e75ec66">list.h</a>
+</li>
+<li>list_find()
+: <a class="el" href="list_8h.html#a5d73352b7bfa0c5a8b33289d7b27a374">list.h</a>
+, <a class="el" href="list_8c.html#a5d73352b7bfa0c5a8b33289d7b27a374">list.c</a>
+</li>
+<li>LIST_FREE
+: <a class="el" href="list_8h.html#a8968cfdd1e3404352d2c43dcb3bde04a">list.h</a>
+</li>
+<li>LIST_HEAD
+: <a class="el" href="list_8h.html#a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">list.h</a>
+</li>
+<li>list_iterator_destroy()
+: <a class="el" href="list_8h.html#ad16fa29ddbb444070ea65f871e1c0ba2">list.h</a>
+, <a class="el" href="list__iterator_8c.html#ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator.c</a>
+</li>
+<li>list_iterator_new()
+: <a class="el" href="list__iterator_8c.html#a3c956afda343b4a6aaf68fbd4b446733">list_iterator.c</a>
+, <a class="el" href="list_8h.html#a3c956afda343b4a6aaf68fbd4b446733">list.h</a>
+</li>
+<li>list_iterator_new_from_node()
+: <a class="el" href="list_8h.html#af4136a8a27bdc8c0f967a708dd03d575">list.h</a>
+, <a class="el" href="list__iterator_8c.html#af4136a8a27bdc8c0f967a708dd03d575">list_iterator.c</a>
+</li>
+<li>list_iterator_next()
+: <a class="el" href="list__iterator_8c.html#a2e5db981e32d3aef49ea79505a0615a6">list_iterator.c</a>
+, <a class="el" href="list_8h.html#a2e5db981e32d3aef49ea79505a0615a6">list.h</a>
+</li>
+<li>list_lpop()
+: <a class="el" href="list_8h.html#a97f6f9590b1cdedd5367b9139e9cc4ef">list.h</a>
+, <a class="el" href="list_8c.html#a97f6f9590b1cdedd5367b9139e9cc4ef">list.c</a>
+</li>
+<li>list_lpush()
+: <a class="el" href="list_8h.html#a7e1b077416813dd474a54826347f7502">list.h</a>
+, <a class="el" href="list_8c.html#a7e1b077416813dd474a54826347f7502">list.c</a>
+</li>
+<li>LIST_MALLOC
+: <a class="el" href="list_8h.html#ab80cb68ecaaf76c970758cd702641cee">list.h</a>
+</li>
+<li>list_new()
+: <a class="el" href="list_8c.html#a9dd3eafdb56dcc64689f78fb4acdff3f">list.c</a>
+, <a class="el" href="list_8h.html#a9dd3eafdb56dcc64689f78fb4acdff3f">list.h</a>
+</li>
+<li>list_node_new()
+: <a class="el" href="list_8h.html#a4ef36e0519514ac481d0d7e0b439d431">list.h</a>
+, <a class="el" href="list__node_8c.html#a4ef36e0519514ac481d0d7e0b439d431">list_node.c</a>
+</li>
+<li>list_node_t
+: <a class="el" href="list_8h.html#ad8b8636e2e25308b521b32071e849c80">list.h</a>
+</li>
+<li>list_remove()
+: <a class="el" href="list_8h.html#a5ef7843a8a481124bce3e93541ba379a">list.h</a>
+, <a class="el" href="list_8c.html#a5ef7843a8a481124bce3e93541ba379a">list.c</a>
+</li>
+<li>list_rpop()
+: <a class="el" href="list_8h.html#a53460b319b561ce2201bbf95450f1af7">list.h</a>
+, <a class="el" href="list_8c.html#a53460b319b561ce2201bbf95450f1af7">list.c</a>
+</li>
+<li>list_rpush()
+: <a class="el" href="list_8h.html#a4edfa9b7742154bff4fc2cb05d044af9">list.h</a>
+, <a class="el" href="list_8c.html#a4edfa9b7742154bff4fc2cb05d044af9">list.c</a>
+</li>
+<li>LIST_TAIL
+: <a class="el" href="list_8h.html#a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae">list.h</a>
 </li>
 <li>localization_task
 : <a class="el" href="localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488">localization.c</a>
@@ -186,15 +262,19 @@ $(document).ready(function(){initNavTree('globals_l.html','');});
 : <a class="el" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log.c</a>
 </li>
 <li>lower_intake()
-: <a class="el" href="mobile__goal__intake_8c.html#afa91470a9891e48827fd62d18553c6ce">mobile_goal_intake.c</a>
+: <a class="el" href="mobile__goal__intake_8h.html#aef03134014e51a6a90dd3824f09f4d6c">mobile_goal_intake.h</a>
+, <a class="el" href="mobile__goal__intake_8c.html#aef03134014e51a6a90dd3824f09f4d6c">mobile_goal_intake.c</a>
 </li>
 <li>lower_main_lifter()
 : <a class="el" href="lifter_8c.html#ad36c37086a91046af4e6f619618b7719">lifter.c</a>
 , <a class="el" href="lifter_8h.html#ad36c37086a91046af4e6f619618b7719">lifter.h</a>
 </li>
 <li>lower_secondary_lifter()
-: <a class="el" href="lifter_8h.html#af76abbd394bf206ab56fa237d776f2b3">lifter.h</a>
-, <a class="el" href="lifter_8c.html#af76abbd394bf206ab56fa237d776f2b3">lifter.c</a>
+: <a class="el" href="lifter_8c.html#af76abbd394bf206ab56fa237d776f2b3">lifter.c</a>
+, <a class="el" href="lifter_8h.html#af76abbd394bf206ab56fa237d776f2b3">lifter.h</a>
+</li>
+<li>LOWEST_HEIGHT
+: <a class="el" href="auto_8h.html#af364d4d51593fe601f20090221f9ddab">auto.h</a>
 </li>
 </ul>
 </div><!-- contents -->

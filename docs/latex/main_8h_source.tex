@@ -1,36 +1,38 @@
-\section{main.\+h}
+\subsection{main.\+h}
 \label{main_8h_source}\index{include/main.\+h@{include/main.\+h}}
 
 \begin{DoxyCode}
 00001 
-00041 \textcolor{preprocessor}{#ifndef MAIN\_H\_}
-00042 
-00043 \textcolor{comment}{// This prevents multiple inclusion, which isn't bad for this file but is good practice}
-00044 \textcolor{preprocessor}{#define MAIN\_H\_}
+00044 \textcolor{preprocessor}{#ifndef MAIN\_H\_}
 00045 
-00046 \textcolor{preprocessor}{#include <API.h>}
-00047 
-00048 \textcolor{comment}{// Allow usage of this file in C++ programs}
-00049 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
-00050 \textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \{
-00051 \textcolor{preprocessor}{#endif}
-00052 
-00053 \textcolor{comment}{//#define AUTO\_DEBUG}
-00054 
-00055 \textcolor{comment}{// A function prototype looks exactly like its declaration, but with a semicolon instead of}
-00056 \textcolor{comment}{// actual code. If a function does not match a prototype, compile errors will occur.}
-00057 
-00058 \textcolor{comment}{// Prototypes for initialization, operator control and autonomous}
-00059 
-00074 \textcolor{keywordtype}{void} autonomous();
-00083 \textcolor{keywordtype}{void} initializeIO();
-00097 \textcolor{keywordtype}{void} initialize();
-00115 \textcolor{keywordtype}{void} operatorControl();
-00116 
-00117 \textcolor{comment}{// End C++ export structure}
-00118 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
-00119 \}
-00120 \textcolor{preprocessor}{#endif}
-00121 
-00122 \textcolor{preprocessor}{#endif}
+00046 \textcolor{comment}{// This prevents multiple inclusion, which isn't bad for this file but is good}
+00047 \textcolor{comment}{// practice}
+00048 \textcolor{preprocessor}{#define MAIN\_H\_}
+00049 
+00050 \textcolor{preprocessor}{#include <API.h>}
+00051 
+00052 \textcolor{comment}{// Allow usage of this file in C++ programs}
+00053 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
+00054 \textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \{
+00055 \textcolor{preprocessor}{#endif}
+00056 
+00057 \textcolor{comment}{//#define AUTO\_DEBUG}
+00058 
+00059 \textcolor{comment}{// A function prototype looks exactly like its declaration, but with a semicolon}
+00060 \textcolor{comment}{// instead of actual code. If a function does not match a prototype, compile}
+00061 \textcolor{comment}{// errors will occur.}
+00062 
+00063 \textcolor{comment}{// Prototypes for initialization, operator control and autonomous}
+00064 
+00082 \textcolor{keywordtype}{void} autonomous();
+00093 \textcolor{keywordtype}{void} initializeIO();
+00107 \textcolor{keywordtype}{void} initialize();
+00129 \textcolor{keywordtype}{void} operatorControl();
+00130 
+00131 \textcolor{comment}{// End C++ export structure}
+00132 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
+00133 \}
+00134 \textcolor{preprocessor}{#endif}
+00135 
+00136 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

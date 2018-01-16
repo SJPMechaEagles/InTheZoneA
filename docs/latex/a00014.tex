@@ -1,0 +1,266 @@
+\subsection{include/drive.h File Reference}
+\label{a00014}\index{include/drive.\+h@{include/drive.\+h}}
+
+
+Drive base definitions and enumerations.  
+
+
+{\ttfamily \#include \char`\"{}partner.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ T\+H\+R\+E\+S\+H\+O\+LD}~10
+\begin{DoxyCompactList}\small\item\em The dead spot on the controller to avoid running motors at low speeds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \textbf{ side} \textbf{ side\+\_\+t}
+\begin{DoxyCompactList}\small\item\em enumeration indication side of the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ side} \{ \textbf{ L\+E\+FT}, 
+\textbf{ B\+O\+TH}, 
+\textbf{ R\+I\+G\+HT}
+ \}\begin{DoxyCompactList}\small\item\em enumeration indication side of the robot. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ set\+\_\+side\+\_\+speed} (\textbf{ side\+\_\+t} \textbf{ side}, int speed)
+\begin{DoxyCompactList}\small\item\em sets the speed of one side of the robot. \end{DoxyCompactList}\item 
+void \textbf{ set\+Thresh} (int t)
+\begin{DoxyCompactList}\small\item\em Sets the deadzone threshhold on the drive. \end{DoxyCompactList}\item 
+void \textbf{ update\+\_\+drive\+\_\+motors} ()
+\begin{DoxyCompactList}\small\item\em Updates the drive motors during teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Drive base definitions and enumerations. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/9/2017 
+\end{DoxyDate}
+
+
+Definition in file \textbf{ drive.\+h}.
+
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\label{a00014_a4679d8ea8690999a6c6c7c0cb245c879}} 
+\index{drive.\+h@{drive.\+h}!T\+H\+R\+E\+S\+H\+O\+LD@{T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{T\+H\+R\+E\+S\+H\+O\+LD@{T\+H\+R\+E\+S\+H\+O\+LD}!drive.\+h@{drive.\+h}}
+\paragraph{T\+H\+R\+E\+S\+H\+O\+LD}
+{\footnotesize\ttfamily \#define T\+H\+R\+E\+S\+H\+O\+LD~10}
+
+
+
+The dead spot on the controller to avoid running motors at low speeds. 
+
+
+
+Definition at line \textbf{ 18} of file \textbf{ drive.\+h}.
+
+
+
+Referenced by \textbf{ joystick\+Exp()}.
+
+
+
+\subsubsection{Typedef Documentation}
+\mbox{\label{a00014_a9df2afd2f1acb97019655e5e730609c7}} 
+\index{drive.\+h@{drive.\+h}!side\+\_\+t@{side\+\_\+t}}
+\index{side\+\_\+t@{side\+\_\+t}!drive.\+h@{drive.\+h}}
+\paragraph{side\+\_\+t}
+{\footnotesize\ttfamily typedef enum \textbf{ side}  \textbf{ side\+\_\+t}}
+
+
+
+enumeration indication side of the robot. 
+
+\begin{DoxyAuthor}{Author}
+Christian Desimone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/7/2017 Side can be right, both of left. Contained in side typedef, so enum is unnecessary. 
+\end{DoxyDate}
+
+
+\subsubsection{Enumeration Type Documentation}
+\mbox{\label{a00014_afc015eff6557e84151d2e53b94375445}} 
+\index{drive.\+h@{drive.\+h}!side@{side}}
+\index{side@{side}!drive.\+h@{drive.\+h}}
+\paragraph{side}
+{\footnotesize\ttfamily enum \textbf{ side}}
+
+
+
+enumeration indication side of the robot. 
+
+\begin{DoxyAuthor}{Author}
+Christian Desimone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/7/2017 Side can be right, both of left. Contained in side typedef, so enum is unnecessary. 
+\end{DoxyDate}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+FT@{L\+E\+FT}!drive.\+h@{drive.\+h}}\index{drive.\+h@{drive.\+h}!L\+E\+FT@{L\+E\+FT}}}\mbox{\label{a00014_afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065}} 
+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+O\+TH@{B\+O\+TH}!drive.\+h@{drive.\+h}}\index{drive.\+h@{drive.\+h}!B\+O\+TH@{B\+O\+TH}}}\mbox{\label{a00014_afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb}} 
+B\+O\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+G\+HT@{R\+I\+G\+HT}!drive.\+h@{drive.\+h}}\index{drive.\+h@{drive.\+h}!R\+I\+G\+HT@{R\+I\+G\+HT}}}\mbox{\label{a00014_afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38}} 
+R\+I\+G\+HT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \textbf{ 27} of file \textbf{ drive.\+h}.
+
+
+\begin{DoxyCode}
+00027 \{ LEFT, BOTH, RIGHT \} side_t;
+\end{DoxyCode}
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{a00014_a8df41fd50094c065eedc81fc5e6595d1}} 
+\index{drive.\+h@{drive.\+h}!set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}}
+\index{set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}!drive.\+h@{drive.\+h}}
+\paragraph{set\+\_\+side\+\_\+speed()}
+{\footnotesize\ttfamily void set\+\_\+side\+\_\+speed (\begin{DoxyParamCaption}\item[{\textbf{ side\+\_\+t}}]{side,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+sets the speed of one side of the robot. 
+
+\begin{DoxyAuthor}{Author}
+Christian Desimone 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em side} & a side enum which indicates the size. \\
+\hline
+{\em speed} & the speed of the side. Can range from -\/127 -\/ 127 negative being back and positive forwards \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 62} of file \textbf{ drive.\+c}.
+
+
+
+References \textbf{ B\+O\+TH}, \textbf{ L\+E\+FT}, \textbf{ M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT}, \textbf{ M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT}, \textbf{ M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+L\+E\+FT}, \textbf{ M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT}, \textbf{ M\+O\+T\+O\+R\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+L\+E\+FT}, \textbf{ M\+O\+T\+O\+R\+\_\+\+M\+I\+D\+D\+L\+E\+\_\+\+R\+I\+G\+HT}, \textbf{ R\+I\+G\+HT}, and \textbf{ set\+\_\+motor\+\_\+slew()}.
+
+
+
+Referenced by \textbf{ autonomous()}, and \textbf{ update\+\_\+drive\+\_\+motors()}.
+
+
+\begin{DoxyCode}
+00062                                             \{
+00063   \textcolor{keywordflow}{if} (side == RIGHT || side == BOTH) \{
+00064     set_motor_slew(MOTOR_BACK_RIGHT, -speed);
+00065     set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
+00066     set_motor_slew(MOTOR_MIDDLE_RIGHT, -speed);
+00067   \}
+00068   \textcolor{keywordflow}{if} (side == LEFT || side == BOTH) \{
+00069     set_motor_slew(MOTOR_BACK_LEFT, speed);
+00070     set_motor_slew(MOTOR_MIDDLE_LEFT, speed);
+00071     set_motor_slew(MOTOR_FRONT_LEFT, speed);
+00072   \}
+00073 \}
+\end{DoxyCode}
+\mbox{\label{a00014_a53d6e35d53ec3e0b1b1c489d8203f204}} 
+\index{drive.\+h@{drive.\+h}!set\+Thresh@{set\+Thresh}}
+\index{set\+Thresh@{set\+Thresh}!drive.\+h@{drive.\+h}}
+\paragraph{set\+Thresh()}
+{\footnotesize\ttfamily void set\+Thresh (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the deadzone threshhold on the drive. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett
+
+Christian Desimone 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 21} of file \textbf{ drive.\+c}.
+
+
+
+References \textbf{ thresh}.
+
+
+\begin{DoxyCode}
+00021 \{ thresh = t; \}
+\end{DoxyCode}
+\mbox{\label{a00014_a8224a4626a934d30ed587671b7004bf8}} 
+\index{drive.\+h@{drive.\+h}!update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}}
+\index{update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}!drive.\+h@{drive.\+h}}
+\paragraph{update\+\_\+drive\+\_\+motors()}
+{\footnotesize\ttfamily void update\+\_\+drive\+\_\+motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the drive motors during teleop. 
+
+\begin{DoxyAuthor}{Author}
+Christian Desimone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/5/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 28} of file \textbf{ drive.\+c}.
+
+
+
+References \textbf{ get\+\_\+mode()}, \textbf{ L\+E\+FT}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ P\+A\+R\+T\+N\+ER}, \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ R\+I\+G\+HT}, \textbf{ set\+\_\+side\+\_\+speed()}, \textbf{ thresh}, \textbf{ cord\+::x}, and \textbf{ cord\+::y}.
+
+
+
+Referenced by \textbf{ operator\+Control()}.
+
+
+\begin{DoxyCode}
+00028                            \{
+00029   \textcolor{comment}{// Get the joystick values from the controller}
+00030   \textcolor{keywordtype}{int} x = 0;
+00031   \textcolor{keywordtype}{int} y = 0;
+00032   \textcolor{keywordflow}{if} (get_mode() == PARTNER_CONTROLLER_MODE) \{
+00033     x = (joystickGetAnalog(PARTNER, 3));
+00034     y = (joystickGetAnalog(PARTNER, 1));
+00035   \} \textcolor{keywordflow}{else} \{
+00036     x = -(joystickGetAnalog(MASTER, 3));
+00037     y = (joystickGetAnalog(MASTER, 1));
+00038   \}
+00039   \textcolor{comment}{// Make sure the joystick values are significant enough to change the motors}
+00040   \textcolor{keywordflow}{if} (x < thresh && x > -thresh) \{
+00041     x = 0;
+00042   \}
+00043   \textcolor{keywordflow}{if} (y < thresh && y > -thresh) \{
+00044     y = 0;
+00045   \}
+00046   \textcolor{comment}{// Create motor values for the left and right from the x and y of the joystick}
+00047   \textcolor{keywordtype}{int} r = (x + y);
+00048   \textcolor{keywordtype}{int} l = -(x - y);
+00049 
+00050   \textcolor{comment}{// Set the drive motors}
+00051   set_side_speed(LEFT, l);
+00052   set_side_speed(RIGHT, -r);
+00053 \}
+\end{DoxyCode}

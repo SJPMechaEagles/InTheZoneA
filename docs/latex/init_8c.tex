@@ -1,34 +1,33 @@
-\section{src/init.c File Reference}
+\subsection{src/init.c File Reference}
 \label{init_8c}\index{src/init.\+c@{src/init.\+c}}
 
 
 File for initialization code.  
 
 
-{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}slew.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}battery.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}encoders.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lifter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
-Include dependency graph for init.\+c\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{init_8c__incl}
-\end{center}
-\end{figure}
-\subsection*{Functions}
+{\ttfamily \#include \char`\"{}slew.\+h\char`\"{}}\newline
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ initialize} ()
 \item 
 void \textbf{ initialize\+IO} ()
 \end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Ultrasonic \textbf{ lifter\+\_\+ultrasonic}
+\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsubsection{Detailed Description}
 File for initialization code. 
 
 This file should contain the user \doxyref{initialize()}{p.}{init_8c_a25a40b6614565f755233080a384c35f1} function and any functions related to it.
@@ -41,11 +40,11 @@ Definition in file \textbf{ init.\+c}.
 
 
 
-\subsection{Function Documentation}
+\subsubsection{Function Documentation}
 \mbox{\label{init_8c_a25a40b6614565f755233080a384c35f1}} 
 \index{init.\+c@{init.\+c}!initialize@{initialize}}
 \index{initialize@{initialize}!init.\+c@{init.\+c}}
-\subsubsection{initialize()}
+\paragraph{initialize()}
 {\footnotesize\ttfamily void initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Runs user initialization code. This function will be started in its own task with the default priority and stack size once when the robot is starting up. It is possible that the V\+E\+Xnet communication link may not be fully established at this time, so reading from the V\+EX Joystick may fail.
@@ -54,38 +53,38 @@ This function should initialize most sensors (gyro, encoders, ultrasonics), L\+C
 
 This function must exit relatively promptly, or the \doxyref{operator\+Control()}{p.}{main_8h_ac71a94af413917f27d108e95c4d6f6a7} and \doxyref{autonomous()}{p.}{main_8h_a3c7ca506bbc071fa740de13805b7f376} tasks will not start. An autonomous mode selection menu like the pre\+\_\+auton() in other environments can be implemented in this task if desired. 
 
-Definition at line \textbf{ 47} of file \textbf{ init.\+c}.
+Definition at line \textbf{ 50} of file \textbf{ init.\+c}.
 
 
 
-References \textbf{ display\+\_\+menu()}, \textbf{ info()}, \textbf{ init\+\_\+error()}, \textbf{ init\+\_\+main\+\_\+lcd()}, \textbf{ init\+\_\+menu\+\_\+var()}, and \textbf{ S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE}.
+References \textbf{ battery\+\_\+level\+\_\+acceptable()}, \textbf{ error()}, \textbf{ info()}, \textbf{ init\+\_\+encoders()}, \textbf{ init\+\_\+error()}, \textbf{ init\+\_\+main\+\_\+lcd()}, \textbf{ init\+\_\+menu\+\_\+var()}, \textbf{ lifter\+\_\+ultrasonic}, and \textbf{ S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE}.
 
-
-\begin{DoxyCode}
-00047                   \{
-00048   init_main_lcd(uart1);
-00049   info(\textcolor{stringliteral}{"LCD Init"});
-00050   menu_t *t = init_menu_var(STRING_TYPE, \textcolor{stringliteral}{"TEST Menu"}, 5, \textcolor{stringliteral}{"1"},\textcolor{stringliteral}{"2"},\textcolor{stringliteral}{"3"},\textcolor{stringliteral}{"4"},\textcolor{stringliteral}{"5"});
-00051   init_error(\textcolor{keyword}{true}, uart2);
-00052   display_menu(t);
-00053   setTeamName(\textcolor{stringliteral}{"9228A"});
-00054 \}
-\end{DoxyCode}
 \mbox{\label{init_8c_ad9cda921edb01125bb13c2f86bcf624b}} 
 \index{init.\+c@{init.\+c}!initialize\+IO@{initialize\+IO}}
 \index{initialize\+IO@{initialize\+IO}!init.\+c@{init.\+c}}
-\subsubsection{initialize\+I\+O()}
+\paragraph{initialize\+I\+O()}
 {\footnotesize\ttfamily void initialize\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Runs pre-\/initialization code. This function will be started in kernel mode one time while the V\+EX Cortex is starting up. As the scheduler is still paused, most A\+PI functions will fail.
 
 The purpose of this function is solely to set the default pin modes (pin\+Mode()) and port states (digital\+Write()) of limit switches, push buttons, and solenoids. It can also safely configure a U\+A\+RT port (usart\+Open()) but cannot set up an L\+CD (lcd\+Init()). 
 
-Definition at line \textbf{ 30} of file \textbf{ init.\+c}.
+Definition at line \textbf{ 35} of file \textbf{ init.\+c}.
 
 
-\begin{DoxyCode}
-00030                     \{
-00031     watchdogInit();
-00032 \}
-\end{DoxyCode}
+
+\subsubsection{Variable Documentation}
+\mbox{\label{init_8c_a5dfaf05eb7e97b2e29d04eb068f9c240}} 
+\index{init.\+c@{init.\+c}!lifter\+\_\+ultrasonic@{lifter\+\_\+ultrasonic}}
+\index{lifter\+\_\+ultrasonic@{lifter\+\_\+ultrasonic}!init.\+c@{init.\+c}}
+\paragraph{lifter\+\_\+ultrasonic}
+{\footnotesize\ttfamily Ultrasonic lifter\+\_\+ultrasonic}
+
+
+
+Definition at line \textbf{ 4} of file \textbf{ lifter.\+c}.
+
+
+
+Referenced by \textbf{ autostack\+\_\+routine()}, \textbf{ initialize()}, and \textbf{ main\+\_\+lifter\+\_\+update()}.
+

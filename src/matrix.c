@@ -1,4 +1,5 @@
 #include "matrix.h"
+#include "log.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,7 +14,7 @@
  **/
 void assert(int assertion, const char *message) {
   if (assertion == 0) {
-    fprintf(stderr, "%s\n", message);
+    error(message);
     exit(1);
   }
 }

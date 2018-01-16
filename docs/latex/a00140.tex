@@ -1,0 +1,161 @@
+\subsection{src/routines.c File Reference}
+\label{a00140}\index{src/routines.\+c@{src/routines.\+c}}
+{\ttfamily \#include \char`\"{}routines.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}toggle.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ deinit\+\_\+routines} ()
+\item 
+void \textbf{ init\+\_\+routine} ()
+\item 
+void \textbf{ register\+\_\+routine} (void($\ast$routine)(), \textbf{ button\+\_\+t} on\+\_\+buttons, \textbf{ button\+\_\+t} $\ast$prohibited\+\_\+buttons)
+\item 
+void \textbf{ routine\+\_\+task} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \textbf{ list\+\_\+t} $\ast$ \textbf{ routine\+\_\+list}
+\item 
+static Task\+Handle \textbf{ routine\+\_\+task\+\_\+var}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{a00140_ad908adbc884189372f72f882ec62d71d}} 
+\index{routines.\+c@{routines.\+c}!deinit\+\_\+routines@{deinit\+\_\+routines}}
+\index{deinit\+\_\+routines@{deinit\+\_\+routines}!routines.\+c@{routines.\+c}}
+\paragraph{deinit\+\_\+routines()}
+{\footnotesize\ttfamily void deinit\+\_\+routines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 33} of file \textbf{ routines.\+c}.
+
+
+
+References \textbf{ list\+\_\+destroy()}.
+
+
+\begin{DoxyCode}
+00033 \{ list_destroy(routine_list); \}
+\end{DoxyCode}
+\mbox{\label{a00140_ab873e24fcc59a2bf7844618b664a5d26}} 
+\index{routines.\+c@{routines.\+c}!init\+\_\+routine@{init\+\_\+routine}}
+\index{init\+\_\+routine@{init\+\_\+routine}!routines.\+c@{routines.\+c}}
+\paragraph{init\+\_\+routine()}
+{\footnotesize\ttfamily void init\+\_\+routine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 28} of file \textbf{ routines.\+c}.
+
+
+
+References \textbf{ list\+\_\+new()}, \textbf{ routine\+\_\+task()}, and \textbf{ routine\+\_\+task\+\_\+var}.
+
+
+
+Referenced by \textbf{ operator\+Control()}.
+
+
+\begin{DoxyCode}
+00028                     \{
+00029   routine_list = list_new();
+00030   routine_task_var = taskRunLoop(routine_task, 20);
+00031 \}
+\end{DoxyCode}
+\mbox{\label{a00140_a4bf3e235fcde5f0e1ce1f693cbb9c01c}} 
+\index{routines.\+c@{routines.\+c}!register\+\_\+routine@{register\+\_\+routine}}
+\index{register\+\_\+routine@{register\+\_\+routine}!routines.\+c@{routines.\+c}}
+\paragraph{register\+\_\+routine()}
+{\footnotesize\ttfamily void register\+\_\+routine (\begin{DoxyParamCaption}\item[{void($\ast$)()}]{routine,  }\item[{\textbf{ button\+\_\+t}}]{on\+\_\+buttons,  }\item[{\textbf{ button\+\_\+t} $\ast$}]{prohibited\+\_\+buttons }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 35} of file \textbf{ routines.\+c}.
+
+
+
+References \textbf{ routine\+\_\+t\+::blocked\+\_\+buttons}, \textbf{ list\+\_\+node\+\_\+new()}, \textbf{ list\+\_\+rpush()}, \textbf{ routine\+\_\+t\+::on\+\_\+button}, \textbf{ routine\+\_\+t\+::routine}, and \textbf{ list\+\_\+node\+::val}.
+
+
+\begin{DoxyCode}
+00036                                                     \{
+00037   \textcolor{keyword}{struct }routine_t *r = (\textcolor{keyword}{struct }routine_t *)malloc(\textcolor{keyword}{sizeof}(routine_t));
+00038   r->blocked_buttons = prohibited\_buttons;
+00039   r->routine = routine;
+00040   r->on_button = on\_buttons;
+00041   list_node_t *node = list_node_new(r);
+00042   node->val = r;
+00043   list_rpush(routine_list, node);
+00044 \}
+\end{DoxyCode}
+\mbox{\label{a00140_a230cdcefb410a429fb6baba1f88fc9ba}} 
+\index{routines.\+c@{routines.\+c}!routine\+\_\+task@{routine\+\_\+task}}
+\index{routine\+\_\+task@{routine\+\_\+task}!routines.\+c@{routines.\+c}}
+\paragraph{routine\+\_\+task()}
+{\footnotesize\ttfamily void routine\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 12} of file \textbf{ routines.\+c}.
+
+
+
+References \textbf{ button\+Is\+New\+Press()}, \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_\+destroy()}, \textbf{ list\+\_\+iterator\+\_\+new()}, \textbf{ list\+\_\+iterator\+\_\+next()}, \textbf{ routine\+\_\+t\+::on\+\_\+button}, \textbf{ routine\+\_\+t\+::routine}, and \textbf{ list\+\_\+node\+::val}.
+
+
+
+Referenced by \textbf{ init\+\_\+routine()}.
+
+
+\begin{DoxyCode}
+00012                     \{
+00013   list_node_t *node;
+00014   list_iterator_t *it = list_iterator_new(routine_list, LIST_HEAD);
+00015   \textcolor{keywordflow}{if} (it != NULL) \{
+00016     \textcolor{keywordflow}{while} (node = list_iterator_next(it)) \{
+00017       \textcolor{keywordflow}{if} (node->val != NULL) \{
+00018         routine_t *routine = (routine_t *)(node->val);
+00019         \textcolor{keywordflow}{if} (buttonIsNewPress(routine->on_button)) \{
+00020           routine->routine();
+00021         \}
+00022       \}
+00023     \}
+00024   \}
+00025   list_iterator_destroy(it);
+00026 \}
+\end{DoxyCode}
+
+
+\subsubsection{Variable Documentation}
+\mbox{\label{a00140_a4d70ab7b0355718354a9678801101aa2}} 
+\index{routines.\+c@{routines.\+c}!routine\+\_\+list@{routine\+\_\+list}}
+\index{routine\+\_\+list@{routine\+\_\+list}!routines.\+c@{routines.\+c}}
+\paragraph{routine\+\_\+list}
+{\footnotesize\ttfamily \textbf{ list\+\_\+t}$\ast$ routine\+\_\+list\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \textbf{ 8} of file \textbf{ routines.\+c}.
+
+\mbox{\label{a00140_a8ac8c8354c257b390c000a5153f4fec6}} 
+\index{routines.\+c@{routines.\+c}!routine\+\_\+task\+\_\+var@{routine\+\_\+task\+\_\+var}}
+\index{routine\+\_\+task\+\_\+var@{routine\+\_\+task\+\_\+var}!routines.\+c@{routines.\+c}}
+\paragraph{routine\+\_\+task\+\_\+var}
+{\footnotesize\ttfamily Task\+Handle routine\+\_\+task\+\_\+var\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \textbf{ 10} of file \textbf{ routines.\+c}.
+
+
+
+Referenced by \textbf{ init\+\_\+routine()}.
+

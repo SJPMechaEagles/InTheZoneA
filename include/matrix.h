@@ -2,9 +2,9 @@
  * @brief Various Matrix operations.
  * @file matrix.h
  * None of the matrix operations below change the input matrices if an input is
- *required. They all return a new matrix with the new changes. Because memory
- *issues are so prevelant, be sure to use the @freeMatrix function to reclaim
- *some of that memory.
+ * required. They all return a new matrix with the new changes. Because memory
+ * issues are so prevelant, be sure to use the @freeMatrix function to reclaim
+ * some of that memory.
  **/
 
 #ifndef _MATRIX_H_
@@ -55,9 +55,6 @@ void freeMatrix(matrix *m);
  **/
 void printMatrix(matrix *m);
 
-//============================
-// Basic Matrix operations
-//============================
 /**
  * @brief Returns an identity matrix of size n by n.
  * @param n the input matrix.
@@ -81,10 +78,10 @@ matrix *transposeMatrix(matrix *m);
 
 /**
  * @brief Given an "m rows by n columns" matrix, return a matrix where each
- *element represents the mean of that full column.
+ * element represents the mean of that full column.
  * @pram the matrix
  * @return matrix with 1 row and n columns each element represents the mean of
- *that full column.
+ * that full column.
  **/
 matrix *meanMatrix(matrix *m);
 

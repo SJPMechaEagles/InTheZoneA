@@ -1,35 +1,35 @@
-\section{vlib.\+c}
+\subsection{vlib.\+c}
 \label{vlib_8c_source}\index{src/vlib.\+c@{src/vlib.\+c}}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "vlib.h"}
 00002 
 00010 \textcolor{keywordtype}{void} reverse(\textcolor{keywordtype}{char} *str, \textcolor{keywordtype}{int} len) \{
-00011     \textcolor{keywordtype}{int} i=0, j=len-1, temp;
-00012     \textcolor{keywordflow}{while} (i<j) \{
-00013         temp = str[i];
-00014         str[i] = str[j];
-00015         str[j] = temp;
-00016         i++; j--;
-00017     \}
-00018 \}
-00019 
+00011   \textcolor{keywordtype}{int} i = 0, j = len - 1, temp;
+00012   \textcolor{keywordflow}{while} (i < j) \{
+00013     temp = str[i];
+00014     str[i] = str[j];
+00015     str[j] = temp;
+00016     i++;
+00017     j--;
+00018   \}
+00019 \}
 00020 
 00030 \textcolor{keywordtype}{int} itoaa(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{char} *buffer, \textcolor{keywordtype}{int} digits) \{
 00031   \textcolor{keywordtype}{int} i = 0;
-00032    \textcolor{keywordflow}{while} (a) \{
-00033        buffer[i++] = (a%10) + \textcolor{charliteral}{'0'};
-00034        a = a/10;
-00035    \}
+00032   \textcolor{keywordflow}{while} (a) \{
+00033     buffer[i++] = (a % 10) + \textcolor{charliteral}{'0'};
+00034     a = a / 10;
+00035   \}
 00036 
-00037    \textcolor{comment}{// If number of digits required is more, then}
-00038    \textcolor{comment}{// add 0s at the beginning}
-00039    \textcolor{keywordflow}{while} (i < digits)
-00040        buffer[i++] = \textcolor{charliteral}{'0'};
+00037   \textcolor{comment}{// If number of digits required is more, then}
+00038   \textcolor{comment}{// add 0s at the beginning}
+00039   \textcolor{keywordflow}{while} (i < digits)
+00040     buffer[i++] = \textcolor{charliteral}{'0'};
 00041 
-00042    reverse(buffer, i);
-00043    buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
-00044    \textcolor{keywordflow}{return} i;
+00042   reverse(buffer, i);
+00043   buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
+00044   \textcolor{keywordflow}{return} i;
 00045 \}
 00046 
 00055 \textcolor{keywordtype}{void} ftoaa(\textcolor{keywordtype}{float} a, \textcolor{keywordtype}{char} *buffer, \textcolor{keywordtype}{int} precision) \{
@@ -44,8 +44,8 @@
 00064   \textcolor{keywordtype}{int} i = itoaa(ipart, buffer, 0);
 00065 
 00066   \textcolor{comment}{// check for display option after point}
-00067   \textcolor{keywordflow}{if}(precision != 0) \{
-00068     buffer[i] = \textcolor{charliteral}{'.'};  \textcolor{comment}{// add dot}
+00067   \textcolor{keywordflow}{if} (precision != 0) \{
+00068     buffer[i] = \textcolor{charliteral}{'.'}; \textcolor{comment}{// add dot}
 00069 
 00070     \textcolor{comment}{// Get the value of fraction part up to given num.}
 00071     \textcolor{comment}{// of points after dot. The third parameter is needed}

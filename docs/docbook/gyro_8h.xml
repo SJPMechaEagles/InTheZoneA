@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="gyro_8h">
+    <title>gyro.h File Reference</title>
+    <programlisting>#include &quot;API.h&quot;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="gyro_8h_1a482017cc25be9213fef3222112eb1c7f">GYRO_MULTIPLIER</link> 0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="gyro_8h_1a51d281e7676749d34aab3f8ba6fab960">GYRO_PORT</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="gyro_8h_1aec0963ebe3eb6cdfd7edaf486bbb0a87">get_main_gyro_angluar_velocity</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="gyro_8h_1a47c0a78a867be91a28e278bf433d699c">init_main_gyro</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/gyro.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#ifndef&#32;_GYRO_H_</emphasis>
+2 <emphasis class="preprocessor">#define&#32;_GYRO_H_</emphasis>
+3 
+4 <emphasis class="preprocessor">#include&#32;&quot;API.h&quot;</emphasis>
+5 
+<link linkend="gyro_8h_1a51d281e7676749d34aab3f8ba6fab960">6 </link><emphasis class="preprocessor">#define&#32;GYRO_PORT&#32;1</emphasis>
+<link linkend="gyro_8h_1a482017cc25be9213fef3222112eb1c7f">7 </link><emphasis class="preprocessor">#define&#32;GYRO_MULTIPLIER&#32;0</emphasis>
+8 
+9 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="gyro_8h_1a47c0a78a867be91a28e278bf433d699c">init_main_gyro</link>();
+10 <emphasis class="keywordtype">float</emphasis>&#32;<link linkend="gyro_8h_1aec0963ebe3eb6cdfd7edaf486bbb0a87">get_main_gyro_angluar_velocity</link>();
+11 
+12 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="opcontrol_8c">
+    <title>opcontrol.c File Reference</title>
+    <programlisting>#include &quot;drive.h&quot;</programlisting>
+    <programlisting>#include &quot;main.h&quot;</programlisting>
+    <programlisting>#include &quot;slew.h&quot;</programlisting>
+    <programlisting>#include &quot;claw.h&quot;</programlisting>
+    <programlisting>#include &quot;lifter.h&quot;</programlisting>
+    <programlisting>#include &quot;localization.h&quot;</programlisting>
+    <programlisting>#include &quot;log.h&quot;</programlisting>
+    <programlisting>#include &quot;mobile_goal_intake.h&quot;</programlisting>
+    <programlisting>#include &quot;routines.h&quot;</programlisting>
+    <programlisting>#include &quot;toggle.h&quot;</programlisting>
+    <programlisting>#include &quot;vmath.h&quot;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>File for operator control code. </para>
+
+<para>This file should contain the user <link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl()</link> function and any functions related to it.</para>
+
+<para>Any copyright is dedicated to the Public Domain. <link xlink:href="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</link></para>
+
+<para>PROS contains FreeRTOS (<link xlink:href="http://www.freertos.org">http://www.freertos.org</link>) whose source code may be obtained from <link xlink:href="http://sourceforge.net/projects/freertos/files/">http://sourceforge.net/projects/freertos/files/</link> or on request. </para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/opcontrol.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+14 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="drive_8h">drive.h</link>&quot;</emphasis>
+15 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="main_8h">main.h</link>&quot;</emphasis>
+16 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="slew_8h">slew.h</link>&quot;</emphasis>
+17 
+18 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="claw_8h">claw.h</link>&quot;</emphasis>
+19 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="lifter_8h">lifter.h</link>&quot;</emphasis>
+20 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="localization_8h">localization.h</link>&quot;</emphasis>
+21 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
+22 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="mobile__goal__intake_8h">mobile_goal_intake.h</link>&quot;</emphasis>
+23 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="routines_8h">routines.h</link>&quot;</emphasis>
+24 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="toggle_8h">toggle.h</link>&quot;</emphasis>
+25 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="vmath_8h">vmath.h</link>&quot;</emphasis>
+26 
+<link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">49 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl</link>()&#32;{
+50 &#32;&#32;<link linkend="toggle_8h_1a2b3d226371575c894979ab84bce95626">buttonInit</link>();
+51 &#32;&#32;<link linkend="routines_8h_1ab873e24fcc59a2bf7844618b664a5d26">init_routine</link>();
+52 &#32;&#32;<link linkend="slew_8h_1a321758941d88b75783955c819bb75005">init_slew</link>();
+53 &#32;&#32;delay(10);
+54 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(1)&#32;{
+55 &#32;&#32;&#32;&#32;<link linkend="claw_8h_1a0122b78972344264b8a276a559cfce4a">update_claw</link>();
+56 &#32;&#32;&#32;&#32;<link linkend="mobile__goal__intake_8h_1a5d7bad8a208988af743fd2e68f111286">update_intake</link>();
+57 &#32;&#32;&#32;&#32;<link linkend="lifter_8h_1a59bb7413777ca16aba124aaedf95c79b">update_lifter</link>();
+58 &#32;&#32;&#32;&#32;<link linkend="drive_8h_1a8224a4626a934d30ed587671b7004bf8">update_drive_motors</link>();
+59 &#32;&#32;&#32;&#32;delay(10);
+60 &#32;&#32;}
+61 }
+    </computeroutput></literallayout>
+</section>

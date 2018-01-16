@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structmenu__t">
+<title>menu_t struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="menu_8h">&lt;menu.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int current<para><emphasis>contains the current index of menu.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned int length<para><emphasis>contains the length of options char**.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int max<para><emphasis>contains the maximum int value of menu.
+Defaults to minimum int value</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float max_f<para><emphasis>contains the maximum float value of menu.
+Defaults to minimum int value</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int min<para><emphasis>contains the minimum int value of menu.
+Defaults to minimum int value</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float min_f<para><emphasis>contains the minimum float value of menu.
+Defaults to minimum int value</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char ** options<para><emphasis>contains the array of string options.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char * prompt<para><emphasis>contains the prompt to display on the first line.
+ Step is how much the int menu will increase of decrease with each press.
+Defaults to one</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int step<para><emphasis>contains the step int value of menu.
+ Step is how much the int menu will increase of decrease with each press.
+Defaults to one</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float step_f<para><emphasis>contains the step float value of menu.
+ Step is how much the int menu will increase of decrease with each press.
+Defaults to 1.0f</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>enum menu_type type<para><emphasis>contains the type of menu.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint_menu. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+<formalpara><title>See also: </title>
+
+<para><link linkend="menu_8h">menu.h</link> </para>
+<simplesect/>
+<para><link linkend="structmenu__t">menu_t</link> </para>
+<simplesect/>
+<para><link linkend="menu_8c_1aff4fd27ff7707295d91c67fa52a6b021">create_menu</link> </para>
+<simplesect/>
+<para>init_menu </para>
+<simplesect/>
+<para><link linkend="menu_8c_1abfadedb104f89f672dd3045499975a71">display_menu</link> </para>
+<simplesect/>
+<para><link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> </para>
+<simplesect/>
+<para><link linkend="menu_8c_1a05a36619ac6c9ba4544eddb83ee2a50d">denint_menu</link> </para>
+</formalpara>
+</para>
+                <para>Definition at line 66 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+            <simplesect>
+                <title>int menu_t::current</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 142 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>unsigned int menu_t::length</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 86 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int menu_t::max</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 102 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float menu_t::max_f</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 127 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int menu_t::min</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 94 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float menu_t::min_f</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 119 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>char** menu_t::options</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 79 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>char* menu_t::prompt</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 150 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int menu_t::step</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 111 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float menu_t::step_f</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 136 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>enum menu_type menu_t::type</title>                
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/8/17 </para>
+</formalpara>
+</para>
+
+                <para>Definition at line 220 of file menu.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>menu.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+</section>

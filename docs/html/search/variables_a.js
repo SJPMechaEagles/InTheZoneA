@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['prompt',['prompt',['../structmenu__t.html#a7bf29a030b7ed4a623c6b445587cc647',1,'menu_t']]]
+  ['next',['next',['../structlist__node.html#a0b99ca890dbfe832a8475f4bbd72338c',1,'list_node::next()'],['../structlist__iterator__t.html#adfc911fa0f601936c4a58c95a08737ee',1,'list_iterator_t::next()']]]
 ];

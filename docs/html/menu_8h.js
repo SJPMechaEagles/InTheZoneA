@@ -7,8 +7,6 @@ var menu_8h =
       [ "FLOAT_TYPE", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62ab2a272a88abadbaa481269e2506345c5", null ],
       [ "STRING_TYPE", "menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c", null ]
     ] ],
-    [ "calculate_current_display", "menu_8h.html#a0fb55c1213b23963d509b974d1254567", null ],
-    [ "create_menu", "menu_8h.html#adcee778eac0edb821427d32949106dc5", null ],
     [ "denint_menu", "menu_8h.html#a05a36619ac6c9ba4544eddb83ee2a50d", null ],
     [ "display_menu", "menu_8h.html#abfadedb104f89f672dd3045499975a71", null ],
     [ "init_menu_float", "menu_8h.html#a5abb752733423805f59ef3b92e3c2e57", null ],

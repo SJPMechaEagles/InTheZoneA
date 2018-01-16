@@ -1,4 +1,4 @@
-\section{menu.\+h}
+\subsection{menu.\+h}
 \label{menu_8h_source}\index{include/menu.\+h@{include/menu.\+h}}
 
 \begin{DoxyCode}
@@ -6,58 +6,53 @@
 00008 \textcolor{preprocessor}{#ifndef \_MENU\_H\_}
 00009 \textcolor{preprocessor}{#define \_MENU\_H\_}
 00010 
-00011 \textcolor{preprocessor}{#include "lcd.h"}
-00012 \textcolor{preprocessor}{#include "API.h"}
-00013 \textcolor{preprocessor}{#include <string.h>}
+00011 \textcolor{preprocessor}{#include "API.h"}
+00012 \textcolor{preprocessor}{#include "lcd.h"}
+00013 \textcolor{preprocessor}{#include <float.h>}
 00014 \textcolor{preprocessor}{#include <limits.h>}
-00015 \textcolor{preprocessor}{#include <float.h>}
+00015 \textcolor{preprocessor}{#include <string.h>}
 00016 \textcolor{preprocessor}{#include <vlib.h>}
-00017 \textcolor{comment}{//#include <stdlib.h>}
-00018 \textcolor{preprocessor}{#include "log.h"}
-00019 
-00031 \textcolor{keyword}{enum} menu_type \{
-00038   INT_TYPE,
-00045   FLOAT_TYPE,
-00051   STRING_TYPE
-00052 \};
-00053 
-00067 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }menu_t\{
-00073   \textcolor{keyword}{enum} menu_type type;
-00074 
-00080   \textcolor{keywordtype}{char} **options;
-00081 
-00087   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length;
-00088 
-00095   \textcolor{keywordtype}{int} min;
-00096 
-00103   \textcolor{keywordtype}{int} max;
-00104 
+00017 \textcolor{preprocessor}{#include "log.h"}
+00018 
+00030 \textcolor{keyword}{enum} menu_type \{
+00037   INT_TYPE,
+00044   FLOAT_TYPE,
+00050   STRING_TYPE
+00051 \};
+00052 
+00066 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }menu_t \{
+00072   \textcolor{keyword}{enum} menu_type type;
+00073 
+00079   \textcolor{keywordtype}{char} **options;
+00080 
+00086   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length;
+00087 
+00094   \textcolor{keywordtype}{int} min;
+00095 
+00102   \textcolor{keywordtype}{int} max;
+00103 
 00111   \textcolor{keywordtype}{int} step;
 00112 
 00119   \textcolor{keywordtype}{float} min_f;
 00120 
 00127   \textcolor{keywordtype}{float} max_f;
 00128 
-00135   \textcolor{keywordtype}{float} step_f;
-00141   \textcolor{keywordtype}{int} current;
-00148   \textcolor{keywordtype}{char} *prompt;
-00149 \} menu_t;
-00150 
-00157 \textcolor{keyword}{static} menu_t* create_menu(\textcolor{keyword}{enum} menu_type type, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt);
-00158 
-00171 menu_t* init_menu_var(\textcolor{keyword}{enum} menu_type type, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt, \textcolor{keywordtype}{int} nums,...);
-00172 
-00186 menu_t* init_menu_int(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{int} min, \textcolor{keywordtype}{int} max, \textcolor{keywordtype}{int} step, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* 
-      prompt);
-00187 
-00201 menu_t* init_menu_float(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{float} min, \textcolor{keywordtype}{float} max, \textcolor{keywordtype}{float} step, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* 
-      prompt);
-00202 
-00211 \textcolor{keyword}{static} \textcolor{keywordtype}{void} calculate_current_display(\textcolor{keywordtype}{char}* rtn, menu_t *menu);
-00212 
-00223 \textcolor{keywordtype}{int} display_menu(menu_t *menu);
-00224 
-00234 \textcolor{keywordtype}{void} denint_menu(menu_t *menu);
-00235 
-00236 \textcolor{preprocessor}{#endif}
+00136   \textcolor{keywordtype}{float} step_f;
+00142   \textcolor{keywordtype}{int} current;
+00150   \textcolor{keywordtype}{char} *prompt;
+00151 \} menu_t;
+00152 
+00165 menu_t *init_menu_var(\textcolor{keyword}{enum} menu_type type, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt, \textcolor{keywordtype}{int} nums, ...);
+00166 
+00180 menu_t *init_menu_int(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{int} min, \textcolor{keywordtype}{int} max, \textcolor{keywordtype}{int} step,
+00181                       \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt);
+00182 
+00196 menu_t *init_menu_float(\textcolor{keyword}{enum} menu_type type, \textcolor{keywordtype}{float} min, \textcolor{keywordtype}{float} max, \textcolor{keywordtype}{float} step,
+00197                         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *prompt);
+00198 
+00209 \textcolor{keywordtype}{int} display_menu(menu_t *menu);
+00210 
+00220 \textcolor{keywordtype}{void} denint_menu(menu_t *menu);
+00221 
+00222 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

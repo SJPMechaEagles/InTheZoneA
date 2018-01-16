@@ -1,30 +1,23 @@
-\section{mobile\+\_\+goal\+\_\+intake.\+c}
+\subsection{mobile\+\_\+goal\+\_\+intake.\+c}
 \label{mobile__goal__intake_8c_source}\index{src/mobile\+\_\+goal\+\_\+intake.\+c@{src/mobile\+\_\+goal\+\_\+intake.\+c}}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "mobile_goal_intake.h"}
-00002 \textcolor{preprocessor}{#include "partner.h"}
-00003 \textcolor{preprocessor}{#include "log.h"}
+00002 \textcolor{preprocessor}{#include "log.h"}
+00003 \textcolor{preprocessor}{#include "partner.h"}
 00004 
-00005 \textcolor{keyword}{static} \textcolor{keywordtype}{void} set_intake_motor(\textcolor{keywordtype}{int} n) \{
-00006   set_motor_immediate(INTAKE_MOTOR, n);
-00007 \}
+00005 \textcolor{keywordtype}{void} set_intake_motor(\textcolor{keywordtype}{int} n) \{ set_motor_immediate(INTAKE_MOTOR, n); \}
+00006 
+00007 \textcolor{keywordtype}{void} lower_intake() \{ set_intake_motor(-100); \}
 00008 
-00009 \textcolor{keyword}{static} \textcolor{keywordtype}{void} lower_intake() \{
-00010   set_intake_motor(-100);
-00011 \}
-00012 
-00013 \textcolor{keyword}{static} \textcolor{keywordtype}{void} raise_intake() \{
-00014   set_intake_motor(100);
-00015 \}
-00016 
-00020 \textcolor{keywordtype}{void} update_intake() \{
-00021   \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_UP)) \{
-00022     raise_intake();
-00023   \}
-00024   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(MASTER, 7, JOY\_DOWN))\{
-00025     lower_intake();
-00026   \}
-00027   \textcolor{keywordflow}{else} set_intake_motor(0);
-00028 \}
+00009 \textcolor{keywordtype}{void} raise_intake() \{ set_intake_motor(100); \}
+00010 
+00014 \textcolor{keywordtype}{void} update_intake() \{
+00015   \textcolor{keywordflow}{if} (joystickGetDigital(MASTER, 7, JOY\_UP)) \{
+00016     raise_intake();
+00017   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(MASTER, 7, JOY\_DOWN)) \{
+00018     lower_intake();
+00019   \} \textcolor{keywordflow}{else}
+00020     set_intake_motor(0);
+00021 \}
 \end{DoxyCode}

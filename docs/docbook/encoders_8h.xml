@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="encoders_8h">
+    <title>encoders.h File Reference</title>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="encoders_8h_1a87db35d2735ef045f57d446b3bfe8d48">IME_NUMBER</link> 2<para><emphasis>The number of IMEs.
+This number is compared against the number detect in init_encoders.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="encoders_8h_1aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</link> (
+unsigned char address)<para><emphasis>Gets the encoder ticks since last reset.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="encoders_8h_1a8e6b77703c5cf18e00709b052fb4bf22">get_encoder_velocity</link> (
+unsigned char address)<para><emphasis>Gets the encoder reads.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="encoders_8h_1aa6ec1ca17e907babd52803ecba451cd3">init_encoders</link> (
+)<para><emphasis>Initializes all motor encoders.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>wrapper around encoder functions </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett, Christian Desimone </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/9/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/encoders.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+7 <emphasis class="preprocessor">#ifndef&#32;_ENCODERS_H_</emphasis>
+8 <emphasis class="preprocessor">#define&#32;_ENCODERS_H_</emphasis>
+9 
+10 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+11 
+<link linkend="encoders_8h_1a87db35d2735ef045f57d446b3bfe8d48">20 </link><emphasis class="preprocessor">#define&#32;IME_NUMBER&#32;2</emphasis>
+21 
+28 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="encoders_8h_1aa6ec1ca17e907babd52803ecba451cd3">init_encoders</link>();
+29 
+35 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="encoders_8h_1aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;address);
+36 
+42 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="encoders_8h_1a8e6b77703c5cf18e00709b052fb4bf22">get_encoder_velocity</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;address);
+43 
+44 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

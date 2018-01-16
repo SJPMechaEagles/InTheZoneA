@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="slew_8c">
+    <title>slew.c File Reference</title>
+    <programlisting>#include &quot;slew.h&quot;</programlisting>
+    <programlisting>#include &quot;log.h&quot;</programlisting>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static bool <link linkend="slew_8c_1aedeffc7d23da25d52b9a50045189fe2b">initialized</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="slew_8c_1a69e0d1204ea4d87b7366c9cd79527984">motors_curr_speeds</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="slew_8c_1acf7558ed17fdecd298ea7eb82291c7d0">motors_set_speeds</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static TaskHandle <link linkend="slew_8c_1a9dc30877eadbb32ceb6bede027c9a93f">slew</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static Mutex <link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">speeds_mutex</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8c_1a981c9990a969d2587e66e550737f7cd9">deinitslew</link> (
+)<para><emphasis>Deinitializes the slew rate controller and frees memory.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8c_1a321758941d88b75783955c819bb75005">init_slew</link> (
+)<para><emphasis>Initializes the slew rate controller.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8c_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link> (
+int motor, int speed)<para><emphasis>Sets the motor speed ignoring the slew controller.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8c_1a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</link> (
+int motor, int speed)<para><emphasis>Sets motor speed wrapped inside the slew rate controller.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8c_1a807a87c5df438fde21c1e8213906695b">updateMotors</link> (
+)<para><emphasis>Closes the distance between the desired motor value and the current
+motor value by half for each motor.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/slew.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="slew_8h">slew.h</link>&quot;</emphasis>
+2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
+3 
+<link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">4 </link><emphasis class="keyword">static</emphasis>&#32;Mutex&#32;<link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">speeds_mutex</link>;
+5 
+<link linkend="slew_8c_1acf7558ed17fdecd298ea7eb82291c7d0">6 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="slew_8c_1acf7558ed17fdecd298ea7eb82291c7d0">motors_set_speeds</link>[10];
+<link linkend="slew_8c_1a69e0d1204ea4d87b7366c9cd79527984">7 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="slew_8c_1a69e0d1204ea4d87b7366c9cd79527984">motors_curr_speeds</link>[10];
+8 
+<link linkend="slew_8c_1a9dc30877eadbb32ceb6bede027c9a93f">9 </link><emphasis class="keyword">static</emphasis>&#32;TaskHandle&#32;<link linkend="slew_8c_1a9dc30877eadbb32ceb6bede027c9a93f">slew</link>&#32;=&#32;NULL;&#32;<emphasis class="comment">//&#32;TaskHandle&#32;is&#32;of&#32;type&#32;void*</emphasis>
+10 
+<link linkend="slew_8c_1aedeffc7d23da25d52b9a50045189fe2b">11 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="slew_8c_1aedeffc7d23da25d52b9a50045189fe2b">initialized</link>&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+12 
+<link linkend="slew_8c_1a807a87c5df438fde21c1e8213906695b">19 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8c_1a807a87c5df438fde21c1e8213906695b">updateMotors</link>()&#32;{
+20 &#32;&#32;<emphasis class="comment">//&#32;Take&#32;back&#32;half&#32;approach</emphasis>
+21 &#32;&#32;<emphasis class="comment">//&#32;Not&#32;linear&#32;but&#32;equal&#32;to&#32;setSpeed(1-(1/2)^x)</emphasis>
+22 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;9;&#32;i++)&#32;{
+23 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="slew_8c_1acf7558ed17fdecd298ea7eb82291c7d0">motors_set_speeds</link>[i]&#32;==&#32;<link linkend="slew_8c_1a69e0d1204ea4d87b7366c9cd79527984">motors_curr_speeds</link>[i])
+24 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">continue</emphasis>;
+25 &#32;&#32;&#32;&#32;mutexTake(<link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">speeds_mutex</link>,&#32;10);
+26 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;set_speed&#32;=&#32;(<link linkend="slew_8c_1acf7558ed17fdecd298ea7eb82291c7d0">motors_set_speeds</link>[i]);
+27 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;curr_speed&#32;=&#32;<link linkend="slew_8c_1a69e0d1204ea4d87b7366c9cd79527984">motors_curr_speeds</link>[i];
+28 &#32;&#32;&#32;&#32;mutexGive(<link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">speeds_mutex</link>);
+29 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;diff&#32;=&#32;set_speed&#32;-&#32;curr_speed;
+30 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;offset&#32;=&#32;diff;
+31 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;n&#32;=&#32;curr_speed&#32;+&#32;offset;
+32 &#32;&#32;&#32;&#32;<link linkend="slew_8c_1a69e0d1204ea4d87b7366c9cd79527984">motors_curr_speeds</link>[i]&#32;=&#32;n;
+33 &#32;&#32;&#32;&#32;motorSet(i&#32;+&#32;1,&#32;n);
+34 &#32;&#32;}
+35 }
+36 
+<link linkend="slew_8c_1a321758941d88b75783955c819bb75005">42 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8c_1a321758941d88b75783955c819bb75005">init_slew</link>()&#32;{
+43 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="slew_8c_1aedeffc7d23da25d52b9a50045189fe2b">initialized</link>)&#32;{
+44 &#32;&#32;&#32;&#32;<link linkend="log_8h_1a0bec2cf5fff7f607bc510b74aba9887c">warning</link>(<emphasis class="stringliteral">&quot;Trying&#32;to&#32;init&#32;already&#32;init&#32;slew&quot;</emphasis>);
+45 &#32;&#32;}
+46 &#32;&#32;memset(<link linkend="slew_8c_1acf7558ed17fdecd298ea7eb82291c7d0">motors_set_speeds</link>,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">int</emphasis>)&#32;*&#32;10);
+47 &#32;&#32;memset(<link linkend="slew_8c_1a69e0d1204ea4d87b7366c9cd79527984">motors_curr_speeds</link>,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">int</emphasis>)&#32;*&#32;10);
+48 &#32;&#32;motorStopAll();
+49 &#32;&#32;<link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">speeds_mutex</link>&#32;=&#32;mutexCreate();
+50 &#32;&#32;<link linkend="slew_8c_1a9dc30877eadbb32ceb6bede027c9a93f">slew</link>&#32;=&#32;taskRunLoop(<link linkend="slew_8c_1a807a87c5df438fde21c1e8213906695b">updateMotors</link>,&#32;100);
+51 &#32;&#32;<link linkend="slew_8c_1aedeffc7d23da25d52b9a50045189fe2b">initialized</link>&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+52 }
+53 
+<link linkend="slew_8c_1a981c9990a969d2587e66e550737f7cd9">59 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8c_1a981c9990a969d2587e66e550737f7cd9">deinitslew</link>()&#32;{
+60 &#32;&#32;taskDelete(<link linkend="slew_8c_1a9dc30877eadbb32ceb6bede027c9a93f">slew</link>);
+61 &#32;&#32;memset(<link linkend="slew_8c_1acf7558ed17fdecd298ea7eb82291c7d0">motors_set_speeds</link>,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">int</emphasis>)&#32;*&#32;10);
+62 &#32;&#32;memset(<link linkend="slew_8c_1a69e0d1204ea4d87b7366c9cd79527984">motors_curr_speeds</link>,&#32;0,&#32;<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">int</emphasis>)&#32;*&#32;10);
+63 &#32;&#32;<link linkend="slew_8c_1aedeffc7d23da25d52b9a50045189fe2b">initialized</link>&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+64 }
+65 
+<link linkend="slew_8c_1a7dff2b79dffe55fb936d977594d7c01d">73 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8c_1a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</link>(<emphasis class="keywordtype">int</emphasis>&#32;motor,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed)&#32;{
+74 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="slew_8c_1aedeffc7d23da25d52b9a50045189fe2b">initialized</link>)&#32;{
+75 &#32;&#32;&#32;&#32;<link linkend="log_8h_1af3668f40d1ad1b4f3418869ac9a31f34">debug</link>(<emphasis class="stringliteral">&quot;Slew&#32;Not&#32;Initialized!&#32;Initializing&quot;</emphasis>);
+76 &#32;&#32;&#32;&#32;<link linkend="slew_8c_1a321758941d88b75783955c819bb75005">init_slew</link>();
+77 &#32;&#32;}
+78 &#32;&#32;mutexTake(<link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">speeds_mutex</link>,&#32;10);
+79 &#32;&#32;<link linkend="slew_8c_1acf7558ed17fdecd298ea7eb82291c7d0">motors_set_speeds</link>[motor&#32;-&#32;1]&#32;=&#32;speed;
+80 &#32;&#32;mutexGive(<link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">speeds_mutex</link>);
+81 }
+82 
+<link linkend="slew_8c_1a9f8b8ae577ef938622024545711f0151">90 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8c_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(<emphasis class="keywordtype">int</emphasis>&#32;motor,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed)&#32;{
+91 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="slew_8c_1aedeffc7d23da25d52b9a50045189fe2b">initialized</link>)&#32;{
+92 &#32;&#32;&#32;&#32;<link linkend="log_8h_1af3668f40d1ad1b4f3418869ac9a31f34">debug</link>(<emphasis class="stringliteral">&quot;Slew&#32;Not&#32;Initialized!&#32;Initializing&quot;</emphasis>);
+93 &#32;&#32;&#32;&#32;<link linkend="slew_8c_1a321758941d88b75783955c819bb75005">init_slew</link>();
+94 &#32;&#32;}
+95 &#32;&#32;motorSet(motor,&#32;speed);
+96 &#32;&#32;mutexTake(<link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">speeds_mutex</link>,&#32;10);
+97 &#32;&#32;<link linkend="slew_8c_1a69e0d1204ea4d87b7366c9cd79527984">motors_curr_speeds</link>[motor&#32;-&#32;1]&#32;=&#32;speed;
+98 &#32;&#32;<link linkend="slew_8c_1acf7558ed17fdecd298ea7eb82291c7d0">motors_set_speeds</link>[motor&#32;-&#32;1]&#32;=&#32;speed;
+99 &#32;&#32;mutexGive(<link linkend="slew_8c_1a29ddd4c66a52ff81b441d04f9f6d9318">speeds_mutex</link>);
+100 }
+    </computeroutput></literallayout>
+</section>

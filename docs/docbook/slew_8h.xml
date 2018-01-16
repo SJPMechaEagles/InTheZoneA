@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="slew_8h">
+    <title>slew.h File Reference</title>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+    <programlisting>#include &lt;math.h&gt;</programlisting>
+    <programlisting>#include &lt;vlib.h&gt;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="slew_8h_1ad1ad4b29af4180aa00713599367fbc98">MOTOR_PORTS</link> 12<para><emphasis>The number of motor ports on the robot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="slew_8h_1a4a3ff8667251227c99f8f4c81e9ff467">RAMP_PROPORTION</link> 1<para><emphasis>proportion defining how quickly the motor should converge on the
+correct value. higher value leads to slower convergence</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="slew_8h_1a4e8e7d6fdd1f5c6f8a0f341e4b61f025">UPDATE_PERIOD_MS</link> 25<para><emphasis>How frequently to update the motors, in milliseconds.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8h_1a981c9990a969d2587e66e550737f7cd9">deinitslew</link> (
+)<para><emphasis>Deinitializes the slew rate controller and frees memory.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8h_1a321758941d88b75783955c819bb75005">init_slew</link> (
+)<para><emphasis>Initializes the slew rate controller.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link> (
+int motor, int speed)<para><emphasis>Sets the motor speed ignoring the slew controller.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8h_1a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</link> (
+int motor, int speed)<para><emphasis>Sets motor speed wrapped inside the slew rate controller.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="slew_8h_1a807a87c5df438fde21c1e8213906695b">updateMotors</link> (
+)<para><emphasis>Closes the distance between the desired motor value and the current
+motor value by half for each motor.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Contains the slew rate controller wrapper for the motors. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/14/17 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/slew.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+8 <emphasis class="preprocessor">#ifndef&#32;_SLEW_H_</emphasis>
+9 <emphasis class="preprocessor">#define&#32;_SLEW_H_</emphasis>
+10 
+11 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+12 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="vlib_8h">vlib.h</link>&gt;</emphasis>
+14 
+<link linkend="slew_8h_1a4e8e7d6fdd1f5c6f8a0f341e4b61f025">20 </link><emphasis class="preprocessor">#define&#32;UPDATE_PERIOD_MS&#32;25</emphasis>
+21 
+<link linkend="slew_8h_1ad1ad4b29af4180aa00713599367fbc98">27 </link><emphasis class="preprocessor">#define&#32;MOTOR_PORTS&#32;12</emphasis>
+28 
+<link linkend="slew_8h_1a4a3ff8667251227c99f8f4c81e9ff467">35 </link><emphasis class="preprocessor">#define&#32;RAMP_PROPORTION&#32;1</emphasis>
+36 
+43 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8h_1a807a87c5df438fde21c1e8213906695b">updateMotors</link>();
+44 
+50 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8h_1a981c9990a969d2587e66e550737f7cd9">deinitslew</link>();
+51 
+57 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8h_1a321758941d88b75783955c819bb75005">init_slew</link>();
+58 
+66 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8h_1a7dff2b79dffe55fb936d977594d7c01d">set_motor_slew</link>(<emphasis class="keywordtype">int</emphasis>&#32;motor,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed);
+67 
+75 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(<emphasis class="keywordtype">int</emphasis>&#32;motor,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed);
+76 
+77 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="controller_8h">
+    <title>controller.h File Reference</title>
+    <programlisting>#include &quot;vmath.h&quot;</programlisting>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1ad61eb6d28a76985afb8d39ef925541bb">LEFT_BUMPERS</link> 6</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1a9b885de9f143efd0c862ceb054256536">LEFT_BUTTONS</link> 7</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1ac055a23829dc64aa20b8e2e1bcfbf316">LEFT_JOY_X</link> 4<para><emphasis>the left x joystick on controller</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1ae0a2b64db5fc4f4bf4b169185be93db3">LEFT_JOY_Y</link> 3<para><emphasis>the left y joystick on controller</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link> 1<para><emphasis>the master controller</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1a136e64cf351535da81cacb6a546cade6">PARTNER</link> 2<para><emphasis>the slave/partner controller</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1a635896b08789914290171051d1b82465">RIGHT_BUMPERS</link> 5</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1a68881b6085c880930037b20764fe5aee">RIGHT_BUTTONS</link> 8</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1ad74f84aad465437cc1e0f914dbd6fab5">RIGHT_JOY_X</link> 1<para><emphasis>the right x joystick on controller</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="controller_8h_1a99457bf9dee795334411ea77f0858b16">RIGHT_JOY_Y</link> 2<para><emphasis>the right y joystick on controller</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link> {
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9d8cffd9c0e3484aa4eee63888646cd5">JOY1_5D</link>= 0,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660af34185f5ac0e6cc7d4f5ae1a4973a335">JOY1_5U</link>= 1,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ae4a4fa25b71c136820ab8b83797ab4a1">JOY1_6D</link>= 2,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660accf7cc03f33bd1c664047d3c90be168e">JOY1_6U</link>= 3,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a3c2122db200af40c8e5ec63b04fc3d00">JOY1_7U</link>= 4,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ad030b81122cabe9a5f42dcef4523235d">JOY1_7L</link>= 5,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a3930130408771cd2fad73aa3aec3668b">JOY1_7R</link>= 6,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a2d270fdcb36fe1bc8ecbb9a38ad5579f">JOY1_7D</link>= 7,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660aff03dff1867ab778801acecd7288cc28">JOY1_8U</link>= 8,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660aa974293a138688376f6edd64710c0b58">JOY1_8L</link>= 9,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660aceebfbf564d25110edfc0da72495c4b2">JOY1_8R</link>= 10,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660afd368c05d17254c4786ee70176323878">JOY1_8D</link>= 11,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ade64ae7c17abe5ad56f6b3ff17bfb294">JOY2_5D</link>= 12,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ad2a8f44a933ee5e2165e98422c657063">JOY2_5U</link>= 13,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ae56cd8f426403aa53523ba4d8e7e22a2">JOY2_6D</link>= 14,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9592dd0082ea04638d909e6986996d2b">JOY2_6U</link>= 15,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a3438bc4956fcd3c7d9fa8c0ae7ea9836">JOY2_7U</link>= 16,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9b668129fbcd1095dd3582c673e61ba7">JOY2_7L</link>= 17,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a4408894064745f57f75ba137dc669e5d">JOY2_7R</link>= 18,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a7505f547a11254e8c9a86aa6e3b8a0f5">JOY2_7D</link>= 19,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a879b8a1b3acb52f73809d8edd8ffb06f">JOY2_8U</link>= 20,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a8b56b0ab9ead813201a3261308e61218">JOY2_8L</link>= 21,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660abc764a5cd8d6f685af2a29052a4233c3">JOY2_8R</link>= 22,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9b4b5487f79174a7ed31d1601a10a391">JOY2_8D</link>= 23,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660af74b6b5e3b92936d9d906ed8dd2fe0da">LCD_LEFT</link>= 24,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a71f1177926300c37f76f2b634cffd9cc">LCD_CENT</link>= 25,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a2dff7dd85658b97c4309b10e7506491e">LCD_RIGHT</link>= 26
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5a">joystick</link> {
+<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</link>,
+<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9">LEFT_JOY</link>
+}</literallayout>
+<para><emphasis>Represents a joystick on the controller.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structcord">cord</link> <link linkend="controller_8h_1a0ce0176099c0bb15ad8c36123222059d">get_joystick_cord</link> (
+enum <link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5a">joystick</link> side, int controller)<para><emphasis>Gets the location of a joystick on the controller.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>controller definitions, macros and functions to assist with usig the vex controllers. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett, Christian Desimone </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/9/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/controller.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+9 <emphasis class="preprocessor">#ifndef&#32;_CONTROLLER_H_</emphasis>
+10 <emphasis class="preprocessor">#define&#32;_CONTROLLER_H_</emphasis>
+11 
+12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="vmath_8h">vmath.h</link>&quot;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+14 
+<link linkend="controller_8h_1a68881b6085c880930037b20764fe5aee">15 </link><emphasis class="preprocessor">#define&#32;RIGHT_BUTTONS&#32;8</emphasis>
+<link linkend="controller_8h_1a9b885de9f143efd0c862ceb054256536">16 </link><emphasis class="preprocessor">#define&#32;LEFT_BUTTONS&#32;7</emphasis>
+<link linkend="controller_8h_1a635896b08789914290171051d1b82465">17 </link><emphasis class="preprocessor">#define&#32;RIGHT_BUMPERS&#32;5</emphasis>
+<link linkend="controller_8h_1ad61eb6d28a76985afb8d39ef925541bb">18 </link><emphasis class="preprocessor">#define&#32;LEFT_BUMPERS&#32;6</emphasis>
+19 
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">23 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;{
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9d8cffd9c0e3484aa4eee63888646cd5">24 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9d8cffd9c0e3484aa4eee63888646cd5">JOY1_5D</link>&#32;=&#32;0,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660af34185f5ac0e6cc7d4f5ae1a4973a335">25 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660af34185f5ac0e6cc7d4f5ae1a4973a335">JOY1_5U</link>&#32;=&#32;1,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ae4a4fa25b71c136820ab8b83797ab4a1">26 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ae4a4fa25b71c136820ab8b83797ab4a1">JOY1_6D</link>&#32;=&#32;2,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660accf7cc03f33bd1c664047d3c90be168e">27 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660accf7cc03f33bd1c664047d3c90be168e">JOY1_6U</link>&#32;=&#32;3,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a3c2122db200af40c8e5ec63b04fc3d00">28 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a3c2122db200af40c8e5ec63b04fc3d00">JOY1_7U</link>&#32;=&#32;4,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ad030b81122cabe9a5f42dcef4523235d">29 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ad030b81122cabe9a5f42dcef4523235d">JOY1_7L</link>&#32;=&#32;5,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a3930130408771cd2fad73aa3aec3668b">30 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a3930130408771cd2fad73aa3aec3668b">JOY1_7R</link>&#32;=&#32;6,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a2d270fdcb36fe1bc8ecbb9a38ad5579f">31 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a2d270fdcb36fe1bc8ecbb9a38ad5579f">JOY1_7D</link>&#32;=&#32;7,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660aff03dff1867ab778801acecd7288cc28">32 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660aff03dff1867ab778801acecd7288cc28">JOY1_8U</link>&#32;=&#32;8,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660aa974293a138688376f6edd64710c0b58">33 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660aa974293a138688376f6edd64710c0b58">JOY1_8L</link>&#32;=&#32;9,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660aceebfbf564d25110edfc0da72495c4b2">34 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660aceebfbf564d25110edfc0da72495c4b2">JOY1_8R</link>&#32;=&#32;10,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660afd368c05d17254c4786ee70176323878">35 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660afd368c05d17254c4786ee70176323878">JOY1_8D</link>&#32;=&#32;11,
+36 
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ade64ae7c17abe5ad56f6b3ff17bfb294">37 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ade64ae7c17abe5ad56f6b3ff17bfb294">JOY2_5D</link>&#32;=&#32;12,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ad2a8f44a933ee5e2165e98422c657063">38 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ad2a8f44a933ee5e2165e98422c657063">JOY2_5U</link>&#32;=&#32;13,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ae56cd8f426403aa53523ba4d8e7e22a2">39 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660ae56cd8f426403aa53523ba4d8e7e22a2">JOY2_6D</link>&#32;=&#32;14,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9592dd0082ea04638d909e6986996d2b">40 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9592dd0082ea04638d909e6986996d2b">JOY2_6U</link>&#32;=&#32;15,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a3438bc4956fcd3c7d9fa8c0ae7ea9836">41 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a3438bc4956fcd3c7d9fa8c0ae7ea9836">JOY2_7U</link>&#32;=&#32;16,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9b668129fbcd1095dd3582c673e61ba7">42 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9b668129fbcd1095dd3582c673e61ba7">JOY2_7L</link>&#32;=&#32;17,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a4408894064745f57f75ba137dc669e5d">43 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a4408894064745f57f75ba137dc669e5d">JOY2_7R</link>&#32;=&#32;18,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a7505f547a11254e8c9a86aa6e3b8a0f5">44 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a7505f547a11254e8c9a86aa6e3b8a0f5">JOY2_7D</link>&#32;=&#32;19,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a879b8a1b3acb52f73809d8edd8ffb06f">45 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a879b8a1b3acb52f73809d8edd8ffb06f">JOY2_8U</link>&#32;=&#32;20,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a8b56b0ab9ead813201a3261308e61218">46 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a8b56b0ab9ead813201a3261308e61218">JOY2_8L</link>&#32;=&#32;21,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660abc764a5cd8d6f685af2a29052a4233c3">47 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660abc764a5cd8d6f685af2a29052a4233c3">JOY2_8R</link>&#32;=&#32;22,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9b4b5487f79174a7ed31d1601a10a391">48 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a9b4b5487f79174a7ed31d1601a10a391">JOY2_8D</link>&#32;=&#32;23,
+49 
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660af74b6b5e3b92936d9d906ed8dd2fe0da">50 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660af74b6b5e3b92936d9d906ed8dd2fe0da">LCD_LEFT</link>&#32;=&#32;24,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a71f1177926300c37f76f2b634cffd9cc">51 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a71f1177926300c37f76f2b634cffd9cc">LCD_CENT</link>&#32;=&#32;25,
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a2dff7dd85658b97c4309b10e7506491e">52 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a2dff7dd85658b97c4309b10e7506491e">LCD_RIGHT</link>&#32;=&#32;26
+53 }&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>;
+54 
+<link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">60 </link><emphasis class="preprocessor">#define&#32;MASTER&#32;1</emphasis>
+61 
+<link linkend="controller_8h_1a136e64cf351535da81cacb6a546cade6">67 </link><emphasis class="preprocessor">#define&#32;PARTNER&#32;2</emphasis>
+68 
+<link linkend="controller_8h_1ad74f84aad465437cc1e0f914dbd6fab5">74 </link><emphasis class="preprocessor">#define&#32;RIGHT_JOY_X&#32;1</emphasis>
+75 
+<link linkend="controller_8h_1a99457bf9dee795334411ea77f0858b16">81 </link><emphasis class="preprocessor">#define&#32;RIGHT_JOY_Y&#32;2</emphasis>
+82 
+<link linkend="controller_8h_1ac055a23829dc64aa20b8e2e1bcfbf316">88 </link><emphasis class="preprocessor">#define&#32;LEFT_JOY_X&#32;4</emphasis>
+89 
+<link linkend="controller_8h_1ae0a2b64db5fc4f4bf4b169185be93db3">95 </link><emphasis class="preprocessor">#define&#32;LEFT_JOY_Y&#32;3</emphasis>
+96 
+<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5a">102 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5a">joystick</link>&#32;{
+<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">104 </link>&#32;&#32;<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe">RIGHT_JOY</link>,
+<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9">106 </link>&#32;&#32;<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9">LEFT_JOY</link>,
+107 };
+108 
+113 <emphasis class="keyword">struct&#32;</emphasis><link linkend="structcord">cord</link>&#32;<link linkend="controller_8h_1a0ce0176099c0bb15ad8c36123222059d">get_joystick_cord</link>(enum&#32;<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5a">joystick</link>&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">side</link>,&#32;int&#32;controller);
+114 
+115 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

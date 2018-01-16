@@ -10,6 +10,7 @@
  * PROS contains FreeRTOS (http://www.freertos.org) whose source code may be
  * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
  */
+#include "battery.h"
 #include "encoders.h"
 #include "lcd.h"
 #include "lifter.h"
@@ -30,8 +31,6 @@ extern Ultrasonic lifter_ultrasonic;
  * and solenoids. It can also safely configure a UART port (usartOpen()) but
  * cannot set up an LCD (lcdInit()).
  *
- * AKA DON'T USE
- * -Chris
  */
 void initializeIO() { watchdogInit(); }
 
@@ -51,6 +50,8 @@ void initializeIO() { watchdogInit(); }
 void initialize() {
   init_main_lcd(uart1);
   info("LCD Init");
+  if (!battery_level_acceptable())
+    error("Bad main/backup bat");
   menu_t *t =
       init_menu_var(STRING_TYPE, "TEST Menu", 5, "1", "2", "3", "4", "5");
   init_error(true, uart2);

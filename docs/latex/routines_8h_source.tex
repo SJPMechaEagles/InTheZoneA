@@ -1,0 +1,20 @@
+\subsection{routines.\+h}
+\label{routines_8h_source}\index{include/routines.\+h@{include/routines.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "controller.h"}
+00002 
+00003 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }routine_t \{
+00004   button_t on_button;
+00005   button_t* blocked_buttons;
+00006   void(*routine)();
+00007 \}routine_t;
+00008 
+00009 \textcolor{keywordtype}{void} init_routine();
+00010 
+00011 \textcolor{keywordtype}{void} routine_task();
+00012 
+00013 \textcolor{keywordtype}{void} deinit_routines();
+00014 
+00015 \textcolor{keywordtype}{void} register_routine(\textcolor{keywordtype}{void}(*routine)(), button_t on\_buttons, button_t* prohibited\_buttons);
+\end{DoxyCode}

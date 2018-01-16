@@ -1,4 +1,4 @@
-\section{include/vmath.h File Reference}
+\subsection{include/vmath.h File Reference}
 \label{vmath_8h}\index{include/vmath.\+h@{include/vmath.\+h}}
 
 
@@ -6,35 +6,19 @@ Vex Specific Math Functions, includes\+: Cartesian to polar cordinates.
 
 
 {\ttfamily \#include $<$math.\+h$>$}\newline
-Include dependency graph for vmath.\+h\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=166pt]{vmath_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{vmath_8h__dep__incl}
-\end{center}
-\end{figure}
-\subsection*{Data Structures}
+\subsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ cord}
 \begin{DoxyCompactList}\small\item\em A struct that contains cartesian coordinates. \end{DoxyCompactList}\item 
 struct \textbf{ polar\+\_\+cord}
 \begin{DoxyCompactList}\small\item\em A struct that contains polar coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Macros}
+\subsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \textbf{ M\+\_\+\+PI}~3.\+14159265358979323846
 \end{DoxyCompactItemize}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ polar\+\_\+cord} \textbf{ cartesian\+\_\+cord\+\_\+to\+\_\+polar} (struct \textbf{ cord} cords)
@@ -49,7 +33,7 @@ double \textbf{ sind} (double angle)
 \begin{DoxyCompactList}\small\item\em sine of a angle in degrees \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsubsection{Detailed Description}
 Vex Specific Math Functions, includes\+: Cartesian to polar cordinates. 
 
 \begin{DoxyAuthor}{Author}
@@ -66,11 +50,11 @@ Definition in file \textbf{ vmath.\+h}.
 
 
 
-\subsection{Macro Definition Documentation}
+\subsubsection{Macro Definition Documentation}
 \mbox{\label{vmath_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
 \index{vmath.\+h@{vmath.\+h}!M\+\_\+\+PI@{M\+\_\+\+PI}}
 \index{M\+\_\+\+PI@{M\+\_\+\+PI}!vmath.\+h@{vmath.\+h}}
-\subsubsection{M\+\_\+\+PI}
+\paragraph{M\+\_\+\+PI}
 {\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846}
 
 
@@ -79,15 +63,15 @@ Definition at line \textbf{ 13} of file \textbf{ vmath.\+h}.
 
 
 
-Referenced by \textbf{ sind()}.
+Referenced by \textbf{ calculate\+\_\+encoder\+\_\+odemetry()}, and \textbf{ sind()}.
 
 
 
-\subsection{Function Documentation}
+\subsubsection{Function Documentation}
 \mbox{\label{vmath_8h_a832105cf858b3046c57c0d08a4e7c38b}} 
 \index{vmath.\+h@{vmath.\+h}!cartesian\+\_\+cord\+\_\+to\+\_\+polar@{cartesian\+\_\+cord\+\_\+to\+\_\+polar}}
 \index{cartesian\+\_\+cord\+\_\+to\+\_\+polar@{cartesian\+\_\+cord\+\_\+to\+\_\+polar}!vmath.\+h@{vmath.\+h}}
-\subsubsection{cartesian\+\_\+cord\+\_\+to\+\_\+polar()}
+\paragraph{cartesian\+\_\+cord\+\_\+to\+\_\+polar()}
 {\footnotesize\ttfamily struct \textbf{ polar\+\_\+cord} cartesian\+\_\+cord\+\_\+to\+\_\+polar (\begin{DoxyParamCaption}\item[{struct \textbf{ cord}}]{cords }\end{DoxyParamCaption})}
 
 
@@ -115,22 +99,16 @@ a struct containing the angle and magnitude.
 \end{DoxySeeAlso}
 
 
-Definition at line \textbf{ 55} of file \textbf{ vmath.\+c}.
+Definition at line \textbf{ 53} of file \textbf{ vmath.\+c}.
 
 
 
 References \textbf{ cartesian\+\_\+to\+\_\+polar()}.
 
-
-\begin{DoxyCode}
-00055                                                              \{
-00056   \textcolor{keywordflow}{return} cartesian_to_polar(cords.x, cords.y);
-00057 \}
-\end{DoxyCode}
 \mbox{\label{vmath_8h_a1c4a1747b714f5d4654f0614193f9e49}} 
 \index{vmath.\+h@{vmath.\+h}!cartesian\+\_\+to\+\_\+polar@{cartesian\+\_\+to\+\_\+polar}}
 \index{cartesian\+\_\+to\+\_\+polar@{cartesian\+\_\+to\+\_\+polar}!vmath.\+h@{vmath.\+h}}
-\subsubsection{cartesian\+\_\+to\+\_\+polar()}
+\paragraph{cartesian\+\_\+to\+\_\+polar()}
 {\footnotesize\ttfamily struct \textbf{ polar\+\_\+cord} cartesian\+\_\+to\+\_\+polar (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
 
 
@@ -158,7 +136,7 @@ a struct containing the angle and magnitude.
 \end{DoxySeeAlso}
 
 
-Definition at line \textbf{ 14} of file \textbf{ vmath.\+c}.
+Definition at line \textbf{ 15} of file \textbf{ vmath.\+c}.
 
 
 
@@ -168,42 +146,10 @@ References \textbf{ polar\+\_\+cord\+::angle}, and \textbf{ polar\+\_\+cord\+::m
 
 Referenced by \textbf{ cartesian\+\_\+cord\+\_\+to\+\_\+polar()}.
 
-
-\begin{DoxyCode}
-00014                                                        \{
-00015   \textcolor{keywordtype}{float} degree = 0;
-00016   \textcolor{keywordtype}{double} magnitude = sqrt((fabs(x) * fabs(x)) + (fabs(y) * fabs(y)));
-00017 
-00018   \textcolor{keywordflow}{if}(x < 0)\{
-00019     degree += 180.0;
-00020   \}
-00021   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x > 0 && y < 0)\{
-00022     degree += 360.0;
-00023   \}
-00024 
-00025   \textcolor{keywordflow}{if}(x != 0 && y != 0)\{
-00026     degree += atan((\textcolor{keywordtype}{float})y / (\textcolor{keywordtype}{float})x);
-00027   \}
-00028   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x == 0 && y > 0)\{
-00029     degree = 90.0;
-00030   \}
-00031   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(y == 0 && x < 0)\{
-00032     degree = 180.0;
-00033   \}
-00034   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(x == 0 && y < 0)\{
-00035     degree = 270.0;
-00036   \}
-00037 
-00038   \textcolor{keyword}{struct }polar_cord p;
-00039   p.angle = degree;
-00040   p.magnitue = magnitude;
-00041   \textcolor{keywordflow}{return} p;
-00042 \}
-\end{DoxyCode}
 \mbox{\label{vmath_8h_af082905f7eac6d03e92015146bbc1925}} 
 \index{vmath.\+h@{vmath.\+h}!max@{max}}
 \index{max@{max}!vmath.\+h@{vmath.\+h}}
-\subsubsection{max()}
+\paragraph{max()}
 {\footnotesize\ttfamily int max (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
 
 
@@ -222,23 +168,16 @@ the smaller of a and b
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 84} of file \textbf{ vmath.\+c}.
+Definition at line \textbf{ 83} of file \textbf{ vmath.\+c}.
 
 
 
 Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ init\+\_\+menu\+\_\+float()}, and \textbf{ init\+\_\+menu\+\_\+int()}.
 
-
-\begin{DoxyCode}
-00084                       \{
-00085   \textcolor{keywordflow}{if}(a > b) \textcolor{keywordflow}{return} a;
-00086   \textcolor{keywordflow}{return} b;
-00087 \}
-\end{DoxyCode}
 \mbox{\label{vmath_8h_abd8bbcfabb3ddef2ccaafb9928a37b95}} 
 \index{vmath.\+h@{vmath.\+h}!min@{min}}
 \index{min@{min}!vmath.\+h@{vmath.\+h}}
-\subsubsection{min()}
+\paragraph{min()}
 {\footnotesize\ttfamily int min (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
 
 
@@ -257,23 +196,16 @@ the smaller of a and b
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 73} of file \textbf{ vmath.\+c}.
+Definition at line \textbf{ 71} of file \textbf{ vmath.\+c}.
 
 
 
 Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ init\+\_\+menu\+\_\+float()}, and \textbf{ init\+\_\+menu\+\_\+int()}.
 
-
-\begin{DoxyCode}
-00073                       \{
-00074   \textcolor{keywordflow}{if}(a < b) \textcolor{keywordflow}{return} a;
-00075   \textcolor{keywordflow}{return} b;
-00076 \}
-\end{DoxyCode}
 \mbox{\label{vmath_8h_a2b83ceb814c90ebfa042a26d884ac159}} 
 \index{vmath.\+h@{vmath.\+h}!sind@{sind}}
 \index{sind@{sind}!vmath.\+h@{vmath.\+h}}
-\subsubsection{sind()}
+\paragraph{sind()}
 {\footnotesize\ttfamily double sind (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
 
 
@@ -282,16 +214,9 @@ sine of a angle in degrees
 
 
 
-Definition at line \textbf{ 62} of file \textbf{ vmath.\+c}.
+Definition at line \textbf{ 60} of file \textbf{ vmath.\+c}.
 
 
 
 References \textbf{ M\+\_\+\+PI}.
 
-
-\begin{DoxyCode}
-00062                           \{
-00063     \textcolor{keywordtype}{double} angleradians = angle * M_PI / 180.0f;
-00064     \textcolor{keywordflow}{return} sin(angleradians);
-00065 \}
-\end{DoxyCode}

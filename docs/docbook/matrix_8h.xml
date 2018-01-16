@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="matrix_8h">
+    <title>matrix.h File Reference</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct__matrix">_matrix</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="struct__matrix">_matrix</link>  <link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="matrix_8h_1a8e41e30382335ea89f90b72db0b44d6f">assert</link> (
+int assertion, const char * message)<para><emphasis>Asserts a condition is true.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1abbb8d2d20c2dd53a2269d017a336668f">copyMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>Copies a matrix. This function uses scaleMatrix, because scaling
+matrix by 1 is the same as a copy.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1ae6dab569959c360cf165136a3b625edd">covarianceMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>returns the covariance of the matrix</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1af49b525d7476c365833db9acd975e3a5">dotDiagonalMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, <link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * b)<para><emphasis>performs a diagonial matrix dot product.
+Given a two matrices (or the same matrix twice) with identical widths and
+heights, this method returns a 1 by a-&gt;height matrix of the cross
+product of each matrix along the diagonal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1a0b568a64e81a56779c2141b424475976">dotProductMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, <link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * b)<para><emphasis>returns the matrix dot product.
+Given a two matrices (or the same matrix twice) with identical widths and
+different heights, this method returns a a-&gt;height by b-&gt;height matrix of
+the cross product of each matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="matrix_8h_1ae98365c910e9d688d2bdedec50d89a6b">freeMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>Frees the resources of a matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1aa3f5e409b1641373be7cf7284e216d1a">identityMatrix</link> (
+int n)<para><emphasis>Returns an identity matrix of size n by n.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link> (
+int width, int height)<para><emphasis>Makes a matrix with a width and height parameters.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1ae4babf9b518a2d5d6b12776191e3b7de">meanMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>Given an &quot;m rows by n columns&quot; matrix, return a matrix where each
+element represents the mean of that full column.
+@pram the matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1a63ed5c518b34768e9ef8e9d5f7d0b534">multiplyMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, <link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * b)<para><emphasis>Given a two matrices, returns the multiplication of the two.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="matrix_8h_1a50ab2b1ac33d6993d93522fc4f30a051">printMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>Prints a matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="matrix_8h_1acdd57777a972ce339153878fa917db14">rowSwap</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, int p, int q)<para><emphasis>swaps the rows of a matrix. This method changes the input matrix.
+Given a matrix, this algorithm will swap rows p and q, provided
+that p and q are less than or equal to the height of matrix A and p
+and q are different values.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1a6b7faa6ba9ee987d0777d9d0bd0e7b32">scaleMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m, double value)<para><emphasis>scales a matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="matrix_8h_1a4794df8b2032f961dd8b2d90276bc417">traceMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>Given an &quot;m rows by n columns&quot; matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8h_1a2936260302742748b0639e8ec71d4d9f">transposeMatrix</link> (
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>returns the transpose matrix.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Various Matrix operations.</para>
+
+<para>None of the matrix operations below change the input matrices if an input is required. They all return a new matrix with the new changes. Because memory issues are so prevelant, be sure to use the  function to reclaim some of that memory. </para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/matrix.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+10 <emphasis class="preprocessor">#ifndef&#32;_MATRIX_H_</emphasis>
+11 <emphasis class="preprocessor">#define&#32;_MATRIX_H_</emphasis>
+12 
+<link linkend="struct__matrix">16 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="struct__matrix">_matrix</link>&#32;{
+<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">17 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;
+<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">18 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
+<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">19 </link>&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+20 }&#32;<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link>;
+21 
+30 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8h_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(<emphasis class="keywordtype">int</emphasis>&#32;assertion,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*message);
+31 
+35 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
+36 
+44 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1abbb8d2d20c2dd53a2269d017a336668f">copyMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m);
+45 
+50 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8h_1ae98365c910e9d688d2bdedec50d89a6b">freeMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m);
+51 
+56 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8h_1a50ab2b1ac33d6993d93522fc4f30a051">printMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m);
+57 
+63 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1aa3f5e409b1641373be7cf7284e216d1a">identityMatrix</link>(<emphasis class="keywordtype">int</emphasis>&#32;n);
+64 
+70 <emphasis class="keywordtype">double</emphasis>&#32;<link linkend="matrix_8h_1a4794df8b2032f961dd8b2d90276bc417">traceMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m);
+71 
+77 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1a2936260302742748b0639e8ec71d4d9f">transposeMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m);
+78 
+86 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1ae4babf9b518a2d5d6b12776191e3b7de">meanMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m);
+87 
+94 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1a63ed5c518b34768e9ef8e9d5f7d0b534">multiplyMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<link linkend="struct__matrix">matrix</link>&#32;*b);
+95 
+103 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1a6b7faa6ba9ee987d0777d9d0bd0e7b32">scaleMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m,&#32;<emphasis class="keywordtype">double</emphasis>&#32;value);
+104 
+111 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1ae6dab569959c360cf165136a3b625edd">covarianceMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m);
+112 
+122 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8h_1acdd57777a972ce339153878fa917db14">rowSwap</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<emphasis class="keywordtype">int</emphasis>&#32;p,&#32;<emphasis class="keywordtype">int</emphasis>&#32;q);
+137 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1a0b568a64e81a56779c2141b424475976">dotProductMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<link linkend="struct__matrix">matrix</link>&#32;*b);
+138 
+153 <link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8h_1af49b525d7476c365833db9acd975e3a5">dotDiagonalMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<link linkend="struct__matrix">matrix</link>&#32;*b);
+154 
+155 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

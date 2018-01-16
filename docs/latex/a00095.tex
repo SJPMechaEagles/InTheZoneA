@@ -1,0 +1,124 @@
+\subsection{src/encoders.c File Reference}
+\label{a00095}\index{src/encoders.\+c@{src/encoders.\+c}}
+{\ttfamily \#include \char`\"{}encoders.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ get\+\_\+encoder\+\_\+ticks} (unsigned char address)
+\begin{DoxyCompactList}\small\item\em Gets the encoder ticks since last reset. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+encoder\+\_\+velocity} (unsigned char address)
+\begin{DoxyCompactList}\small\item\em Gets the encoder reads. \end{DoxyCompactList}\item 
+bool \textbf{ init\+\_\+encoders} ()
+\begin{DoxyCompactList}\small\item\em Initializes all motor encoders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{a00095_aed261dd4dae33a48c42f2e363c84760f}} 
+\index{encoders.\+c@{encoders.\+c}!get\+\_\+encoder\+\_\+ticks@{get\+\_\+encoder\+\_\+ticks}}
+\index{get\+\_\+encoder\+\_\+ticks@{get\+\_\+encoder\+\_\+ticks}!encoders.\+c@{encoders.\+c}}
+\paragraph{get\+\_\+encoder\+\_\+ticks()}
+{\footnotesize\ttfamily int get\+\_\+encoder\+\_\+ticks (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder ticks since last reset. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/15/2017 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 30} of file \textbf{ encoders.\+c}.
+
+
+
+Referenced by \textbf{ calculate\+\_\+encoder\+\_\+angle()}, and \textbf{ calculate\+\_\+encoder\+\_\+odemetry()}.
+
+
+\begin{DoxyCode}
+00030                                              \{
+00031   \textcolor{keywordtype}{int} i = 0;
+00032   imeGet(address, &i);
+00033   \textcolor{keywordflow}{return} i;
+00034 \}
+\end{DoxyCode}
+\mbox{\label{a00095_a8e6b77703c5cf18e00709b052fb4bf22}} 
+\index{encoders.\+c@{encoders.\+c}!get\+\_\+encoder\+\_\+velocity@{get\+\_\+encoder\+\_\+velocity}}
+\index{get\+\_\+encoder\+\_\+velocity@{get\+\_\+encoder\+\_\+velocity}!encoders.\+c@{encoders.\+c}}
+\paragraph{get\+\_\+encoder\+\_\+velocity()}
+{\footnotesize\ttfamily int get\+\_\+encoder\+\_\+velocity (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder reads. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/15/2017 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 41} of file \textbf{ encoders.\+c}.
+
+
+\begin{DoxyCode}
+00041                                                 \{
+00042   \textcolor{keywordtype}{int} i = 0;
+00043   imeGetVelocity(address, &i);
+00044   \textcolor{keywordflow}{return} i;
+00045 \}
+\end{DoxyCode}
+\mbox{\label{a00095_aa6ec1ca17e907babd52803ecba451cd3}} 
+\index{encoders.\+c@{encoders.\+c}!init\+\_\+encoders@{init\+\_\+encoders}}
+\index{init\+\_\+encoders@{init\+\_\+encoders}!encoders.\+c@{encoders.\+c}}
+\paragraph{init\+\_\+encoders()}
+{\footnotesize\ttfamily bool init\+\_\+encoders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes all motor encoders. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/9/2017 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\doxyref{I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}{p.}{a00017_a87db35d2735ef045f57d446b3bfe8d48} 
+\end{DoxySeeAlso}
+
+
+Definition at line \textbf{ 11} of file \textbf{ encoders.\+c}.
+
+
+
+References \textbf{ error()}, and \textbf{ I\+M\+E\+\_\+\+N\+U\+M\+B\+ER}.
+
+
+
+Referenced by \textbf{ initialize()}.
+
+
+\begin{DoxyCode}
+00011                      \{
+00012 \textcolor{preprocessor}{#ifdef IME\_NUMBER}
+00013   \textcolor{keywordtype}{int} count = imeInitializeAll();
+00014   \textcolor{keywordflow}{if} (count != IME_NUMBER) \{
+00015     printf(\textcolor{stringliteral}{"detected only %d\(\backslash\)n"}, count);
+00016     error(\textcolor{stringliteral}{"Wrong Number of IMEs Connected"});
+00017     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00018   \}
+00019   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00020 \textcolor{preprocessor}{#else}
+00021   \textcolor{keywordflow}{return} imeInitializeAll();
+00022 \textcolor{preprocessor}{#endif}
+00023 \}
+\end{DoxyCode}

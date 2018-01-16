@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vlib_8h">
+    <title>vlib.h File Reference</title>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+    <programlisting>#include &lt;math.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void * <link linkend="vlib_8h_1a1115803c6996aebfbf67434810df7b4b">calloc_real</link> (
+size_t elements, size_t size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="vlib_8h_1a4d26b0ac2f26341d827e0a13a0bd49b6">ftoaa</link> (
+float a, char * buffer, int precision)<para><emphasis>converts a float to string.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="vlib_8h_1a28dc918c0df16add26908891a4aa190e">itoaa</link> (
+int a, char * buffer, int digits)<para><emphasis>converts a int to string.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="vlib_8h_1aad7fea725cb4b198ace1aa3df5051244">reverse</link> (
+char * str, int len)<para><emphasis>reverses a string &apos;str&apos; of length &apos;len&apos;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Contains misc helpful functions. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/9/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/vlib.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+8 <emphasis class="preprocessor">#ifndef&#32;_VLIB_H_</emphasis>
+9 <emphasis class="preprocessor">#define&#32;_VLIB_H_</emphasis>
+10 
+11 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+12 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+14 
+22 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="vlib_8h_1aad7fea725cb4b198ace1aa3df5051244">reverse</link>(<emphasis class="keywordtype">char</emphasis>&#32;*str,&#32;<emphasis class="keywordtype">int</emphasis>&#32;len);
+23 
+34 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vlib_8h_1a28dc918c0df16add26908891a4aa190e">itoaa</link>(<emphasis class="keywordtype">int</emphasis>&#32;a,&#32;<emphasis class="keywordtype">char</emphasis>&#32;*buffer,&#32;<emphasis class="keywordtype">int</emphasis>&#32;digits);
+35 
+45 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="vlib_8h_1a4d26b0ac2f26341d827e0a13a0bd49b6">ftoaa</link>(<emphasis class="keywordtype">float</emphasis>&#32;a,&#32;<emphasis class="keywordtype">char</emphasis>&#32;*buffer,&#32;<emphasis class="keywordtype">int</emphasis>&#32;precision);
+46 
+47 <emphasis class="keywordtype">void</emphasis>&#32;*<link linkend="vlib_8h_1a1115803c6996aebfbf67434810df7b4b">calloc_real</link>(<emphasis class="keywordtype">size_t</emphasis>&#32;elements,&#32;<emphasis class="keywordtype">size_t</emphasis>&#32;size);
+48 
+49 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

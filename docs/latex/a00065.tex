@@ -1,0 +1,336 @@
+\subsection{include/slew.h File Reference}
+\label{a00065}\index{include/slew.\+h@{include/slew.\+h}}
+
+
+Contains the slew rate controller wrapper for the motors.  
+
+
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$vlib.\+h$>$}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS}~12
+\begin{DoxyCompactList}\small\item\em The number of motor ports on the robot. \end{DoxyCompactList}\item 
+\#define \textbf{ R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON}~1
+\begin{DoxyCompactList}\small\item\em proportion defining how quickly the motor should converge on the correct value. \end{DoxyCompactList}\item 
+\#define \textbf{ U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}~25
+\begin{DoxyCompactList}\small\item\em How frequently to update the motors, in milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ deinitslew} ()
+\begin{DoxyCompactList}\small\item\em Deinitializes the slew rate controller and frees memory. \end{DoxyCompactList}\item 
+void \textbf{ init\+\_\+slew} ()
+\begin{DoxyCompactList}\small\item\em Initializes the slew rate controller. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+motor\+\_\+immediate} (int motor, int speed)
+\begin{DoxyCompactList}\small\item\em Sets the motor speed ignoring the slew controller. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+motor\+\_\+slew} (int motor, int speed)
+\begin{DoxyCompactList}\small\item\em Sets motor speed wrapped inside the slew rate controller. \end{DoxyCompactList}\item 
+void \textbf{ update\+Motors} ()
+\begin{DoxyCompactList}\small\item\em Closes the distance between the desired motor value and the current motor value by half for each motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Contains the slew rate controller wrapper for the motors. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/14/17 
+\end{DoxyDate}
+
+
+Definition in file \textbf{ slew.\+h}.
+
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\label{a00065_ad1ad4b29af4180aa00713599367fbc98}} 
+\index{slew.\+h@{slew.\+h}!M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS@{M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS}}
+\index{M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS@{M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS}!slew.\+h@{slew.\+h}}
+\paragraph{M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS}
+{\footnotesize\ttfamily \#define M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS~12}
+
+
+
+The number of motor ports on the robot. 
+
+\begin{DoxyAuthor}{Author}
+Christian De\+Simone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/14/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 27} of file \textbf{ slew.\+h}.
+
+\mbox{\label{a00065_a4a3ff8667251227c99f8f4c81e9ff467}} 
+\index{slew.\+h@{slew.\+h}!R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON@{R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON}}
+\index{R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON@{R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON}!slew.\+h@{slew.\+h}}
+\paragraph{R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON}
+{\footnotesize\ttfamily \#define R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON~1}
+
+
+
+proportion defining how quickly the motor should converge on the correct value. 
+
+higher value leads to slower convergence \begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/14/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 35} of file \textbf{ slew.\+h}.
+
+\mbox{\label{a00065_a4e8e7d6fdd1f5c6f8a0f341e4b61f025}} 
+\index{slew.\+h@{slew.\+h}!U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS@{U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}}
+\index{U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS@{U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}!slew.\+h@{slew.\+h}}
+\paragraph{U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}
+{\footnotesize\ttfamily \#define U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS~25}
+
+
+
+How frequently to update the motors, in milliseconds. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/14/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 20} of file \textbf{ slew.\+h}.
+
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{a00065_a981c9990a969d2587e66e550737f7cd9}} 
+\index{slew.\+h@{slew.\+h}!deinitslew@{deinitslew}}
+\index{deinitslew@{deinitslew}!slew.\+h@{slew.\+h}}
+\paragraph{deinitslew()}
+{\footnotesize\ttfamily void deinitslew (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deinitializes the slew rate controller and frees memory. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/14/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 59} of file \textbf{ slew.\+c}.
+
+
+
+References \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, and \textbf{ slew}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00059                   \{
+00060   taskDelete(slew);
+00061   memset(motors_set_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00062   memset(motors_curr_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00063   initialized = \textcolor{keyword}{false};
+00064 \}
+\end{DoxyCode}
+\mbox{\label{a00065_a321758941d88b75783955c819bb75005}} 
+\index{slew.\+h@{slew.\+h}!init\+\_\+slew@{init\+\_\+slew}}
+\index{init\+\_\+slew@{init\+\_\+slew}!slew.\+h@{slew.\+h}}
+\paragraph{init\+\_\+slew()}
+{\footnotesize\ttfamily void init\+\_\+slew (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the slew rate controller. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett, Christian De\+Simone 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/14/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 42} of file \textbf{ slew.\+c}.
+
+
+
+References \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, \textbf{ slew}, \textbf{ speeds\+\_\+mutex}, \textbf{ update\+Motors()}, and \textbf{ warning()}.
+
+
+
+Referenced by \textbf{ autonomous()}, \textbf{ operator\+Control()}, \textbf{ set\+\_\+motor\+\_\+immediate()}, and \textbf{ set\+\_\+motor\+\_\+slew()}.
+
+
+\begin{DoxyCode}
+00042                  \{
+00043   \textcolor{keywordflow}{if} (initialized) \{
+00044     warning(\textcolor{stringliteral}{"Trying to init already init slew"});
+00045   \}
+00046   memset(motors_set_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00047   memset(motors_curr_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00048   motorStopAll();
+00049   speeds_mutex = mutexCreate();
+00050   slew = taskRunLoop(updateMotors, 100);
+00051   initialized = \textcolor{keyword}{true};
+00052 \}
+\end{DoxyCode}
+\mbox{\label{a00065_a9f8b8ae577ef938622024545711f0151}} 
+\index{slew.\+h@{slew.\+h}!set\+\_\+motor\+\_\+immediate@{set\+\_\+motor\+\_\+immediate}}
+\index{set\+\_\+motor\+\_\+immediate@{set\+\_\+motor\+\_\+immediate}!slew.\+h@{slew.\+h}}
+\paragraph{set\+\_\+motor\+\_\+immediate()}
+{\footnotesize\ttfamily void set\+\_\+motor\+\_\+immediate (\begin{DoxyParamCaption}\item[{int}]{motor,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+Sets the motor speed ignoring the slew controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor} & the motor port to use \\
+\hline
+{\em speed} & the speed to use, between -\/127 and 127 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/14/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 90} of file \textbf{ slew.\+c}.
+
+
+
+References \textbf{ debug()}, \textbf{ init\+\_\+slew()}, \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, and \textbf{ speeds\+\_\+mutex}.
+
+
+
+Referenced by \textbf{ close\+\_\+claw()}, \textbf{ open\+\_\+claw()}, \textbf{ set\+\_\+claw\+\_\+motor()}, \textbf{ set\+\_\+intake\+\_\+motor()}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+
+
+\begin{DoxyCode}
+00090                                                \{
+00091   \textcolor{keywordflow}{if} (!initialized) \{
+00092     debug(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
+00093     init_slew();
+00094   \}
+00095   motorSet(motor, speed);
+00096   mutexTake(speeds_mutex, 10);
+00097   motors_curr_speeds[motor - 1] = speed;
+00098   motors_set_speeds[motor - 1] = speed;
+00099   mutexGive(speeds_mutex);
+00100 \}
+\end{DoxyCode}
+\mbox{\label{a00065_a7dff2b79dffe55fb936d977594d7c01d}} 
+\index{slew.\+h@{slew.\+h}!set\+\_\+motor\+\_\+slew@{set\+\_\+motor\+\_\+slew}}
+\index{set\+\_\+motor\+\_\+slew@{set\+\_\+motor\+\_\+slew}!slew.\+h@{slew.\+h}}
+\paragraph{set\+\_\+motor\+\_\+slew()}
+{\footnotesize\ttfamily void set\+\_\+motor\+\_\+slew (\begin{DoxyParamCaption}\item[{int}]{motor,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+Sets motor speed wrapped inside the slew rate controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor} & the motor port to use \\
+\hline
+{\em speed} & the speed to use, between -\/127 and 127 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/14/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 73} of file \textbf{ slew.\+c}.
+
+
+
+References \textbf{ debug()}, \textbf{ init\+\_\+slew()}, \textbf{ initialized}, \textbf{ motors\+\_\+set\+\_\+speeds}, and \textbf{ speeds\+\_\+mutex}.
+
+
+
+Referenced by \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, and \textbf{ set\+\_\+side\+\_\+speed()}.
+
+
+\begin{DoxyCode}
+00073                                           \{
+00074   \textcolor{keywordflow}{if} (!initialized) \{
+00075     debug(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
+00076     init_slew();
+00077   \}
+00078   mutexTake(speeds_mutex, 10);
+00079   motors_set_speeds[motor - 1] = speed;
+00080   mutexGive(speeds_mutex);
+00081 \}
+\end{DoxyCode}
+\mbox{\label{a00065_a807a87c5df438fde21c1e8213906695b}} 
+\index{slew.\+h@{slew.\+h}!update\+Motors@{update\+Motors}}
+\index{update\+Motors@{update\+Motors}!slew.\+h@{slew.\+h}}
+\paragraph{update\+Motors()}
+{\footnotesize\ttfamily void update\+Motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Closes the distance between the desired motor value and the current motor value by half for each motor. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/14/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 19} of file \textbf{ slew.\+c}.
+
+
+
+References \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, and \textbf{ speeds\+\_\+mutex}.
+
+
+
+Referenced by \textbf{ init\+\_\+slew()}.
+
+
+\begin{DoxyCode}
+00019                     \{
+00020   \textcolor{comment}{// Take back half approach}
+00021   \textcolor{comment}{// Not linear but equal to setSpeed(1-(1/2)^x)}
+00022   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < 9; i++) \{
+00023     \textcolor{keywordflow}{if} (motors_set_speeds[i] == motors_curr_speeds[i])
+00024       \textcolor{keywordflow}{continue};
+00025     mutexTake(speeds_mutex, 10);
+00026     \textcolor{keywordtype}{int} set\_speed = (motors_set_speeds[i]);
+00027     \textcolor{keywordtype}{int} curr\_speed = motors_curr_speeds[i];
+00028     mutexGive(speeds_mutex);
+00029     \textcolor{keywordtype}{int} diff = set\_speed - curr\_speed;
+00030     \textcolor{keywordtype}{int} offset = diff;
+00031     \textcolor{keywordtype}{int} n = curr\_speed + offset;
+00032     motors_curr_speeds[i] = n;
+00033     motorSet(i + 1, n);
+00034   \}
+00035 \}
+\end{DoxyCode}

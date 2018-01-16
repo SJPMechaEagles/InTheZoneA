@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.2</span>
+   &#160;<span id="projectnumber">1.5.8</span>
    </div>
   </td>
  </tr>
@@ -88,11 +89,6 @@ $(document).ready(function(){initNavTree('lcd_8c.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="lcd_8h_source.html">lcd.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for lcd.c:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lcd_8c__incl.svg" width="82" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div>
 <p><a href="lcd_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -158,14 +154,12 @@ uart2 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00061">61</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00062">62</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00047">lcd_clear()</a>, and <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00047">initialize()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                              {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a> = lcd;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  lcdInit(lcd);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="lcd_8c.html#a35c08b1fa742e650f4873939707b893b">lcd_clear</a>();</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div><div class="ttc" id="lcd_8c_html_a35c08b1fa742e650f4873939707b893b"><div class="ttname"><a href="lcd_8c.html#a35c08b1fa742e650f4873939707b893b">lcd_clear</a></div><div class="ttdeci">void lcd_clear()</div><div class="ttdoc">Clears the lcd. </div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00047">lcd.c:47</a></div></div>
-<div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00050">initialize()</a>.</p>
+
 </div>
 </div>
 <a id="aa03fd2deaeec8fc3f42a0975d587bad8"></a>
@@ -199,9 +193,8 @@ uart2 </dd></dl>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00047">lcd_clear()</a>, <a class="el" href="lcd_8c_source.html#l00028">lcd_get_pressed_buttons()</a>, <a class="el" href="lcd_8c_source.html#l00074">lcd_print()</a>, <a class="el" href="lcd_8c_source.html#l00086">lcd_printf()</a>, <a class="el" href="lcd_8c_source.html#l00097">lcd_set_backlight()</a>, and <a class="el" href="lcd_8c_source.html#l00111">promt_confirmation()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                          {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a> == NULL) {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    printf(<span class="stringliteral">&quot;LCD NULL!&quot;</span>);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  }</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div><div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00047">lcd_clear()</a>, <a class="el" href="lcd_8c_source.html#l00028">lcd_get_pressed_buttons()</a>, <a class="el" href="lcd_8c_source.html#l00075">lcd_print()</a>, <a class="el" href="lcd_8c_source.html#l00087">lcd_printf()</a>, <a class="el" href="lcd_8c_source.html#l00099">lcd_set_backlight()</a>, and <a class="el" href="lcd_8c_source.html#l00113">promt_confirmation()</a>.</p>
+
 </div>
 </div>
 <a id="a35c08b1fa742e650f4873939707b893b"></a>
@@ -227,10 +220,8 @@ uart2 </dd></dl>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, and <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00148">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00061">init_main_lcd()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                 {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  lcdClear(<a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div><div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
-<div class="ttc" id="lcd_8c_html_aa03fd2deaeec8fc3f42a0975d587bad8"><div class="ttname"><a href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a></div><div class="ttdeci">static bool lcd_assert()</div><div class="ttdoc">Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00013">lcd.c:13</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00164">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00062">init_main_lcd()</a>.</p>
+
 </div>
 </div>
 <a id="ac7b3225ccc82fcbe067ba9da934f010d"></a>
@@ -258,16 +249,8 @@ uart2 </dd></dl>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>, <a class="el" href="lcd_8h_source.html#l00049">lcd_buttons::left</a>, <a class="el" href="lcd_8h_source.html#l00050">lcd_buttons::middle</a>, <a class="el" href="lcd_8h_source.html#l00040">PRESSED</a>, <a class="el" href="lcd_8h_source.html#l00038">RELEASED</a>, and <a class="el" href="lcd_8h_source.html#l00051">lcd_buttons::right</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00148">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00111">promt_confirmation()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                     {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> btn_binary = lcdReadButtons(<a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a>);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">bool</span> left = btn_binary &amp; 0x1;<span class="comment">//0001</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">bool</span> middle = btn_binary &amp; 0x2;<span class="comment">//0010</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">bool</span> right = btn_binary &amp; 0x4;<span class="comment">//0100</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="structlcd__buttons.html">lcd_buttons</a> btns;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  btns.<a class="code" href="structlcd__buttons.html#ae385efb5ec794acf5f11027f46c6c039">left</a> = left ? <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a> : <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</a>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  btns.<a class="code" href="structlcd__buttons.html#a293342810ac56f73979b08f144d6e6b9">middle</a> = middle ? <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a> : <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</a>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  btns.<a class="code" href="structlcd__buttons.html#a2437d744e09ca1bb91ab4ca53ef77198">right</a> = right ? <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a> : <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</a>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">return</span> btns;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div><div class="ttc" id="structlcd__buttons_html"><div class="ttname"><a href="structlcd__buttons.html">lcd_buttons</a></div><div class="ttdoc">represents the state of the lcd buttons </div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00048">lcd.h:48</a></div></div>
-<div class="ttc" id="structlcd__buttons_html_ae385efb5ec794acf5f11027f46c6c039"><div class="ttname"><a href="structlcd__buttons.html#ae385efb5ec794acf5f11027f46c6c039">lcd_buttons::left</a></div><div class="ttdeci">button_state left</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00049">lcd.h:49</a></div></div>
-<div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
-<div class="ttc" id="structlcd__buttons_html_a293342810ac56f73979b08f144d6e6b9"><div class="ttname"><a href="structlcd__buttons.html#a293342810ac56f73979b08f144d6e6b9">lcd_buttons::middle</a></div><div class="ttdeci">button_state middle</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00050">lcd.h:50</a></div></div>
-<div class="ttc" id="lcd_8c_html_aa03fd2deaeec8fc3f42a0975d587bad8"><div class="ttname"><a href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a></div><div class="ttdeci">static bool lcd_assert()</div><div class="ttdoc">Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00013">lcd.c:13</a></div></div>
-<div class="ttc" id="structlcd__buttons_html_a2437d744e09ca1bb91ab4ca53ef77198"><div class="ttname"><a href="structlcd__buttons.html#a2437d744e09ca1bb91ab4ca53ef77198">lcd_buttons::right</a></div><div class="ttdeci">button_state right</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00051">lcd.h:51</a></div></div>
-<div class="ttc" id="lcd_8h_html_a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0"><div class="ttname"><a href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</a></div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00038">lcd.h:38</a></div></div>
-<div class="ttc" id="lcd_8h_html_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901"><div class="ttname"><a href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a></div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00040">lcd.h:40</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00164">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00113">promt_confirmation()</a>.</p>
+
 </div>
 </div>
 <a id="adabd3f7cdda45119604b488caf22bba8"></a>
@@ -307,14 +290,12 @@ uart2 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00074">74</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00075">75</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, and <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00148">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00111">promt_confirmation()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                                   {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a>();</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  lcdSetText(<a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a>, line, str);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div><div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
-<div class="ttc" id="lcd_8c_html_aa03fd2deaeec8fc3f42a0975d587bad8"><div class="ttname"><a href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a></div><div class="ttdeci">static bool lcd_assert()</div><div class="ttdoc">Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00013">lcd.c:13</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l00164">display_menu()</a>, and <a class="el" href="lcd_8c_source.html#l00113">promt_confirmation()</a>.</p>
+
 </div>
 </div>
 <a id="aa0d4ca88701dfecf98796e2028482b69"></a>
@@ -360,12 +341,10 @@ uart2 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00086">86</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00087">87</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, and <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>.</p>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                                                {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a>();</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  lcdPrint(<a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a>, line, format_str);</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div><div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
-<div class="ttc" id="lcd_8c_html_aa03fd2deaeec8fc3f42a0975d587bad8"><div class="ttname"><a href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a></div><div class="ttdeci">static bool lcd_assert()</div><div class="ttdoc">Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00013">lcd.c:13</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a245902a4d48a6d9bd1ab308bf9b7e6b5"></a>
@@ -394,13 +373,10 @@ uart2 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00097">97</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00099">99</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 
 <p class="reference">References <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, and <a class="el" href="lcd_8c_source.html#l00004">lcd_port</a>.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                   {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a>();</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  lcdSetBacklight(<a class="code" href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a>, <a class="code" href="claw_8c.html#a70d16bb05218682b0a5eaabb141e9d8f">state</a>);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div><div class="ttc" id="claw_8c_html_a70d16bb05218682b0a5eaabb141e9d8f"><div class="ttname"><a href="claw_8c.html#a70d16bb05218682b0a5eaabb141e9d8f">state</a></div><div class="ttdeci">static enum claw_state state</div><div class="ttdef"><b>Definition:</b> <a href="claw_8c_source.html#l00003">claw.c:3</a></div></div>
-<div class="ttc" id="lcd_8c_html_a8d2a398462720032706d94d44a82a1f8"><div class="ttname"><a href="lcd_8c.html#a8d2a398462720032706d94d44a82a1f8">lcd_port</a></div><div class="ttdeci">static FILE * lcd_port</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00004">lcd.c:4</a></div></div>
-<div class="ttc" id="lcd_8c_html_aa03fd2deaeec8fc3f42a0975d587bad8"><div class="ttname"><a href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a></div><div class="ttdeci">static bool lcd_assert()</div><div class="ttdoc">Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00013">lcd.c:13</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a99f4683e1990edf624ab216bf327cba4"></a>
@@ -429,14 +405,10 @@ uart2 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00111">111</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00113">113</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 
-<p class="reference">References <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, <a class="el" href="lcd_8c_source.html#l00028">lcd_get_pressed_buttons()</a>, <a class="el" href="lcd_8c_source.html#l00074">lcd_print()</a>, and <a class="el" href="lcd_8h_source.html#l00040">PRESSED</a>.</p>
-<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                                  {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a>();</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="lcd_8c.html#adabd3f7cdda45119604b488caf22bba8">lcd_print</a>(1, confirm_text);</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordflow">while</span>(<a class="code" href="lcd_8c.html#ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</a>().middle != <a class="code" href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a>){</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    delay(200);</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div><div class="ttc" id="lcd_8c_html_ac7b3225ccc82fcbe067ba9da934f010d"><div class="ttname"><a href="lcd_8c.html#ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</a></div><div class="ttdeci">lcd_buttons lcd_get_pressed_buttons()</div><div class="ttdoc">Returns the pressed buttons. </div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00028">lcd.c:28</a></div></div>
-<div class="ttc" id="lcd_8c_html_aa03fd2deaeec8fc3f42a0975d587bad8"><div class="ttname"><a href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</a></div><div class="ttdeci">static bool lcd_assert()</div><div class="ttdoc">Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00013">lcd.c:13</a></div></div>
-<div class="ttc" id="lcd_8c_html_adabd3f7cdda45119604b488caf22bba8"><div class="ttname"><a href="lcd_8c.html#adabd3f7cdda45119604b488caf22bba8">lcd_print</a></div><div class="ttdeci">void lcd_print(unsigned int line, const char *str)</div><div class="ttdoc">prints a string to a line on the lcd </div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00074">lcd.c:74</a></div></div>
-<div class="ttc" id="lcd_8h_html_a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901"><div class="ttname"><a href="lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</a></div><div class="ttdef"><b>Definition:</b> <a href="lcd_8h_source.html#l00040">lcd.h:40</a></div></div>
-</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, <a class="el" href="lcd_8c_source.html#l00028">lcd_get_pressed_buttons()</a>, <a class="el" href="lcd_8c_source.html#l00075">lcd_print()</a>, and <a class="el" href="lcd_8h_source.html#l00040">PRESSED</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -463,7 +435,7 @@ uart2 </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="lcd_8c_source.html#l00004">4</a> of file <a class="el" href="lcd_8c_source.html">lcd.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00061">init_main_lcd()</a>, <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, <a class="el" href="lcd_8c_source.html#l00047">lcd_clear()</a>, <a class="el" href="lcd_8c_source.html#l00028">lcd_get_pressed_buttons()</a>, <a class="el" href="lcd_8c_source.html#l00074">lcd_print()</a>, <a class="el" href="lcd_8c_source.html#l00086">lcd_printf()</a>, and <a class="el" href="lcd_8c_source.html#l00097">lcd_set_backlight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lcd_8c_source.html#l00062">init_main_lcd()</a>, <a class="el" href="lcd_8c_source.html#l00013">lcd_assert()</a>, <a class="el" href="lcd_8c_source.html#l00047">lcd_clear()</a>, <a class="el" href="lcd_8c_source.html#l00028">lcd_get_pressed_buttons()</a>, <a class="el" href="lcd_8c_source.html#l00075">lcd_print()</a>, <a class="el" href="lcd_8c_source.html#l00087">lcd_printf()</a>, and <a class="el" href="lcd_8c_source.html#l00099">lcd_set_backlight()</a>.</p>
 
 </div>
 </div>

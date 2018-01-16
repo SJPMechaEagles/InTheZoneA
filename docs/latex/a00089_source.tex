@@ -1,0 +1,25 @@
+\subsection{controller.\+c}
+\label{a00089_source}\index{src/controller.\+c@{src/controller.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "controller.h"}
+00002 
+00007 \textcolor{keyword}{struct }cord get_joystick_cord(enum joystick side, int controller) \{
+00008   \textcolor{keywordtype}{int} x;
+00009   \textcolor{keywordtype}{int} y;
+00010   \textcolor{comment}{// Get the joystick value for either the right or left,}
+00011   \textcolor{comment}{// depending on the mode}
+00012   \textcolor{keywordflow}{if} (side == RIGHT_JOY) \{
+00013     y = joystickGetAnalog(controller, RIGHT_JOY_X);
+00014     x = joystickGetAnalog(controller, RIGHT_JOY_Y);
+00015   \} \textcolor{keywordflow}{else} \{
+00016     y = joystickGetAnalog(controller, LEFT_JOY_X);
+00017     x = joystickGetAnalog(controller, LEFT_JOY_Y);
+00018   \}
+00019   \textcolor{comment}{// Define a coordinate for the joystick value}
+00020   \textcolor{keyword}{struct }cord c;
+00021   c.x = x;
+00022   c.y = y;
+00023   \textcolor{keywordflow}{return} c;
+00024 \}
+\end{DoxyCode}

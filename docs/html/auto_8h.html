@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.2</span>
+   &#160;<span id="projectnumber">1.5.8</span>
    </div>
   </td>
  </tr>
@@ -89,40 +90,47 @@ $(document).ready(function(){initNavTree('auto_8h.html','');});
 
 <p>Autonomous declarations and macros.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="drive_8h_source.html">drive.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sensor__ports_8h_source.html">sensor_ports.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="claw_8h_source.html">claw.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drive_8h_source.html">drive.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lifter_8h_source.html">lifter.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="claw_8h_source.html">claw.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for auto.h:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="auto_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="auto_8h__dep__incl.svg" width="115" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<code>#include &quot;<a class="el" href="sensor__ports_8h_source.html">sensor_ports.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mobile__goal__intake_8h_source.html">mobile_goal_intake.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="localization_8h_source.html">localization.h</a>&quot;</code><br />
 </div>
 <p><a href="auto_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:afe2ab4383f3cf46d67e74834f691976f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#afe2ab4383f3cf46d67e74834f691976f">DEPLOY_HEIGHT</a>&#160;&#160;&#160;500</td></tr>
+<tr class="memdesc:afe2ab4383f3cf46d67e74834f691976f"><td class="mdescLeft">&#160;</td><td class="mdescRight">height at which rubber bands do a do  <a href="#afe2ab4383f3cf46d67e74834f691976f">More...</a><br /></td></tr>
+<tr class="separator:afe2ab4383f3cf46d67e74834f691976f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc3203ebc61f8414788156a8616047c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#a7bc3203ebc61f8414788156a8616047c">FRONT_LEFT_IME</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:a7bc3203ebc61f8414788156a8616047c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Front left motor integrated motor encoder.  <a href="#a7bc3203ebc61f8414788156a8616047c">More...</a><br /></td></tr>
 <tr class="separator:a7bc3203ebc61f8414788156a8616047c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83cf08759ac4ffc3ea6e3b7f9c406b3c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#a83cf08759ac4ffc3ea6e3b7f9c406b3c">GOAL_HEIGHT</a>&#160;&#160;&#160;1325</td></tr>
 <tr class="memdesc:a83cf08759ac4ffc3ea6e3b7f9c406b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The height of the goal using potentiometer readings.  <a href="#a83cf08759ac4ffc3ea6e3b7f9c406b3c">More...</a><br /></td></tr>
 <tr class="separator:a83cf08759ac4ffc3ea6e3b7f9c406b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b89da6e342bd7556800463135d03ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#a57b89da6e342bd7556800463135d03ee">HALF_ROTATE</a>&#160;&#160;&#160;<a class="el" href="vmath_8h.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a></td></tr>
+<tr class="separator:a57b89da6e342bd7556800463135d03ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af364d4d51593fe601f20090221f9ddab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#af364d4d51593fe601f20090221f9ddab">LOWEST_HEIGHT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:af364d4d51593fe601f20090221f9ddab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9059fa76eb5e8e86f870405d63e72c4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#a9059fa76eb5e8e86f870405d63e72c4c">MAX_HEIGHT</a>&#160;&#160;&#160;3090</td></tr>
+<tr class="separator:a9059fa76eb5e8e86f870405d63e72c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a811b1777cccc7f0e3abbec1874715f0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#a811b1777cccc7f0e3abbec1874715f0a">MID_LEFT_DRIVE</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:a811b1777cccc7f0e3abbec1874715f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Middle left motor integrated motor encoder.  <a href="#a811b1777cccc7f0e3abbec1874715f0a">More...</a><br /></td></tr>
 <tr class="separator:a811b1777cccc7f0e3abbec1874715f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2919b1b6b7bf06fab5b5bbf09d8d2761"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#a2919b1b6b7bf06fab5b5bbf09d8d2761">MID_RIGHT_DRIVE</a>&#160;&#160;&#160;4</td></tr>
 <tr class="memdesc:a2919b1b6b7bf06fab5b5bbf09d8d2761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Middle right motor integrated motor encoder.  <a href="#a2919b1b6b7bf06fab5b5bbf09d8d2761">More...</a><br /></td></tr>
 <tr class="separator:a2919b1b6b7bf06fab5b5bbf09d8d2761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504fa7d477dd649d731953ec495b1492"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#a504fa7d477dd649d731953ec495b1492">MOBILE_GOAL_DISTANCE</a>&#160;&#160;&#160;4000</td></tr>
+<tr class="separator:a504fa7d477dd649d731953ec495b1492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad266821cf9c9fa6af01be95baed80644"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#ad266821cf9c9fa6af01be95baed80644">MOBILE_GOAL_HEIGHT</a>&#160;&#160;&#160;3090</td></tr>
+<tr class="separator:ad266821cf9c9fa6af01be95baed80644"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67c9207ce99d4414dce28d8c42ba1d2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#a67c9207ce99d4414dce28d8c42ba1d2a">STOP_ONE</a>&#160;&#160;&#160;500</td></tr>
 <tr class="memdesc:a67c9207ce99d4414dce28d8c42ba1d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">First Stop position for stationary autonomous.  <a href="#a67c9207ce99d4414dce28d8c42ba1d2a">More...</a><br /></td></tr>
 <tr class="separator:a67c9207ce99d4414dce28d8c42ba1d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0d1da59836694bca507d0a5b61423b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auto_8h.html#abe0d1da59836694bca507d0a5b61423b">ZONE_DISTANCE</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="separator:abe0d1da59836694bca507d0a5b61423b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Autonomous declarations and macros. </p>
@@ -131,6 +139,26 @@ Macros</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="afe2ab4383f3cf46d67e74834f691976f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2ab4383f3cf46d67e74834f691976f">&#9670;&nbsp;</a></span>DEPLOY_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEPLOY_HEIGHT&#160;&#160;&#160;500</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>height at which rubber bands do a do </p>
+
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00045">45</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
+
+</div>
+</div>
 <a id="a7bc3203ebc61f8414788156a8616047c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7bc3203ebc61f8414788156a8616047c">&#9670;&nbsp;</a></span>FRONT_LEFT_IME</h2>
 
@@ -145,7 +173,7 @@ Macros</h2></td></tr>
 
 <p>Front left motor integrated motor encoder. </p>
 
-<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00018">18</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00020">20</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
 
 </div>
 </div>
@@ -163,9 +191,61 @@ Macros</h2></td></tr>
 
 <p>The height of the goal using potentiometer readings. </p>
 
-<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00038">38</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00040">40</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00030">autonomous()</a>.</p>
+</div>
+</div>
+<a id="a57b89da6e342bd7556800463135d03ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57b89da6e342bd7556800463135d03ee">&#9670;&nbsp;</a></span>HALF_ROTATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HALF_ROTATE&#160;&#160;&#160;<a class="el" href="vmath_8h.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00057">57</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
+
+</div>
+</div>
+<a id="af364d4d51593fe601f20090221f9ddab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af364d4d51593fe601f20090221f9ddab">&#9670;&nbsp;</a></span>LOWEST_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOWEST_HEIGHT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00047">47</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
+
+</div>
+</div>
+<a id="a9059fa76eb5e8e86f870405d63e72c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9059fa76eb5e8e86f870405d63e72c4c">&#9670;&nbsp;</a></span>MAX_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_HEIGHT&#160;&#160;&#160;3090</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00053">53</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
 
 </div>
 </div>
@@ -183,9 +263,9 @@ Macros</h2></td></tr>
 
 <p>Middle left motor integrated motor encoder. </p>
 
-<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00023">23</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00025">25</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00030">autonomous()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
 
 </div>
 </div>
@@ -203,9 +283,45 @@ Macros</h2></td></tr>
 
 <p>Middle right motor integrated motor encoder. </p>
 
-<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00028">28</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00030">30</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00030">autonomous()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
+
+</div>
+</div>
+<a id="a504fa7d477dd649d731953ec495b1492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a504fa7d477dd649d731953ec495b1492">&#9670;&nbsp;</a></span>MOBILE_GOAL_DISTANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOBILE_GOAL_DISTANCE&#160;&#160;&#160;4000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00051">51</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
+
+</div>
+</div>
+<a id="ad266821cf9c9fa6af01be95baed80644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad266821cf9c9fa6af01be95baed80644">&#9670;&nbsp;</a></span>MOBILE_GOAL_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOBILE_GOAL_HEIGHT&#160;&#160;&#160;3090</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00049">49</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
 
 </div>
 </div>
@@ -223,7 +339,25 @@ Macros</h2></td></tr>
 
 <p>First Stop position for stationary autonomous. </p>
 
-<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00033">33</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00035">35</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+
+</div>
+</div>
+<a id="abe0d1da59836694bca507d0a5b61423b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0d1da59836694bca507d0a5b61423b">&#9670;&nbsp;</a></span>ZONE_DISTANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZONE_DISTANCE&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="auto_8h_source.html#l00055">55</a> of file <a class="el" href="auto_8h_source.html">auto.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
 
 </div>
 </div>

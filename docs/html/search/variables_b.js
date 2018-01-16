@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['right',['right',['../structlcd__buttons.html#a2437d744e09ca1bb91ab4ca53ef77198',1,'lcd_buttons']]]
+  ['on_5fbutton',['on_button',['../structroutine__t.html#a4600cad285b5643e422cb5bfe6ce7fa4',1,'routine_t']]],
+  ['options',['options',['../structmenu__t.html#ad695cd88051e34817f0f582d4e43c33a',1,'menu_t']]]
 ];

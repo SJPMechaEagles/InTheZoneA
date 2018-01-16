@@ -1,4 +1,4 @@
-\section{lcd.\+h}
+\subsection{lcd.\+h}
 \label{lcd_8h_source}\index{include/lcd.\+h@{include/lcd.\+h}}
 
 \begin{DoxyCode}
@@ -23,20 +23,19 @@
 00051   button_state right;
 00052 \} lcd_buttons;
 00053 
-00054 
-00062 lcd_buttons lcd_get_pressed_buttons();
-00063 
-00069 \textcolor{keywordtype}{void} lcd_clear();
-00070 
+00061 lcd_buttons lcd_get_pressed_buttons();
+00062 
+00068 \textcolor{keywordtype}{void} lcd_clear();
+00069 
 00080 \textcolor{keywordtype}{void} init_main_lcd(FILE *lcd);
 00081 
 00089 \textcolor{keywordtype}{void} lcd_print(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} line, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *str);
 00090 
 00098 \textcolor{keywordtype}{void} lcd_printf(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} line, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *format\_str, ...);
 00099 
-00106 \textcolor{keywordtype}{void} lcd_set_backlight(\textcolor{keywordtype}{bool} state);
-00107 
-00117 \textcolor{keywordtype}{void} promt_confirmation(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *confirm\_text);
-00118 
-00119 \textcolor{preprocessor}{#endif}
+00107 \textcolor{keywordtype}{void} lcd_set_backlight(\textcolor{keywordtype}{bool} state);
+00108 
+00118 \textcolor{keywordtype}{void} promt_confirmation(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *confirm\_text);
+00119 
+00120 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

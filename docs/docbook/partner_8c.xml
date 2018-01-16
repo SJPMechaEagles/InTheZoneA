@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="partner_8c">
+    <title>partner.c File Reference</title>
+    <programlisting>#include &quot;partner.h&quot;</programlisting>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static enum <link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324">CONTROLL_MODE</link> <link linkend="partner_8c_1ac57f7e8cb1c4e638c8c477740314a109">mode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>enum <link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324">CONTROLL_MODE</link> <link linkend="partner_8c_1aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="partner_8c_1ab2c78903a76d2ed8969271803c78368a">update_control</link> (
+)<para><emphasis>Updates the controller mode between Driver and Partner modes.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/partner.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="partner_8h">partner.h</link>&quot;</emphasis>
+2 
+<link linkend="partner_8c_1ac57f7e8cb1c4e638c8c477740314a109">3 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324">CONTROLL_MODE</link>&#32;<link linkend="partner_8c_1ac57f7e8cb1c4e638c8c477740314a109">mode</link>&#32;=&#32;<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475">MAIN_CONTROLLER_MODE</link>;
+4 
+<link linkend="partner_8c_1aacc86d07e59d3b919f5c5eae2ce5d404">5 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324">CONTROLL_MODE</link>&#32;<link linkend="partner_8c_1aacc86d07e59d3b919f5c5eae2ce5d404">get_mode</link>()&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="partner_8c_1ac57f7e8cb1c4e638c8c477740314a109">mode</link>;&#32;}
+6 
+<link linkend="partner_8c_1ab2c78903a76d2ed8969271803c78368a">7 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="partner_8c_1ab2c78903a76d2ed8969271803c78368a">update_control</link>()&#32;{
+8 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(joystickGetDigital(<link linkend="controller_8h_1a136e64cf351535da81cacb6a546cade6">PARTNER</link>,&#32;7,&#32;JOY_LEFT))&#32;{
+9 &#32;&#32;&#32;&#32;<link linkend="partner_8c_1ac57f7e8cb1c4e638c8c477740314a109">mode</link>&#32;=&#32;<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324a6f180291664a03c8be8d64ebb9bf0475">MAIN_CONTROLLER_MODE</link>;
+10 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(joystickGetDigital(<link linkend="controller_8h_1a136e64cf351535da81cacb6a546cade6">PARTNER</link>,&#32;7,&#32;JOY_RIGHT))&#32;{
+11 &#32;&#32;&#32;&#32;<link linkend="partner_8c_1ac57f7e8cb1c4e638c8c477740314a109">mode</link>&#32;=&#32;<link linkend="partner_8h_1afb2b5bca5ceab5f6efd8bac14a568324a60c19a56177d369da54f4e3d942c7df7">PARTNER_CONTROLLER_MODE</link>;
+12 &#32;&#32;}
+13 }
+    </computeroutput></literallayout>
+</section>

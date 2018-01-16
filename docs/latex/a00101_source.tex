@@ -1,0 +1,54 @@
+\subsection{init.\+c}
+\label{a00101_source}\index{src/init.\+c@{src/init.\+c}}
+
+\begin{DoxyCode}
+00001 
+00013 \textcolor{preprocessor}{#include "encoders.h"}
+00014 \textcolor{preprocessor}{#include "lcd.h"}
+00015 \textcolor{preprocessor}{#include "lifter.h"}
+00016 \textcolor{preprocessor}{#include "log.h"}
+00017 \textcolor{preprocessor}{#include "main.h"}
+00018 \textcolor{preprocessor}{#include "menu.h"}
+00019 \textcolor{preprocessor}{#include "slew.h"}
+00020 
+00021 \textcolor{keyword}{extern} Ultrasonic lifter_ultrasonic;
+00022 
+00023 \textcolor{comment}{/*}
+00024 \textcolor{comment}{ * Runs pre-initialization code. This function will be started in kernel mode}
+00025 \textcolor{comment}{ * one time while the VEX Cortex is starting up. As the scheduler is still}
+00026 \textcolor{comment}{ * paused, most API functions will fail.}
+00027 \textcolor{comment}{ *}
+00028 \textcolor{comment}{ * The purpose of this function is solely to set the default pin modes}
+00029 \textcolor{comment}{ * (pinMode()) and port states (digitalWrite()) of limit switches, push buttons,}
+00030 \textcolor{comment}{ * and solenoids. It can also safely configure a UART port (usartOpen()) but}
+00031 \textcolor{comment}{ * cannot set up an LCD (lcdInit()).}
+00032 \textcolor{comment}{ *}
+00033 \textcolor{comment}{ * AKA DON'T USE}
+00034 \textcolor{comment}{ * -Chris}
+00035 \textcolor{comment}{ */}
+00036 \textcolor{keywordtype}{void} initializeIO() \{ watchdogInit(); \}
+00037 
+00038 \textcolor{comment}{/*}
+00039 \textcolor{comment}{ * Runs user initialization code. This function will be started in its own task}
+00040 \textcolor{comment}{ * with the default priority and stack size once when the robot is starting up.}
+00041 \textcolor{comment}{ * It is possible that the VEXnet communication link may not be fully}
+00042 \textcolor{comment}{ * established at this time, so reading from the VEX Joystick may fail.}
+00043 \textcolor{comment}{ *}
+00044 \textcolor{comment}{ * This function should initialize most sensors (gyro, encoders, ultrasonics),}
+00045 \textcolor{comment}{ * LCDs, global variables, and IMEs.}
+00046 \textcolor{comment}{ *}
+00047 \textcolor{comment}{ * This function must exit relatively promptly, or the operatorControl() and}
+00048 \textcolor{comment}{ * autonomous() tasks will not start. An autonomous mode selection menu like the}
+00049 \textcolor{comment}{ * pre\_auton() in other environments can be implemented in this task if desired.}
+00050 \textcolor{comment}{ */}
+00051 \textcolor{keywordtype}{void} initialize() \{
+00052   init_main_lcd(uart1);
+00053   info(\textcolor{stringliteral}{"LCD Init"});
+00054   menu_t *t =
+00055       init_menu_var(STRING_TYPE, \textcolor{stringliteral}{"TEST Menu"}, 5, \textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}, \textcolor{stringliteral}{"3"}, \textcolor{stringliteral}{"4"}, \textcolor{stringliteral}{"5"});
+00056   init_error(\textcolor{keyword}{true}, uart2);
+00057   setTeamName(\textcolor{stringliteral}{"9228A"});
+00058   init_encoders();
+00059   lifter_ultrasonic = ultrasonicInit(4, 5);
+00060 \}
+\end{DoxyCode}

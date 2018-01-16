@@ -1,0 +1,18 @@
+\subsection{partner.\+c}
+\label{a00137_source}\index{src/partner.\+c@{src/partner.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "partner.h"}
+00002 
+00003 \textcolor{keyword}{static} \textcolor{keyword}{enum} CONTROLL_MODE mode = MAIN_CONTROLLER_MODE;
+00004 
+00005 \textcolor{keyword}{enum} CONTROLL_MODE get_mode() \{ \textcolor{keywordflow}{return} mode; \}
+00006 
+00007 \textcolor{keywordtype}{void} update_control() \{
+00008   \textcolor{keywordflow}{if} (joystickGetDigital(PARTNER, 7, JOY\_LEFT)) \{
+00009     mode = MAIN_CONTROLLER_MODE;
+00010   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(PARTNER, 7, JOY\_RIGHT)) \{
+00011     mode = PARTNER_CONTROLLER_MODE;
+00012   \}
+00013 \}
+\end{DoxyCode}

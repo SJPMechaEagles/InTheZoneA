@@ -1,4 +1,4 @@
-\section{partner.\+c}
+\subsection{partner.\+c}
 \label{partner_8c_source}\index{src/partner.\+c@{src/partner.\+c}}
 
 \begin{DoxyCode}
@@ -6,15 +6,13 @@
 00002 
 00003 \textcolor{keyword}{static} \textcolor{keyword}{enum} CONTROLL_MODE mode = MAIN_CONTROLLER_MODE;
 00004 
-00005 \textcolor{keyword}{enum} CONTROLL_MODE get_mode() \{
-00006   \textcolor{keywordflow}{return} mode;
-00007 \}
-00008 
-00009 \textcolor{keywordtype}{void} update_control() \{
-00010   \textcolor{keywordflow}{if}(joystickGetDigital(PARTNER, 7, JOY\_LEFT)) \{
-00011     mode = MAIN_CONTROLLER_MODE;
-00012   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(PARTNER, 7, JOY\_RIGHT)) \{
-00013     mode = PARTNER_CONTROLLER_MODE;
-00014   \}
-00015 \}
+00005 \textcolor{keyword}{enum} CONTROLL_MODE get_mode() \{ \textcolor{keywordflow}{return} mode; \}
+00006 
+00007 \textcolor{keywordtype}{void} update_control() \{
+00008   \textcolor{keywordflow}{if} (joystickGetDigital(PARTNER, 7, JOY\_LEFT)) \{
+00009     mode = MAIN_CONTROLLER_MODE;
+00010   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(PARTNER, 7, JOY\_RIGHT)) \{
+00011     mode = PARTNER_CONTROLLER_MODE;
+00012   \}
+00013 \}
 \end{DoxyCode}

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="battery_8h">
+    <title>battery.h File Reference</title>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="battery_8h_1a0713ec94f47c403bf536ab6b11833b81">MIN_BACKUP_VOLTAGE</link> 7.8<para><emphasis>The minimum acceptable backup battery voltage beofre a match.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="battery_8h_1a63f8a91bb74417aa77dc00340b6fd007">MIN_MAIN_VOLTAGE</link> 7.8<para><emphasis>The minimum acceptable main battery voltage beofre a match.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="battery_8h_1a9b1c5cf7ddddebf63796050a1d4a9969">backup_battery_voltage</link> (
+)<para><emphasis>gets the backup battery voltage</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="battery_8h_1a1097bbb878f6e2690f8eea6cd231959a">battery_level_acceptable</link> (
+)<para><emphasis>returns if the batteries are acceptable</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="battery_8h_1a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</link> (
+)<para><emphasis>gets the main battery voltage</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Battery management related functions. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/18/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/battery.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+7 <emphasis class="preprocessor">#ifndef&#32;_BATTERY_H_</emphasis>
+8 <emphasis class="preprocessor">#define&#32;_BATTERY_H_</emphasis>
+9 
+10 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+11 
+<link linkend="battery_8h_1a63f8a91bb74417aa77dc00340b6fd007">15 </link><emphasis class="preprocessor">#define&#32;MIN_MAIN_VOLTAGE&#32;7.8</emphasis>
+16 
+<link linkend="battery_8h_1a0713ec94f47c403bf536ab6b11833b81">20 </link><emphasis class="preprocessor">#define&#32;MIN_BACKUP_VOLTAGE&#32;7.8</emphasis>
+21 
+26 <emphasis class="keywordtype">double</emphasis>&#32;<link linkend="battery_8h_1a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</link>();
+27 
+32 <emphasis class="keywordtype">double</emphasis>&#32;<link linkend="battery_8h_1a9b1c5cf7ddddebf63796050a1d4a9969">backup_battery_voltage</link>();
+33 
+41 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="battery_8h_1a1097bbb878f6e2690f8eea6cd231959a">battery_level_acceptable</link>();
+42 
+43 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

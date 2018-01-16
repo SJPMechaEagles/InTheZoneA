@@ -1,72 +1,150 @@
-\section{lifter.\+c}
+\subsection{lifter.\+c}
 \label{lifter_8c_source}\index{src/lifter.\+c@{src/lifter.\+c}}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "lifter.h"}
 00002 \textcolor{preprocessor}{#include "log.h"}
 00003 
-00011 \textcolor{keywordtype}{void} set_secondary_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v) \{
-00012   set_motor_immediate(MOTOR_SECONDARY_LIFTER, v);
-00013 \}
-00014 
-00022 \textcolor{keywordtype}{void} set_main_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v) \{
-00023   set_motor_immediate(MOTOR_LIFT, v);
-00024 \}
-00025 
-00033 \textcolor{keywordtype}{void} set_lifter_pos(\textcolor{keywordtype}{int} pos) \{
-00034 
+00004 Ultrasonic lifter_ultrasonic;
+00005 
+00006 \textcolor{keyword}{static} \textcolor{keywordtype}{bool} lifter_autostack_running = \textcolor{keyword}{false};
+00007 \textcolor{keyword}{static} \textcolor{keywordtype}{bool} lifter_autostack_routine_interupt = \textcolor{keyword}{false};
+00008 
+00009 \textcolor{keywordtype}{void} autostack_routine() \{
+00010   \textcolor{keywordtype}{int} instruction\_couter = 0;
+00011   \textcolor{keywordtype}{bool} routine\_complete = \textcolor{keyword}{false};
+00012   \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
+00013     \textcolor{keywordflow}{if} (instruction\_couter == 0) \{
+00014       \textcolor{keywordtype}{int} dist = ultrasonicGet(lifter_ultrasonic);
+00015       \textcolor{keywordflow}{if} (dist > 11 || dist == -ULTRA\_BAD\_RESPONSE) \{
+00016         raise_main_lifter();
+00017       \} \textcolor{keywordflow}{else} \{
+00018         set_main_lifter_motors(0);
+00019         instruction\_couter = 1;
+00020       \}
+00021     \}
+00022   \}
+00023 \}
+00024 
+00033 \textcolor{keywordtype}{void} set_secondary_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v) \{
+00034   set_motor_immediate(MOTOR_SECONDARY_LIFTER, v);
 00035 \}
 00036 
-00043 \textcolor{keywordtype}{void} raise_main_lifter()\{
-00044   set_main_lifter_motors(MAX_SPEED);
-00045 \}
+00045 \textcolor{keywordtype}{void} set_main_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v) \{ set_motor_slew(MOTOR_LIFT, v); \}
 00046 
-00053 \textcolor{keywordtype}{void} lower_main_lifter()\{
-00054   set_main_lifter_motors(MIN_SPEED);
-00055 \}
-00056 
-00063 \textcolor{keywordtype}{void} raise_secondary_lifter()\{
-00064   set_secondary_lifter_motors(MAX_SPEED);
-00065 \}
-00066 
-00073 \textcolor{keywordtype}{void} lower_secondary_lifter()\{
-00074   set_secondary_lifter_motors(MIN_SPEED);
-00075 \}
-00076 
-00083 \textcolor{keywordtype}{void} update_lifter() \{
-00084   printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, analogRead(1));
-00085   \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_DOWN) && analogRead(MAIN_LIFTER_POT) < 
-      MAIN_LIFTER_MIN_HEIGHT) \{
-00086     set_secondary_lifter_motors(MAX_SPEED);
-00087     set_main_lifter_motors(MIN_SPEED);
-00088   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_DOWN) && analogRead(MAIN_LIFTER_POT) >= 
-      MAIN_LIFTER_MIN_HEIGHT) \{
-00089     set_secondary_lifter_motors(MAX_SPEED);
-00090     set_main_lifter_motors(0);
-00091   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_UP) && analogRead(
-      SECONDARY_LIFTER_POT_PORT) < SECONDARY_LIFTER_MAX_HEIGHT) \{
-00092     set_secondary_lifter_motors(MIN_SPEED);
-00093     set_main_lifter_motors(0);
-00094   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joystickGetDigital(LIFTER_UP) && analogRead(
-      SECONDARY_LIFTER_POT_PORT) >= SECONDARY_LIFTER_MAX_HEIGHT) \{
-00095     set_main_lifter_motors(MAX_SPEED);
-00096     set_secondary_lifter_motors(MIN_SPEED);
-00097   \} \textcolor{keywordflow}{else} \{
-00098     set_secondary_lifter_motors(0);
-00099     set_main_lifter_motors(0);
+00054 \textcolor{keywordtype}{void} set_lifter_pos(\textcolor{keywordtype}{int} pos) \{\}
+00055 
+00062 \textcolor{keywordtype}{void} raise_main_lifter() \{ set_main_lifter_motors(MAX_SPEED); \}
+00063 
+00070 \textcolor{keywordtype}{void} lower_main_lifter() \{ set_main_lifter_motors(MAX_SPEED); \}
+00071 
+00078 \textcolor{keywordtype}{void} raise_secondary_lifter() \{ set_secondary_lifter_motors(MIN_SPEED / 1.5); \}
+00079 
+00086 \textcolor{keywordtype}{void} lower_secondary_lifter() \{ set_secondary_lifter_motors(MAX_SPEED); \}
+00087 
+00088 \textcolor{keyword}{static} \textcolor{keywordtype}{bool} secondary_override = \textcolor{keyword}{false};
+00089 
+00090 \textcolor{keyword}{static} \textcolor{keywordtype}{void} main_lifter_update() \{
+00091   \textcolor{keywordflow}{if} (lifter_autostack_running)
+00092     \textcolor{keywordflow}{return};
+00093   \textcolor{keyword}{static} \textcolor{keywordtype}{int} count = 0;
+00094   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} pid\_on = \textcolor{keyword}{false};
+00095   \textcolor{keyword}{static} \textcolor{keywordtype}{int} main\_target = 0;
+00096   \textcolor{keywordtype}{int} main\_motor\_speed = 0;
+00097   \textcolor{keyword}{static} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} main\_i = 0;
+00098   \textcolor{keywordflow}{if} (count == 20) \{
+00099     main\_target = analogRead(MAIN_LIFTER_POT);
 00100   \}
-00101 \}
-00102 
-00111 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x)\{
-00112   \textcolor{keywordflow}{return} (x - INIT_ROTATION) / TICK_MAX * DEG_MAX;
-00113 \}
+00101   \textcolor{keywordflow}{if} (pid\_on && count > 20) \{
+00102     \textcolor{keywordtype}{int} curr = analogRead(MAIN_LIFTER_POT);
+00103     \textcolor{keyword}{static} \textcolor{keywordtype}{int} main\_last\_p = 0;
+00104     \textcolor{keywordtype}{int} main\_p = curr - main\_target;
+00105     main\_i += main\_p;
+00106     \textcolor{keywordtype}{int} main\_d = main\_last\_p - main\_p;
+00107     \textcolor{comment}{// main\_motor\_speed = MAIN\_LIFTER\_P * main\_p + MAIN\_LIFTER\_I * main\_i +}
+00108     \textcolor{comment}{// MAIN\_LIFTER\_D * main\_d;}
+00109     main\_last\_p = main\_p;
+00110   \} \textcolor{keywordflow}{else} \{
+00111     main\_i = 0;
+00112     count++;
+00113   \}
 00114 
-00122 \textcolor{keywordtype}{int} getLifterTicks() \{
-00123   \textcolor{keywordflow}{return} analogRead(LIFTER);
-00124 \}
-00125 
-00133 \textcolor{keywordtype}{double} getLifterHeight() \{
-00134   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ticks = getLifterTicks();
-00135   \textcolor{keywordflow}{return} (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) + 0.0198 * ticks + 2.3033);
-00136 \}
+00115   \textcolor{keywordflow}{if} (joystickGetDigital(LIFTER_UP)) \{
+00116     \textcolor{keywordtype}{int} ultra = ultrasonicGet(lifter_ultrasonic);
+00117     main\_motor\_speed = MAX_SPEED;
+00118     count = 0;
+00119   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(LIFTER_DOWN)) \{
+00120     main\_motor\_speed = MIN_SPEED;
+00121     count = 0;
+00122     secondary_override = \textcolor{keyword}{false};
+00123   \} \textcolor{keywordflow}{else} \{
+00124     secondary_override = \textcolor{keyword}{false};
+00125   \}
+00126   set_main_lifter_motors(main\_motor\_speed);
+00127   pid\_on = \textcolor{keyword}{true};
+00128 \}
+00129 
+00130 \textcolor{keyword}{static} \textcolor{keywordtype}{void} secondary_lifter_update() \{
+00131   \textcolor{keywordflow}{if} (lifter_autostack_running)
+00132     \textcolor{keywordflow}{return};
+00133   \textcolor{keyword}{static} \textcolor{keywordtype}{int} count = 0;
+00134   \textcolor{comment}{// static bool pid\_on = false;}
+00135   \textcolor{keyword}{static} \textcolor{keywordtype}{int} second\_target = 0;
+00136   \textcolor{keywordtype}{int} second\_motor\_speed = 0;
+00137   \textcolor{keyword}{static} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} second\_i = 0;
+00138 
+00139   \textcolor{keywordflow}{if} (count < 10) \{
+00140     second\_target = analogRead(SECONDARY_LIFTER_POT_PORT);
+00141     count++;
+00142   \}
+00143 
+00144   \textcolor{keywordtype}{int} curr = analogRead(SECONDARY_LIFTER_POT_PORT);
+00145   \textcolor{keyword}{static} \textcolor{keywordtype}{int} second\_last\_p = 0;
+00146   \textcolor{keywordtype}{int} second\_p = curr - second\_target;
+00147   second\_i += second\_p;
+00148   \textcolor{keywordtype}{int} second\_d = second\_last\_p - second\_p;
+00149   second\_motor\_speed = SECONDARY_LIFTER_P * second\_p +
+00150                        SECONDARY_LIFTER_I * second\_i +
+00151                        SECONDARY_LIFTER_D * second\_d;
+00152   second\_last\_p = second\_p;
+00153 
+00154   \textcolor{keywordflow}{if} (joystickGetDigital(SECONDARY_LIFTER_DOWN)) \{
+00155     second\_motor\_speed = MAX_SPEED;
+00156     count = 0;
+00157     second\_i = 0;
+00158     second\_target = analogRead(SECONDARY_LIFTER_POT_PORT);
+00159   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(SECONDARY_LIFTER_UP)) \{
+00160     second\_motor\_speed = MIN_SPEED;
+00161     count = 0;
+00162     second\_i = 0;
+00163     second\_target =
+00164         second\_target > 3000 ? 4095 : analogRead(SECONDARY_LIFTER_POT_PORT);
+00165     ;
+00166   \} \textcolor{keywordflow}{else} \{
+00167     second\_target = second\_target > 3000 ? 4095 : second\_target;
+00168   \}
+00169   second\_motor\_speed = abs(second\_motor\_speed) < 20 ? 0 : second\_motor\_speed;
+00170   \textcolor{comment}{/*printf("Motor %d \(\backslash\)n", second\_motor\_speed);}
+00171 \textcolor{comment}{  printf("P %d \(\backslash\)n", second\_p);}
+00172 \textcolor{comment}{  printf("I %lld \(\backslash\)n", second\_i);}
+00173 \textcolor{comment}{  printf("D %d \(\backslash\)n", second\_d);*/}
+00174   set_secondary_lifter_motors(second\_motor\_speed);
+00175 \}
+00176 
+00183 \textcolor{keywordtype}{void} update_lifter() \{
+00184   main_lifter_update();
+00185   \textcolor{keywordflow}{if} (!secondary_override)
+00186     secondary_lifter_update();
+00187 \}
+00196 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x) \{
+00197   \textcolor{keywordflow}{return} (x - INIT_ROTATION) / TICK_MAX * DEG_MAX;
+00198 \}
+00199 
+00207 \textcolor{keywordtype}{int} getLifterTicks() \{ \textcolor{keywordflow}{return} analogRead(LIFTER); \}
+00208 
+00216 \textcolor{keywordtype}{double} getLifterHeight() \{
+00217   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ticks = getLifterTicks();
+00218   \textcolor{keywordflow}{return} (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) +
+00219           0.0198 * ticks + 2.3033);
+00220 \}
 \end{DoxyCode}

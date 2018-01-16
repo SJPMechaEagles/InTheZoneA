@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structpolar__cord">
+<title>polar_cord struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="vmath_8h">&lt;vmath.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float angle</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float magnitue</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>A struct that contains polar coordinates. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Date: </title>
+
+<para>9/9/2017 </para>
+</formalpara>
+<formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+</para>
+                <para>Definition at line 20 of file vmath.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>vmath.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+            <simplesect>
+                <title>float polar_cord::angle</title>                
+<para>the angle of the vector </para>
+
+                <para>Definition at line 22 of file vmath.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>vmath.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float polar_cord::magnitue</title>                
+<para>the magnitude of the vector </para>
+
+                <para>Definition at line 24 of file vmath.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>vmath.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+</section>
