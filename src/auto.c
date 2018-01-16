@@ -51,23 +51,25 @@ void autonomous() {
   imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
   counts_drive = counts_drive_left + counts_drive_right;
   counts_drive /= 2;
-
+  print("break 0");
   // Deploy claw
   while (analogRead(SECONDARY_LIFTER_POT_PORT) < DEPLOY_HEIGHT) {
 
     set_secondary_lifter_motors(MAX_SPEED);
   }
   set_secondary_lifter_motors(0);
+  print("break 1");
 
-  while (analogRead(SECONDARY_LIFTER_POT_PORT) > LOWEST_HEIGHT) {
-    set_secondary_lifter_motors(MIN_SPEED);
-  }
+  //while (analogRead(SECONDARY_LIFTER_POT_PORT) > LOWEST_HEIGHT) {
+  //  set_secondary_lifter_motors(MIN_SPEED);
+  //}
+  print("break 2");
   set_secondary_lifter_motors(0);
 
   // Grab pre-load cone
-  close_claw();
+  //close_claw();
   delay(300);
-  set_claw_motor(0);
+  //set_claw_motor(0);
 
   while (analogRead(SECONDARY_LIFTER_POT_PORT) < MAX_HEIGHT) {
     set_secondary_lifter_motors(MAX_SPEED);

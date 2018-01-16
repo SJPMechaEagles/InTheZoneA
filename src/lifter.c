@@ -207,6 +207,7 @@ static void secondary_lifter_update() {
  * @date 9/9/2017
  **/
 void update_lifter() {
+  printf("%d \n", analogRead(SECONDARY_LIFTER_POT_PORT));
   main_lifter_update();
   if (!secondary_override)
     secondary_lifter_update();

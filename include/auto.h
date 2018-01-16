@@ -42,15 +42,15 @@
 /**
 * @brief height at which rubber bands do a do
 **/
-#define DEPLOY_HEIGHT 500
+#define DEPLOY_HEIGHT 2000
 
 #define LOWEST_HEIGHT 0
 
-#define MOBILE_GOAL_HEIGHT 3090
+#define MOBILE_GOAL_HEIGHT 3570
 
 #define MOBILE_GOAL_DISTANCE 4000
 
-#define MAX_HEIGHT 3090
+#define MAX_HEIGHT 3570
 
 #define ZONE_DISTANCE 1000
 
