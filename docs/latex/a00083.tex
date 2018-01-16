@@ -1,0 +1,102 @@
+\subsection{src/battery.c File Reference}
+\label{a00083}\index{src/battery.\+c@{src/battery.\+c}}
+{\ttfamily \#include \char`\"{}battery.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \textbf{ backup\+\_\+battery\+\_\+voltage} ()
+\begin{DoxyCompactList}\small\item\em gets the backup battery voltage \end{DoxyCompactList}\item 
+bool \textbf{ battery\+\_\+level\+\_\+acceptable} ()
+\begin{DoxyCompactList}\small\item\em returns if the batteries are acceptable \end{DoxyCompactList}\item 
+double \textbf{ main\+\_\+battery\+\_\+voltage} ()
+\begin{DoxyCompactList}\small\item\em gets the main battery voltage \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{a00083_a9b1c5cf7ddddebf63796050a1d4a9969}} 
+\index{battery.\+c@{battery.\+c}!backup\+\_\+battery\+\_\+voltage@{backup\+\_\+battery\+\_\+voltage}}
+\index{backup\+\_\+battery\+\_\+voltage@{backup\+\_\+battery\+\_\+voltage}!battery.\+c@{battery.\+c}}
+\paragraph{backup\+\_\+battery\+\_\+voltage()}
+{\footnotesize\ttfamily double backup\+\_\+battery\+\_\+voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gets the backup battery voltage 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 14} of file \textbf{ battery.\+c}.
+
+
+
+Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
+
+
+\begin{DoxyCode}
+00014 \{ \textcolor{keywordflow}{return} powerLevelBackup() / 1000.0; \}
+\end{DoxyCode}
+\mbox{\label{a00083_a1097bbb878f6e2690f8eea6cd231959a}} 
+\index{battery.\+c@{battery.\+c}!battery\+\_\+level\+\_\+acceptable@{battery\+\_\+level\+\_\+acceptable}}
+\index{battery\+\_\+level\+\_\+acceptable@{battery\+\_\+level\+\_\+acceptable}!battery.\+c@{battery.\+c}}
+\paragraph{battery\+\_\+level\+\_\+acceptable()}
+{\footnotesize\ttfamily bool battery\+\_\+level\+\_\+acceptable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns if the batteries are acceptable 
+
+\begin{DoxySeeAlso}{See also}
+\doxyref{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}{p.}{a00005_a63f8a91bb74417aa77dc00340b6fd007} 
+
+\doxyref{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}{p.}{a00005_a0713ec94f47c403bf536ab6b11833b81}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 23} of file \textbf{ battery.\+c}.
+
+
+
+References \textbf{ backup\+\_\+battery\+\_\+voltage()}, \textbf{ main\+\_\+battery\+\_\+voltage()}, \textbf{ M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}, and \textbf{ M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}.
+
+
+\begin{DoxyCode}
+00023                                 \{
+00024   \textcolor{keywordflow}{if} (main_battery_voltage() < MIN_MAIN_VOLTAGE)
+00025     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00026   \textcolor{keywordflow}{if} (backup_battery_voltage() < MIN_BACKUP_VOLTAGE)
+00027     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00028   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00029 \}
+\end{DoxyCode}
+\mbox{\label{a00083_a8c92c389534fdb079698cdebeb7f2efa}} 
+\index{battery.\+c@{battery.\+c}!main\+\_\+battery\+\_\+voltage@{main\+\_\+battery\+\_\+voltage}}
+\index{main\+\_\+battery\+\_\+voltage@{main\+\_\+battery\+\_\+voltage}!battery.\+c@{battery.\+c}}
+\paragraph{main\+\_\+battery\+\_\+voltage()}
+{\footnotesize\ttfamily double main\+\_\+battery\+\_\+voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gets the main battery voltage 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 8} of file \textbf{ battery.\+c}.
+
+
+
+Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
+
+
+\begin{DoxyCode}
+00008 \{ \textcolor{keywordflow}{return} powerLevelMain() / 1000.0; \}
+\end{DoxyCode}

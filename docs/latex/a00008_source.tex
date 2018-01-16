@@ -1,0 +1,40 @@
+\subsection{claw.\+h}
+\label{a00008_source}\index{include/claw.\+h@{include/claw.\+h}}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#ifndef \_CLAW\_H\_}
+00008 \textcolor{preprocessor}{#define \_CLAW\_H\_}
+00009 
+00010 \textcolor{preprocessor}{#include "controller.h"}
+00011 \textcolor{preprocessor}{#include "motor_ports.h"}
+00012 \textcolor{preprocessor}{#include "sensor_ports.h"}
+00013 \textcolor{preprocessor}{#include "slew.h"}
+00014 \textcolor{preprocessor}{#include <API.h>}
+00015 
+00020 \textcolor{preprocessor}{#define MAX\_CLAW\_SPEED 127}
+00021 
+00025 \textcolor{preprocessor}{#define MIN\_CLAW\_SPEED -127}
+00026 
+00031 \textcolor{preprocessor}{#define CLAW\_CLOSE MASTER, 5, JOY\_UP}
+00032 
+00037 \textcolor{preprocessor}{#define CLAW\_OPEN MASTER, 5, JOY\_DOWN}
+00038 
+00043 \textcolor{preprocessor}{#define CLAW\_CLOSE\_VAL 3000}
+00044 
+00049 \textcolor{preprocessor}{#define CLAW\_OPEN\_VAL 1500}
+00050 
+00055 \textcolor{keywordtype}{void} update_claw();
+00056 
+00061 \textcolor{keywordtype}{void} set_claw_motor(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v);
+00062 
+00067 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getClawTicks();
+00068 
+00073 \textcolor{keywordtype}{void} open_claw();
+00074 
+00079 \textcolor{keywordtype}{void} close_claw();
+00080 
+00085 \textcolor{keyword}{enum} claw_state \{ CLAW_OPEN_STATE, CLAW_CLOSE_STATE, CLAW_NEUTRAL_STATE \};
+00086 
+00087 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="toggle_8h">
+    <title>toggle.h File Reference</title>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+    <programlisting>#include &quot;controller.h&quot;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="toggle_8h_1a72989c21af9d14672f6e59c44a2b59bc">buttonGetState</link> (
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link> )<para><emphasis>Returns the current status of a button (pressed or not pressed)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="toggle_8h_1a2b3d226371575c894979ab84bce95626">buttonInit</link> (
+)<para><emphasis>Initializes the buttons.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="toggle_8h_1ae819f86fad1b51d66f4294140b53ff77">buttonIsNewPress</link> (
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link> )<para><emphasis>Detects if button is a new press from most recent check by comparing
+previous value to current value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/toggle.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+13 <emphasis class="preprocessor">#ifndef&#32;BUTTONS_H_</emphasis>
+14 <emphasis class="preprocessor">#define&#32;BUTTONS_H_</emphasis>
+15 
+16 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+17 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="controller_8h">controller.h</link>&quot;</emphasis>
+18 
+22 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="toggle_8h_1a2b3d226371575c894979ab84bce95626">buttonInit</link>();
+23 
+34 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="toggle_8h_1ae819f86fad1b51d66f4294140b53ff77">buttonIsNewPress</link>(<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>);
+35 
+44 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="toggle_8h_1a72989c21af9d14672f6e59c44a2b59bc">buttonGetState</link>(<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>);
+45 
+46 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

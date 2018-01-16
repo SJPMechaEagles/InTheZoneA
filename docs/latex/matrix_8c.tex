@@ -1,18 +1,11 @@
-\section{src/matrix.c File Reference}
+\subsection{src/matrix.c File Reference}
 \label{matrix_8c}\index{src/matrix.\+c@{src/matrix.\+c}}
 {\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
-Include dependency graph for matrix.\+c\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=328pt]{matrix_8c__incl}
-\end{center}
-\end{figure}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ assert} (int assertion, const char $\ast$message)
@@ -47,11 +40,11 @@ double \textbf{ trace\+Matrix} (\textbf{ matrix} $\ast$m)
 \begin{DoxyCompactList}\small\item\em returns the transpose matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
+\subsubsection{Function Documentation}
 \mbox{\label{matrix_8c_a8e41e30382335ea89f90b72db0b44d6f}} 
 \index{matrix.\+c@{matrix.\+c}!assert@{assert}}
 \index{assert@{assert}!matrix.\+c@{matrix.\+c}}
-\subsubsection{assert()}
+\paragraph{assert()}
 {\footnotesize\ttfamily void assert (\begin{DoxyParamCaption}\item[{int}]{assertion,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
 
 
@@ -60,25 +53,20 @@ Asserts a condition is true.
 
 If the assertion is non-\/zero (i.\+e. true), then it returns. If the assertion is zero (i.\+e. false), then it display the string and aborts the program. This is ment to act like Python\textquotesingle{}s assert keyword. 
 
-Definition at line \textbf{ 14} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 15} of file \textbf{ matrix.\+c}.
+
+
+
+References \textbf{ error()}.
 
 
 
 Referenced by \textbf{ covariance\+Matrix()}, \textbf{ dot\+Diagonal\+Matrix()}, \textbf{ dot\+Product\+Matrix()}, \textbf{ identity\+Matrix()}, \textbf{ make\+Matrix()}, \textbf{ mean\+Matrix()}, \textbf{ multiply\+Matrix()}, and \textbf{ row\+Swap()}.
 
-
-\begin{DoxyCode}
-00014                                                 \{
-00015     \textcolor{keywordflow}{if} (assertion == 0) \{
-00016         fprintf(stderr, \textcolor{stringliteral}{"%s\(\backslash\)n"}, message);
-00017         exit(1);
-00018     \}
-00019 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_abbb8d2d20c2dd53a2269d017a336668f}} 
 \index{matrix.\+c@{matrix.\+c}!copy\+Matrix@{copy\+Matrix}}
 \index{copy\+Matrix@{copy\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{copy\+Matrix()}
+\paragraph{copy\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ copy\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -95,22 +83,16 @@ a copied matrix
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 52} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 53} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ scale\+Matrix()}.
 
-
-\begin{DoxyCode}
-00052                               \{
-00053     \textcolor{keywordflow}{return} scaleMatrix(m, 1);
-00054 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_ae6dab569959c360cf165136a3b625edd}} 
 \index{matrix.\+c@{matrix.\+c}!covariance\+Matrix@{covariance\+Matrix}}
 \index{covariance\+Matrix@{covariance\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{covariance\+Matrix()}
+\paragraph{covariance\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ covariance\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -127,51 +109,16 @@ a matrix with n row and n columns, where each element represents covariance of 2
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 168} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 169} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ free\+Matrix()}, \textbf{ \+\_\+matrix\+::height}, \textbf{ make\+Matrix()}, \textbf{ mean\+Matrix()}, and \textbf{ \+\_\+matrix\+::width}.
 
-
-\begin{DoxyCode}
-00168                                     \{
-00169     \textcolor{keywordtype}{int} i, j, k = 0;
-00170     matrix* out;
-00171     matrix* mean;
-00172     \textcolor{keywordtype}{double}* ptrA;
-00173     \textcolor{keywordtype}{double}* ptrB;
-00174     \textcolor{keywordtype}{double}* ptrOut;
-00175 
-00176     assert(m->height > 1, \textcolor{stringliteral}{"Height of matrix cannot be zero or one."});
-00177 
-00178     mean = meanMatrix(m);
-00179     out = makeMatrix(m->width, m->width);
-00180     ptrOut = out->data;
-00181 
-00182     \textcolor{keywordflow}{for} (i = 0; i < m->width; i++) \{
-00183         \textcolor{keywordflow}{for} (j = 0; j < m->width; j++) \{
-00184              ptrA = &m->data[i];
-00185              ptrB = &m->data[j];
-00186              *ptrOut = 0.0;
-00187              \textcolor{keywordflow}{for} (k = 0; k < m->height; k++) \{
-00188                  *ptrOut += (*ptrA - mean->data[i]) * (*ptrB - mean->data[j]);
-00189                  ptrA += m->width;
-00190                  ptrB += m->width;
-00191              \}
-00192              *ptrOut /= m->height - 1;
-00193              ptrOut++;
-00194         \}
-00195     \}
-00196 
-00197     freeMatrix(mean);
-00198     \textcolor{keywordflow}{return} out;
-00199 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_af49b525d7476c365833db9acd975e3a5}} 
 \index{matrix.\+c@{matrix.\+c}!dot\+Diagonal\+Matrix@{dot\+Diagonal\+Matrix}}
 \index{dot\+Diagonal\+Matrix@{dot\+Diagonal\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{dot\+Diagonal\+Matrix()}
+\paragraph{dot\+Diagonal\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ dot\+Diagonal\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{a,  }\item[{\textbf{ matrix} $\ast$}]{b }\end{DoxyParamCaption})}
 
 
@@ -192,53 +139,16 @@ the matrix result
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 385} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 389} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, \textbf{ make\+Matrix()}, and \textbf{ \+\_\+matrix\+::width}.
 
-
-\begin{DoxyCode}
-00385                                                 \{
-00386     matrix* out;
-00387     \textcolor{keywordtype}{double}* ptrOut;
-00388     \textcolor{keywordtype}{double}* ptrA;
-00389     \textcolor{keywordtype}{double}* ptrB;
-00390     \textcolor{keywordtype}{int} i, j;
-00391 
-00392     \textcolor{keywordflow}{if} (b != NULL) \{
-00393         assert(a->width == b->width && a->height == b->height, \textcolor{stringliteral}{"Matrices must be of the same
-       dimensionality."});
-00394     \}
-00395 
-00396     \textcolor{comment}{// Are we computing the sum of squares of the same matrix?}
-00397     \textcolor{keywordflow}{if} (a == b || b == NULL) \{
-00398         b = a; \textcolor{comment}{// May not appear safe, but we can do this without risk of losing b.}
-00399     \}
-00400 
-00401     out = makeMatrix(1, a->height);
-00402     ptrOut = out->data;
-00403     ptrA = a->data;
-00404     ptrB = b->data;
-00405 
-00406     \textcolor{keywordflow}{for} (i = 0; i < a->height; i++) \{
-00407         *ptrOut = 0;
-00408         \textcolor{keywordflow}{for} (j = 0; j < a->width; j++) \{
-00409             *ptrOut += *ptrA * *ptrB;
-00410             ptrA++;
-00411             ptrB++;
-00412         \}
-00413         ptrOut++;
-00414     \}
-00415 
-00416     \textcolor{keywordflow}{return} out;
-00417 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_a0b568a64e81a56779c2141b424475976}} 
 \index{matrix.\+c@{matrix.\+c}!dot\+Product\+Matrix@{dot\+Product\+Matrix}}
 \index{dot\+Product\+Matrix@{dot\+Product\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{dot\+Product\+Matrix()}
+\paragraph{dot\+Product\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ dot\+Product\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{a,  }\item[{\textbf{ matrix} $\ast$}]{b }\end{DoxyParamCaption})}
 
 
@@ -259,56 +169,16 @@ the result of the dot product
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 333} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 336} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, \textbf{ make\+Matrix()}, and \textbf{ \+\_\+matrix\+::width}.
 
-
-\begin{DoxyCode}
-00333                                                \{
-00334     matrix* out;
-00335     \textcolor{keywordtype}{double}* ptrOut;
-00336     \textcolor{keywordtype}{double}* ptrA;
-00337     \textcolor{keywordtype}{double}* ptrB;
-00338     \textcolor{keywordtype}{int} i, j, k;
-00339 
-00340     \textcolor{keywordflow}{if} (b != NULL) \{
-00341         assert(a->width == b->width, \textcolor{stringliteral}{"Matrices must be of the same dimensionality."});
-00342     \}
-00343 
-00344     \textcolor{comment}{// Are we computing the sum of squares of the same matrix?}
-00345     \textcolor{keywordflow}{if} (a == b || b == NULL) \{
-00346         b = a; \textcolor{comment}{// May not appear safe, but we can do this without risk of losing b.}
-00347     \}
-00348 
-00349     out = makeMatrix(b->height, a->height);
-00350     ptrOut = out->data;
-00351 
-00352     \textcolor{keywordflow}{for} (i = 0; i < a->height; i++) \{
-00353         ptrB = b->data;
-00354 
-00355         \textcolor{keywordflow}{for} (j = 0; j < b->height; j++) \{
-00356             ptrA = &a->data[ i * a->width ];
-00357 
-00358             *ptrOut = 0;
-00359             \textcolor{keywordflow}{for} (k = 0; k < a->width; k++) \{
-00360                 *ptrOut += *ptrA * *ptrB;
-00361                 ptrA++;
-00362                 ptrB++;
-00363             \}
-00364             ptrOut++;
-00365         \}
-00366     \}
-00367 
-00368     \textcolor{keywordflow}{return} out;
-00369 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_ae98365c910e9d688d2bdedec50d89a6b}} 
 \index{matrix.\+c@{matrix.\+c}!free\+Matrix@{free\+Matrix}}
 \index{free\+Matrix@{free\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{free\+Matrix()}
+\paragraph{free\+Matrix()}
 {\footnotesize\ttfamily void free\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -322,7 +192,7 @@ Frees the resources of a matrix.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 60} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 59} of file \textbf{ matrix.\+c}.
 
 
 
@@ -332,23 +202,10 @@ References \textbf{ \+\_\+matrix\+::data}.
 
 Referenced by \textbf{ covariance\+Matrix()}.
 
-
-\begin{DoxyCode}
-00060                            \{
-00061     \textcolor{keywordflow}{if} (m != NULL) \{
-00062         \textcolor{keywordflow}{if} (m->data != NULL) \{
-00063             free(m->data);
-00064             m->data = NULL;
-00065         \}
-00066         free(m);
-00067     \}
-00068     \textcolor{keywordflow}{return};
-00069 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_aa3f5e409b1641373be7cf7284e216d1a}} 
 \index{matrix.\+c@{matrix.\+c}!identity\+Matrix@{identity\+Matrix}}
 \index{identity\+Matrix@{identity\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{identity\+Matrix()}
+\paragraph{identity\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ identity\+Matrix (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
@@ -365,35 +222,16 @@ the identity matrix parameter.
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 94} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 93} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, and \textbf{ make\+Matrix()}.
 
-
-\begin{DoxyCode}
-00094                               \{
-00095     \textcolor{keywordtype}{int} i;
-00096     matrix *out;
-00097     \textcolor{keywordtype}{double}* ptr;
-00098 
-00099     assert(n > 0, \textcolor{stringliteral}{"Identity matrix must have value greater than zero."});
-00100 
-00101     out = makeMatrix(n, n);
-00102     ptr = out->data;
-00103     \textcolor{keywordflow}{for} (i = 0; i < n; i++) \{
-00104         *ptr = 1.0;
-00105         ptr += n + 1;
-00106     \}
-00107 
-00108     \textcolor{keywordflow}{return} out;
-00109 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_aae8b56c6fb44d9147b835f4006ca872c}} 
 \index{matrix.\+c@{matrix.\+c}!make\+Matrix@{make\+Matrix}}
 \index{make\+Matrix@{make\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{make\+Matrix()}
+\paragraph{make\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ make\+Matrix (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
 
 
@@ -412,7 +250,7 @@ the new matrix
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 27} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 28} of file \textbf{ matrix.\+c}.
 
 
 
@@ -422,30 +260,10 @@ References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+ma
 
 Referenced by \textbf{ covariance\+Matrix()}, \textbf{ dot\+Diagonal\+Matrix()}, \textbf{ dot\+Product\+Matrix()}, \textbf{ identity\+Matrix()}, \textbf{ init\+\_\+localization()}, \textbf{ mean\+Matrix()}, \textbf{ multiply\+Matrix()}, \textbf{ scale\+Matrix()}, and \textbf{ transpose\+Matrix()}.
 
-
-\begin{DoxyCode}
-00027                                           \{
-00028     matrix* out;
-00029     assert(width > 0 && height > 0, \textcolor{stringliteral}{"New matrix must be at least a 1 by 1"});
-00030     out = (matrix*) malloc(\textcolor{keyword}{sizeof}(matrix));
-00031 
-00032     assert(out != NULL, \textcolor{stringliteral}{"Out of memory."});
-00033 
-00034     out->width = width;
-00035     out->height = height;
-00036     out->data = (\textcolor{keywordtype}{double}*) malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}) * width * height);
-00037 
-00038     assert(out->data != NULL, \textcolor{stringliteral}{"Out of memory."});
-00039 
-00040     memset(out->data, 0.0, width * height * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
-00041 
-00042     \textcolor{keywordflow}{return} out;
-00043 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_ae4babf9b518a2d5d6b12776191e3b7de}} 
 \index{matrix.\+c@{matrix.\+c}!mean\+Matrix@{mean\+Matrix}}
 \index{mean\+Matrix@{mean\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{mean\+Matrix()}
+\paragraph{mean\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ mean\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -467,33 +285,10 @@ References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+ma
 
 Referenced by \textbf{ covariance\+Matrix()}.
 
-
-\begin{DoxyCode}
-00142                               \{
-00143     \textcolor{keywordtype}{int} i, j;
-00144     matrix* out;
-00145 
-00146     assert(m->height > 0, \textcolor{stringliteral}{"Height of matrix cannot be zero."});
-00147 
-00148     out = makeMatrix(m->width, 1);
-00149 
-00150     \textcolor{keywordflow}{for} (i = 0; i < m->width; i++) \{
-00151         \textcolor{keywordtype}{double}* ptr;
-00152         out->data[i] = 0.0;
-00153         ptr = &m->data[i];
-00154         \textcolor{keywordflow}{for} (j = 0; j < m->height; j++) \{
-00155             out->data[i] += *ptr;
-00156             ptr += out->width;
-00157         \}
-00158         out->data[i] /= (double) m->height;
-00159     \}
-00160     \textcolor{keywordflow}{return} out;
-00161 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_a63ed5c518b34768e9ef8e9d5f7d0b534}} 
 \index{matrix.\+c@{matrix.\+c}!multiply\+Matrix@{multiply\+Matrix}}
 \index{multiply\+Matrix@{multiply\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{multiply\+Matrix()}
+\paragraph{multiply\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ multiply\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{a,  }\item[{\textbf{ matrix} $\ast$}]{b }\end{DoxyParamCaption})}
 
 
@@ -509,49 +304,16 @@ Given a two matrices, returns the multiplication of the two.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 230} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 231} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, \textbf{ make\+Matrix()}, and \textbf{ \+\_\+matrix\+::width}.
 
-
-\begin{DoxyCode}
-00230                                              \{
-00231     \textcolor{keywordtype}{int} i, j, k;
-00232     matrix* out;
-00233     \textcolor{keywordtype}{double}* ptrOut;
-00234     \textcolor{keywordtype}{double}* ptrA;
-00235     \textcolor{keywordtype}{double}* ptrB;
-00236 
-00237     assert(a->width == b->height, \textcolor{stringliteral}{"Matrices have incorrect dimensions. a->width != b->height"});
-00238 
-00239     out = makeMatrix(b->width, a->height);
-00240     ptrOut = out->data;
-00241 
-00242     \textcolor{keywordflow}{for} (i = 0; i < a->height; i++) \{
-00243 
-00244         \textcolor{keywordflow}{for} (j = 0; j < b->width; j++) \{
-00245             ptrA = &a->data[ i * a->width ];
-00246             ptrB = &b->data[ j ];
-00247 
-00248             *ptrOut = 0;
-00249             \textcolor{keywordflow}{for} (k = 0; k < a->width; k++) \{
-00250                 *ptrOut += *ptrA * *ptrB;
-00251                 ptrA++;
-00252                 ptrB += b->width;
-00253             \}
-00254             ptrOut++;
-00255         \}
-00256     \}
-00257 
-00258     \textcolor{keywordflow}{return} out;
-00259 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_a50ab2b1ac33d6993d93522fc4f30a051}} 
 \index{matrix.\+c@{matrix.\+c}!print\+Matrix@{print\+Matrix}}
 \index{print\+Matrix@{print\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{print\+Matrix()}
+\paragraph{print\+Matrix()}
 {\footnotesize\ttfamily void print\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -565,31 +327,16 @@ Prints a matrix.
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 75} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 74} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, and \textbf{ \+\_\+matrix\+::width}.
 
-
-\begin{DoxyCode}
-00075                             \{
-00076     \textcolor{keywordtype}{int} i, j;
-00077     \textcolor{keywordtype}{double}* ptr = m->data;
-00078     printf(\textcolor{stringliteral}{"%d %d\(\backslash\)n"}, m->width, m->height);
-00079     \textcolor{keywordflow}{for} (i = 0; i < m->height; i++) \{
-00080         \textcolor{keywordflow}{for} (j = 0; j < m->width; j++) \{
-00081             printf(\textcolor{stringliteral}{" %9.6f"}, *(ptr++));
-00082         \}
-00083         printf(\textcolor{stringliteral}{"\(\backslash\)n"});
-00084     \}
-00085     \textcolor{keywordflow}{return};
-00086 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_acdd57777a972ce339153878fa917db14}} 
 \index{matrix.\+c@{matrix.\+c}!row\+Swap@{row\+Swap}}
 \index{row\+Swap@{row\+Swap}!matrix.\+c@{matrix.\+c}}
-\subsubsection{row\+Swap()}
+\paragraph{row\+Swap()}
 {\footnotesize\ttfamily void row\+Swap (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{a,  }\item[{int}]{p,  }\item[{int}]{q }\end{DoxyParamCaption})}
 
 
@@ -607,47 +354,16 @@ swaps the rows of a matrix. This method changes the input matrix. Given a matrix
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 290} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 292} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ assert()}, \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, and \textbf{ \+\_\+matrix\+::width}.
 
-
-\begin{DoxyCode}
-00290                                       \{
-00291     \textcolor{keywordtype}{int} i;
-00292     \textcolor{keywordtype}{double} temp;
-00293     \textcolor{keywordtype}{double}* pRow;
-00294     \textcolor{keywordtype}{double}* qRow;
-00295 
-00296     assert(a->height > 2, \textcolor{stringliteral}{"Matrix must have at least two rows to swap."});
-00297     assert(p < a->height && q < a->height, \textcolor{stringliteral}{"Values p and q must be less than the height of the matrix."});
-00298 
-00299     \textcolor{comment}{// If p and q are equal, do nothing.}
-00300     \textcolor{keywordflow}{if} (p == q) \{
-00301         \textcolor{keywordflow}{return};
-00302     \}
-00303 
-00304     pRow = a->data + (p * a->width);
-00305     qRow = a->data + (q * a->width);
-00306 
-00307     \textcolor{comment}{// Swap!}
-00308     \textcolor{keywordflow}{for} (i = 0; i < a->width; i++) \{
-00309         temp = *pRow;
-00310         *pRow = *qRow;
-00311         *qRow = temp;
-00312         pRow++;
-00313         qRow++;
-00314     \}
-00315 
-00316     \textcolor{keywordflow}{return};
-00317 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_a6b7faa6ba9ee987d0777d9d0bd0e7b32}} 
 \index{matrix.\+c@{matrix.\+c}!scale\+Matrix@{scale\+Matrix}}
 \index{scale\+Matrix@{scale\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{scale\+Matrix()}
+\paragraph{scale\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ scale\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m,  }\item[{double}]{value }\end{DoxyParamCaption})}
 
 
@@ -666,7 +382,7 @@ a new matrix where each element in the input matrix is multiplied by the scalar 
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 268} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 270} of file \textbf{ matrix.\+c}.
 
 
 
@@ -676,25 +392,10 @@ References \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, \te
 
 Referenced by \textbf{ copy\+Matrix()}.
 
-
-\begin{DoxyCode}
-00268                                              \{
-00269     \textcolor{keywordtype}{int} i, elements = m->width * m->height;
-00270     matrix* out = makeMatrix(m->width, m->height);
-00271     \textcolor{keywordtype}{double}* ptrM = m->data;
-00272     \textcolor{keywordtype}{double}* ptrOut = out->data;
-00273 
-00274     \textcolor{keywordflow}{for} (i = 0; i < elements; i++) \{
-00275         *(ptrOut++) = *(ptrM++) * value;
-00276     \}
-00277 
-00278     \textcolor{keywordflow}{return} out;
-00279 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_a4794df8b2032f961dd8b2d90276bc417}} 
 \index{matrix.\+c@{matrix.\+c}!trace\+Matrix@{trace\+Matrix}}
 \index{trace\+Matrix@{trace\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{trace\+Matrix()}
+\paragraph{trace\+Matrix()}
 {\footnotesize\ttfamily double trace\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -708,39 +409,16 @@ the sum of the elements along the diagonal.
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 116} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 115} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, and \textbf{ \+\_\+matrix\+::width}.
 
-
-\begin{DoxyCode}
-00116                               \{
-00117     \textcolor{keywordtype}{int} i;
-00118     \textcolor{keywordtype}{int} size;
-00119     \textcolor{keywordtype}{double}* ptr = m->data;
-00120     \textcolor{keywordtype}{double} sum = 0.0;
-00121 
-00122     \textcolor{keywordflow}{if} (m->height < m->width) \{
-00123         size = m->height;
-00124     \}
-00125     \textcolor{keywordflow}{else} \{
-00126         size = m->width;
-00127     \}
-00128 
-00129     \textcolor{keywordflow}{for} (i = 0; i < size; i++) \{
-00130         sum += *ptr;
-00131         ptr += m->width + 1;
-00132     \}
-00133 
-00134     \textcolor{keywordflow}{return} sum;
-00135 \}
-\end{DoxyCode}
 \mbox{\label{matrix_8c_a2936260302742748b0639e8ec71d4d9f}} 
 \index{matrix.\+c@{matrix.\+c}!transpose\+Matrix@{transpose\+Matrix}}
 \index{transpose\+Matrix@{transpose\+Matrix}!matrix.\+c@{matrix.\+c}}
-\subsubsection{transpose\+Matrix()}
+\paragraph{transpose\+Matrix()}
 {\footnotesize\ttfamily \textbf{ matrix}$\ast$ transpose\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ matrix} $\ast$}]{m }\end{DoxyParamCaption})}
 
 
@@ -757,29 +435,9 @@ the transposed matrix.
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 206} of file \textbf{ matrix.\+c}.
+Definition at line \textbf{ 207} of file \textbf{ matrix.\+c}.
 
 
 
 References \textbf{ \+\_\+matrix\+::data}, \textbf{ \+\_\+matrix\+::height}, \textbf{ make\+Matrix()}, and \textbf{ \+\_\+matrix\+::width}.
 
-
-\begin{DoxyCode}
-00206                                    \{
-00207     matrix* out = makeMatrix(m->height, m->width);
-00208     \textcolor{keywordtype}{double}* ptrM = m->data;
-00209     \textcolor{keywordtype}{int} i, j;
-00210 
-00211     \textcolor{keywordflow}{for} (i = 0; i < m->height; i++) \{
-00212         \textcolor{keywordtype}{double}* ptrOut;
-00213         ptrOut = &out->data[i];
-00214         \textcolor{keywordflow}{for} (j = 0; j < m->width; j++) \{
-00215             *ptrOut = *ptrM;
-00216             ptrM++;
-00217             ptrOut += out->width;
-00218         \}
-00219     \}
-00220 
-00221     \textcolor{keywordflow}{return} out;
-00222 \}
-\end{DoxyCode}

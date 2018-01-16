@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vmath_8c">
+    <title>vmath.c File Reference</title>
+    <programlisting>#include &quot;vmath.h&quot;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structpolar__cord">polar_cord</link> <link linkend="vmath_8c_1a832105cf858b3046c57c0d08a4e7c38b">cartesian_cord_to_polar</link> (
+struct <link linkend="structcord">cord</link> cords)<para><emphasis>Function to convert x and y 2 dimensional cartesian cordinated to
+polar coordinates.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structpolar__cord">polar_cord</link> <link linkend="vmath_8c_1a1c4a1747b714f5d4654f0614193f9e49">cartesian_to_polar</link> (
+float x, float y)<para><emphasis>Function to convert x and y 2 dimensional cartesian coordinated to
+polar coordinates.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="vmath_8c_1af082905f7eac6d03e92015146bbc1925">max</link> (
+int a, int b)<para><emphasis>the min of two values</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="vmath_8c_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link> (
+int a, int b)<para><emphasis>the min of two values</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double <link linkend="vmath_8c_1a2b83ceb814c90ebfa042a26d884ac159">sind</link> (
+double angle)<para><emphasis>sine of a angle in degrees</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/vmath.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="vmath_8h">vmath.h</link>&quot;</emphasis>
+2 
+<link linkend="vmath_8c_1a1c4a1747b714f5d4654f0614193f9e49">15 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structpolar__cord">polar_cord</link>&#32;<link linkend="vmath_8c_1a1c4a1747b714f5d4654f0614193f9e49">cartesian_to_polar</link>(float&#32;x,&#32;float&#32;y)&#32;{
+16 &#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;degree&#32;=&#32;0;
+17 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;magnitude&#32;=&#32;sqrt((fabs(x)&#32;*&#32;fabs(x))&#32;+&#32;(fabs(y)&#32;*&#32;fabs(y)));
+18 
+19 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(x&#32;&lt;&#32;0)&#32;{
+20 &#32;&#32;&#32;&#32;degree&#32;+=&#32;180.0;
+21 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(x&#32;&gt;&#32;0&#32;&amp;&amp;&#32;y&#32;&lt;&#32;0)&#32;{
+22 &#32;&#32;&#32;&#32;degree&#32;+=&#32;360.0;
+23 &#32;&#32;}
+24 
+25 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(x&#32;!=&#32;0&#32;&amp;&amp;&#32;y&#32;!=&#32;0)&#32;{
+26 &#32;&#32;&#32;&#32;degree&#32;+=&#32;atan((<emphasis class="keywordtype">float</emphasis>)y&#32;/&#32;(<emphasis class="keywordtype">float</emphasis>)x);
+27 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(x&#32;==&#32;0&#32;&amp;&amp;&#32;y&#32;&gt;&#32;0)&#32;{
+28 &#32;&#32;&#32;&#32;degree&#32;=&#32;90.0;
+29 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(y&#32;==&#32;0&#32;&amp;&amp;&#32;x&#32;&lt;&#32;0)&#32;{
+30 &#32;&#32;&#32;&#32;degree&#32;=&#32;180.0;
+31 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(x&#32;==&#32;0&#32;&amp;&amp;&#32;y&#32;&lt;&#32;0)&#32;{
+32 &#32;&#32;&#32;&#32;degree&#32;=&#32;270.0;
+33 &#32;&#32;}
+34 
+35 &#32;&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structpolar__cord">polar_cord</link>&#32;p;
+36 &#32;&#32;p.<link linkend="structpolar__cord_1a81b3a11d38d76719b02fcd425adaa216">angle</link>&#32;=&#32;degree;
+37 &#32;&#32;p.<link linkend="structpolar__cord_1aec2e25fecc82af176f0fcd23f1e02f0c">magnitue</link>&#32;=&#32;magnitude;
+38 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;p;
+39 }
+40 
+<link linkend="vmath_8c_1a832105cf858b3046c57c0d08a4e7c38b">53 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structpolar__cord">polar_cord</link>&#32;<link linkend="vmath_8c_1a832105cf858b3046c57c0d08a4e7c38b">cartesian_cord_to_polar</link>(struct&#32;<link linkend="structcord">cord</link>&#32;cords)&#32;{
+54 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="vmath_8c_1a1c4a1747b714f5d4654f0614193f9e49">cartesian_to_polar</link>(cords.x,&#32;cords.y);
+55 }
+56 
+<link linkend="vmath_8c_1a2b83ceb814c90ebfa042a26d884ac159">60 </link><emphasis class="keywordtype">double</emphasis>&#32;<link linkend="vmath_8c_1a2b83ceb814c90ebfa042a26d884ac159">sind</link>(<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structpolar__cord_1a81b3a11d38d76719b02fcd425adaa216">angle</link>)&#32;{
+61 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;angleradians&#32;=&#32;angle&#32;*&#32;<link linkend="vmath_8h_1ae71449b1cc6e6250b91f539153a7a0d3">M_PI</link>&#32;/&#32;180.0f;
+62 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;sin(angleradians);
+63 }
+64 
+<link linkend="vmath_8c_1abd8bbcfabb3ddef2ccaafb9928a37b95">71 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8c_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>(<emphasis class="keywordtype">int</emphasis>&#32;a,&#32;<emphasis class="keywordtype">int</emphasis>&#32;b)&#32;{
+72 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(a&#32;&lt;&#32;b)
+73 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;a;
+74 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;b;
+75 }
+76 
+<link linkend="vmath_8c_1af082905f7eac6d03e92015146bbc1925">83 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8c_1af082905f7eac6d03e92015146bbc1925">max</link>(<emphasis class="keywordtype">int</emphasis>&#32;a,&#32;<emphasis class="keywordtype">int</emphasis>&#32;b)&#32;{
+84 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(a&#32;&gt;&#32;b)
+85 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;a;
+86 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;b;
+87 }
+    </computeroutput></literallayout>
+</section>

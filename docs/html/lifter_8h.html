@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.2</span>
+   &#160;<span id="projectnumber">1.5.8</span>
    </div>
   </td>
  </tr>
@@ -90,24 +91,14 @@ $(document).ready(function(){initNavTree('lifter_8h.html','');});
 
 <p>Declarations and macros for controlling and manipulating the lifter.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;API.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="controller_8h_source.html">controller.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drive_8h_source.html">drive.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="motor__ports_8h_source.html">motor_ports.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="partner_8h_source.html">partner.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="potentiometer_8h_source.html">potentiometer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sensor__ports_8h_source.html">sensor_ports.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="slew_8h_source.html">slew.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="controller_8h_source.html">controller.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="potentiometer_8h_source.html">potentiometer.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="partner_8h_source.html">partner.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="drive_8h_source.html">drive.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for lifter.h:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lifter_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lifter_8h__dep__incl.svg" width="350" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<code>#include &lt;API.h&gt;</code><br />
 </div>
 <p><a href="lifter_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -119,10 +110,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a0685a3cee7d5cabe98d2c9c97bed5727"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a0685a3cee7d5cabe98d2c9c97bed5727">INIT_ROTATION</a>&#160;&#160;&#160;680</td></tr>
 <tr class="memdesc:a0685a3cee7d5cabe98d2c9c97bed5727"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial rotation of the lifter potentiometer at height zero.  <a href="#a0685a3cee7d5cabe98d2c9c97bed5727">More...</a><br /></td></tr>
 <tr class="separator:a0685a3cee7d5cabe98d2c9c97bed5727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad03f59237a197767913457abd53f1780"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#ad03f59237a197767913457abd53f1780">LIFTER_D</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:ad03f59237a197767913457abd53f1780"><td class="mdescLeft">&#160;</td><td class="mdescRight">The derivative constant for the lifter PID.  <a href="#ad03f59237a197767913457abd53f1780">More...</a><br /></td></tr>
-<tr class="separator:ad03f59237a197767913457abd53f1780"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12f8c1de242a92f5694e6b80b990773a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a12f8c1de242a92f5694e6b80b990773a">LIFTER_DOWN</a>&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 5, JOY_DOWN</td></tr>
+<tr class="memitem:a12f8c1de242a92f5694e6b80b990773a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a12f8c1de242a92f5694e6b80b990773a">LIFTER_DOWN</a>&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 6, JOY_DOWN</td></tr>
 <tr class="memdesc:a12f8c1de242a92f5694e6b80b990773a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lifter down controller params.  <a href="#a12f8c1de242a92f5694e6b80b990773a">More...</a><br /></td></tr>
 <tr class="separator:a12f8c1de242a92f5694e6b80b990773a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40a0b4dc0172c4133a34d5e3d8b69f9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a40a0b4dc0172c4133a34d5e3d8b69f9a">LIFTER_DOWN_PARTNER</a>&#160;&#160;&#160;<a class="el" href="controller_8h.html#a136e64cf351535da81cacb6a546cade6">PARTNER</a>, 5, JOY_DOWN</td></tr>
@@ -131,28 +119,46 @@ Macros</h2></td></tr>
 <tr class="memitem:ad4a88f04887d4f1f4e5fa057b29f68e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#ad4a88f04887d4f1f4e5fa057b29f68e9">LIFTER_DRIVER_LOAD</a>&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, <a class="el" href="controller_8h.html#a68881b6085c880930037b20764fe5aee">RIGHT_BUTTONS</a>, JOY_RIGHT</td></tr>
 <tr class="memdesc:ad4a88f04887d4f1f4e5fa057b29f68e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height to raise lifter to driver preload height.  <a href="#ad4a88f04887d4f1f4e5fa057b29f68e9">More...</a><br /></td></tr>
 <tr class="separator:ad4a88f04887d4f1f4e5fa057b29f68e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4950feabec4e85bf27c1f2e4ec98755a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a4950feabec4e85bf27c1f2e4ec98755a">LIFTER_I</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:a4950feabec4e85bf27c1f2e4ec98755a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The integral constant for the lifter PID.  <a href="#a4950feabec4e85bf27c1f2e4ec98755a">More...</a><br /></td></tr>
-<tr class="separator:a4950feabec4e85bf27c1f2e4ec98755a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5623433650815b810d784e0da176e3c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#ae5623433650815b810d784e0da176e3c">LIFTER_P</a>&#160;&#160;&#160;.15</td></tr>
-<tr class="memdesc:ae5623433650815b810d784e0da176e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The proportional constant for the lifter PID.  <a href="#ae5623433650815b810d784e0da176e3c">More...</a><br /></td></tr>
-<tr class="separator:ae5623433650815b810d784e0da176e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a5c0bbb7527bf1d45818fc4db97b68"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a96a5c0bbb7527bf1d45818fc4db97b68">LIFTER_UP</a>&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 5, JOY_UP</td></tr>
+<tr class="memitem:a96a5c0bbb7527bf1d45818fc4db97b68"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a96a5c0bbb7527bf1d45818fc4db97b68">LIFTER_UP</a>&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 6, JOY_UP</td></tr>
 <tr class="memdesc:a96a5c0bbb7527bf1d45818fc4db97b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lifter up controller params.  <a href="#a96a5c0bbb7527bf1d45818fc4db97b68">More...</a><br /></td></tr>
 <tr class="separator:a96a5c0bbb7527bf1d45818fc4db97b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbb0a4048f612d2042be2b1d2644a16e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#adbb0a4048f612d2042be2b1d2644a16e">LIFTER_UP_PARTNER</a>&#160;&#160;&#160;<a class="el" href="controller_8h.html#a136e64cf351535da81cacb6a546cade6">PARTNER</a>, 5, JOY_UP</td></tr>
 <tr class="memdesc:adbb0a4048f612d2042be2b1d2644a16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lifter up controller params for the partner.  <a href="#adbb0a4048f612d2042be2b1d2644a16e">More...</a><br /></td></tr>
 <tr class="separator:adbb0a4048f612d2042be2b1d2644a16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6fa1d908306aad3eede033d59f2885e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#ab6fa1d908306aad3eede033d59f2885e">MAIN_LIFTER_D</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ab6fa1d908306aad3eede033d59f2885e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The derivative constant for the main lifter PID.  <a href="#ab6fa1d908306aad3eede033d59f2885e">More...</a><br /></td></tr>
+<tr class="separator:ab6fa1d908306aad3eede033d59f2885e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf35babe449f468876c16d77c0465821"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#adf35babe449f468876c16d77c0465821">MAIN_LIFTER_I</a>&#160;&#160;&#160;0.0000001</td></tr>
+<tr class="memdesc:adf35babe449f468876c16d77c0465821"><td class="mdescLeft">&#160;</td><td class="mdescRight">The integral constant for the main lifter PID.  <a href="#adf35babe449f468876c16d77c0465821">More...</a><br /></td></tr>
+<tr class="separator:adf35babe449f468876c16d77c0465821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54af37b0a6c7c352ba160922243a5c33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a54af37b0a6c7c352ba160922243a5c33">MAIN_LIFTER_MIN_HEIGHT</a>&#160;&#160;&#160;1700</td></tr>
 <tr class="separator:a54af37b0a6c7c352ba160922243a5c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018488685535fd70bf59e3c5616140c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a018488685535fd70bf59e3c5616140c1">MAIN_LIFTER_P</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a018488685535fd70bf59e3c5616140c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The proportional constant for the main lifter PID.  <a href="#a018488685535fd70bf59e3c5616140c1">More...</a><br /></td></tr>
+<tr class="separator:a018488685535fd70bf59e3c5616140c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82799bdc8f8a1a7a38785b446bdd6a9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a82799bdc8f8a1a7a38785b446bdd6a9a">MAIN_LIFTER_POT</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a82799bdc8f8a1a7a38785b446bdd6a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1577e085f9f697084436d412ac4bb838"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a1577e085f9f697084436d412ac4bb838">SECONDARY_LIFTER_MAX_HEIGHT</a>&#160;&#160;&#160;2500</td></tr>
+<tr class="memitem:a3ff007feb4abe2a93cb3a25f4808c787"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a3ff007feb4abe2a93cb3a25f4808c787">SECONDARY_LIFTER_D</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a3ff007feb4abe2a93cb3a25f4808c787"><td class="mdescLeft">&#160;</td><td class="mdescRight">The derivative constant for the secondary lifter PID.  <a href="#a3ff007feb4abe2a93cb3a25f4808c787">More...</a><br /></td></tr>
+<tr class="separator:a3ff007feb4abe2a93cb3a25f4808c787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b69ad14b64769ce9e96b5a3046c0d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a18b69ad14b64769ce9e96b5a3046c0d9">SECONDARY_LIFTER_DOWN</a>&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 8, JOY_DOWN</td></tr>
+<tr class="memdesc:a18b69ad14b64769ce9e96b5a3046c0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The secondary lifter down controller params.  <a href="#a18b69ad14b64769ce9e96b5a3046c0d9">More...</a><br /></td></tr>
+<tr class="separator:a18b69ad14b64769ce9e96b5a3046c0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8b61f7c2fc97e6cfeb3feabd3b8260"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a7d8b61f7c2fc97e6cfeb3feabd3b8260">SECONDARY_LIFTER_I</a>&#160;&#160;&#160;0.000</td></tr>
+<tr class="memdesc:a7d8b61f7c2fc97e6cfeb3feabd3b8260"><td class="mdescLeft">&#160;</td><td class="mdescRight">The integral constant for the secondary lifter PID.  <a href="#a7d8b61f7c2fc97e6cfeb3feabd3b8260">More...</a><br /></td></tr>
+<tr class="separator:a7d8b61f7c2fc97e6cfeb3feabd3b8260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1577e085f9f697084436d412ac4bb838"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a1577e085f9f697084436d412ac4bb838">SECONDARY_LIFTER_MAX_HEIGHT</a>&#160;&#160;&#160;3120</td></tr>
 <tr class="separator:a1577e085f9f697084436d412ac4bb838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3698510d2e3be839cbfb090f101cfcf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#ab3698510d2e3be839cbfb090f101cfcf">SECONDARY_LIFTER_MIN_HEIGHT</a>&#160;&#160;&#160;1300</td></tr>
+<tr class="memitem:ab3698510d2e3be839cbfb090f101cfcf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#ab3698510d2e3be839cbfb090f101cfcf">SECONDARY_LIFTER_MIN_HEIGHT</a>&#160;&#160;&#160;2000</td></tr>
 <tr class="separator:ab3698510d2e3be839cbfb090f101cfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63dd166fe901eb29af4888c0c1a74117"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a63dd166fe901eb29af4888c0c1a74117">SECONDARY_LIFTER_P</a>&#160;&#160;&#160;.05</td></tr>
+<tr class="memdesc:a63dd166fe901eb29af4888c0c1a74117"><td class="mdescLeft">&#160;</td><td class="mdescRight">The proportional constant for the secondary lifter PID.  <a href="#a63dd166fe901eb29af4888c0c1a74117">More...</a><br /></td></tr>
+<tr class="separator:a63dd166fe901eb29af4888c0c1a74117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72522c3c839198d275d956af1b759ff3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a72522c3c839198d275d956af1b759ff3">SECONDARY_LIFTER_POT_PORT</a>&#160;&#160;&#160;2</td></tr>
 <tr class="separator:a72522c3c839198d275d956af1b759ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69dbccd126807ef1c7b3994bb96c687d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a69dbccd126807ef1c7b3994bb96c687d">SECONDARY_LIFTER_UP</a>&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 8, JOY_UP</td></tr>
+<tr class="memdesc:a69dbccd126807ef1c7b3994bb96c687d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The secondary lifter up controller params.  <a href="#a69dbccd126807ef1c7b3994bb96c687d">More...</a><br /></td></tr>
+<tr class="separator:a69dbccd126807ef1c7b3994bb96c687d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4679d8ea8690999a6c6c7c0cb245c879"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lifter_8h.html#a4679d8ea8690999a6c6c7c0cb245c879">THRESHOLD</a>&#160;&#160;&#160;10</td></tr>
 <tr class="memdesc:a4679d8ea8690999a6c6c7c0cb245c879"><td class="mdescLeft">&#160;</td><td class="mdescRight">The threshold of a signficant speed for the lifter.  <a href="#a4679d8ea8690999a6c6c7c0cb245c879">More...</a><br /></td></tr>
 <tr class="separator:a4679d8ea8690999a6c6c7c0cb245c879"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,7 +220,7 @@ Functions</h2></td></tr>
 
 <p>The integral constant for the lifter PID. </p>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00048">48</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00062">62</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
 </div>
 </div>
@@ -234,25 +240,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00022">22</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00111">lifterPotentiometerToDegree()</a>.</p>
-
-</div>
-</div>
-<a id="ad03f59237a197767913457abd53f1780"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad03f59237a197767913457abd53f1780">&#9670;&nbsp;</a></span>LIFTER_D</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LIFTER_D&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The derivative constant for the lifter PID. </p>
-
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00032">32</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00196">lifterPotentiometerToDegree()</a>.</p>
 
 </div>
 </div>
@@ -263,16 +251,16 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LIFTER_DOWN&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 5, JOY_DOWN</td>
+          <td class="memname">#define LIFTER_DOWN&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 6, JOY_DOWN</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The lifter down controller params. </p>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00058">58</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00072">72</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00083">update_lifter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00090">main_lifter_update()</a>.</p>
 
 </div>
 </div>
@@ -290,7 +278,7 @@ Functions</h2></td></tr>
 
 <p>The lifter down controller params for the partner. </p>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00073">73</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00097">97</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
 </div>
 </div>
@@ -308,43 +296,7 @@ Functions</h2></td></tr>
 
 <p>Height to raise lifter to driver preload height. </p>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00063">63</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
-
-</div>
-</div>
-<a id="a4950feabec4e85bf27c1f2e4ec98755a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4950feabec4e85bf27c1f2e4ec98755a">&#9670;&nbsp;</a></span>LIFTER_I</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LIFTER_I&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The integral constant for the lifter PID. </p>
-
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00042">42</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
-
-</div>
-</div>
-<a id="ae5623433650815b810d784e0da176e3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5623433650815b810d784e0da176e3c">&#9670;&nbsp;</a></span>LIFTER_P</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LIFTER_P&#160;&#160;&#160;.15</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The proportional constant for the lifter PID. </p>
-
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00027">27</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00087">87</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
 </div>
 </div>
@@ -355,16 +307,16 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LIFTER_UP&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 5, JOY_UP</td>
+          <td class="memname">#define LIFTER_UP&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 6, JOY_UP</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The lifter up controller params. </p>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00053">53</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00067">67</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00083">update_lifter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00090">main_lifter_update()</a>.</p>
 
 </div>
 </div>
@@ -382,7 +334,43 @@ Functions</h2></td></tr>
 
 <p>The lifter up controller params for the partner. </p>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00068">68</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00092">92</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+
+</div>
+</div>
+<a id="ab6fa1d908306aad3eede033d59f2885e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6fa1d908306aad3eede033d59f2885e">&#9670;&nbsp;</a></span>MAIN_LIFTER_D</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAIN_LIFTER_D&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The derivative constant for the main lifter PID. </p>
+
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00047">47</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+
+</div>
+</div>
+<a id="adf35babe449f468876c16d77c0465821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf35babe449f468876c16d77c0465821">&#9670;&nbsp;</a></span>MAIN_LIFTER_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAIN_LIFTER_I&#160;&#160;&#160;0.0000001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The integral constant for the main lifter PID. </p>
+
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00052">52</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
 </div>
 </div>
@@ -398,9 +386,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00083">83</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00107">107</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00083">update_lifter()</a>.</p>
+</div>
+</div>
+<a id="a018488685535fd70bf59e3c5616140c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a018488685535fd70bf59e3c5616140c1">&#9670;&nbsp;</a></span>MAIN_LIFTER_P</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAIN_LIFTER_P&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The proportional constant for the main lifter PID. </p>
+
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00042">42</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
 </div>
 </div>
@@ -416,9 +420,69 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00081">81</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00105">105</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00083">update_lifter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>, and <a class="el" href="lifter_8c_source.html#l00090">main_lifter_update()</a>.</p>
+
+</div>
+</div>
+<a id="a3ff007feb4abe2a93cb3a25f4808c787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ff007feb4abe2a93cb3a25f4808c787">&#9670;&nbsp;</a></span>SECONDARY_LIFTER_D</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SECONDARY_LIFTER_D&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The derivative constant for the secondary lifter PID. </p>
+
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00032">32</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00130">secondary_lifter_update()</a>.</p>
+
+</div>
+</div>
+<a id="a18b69ad14b64769ce9e96b5a3046c0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b69ad14b64769ce9e96b5a3046c0d9">&#9670;&nbsp;</a></span>SECONDARY_LIFTER_DOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SECONDARY_LIFTER_DOWN&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 8, JOY_DOWN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The secondary lifter down controller params. </p>
+
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00082">82</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00130">secondary_lifter_update()</a>.</p>
+
+</div>
+</div>
+<a id="a7d8b61f7c2fc97e6cfeb3feabd3b8260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d8b61f7c2fc97e6cfeb3feabd3b8260">&#9670;&nbsp;</a></span>SECONDARY_LIFTER_I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SECONDARY_LIFTER_I&#160;&#160;&#160;0.000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The integral constant for the secondary lifter PID. </p>
+
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00037">37</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00130">secondary_lifter_update()</a>.</p>
 
 </div>
 </div>
@@ -429,14 +493,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SECONDARY_LIFTER_MAX_HEIGHT&#160;&#160;&#160;2500</td>
+          <td class="memname">#define SECONDARY_LIFTER_MAX_HEIGHT&#160;&#160;&#160;3120</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00077">77</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00083">update_lifter()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00101">101</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
 </div>
 </div>
@@ -447,12 +509,32 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SECONDARY_LIFTER_MIN_HEIGHT&#160;&#160;&#160;1300</td>
+          <td class="memname">#define SECONDARY_LIFTER_MIN_HEIGHT&#160;&#160;&#160;2000</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00079">79</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00103">103</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+
+</div>
+</div>
+<a id="a63dd166fe901eb29af4888c0c1a74117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63dd166fe901eb29af4888c0c1a74117">&#9670;&nbsp;</a></span>SECONDARY_LIFTER_P</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SECONDARY_LIFTER_P&#160;&#160;&#160;.05</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The proportional constant for the secondary lifter PID. </p>
+
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00027">27</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00130">secondary_lifter_update()</a>.</p>
 
 </div>
 </div>
@@ -468,9 +550,29 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00075">75</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00099">99</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00083">update_lifter()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>, and <a class="el" href="lifter_8c_source.html#l00130">secondary_lifter_update()</a>.</p>
+
+</div>
+</div>
+<a id="a69dbccd126807ef1c7b3994bb96c687d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69dbccd126807ef1c7b3994bb96c687d">&#9670;&nbsp;</a></span>SECONDARY_LIFTER_UP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SECONDARY_LIFTER_UP&#160;&#160;&#160;<a class="el" href="controller_8h.html#a3fa2d3bf1901157f734a584d47b25d8b">MASTER</a>, 8, JOY_UP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The secondary lifter up controller params. </p>
+
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00077">77</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00130">secondary_lifter_update()</a>.</p>
 
 </div>
 </div>
@@ -488,7 +590,7 @@ Functions</h2></td></tr>
 
 <p>The threshold of a signficant speed for the lifter. </p>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00037">37</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8h_source.html#l00057">57</a> of file <a class="el" href="lifter_8h_source.html">lifter.h</a>.</p>
 
 </div>
 </div>
@@ -513,11 +615,10 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/17/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00133">133</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00216">216</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
-<p class="reference">References <a class="el" href="lifter_8c_source.html#l00122">getLifterTicks()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                         {</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ticks = <a class="code" href="lifter_8c.html#acdf909159b0406c48099843f2306be78">getLifterTicks</a>();</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">return</span> (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) + 0.0198 * ticks + 2.3033);</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div><div class="ttc" id="lifter_8c_html_acdf909159b0406c48099843f2306be78"><div class="ttname"><a href="lifter_8c.html#acdf909159b0406c48099843f2306be78">getLifterTicks</a></div><div class="ttdeci">int getLifterTicks()</div><div class="ttdoc">Gets the value of the lifter pot. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8c_source.html#l00122">lifter.c:122</a></div></div>
-</div><!-- fragment -->
+<p class="reference">References <a class="el" href="lifter_8c_source.html#l00207">getLifterTicks()</a>.</p>
+
 </div>
 </div>
 <a id="acdf909159b0406c48099843f2306be78"></a>
@@ -540,13 +641,12 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00122">122</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00207">207</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
-<p class="reference">References <a class="el" href="sensor__ports_8h_source.html#l00020">LIFTER</a>.</p>
+<p class="reference">References <a class="el" href="sensor__ports_8h_source.html#l00019">LIFTER</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00133">getLifterHeight()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                     {</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">return</span> analogRead(<a class="code" href="sensor__ports_8h.html#a1968b8c13fa0757cc721c96a67407d9b">LIFTER</a>);</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div><div class="ttc" id="sensor__ports_8h_html_a1968b8c13fa0757cc721c96a67407d9b"><div class="ttname"><a href="sensor__ports_8h.html#a1968b8c13fa0757cc721c96a67407d9b">LIFTER</a></div><div class="ttdeci">#define LIFTER</div><div class="ttdef"><b>Definition:</b> <a href="sensor__ports_8h_source.html#l00020">sensor_ports.h:20</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00216">getLifterHeight()</a>.</p>
+
 </div>
 </div>
 <a id="ab0460888f3213e5510bd25ae1e152a75"></a>
@@ -576,14 +676,10 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>10/13/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00111">111</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00196">196</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
 <p class="reference">References <a class="el" href="potentiometer_8h_source.html#l00005">DEG_MAX</a>, <a class="el" href="lifter_8h_source.html#l00022">INIT_ROTATION</a>, and <a class="el" href="potentiometer_8h_source.html#l00004">TICK_MAX</a>.</p>
-<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                        {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">return</span> (<a class="code" href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">x</a> - <a class="code" href="lifter_8h.html#a0685a3cee7d5cabe98d2c9c97bed5727">INIT_ROTATION</a>) / <a class="code" href="potentiometer_8h.html#ad40f2bbc4e57baed2d9e900750d94a7f">TICK_MAX</a> * <a class="code" href="potentiometer_8h.html#ab77b81696cf83be632fca5f56b4c3595">DEG_MAX</a>;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div><div class="ttc" id="potentiometer_8h_html_ad40f2bbc4e57baed2d9e900750d94a7f"><div class="ttname"><a href="potentiometer_8h.html#ad40f2bbc4e57baed2d9e900750d94a7f">TICK_MAX</a></div><div class="ttdeci">#define TICK_MAX</div><div class="ttdef"><b>Definition:</b> <a href="potentiometer_8h_source.html#l00004">potentiometer.h:4</a></div></div>
-<div class="ttc" id="structcord_html_a2eef9b681474b679cf87b0c20eced2cd"><div class="ttname"><a href="structcord.html#a2eef9b681474b679cf87b0c20eced2cd">cord::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="vmath_8h_source.html#l00034">vmath.h:34</a></div></div>
-<div class="ttc" id="lifter_8h_html_a0685a3cee7d5cabe98d2c9c97bed5727"><div class="ttname"><a href="lifter_8h.html#a0685a3cee7d5cabe98d2c9c97bed5727">INIT_ROTATION</a></div><div class="ttdeci">#define INIT_ROTATION</div><div class="ttdoc">The initial rotation of the lifter potentiometer at height zero. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8h_source.html#l00022">lifter.h:22</a></div></div>
-<div class="ttc" id="potentiometer_8h_html_ab77b81696cf83be632fca5f56b4c3595"><div class="ttname"><a href="potentiometer_8h.html#ab77b81696cf83be632fca5f56b4c3595">DEG_MAX</a></div><div class="ttdeci">#define DEG_MAX</div><div class="ttdef"><b>Definition:</b> <a href="potentiometer_8h_source.html#l00005">potentiometer.h:5</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad36c37086a91046af4e6f619618b7719"></a>
@@ -605,12 +701,10 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Christian DeSimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/12/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00053">53</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00070">70</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00013">MIN_SPEED</a>, and <a class="el" href="lifter_8c_source.html#l00022">set_main_lifter_motors()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</a>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="motor__ports_8h_html_ad5f5efaa5cb771bd06da4bfe6046809e"><div class="ttname"><a href="motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</a></div><div class="ttdeci">#define MIN_SPEED</div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00013">motor_ports.h:13</a></div></div>
-<div class="ttc" id="lifter_8c_html_ad00a195af30f246924d6e1a30095b882"><div class="ttname"><a href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a></div><div class="ttdeci">void set_main_lifter_motors(const int v)</div><div class="ttdoc">Sets the main lifter motors to the given value. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8c_source.html#l00022">lifter.c:22</a></div></div>
-</div><!-- fragment -->
+<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00012">MAX_SPEED</a>, and <a class="el" href="lifter_8c_source.html#l00045">set_main_lifter_motors()</a>.</p>
+
 </div>
 </div>
 <a id="af76abbd394bf206ab56fa237d776f2b3"></a>
@@ -632,12 +726,10 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Christian DeSimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/12/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00073">73</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00086">86</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00013">MIN_SPEED</a>, and <a class="el" href="lifter_8c_source.html#l00011">set_secondary_lifter_motors()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                             {</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</a>);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="motor__ports_8h_html_ad5f5efaa5cb771bd06da4bfe6046809e"><div class="ttname"><a href="motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</a></div><div class="ttdeci">#define MIN_SPEED</div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00013">motor_ports.h:13</a></div></div>
-<div class="ttc" id="lifter_8c_html_a78640d547d9361951a92d0bc00939536"><div class="ttname"><a href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a></div><div class="ttdeci">void set_secondary_lifter_motors(const int v)</div><div class="ttdoc">Sets the secondary lifter motors to the given value. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8c_source.html#l00011">lifter.c:11</a></div></div>
-</div><!-- fragment -->
+<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00012">MAX_SPEED</a>, and <a class="el" href="lifter_8c_source.html#l00033">set_secondary_lifter_motors()</a>.</p>
+
 </div>
 </div>
 <a id="a2e2bd38b5b8b52378f3510368bf8aa0a"></a>
@@ -659,12 +751,12 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Christian DeSimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/12/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00043">43</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00062">62</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00012">MAX_SPEED</a>, and <a class="el" href="lifter_8c_source.html#l00022">set_main_lifter_motors()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</a>);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div><div class="ttc" id="motor__ports_8h_html_ac2cd96d53dd3ba6407db6766c3d92b26"><div class="ttname"><a href="motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</a></div><div class="ttdeci">#define MAX_SPEED</div><div class="ttdoc">Max motor speed. </div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00012">motor_ports.h:12</a></div></div>
-<div class="ttc" id="lifter_8c_html_ad00a195af30f246924d6e1a30095b882"><div class="ttname"><a href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a></div><div class="ttdeci">void set_main_lifter_motors(const int v)</div><div class="ttdoc">Sets the main lifter motors to the given value. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8c_source.html#l00022">lifter.c:22</a></div></div>
-</div><!-- fragment -->
+<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00012">MAX_SPEED</a>, and <a class="el" href="lifter_8c_source.html#l00045">set_main_lifter_motors()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00009">autostack_routine()</a>.</p>
+
 </div>
 </div>
 <a id="a786f679ea48bb8c80e00fbac9a69911b"></a>
@@ -686,12 +778,10 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Christian DeSimone </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/12/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00063">63</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00078">78</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00012">MAX_SPEED</a>, and <a class="el" href="lifter_8c_source.html#l00011">set_secondary_lifter_motors()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                             {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</a>);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div><div class="ttc" id="motor__ports_8h_html_ac2cd96d53dd3ba6407db6766c3d92b26"><div class="ttname"><a href="motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</a></div><div class="ttdeci">#define MAX_SPEED</div><div class="ttdoc">Max motor speed. </div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00012">motor_ports.h:12</a></div></div>
-<div class="ttc" id="lifter_8c_html_a78640d547d9361951a92d0bc00939536"><div class="ttname"><a href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a></div><div class="ttdeci">void set_secondary_lifter_motors(const int v)</div><div class="ttdoc">Sets the secondary lifter motors to the given value. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8c_source.html#l00011">lifter.c:11</a></div></div>
-</div><!-- fragment -->
+<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00017">MIN_SPEED</a>, and <a class="el" href="lifter_8c_source.html#l00033">set_secondary_lifter_motors()</a>.</p>
+
 </div>
 </div>
 <a id="abddc7cb502e12fa277b627c90a45efb1"></a>
@@ -720,8 +810,8 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/12/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00033">33</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                             {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00054">54</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+
 </div>
 </div>
 <a id="ad00a195af30f246924d6e1a30095b882"></a>
@@ -750,14 +840,12 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00022">22</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00045">45</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00056">MOTOR_LIFT</a>, and <a class="el" href="slew_8c_source.html#l00089">set_motor_immediate()</a>.</p>
+<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00060">MOTOR_LIFT</a>, and <a class="el" href="slew_8c_source.html#l00073">set_motor_slew()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00053">lower_main_lifter()</a>, <a class="el" href="lifter_8c_source.html#l00043">raise_main_lifter()</a>, and <a class="el" href="lifter_8c_source.html#l00083">update_lifter()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                         {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a>(<a class="code" href="motor__ports_8h.html#a0cbefbf749abca03437a97c9ca45863a">MOTOR_LIFT</a>, v);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div><div class="ttc" id="motor__ports_8h_html_a0cbefbf749abca03437a97c9ca45863a"><div class="ttname"><a href="motor__ports_8h.html#a0cbefbf749abca03437a97c9ca45863a">MOTOR_LIFT</a></div><div class="ttdeci">#define MOTOR_LIFT</div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00056">motor_ports.h:56</a></div></div>
-<div class="ttc" id="slew_8h_html_a9f8b8ae577ef938622024545711f0151"><div class="ttname"><a href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a></div><div class="ttdeci">void set_motor_immediate(int motor, int speed)</div><div class="ttdoc">Sets the motor speed ignoring the slew controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00089">slew.c:89</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>, <a class="el" href="lifter_8c_source.html#l00009">autostack_routine()</a>, <a class="el" href="lifter_8c_source.html#l00070">lower_main_lifter()</a>, <a class="el" href="lifter_8c_source.html#l00090">main_lifter_update()</a>, and <a class="el" href="lifter_8c_source.html#l00062">raise_main_lifter()</a>.</p>
+
 </div>
 </div>
 <a id="a78640d547d9361951a92d0bc00939536"></a>
@@ -786,14 +874,12 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>1/6/2018 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00011">11</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00033">33</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00059">MOTOR_SECONDARY_LIFTER</a>, and <a class="el" href="slew_8c_source.html#l00089">set_motor_immediate()</a>.</p>
+<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00063">MOTOR_SECONDARY_LIFTER</a>, and <a class="el" href="slew_8c_source.html#l00090">set_motor_immediate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00073">lower_secondary_lifter()</a>, <a class="el" href="lifter_8c_source.html#l00063">raise_secondary_lifter()</a>, and <a class="el" href="lifter_8c_source.html#l00083">update_lifter()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                              {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a>(<a class="code" href="motor__ports_8h.html#a85596f3eea4e187ef652eac88014726f">MOTOR_SECONDARY_LIFTER</a>, v);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div><div class="ttc" id="slew_8h_html_a9f8b8ae577ef938622024545711f0151"><div class="ttname"><a href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a></div><div class="ttdeci">void set_motor_immediate(int motor, int speed)</div><div class="ttdoc">Sets the motor speed ignoring the slew controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00089">slew.c:89</a></div></div>
-<div class="ttc" id="motor__ports_8h_html_a85596f3eea4e187ef652eac88014726f"><div class="ttname"><a href="motor__ports_8h.html#a85596f3eea4e187ef652eac88014726f">MOTOR_SECONDARY_LIFTER</a></div><div class="ttdeci">#define MOTOR_SECONDARY_LIFTER</div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00059">motor_ports.h:59</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>, <a class="el" href="lifter_8c_source.html#l00086">lower_secondary_lifter()</a>, <a class="el" href="lifter_8c_source.html#l00078">raise_secondary_lifter()</a>, and <a class="el" href="lifter_8c_source.html#l00130">secondary_lifter_update()</a>.</p>
+
 </div>
 </div>
 <a id="a59bb7413777ca16aba124aaedf95c79b"></a>
@@ -815,22 +901,12 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/9/2017 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00083">83</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00183">183</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
 
-<p class="reference">References <a class="el" href="lifter_8h_source.html#l00058">LIFTER_DOWN</a>, <a class="el" href="lifter_8h_source.html#l00053">LIFTER_UP</a>, <a class="el" href="lifter_8h_source.html#l00083">MAIN_LIFTER_MIN_HEIGHT</a>, <a class="el" href="lifter_8h_source.html#l00081">MAIN_LIFTER_POT</a>, <a class="el" href="motor__ports_8h_source.html#l00012">MAX_SPEED</a>, <a class="el" href="motor__ports_8h_source.html#l00013">MIN_SPEED</a>, <a class="el" href="lifter_8h_source.html#l00077">SECONDARY_LIFTER_MAX_HEIGHT</a>, <a class="el" href="lifter_8h_source.html#l00075">SECONDARY_LIFTER_POT_PORT</a>, <a class="el" href="lifter_8c_source.html#l00022">set_main_lifter_motors()</a>, and <a class="el" href="lifter_8c_source.html#l00011">set_secondary_lifter_motors()</a>.</p>
+<p class="reference">References <a class="el" href="lifter_8c_source.html#l00090">main_lifter_update()</a>, <a class="el" href="lifter_8c_source.html#l00130">secondary_lifter_update()</a>, and <a class="el" href="lifter_8c_source.html#l00088">secondary_override</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00042">operatorControl()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                     {</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  printf(<span class="stringliteral">&quot;%d\n&quot;</span>, analogRead(1));</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">if</span>(joystickGetDigital(<a class="code" href="lifter_8h.html#a12f8c1de242a92f5694e6b80b990773a">LIFTER_DOWN</a>) &amp;&amp; analogRead(<a class="code" href="lifter_8h.html#a82799bdc8f8a1a7a38785b446bdd6a9a">MAIN_LIFTER_POT</a>) &lt; <a class="code" href="lifter_8h.html#a54af37b0a6c7c352ba160922243a5c33">MAIN_LIFTER_MIN_HEIGHT</a>) {</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</a>);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</a>);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(<a class="code" href="lifter_8h.html#a12f8c1de242a92f5694e6b80b990773a">LIFTER_DOWN</a>) &amp;&amp; analogRead(<a class="code" href="lifter_8h.html#a82799bdc8f8a1a7a38785b446bdd6a9a">MAIN_LIFTER_POT</a>) &gt;= <a class="code" href="lifter_8h.html#a54af37b0a6c7c352ba160922243a5c33">MAIN_LIFTER_MIN_HEIGHT</a>) {</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</a>);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a>(0);</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(<a class="code" href="lifter_8h.html#a96a5c0bbb7527bf1d45818fc4db97b68">LIFTER_UP</a>) &amp;&amp; analogRead(<a class="code" href="lifter_8h.html#a72522c3c839198d275d956af1b759ff3">SECONDARY_LIFTER_POT_PORT</a>) &lt; <a class="code" href="lifter_8h.html#a1577e085f9f697084436d412ac4bb838">SECONDARY_LIFTER_MAX_HEIGHT</a>) {</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</a>);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a>(0);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(joystickGetDigital(<a class="code" href="lifter_8h.html#a96a5c0bbb7527bf1d45818fc4db97b68">LIFTER_UP</a>) &amp;&amp; analogRead(<a class="code" href="lifter_8h.html#a72522c3c839198d275d956af1b759ff3">SECONDARY_LIFTER_POT_PORT</a>) &gt;= <a class="code" href="lifter_8h.html#a1577e085f9f697084436d412ac4bb838">SECONDARY_LIFTER_MAX_HEIGHT</a>) {</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</a>);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a>(<a class="code" href="motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</a>);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a>(0);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a>(0);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div><div class="ttc" id="lifter_8h_html_a12f8c1de242a92f5694e6b80b990773a"><div class="ttname"><a href="lifter_8h.html#a12f8c1de242a92f5694e6b80b990773a">LIFTER_DOWN</a></div><div class="ttdeci">#define LIFTER_DOWN</div><div class="ttdoc">The lifter down controller params. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8h_source.html#l00058">lifter.h:58</a></div></div>
-<div class="ttc" id="motor__ports_8h_html_ad5f5efaa5cb771bd06da4bfe6046809e"><div class="ttname"><a href="motor__ports_8h.html#ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</a></div><div class="ttdeci">#define MIN_SPEED</div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00013">motor_ports.h:13</a></div></div>
-<div class="ttc" id="lifter_8h_html_a1577e085f9f697084436d412ac4bb838"><div class="ttname"><a href="lifter_8h.html#a1577e085f9f697084436d412ac4bb838">SECONDARY_LIFTER_MAX_HEIGHT</a></div><div class="ttdeci">#define SECONDARY_LIFTER_MAX_HEIGHT</div><div class="ttdef"><b>Definition:</b> <a href="lifter_8h_source.html#l00077">lifter.h:77</a></div></div>
-<div class="ttc" id="lifter_8h_html_a82799bdc8f8a1a7a38785b446bdd6a9a"><div class="ttname"><a href="lifter_8h.html#a82799bdc8f8a1a7a38785b446bdd6a9a">MAIN_LIFTER_POT</a></div><div class="ttdeci">#define MAIN_LIFTER_POT</div><div class="ttdef"><b>Definition:</b> <a href="lifter_8h_source.html#l00081">lifter.h:81</a></div></div>
-<div class="ttc" id="lifter_8h_html_a72522c3c839198d275d956af1b759ff3"><div class="ttname"><a href="lifter_8h.html#a72522c3c839198d275d956af1b759ff3">SECONDARY_LIFTER_POT_PORT</a></div><div class="ttdeci">#define SECONDARY_LIFTER_POT_PORT</div><div class="ttdef"><b>Definition:</b> <a href="lifter_8h_source.html#l00075">lifter.h:75</a></div></div>
-<div class="ttc" id="motor__ports_8h_html_ac2cd96d53dd3ba6407db6766c3d92b26"><div class="ttname"><a href="motor__ports_8h.html#ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</a></div><div class="ttdeci">#define MAX_SPEED</div><div class="ttdoc">Max motor speed. </div><div class="ttdef"><b>Definition:</b> <a href="motor__ports_8h_source.html#l00012">motor_ports.h:12</a></div></div>
-<div class="ttc" id="lifter_8h_html_a54af37b0a6c7c352ba160922243a5c33"><div class="ttname"><a href="lifter_8h.html#a54af37b0a6c7c352ba160922243a5c33">MAIN_LIFTER_MIN_HEIGHT</a></div><div class="ttdeci">#define MAIN_LIFTER_MIN_HEIGHT</div><div class="ttdef"><b>Definition:</b> <a href="lifter_8h_source.html#l00083">lifter.h:83</a></div></div>
-<div class="ttc" id="lifter_8c_html_ad00a195af30f246924d6e1a30095b882"><div class="ttname"><a href="lifter_8c.html#ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</a></div><div class="ttdeci">void set_main_lifter_motors(const int v)</div><div class="ttdoc">Sets the main lifter motors to the given value. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8c_source.html#l00022">lifter.c:22</a></div></div>
-<div class="ttc" id="lifter_8h_html_a96a5c0bbb7527bf1d45818fc4db97b68"><div class="ttname"><a href="lifter_8h.html#a96a5c0bbb7527bf1d45818fc4db97b68">LIFTER_UP</a></div><div class="ttdeci">#define LIFTER_UP</div><div class="ttdoc">The lifter up controller params. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8h_source.html#l00053">lifter.h:53</a></div></div>
-<div class="ttc" id="lifter_8c_html_a78640d547d9361951a92d0bc00939536"><div class="ttname"><a href="lifter_8c.html#a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</a></div><div class="ttdeci">void set_secondary_lifter_motors(const int v)</div><div class="ttdoc">Sets the secondary lifter motors to the given value. </div><div class="ttdef"><b>Definition:</b> <a href="lifter_8c_source.html#l00011">lifter.c:11</a></div></div>
-</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00049">operatorControl()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

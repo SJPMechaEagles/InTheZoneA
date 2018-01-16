@@ -1,0 +1,34 @@
+\subsection{encoders.\+c}
+\label{a00095_source}\index{src/encoders.\+c@{src/encoders.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "encoders.h"}
+00002 \textcolor{preprocessor}{#include "log.h"}
+00003 \textcolor{preprocessor}{#include <API.h>}
+00004 
+00011 \textcolor{keywordtype}{bool} init_encoders() \{
+00012 \textcolor{preprocessor}{#ifdef IME\_NUMBER}
+00013   \textcolor{keywordtype}{int} count = imeInitializeAll();
+00014   \textcolor{keywordflow}{if} (count != IME_NUMBER) \{
+00015     printf(\textcolor{stringliteral}{"detected only %d\(\backslash\)n"}, count);
+00016     error(\textcolor{stringliteral}{"Wrong Number of IMEs Connected"});
+00017     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00018   \}
+00019   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00020 \textcolor{preprocessor}{#else}
+00021   \textcolor{keywordflow}{return} imeInitializeAll();
+00022 \textcolor{preprocessor}{#endif}
+00023 \}
+00024 
+00030 \textcolor{keywordtype}{int} get_encoder_ticks(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} address) \{
+00031   \textcolor{keywordtype}{int} i = 0;
+00032   imeGet(address, &i);
+00033   \textcolor{keywordflow}{return} i;
+00034 \}
+00035 
+00041 \textcolor{keywordtype}{int} get_encoder_velocity(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} address) \{
+00042   \textcolor{keywordtype}{int} i = 0;
+00043   imeGetVelocity(address, &i);
+00044   \textcolor{keywordflow}{return} i;
+00045 \}
+\end{DoxyCode}

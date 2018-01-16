@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>Vex Team A</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="namespacemath.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacetest_math.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+        <xi:include href="md__r_e_a_d_m_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <chapter>
+        <title>Data Structure Documentation</title>
+        <xi:include href="struct__matrix.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structaccelerometer__odometry.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structcord.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structencoder__odemtry.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structlcd__buttons.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structlist__iterator__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structlist__node.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structlist__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structlocation.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structmenu__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structpolar__cord.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structroutine__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="auto_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="battery_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="claw_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="controller_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="drive_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="encoders_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="gyro_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="lcd_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="lifter_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="list_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="localization_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="log_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="main_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="matrix_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="menu_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="mobile__goal__intake_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="motor__ports_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="partner_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="potentiometer_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="routines_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="sensor__ports_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="slew_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="toggle_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vlib_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vmath_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="auto_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="battery_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="claw_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="controller_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="drive_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="encoders_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="gyro_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="init_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="lcd_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="lifter_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="list_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="list__iterator_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="list__node_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="localization_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="log_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="matrix_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="menu_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="mobile__goal__intake_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="opcontrol_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="partner_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="routines_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="slew_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="toggle_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vlib_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="vmath_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="test__code_2test_math_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="test_math_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Directory Documentation</title>
+        <xi:include href="dir_d44c64559bbebec7f509842c48db8b23.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="dir_68267d1309a1af8e8297ef4c3efbcdba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="dir_c5c299569ede35187292ca4fb0972402.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

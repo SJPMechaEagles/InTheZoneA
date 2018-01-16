@@ -14,10 +14,6 @@ extern "C" {
 
 #include <stdlib.h>
 
-// Library version
-
-#define LIST_VERSION "0.0.5"
-
 // Memory management macros
 
 #ifndef LIST_MALLOC

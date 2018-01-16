@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="lcd_8c">
+    <title>lcd.c File Reference</title>
+    <programlisting>#include &quot;lcd.h&quot;</programlisting>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static FILE * <link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">lcd_port</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lcd_8c_1a93b26f37d6b1687ad54c90feedfd29ca">init_main_lcd</link> (
+FILE * lcd)<para><emphasis>Initializes the lcd screen.
+ Also will initialize the lcd_port var. Must be called before any lcd function
+can be called.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static bool <link linkend="lcd_8c_1aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</link> (
+)<para><emphasis>Asserts the lcd is initialized
+Works by checking is the File *lcd_port is the default NULL
+value and thus not set.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lcd_8c_1a35c08b1fa742e650f4873939707b893b">lcd_clear</link> (
+)<para><emphasis>Clears the lcd.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structlcd__buttons">lcd_buttons</link> <link linkend="lcd_8c_1ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</link> (
+)<para><emphasis>Returns the pressed buttons.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lcd_8c_1adabd3f7cdda45119604b488caf22bba8">lcd_print</link> (
+unsigned int line, const char * str)<para><emphasis>prints a string to a line on the lcd</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lcd_8c_1aa0d4ca88701dfecf98796e2028482b69">lcd_printf</link> (
+unsigned int line, const char * format_str, ... )<para><emphasis>prints a formated string to a line on the lcd. Smilar to printf</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lcd_8c_1a245902a4d48a6d9bd1ab308bf9b7e6b5">lcd_set_backlight</link> (
+bool state)<para><emphasis>sets the backlight of the lcd</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="lcd_8c_1a99f4683e1990edf624ab216bf327cba4">promt_confirmation</link> (
+const char * confirm_text)<para><emphasis>Prompts the user to confirm a string.
+User must press middle button to confirm.
+Function is not thread safe and will stall a thread.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/lcd.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="lcd_8h">lcd.h</link>&quot;</emphasis>
+2 
+<link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">4 </link><emphasis class="keyword">static</emphasis>&#32;FILE&#32;*<link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">lcd_port</link>&#32;=&#32;NULL;
+5 
+<link linkend="lcd_8c_1aa03fd2deaeec8fc3f42a0975d587bad8">13 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="lcd_8c_1aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</link>()&#32;{
+14 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">lcd_port</link>&#32;==&#32;NULL)&#32;{
+15 &#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;LCD&#32;NULL!&quot;</emphasis>);
+16 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">false</emphasis>;
+17 &#32;&#32;}
+18 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">true</emphasis>;
+19 }
+20 
+<link linkend="lcd_8c_1ac7b3225ccc82fcbe067ba9da934f010d">28 </link><link linkend="structlcd__buttons">lcd_buttons</link>&#32;<link linkend="lcd_8c_1ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</link>()&#32;{
+29 &#32;&#32;<link linkend="lcd_8c_1aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</link>();
+30 &#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;btn_binary&#32;=&#32;lcdReadButtons(<link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">lcd_port</link>);
+31 &#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;left&#32;=&#32;btn_binary&#32;&amp;&#32;0x1;&#32;&#32;&#32;<emphasis class="comment">//&#32;0001</emphasis>
+32 &#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;middle&#32;=&#32;btn_binary&#32;&amp;&#32;0x2;&#32;<emphasis class="comment">//&#32;0010</emphasis>
+33 &#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;right&#32;=&#32;btn_binary&#32;&amp;&#32;0x4;&#32;&#32;<emphasis class="comment">//&#32;0100</emphasis>
+34 &#32;&#32;<link linkend="structlcd__buttons">lcd_buttons</link>&#32;btns;
+35 &#32;&#32;btns.<link linkend="structlcd__buttons_1ae385efb5ec794acf5f11027f46c6c039">left</link>&#32;=&#32;left&#32;?&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</link>&#32;:&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</link>;
+36 &#32;&#32;btns.<link linkend="structlcd__buttons_1a293342810ac56f73979b08f144d6e6b9">middle</link>&#32;=&#32;middle&#32;?&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</link>&#32;:&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</link>;
+37 &#32;&#32;btns.<link linkend="structlcd__buttons_1a2437d744e09ca1bb91ab4ca53ef77198">right</link>&#32;=&#32;right&#32;?&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</link>&#32;:&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</link>;
+38 
+39 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;btns;
+40 }
+41 
+<link linkend="lcd_8c_1a35c08b1fa742e650f4873939707b893b">47 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8c_1a35c08b1fa742e650f4873939707b893b">lcd_clear</link>()&#32;{
+48 &#32;&#32;<link linkend="lcd_8c_1aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</link>();
+49 &#32;&#32;lcdClear(<link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">lcd_port</link>);
+50 }
+51 
+<link linkend="lcd_8c_1a93b26f37d6b1687ad54c90feedfd29ca">62 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8c_1a93b26f37d6b1687ad54c90feedfd29ca">init_main_lcd</link>(FILE&#32;*lcd)&#32;{
+63 &#32;&#32;<link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">lcd_port</link>&#32;=&#32;lcd;
+64 &#32;&#32;lcdInit(lcd);
+65 &#32;&#32;<link linkend="lcd_8c_1a35c08b1fa742e650f4873939707b893b">lcd_clear</link>();
+66 }
+67 
+<link linkend="lcd_8c_1adabd3f7cdda45119604b488caf22bba8">75 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8c_1adabd3f7cdda45119604b488caf22bba8">lcd_print</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;line,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*str)&#32;{
+76 &#32;&#32;<link linkend="lcd_8c_1aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</link>();
+77 &#32;&#32;lcdSetText(<link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">lcd_port</link>,&#32;line,&#32;str);
+78 }
+79 
+<link linkend="lcd_8c_1aa0d4ca88701dfecf98796e2028482b69">87 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8c_1aa0d4ca88701dfecf98796e2028482b69">lcd_printf</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;line,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*format_str,&#32;...)&#32;{
+88 &#32;&#32;<link linkend="lcd_8c_1aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</link>();
+89 &#32;&#32;lcdPrint(<link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">lcd_port</link>,&#32;line,&#32;format_str);
+90 }
+91 
+<link linkend="lcd_8c_1a245902a4d48a6d9bd1ab308bf9b7e6b5">99 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8c_1a245902a4d48a6d9bd1ab308bf9b7e6b5">lcd_set_backlight</link>(<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>)&#32;{
+100 &#32;&#32;<link linkend="lcd_8c_1aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</link>();
+101 &#32;&#32;lcdSetBacklight(<link linkend="lcd_8c_1a8d2a398462720032706d94d44a82a1f8">lcd_port</link>,&#32;state);
+102 }
+103 
+<link linkend="lcd_8c_1a99f4683e1990edf624ab216bf327cba4">113 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8c_1a99f4683e1990edf624ab216bf327cba4">promt_confirmation</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*confirm_text)&#32;{
+114 &#32;&#32;<link linkend="lcd_8c_1aa03fd2deaeec8fc3f42a0975d587bad8">lcd_assert</link>();
+115 &#32;&#32;<link linkend="lcd_8c_1adabd3f7cdda45119604b488caf22bba8">lcd_print</link>(1,&#32;confirm_text);
+116 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(<link linkend="lcd_8c_1ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</link>().middle&#32;!=&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</link>)&#32;{
+117 &#32;&#32;&#32;&#32;delay(200);
+118 &#32;&#32;}
+119 }
+    </computeroutput></literallayout>
+</section>

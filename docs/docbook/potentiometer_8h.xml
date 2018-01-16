@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="potentiometer_8h">
+    <title>potentiometer.h File Reference</title>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="potentiometer_8h_1ab77b81696cf83be632fca5f56b4c3595">DEG_MAX</link> 250.0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="potentiometer_8h_1ad40f2bbc4e57baed2d9e900750d94a7f">TICK_MAX</link> 4095.0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/potentiometer.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#ifndef&#32;_POTENTIOMETER_H_</emphasis>
+2 <emphasis class="preprocessor">#define&#32;_POTENTIOMETER_H_</emphasis>
+3 
+<link linkend="potentiometer_8h_1ad40f2bbc4e57baed2d9e900750d94a7f">4 </link><emphasis class="preprocessor">#define&#32;TICK_MAX&#32;4095.0</emphasis>
+<link linkend="potentiometer_8h_1ab77b81696cf83be632fca5f56b4c3595">5 </link><emphasis class="preprocessor">#define&#32;DEG_MAX&#32;250.0</emphasis>
+6 
+7 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

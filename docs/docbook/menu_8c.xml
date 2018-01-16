@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="menu_8c">
+    <title>menu.c File Reference</title>
+    <programlisting>#include &quot;menu.h&quot;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="menu_8c_1a0fb55c1213b23963d509b974d1254567">calculate_current_display</link> (
+char * rtn, <link linkend="structmenu__t">menu_t</link> * menu)<para><emphasis>Static function that calculates the string from menu.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static <link linkend="structmenu__t">menu_t</link> * <link linkend="menu_8c_1aff4fd27ff7707295d91c67fa52a6b021">create_menu</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, const char * prompt)<para><emphasis>Static function that handles creation of menu.
+&lt;em&gt; Menu must be freed or will cause memory leak &lt;em&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="menu_8c_1a05a36619ac6c9ba4544eddb83ee2a50d">denint_menu</link> (
+<link linkend="structmenu__t">menu_t</link> * menu)<para><emphasis>Destroys a menu
+&lt;em&gt; Menu must be freed or will cause memory leak &lt;em&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="menu_8c_1abfadedb104f89f672dd3045499975a71">display_menu</link> (
+<link linkend="structmenu__t">menu_t</link> * menu)<para><emphasis>Displays a menu contex.
+ &lt;em&gt; Menu must be freed or will cause memory leak! &lt;em&gt; Will exit if robot is
+enabled. This prevents menu from locking up system in even of a reset.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structmenu__t">menu_t</link> * <link linkend="menu_8c_1a5abb752733423805f59ef3b92e3c2e57">init_menu_float</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, float min, float max, float step, const char * prompt)<para><emphasis>Creates a menu context, but does not display.
+&lt;em&gt; Menu must be freed or will cause memory leak! &lt;em&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structmenu__t">menu_t</link> * <link linkend="menu_8c_1ac8efedba760ec35ebf841ab19543ba5a">init_menu_int</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, int min, int max, int step, const char * prompt)<para><emphasis>Creates a menu context, but does not display.
+&lt;em&gt; Menu must be freed or will cause memory leak &lt;em&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structmenu__t">menu_t</link> * <link linkend="menu_8c_1af1bb786cb6014dcbfdb146878e713a3d">init_menu_var</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, const char * prompt, int nums, ... )<para><emphasis>Creates a menu context, but does not display.
+&lt;em&gt; Menu must be freed or will cause memory leak &lt;em&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/menu.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="menu_8h">menu.h</link>&quot;</emphasis>
+2 
+9 <emphasis class="keyword">static</emphasis>&#32;<link linkend="structmenu__t">menu_t</link>&#32;*<link linkend="menu_8c_1aff4fd27ff7707295d91c67fa52a6b021">create_menu</link>(<emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;type,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*prompt);
+10 
+19 <emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="menu_8c_1a0fb55c1213b23963d509b974d1254567">calculate_current_display</link>(<emphasis class="keywordtype">char</emphasis>&#32;*rtn,&#32;<link linkend="structmenu__t">menu_t</link>&#32;*menu);
+20 
+<link linkend="menu_8c_1aff4fd27ff7707295d91c67fa52a6b021">27 </link><emphasis class="keyword">static</emphasis>&#32;<link linkend="structmenu__t">menu_t</link>&#32;*<link linkend="menu_8c_1aff4fd27ff7707295d91c67fa52a6b021">create_menu</link>(<emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;type,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*prompt)&#32;{
+28 &#32;&#32;<link linkend="structmenu__t">menu_t</link>&#32;*menu&#32;=&#32;(<link linkend="structmenu__t">menu_t</link>&#32;*)malloc(<emphasis class="keyword">sizeof</emphasis>(<link linkend="structmenu__t">menu_t</link>));
+29 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!menu)&#32;{
+30 &#32;&#32;&#32;&#32;<link linkend="log_8h_1a8e5bb8a2a372f5b066ff7af7044584c1">error</link>(<emphasis class="stringliteral">&quot;Menu&#32;Malloc&quot;</emphasis>);
+31 &#32;&#32;}
+32 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a110244ceb7d2a7cba95cfc5758d61c01">type</link>&#32;=&#32;type;
+33 &#32;&#32;<emphasis class="comment">//&#32;Add&#32;one&#32;for&#32;null&#32;terminator</emphasis>
+34 &#32;&#32;<emphasis class="keywordtype">size_t</emphasis>&#32;strlength&#32;=&#32;strlen(prompt)&#32;+&#32;1;
+35 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a7bf29a030b7ed4a623c6b445587cc647">prompt</link>&#32;=&#32;(<emphasis class="keywordtype">char</emphasis>&#32;*)malloc(strlength&#32;*&#32;<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">char</emphasis>));
+36 &#32;&#32;memcpy(menu-&gt;<link linkend="structmenu__t_1a7bf29a030b7ed4a623c6b445587cc647">prompt</link>,&#32;prompt,&#32;strlength);
+37 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1ace9cbaecd7bf311be0ef230da657f406">max</link>&#32;=&#32;INT_MAX;
+38 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a6891bc6c94f1e995cc62a05b13328de5">min</link>&#32;=&#32;INT_MIN;
+39 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1adc50450bc59ea66a8d67424adc46e24e">step</link>&#32;=&#32;1;
+40 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a0a6e4f711992fb69e8a57c2af1ab7a05">min_f</link>&#32;=&#32;FLT_MIN;
+41 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a14b11d0a7610484462c8a6e93068a2c1">max_f</link>&#32;=&#32;FLT_MAX;
+42 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a84cfd9226f6554c63ca9f4b11f94d12d">step_f</link>&#32;=&#32;1;
+43 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>&#32;=&#32;0;
+44 
+45 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;menu;
+46 }
+47 
+<link linkend="menu_8c_1af1bb786cb6014dcbfdb146878e713a3d">60 </link><link linkend="structmenu__t">menu_t</link>&#32;*<link linkend="menu_8c_1af1bb786cb6014dcbfdb146878e713a3d">init_menu_var</link>(<emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;type,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*prompt,&#32;<emphasis class="keywordtype">int</emphasis>&#32;nums,&#32;...)&#32;{
+61 &#32;&#32;<link linkend="structmenu__t">menu_t</link>&#32;*menu&#32;=&#32;<link linkend="menu_8c_1aff4fd27ff7707295d91c67fa52a6b021">create_menu</link>(type,&#32;prompt);
+62 &#32;&#32;va_list&#32;ap;
+63 &#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;**options_array&#32;=&#32;(<emphasis class="keywordtype">char</emphasis>&#32;**)calloc(<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">char</emphasis>&#32;*),&#32;nums);
+64 &#32;&#32;va_start(ap,&#32;nums);
+65 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(<emphasis class="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;nums;&#32;i++)&#32;{
+66 &#32;&#32;&#32;&#32;options_array[i]&#32;=&#32;(<emphasis class="keywordtype">char</emphasis>&#32;*)va_arg(ap,&#32;<emphasis class="keywordtype">char</emphasis>&#32;*);
+67 &#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;%s\n&quot;</emphasis>,&#32;options_array[i]);
+68 &#32;&#32;}
+69 &#32;&#32;va_end(ap);
+70 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1ad695cd88051e34817f0f582d4e43c33a">options</link>&#32;=&#32;options_array;
+71 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a023063461c4a247e574abd6a55faf765">length</link>&#32;=&#32;nums;
+72 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;menu;
+73 }
+74 
+<link linkend="menu_8c_1ac8efedba760ec35ebf841ab19543ba5a">88 </link><link linkend="structmenu__t">menu_t</link>&#32;*<link linkend="menu_8c_1ac8efedba760ec35ebf841ab19543ba5a">init_menu_int</link>(<emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;type,&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;step,
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*prompt)&#32;{
+90 &#32;&#32;<link linkend="structmenu__t">menu_t</link>&#32;*menu&#32;=&#32;<link linkend="menu_8c_1aff4fd27ff7707295d91c67fa52a6b021">create_menu</link>(type,&#32;prompt);
+91 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a6891bc6c94f1e995cc62a05b13328de5">min</link>&#32;=&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>;
+92 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1ace9cbaecd7bf311be0ef230da657f406">max</link>&#32;=&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>;
+93 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1adc50450bc59ea66a8d67424adc46e24e">step</link>&#32;=&#32;step;
+94 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>&#32;=&#32;0;
+95 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;menu;
+96 }
+97 
+<link linkend="menu_8c_1a5abb752733423805f59ef3b92e3c2e57">111 </link><link linkend="structmenu__t">menu_t</link>&#32;*<link linkend="menu_8c_1a5abb752733423805f59ef3b92e3c2e57">init_menu_float</link>(<emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;type,&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>,&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>,&#32;<emphasis class="keywordtype">float</emphasis>&#32;step,
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*prompt)&#32;{
+113 &#32;&#32;<link linkend="structmenu__t">menu_t</link>&#32;*menu&#32;=&#32;<link linkend="menu_8c_1aff4fd27ff7707295d91c67fa52a6b021">create_menu</link>(type,&#32;prompt);
+114 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a0a6e4f711992fb69e8a57c2af1ab7a05">min_f</link>&#32;=&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>;
+115 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a14b11d0a7610484462c8a6e93068a2c1">max_f</link>&#32;=&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>;
+116 &#32;&#32;menu-&gt;<link linkend="structmenu__t_1a84cfd9226f6554c63ca9f4b11f94d12d">step_f</link>&#32;=&#32;step;
+117 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;menu;
+118 }
+119 
+<link linkend="menu_8c_1a0fb55c1213b23963d509b974d1254567">120 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="menu_8c_1a0fb55c1213b23963d509b974d1254567">calculate_current_display</link>(<emphasis class="keywordtype">char</emphasis>&#32;*rtn,&#32;<link linkend="structmenu__t">menu_t</link>&#32;*menu)&#32;{
+121 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(menu-&gt;<link linkend="structmenu__t_1a110244ceb7d2a7cba95cfc5758d61c01">type</link>&#32;==&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c">STRING_TYPE</link>)&#32;{
+122 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;index&#32;=&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>&#32;%&#32;menu-&gt;<link linkend="structmenu__t_1a023063461c4a247e574abd6a55faf765">length</link>;
+123 &#32;&#32;&#32;&#32;sprintf(rtn,&#32;<emphasis class="stringliteral">&quot;%s&quot;</emphasis>,&#32;menu-&gt;<link linkend="structmenu__t_1ad695cd88051e34817f0f582d4e43c33a">options</link>[index]);
+124 &#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;%s\n&quot;</emphasis>,&#32;rtn);
+125 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+126 &#32;&#32;}
+127 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(menu-&gt;<link linkend="structmenu__t_1a110244ceb7d2a7cba95cfc5758d61c01">type</link>&#32;==&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a7fee88532b24b79bf2a88688a5d681d7">INT_TYPE</link>)&#32;{
+128 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;step&#32;=&#32;(menu-&gt;<link linkend="structmenu__t_1adc50450bc59ea66a8d67424adc46e24e">step</link>);
+129 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>&#32;=&#32;(menu-&gt;<link linkend="structmenu__t_1a6891bc6c94f1e995cc62a05b13328de5">min</link>);
+130 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>&#32;=&#32;(menu-&gt;<link linkend="structmenu__t_1ace9cbaecd7bf311be0ef230da657f406">max</link>);
+131 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;value&#32;=&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>&#32;*&#32;step;
+132 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(value&#32;&lt;&#32;min)&#32;{
+133 &#32;&#32;&#32;&#32;&#32;&#32;value&#32;=&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>;
+134 &#32;&#32;&#32;&#32;&#32;&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>++;
+135 &#32;&#32;&#32;&#32;}
+136 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(value&#32;&gt;&#32;max)&#32;{
+137 &#32;&#32;&#32;&#32;&#32;&#32;value&#32;=&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>;
+138 &#32;&#32;&#32;&#32;&#32;&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>--;
+139 &#32;&#32;&#32;&#32;}
+140 &#32;&#32;&#32;&#32;sprintf(rtn,&#32;<emphasis class="stringliteral">&quot;%d&quot;</emphasis>,&#32;value);
+141 &#32;&#32;}
+142 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(menu-&gt;<link linkend="structmenu__t_1a110244ceb7d2a7cba95cfc5758d61c01">type</link>&#32;==&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62ab2a272a88abadbaa481269e2506345c5">FLOAT_TYPE</link>)&#32;{
+143 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;step&#32;=&#32;(menu-&gt;<link linkend="structmenu__t_1a84cfd9226f6554c63ca9f4b11f94d12d">step_f</link>);
+144 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>&#32;=&#32;(menu-&gt;<link linkend="structmenu__t_1a0a6e4f711992fb69e8a57c2af1ab7a05">min_f</link>);
+145 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>&#32;=&#32;(menu-&gt;<link linkend="structmenu__t_1a14b11d0a7610484462c8a6e93068a2c1">max_f</link>);
+146 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;value&#32;=&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>&#32;*&#32;step;
+147 &#32;&#32;&#32;&#32;value&#32;=&#32;value&#32;&lt;&#32;min&#32;?&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>&#32;:&#32;value;
+148 &#32;&#32;&#32;&#32;value&#32;=&#32;value&#32;&gt;&#32;max&#32;?&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>&#32;:&#32;value;
+149 
+150 &#32;&#32;&#32;&#32;<link linkend="vlib_8h_1a4d26b0ac2f26341d827e0a13a0bd49b6">ftoaa</link>(value,&#32;rtn,&#32;5);
+151 &#32;&#32;}
+152 }
+153 
+<link linkend="menu_8c_1abfadedb104f89f672dd3045499975a71">164 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="menu_8c_1abfadedb104f89f672dd3045499975a71">display_menu</link>(<link linkend="structmenu__t">menu_t</link>&#32;*menu)&#32;{
+165 &#32;&#32;<link linkend="lcd_8h_1adabd3f7cdda45119604b488caf22bba8">lcd_print</link>(<link linkend="lcd_8h_1a18bab754c6ad16bc35c48333091516c9">TOP_ROW</link>,&#32;menu-&gt;<link linkend="structmenu__t_1a7bf29a030b7ed4a623c6b445587cc647">prompt</link>);
+166 &#32;&#32;printf(<emphasis class="stringliteral">&quot;printed&#32;prompt\n&quot;</emphasis>);
+167 &#32;&#32;<emphasis class="comment">//&#32;Will&#32;exit&#32;if&#32;teleop&#32;or&#32;autonomous&#32;begin.&#32;This&#32;is&#32;extremely&#32;important&#32;if</emphasis>
+168 &#32;&#32;<emphasis class="comment">//&#32;robot&#32;disconnects&#32;or&#32;resets.</emphasis>
+169 &#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;val[16];
+170 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(<link linkend="lcd_8h_1ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</link>().middle&#32;==&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</link>)&#32;{
+171 &#32;&#32;&#32;&#32;<link linkend="menu_8c_1a0fb55c1213b23963d509b974d1254567">calculate_current_display</link>(val,&#32;menu);
+172 
+173 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="lcd_8h_1ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</link>().right&#32;==&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</link>)&#32;{
+174 &#32;&#32;&#32;&#32;&#32;&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>&#32;+=&#32;1;
+175 &#32;&#32;&#32;&#32;}
+176 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="lcd_8h_1ac7b3225ccc82fcbe067ba9da934f010d">lcd_get_pressed_buttons</link>().left&#32;==&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901">PRESSED</link>)&#32;{
+177 &#32;&#32;&#32;&#32;&#32;&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>&#32;-=&#32;1;
+178 &#32;&#32;&#32;&#32;}
+179 &#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;%s\n&quot;</emphasis>,&#32;val);
+180 &#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;%d\n&quot;</emphasis>,&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>);
+181 &#32;&#32;&#32;&#32;<link linkend="lcd_8h_1adabd3f7cdda45119604b488caf22bba8">lcd_print</link>(2,&#32;val);
+182 &#32;&#32;&#32;&#32;delay(300);
+183 &#32;&#32;}
+184 &#32;&#32;printf(<emphasis class="stringliteral">&quot;%d\n&quot;</emphasis>,&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>);
+185 &#32;&#32;printf(<emphasis class="stringliteral">&quot;return\n&quot;</emphasis>);
+186 &#32;&#32;<link linkend="lcd_8h_1a35c08b1fa742e650f4873939707b893b">lcd_clear</link>();
+187 &#32;&#32;<link linkend="lcd_8h_1adabd3f7cdda45119604b488caf22bba8">lcd_print</link>(1,&#32;<emphasis class="stringliteral">&quot;Thk&#32;Cm&#32;Agn&quot;</emphasis>);
+188 &#32;&#32;<link linkend="lcd_8h_1adabd3f7cdda45119604b488caf22bba8">lcd_print</link>(2,&#32;val);
+189 &#32;&#32;delay(800);
+190 &#32;&#32;<link linkend="lcd_8h_1a35c08b1fa742e650f4873939707b893b">lcd_clear</link>();
+191 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;menu-&gt;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>;
+192 }
+193 
+<link linkend="menu_8c_1a05a36619ac6c9ba4544eddb83ee2a50d">203 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="menu_8c_1a05a36619ac6c9ba4544eddb83ee2a50d">denint_menu</link>(<link linkend="structmenu__t">menu_t</link>&#32;*menu)&#32;{
+204 &#32;&#32;free(menu-&gt;<link linkend="structmenu__t_1a7bf29a030b7ed4a623c6b445587cc647">prompt</link>);
+205 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(menu-&gt;<link linkend="structmenu__t_1ad695cd88051e34817f0f582d4e43c33a">options</link>&#32;!=&#32;NULL)
+206 &#32;&#32;&#32;&#32;free(menu-&gt;<link linkend="structmenu__t_1ad695cd88051e34817f0f582d4e43c33a">options</link>);
+207 &#32;&#32;free(menu);
+208 }
+    </computeroutput></literallayout>
+</section>

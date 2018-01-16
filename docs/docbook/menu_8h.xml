@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="menu_8h">
+    <title>menu.h File Reference</title>
+    <programlisting>#include &quot;API.h&quot;</programlisting>
+    <programlisting>#include &quot;lcd.h&quot;</programlisting>
+    <programlisting>#include &lt;float.h&gt;</programlisting>
+    <programlisting>#include &lt;limits.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &lt;vlib.h&gt;</programlisting>
+    <programlisting>#include &quot;log.h&quot;</programlisting>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmenu__t">menu_t</link></para>
+<para><emphasis>Represents a specific instance of a menu.
+Will cause a memory leak if not deinitialized via denint_menu.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> {
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a7fee88532b24b79bf2a88688a5d681d7">INT_TYPE</link>,
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62ab2a272a88abadbaa481269e2506345c5">FLOAT_TYPE</link>,
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c">STRING_TYPE</link>
+}</literallayout>
+<para><emphasis>Represents the different types of menus.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="structmenu__t">menu_t</link>  <link linkend="menu_8h_1aac280f147a4bb94ab2f1a69eff76f751">menu_t</link><para><emphasis>Represents a specific instance of a menu.
+Will cause a memory leak if not deinitialized via denint_menu.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="menu_8h_1a05a36619ac6c9ba4544eddb83ee2a50d">denint_menu</link> (
+<link linkend="structmenu__t">menu_t</link> * menu)<para><emphasis>Destroys a menu
+&lt;em&gt; Menu must be freed or will cause memory leak &lt;em&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="menu_8h_1abfadedb104f89f672dd3045499975a71">display_menu</link> (
+<link linkend="structmenu__t">menu_t</link> * menu)<para><emphasis>Displays a menu contex.
+ &lt;em&gt; Menu must be freed or will cause memory leak! &lt;em&gt; Will exit if robot is
+enabled. This prevents menu from locking up system in even of a reset.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structmenu__t">menu_t</link> * <link linkend="menu_8h_1a5abb752733423805f59ef3b92e3c2e57">init_menu_float</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, float min, float max, float step, const char * prompt)<para><emphasis>Creates a menu context, but does not display.
+&lt;em&gt; Menu must be freed or will cause memory leak! &lt;em&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structmenu__t">menu_t</link> * <link linkend="menu_8h_1ac8efedba760ec35ebf841ab19543ba5a">init_menu_int</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, int min, int max, int step, const char * prompt)<para><emphasis>Creates a menu context, but does not display.
+&lt;em&gt; Menu must be freed or will cause memory leak &lt;em&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structmenu__t">menu_t</link> * <link linkend="menu_8h_1af1bb786cb6014dcbfdb146878e713a3d">init_menu_var</link> (
+enum <link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link> type, const char * prompt, int nums, ... )<para><emphasis>Creates a menu context, but does not display.
+&lt;em&gt; Menu must be freed or will cause memory leak &lt;em&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Contains menu functionality and abstraction. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/9/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/menu.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+8 <emphasis class="preprocessor">#ifndef&#32;_MENU_H_</emphasis>
+9 <emphasis class="preprocessor">#define&#32;_MENU_H_</emphasis>
+10 
+11 <emphasis class="preprocessor">#include&#32;&quot;API.h&quot;</emphasis>
+12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="lcd_8h">lcd.h</link>&quot;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&lt;float.h&gt;</emphasis>
+14 <emphasis class="preprocessor">#include&#32;&lt;limits.h&gt;</emphasis>
+15 <emphasis class="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+16 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="vlib_8h">vlib.h</link>&gt;</emphasis>
+17 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
+18 
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">30 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;{
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a7fee88532b24b79bf2a88688a5d681d7">37 </link>&#32;&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a7fee88532b24b79bf2a88688a5d681d7">INT_TYPE</link>,
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62ab2a272a88abadbaa481269e2506345c5">44 </link>&#32;&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62ab2a272a88abadbaa481269e2506345c5">FLOAT_TYPE</link>,
+<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c">50 </link>&#32;&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c">STRING_TYPE</link>
+51 };
+52 
+<link linkend="structmenu__t">66 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structmenu__t">menu_t</link>&#32;{
+<link linkend="structmenu__t_1a110244ceb7d2a7cba95cfc5758d61c01">72 </link>&#32;&#32;<emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;<link linkend="structmenu__t_1a110244ceb7d2a7cba95cfc5758d61c01">type</link>;
+73 
+<link linkend="structmenu__t_1ad695cd88051e34817f0f582d4e43c33a">79 </link>&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;**<link linkend="structmenu__t_1ad695cd88051e34817f0f582d4e43c33a">options</link>;
+80 
+<link linkend="structmenu__t_1a023063461c4a247e574abd6a55faf765">86 </link>&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structmenu__t_1a023063461c4a247e574abd6a55faf765">length</link>;
+87 
+<link linkend="structmenu__t_1a6891bc6c94f1e995cc62a05b13328de5">94 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structmenu__t_1a6891bc6c94f1e995cc62a05b13328de5">min</link>;
+95 
+<link linkend="structmenu__t_1ace9cbaecd7bf311be0ef230da657f406">102 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structmenu__t_1ace9cbaecd7bf311be0ef230da657f406">max</link>;
+103 
+<link linkend="structmenu__t_1adc50450bc59ea66a8d67424adc46e24e">111 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structmenu__t_1adc50450bc59ea66a8d67424adc46e24e">step</link>;
+112 
+<link linkend="structmenu__t_1a0a6e4f711992fb69e8a57c2af1ab7a05">119 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structmenu__t_1a0a6e4f711992fb69e8a57c2af1ab7a05">min_f</link>;
+120 
+<link linkend="structmenu__t_1a14b11d0a7610484462c8a6e93068a2c1">127 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structmenu__t_1a14b11d0a7610484462c8a6e93068a2c1">max_f</link>;
+128 
+<link linkend="structmenu__t_1a84cfd9226f6554c63ca9f4b11f94d12d">136 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structmenu__t_1a84cfd9226f6554c63ca9f4b11f94d12d">step_f</link>;
+<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">142 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structmenu__t_1a2acb18066898677ec5e2dc40eec811c5">current</link>;
+<link linkend="structmenu__t_1a7bf29a030b7ed4a623c6b445587cc647">150 </link>&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="structmenu__t_1a7bf29a030b7ed4a623c6b445587cc647">prompt</link>;
+151 }&#32;<link linkend="menu_8h_1aac280f147a4bb94ab2f1a69eff76f751">menu_t</link>;
+152 
+165 <link linkend="structmenu__t">menu_t</link>&#32;*<link linkend="menu_8h_1af1bb786cb6014dcbfdb146878e713a3d">init_menu_var</link>(<emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;<link linkend="structmenu__t_1a110244ceb7d2a7cba95cfc5758d61c01">type</link>,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="structmenu__t_1a7bf29a030b7ed4a623c6b445587cc647">prompt</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;nums,&#32;...);
+166 
+180 <link linkend="structmenu__t">menu_t</link>&#32;*<link linkend="menu_8h_1ac8efedba760ec35ebf841ab19543ba5a">init_menu_int</link>(<emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;<link linkend="structmenu__t_1a110244ceb7d2a7cba95cfc5758d61c01">type</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structmenu__t_1a6891bc6c94f1e995cc62a05b13328de5">min</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structmenu__t_1ace9cbaecd7bf311be0ef230da657f406">max</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structmenu__t_1adc50450bc59ea66a8d67424adc46e24e">step</link>,
+181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="structmenu__t_1a7bf29a030b7ed4a623c6b445587cc647">prompt</link>);
+182 
+196 <link linkend="structmenu__t">menu_t</link>&#32;*<link linkend="menu_8h_1a5abb752733423805f59ef3b92e3c2e57">init_menu_float</link>(<emphasis class="keyword">enum</emphasis>&#32;<link linkend="menu_8h_1a6bbf4baf5018b0d76aab6c2e6bf85e62">menu_type</link>&#32;<link linkend="structmenu__t_1a110244ceb7d2a7cba95cfc5758d61c01">type</link>,&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structmenu__t_1a6891bc6c94f1e995cc62a05b13328de5">min</link>,&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structmenu__t_1ace9cbaecd7bf311be0ef230da657f406">max</link>,&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structmenu__t_1adc50450bc59ea66a8d67424adc46e24e">step</link>,
+197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="structmenu__t_1a7bf29a030b7ed4a623c6b445587cc647">prompt</link>);
+198 
+209 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="menu_8h_1abfadedb104f89f672dd3045499975a71">display_menu</link>(<link linkend="structmenu__t">menu_t</link>&#32;*menu);
+210 
+220 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="menu_8h_1a05a36619ac6c9ba4544eddb83ee2a50d">denint_menu</link>(<link linkend="structmenu__t">menu_t</link>&#32;*menu);
+221 
+222 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

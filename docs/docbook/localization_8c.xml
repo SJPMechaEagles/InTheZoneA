@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="localization_8c">
+    <title>localization.c File Reference</title>
+    <programlisting>#include &quot;localization.h&quot;</programlisting>
+    <programlisting>#include &quot;vmath.h&quot;</programlisting>
+    <programlisting>#include &lt;inttypes.h&gt;</programlisting>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structaccelerometer__odometry">accelerometer_odometry</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structencoder__odemtry">encoder_odemtry</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="localization_8c_1ad8f1771d4051eafad228df4d397d7e47">CPR</link> 392.0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="localization_8c_1ad8f1771d4051eafad228df4d397d7e47">CPR</link> 392.0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="localization_8c_1aaa6f04f6f0d7cf1008a53279acf49f07">WHEEL_RADIUS</link> 2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="localization_8c_1aaa6f04f6f0d7cf1008a53279acf49f07">WHEEL_RADIUS</link> 2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="localization_8c_1a241aeeb764887ae5e3de58b98f04b16d">WIDTH</link> 13.5</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="localization_8c_1a241aeeb764887ae5e3de58b98f04b16d">WIDTH</link> 13.5</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static Gyro <link linkend="localization_8c_1a46b8f25ffa3bbee071a0468eac654393">g1</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="localization_8c_1a0f327d31da83831114e7417abb7b6b63">last_call</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static TaskHandle <link linkend="localization_8c_1a5be50f74f0f5a3aea13f2bd8db891488">localization_task</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="localization_8c_1a424e677cc0238390cb4a3068a6f3518c">state_matrix</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static struct <link linkend="structaccelerometer__odometry">accelerometer_odometry</link> <link linkend="localization_8c_1a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static double <link linkend="localization_8c_1a3774a84284eeb9f5efa7c23aa5ffcd9e">calculate_angle</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="localization_8c_1a5dd17937f5561711cd12cdefa8d31869">calculate_encoder_angle</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="localization_8c_1a1cb0c9fa1e6ff2079deb836569d75d87">calculate_encoder_odemetry</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static double <link linkend="localization_8c_1aa849dcc7cd296f4556fab3b57c1c4d3e">calculate_gryo_anglular_velocity</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structlocation">location</link> <link linkend="localization_8c_1aadbff35bb757f60bc348d4d778f57a2f">get_position</link> (
+)<para><emphasis>Gets the current posituion of the robot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="localization_8c_1afdd0147de6aa15957e9a125f9cd20578">init_localization</link> (
+const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta)<para><emphasis>Starts the localization process.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static double <link linkend="localization_8c_1ac103fff038e59ff45f292b9b5138182e">integrate_gyro_w</link> (
+int new_w)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="localization_8c_1afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</link> (
+)<para><emphasis>Updates the position from the localization.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/localization.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="localization_8h">localization.h</link>&quot;</emphasis>
+2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="vmath_8h">vmath.h</link>&quot;</emphasis>
+3 <emphasis class="preprocessor">#include&#32;&lt;inttypes.h&gt;</emphasis>
+4 
+<link linkend="localization_8c_1a46b8f25ffa3bbee071a0468eac654393">5 </link><emphasis class="keyword">static</emphasis>&#32;Gyro&#32;<link linkend="localization_8c_1a46b8f25ffa3bbee071a0468eac654393">g1</link>;
+<link linkend="localization_8c_1a5be50f74f0f5a3aea13f2bd8db891488">6 </link><emphasis class="keyword">static</emphasis>&#32;TaskHandle&#32;<link linkend="localization_8c_1a5be50f74f0f5a3aea13f2bd8db891488">localization_task</link>;
+7 
+<link linkend="localization_8c_1a0f327d31da83831114e7417abb7b6b63">8 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="localization_8c_1a0f327d31da83831114e7417abb7b6b63">last_call</link>&#32;=&#32;0;
+9 
+<link linkend="localization_8c_1a424e677cc0238390cb4a3068a6f3518c">10 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="localization_8c_1a424e677cc0238390cb4a3068a6f3518c">state_matrix</link>;
+11 
+<link linkend="structencoder__odemtry">12 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structencoder__odemtry">encoder_odemtry</link>&#32;{
+<link linkend="structencoder__odemtry_1a9a803978381f9b89a031d520a627cbcf">13 </link>&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structencoder__odemtry_1a9a803978381f9b89a031d520a627cbcf">x</link>;
+<link linkend="structencoder__odemtry_1a955cbea800158b8c0cd5f36b253fe6bb">14 </link>&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structencoder__odemtry_1a955cbea800158b8c0cd5f36b253fe6bb">y</link>;
+<link linkend="structencoder__odemtry_1af1a1e2a2a7a2f89138a8c261a3b82898">15 </link>&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structencoder__odemtry_1af1a1e2a2a7a2f89138a8c261a3b82898">theta</link>;
+16 };
+17 
+<link linkend="structaccelerometer__odometry">18 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structaccelerometer__odometry">accelerometer_odometry</link>&#32;{
+<link linkend="structaccelerometer__odometry_1a83af671d99413a7c480678d5abb9c64a">19 </link>&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structaccelerometer__odometry_1a83af671d99413a7c480678d5abb9c64a">x</link>;
+<link linkend="structaccelerometer__odometry_1a4d812f516efdd477ae9f74fca2a07a2b">20 </link>&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structaccelerometer__odometry_1a4d812f516efdd477ae9f74fca2a07a2b">y</link>;
+21 };
+22 
+23 <emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="localization_8c_1a3774a84284eeb9f5efa7c23aa5ffcd9e">calculate_angle</link>();
+24 <emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structaccelerometer__odometry">accelerometer_odometry</link>&#32;<link linkend="localization_8c_1a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</link>();
+25 
+<link linkend="localization_8c_1aadbff35bb757f60bc348d4d778f57a2f">32 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structlocation">location</link>&#32;<link linkend="localization_8c_1aadbff35bb757f60bc348d4d778f57a2f">get_position</link>()&#32;{}
+33 
+<link linkend="localization_8c_1afacd5e0b3d5e677df26a4402bbd9ec9e">39 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="localization_8c_1afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</link>()&#32;{
+40 &#32;&#32;<emphasis class="comment">//&#32;int&#32;curr_theta&#32;=&#32;calculate_angle();</emphasis>
+41 
+42 &#32;&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structaccelerometer__odometry">accelerometer_odometry</link>&#32;oddem&#32;=&#32;<link linkend="localization_8c_1a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</link>();
+43 &#32;&#32;<emphasis class="comment">//&#32;printf(&quot;x:&#32;%d&#32;y:&#32;%d&#32;T:&#32;%d\n&quot;,&#32;a.x,&#32;a.y,&#32;0);</emphasis>
+44 
+45 &#32;&#32;<emphasis class="comment">/*int&#32;l&#32;=&#32;1;</emphasis>
+46 <emphasis class="comment">&#32;&#32;int&#32;vr&#32;=&#32;get_encoder_velocity(1);</emphasis>
+47 <emphasis class="comment">&#32;&#32;int&#32;vl&#32;=&#32;get_encoder_velocity(2);</emphasis>
+48 <emphasis class="comment">&#32;&#32;int&#32;theta_dot&#32;=&#32;(vr&#32;-&#32;vl)&#32;/&#32;l;</emphasis>
+49 <emphasis class="comment">&#32;&#32;int&#32;curr_theta&#32;=&#32;theta&#32;+&#32;theta_dot;</emphasis>
+50 <emphasis class="comment">&#32;&#32;double&#32;dt&#32;=&#32;LOCALIZATION_UPDATE_FREQUENCY;</emphasis>
+51 <emphasis class="comment">&#32;&#32;double&#32;v_tot&#32;=&#32;(vr+vl)/2.0;</emphasis>
+52 <emphasis class="comment">&#32;&#32;int&#32;x_curr&#32;=&#32;x&#32;-&#32;v_tot*dt*sin(curr_theta);</emphasis>
+53 <emphasis class="comment">&#32;&#32;int&#32;y_curr&#32;=&#32;y&#32;+&#32;v_tot*dt*cos(curr_theta);</emphasis>
+54 <emphasis class="comment">&#32;&#32;x&#32;=&#32;x_curr;</emphasis>
+55 <emphasis class="comment">&#32;&#32;y&#32;=&#32;y_curr;*/</emphasis>
+56 &#32;&#32;<link linkend="localization_8c_1a0f327d31da83831114e7417abb7b6b63">last_call</link>&#32;=&#32;millis();
+57 }
+58 
+<link linkend="localization_8c_1a6785e4b3b61887f28028f05019b9b39d">59 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structaccelerometer__odometry">accelerometer_odometry</link>&#32;<link linkend="localization_8c_1a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</link>()&#32;{
+60 &#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">double</emphasis>&#32;vel_acumm_x&#32;=&#32;0;
+61 &#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">double</emphasis>&#32;vel_acumm_y&#32;=&#32;0;
+62 
+63 &#32;&#32;int32_t&#32;accel_x_rel&#32;=&#32;(int32_t)analogReadCalibratedHR(2);
+64 &#32;&#32;int32_t&#32;accel_y_rel&#32;=&#32;(int32_t)analogReadCalibratedHR(3);
+65 
+66 &#32;&#32;<emphasis class="comment">//&#32;Ignore&#32;atom&#32;format&#32;string&#32;errors</emphasis>
+67 &#32;&#32;printf(<emphasis class="stringliteral">&quot;x:&#32;%+&quot;</emphasis>&#32;PRId32&#32;<emphasis class="stringliteral">&quot;&#32;y:&#32;%+&quot;</emphasis>&#32;PRId32&#32;<emphasis class="stringliteral">&quot;\n&quot;</emphasis>,&#32;accel_x_rel,&#32;accel_y_rel);
+68 
+69 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;delta_time&#32;=&#32;((millis()&#32;-&#32;<link linkend="localization_8c_1a0f327d31da83831114e7417abb7b6b63">last_call</link>)&#32;/&#32;1000.0);
+70 &#32;&#32;<emphasis class="comment">//&#32;double&#32;accel_x_abs&#32;=&#32;(accel_x_rel&#32;*&#32;&#32;cos(theta)&#32;+&#32;accel_y_rel&#32;*&#32;sin(theta))</emphasis>
+71 &#32;&#32;<emphasis class="comment">//&#32;*&#32;delta_time;&#32;&#32;double&#32;accel_y_abs&#32;=&#32;(accel_y_rel&#32;*&#32;&#32;cos(theta)&#32;+</emphasis>
+72 &#32;&#32;<emphasis class="comment">//&#32;accel_x_rel</emphasis>
+73 &#32;&#32;<emphasis class="comment">//&#32;*&#32;sin(theta))&#32;*&#32;delta_time;</emphasis>
+74 
+75 &#32;&#32;<emphasis class="comment">//&#32;vel_acumm_x&#32;+=&#32;accel_x_abs;</emphasis>
+76 &#32;&#32;<emphasis class="comment">//&#32;vel_acumm_y&#32;+=&#32;accel_y_abs;</emphasis>
+77 
+78 &#32;&#32;<emphasis class="comment">//&#32;double&#32;new_x&#32;=&#32;x&#32;+&#32;vel_acumm_x&#32;*&#32;delta_time;</emphasis>
+79 &#32;&#32;<emphasis class="comment">//&#32;double&#32;new_y&#32;=&#32;y&#32;+&#32;vel_acumm_y&#32;*&#32;delta_time;</emphasis>
+80 
+81 &#32;&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structaccelerometer__odometry">accelerometer_odometry</link>&#32;od;
+82 &#32;&#32;<emphasis class="comment">//&#32;od.x&#32;=&#32;new_x;</emphasis>
+83 &#32;&#32;<emphasis class="comment">//&#32;od.y&#32;=&#32;new_y;</emphasis>
+84 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;od;
+85 }
+86 
+<link linkend="localization_8c_1ac103fff038e59ff45f292b9b5138182e">87 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="localization_8c_1ac103fff038e59ff45f292b9b5138182e">integrate_gyro_w</link>(<emphasis class="keywordtype">int</emphasis>&#32;new_w)&#32;{
+88 &#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structencoder__odemtry_1af1a1e2a2a7a2f89138a8c261a3b82898">theta</link>&#32;=&#32;0;
+89 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;delta_theta&#32;=&#32;new_w&#32;*&#32;<link linkend="localization_8h_1a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</link>;
+90 &#32;&#32;theta&#32;+=&#32;delta_theta;
+91 }
+92 
+<link linkend="localization_8c_1aa849dcc7cd296f4556fab3b57c1c4d3e">93 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="localization_8c_1aa849dcc7cd296f4556fab3b57c1c4d3e">calculate_gryo_anglular_velocity</link>()&#32;{
+94 &#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;last_gyro&#32;=&#32;0;
+95 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;current&#32;=&#32;gyroGet(<link linkend="localization_8c_1a46b8f25ffa3bbee071a0468eac654393">g1</link>);
+96 &#32;&#32;<emphasis class="comment">//&#32;Calculate&#32;w&#32;(angluar&#32;velocity&#32;in&#32;degrees&#32;per&#32;second)</emphasis>
+97 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;w&#32;=&#32;(current&#32;-&#32;last_gyro)&#32;/&#32;(<link linkend="localization_8h_1a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</link>&#32;/&#32;1000.0);
+98 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;w;
+99 }
+100 
+<link linkend="localization_8c_1a5dd17937f5561711cd12cdefa8d31869">101 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="localization_8c_1a5dd17937f5561711cd12cdefa8d31869">calculate_encoder_angle</link>()&#32;{
+102 <emphasis class="preprocessor">#define&#32;WIDTH&#32;13.5</emphasis>
+103 <emphasis class="preprocessor">#define&#32;CPR&#32;392.0</emphasis>
+104 <emphasis class="preprocessor">#define&#32;WHEEL_RADIUS&#32;2</emphasis>
+105 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;dist_r&#32;=&#32;<link linkend="encoders_8h_1aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</link>(0)&#32;/&#32;<link linkend="localization_8c_1ad8f1771d4051eafad228df4d397d7e47">CPR</link>;
+106 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;dist_l&#32;=&#32;<link linkend="encoders_8h_1aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</link>(1)&#32;/&#32;<link linkend="localization_8c_1ad8f1771d4051eafad228df4d397d7e47">CPR</link>;
+107 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;((dist_r&#32;-&#32;dist_l)&#32;/&#32;<link linkend="localization_8c_1a241aeeb764887ae5e3de58b98f04b16d">WIDTH</link>);
+108 }
+109 
+<link linkend="localization_8c_1a1cb0c9fa1e6ff2079deb836569d75d87">110 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="localization_8c_1a1cb0c9fa1e6ff2079deb836569d75d87">calculate_encoder_odemetry</link>()&#32;{
+111 <emphasis class="preprocessor">#define&#32;WIDTH&#32;13.5</emphasis>
+112 <emphasis class="preprocessor">#define&#32;CPR&#32;392.0</emphasis>
+113 <emphasis class="preprocessor">#define&#32;WHEEL_RADIUS&#32;2</emphasis>
+114 
+115 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;dist_r&#32;=&#32;<link linkend="encoders_8h_1aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</link>(0)&#32;/&#32;<link linkend="localization_8c_1ad8f1771d4051eafad228df4d397d7e47">CPR</link>;
+116 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;dist_l&#32;=&#32;<link linkend="encoders_8h_1aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</link>(1)&#32;/&#32;<link linkend="localization_8c_1ad8f1771d4051eafad228df4d397d7e47">CPR</link>;
+117 &#32;&#32;printf(<emphasis class="stringliteral">&quot;dist_r:&#32;%d&#32;dist_l:&#32;%d\n&quot;</emphasis>,&#32;dist_r,&#32;dist_l);
+118 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structencoder__odemtry_1af1a1e2a2a7a2f89138a8c261a3b82898">theta</link>&#32;=&#32;(dist_l&#32;-&#32;dist_r)&#32;/&#32;<link linkend="localization_8c_1a241aeeb764887ae5e3de58b98f04b16d">WIDTH</link>;
+119 &#32;&#32;printf(<emphasis class="stringliteral">&quot;theta:&#32;%d\n&quot;</emphasis>,&#32;theta);
+120 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;arc_length&#32;=&#32;((<link linkend="vmath_8h_1ae71449b1cc6e6250b91f539153a7a0d3">M_PI</link>&#32;*&#32;<link linkend="structencoder__odemtry_1af1a1e2a2a7a2f89138a8c261a3b82898">theta</link>)&#32;*&#32;(<link linkend="localization_8c_1a241aeeb764887ae5e3de58b98f04b16d">WIDTH</link>&#32;*&#32;<link linkend="localization_8c_1a241aeeb764887ae5e3de58b98f04b16d">WIDTH</link>)&#32;/&#32;(8));
+121 }
+122 
+<link linkend="localization_8c_1afdd0147de6aa15957e9a125f9cd20578">123 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="localization_8c_1afdd0147de6aa15957e9a125f9cd20578">init_localization</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;gyro1,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;multiplier,
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis class="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis class="keywordtype">int</emphasis>&#32;start_theta)&#32;{
+125 &#32;&#32;<link linkend="localization_8c_1a46b8f25ffa3bbee071a0468eac654393">g1</link>&#32;=&#32;gyroInit(gyro1,&#32;multiplier);
+126 &#32;&#32;<emphasis class="comment">//&#32;init&#32;state&#32;matrix</emphasis>
+127 
+128 &#32;&#32;<emphasis class="comment">//&#32;one&#32;dimensional&#32;vector&#32;with&#32;x,&#32;y,&#32;theta,&#32;acceleration&#32;in&#32;x&#32;and&#32;y</emphasis>
+129 &#32;&#32;state_matrix&#32;=&#32;<link linkend="matrix_8h_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(1,&#32;5);
+130 &#32;&#32;<link linkend="localization_8c_1a5be50f74f0f5a3aea13f2bd8db891488">localization_task</link>&#32;=
+131 &#32;&#32;&#32;&#32;&#32;&#32;taskRunLoop(<link linkend="localization_8c_1afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</link>,&#32;<link linkend="localization_8h_1a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</link>&#32;*&#32;1000);
+132 &#32;&#32;<link linkend="localization_8c_1a0f327d31da83831114e7417abb7b6b63">last_call</link>&#32;=&#32;millis();
+133 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">true</emphasis>;
+134 }
+    </computeroutput></literallayout>
+</section>

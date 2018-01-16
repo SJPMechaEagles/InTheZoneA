@@ -1,15 +1,7 @@
-\section{src/lcd.c File Reference}
+\subsection{src/lcd.c File Reference}
 \label{lcd_8c}\index{src/lcd.\+c@{src/lcd.\+c}}
 {\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
-Include dependency graph for lcd.\+c\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=133pt]{lcd_8c__incl}
-\end{center}
-\end{figure}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ init\+\_\+main\+\_\+lcd} (F\+I\+LE $\ast$lcd)
@@ -28,18 +20,18 @@ void \textbf{ lcd\+\_\+set\+\_\+backlight} (bool \textbf{ state})
 \begin{DoxyCompactList}\small\item\em sets the backlight of the lcd \end{DoxyCompactList}\item 
 void \textbf{ promt\+\_\+confirmation} (const char $\ast$confirm\+\_\+text)
 \begin{DoxyCompactList}\small\item\em Prompts the user to confirm a string. User must press middle button to confirm. Function is not thread safe and will stall a thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Variables}
+\subsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 static F\+I\+LE $\ast$ \textbf{ lcd\+\_\+port} = N\+U\+LL
 \end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
+\subsubsection{Function Documentation}
 \mbox{\label{lcd_8c_a93b26f37d6b1687ad54c90feedfd29ca}} 
 \index{lcd.\+c@{lcd.\+c}!init\+\_\+main\+\_\+lcd@{init\+\_\+main\+\_\+lcd}}
 \index{init\+\_\+main\+\_\+lcd@{init\+\_\+main\+\_\+lcd}!lcd.\+c@{lcd.\+c}}
-\subsubsection{init\+\_\+main\+\_\+lcd()}
+\paragraph{init\+\_\+main\+\_\+lcd()}
 {\footnotesize\ttfamily void init\+\_\+main\+\_\+lcd (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{lcd }\end{DoxyParamCaption})}
 
 
@@ -64,7 +56,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 61} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 62} of file \textbf{ lcd.\+c}.
 
 
 
@@ -74,18 +66,10 @@ References \textbf{ lcd\+\_\+clear()}, and \textbf{ lcd\+\_\+port}.
 
 Referenced by \textbf{ initialize()}.
 
-
-\begin{DoxyCode}
-00061                               \{
-00062   lcd_port = lcd;
-00063   lcdInit(lcd);
-00064   lcd_clear();
-00065 \}
-\end{DoxyCode}
 \mbox{\label{lcd_8c_aa03fd2deaeec8fc3f42a0975d587bad8}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+assert@{lcd\+\_\+assert}}
 \index{lcd\+\_\+assert@{lcd\+\_\+assert}!lcd.\+c@{lcd.\+c}}
-\subsubsection{lcd\+\_\+assert()}
+\paragraph{lcd\+\_\+assert()}
 {\footnotesize\ttfamily static bool lcd\+\_\+assert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -110,20 +94,10 @@ References \textbf{ lcd\+\_\+port}.
 
 Referenced by \textbf{ lcd\+\_\+clear()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, \textbf{ lcd\+\_\+printf()}, \textbf{ lcd\+\_\+set\+\_\+backlight()}, and \textbf{ promt\+\_\+confirmation()}.
 
-
-\begin{DoxyCode}
-00013                           \{
-00014   \textcolor{keywordflow}{if}(lcd_port == NULL) \{
-00015     printf(\textcolor{stringliteral}{"LCD NULL!"});
-00016     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00017   \}
-00018   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-00019 \}
-\end{DoxyCode}
 \mbox{\label{lcd_8c_a35c08b1fa742e650f4873939707b893b}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+clear@{lcd\+\_\+clear}}
 \index{lcd\+\_\+clear@{lcd\+\_\+clear}!lcd.\+c@{lcd.\+c}}
-\subsubsection{lcd\+\_\+clear()}
+\paragraph{lcd\+\_\+clear()}
 {\footnotesize\ttfamily void lcd\+\_\+clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -148,17 +122,10 @@ References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
 Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ init\+\_\+main\+\_\+lcd()}.
 
-
-\begin{DoxyCode}
-00047                  \{
-00048   lcd_assert();
-00049   lcdClear(lcd_port);
-00050 \}
-\end{DoxyCode}
 \mbox{\label{lcd_8c_ac7b3225ccc82fcbe067ba9da934f010d}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+get\+\_\+pressed\+\_\+buttons@{lcd\+\_\+get\+\_\+pressed\+\_\+buttons}}
 \index{lcd\+\_\+get\+\_\+pressed\+\_\+buttons@{lcd\+\_\+get\+\_\+pressed\+\_\+buttons}!lcd.\+c@{lcd.\+c}}
-\subsubsection{lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}
+\paragraph{lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}
 {\footnotesize\ttfamily \textbf{ lcd\+\_\+buttons} lcd\+\_\+get\+\_\+pressed\+\_\+buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -189,26 +156,10 @@ References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+port}, \textbf{ lcd\+\
 
 Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ promt\+\_\+confirmation()}.
 
-
-\begin{DoxyCode}
-00028                                      \{
-00029   lcd_assert();
-00030   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} btn\_binary = lcdReadButtons(lcd_port);
-00031   \textcolor{keywordtype}{bool} left = btn\_binary & 0x1;\textcolor{comment}{//0001}
-00032   \textcolor{keywordtype}{bool} middle = btn\_binary & 0x2;\textcolor{comment}{//0010}
-00033   \textcolor{keywordtype}{bool} right = btn\_binary & 0x4;\textcolor{comment}{//0100}
-00034   lcd_buttons btns;
-00035   btns.left = left ? PRESSED : RELEASED;
-00036   btns.middle = middle ? PRESSED : RELEASED;
-00037   btns.right = right ? PRESSED : RELEASED;
-00038 
-00039   \textcolor{keywordflow}{return} btns;
-00040 \}
-\end{DoxyCode}
 \mbox{\label{lcd_8c_adabd3f7cdda45119604b488caf22bba8}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+print@{lcd\+\_\+print}}
 \index{lcd\+\_\+print@{lcd\+\_\+print}!lcd.\+c@{lcd.\+c}}
-\subsubsection{lcd\+\_\+print()}
+\paragraph{lcd\+\_\+print()}
 {\footnotesize\ttfamily void lcd\+\_\+print (\begin{DoxyParamCaption}\item[{unsigned int}]{line,  }\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
 
 
@@ -230,7 +181,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 74} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 75} of file \textbf{ lcd.\+c}.
 
 
 
@@ -240,17 +191,10 @@ References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
 Referenced by \textbf{ display\+\_\+menu()}, and \textbf{ promt\+\_\+confirmation()}.
 
-
-\begin{DoxyCode}
-00074                                                    \{
-00075   lcd_assert();
-00076   lcdSetText(lcd_port, line, str);
-00077 \}
-\end{DoxyCode}
 \mbox{\label{lcd_8c_aa0d4ca88701dfecf98796e2028482b69}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+printf@{lcd\+\_\+printf}}
 \index{lcd\+\_\+printf@{lcd\+\_\+printf}!lcd.\+c@{lcd.\+c}}
-\subsubsection{lcd\+\_\+printf()}
+\paragraph{lcd\+\_\+printf()}
 {\footnotesize\ttfamily void lcd\+\_\+printf (\begin{DoxyParamCaption}\item[{unsigned int}]{line,  }\item[{const char $\ast$}]{format\+\_\+str,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
@@ -272,23 +216,16 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 86} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 87} of file \textbf{ lcd.\+c}.
 
 
 
 References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
-
-\begin{DoxyCode}
-00086                                                                 \{
-00087   lcd_assert();
-00088   lcdPrint(lcd_port, line, format\_str);
-00089 \}
-\end{DoxyCode}
 \mbox{\label{lcd_8c_a245902a4d48a6d9bd1ab308bf9b7e6b5}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+set\+\_\+backlight@{lcd\+\_\+set\+\_\+backlight}}
 \index{lcd\+\_\+set\+\_\+backlight@{lcd\+\_\+set\+\_\+backlight}!lcd.\+c@{lcd.\+c}}
-\subsubsection{lcd\+\_\+set\+\_\+backlight()}
+\paragraph{lcd\+\_\+set\+\_\+backlight()}
 {\footnotesize\ttfamily void lcd\+\_\+set\+\_\+backlight (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
 
 
@@ -308,23 +245,16 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 97} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 99} of file \textbf{ lcd.\+c}.
 
 
 
 References \textbf{ lcd\+\_\+assert()}, and \textbf{ lcd\+\_\+port}.
 
-
-\begin{DoxyCode}
-00097                                    \{
-00098   lcd_assert();
-00099   lcdSetBacklight(lcd_port, state);
-00100 \}
-\end{DoxyCode}
 \mbox{\label{lcd_8c_a99f4683e1990edf624ab216bf327cba4}} 
 \index{lcd.\+c@{lcd.\+c}!promt\+\_\+confirmation@{promt\+\_\+confirmation}}
 \index{promt\+\_\+confirmation@{promt\+\_\+confirmation}!lcd.\+c@{lcd.\+c}}
-\subsubsection{promt\+\_\+confirmation()}
+\paragraph{promt\+\_\+confirmation()}
 {\footnotesize\ttfamily void promt\+\_\+confirmation (\begin{DoxyParamCaption}\item[{const char $\ast$}]{confirm\+\_\+text }\end{DoxyParamCaption})}
 
 
@@ -344,29 +274,19 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 111} of file \textbf{ lcd.\+c}.
+Definition at line \textbf{ 113} of file \textbf{ lcd.\+c}.
 
 
 
 References \textbf{ lcd\+\_\+assert()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, and \textbf{ P\+R\+E\+S\+S\+ED}.
 
 
-\begin{DoxyCode}
-00111                                                   \{
-00112   lcd_assert();
-00113   lcd_print(1, confirm\_text);
-00114   \textcolor{keywordflow}{while}(lcd_get_pressed_buttons().middle != PRESSED)\{
-00115     delay(200);
-00116   \}
-00117 \}
-\end{DoxyCode}
 
-
-\subsection{Variable Documentation}
+\subsubsection{Variable Documentation}
 \mbox{\label{lcd_8c_a8d2a398462720032706d94d44a82a1f8}} 
 \index{lcd.\+c@{lcd.\+c}!lcd\+\_\+port@{lcd\+\_\+port}}
 \index{lcd\+\_\+port@{lcd\+\_\+port}!lcd.\+c@{lcd.\+c}}
-\subsubsection{lcd\+\_\+port}
+\paragraph{lcd\+\_\+port}
 {\footnotesize\ttfamily F\+I\+LE$\ast$ lcd\+\_\+port = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
 
 The port of the initialized lcd 

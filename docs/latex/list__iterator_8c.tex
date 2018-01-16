@@ -1,0 +1,89 @@
+\subsection{src/list\+\_\+iterator.c File Reference}
+\label{list__iterator_8c}\index{src/list\+\_\+iterator.\+c@{src/list\+\_\+iterator.\+c}}
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\newline
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ list\+\_\+iterator\+\_\+destroy} (\textbf{ list\+\_\+iterator\+\_\+t} $\ast$self)
+\item 
+\textbf{ list\+\_\+iterator\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+new} (\textbf{ list\+\_\+t} $\ast$list, \textbf{ list\+\_\+direction\+\_\+t} direction)
+\item 
+\textbf{ list\+\_\+iterator\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node} (\textbf{ list\+\_\+node\+\_\+t} $\ast$node, \textbf{ list\+\_\+direction\+\_\+t} direction)
+\item 
+\textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+next} (\textbf{ list\+\_\+iterator\+\_\+t} $\ast$self)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{list__iterator_8c_ad16fa29ddbb444070ea65f871e1c0ba2}} 
+\index{list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}!list\+\_\+iterator\+\_\+destroy@{list\+\_\+iterator\+\_\+destroy}}
+\index{list\+\_\+iterator\+\_\+destroy@{list\+\_\+iterator\+\_\+destroy}!list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}}
+\paragraph{list\+\_\+iterator\+\_\+destroy()}
+{\footnotesize\ttfamily void list\+\_\+iterator\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+iterator\+\_\+t} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 52} of file \textbf{ list\+\_\+iterator.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}.
+
+
+
+Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
+
+\mbox{\label{list__iterator_8c_a3c956afda343b4a6aaf68fbd4b446733}} 
+\index{list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}!list\+\_\+iterator\+\_\+new@{list\+\_\+iterator\+\_\+new}}
+\index{list\+\_\+iterator\+\_\+new@{list\+\_\+iterator\+\_\+new}!list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}}
+\paragraph{list\+\_\+iterator\+\_\+new()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+iterator\+\_\+t}$\ast$ list\+\_\+iterator\+\_\+new (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{list,  }\item[{\textbf{ list\+\_\+direction\+\_\+t}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 15} of file \textbf{ list\+\_\+iterator.\+c}.
+
+
+
+References \textbf{ list\+\_\+t\+::head}, \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node()}, and \textbf{ list\+\_\+t\+::tail}.
+
+
+
+Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
+
+\mbox{\label{list__iterator_8c_af4136a8a27bdc8c0f967a708dd03d575}} 
+\index{list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}!list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node@{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node}}
+\index{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node@{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node}!list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}}
+\paragraph{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+iterator\+\_\+t}$\ast$ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+node\+\_\+t} $\ast$}]{node,  }\item[{\textbf{ list\+\_\+direction\+\_\+t}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 25} of file \textbf{ list\+\_\+iterator.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}, and \textbf{ list\+\_\+iterator\+\_\+t\+::next}.
+
+
+
+Referenced by \textbf{ list\+\_\+iterator\+\_\+new()}.
+
+\mbox{\label{list__iterator_8c_a2e5db981e32d3aef49ea79505a0615a6}} 
+\index{list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}!list\+\_\+iterator\+\_\+next@{list\+\_\+iterator\+\_\+next}}
+\index{list\+\_\+iterator\+\_\+next@{list\+\_\+iterator\+\_\+next}!list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}}
+\paragraph{list\+\_\+iterator\+\_\+next()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+node\+\_\+t}$\ast$ list\+\_\+iterator\+\_\+next (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+iterator\+\_\+t} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 40} of file \textbf{ list\+\_\+iterator.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev}.
+
+
+
+Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
+

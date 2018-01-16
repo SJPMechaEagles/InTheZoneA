@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['x',['x',['../structlocation.html#aacd18b2506c49d221cfc37b2119e3c3c',1,'location::x()'],['../structcord.html#a2eef9b681474b679cf87b0c20eced2cd',1,'cord::x()'],['../structencoder__odemtry.html#a9a803978381f9b89a031d520a627cbcf',1,'encoder_odemtry::x()'],['../structaccelerometer__odometry.html#a83af671d99413a7c480678d5abb9c64a',1,'accelerometer_odometry::x()']]]
+  ['tail',['tail',['../structlist__t.html#a45dc80e38f8869f66e5d006117aae5f2',1,'list_t']]],
+  ['theta',['theta',['../structlocation.html#a4b415222b4dcf34e49dacd22384be9eb',1,'location::theta()'],['../structencoder__odemtry.html#af1a1e2a2a7a2f89138a8c261a3b82898',1,'encoder_odemtry::theta()']]],
+  ['thresh',['thresh',['../drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581',1,'drive.c']]],
+  ['type',['type',['../structmenu__t.html#a110244ceb7d2a7cba95cfc5758d61c01',1,'menu_t']]]
 ];

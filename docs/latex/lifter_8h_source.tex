@@ -1,4 +1,4 @@
-\section{lifter.\+h}
+\subsection{lifter.\+h}
 \label{lifter_8h_source}\index{include/lifter.\+h@{include/lifter.\+h}}
 
 \begin{DoxyCode}
@@ -6,70 +6,78 @@
 00007 \textcolor{preprocessor}{#ifndef \_LIFTER\_H\_}
 00008 \textcolor{preprocessor}{#define \_LIFTER\_H\_}
 00009 
-00010 \textcolor{preprocessor}{#include <API.h>}
-00011 \textcolor{preprocessor}{#include "motor_ports.h"}
-00012 \textcolor{preprocessor}{#include "sensor_ports.h"}
-00013 \textcolor{preprocessor}{#include "slew.h"}
-00014 \textcolor{preprocessor}{#include "controller.h"}
-00015 \textcolor{preprocessor}{#include "potentiometer.h"}
-00016 \textcolor{preprocessor}{#include "partner.h"}
-00017 \textcolor{preprocessor}{#include "drive.h"}
+00010 \textcolor{preprocessor}{#include "controller.h"}
+00011 \textcolor{preprocessor}{#include "drive.h"}
+00012 \textcolor{preprocessor}{#include "motor_ports.h"}
+00013 \textcolor{preprocessor}{#include "partner.h"}
+00014 \textcolor{preprocessor}{#include "potentiometer.h"}
+00015 \textcolor{preprocessor}{#include "sensor_ports.h"}
+00016 \textcolor{preprocessor}{#include "slew.h"}
+00017 \textcolor{preprocessor}{#include <API.h>}
 00018 
 00022 \textcolor{preprocessor}{#define INIT\_ROTATION 680}
 00023 
-00027 \textcolor{preprocessor}{#define LIFTER\_P .15}
+00027 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_P .05}
 00028 
-00032 \textcolor{preprocessor}{#define LIFTER\_D 0}
+00032 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_D 0}
 00033 
-00037 \textcolor{preprocessor}{#define THRESHOLD 10}
+00037 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_I 0.000}
 00038 
-00042 \textcolor{preprocessor}{#define LIFTER\_I 0}
+00042 \textcolor{preprocessor}{#define MAIN\_LIFTER\_P 0}
 00043 
-00044 
-00048 \textcolor{preprocessor}{#define HEIGHT 19.1 - 3.8}
-00049 
-00053 \textcolor{preprocessor}{#define LIFTER\_UP MASTER, 5, JOY\_UP}
-00054 
-00058 \textcolor{preprocessor}{#define LIFTER\_DOWN MASTER, 5, JOY\_DOWN}
-00059 
-00063 \textcolor{preprocessor}{#define LIFTER\_DRIVER\_LOAD MASTER, RIGHT\_BUTTONS, JOY\_RIGHT}
-00064 
-00068 \textcolor{preprocessor}{#define LIFTER\_UP\_PARTNER PARTNER, 5, JOY\_UP}
-00069 
-00073 \textcolor{preprocessor}{#define LIFTER\_DOWN\_PARTNER PARTNER, 5, JOY\_DOWN}
-00074 
-00075 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_POT\_PORT 2}
-00076 
-00077 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_MAX\_HEIGHT 2500}
+00047 \textcolor{preprocessor}{#define MAIN\_LIFTER\_D 0}
+00048 
+00052 \textcolor{preprocessor}{#define MAIN\_LIFTER\_I 0.0000001}
+00053 
+00057 \textcolor{preprocessor}{#define THRESHOLD 10}
+00058 
+00062 \textcolor{preprocessor}{#define HEIGHT 19.1 - 3.8}
+00063 
+00067 \textcolor{preprocessor}{#define LIFTER\_UP MASTER, 6, JOY\_UP}
+00068 
+00072 \textcolor{preprocessor}{#define LIFTER\_DOWN MASTER, 6, JOY\_DOWN}
+00073 
+00077 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_UP MASTER, 8, JOY\_UP}
 00078 
-00079 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_MIN\_HEIGHT 1300}
-00080 
-00081 \textcolor{preprocessor}{#define MAIN\_LIFTER\_POT 1}
-00082 
-00083 \textcolor{preprocessor}{#define MAIN\_LIFTER\_MIN\_HEIGHT 1700}
-00084 
-00092 \textcolor{keywordtype}{void} set_secondary_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v);
+00082 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_DOWN MASTER, 8, JOY\_DOWN}
+00083 
+00087 \textcolor{preprocessor}{#define LIFTER\_DRIVER\_LOAD MASTER, RIGHT\_BUTTONS, JOY\_RIGHT}
+00088 
+00092 \textcolor{preprocessor}{#define LIFTER\_UP\_PARTNER PARTNER, 5, JOY\_UP}
 00093 
-00101 \textcolor{keywordtype}{void} set_main_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v);
+00097 \textcolor{preprocessor}{#define LIFTER\_DOWN\_PARTNER PARTNER, 5, JOY\_DOWN}
+00098 
+00099 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_POT\_PORT 2}
+00100 
+00101 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_MAX\_HEIGHT 3120}
 00102 
-00110 \textcolor{keywordtype}{void} set_lifter_pos(\textcolor{keywordtype}{int} pos);
-00111 
-00118 \textcolor{keywordtype}{void} raise_main_lifter();
-00119 
-00126 \textcolor{keywordtype}{void} lower_main_lifter();
-00127 
-00134 \textcolor{keywordtype}{void} raise_secondary_lifter();
-00135 
-00142 \textcolor{keywordtype}{void} lower_secondary_lifter();
-00143 
-00150 \textcolor{keywordtype}{void} update_lifter();
-00151 
-00160 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x);
+00103 \textcolor{preprocessor}{#define SECONDARY\_LIFTER\_MIN\_HEIGHT 2000}
+00104 
+00105 \textcolor{preprocessor}{#define MAIN\_LIFTER\_POT 1}
+00106 
+00107 \textcolor{preprocessor}{#define MAIN\_LIFTER\_MIN\_HEIGHT 1700}
+00108 
+00117 \textcolor{keywordtype}{void} set_secondary_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v);
+00118 
+00127 \textcolor{keywordtype}{void} set_main_lifter_motors(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v);
+00128 
+00136 \textcolor{keywordtype}{void} set_lifter_pos(\textcolor{keywordtype}{int} pos);
+00137 
+00144 \textcolor{keywordtype}{void} raise_main_lifter();
+00145 
+00152 \textcolor{keywordtype}{void} lower_main_lifter();
+00153 
+00160 \textcolor{keywordtype}{void} raise_secondary_lifter();
 00161 
-00169 \textcolor{keywordtype}{int} getLifterTicks();
-00170 
-00178 \textcolor{keywordtype}{double} getLifterHeight();
-00179 
-00180 
-00181 \textcolor{preprocessor}{#endif}
+00168 \textcolor{keywordtype}{void} lower_secondary_lifter();
+00169 
+00176 \textcolor{keywordtype}{void} update_lifter();
+00177 
+00186 \textcolor{keywordtype}{float} lifterPotentiometerToDegree(\textcolor{keywordtype}{int} x);
+00187 
+00195 \textcolor{keywordtype}{int} getLifterTicks();
+00196 
+00204 \textcolor{keywordtype}{double} getLifterHeight();
+00205 
+00206 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="auto_8c">
+    <title>auto.c File Reference</title>
+    <programlisting>#include &quot;auto.h&quot;</programlisting>
+    <programlisting>#include &quot;main.h&quot;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="auto_8c_1a3c7ca506bbc071fa740de13805b7f376">autonomous</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>File for autonomous code. </para>
+
+<para>This file should contain the user <link linkend="auto_8c_1a3c7ca506bbc071fa740de13805b7f376">autonomous()</link> function and any functions related to it.</para>
+
+<para>Any copyright is dedicated to the Public Domain. <link xlink:href="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</link></para>
+
+<para>PROS contains FreeRTOS (<link xlink:href="http://www.freertos.org">http://www.freertos.org</link>) whose source code may be obtained from <link xlink:href="http://sourceforge.net/projects/freertos/files/">http://sourceforge.net/projects/freertos/files/</link> or on request. </para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/auto.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+14 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="auto_8h">auto.h</link>&quot;</emphasis>
+15 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="main_8h">main.h</link>&quot;</emphasis>
+16 
+17 <emphasis class="comment">/*</emphasis>
+18 <emphasis class="comment">&#32;*&#32;Runs&#32;the&#32;user&#32;autonomous&#32;code.&#32;This&#32;function&#32;will&#32;be&#32;started&#32;in&#32;its&#32;own&#32;task</emphasis>
+19 <emphasis class="comment">&#32;*&#32;with&#32;the&#32;default&#32;priority&#32;and&#32;stack&#32;size&#32;whenever&#32;the&#32;robot&#32;is&#32;enabled&#32;via</emphasis>
+20 <emphasis class="comment">&#32;*&#32;the&#32;Field&#32;Management&#32;System&#32;or&#32;the&#32;VEX&#32;Competition&#32;Switch&#32;in&#32;the&#32;autonomous</emphasis>
+21 <emphasis class="comment">&#32;*&#32;mode.&#32;If&#32;the&#32;robot&#32;is&#32;disabled&#32;or&#32;communications&#32;is&#32;lost,&#32;&#32;the&#32;autonomous</emphasis>
+22 <emphasis class="comment">&#32;*&#32;task&#32;will&#32;be&#32;stopped&#32;by&#32;the&#32;kernel.&#32;Re-enabling&#32;the&#32;robot&#32;will&#32;restart&#32;the</emphasis>
+23 <emphasis class="comment">&#32;*&#32;task,&#32;not&#32;re-start&#32;it&#32;from&#32;where&#32;it&#32;left&#32;off.</emphasis>
+24 <emphasis class="comment">&#32;*</emphasis>
+25 <emphasis class="comment">&#32;*&#32;Code&#32;running&#32;in&#32;the&#32;autonomous&#32;task&#32;cannot&#32;access&#32;information&#32;from&#32;the&#32;VEX</emphasis>
+26 <emphasis class="comment">&#32;*&#32;Joystick.&#32;However,&#32;the&#32;autonomous&#32;function&#32;can&#32;be&#32;invoked&#32;from&#32;another&#32;task</emphasis>
+27 <emphasis class="comment">&#32;*&#32;if&#32;a&#32;VEX&#32;Competition&#32;Switch&#32;is&#32;not&#32;available,&#32;and&#32;it&#32;can&#32;access&#32;joystick</emphasis>
+28 <emphasis class="comment">&#32;*&#32;information&#32;if&#32;called&#32;in&#32;this&#32;way.</emphasis>
+29 <emphasis class="comment">&#32;*</emphasis>
+30 <emphasis class="comment">&#32;*&#32;The&#32;autonomous&#32;task&#32;may&#32;exit,&#32;unlike&#32;operatorControl()&#32;which&#32;should&#32;never</emphasis>
+31 <emphasis class="comment">&#32;*&#32;exit.&#32;If&#32;it&#32;does&#32;so,&#32;the&#32;robot&#32;will&#32;await&#32;a&#32;switch&#32;to&#32;another&#32;mode&#32;or</emphasis>
+32 <emphasis class="comment">&#32;*&#32;disable/enable&#32;cycle.</emphasis>
+33 <emphasis class="comment">&#32;*/</emphasis>
+<link linkend="auto_8c_1a3c7ca506bbc071fa740de13805b7f376">34 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="auto_8c_1a3c7ca506bbc071fa740de13805b7f376">autonomous</link>()&#32;{
+35 &#32;&#32;<link linkend="slew_8h_1a321758941d88b75783955c819bb75005">init_slew</link>();
+36 
+37 &#32;&#32;delay(10);
+38 &#32;&#32;printf(<emphasis class="stringliteral">&quot;auto\n&quot;</emphasis>);
+39 &#32;&#32;<emphasis class="comment">//&#32;How&#32;far&#32;the&#32;left&#32;wheels&#32;have&#32;gone</emphasis>
+40 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;counts_drive_left;
+41 &#32;&#32;<emphasis class="comment">//&#32;How&#32;far&#32;the&#32;right&#32;wheels&#32;have&#32;gone</emphasis>
+42 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;counts_drive_right;
+43 &#32;&#32;<emphasis class="comment">//&#32;The&#32;average&#32;distance&#32;traveled&#32;forward</emphasis>
+44 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;counts_drive;
+45 
+46 &#32;&#32;<emphasis class="comment">//&#32;Reset&#32;the&#32;integrated&#32;motor&#32;controllers</emphasis>
+47 &#32;&#32;imeReset(<link linkend="auto_8h_1a811b1777cccc7f0e3abbec1874715f0a">MID_LEFT_DRIVE</link>);
+48 &#32;&#32;imeReset(<link linkend="auto_8h_1a2919b1b6b7bf06fab5b5bbf09d8d2761">MID_RIGHT_DRIVE</link>);
+49 &#32;&#32;<emphasis class="comment">//&#32;Set&#32;initial&#32;values&#32;for&#32;how&#32;far&#32;the&#32;wheels&#32;have&#32;gone</emphasis>
+50 &#32;&#32;imeGet(<link linkend="auto_8h_1a811b1777cccc7f0e3abbec1874715f0a">MID_LEFT_DRIVE</link>,&#32;&amp;counts_drive_left);
+51 &#32;&#32;imeGet(<link linkend="auto_8h_1a2919b1b6b7bf06fab5b5bbf09d8d2761">MID_RIGHT_DRIVE</link>,&#32;&amp;counts_drive_right);
+52 &#32;&#32;counts_drive&#32;=&#32;counts_drive_left&#32;+&#32;counts_drive_right;
+53 &#32;&#32;counts_drive&#32;/=&#32;2;
+54 
+55 &#32;&#32;<emphasis class="comment">//&#32;Deploy&#32;claw</emphasis>
+56 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(analogRead(<link linkend="lifter_8h_1a72522c3c839198d275d956af1b759ff3">SECONDARY_LIFTER_POT_PORT</link>)&#32;&lt;&#32;<link linkend="auto_8h_1afe2ab4383f3cf46d67e74834f691976f">DEPLOY_HEIGHT</link>)&#32;{
+57 
+58 &#32;&#32;&#32;&#32;<link linkend="lifter_8h_1a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</link>(<link linkend="motor__ports_8h_1ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</link>);
+59 &#32;&#32;}
+60 &#32;&#32;<link linkend="lifter_8h_1a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</link>(0);
+61 
+62 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(analogRead(<link linkend="lifter_8h_1a72522c3c839198d275d956af1b759ff3">SECONDARY_LIFTER_POT_PORT</link>)&#32;&gt;&#32;<link linkend="auto_8h_1af364d4d51593fe601f20090221f9ddab">LOWEST_HEIGHT</link>)&#32;{
+63 &#32;&#32;&#32;&#32;<link linkend="lifter_8h_1a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</link>(<link linkend="motor__ports_8h_1ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</link>);
+64 &#32;&#32;}
+65 &#32;&#32;<link linkend="lifter_8h_1a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</link>(0);
+66 
+67 &#32;&#32;<emphasis class="comment">//&#32;Grab&#32;pre-load&#32;cone</emphasis>
+68 &#32;&#32;<link linkend="claw_8h_1ac42dd40dbb37219295286859c6b068c2">close_claw</link>();
+69 &#32;&#32;delay(300);
+70 &#32;&#32;<link linkend="claw_8h_1a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</link>(0);
+71 
+72 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(analogRead(<link linkend="lifter_8h_1a72522c3c839198d275d956af1b759ff3">SECONDARY_LIFTER_POT_PORT</link>)&#32;&lt;&#32;<link linkend="auto_8h_1a9059fa76eb5e8e86f870405d63e72c4c">MAX_HEIGHT</link>)&#32;{
+73 &#32;&#32;&#32;&#32;<link linkend="lifter_8h_1a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</link>(<link linkend="motor__ports_8h_1ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</link>);
+74 &#32;&#32;}
+75 &#32;&#32;<link linkend="lifter_8h_1a78640d547d9361951a92d0bc00939536">set_secondary_lifter_motors</link>(0);
+76 &#32;&#32;<emphasis class="comment">//&#32;Raise&#32;the&#32;lifter</emphasis>
+77 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(analogRead(<link linkend="lifter_8h_1a82799bdc8f8a1a7a38785b446bdd6a9a">MAIN_LIFTER_POT</link>)&#32;&lt;&#32;<link linkend="auto_8h_1ad266821cf9c9fa6af01be95baed80644">MOBILE_GOAL_HEIGHT</link>)&#32;{
+78 &#32;&#32;&#32;&#32;<link linkend="lifter_8h_1ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</link>(<link linkend="motor__ports_8h_1ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</link>);
+79 &#32;&#32;}
+80 &#32;&#32;<link linkend="lifter_8h_1ad00a195af30f246924d6e1a30095b882">set_main_lifter_motors</link>(0);
+81 &#32;&#32;<emphasis class="comment">//&#32;Drive&#32;towards&#32;the&#32;goal</emphasis>
+82 
+83 &#32;&#32;<link linkend="mobile__goal__intake_8h_1aef03134014e51a6a90dd3824f09f4d6c">lower_intake</link>();
+84 &#32;&#32;delay(300);
+85 &#32;&#32;<link linkend="mobile__goal__intake_8h_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(0);
+86 
+87 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(counts_drive&#32;&lt;&#32;<link linkend="auto_8h_1a504fa7d477dd649d731953ec495b1492">MOBILE_GOAL_DISTANCE</link>)&#32;{
+88 &#32;&#32;&#32;&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,&#32;127);
+89 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Restablish&#32;the&#32;distance&#32;traveled</emphasis>
+90 &#32;&#32;&#32;&#32;imeGet(<link linkend="auto_8h_1a811b1777cccc7f0e3abbec1874715f0a">MID_LEFT_DRIVE</link>,&#32;&amp;counts_drive_left);
+91 &#32;&#32;&#32;&#32;imeGet(<link linkend="auto_8h_1a2919b1b6b7bf06fab5b5bbf09d8d2761">MID_RIGHT_DRIVE</link>,&#32;&amp;counts_drive_right);
+92 &#32;&#32;&#32;&#32;counts_drive&#32;=&#32;counts_drive_left&#32;+&#32;counts_drive_right;
+93 &#32;&#32;&#32;&#32;counts_drive&#32;/=&#32;2;
+94 &#32;&#32;}
+95 &#32;&#32;<emphasis class="comment">//&#32;Stop&#32;moving</emphasis>
+96 &#32;&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,&#32;0);
+97 &#32;&#32;delay(1000);
+98 
+99 &#32;&#32;<link linkend="mobile__goal__intake_8h_1aa46a9341d1eb7b39a2ef4cc5079ee3ca">raise_intake</link>();
+100 &#32;&#32;delay(300);
+101 &#32;&#32;<link linkend="mobile__goal__intake_8h_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(0);
+102 
+103 &#32;&#32;<emphasis class="comment">//&#32;Drop&#32;the&#32;cone&#32;on&#32;the&#32;goal</emphasis>
+104 &#32;&#32;<link linkend="claw_8h_1a03023ca28f671b9fa7bac07782ccd8c1">open_claw</link>();
+105 &#32;&#32;delay(1000);
+106 
+107 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;ang&#32;=&#32;0;
+108 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(ang&#32;&lt;&#32;<link linkend="auto_8h_1a57b89da6e342bd7556800463135d03ee">HALF_ROTATE</link>)&#32;{
+109 &#32;&#32;&#32;&#32;ang&#32;+=&#32;<link linkend="localization_8h_1a5dd17937f5561711cd12cdefa8d31869">calculate_encoder_angle</link>();
+110 &#32;&#32;&#32;&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</link>,&#32;<link linkend="motor__ports_8h_1ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</link>);
+111 &#32;&#32;&#32;&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</link>,&#32;<link linkend="motor__ports_8h_1ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</link>);
+112 &#32;&#32;}
+113 &#32;&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,&#32;0);
+114 
+115 &#32;&#32;counts_drive&#32;=&#32;0;
+116 
+117 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(counts_drive&#32;&lt;&#32;<link linkend="auto_8h_1a504fa7d477dd649d731953ec495b1492">MOBILE_GOAL_DISTANCE</link>&#32;+&#32;<link linkend="auto_8h_1abe0d1da59836694bca507d0a5b61423b">ZONE_DISTANCE</link>)&#32;{
+118 &#32;&#32;&#32;&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,&#32;127);
+119 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Restablish&#32;the&#32;distance&#32;traveled</emphasis>
+120 &#32;&#32;&#32;&#32;imeGet(<link linkend="auto_8h_1a811b1777cccc7f0e3abbec1874715f0a">MID_LEFT_DRIVE</link>,&#32;&amp;counts_drive_left);
+121 &#32;&#32;&#32;&#32;imeGet(<link linkend="auto_8h_1a2919b1b6b7bf06fab5b5bbf09d8d2761">MID_RIGHT_DRIVE</link>,&#32;&amp;counts_drive_right);
+122 &#32;&#32;&#32;&#32;counts_drive&#32;=&#32;counts_drive_left&#32;+&#32;counts_drive_right;
+123 &#32;&#32;&#32;&#32;counts_drive&#32;/=&#32;2;
+124 &#32;&#32;}
+125 
+126 &#32;&#32;<link linkend="mobile__goal__intake_8h_1aef03134014e51a6a90dd3824f09f4d6c">lower_intake</link>();
+127 &#32;&#32;delay(300);
+128 &#32;&#32;<link linkend="mobile__goal__intake_8h_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(0);
+129 
+130 &#32;&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,&#32;<link linkend="motor__ports_8h_1ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</link>);
+131 &#32;&#32;delay(1000);
+132 &#32;&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,&#32;0);
+133 
+134 &#32;&#32;<link linkend="slew_8h_1a981c9990a969d2587e66e550737f7cd9">deinitslew</link>();
+135 }
+    </computeroutput></literallayout>
+</section>

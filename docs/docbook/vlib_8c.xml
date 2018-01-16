@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vlib_8c">
+    <title>vlib.c File Reference</title>
+    <programlisting>#include &quot;vlib.h&quot;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="vlib_8c_1a4d26b0ac2f26341d827e0a13a0bd49b6">ftoaa</link> (
+float a, char * buffer, int precision)<para><emphasis>converts a float to string.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="vlib_8c_1a28dc918c0df16add26908891a4aa190e">itoaa</link> (
+int a, char * buffer, int digits)<para><emphasis>converts a int to string.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="vlib_8c_1aad7fea725cb4b198ace1aa3df5051244">reverse</link> (
+char * str, int len)<para><emphasis>reverses a string &apos;str&apos; of length &apos;len&apos;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/vlib.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="vlib_8h">vlib.h</link>&quot;</emphasis>
+2 
+<link linkend="vlib_8c_1aad7fea725cb4b198ace1aa3df5051244">10 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="vlib_8c_1aad7fea725cb4b198ace1aa3df5051244">reverse</link>(<emphasis class="keywordtype">char</emphasis>&#32;*str,&#32;<emphasis class="keywordtype">int</emphasis>&#32;len)&#32;{
+11 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i&#32;=&#32;0,&#32;j&#32;=&#32;len&#32;-&#32;1,&#32;temp;
+12 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(i&#32;&lt;&#32;j)&#32;{
+13 &#32;&#32;&#32;&#32;temp&#32;=&#32;str[i];
+14 &#32;&#32;&#32;&#32;str[i]&#32;=&#32;str[j];
+15 &#32;&#32;&#32;&#32;str[j]&#32;=&#32;temp;
+16 &#32;&#32;&#32;&#32;i++;
+17 &#32;&#32;&#32;&#32;j--;
+18 &#32;&#32;}
+19 }
+20 
+<link linkend="vlib_8c_1a28dc918c0df16add26908891a4aa190e">30 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vlib_8c_1a28dc918c0df16add26908891a4aa190e">itoaa</link>(<emphasis class="keywordtype">int</emphasis>&#32;a,&#32;<emphasis class="keywordtype">char</emphasis>&#32;*buffer,&#32;<emphasis class="keywordtype">int</emphasis>&#32;digits)&#32;{
+31 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;
+32 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(a)&#32;{
+33 &#32;&#32;&#32;&#32;buffer[i++]&#32;=&#32;(a&#32;%&#32;10)&#32;+&#32;<emphasis class="charliteral">&apos;0&apos;</emphasis>;
+34 &#32;&#32;&#32;&#32;a&#32;=&#32;a&#32;/&#32;10;
+35 &#32;&#32;}
+36 
+37 &#32;&#32;<emphasis class="comment">//&#32;If&#32;number&#32;of&#32;digits&#32;required&#32;is&#32;more,&#32;then</emphasis>
+38 &#32;&#32;<emphasis class="comment">//&#32;add&#32;0s&#32;at&#32;the&#32;beginning</emphasis>
+39 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(i&#32;&lt;&#32;digits)
+40 &#32;&#32;&#32;&#32;buffer[i++]&#32;=&#32;<emphasis class="charliteral">&apos;0&apos;</emphasis>;
+41 
+42 &#32;&#32;<link linkend="vlib_8c_1aad7fea725cb4b198ace1aa3df5051244">reverse</link>(buffer,&#32;i);
+43 &#32;&#32;buffer[i]&#32;=&#32;<emphasis class="charliteral">&apos;\0&apos;</emphasis>;
+44 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;i;
+45 }
+46 
+<link linkend="vlib_8c_1a4d26b0ac2f26341d827e0a13a0bd49b6">55 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="vlib_8c_1a4d26b0ac2f26341d827e0a13a0bd49b6">ftoaa</link>(<emphasis class="keywordtype">float</emphasis>&#32;a,&#32;<emphasis class="keywordtype">char</emphasis>&#32;*buffer,&#32;<emphasis class="keywordtype">int</emphasis>&#32;precision)&#32;{
+56 
+57 &#32;&#32;<emphasis class="comment">//&#32;Extract&#32;integer&#32;part</emphasis>
+58 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;ipart&#32;=&#32;(int)a;
+59 
+60 &#32;&#32;<emphasis class="comment">//&#32;Extract&#32;floating&#32;part</emphasis>
+61 &#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;fpart&#32;=&#32;a&#32;-&#32;(float)ipart;
+62 
+63 &#32;&#32;<emphasis class="comment">//&#32;convert&#32;integer&#32;part&#32;to&#32;string</emphasis>
+64 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i&#32;=&#32;<link linkend="vlib_8c_1a28dc918c0df16add26908891a4aa190e">itoaa</link>(ipart,&#32;buffer,&#32;0);
+65 
+66 &#32;&#32;<emphasis class="comment">//&#32;check&#32;for&#32;display&#32;option&#32;after&#32;point</emphasis>
+67 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(precision&#32;!=&#32;0)&#32;{
+68 &#32;&#32;&#32;&#32;buffer[i]&#32;=&#32;<emphasis class="charliteral">&apos;.&apos;</emphasis>;&#32;<emphasis class="comment">//&#32;add&#32;dot</emphasis>
+69 
+70 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Get&#32;the&#32;value&#32;of&#32;fraction&#32;part&#32;up&#32;to&#32;given&#32;num.</emphasis>
+71 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;of&#32;points&#32;after&#32;dot.&#32;The&#32;third&#32;parameter&#32;is&#32;needed</emphasis>
+72 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;to&#32;handle&#32;cases&#32;like&#32;233.007</emphasis>
+73 &#32;&#32;&#32;&#32;fpart&#32;=&#32;fpart&#32;*&#32;pow(10,&#32;precision);
+74 
+75 &#32;&#32;&#32;&#32;<link linkend="vlib_8c_1a28dc918c0df16add26908891a4aa190e">itoaa</link>((<emphasis class="keywordtype">int</emphasis>)fpart,&#32;buffer&#32;+&#32;i&#32;+&#32;1,&#32;precision);
+76 &#32;&#32;}
+77 }
+    </computeroutput></literallayout>
+</section>

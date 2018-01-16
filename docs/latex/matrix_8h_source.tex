@@ -1,48 +1,45 @@
-\section{matrix.\+h}
+\subsection{matrix.\+h}
 \label{matrix_8h_source}\index{include/matrix.\+h@{include/matrix.\+h}}
 
 \begin{DoxyCode}
 00001 
-00008 \textcolor{preprocessor}{#ifndef \_MATRIX\_H\_}
-00009 \textcolor{preprocessor}{#define \_MATRIX\_H\_}
-00010 
-00014 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }_matrix \{
-00015     \textcolor{keywordtype}{int} height;
-00016     \textcolor{keywordtype}{int} width;
-00017     \textcolor{keywordtype}{double}* data;
-00018 \} matrix;
-00019 
-00028 \textcolor{keywordtype}{void} assert(\textcolor{keywordtype}{int} assertion, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* message);
-00029 
-00033 matrix* makeMatrix(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);
-00034 
-00042 matrix* copyMatrix(matrix* m);
-00043 
-00048 \textcolor{keywordtype}{void} freeMatrix(matrix* m);
-00049 
-00054 \textcolor{keywordtype}{void} printMatrix(matrix* m);
-00055 
-00056 \textcolor{comment}{//============================}
-00057 \textcolor{comment}{// Basic Matrix operations}
-00058 \textcolor{comment}{//============================}
-00064 \textcolor{comment}{}matrix* identityMatrix(\textcolor{keywordtype}{int} n);
-00065 
-00071 \textcolor{keywordtype}{double} traceMatrix(matrix* m);
-00072 
-00078 matrix* transposeMatrix(matrix* m);
-00079 
-00085 matrix* meanMatrix(matrix* m);
-00086 
-00093 matrix* multiplyMatrix(matrix* a, matrix* b);
-00094 
-00102 matrix* scaleMatrix(matrix* m, \textcolor{keywordtype}{double} value);
-00103 
-00109 matrix* covarianceMatrix(matrix* m);
-00110 
-00120 \textcolor{keywordtype}{void} rowSwap(matrix* a, \textcolor{keywordtype}{int} p, \textcolor{keywordtype}{int} q);
-00135 matrix* dotProductMatrix(matrix* a, matrix* b);
-00136 
-00151 matrix* dotDiagonalMatrix(matrix* a, matrix* b);
-00152 
-00153 \textcolor{preprocessor}{#endif}
+00010 \textcolor{preprocessor}{#ifndef \_MATRIX\_H\_}
+00011 \textcolor{preprocessor}{#define \_MATRIX\_H\_}
+00012 
+00016 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }_matrix \{
+00017   \textcolor{keywordtype}{int} height;
+00018   \textcolor{keywordtype}{int} width;
+00019   \textcolor{keywordtype}{double} *data;
+00020 \} matrix;
+00021 
+00030 \textcolor{keywordtype}{void} assert(\textcolor{keywordtype}{int} assertion, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *message);
+00031 
+00035 matrix *makeMatrix(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);
+00036 
+00044 matrix *copyMatrix(matrix *m);
+00045 
+00050 \textcolor{keywordtype}{void} freeMatrix(matrix *m);
+00051 
+00056 \textcolor{keywordtype}{void} printMatrix(matrix *m);
+00057 
+00063 matrix *identityMatrix(\textcolor{keywordtype}{int} n);
+00064 
+00070 \textcolor{keywordtype}{double} traceMatrix(matrix *m);
+00071 
+00077 matrix *transposeMatrix(matrix *m);
+00078 
+00086 matrix *meanMatrix(matrix *m);
+00087 
+00094 matrix *multiplyMatrix(matrix *a, matrix *b);
+00095 
+00103 matrix *scaleMatrix(matrix *m, \textcolor{keywordtype}{double} value);
+00104 
+00111 matrix *covarianceMatrix(matrix *m);
+00112 
+00122 \textcolor{keywordtype}{void} rowSwap(matrix *a, \textcolor{keywordtype}{int} p, \textcolor{keywordtype}{int} q);
+00137 matrix *dotProductMatrix(matrix *a, matrix *b);
+00138 
+00153 matrix *dotDiagonalMatrix(matrix *a, matrix *b);
+00154 
+00155 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

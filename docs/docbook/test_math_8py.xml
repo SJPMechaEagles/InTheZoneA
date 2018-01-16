@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="test_math_8py">
+    <title>testMath.py File Reference</title>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacetest_math">testMath</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/testMath.py</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="keyword">from</emphasis>&#32;math&#32;<emphasis class="keyword">import</emphasis>&#32;*
+2 
+3 <emphasis class="keyword">def&#32;</emphasis><link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(l1,&#32;l2):
+4 &#32;&#32;&#32;&#32;print(l1,&#32;l2)
+5 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&quot;\n&quot;</emphasis>)
+6 &#32;&#32;&#32;&#32;theta&#32;=&#32;l1-l2
+7 &#32;&#32;&#32;&#32;x&#32;=&#32;((l2)/(theta)&#32;+&#32;.5)&#32;-&#32;((l2)/(theta)&#32;+&#32;.5)&#32;*&#32;cos(theta)
+8 &#32;&#32;&#32;&#32;y&#32;=&#32;((l2)/(theta)&#32;+&#32;.5)&#32;*&#32;sin(theta)
+9 &#32;&#32;&#32;&#32;print(x)
+10 &#32;&#32;&#32;&#32;print(y)
+11 &#32;&#32;&#32;&#32;print(degrees(theta))
+12 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&quot;\n&quot;</emphasis>)
+13 &#32;&#32;&#32;&#32;print(<emphasis class="stringliteral">&quot;\n&quot;</emphasis>)
+14 
+15 <link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(1.0,&#32;.5)
+16 <link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(.5,&#32;1.0)
+17 <link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(2.0,&#32;.5)
+18 <link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(.5,&#32;2.0)
+19 <link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(1.0,&#32;3.5)
+20 <link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(3.5,&#32;1.0)
+21 <link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(5,&#32;.3) 
+22 <link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(.3,&#32;5)
+23 <link linkend="namespacetest_math_1aa1a3d4e1c4f74f13640e69f5e9e1ce39">test</link>(1.0,&#32;0)
+    </computeroutput></literallayout>
+</section>

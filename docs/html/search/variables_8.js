@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['magnitue',['magnitue',['../structpolar__cord.html#aec2e25fecc82af176f0fcd23f1e02f0c',1,'polar_cord']]],
-  ['main_5fgyro',['main_gyro',['../gyro_8c.html#ab848a00cddfc20556aef426cf11f9a85',1,'gyro.c']]],
-  ['max',['max',['../structmenu__t.html#ace9cbaecd7bf311be0ef230da657f406',1,'menu_t']]],
-  ['max_5ff',['max_f',['../structmenu__t.html#a14b11d0a7610484462c8a6e93068a2c1',1,'menu_t']]],
-  ['middle',['middle',['../structlcd__buttons.html#a293342810ac56f73979b08f144d6e6b9',1,'lcd_buttons']]],
-  ['min',['min',['../structmenu__t.html#a6891bc6c94f1e995cc62a05b13328de5',1,'menu_t']]],
-  ['min_5ff',['min_f',['../structmenu__t.html#a0a6e4f711992fb69e8a57c2af1ab7a05',1,'menu_t']]],
-  ['mode',['mode',['../partner_8c.html#ac57f7e8cb1c4e638c8c477740314a109',1,'partner.c']]],
-  ['motors_5fcurr_5fspeeds',['motors_curr_speeds',['../slew_8c.html#a69e0d1204ea4d87b7366c9cd79527984',1,'slew.c']]],
-  ['motors_5fset_5fspeeds',['motors_set_speeds',['../slew_8c.html#acf7558ed17fdecd298ea7eb82291c7d0',1,'slew.c']]]
+  ['last_5fcall',['last_call',['../localization_8c.html#a0f327d31da83831114e7417abb7b6b63',1,'localization.c']]],
+  ['lcd_5fport',['lcd_port',['../lcd_8c.html#a8d2a398462720032706d94d44a82a1f8',1,'lcd.c']]],
+  ['left',['left',['../structlcd__buttons.html#ae385efb5ec794acf5f11027f46c6c039',1,'lcd_buttons']]],
+  ['len',['len',['../structlist__t.html#aba275113a143fe39c162f547c6792502',1,'list_t']]],
+  ['length',['length',['../structmenu__t.html#a023063461c4a247e574abd6a55faf765',1,'menu_t']]],
+  ['lifter_5fautostack_5froutine_5finterupt',['lifter_autostack_routine_interupt',['../lifter_8c.html#afbf11bb950aeb7975e91d0675a0820bc',1,'lifter.c']]],
+  ['lifter_5fautostack_5frunning',['lifter_autostack_running',['../lifter_8c.html#ae1fc3deab25f0b9e6f636bb83e9bf5c2',1,'lifter.c']]],
+  ['lifter_5fultrasonic',['lifter_ultrasonic',['../init_8c.html#a5dfaf05eb7e97b2e29d04eb068f9c240',1,'lifter_ultrasonic():&#160;lifter.c'],['../lifter_8c.html#a5dfaf05eb7e97b2e29d04eb068f9c240',1,'lifter_ultrasonic():&#160;lifter.c']]],
+  ['localization_5ftask',['localization_task',['../localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488',1,'localization.c']]],
+  ['log_5flcd',['log_lcd',['../log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a',1,'log.c']]],
+  ['log_5flevel',['log_level',['../log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5',1,'log.c']]]
 ];

@@ -1,4 +1,4 @@
-\section{include/slew.h File Reference}
+\subsection{include/slew.h File Reference}
 \label{slew_8h}\index{include/slew.\+h@{include/slew.\+h}}
 
 
@@ -8,23 +8,7 @@ Contains the slew rate controller wrapper for the motors.
 {\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
 {\ttfamily \#include $<$vlib.\+h$>$}\newline
-Include dependency graph for slew.\+h\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=253pt]{slew_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{slew_8h__dep__incl}
-\end{center}
-\end{figure}
-\subsection*{Macros}
+\subsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \textbf{ M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS}~12
@@ -33,7 +17,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactList}\small\item\em proportion defining how quickly the motor should converge on the correct value. higher value leads to slower convergence \end{DoxyCompactList}\item 
 \#define \textbf{ U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}~25
 \begin{DoxyCompactList}\small\item\em How frequently to update the motors, in milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ deinitslew} ()
@@ -48,7 +32,7 @@ void \textbf{ update\+Motors} ()
 \begin{DoxyCompactList}\small\item\em Closes the distance between the desired motor value and the current motor value by half for each motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsubsection{Detailed Description}
 Contains the slew rate controller wrapper for the motors. 
 
 \begin{DoxyAuthor}{Author}
@@ -63,11 +47,11 @@ Definition in file \textbf{ slew.\+h}.
 
 
 
-\subsection{Macro Definition Documentation}
+\subsubsection{Macro Definition Documentation}
 \mbox{\label{slew_8h_ad1ad4b29af4180aa00713599367fbc98}} 
 \index{slew.\+h@{slew.\+h}!M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS@{M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS}}
 \index{M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS@{M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS}!slew.\+h@{slew.\+h}}
-\subsubsection{M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS}
+\paragraph{M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS}
 {\footnotesize\ttfamily \#define M\+O\+T\+O\+R\+\_\+\+P\+O\+R\+TS~12}
 
 
@@ -87,7 +71,7 @@ Definition at line \textbf{ 27} of file \textbf{ slew.\+h}.
 \mbox{\label{slew_8h_a4a3ff8667251227c99f8f4c81e9ff467}} 
 \index{slew.\+h@{slew.\+h}!R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON@{R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON}}
 \index{R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON@{R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON}!slew.\+h@{slew.\+h}}
-\subsubsection{R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON}
+\paragraph{R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON}
 {\footnotesize\ttfamily \#define R\+A\+M\+P\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON~1}
 
 
@@ -102,12 +86,12 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 34} of file \textbf{ slew.\+h}.
+Definition at line \textbf{ 35} of file \textbf{ slew.\+h}.
 
 \mbox{\label{slew_8h_a4e8e7d6fdd1f5c6f8a0f341e4b61f025}} 
 \index{slew.\+h@{slew.\+h}!U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS@{U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}}
 \index{U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS@{U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}!slew.\+h@{slew.\+h}}
-\subsubsection{U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}
+\paragraph{U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}
 {\footnotesize\ttfamily \#define U\+P\+D\+A\+T\+E\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS~25}
 
 
@@ -126,11 +110,11 @@ Definition at line \textbf{ 20} of file \textbf{ slew.\+h}.
 
 
 
-\subsection{Function Documentation}
+\subsubsection{Function Documentation}
 \mbox{\label{slew_8h_a981c9990a969d2587e66e550737f7cd9}} 
 \index{slew.\+h@{slew.\+h}!deinitslew@{deinitslew}}
 \index{deinitslew@{deinitslew}!slew.\+h@{slew.\+h}}
-\subsubsection{deinitslew()}
+\paragraph{deinitslew()}
 {\footnotesize\ttfamily void deinitslew (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -145,7 +129,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 58} of file \textbf{ slew.\+c}.
+Definition at line \textbf{ 59} of file \textbf{ slew.\+c}.
 
 
 
@@ -155,19 +139,10 @@ References \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textb
 
 Referenced by \textbf{ autonomous()}.
 
-
-\begin{DoxyCode}
-00058                  \{
-00059   taskDelete(slew);
-00060   memset(motors_set_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
-00061   memset(motors_curr_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
-00062   initialized = \textcolor{keyword}{false};
-00063 \}
-\end{DoxyCode}
 \mbox{\label{slew_8h_a321758941d88b75783955c819bb75005}} 
 \index{slew.\+h@{slew.\+h}!init\+\_\+slew@{init\+\_\+slew}}
 \index{init\+\_\+slew@{init\+\_\+slew}!slew.\+h@{slew.\+h}}
-\subsubsection{init\+\_\+slew()}
+\paragraph{init\+\_\+slew()}
 {\footnotesize\ttfamily void init\+\_\+slew (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -182,35 +157,20 @@ Chris Jerrett, Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 40} of file \textbf{ slew.\+c}.
+Definition at line \textbf{ 42} of file \textbf{ slew.\+c}.
 
 
 
-References \textbf{ info()}, \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, \textbf{ slew}, \textbf{ speeds\+\_\+mutex}, \textbf{ update\+Motors()}, and \textbf{ warning()}.
+References \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, \textbf{ slew}, \textbf{ speeds\+\_\+mutex}, \textbf{ update\+Motors()}, and \textbf{ warning()}.
 
 
 
 Referenced by \textbf{ autonomous()}, \textbf{ operator\+Control()}, \textbf{ set\+\_\+motor\+\_\+immediate()}, and \textbf{ set\+\_\+motor\+\_\+slew()}.
 
-
-\begin{DoxyCode}
-00040                 \{
-00041   \textcolor{keywordflow}{if}(initialized) \{
-00042     warning(\textcolor{stringliteral}{"Trying to init already init slew"});
-00043   \}
-00044   memset(motors_set_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
-00045   memset(motors_curr_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
-00046   motorStopAll();
-00047   info(\textcolor{stringliteral}{"Did Init Slew"});
-00048   speeds_mutex = mutexCreate();
-00049   slew = taskRunLoop(updateMotors, 100);
-00050   initialized = \textcolor{keyword}{true};
-00051 \}
-\end{DoxyCode}
 \mbox{\label{slew_8h_a9f8b8ae577ef938622024545711f0151}} 
 \index{slew.\+h@{slew.\+h}!set\+\_\+motor\+\_\+immediate@{set\+\_\+motor\+\_\+immediate}}
 \index{set\+\_\+motor\+\_\+immediate@{set\+\_\+motor\+\_\+immediate}!slew.\+h@{slew.\+h}}
-\subsubsection{set\+\_\+motor\+\_\+immediate()}
+\paragraph{set\+\_\+motor\+\_\+immediate()}
 {\footnotesize\ttfamily void set\+\_\+motor\+\_\+immediate (\begin{DoxyParamCaption}\item[{int}]{motor,  }\item[{int}]{speed }\end{DoxyParamCaption})}
 
 
@@ -232,7 +192,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 89} of file \textbf{ slew.\+c}.
+Definition at line \textbf{ 90} of file \textbf{ slew.\+c}.
 
 
 
@@ -240,26 +200,12 @@ References \textbf{ debug()}, \textbf{ init\+\_\+slew()}, \textbf{ initialized},
 
 
 
-Referenced by \textbf{ close\+\_\+claw()}, \textbf{ open\+\_\+claw()}, \textbf{ set\+\_\+claw\+\_\+motor()}, \textbf{ set\+\_\+intake\+\_\+motor()}, \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+Referenced by \textbf{ close\+\_\+claw()}, \textbf{ open\+\_\+claw()}, \textbf{ set\+\_\+claw\+\_\+motor()}, \textbf{ set\+\_\+intake\+\_\+motor()}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
 
-
-\begin{DoxyCode}
-00089                                                \{
-00090   \textcolor{keywordflow}{if}(!initialized) \{
-00091     debug(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
-00092     init_slew();
-00093   \}
-00094   motorSet(motor, speed);
-00095   mutexTake(speeds_mutex, 10);
-00096   motors_curr_speeds[motor-1] = speed;
-00097   motors_set_speeds[motor-1] = speed;
-00098   mutexGive(speeds_mutex);
-00099 \}
-\end{DoxyCode}
 \mbox{\label{slew_8h_a7dff2b79dffe55fb936d977594d7c01d}} 
 \index{slew.\+h@{slew.\+h}!set\+\_\+motor\+\_\+slew@{set\+\_\+motor\+\_\+slew}}
 \index{set\+\_\+motor\+\_\+slew@{set\+\_\+motor\+\_\+slew}!slew.\+h@{slew.\+h}}
-\subsubsection{set\+\_\+motor\+\_\+slew()}
+\paragraph{set\+\_\+motor\+\_\+slew()}
 {\footnotesize\ttfamily void set\+\_\+motor\+\_\+slew (\begin{DoxyParamCaption}\item[{int}]{motor,  }\item[{int}]{speed }\end{DoxyParamCaption})}
 
 
@@ -281,7 +227,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 72} of file \textbf{ slew.\+c}.
+Definition at line \textbf{ 73} of file \textbf{ slew.\+c}.
 
 
 
@@ -289,24 +235,12 @@ References \textbf{ debug()}, \textbf{ init\+\_\+slew()}, \textbf{ initialized},
 
 
 
-Referenced by \textbf{ set\+\_\+side\+\_\+speed()}.
+Referenced by \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, and \textbf{ set\+\_\+side\+\_\+speed()}.
 
-
-\begin{DoxyCode}
-00072                                          \{
-00073   \textcolor{keywordflow}{if}(!initialized) \{
-00074     debug(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
-00075     init_slew();
-00076   \}
-00077   mutexTake(speeds_mutex, 10);
-00078   motors_set_speeds[motor-1] = speed;
-00079   mutexGive(speeds_mutex);
-00080 \}
-\end{DoxyCode}
 \mbox{\label{slew_8h_a807a87c5df438fde21c1e8213906695b}} 
 \index{slew.\+h@{slew.\+h}!update\+Motors@{update\+Motors}}
 \index{update\+Motors@{update\+Motors}!slew.\+h@{slew.\+h}}
-\subsubsection{update\+Motors()}
+\paragraph{update\+Motors()}
 {\footnotesize\ttfamily void update\+Motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -321,7 +255,7 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 18} of file \textbf{ slew.\+c}.
+Definition at line \textbf{ 19} of file \textbf{ slew.\+c}.
 
 
 
@@ -331,22 +265,3 @@ References \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\
 
 Referenced by \textbf{ init\+\_\+slew()}.
 
-
-\begin{DoxyCode}
-00018                    \{
-00019   \textcolor{comment}{//Take back half approach}
-00020   \textcolor{comment}{//Not linear but equal to setSpeed(1-(1/2)^x)}
-00021   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < 9; i++) \{
-00022     \textcolor{keywordflow}{if}(motors_set_speeds[i] == motors_curr_speeds[i]) \textcolor{keywordflow}{continue};
-00023     mutexTake(speeds_mutex, 10);
-00024     \textcolor{keywordtype}{int} set\_speed = (motors_set_speeds[i]);
-00025     \textcolor{keywordtype}{int} curr\_speed = motors_curr_speeds[i];
-00026     mutexGive(speeds_mutex);
-00027     \textcolor{keywordtype}{int} diff = set\_speed - curr\_speed;
-00028     \textcolor{keywordtype}{int} offset = diff;
-00029     \textcolor{keywordtype}{int} n = curr\_speed + offset;
-00030     motors_curr_speeds[i] = n;
-00031     motorSet(i+1, n);
-00032   \}
-00033 \}
-\end{DoxyCode}

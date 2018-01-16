@@ -1,0 +1,49 @@
+\subsection{routines.\+c}
+\label{a00140_source}\index{src/routines.\+c@{src/routines.\+c}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "routines.h"}
+00002 \textcolor{preprocessor}{#include "controller.h"}
+00003 \textcolor{preprocessor}{#include "list.h"}
+00004 \textcolor{preprocessor}{#include "log.h"}
+00005 \textcolor{preprocessor}{#include "toggle.h"}
+00006 \textcolor{preprocessor}{#include <API.h>}
+00007 
+00008 \textcolor{keyword}{static} list_t *routine_list;
+00009 
+00010 \textcolor{keyword}{static} TaskHandle routine_task_var;
+00011 
+00012 \textcolor{keywordtype}{void} routine_task() \{
+00013   list_node_t *node;
+00014   list_iterator_t *it = list_iterator_new(routine\_list, LIST_HEAD);
+00015   \textcolor{keywordflow}{if} (it != NULL) \{
+00016     \textcolor{keywordflow}{while} (node = list_iterator_next(it)) \{
+00017       \textcolor{keywordflow}{if} (node->val != NULL) \{
+00018         routine_t *routine = (routine_t *)(node->val);
+00019         \textcolor{keywordflow}{if} (buttonIsNewPress(routine->on_button)) \{
+00020           routine->routine();
+00021         \}
+00022       \}
+00023     \}
+00024   \}
+00025   list_iterator_destroy(it);
+00026 \}
+00027 
+00028 \textcolor{keywordtype}{void} init_routine() \{
+00029   routine\_list = list_new();
+00030   routine_task_var = taskRunLoop(routine_task, 20);
+00031 \}
+00032 
+00033 \textcolor{keywordtype}{void} deinit_routines() \{ list_destroy(routine\_list); \}
+00034 
+00035 \textcolor{keywordtype}{void} register_routine(\textcolor{keywordtype}{void} (*routine)(), button_t on\_buttons,
+00036                       button_t *prohibited\_buttons) \{
+00037   \textcolor{keyword}{struct }routine_t *r = (\textcolor{keyword}{struct }routine_t *)malloc(\textcolor{keyword}{sizeof}(routine_t));
+00038   r->blocked_buttons = prohibited\_buttons;
+00039   r->routine = routine;
+00040   r->on_button = on\_buttons;
+00041   list_node_t *node = list_node_new(r);
+00042   node->val = r;
+00043   list_rpush(routine\_list, node);
+00044 \}
+\end{DoxyCode}

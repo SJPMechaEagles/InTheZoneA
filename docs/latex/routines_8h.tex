@@ -1,0 +1,100 @@
+\subsection{include/routines.h File Reference}
+\label{routines_8h}\index{include/routines.\+h@{include/routines.\+h}}
+{\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ routine\+\_\+t}
+\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \textbf{ routine\+\_\+t} \textbf{ routine\+\_\+t}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ deinit\+\_\+routines} ()
+\item 
+void \textbf{ init\+\_\+routine} ()
+\item 
+void \textbf{ register\+\_\+routine} (void($\ast$routine)(), \textbf{ button\+\_\+t} on\+\_\+buttons, \textbf{ button\+\_\+t} $\ast$prohibited\+\_\+buttons)
+\item 
+void \textbf{ routine\+\_\+task} ()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Typedef Documentation}
+\mbox{\label{routines_8h_a9105ef626cef6848419da1a89fe90e07}} 
+\index{routines.\+h@{routines.\+h}!routine\+\_\+t@{routine\+\_\+t}}
+\index{routine\+\_\+t@{routine\+\_\+t}!routines.\+h@{routines.\+h}}
+\paragraph{routine\+\_\+t}
+{\footnotesize\ttfamily typedef struct \textbf{ routine\+\_\+t} \textbf{ routine\+\_\+t}}
+
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{routines_8h_ad908adbc884189372f72f882ec62d71d}} 
+\index{routines.\+h@{routines.\+h}!deinit\+\_\+routines@{deinit\+\_\+routines}}
+\index{deinit\+\_\+routines@{deinit\+\_\+routines}!routines.\+h@{routines.\+h}}
+\paragraph{deinit\+\_\+routines()}
+{\footnotesize\ttfamily void deinit\+\_\+routines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 33} of file \textbf{ routines.\+c}.
+
+
+
+References \textbf{ list\+\_\+destroy()}.
+
+\mbox{\label{routines_8h_ab873e24fcc59a2bf7844618b664a5d26}} 
+\index{routines.\+h@{routines.\+h}!init\+\_\+routine@{init\+\_\+routine}}
+\index{init\+\_\+routine@{init\+\_\+routine}!routines.\+h@{routines.\+h}}
+\paragraph{init\+\_\+routine()}
+{\footnotesize\ttfamily void init\+\_\+routine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 28} of file \textbf{ routines.\+c}.
+
+
+
+References \textbf{ list\+\_\+new()}, \textbf{ routine\+\_\+task()}, and \textbf{ routine\+\_\+task\+\_\+var}.
+
+
+
+Referenced by \textbf{ operator\+Control()}.
+
+\mbox{\label{routines_8h_a4bf3e235fcde5f0e1ce1f693cbb9c01c}} 
+\index{routines.\+h@{routines.\+h}!register\+\_\+routine@{register\+\_\+routine}}
+\index{register\+\_\+routine@{register\+\_\+routine}!routines.\+h@{routines.\+h}}
+\paragraph{register\+\_\+routine()}
+{\footnotesize\ttfamily void register\+\_\+routine (\begin{DoxyParamCaption}\item[{void($\ast$)()}]{routine,  }\item[{\textbf{ button\+\_\+t}}]{on\+\_\+buttons,  }\item[{\textbf{ button\+\_\+t} $\ast$}]{prohibited\+\_\+buttons }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 35} of file \textbf{ routines.\+c}.
+
+
+
+References \textbf{ routine\+\_\+t\+::blocked\+\_\+buttons}, \textbf{ list\+\_\+node\+\_\+new()}, \textbf{ list\+\_\+rpush()}, \textbf{ routine\+\_\+t\+::on\+\_\+button}, \textbf{ routine\+\_\+t\+::routine}, and \textbf{ list\+\_\+node\+::val}.
+
+\mbox{\label{routines_8h_a230cdcefb410a429fb6baba1f88fc9ba}} 
+\index{routines.\+h@{routines.\+h}!routine\+\_\+task@{routine\+\_\+task}}
+\index{routine\+\_\+task@{routine\+\_\+task}!routines.\+h@{routines.\+h}}
+\paragraph{routine\+\_\+task()}
+{\footnotesize\ttfamily void routine\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 12} of file \textbf{ routines.\+c}.
+
+
+
+References \textbf{ button\+Is\+New\+Press()}, \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_\+destroy()}, \textbf{ list\+\_\+iterator\+\_\+new()}, \textbf{ list\+\_\+iterator\+\_\+next()}, \textbf{ routine\+\_\+t\+::on\+\_\+button}, \textbf{ routine\+\_\+t\+::routine}, and \textbf{ list\+\_\+node\+::val}.
+
+
+
+Referenced by \textbf{ init\+\_\+routine()}.
+

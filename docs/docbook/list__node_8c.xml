@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="list__node_8c">
+    <title>list_node.c File Reference</title>
+    <programlisting>#include &quot;list.h&quot;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list__node_8c_1a4ef36e0519514ac481d0d7e0b439d431">list_node_new</link> (
+void * val)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/list_node.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+2 <emphasis class="comment">//</emphasis>
+3 <emphasis class="comment">//&#32;node.c</emphasis>
+4 <emphasis class="comment">//</emphasis>
+5 <emphasis class="comment">//&#32;Copyright&#32;(c)&#32;2010&#32;TJ&#32;Holowaychuk&#32;&lt;tj@vision-media.ca&gt;</emphasis>
+6 <emphasis class="comment">//</emphasis>
+7 
+8 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="list_8h">list.h</link>&quot;</emphasis>
+9 
+10 <emphasis class="comment">/*</emphasis>
+11 <emphasis class="comment">&#32;*&#32;Allocates&#32;a&#32;new&#32;list_node_t.&#32;NULL&#32;on&#32;failure.</emphasis>
+12 <emphasis class="comment">&#32;*/</emphasis>
+13 
+<link linkend="list__node_8c_1a4ef36e0519514ac481d0d7e0b439d431">14 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list__node_8c_1a4ef36e0519514ac481d0d7e0b439d431">list_node_new</link>(<emphasis class="keywordtype">void</emphasis>&#32;*val)&#32;{
+15 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*<emphasis class="keyword">self</emphasis>;
+16 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!(<emphasis class="keyword">self</emphasis>&#32;=&#32;<link linkend="list_8h_1ab80cb68ecaaf76c970758cd702641cee">LIST_MALLOC</link>(<emphasis class="keyword">sizeof</emphasis>(<link linkend="structlist__node">list_node_t</link>))))
+17 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+18 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;NULL;
+19 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;NULL;
+20 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>&#32;=&#32;val;
+21 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">self</emphasis>;
+22 }
+    </computeroutput></literallayout>
+</section>

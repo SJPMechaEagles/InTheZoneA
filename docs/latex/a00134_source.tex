@@ -1,0 +1,32 @@
+\subsection{opcontrol.\+c}
+\label{a00134_source}\index{src/opcontrol.\+c@{src/opcontrol.\+c}}
+
+\begin{DoxyCode}
+00001 
+00014 \textcolor{preprocessor}{#include "drive.h"}
+00015 \textcolor{preprocessor}{#include "main.h"}
+00016 \textcolor{preprocessor}{#include "slew.h"}
+00017 
+00018 \textcolor{preprocessor}{#include "claw.h"}
+00019 \textcolor{preprocessor}{#include "lifter.h"}
+00020 \textcolor{preprocessor}{#include "localization.h"}
+00021 \textcolor{preprocessor}{#include "log.h"}
+00022 \textcolor{preprocessor}{#include "mobile_goal_intake.h"}
+00023 \textcolor{preprocessor}{#include "routines.h"}
+00024 \textcolor{preprocessor}{#include "toggle.h"}
+00025 \textcolor{preprocessor}{#include "vmath.h"}
+00026 
+00049 \textcolor{keywordtype}{void} operatorControl() \{
+00050   buttonInit();
+00051   init_routine();
+00052   init_slew();
+00053   delay(10);
+00054   \textcolor{keywordflow}{while} (1) \{
+00055     update_claw();
+00056     update_intake();
+00057     update_lifter();
+00058     update_drive_motors();
+00059     delay(10);
+00060   \}
+00061 \}
+\end{DoxyCode}

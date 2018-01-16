@@ -1,0 +1,356 @@
+\subsection{include/list.h File Reference}
+\label{list_8h}\index{include/list.\+h@{include/list.\+h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ list\+\_\+iterator\+\_\+t}
+\item 
+struct \textbf{ list\+\_\+node}
+\item 
+struct \textbf{ list\+\_\+t}
+\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}~free
+\item 
+\#define \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}~malloc
+\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \textbf{ list\+\_\+node} \textbf{ list\+\_\+node\+\_\+t}
+\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ list\+\_\+direction\+\_\+t} \{ \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, 
+\textbf{ L\+I\+S\+T\+\_\+\+T\+A\+IL}
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+at} (\textbf{ list\+\_\+t} $\ast$self, int index)
+\item 
+void \textbf{ list\+\_\+destroy} (\textbf{ list\+\_\+t} $\ast$self)
+\item 
+\textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+find} (\textbf{ list\+\_\+t} $\ast$self, void $\ast$val)
+\item 
+void \textbf{ list\+\_\+iterator\+\_\+destroy} (\textbf{ list\+\_\+iterator\+\_\+t} $\ast$self)
+\item 
+\textbf{ list\+\_\+iterator\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+new} (\textbf{ list\+\_\+t} $\ast$list, \textbf{ list\+\_\+direction\+\_\+t} direction)
+\item 
+\textbf{ list\+\_\+iterator\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node} (\textbf{ list\+\_\+node\+\_\+t} $\ast$node, \textbf{ list\+\_\+direction\+\_\+t} direction)
+\item 
+\textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+next} (\textbf{ list\+\_\+iterator\+\_\+t} $\ast$self)
+\item 
+\textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+lpop} (\textbf{ list\+\_\+t} $\ast$self)
+\item 
+\textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+lpush} (\textbf{ list\+\_\+t} $\ast$self, \textbf{ list\+\_\+node\+\_\+t} $\ast$node)
+\item 
+\textbf{ list\+\_\+t} $\ast$ \textbf{ list\+\_\+new} ()
+\item 
+\textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+node\+\_\+new} (void $\ast$val)
+\item 
+void \textbf{ list\+\_\+remove} (\textbf{ list\+\_\+t} $\ast$self, \textbf{ list\+\_\+node\+\_\+t} $\ast$node)
+\item 
+\textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+rpop} (\textbf{ list\+\_\+t} $\ast$self)
+\item 
+\textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+rpush} (\textbf{ list\+\_\+t} $\ast$self, \textbf{ list\+\_\+node\+\_\+t} $\ast$node)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\label{list_8h_a8968cfdd1e3404352d2c43dcb3bde04a}} 
+\index{list.\+h@{list.\+h}!L\+I\+S\+T\+\_\+\+F\+R\+EE@{L\+I\+S\+T\+\_\+\+F\+R\+EE}}
+\index{L\+I\+S\+T\+\_\+\+F\+R\+EE@{L\+I\+S\+T\+\_\+\+F\+R\+EE}!list.\+h@{list.\+h}}
+\paragraph{L\+I\+S\+T\+\_\+\+F\+R\+EE}
+{\footnotesize\ttfamily \#define L\+I\+S\+T\+\_\+\+F\+R\+EE~free}
+
+
+
+Definition at line \textbf{ 24} of file \textbf{ list.\+h}.
+
+
+
+Referenced by \textbf{ list\+\_\+destroy()}, \textbf{ list\+\_\+iterator\+\_\+destroy()}, and \textbf{ list\+\_\+remove()}.
+
+\mbox{\label{list_8h_ab80cb68ecaaf76c970758cd702641cee}} 
+\index{list.\+h@{list.\+h}!L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC@{L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}}
+\index{L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC@{L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}!list.\+h@{list.\+h}}
+\paragraph{L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}
+{\footnotesize\ttfamily \#define L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC~malloc}
+
+
+
+Definition at line \textbf{ 20} of file \textbf{ list.\+h}.
+
+
+
+Referenced by \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node()}, \textbf{ list\+\_\+new()}, and \textbf{ list\+\_\+node\+\_\+new()}.
+
+
+
+\subsubsection{Typedef Documentation}
+\mbox{\label{list_8h_ad8b8636e2e25308b521b32071e849c80}} 
+\index{list.\+h@{list.\+h}!list\+\_\+node\+\_\+t@{list\+\_\+node\+\_\+t}}
+\index{list\+\_\+node\+\_\+t@{list\+\_\+node\+\_\+t}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+node\+\_\+t}
+{\footnotesize\ttfamily typedef struct \textbf{ list\+\_\+node}  \textbf{ list\+\_\+node\+\_\+t}}
+
+
+
+\subsubsection{Enumeration Type Documentation}
+\mbox{\label{list_8h_a2c3af7de0b7ab9c3a84fbc039e75ec66}} 
+\index{list.\+h@{list.\+h}!list\+\_\+direction\+\_\+t@{list\+\_\+direction\+\_\+t}}
+\index{list\+\_\+direction\+\_\+t@{list\+\_\+direction\+\_\+t}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+direction\+\_\+t}
+{\footnotesize\ttfamily enum \textbf{ list\+\_\+direction\+\_\+t}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+I\+S\+T\+\_\+\+H\+E\+AD@{L\+I\+S\+T\+\_\+\+H\+E\+AD}!list.\+h@{list.\+h}}\index{list.\+h@{list.\+h}!L\+I\+S\+T\+\_\+\+H\+E\+AD@{L\+I\+S\+T\+\_\+\+H\+E\+AD}}}\mbox{\label{list_8h_a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00}} 
+L\+I\+S\+T\+\_\+\+H\+E\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+I\+S\+T\+\_\+\+T\+A\+IL@{L\+I\+S\+T\+\_\+\+T\+A\+IL}!list.\+h@{list.\+h}}\index{list.\+h@{list.\+h}!L\+I\+S\+T\+\_\+\+T\+A\+IL@{L\+I\+S\+T\+\_\+\+T\+A\+IL}}}\mbox{\label{list_8h_a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae}} 
+L\+I\+S\+T\+\_\+\+T\+A\+IL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \textbf{ 31} of file \textbf{ list.\+h}.
+
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{list_8h_ab3dacc64ceb63b0a0849312b0a14c91c}} 
+\index{list.\+h@{list.\+h}!list\+\_\+at@{list\+\_\+at}}
+\index{list\+\_\+at@{list\+\_\+at}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+at()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+node\+\_\+t}$\ast$ list\+\_\+at (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{self,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 162} of file \textbf{ list.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_\+destroy()}, \textbf{ list\+\_\+iterator\+\_\+new()}, \textbf{ list\+\_\+iterator\+\_\+next()}, and \textbf{ L\+I\+S\+T\+\_\+\+T\+A\+IL}.
+
+\mbox{\label{list_8h_ac2d2be572a896cccd0e76d56eeefcbdb}} 
+\index{list.\+h@{list.\+h}!list\+\_\+destroy@{list\+\_\+destroy}}
+\index{list\+\_\+destroy@{list\+\_\+destroy}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+destroy()}
+{\footnotesize\ttfamily void list\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 30} of file \textbf{ list.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}, \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::val}.
+
+
+
+Referenced by \textbf{ deinit\+\_\+routines()}.
+
+\mbox{\label{list_8h_a5d73352b7bfa0c5a8b33289d7b27a374}} 
+\index{list.\+h@{list.\+h}!list\+\_\+find@{list\+\_\+find}}
+\index{list\+\_\+find@{list\+\_\+find}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+find()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+node\+\_\+t}$\ast$ list\+\_\+find (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{self,  }\item[{void $\ast$}]{val }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 136} of file \textbf{ list.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_\+destroy()}, \textbf{ list\+\_\+iterator\+\_\+new()}, \textbf{ list\+\_\+iterator\+\_\+next()}, and \textbf{ list\+\_\+node\+::val}.
+
+\mbox{\label{list_8h_ad16fa29ddbb444070ea65f871e1c0ba2}} 
+\index{list.\+h@{list.\+h}!list\+\_\+iterator\+\_\+destroy@{list\+\_\+iterator\+\_\+destroy}}
+\index{list\+\_\+iterator\+\_\+destroy@{list\+\_\+iterator\+\_\+destroy}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+iterator\+\_\+destroy()}
+{\footnotesize\ttfamily void list\+\_\+iterator\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+iterator\+\_\+t} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 52} of file \textbf{ list\+\_\+iterator.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}.
+
+
+
+Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
+
+\mbox{\label{list_8h_a3c956afda343b4a6aaf68fbd4b446733}} 
+\index{list.\+h@{list.\+h}!list\+\_\+iterator\+\_\+new@{list\+\_\+iterator\+\_\+new}}
+\index{list\+\_\+iterator\+\_\+new@{list\+\_\+iterator\+\_\+new}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+iterator\+\_\+new()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+iterator\+\_\+t}$\ast$ list\+\_\+iterator\+\_\+new (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{list,  }\item[{\textbf{ list\+\_\+direction\+\_\+t}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 15} of file \textbf{ list\+\_\+iterator.\+c}.
+
+
+
+References \textbf{ list\+\_\+t\+::head}, \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node()}, and \textbf{ list\+\_\+t\+::tail}.
+
+
+
+Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
+
+\mbox{\label{list_8h_af4136a8a27bdc8c0f967a708dd03d575}} 
+\index{list.\+h@{list.\+h}!list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node@{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node}}
+\index{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node@{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+iterator\+\_\+t}$\ast$ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+node\+\_\+t} $\ast$}]{node,  }\item[{\textbf{ list\+\_\+direction\+\_\+t}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 25} of file \textbf{ list\+\_\+iterator.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}, and \textbf{ list\+\_\+iterator\+\_\+t\+::next}.
+
+
+
+Referenced by \textbf{ list\+\_\+iterator\+\_\+new()}.
+
+\mbox{\label{list_8h_a2e5db981e32d3aef49ea79505a0615a6}} 
+\index{list.\+h@{list.\+h}!list\+\_\+iterator\+\_\+next@{list\+\_\+iterator\+\_\+next}}
+\index{list\+\_\+iterator\+\_\+next@{list\+\_\+iterator\+\_\+next}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+iterator\+\_\+next()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+node\+\_\+t}$\ast$ list\+\_\+iterator\+\_\+next (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+iterator\+\_\+t} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 40} of file \textbf{ list\+\_\+iterator.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev}.
+
+
+
+Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
+
+\mbox{\label{list_8h_a97f6f9590b1cdedd5367b9139e9cc4ef}} 
+\index{list.\+h@{list.\+h}!list\+\_\+lpop@{list\+\_\+lpop}}
+\index{list\+\_\+lpop@{list\+\_\+lpop}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+lpop()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+node\+\_\+t}$\ast$ list\+\_\+lpop (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 93} of file \textbf{ list.\+c}.
+
+
+
+References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev}.
+
+\mbox{\label{list_8h_a7e1b077416813dd474a54826347f7502}} 
+\index{list.\+h@{list.\+h}!list\+\_\+lpush@{list\+\_\+lpush}}
+\index{list\+\_\+lpush@{list\+\_\+lpush}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+lpush()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+node\+\_\+t}$\ast$ list\+\_\+lpush (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{self,  }\item[{\textbf{ list\+\_\+node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 114} of file \textbf{ list.\+c}.
+
+
+
+References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev}.
+
+\mbox{\label{list_8h_a9dd3eafdb56dcc64689f78fb4acdff3f}} 
+\index{list.\+h@{list.\+h}!list\+\_\+new@{list\+\_\+new}}
+\index{list\+\_\+new@{list\+\_\+new}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+new()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+t}$\ast$ list\+\_\+new (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 14} of file \textbf{ list.\+c}.
+
+
+
+References \textbf{ list\+\_\+t\+::head}, and \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}.
+
+
+
+Referenced by \textbf{ init\+\_\+routine()}.
+
+\mbox{\label{list_8h_a4ef36e0519514ac481d0d7e0b439d431}} 
+\index{list.\+h@{list.\+h}!list\+\_\+node\+\_\+new@{list\+\_\+node\+\_\+new}}
+\index{list\+\_\+node\+\_\+new@{list\+\_\+node\+\_\+new}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+node\+\_\+new()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+node\+\_\+t}$\ast$ list\+\_\+node\+\_\+new (\begin{DoxyParamCaption}\item[{void $\ast$}]{val }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 14} of file \textbf{ list\+\_\+node.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}, \textbf{ list\+\_\+node\+::next}, \textbf{ list\+\_\+node\+::prev}, and \textbf{ list\+\_\+node\+::val}.
+
+
+
+Referenced by \textbf{ register\+\_\+routine()}.
+
+\mbox{\label{list_8h_a5ef7843a8a481124bce3e93541ba379a}} 
+\index{list.\+h@{list.\+h}!list\+\_\+remove@{list\+\_\+remove}}
+\index{list\+\_\+remove@{list\+\_\+remove}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+remove()}
+{\footnotesize\ttfamily void list\+\_\+remove (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{self,  }\item[{\textbf{ list\+\_\+node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 186} of file \textbf{ list.\+c}.
+
+
+
+References \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}, \textbf{ list\+\_\+node\+::next}, \textbf{ list\+\_\+node\+::prev}, and \textbf{ list\+\_\+node\+::val}.
+
+\mbox{\label{list_8h_a53460b319b561ce2201bbf95450f1af7}} 
+\index{list.\+h@{list.\+h}!list\+\_\+rpop@{list\+\_\+rpop}}
+\index{list\+\_\+rpop@{list\+\_\+rpop}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+rpop()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+node\+\_\+t}$\ast$ list\+\_\+rpop (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 73} of file \textbf{ list.\+c}.
+
+
+
+References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev}.
+
+\mbox{\label{list_8h_a4edfa9b7742154bff4fc2cb05d044af9}} 
+\index{list.\+h@{list.\+h}!list\+\_\+rpush@{list\+\_\+rpush}}
+\index{list\+\_\+rpush@{list\+\_\+rpush}!list.\+h@{list.\+h}}
+\paragraph{list\+\_\+rpush()}
+{\footnotesize\ttfamily \textbf{ list\+\_\+node\+\_\+t}$\ast$ list\+\_\+rpush (\begin{DoxyParamCaption}\item[{\textbf{ list\+\_\+t} $\ast$}]{self,  }\item[{\textbf{ list\+\_\+node\+\_\+t} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 51} of file \textbf{ list.\+c}.
+
+
+
+References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev}.
+
+
+
+Referenced by \textbf{ register\+\_\+routine()}.
+

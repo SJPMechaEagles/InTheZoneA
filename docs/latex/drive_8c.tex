@@ -1,21 +1,13 @@
-\section{src/drive.c File Reference}
+\subsection{src/drive.c File Reference}
 \label{drive_8c}\index{src/drive.\+c@{src/drive.\+c}}
 {\ttfamily \#include \char`\"{}drive.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}motor\+\_\+ports.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}vmath.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}slew.\+h\char`\"{}}\newline
-{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
-Include dependency graph for drive.\+c\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{drive_8c__incl}
-\end{center}
-\end{figure}
-\subsection*{Functions}
+{\ttfamily \#include \char`\"{}motor\+\_\+ports.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}slew.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vmath.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \textbf{ get\+Thresh} ()
@@ -28,18 +20,18 @@ void \textbf{ set\+Thresh} (int t)
 \begin{DoxyCompactList}\small\item\em Sets the deadzone threshhold on the drive. \end{DoxyCompactList}\item 
 void \textbf{ update\+\_\+drive\+\_\+motors} ()
 \begin{DoxyCompactList}\small\item\em Updates the drive motors during teleop. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Variables}
+\subsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 static int \textbf{ thresh} = 30
 \end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
+\subsubsection{Function Documentation}
 \mbox{\label{drive_8c_a9caa5e772598f9182c9ec84cf8c351ee}} 
 \index{drive.\+c@{drive.\+c}!get\+Thresh@{get\+Thresh}}
 \index{get\+Thresh@{get\+Thresh}!drive.\+c@{drive.\+c}}
-\subsubsection{get\+Thresh()}
+\paragraph{get\+Thresh()}
 {\footnotesize\ttfamily int get\+Thresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -51,22 +43,16 @@ Christian Desimone
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 17} of file \textbf{ drive.\+c}.
+Definition at line \textbf{ 15} of file \textbf{ drive.\+c}.
 
 
 
 References \textbf{ thresh}.
 
-
-\begin{DoxyCode}
-00017                \{
-00018   \textcolor{keywordflow}{return} thresh;
-00019 \}
-\end{DoxyCode}
 \mbox{\label{drive_8c_a6de4fbb9197f2f350c53a9f8bf23a8f1}} 
 \index{drive.\+c@{drive.\+c}!joystick\+Exp@{joystick\+Exp}}
 \index{joystick\+Exp@{joystick\+Exp}!drive.\+c@{drive.\+c}}
-\subsubsection{joystick\+Exp()}
+\paragraph{joystick\+Exp()}
 {\footnotesize\ttfamily static float joystick\+Exp (\begin{DoxyParamCaption}\item[{int}]{joystick\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -86,35 +72,16 @@ Christian De\+Simone, Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 87} of file \textbf{ drive.\+c}.
+Definition at line \textbf{ 81} of file \textbf{ drive.\+c}.
 
 
 
 References \textbf{ T\+H\+R\+E\+S\+H\+O\+LD}.
 
-
-\begin{DoxyCode}
-00087                                           \{
-00088     \textcolor{comment}{//make the offset negative if moving backwards}
-00089     \textcolor{keywordflow}{if} (abs(joystickVal) < THRESHOLD) \{
-00090             \textcolor{keywordflow}{return} 0;
-00091     \}
-00092 
-00093     \textcolor{keywordtype}{int} offset;
-00094   \textcolor{comment}{//Use the threshold to ensure the joystick values are significant}
-00095     \textcolor{keywordflow}{if} (joystickVal < 0) \{
-00096         offset = - (THRESHOLD);
-00097     \} \textcolor{keywordflow}{else} \{
-00098         offset = THRESHOLD;
-00099     \}
-00100   \textcolor{comment}{//Apply the function ((((x/10)^3)/18) + offset) * 0.8 to the joystick value}
-00101     \textcolor{keywordflow}{return} (pow(joystickVal/10 , 3) / 18 + offset) * 0.8;
-00102 \}
-\end{DoxyCode}
 \mbox{\label{drive_8c_a8df41fd50094c065eedc81fc5e6595d1}} 
 \index{drive.\+c@{drive.\+c}!set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}}
 \index{set\+\_\+side\+\_\+speed@{set\+\_\+side\+\_\+speed}!drive.\+c@{drive.\+c}}
-\subsubsection{set\+\_\+side\+\_\+speed()}
+\paragraph{set\+\_\+side\+\_\+speed()}
 {\footnotesize\ttfamily void set\+\_\+side\+\_\+speed (\begin{DoxyParamCaption}\item[{\textbf{ side\+\_\+t}}]{side,  }\item[{int}]{speed }\end{DoxyParamCaption})}
 
 
@@ -133,7 +100,7 @@ Christian Desimone
 \end{DoxyParams}
 
 
-Definition at line \textbf{ 68} of file \textbf{ drive.\+c}.
+Definition at line \textbf{ 62} of file \textbf{ drive.\+c}.
 
 
 
@@ -143,25 +110,10 @@ References \textbf{ B\+O\+TH}, \textbf{ L\+E\+FT}, \textbf{ M\+O\+T\+O\+R\+\_\+\
 
 Referenced by \textbf{ autonomous()}, and \textbf{ update\+\_\+drive\+\_\+motors()}.
 
-
-\begin{DoxyCode}
-00068                                            \{
-00069   \textcolor{keywordflow}{if}(side == RIGHT || side == BOTH)\{
-00070     set_motor_slew(MOTOR_BACK_RIGHT , -speed);
-00071     set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
-00072     set_motor_slew(MOTOR_MIDDLE_RIGHT, -speed);
-00073   \}
-00074   \textcolor{keywordflow}{if}(side == LEFT || side == BOTH)\{
-00075     set_motor_slew(MOTOR_BACK_LEFT, speed);
-00076     set_motor_slew(MOTOR_MIDDLE_LEFT, speed);
-00077     set_motor_slew(MOTOR_FRONT_LEFT, speed);
-00078   \}
-00079 \}
-\end{DoxyCode}
 \mbox{\label{drive_8c_a53d6e35d53ec3e0b1b1c489d8203f204}} 
 \index{drive.\+c@{drive.\+c}!set\+Thresh@{set\+Thresh}}
 \index{set\+Thresh@{set\+Thresh}!drive.\+c@{drive.\+c}}
-\subsubsection{set\+Thresh()}
+\paragraph{set\+Thresh()}
 {\footnotesize\ttfamily void set\+Thresh (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
 
 
@@ -173,22 +125,16 @@ Christian Desimone
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 25} of file \textbf{ drive.\+c}.
+Definition at line \textbf{ 21} of file \textbf{ drive.\+c}.
 
 
 
 References \textbf{ thresh}.
 
-
-\begin{DoxyCode}
-00025                      \{
-00026   thresh = t;
-00027 \}
-\end{DoxyCode}
 \mbox{\label{drive_8c_a8224a4626a934d30ed587671b7004bf8}} 
 \index{drive.\+c@{drive.\+c}!update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}}
 \index{update\+\_\+drive\+\_\+motors@{update\+\_\+drive\+\_\+motors}!drive.\+c@{drive.\+c}}
-\subsubsection{update\+\_\+drive\+\_\+motors()}
+\paragraph{update\+\_\+drive\+\_\+motors()}
 {\footnotesize\ttfamily void update\+\_\+drive\+\_\+motors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -203,7 +149,7 @@ Christian Desimone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 34} of file \textbf{ drive.\+c}.
+Definition at line \textbf{ 28} of file \textbf{ drive.\+c}.
 
 
 
@@ -214,47 +160,17 @@ References \textbf{ get\+\_\+mode()}, \textbf{ L\+E\+FT}, \textbf{ M\+A\+S\+T\+E
 Referenced by \textbf{ operator\+Control()}.
 
 
-\begin{DoxyCode}
-00034                           \{
-00035   \textcolor{comment}{//Get the joystick values from the controller}
-00036   \textcolor{keywordtype}{int} x = 0;
-00037   \textcolor{keywordtype}{int} y = 0;
-00038   \textcolor{keywordflow}{if}(get_mode() == PARTNER_CONTROLLER_MODE) \{
-00039     x = (joystickGetAnalog(PARTNER, 3));
-00040     y = (joystickGetAnalog(PARTNER, 1));
-00041   \} \textcolor{keywordflow}{else} \{
-00042     x = -(joystickGetAnalog(MASTER, 3));
-00043     y = (joystickGetAnalog(MASTER, 1));
-00044   \}
-00045   \textcolor{comment}{//Make sure the joystick values are significant enough to change the motors}
-00046   \textcolor{keywordflow}{if}(x < thresh && x > -thresh)\{
-00047     x = 0;
-00048   \}
-00049   \textcolor{keywordflow}{if}(y < thresh && y > -thresh)\{
-00050     y = 0;
-00051   \}
-00052   \textcolor{comment}{//Create motor values for the left and right from the x and y of the joystick}
-00053   \textcolor{keywordtype}{int} r = (x + y);
-00054   \textcolor{keywordtype}{int} l = -(x - y);
-00055 
-00056   \textcolor{comment}{//Set the drive motors}
-00057   set_side_speed(LEFT, l);
-00058   set_side_speed(RIGHT, -r);
-00059 
-00060 \}
-\end{DoxyCode}
 
-
-\subsection{Variable Documentation}
+\subsubsection{Variable Documentation}
 \mbox{\label{drive_8c_a6cf8bf160a02413bc3d5d18b0294b581}} 
 \index{drive.\+c@{drive.\+c}!thresh@{thresh}}
 \index{thresh@{thresh}!drive.\+c@{drive.\+c}}
-\subsubsection{thresh}
+\paragraph{thresh}
 {\footnotesize\ttfamily int thresh = 30\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \textbf{ 10} of file \textbf{ drive.\+c}.
+Definition at line \textbf{ 9} of file \textbf{ drive.\+c}.
 
 
 

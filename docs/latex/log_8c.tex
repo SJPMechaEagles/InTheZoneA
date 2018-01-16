@@ -1,15 +1,7 @@
-\section{src/log.c File Reference}
+\subsection{src/log.c File Reference}
 \label{log_8c}\index{src/log.\+c@{src/log.\+c}}
 {\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
-Include dependency graph for log.\+c\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=149pt]{log_8c__incl}
-\end{center}
-\end{figure}
-\subsection*{Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ debug} (const char $\ast$debug\+\_\+message)
@@ -24,7 +16,7 @@ static void \textbf{ log\+\_\+info} (const char $\ast$s, const char $\ast$mess)
 \item 
 void \textbf{ warning} (const char $\ast$warning\+\_\+message)
 \begin{DoxyCompactList}\small\item\em prints a warning message and displays on lcd. Only will print and display if log\+\_\+level is greater than N\+O\+NE \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Variables}
+\subsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 static F\+I\+LE $\ast$ \textbf{ log\+\_\+lcd} = N\+U\+LL
@@ -33,11 +25,11 @@ unsigned int \textbf{ log\+\_\+level} = \textbf{ I\+N\+FO}
 \end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
+\subsubsection{Function Documentation}
 \mbox{\label{log_8c_af3668f40d1ad1b4f3418869ac9a31f34}} 
 \index{log.\+c@{log.\+c}!debug@{debug}}
 \index{debug@{debug}!log.\+c@{log.\+c}}
-\subsubsection{debug()}
+\paragraph{debug()}
 {\footnotesize\ttfamily void debug (\begin{DoxyParamCaption}\item[{const char $\ast$}]{debug\+\_\+message }\end{DoxyParamCaption})}
 
 
@@ -64,18 +56,10 @@ References \textbf{ E\+R\+R\+OR}, and \textbf{ log\+\_\+level}.
 
 Referenced by \textbf{ set\+\_\+motor\+\_\+immediate()}, and \textbf{ set\+\_\+motor\+\_\+slew()}.
 
-
-\begin{DoxyCode}
-00077                                       \{
-00078   \textcolor{keywordflow}{if}(log_level>ERROR) \{
-00079     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
-00080   \}
-00081 \}
-\end{DoxyCode}
 \mbox{\label{log_8c_a8e5bb8a2a372f5b066ff7af7044584c1}} 
 \index{log.\+c@{log.\+c}!error@{error}}
 \index{error@{error}!log.\+c@{log.\+c}}
-\subsubsection{error()}
+\paragraph{error()}
 {\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{error\+\_\+message }\end{DoxyParamCaption})}
 
 
@@ -106,19 +90,12 @@ References \textbf{ log\+\_\+info()}, \textbf{ log\+\_\+level}, and \textbf{ N\+
 
 
 
-Referenced by \textbf{ create\+\_\+menu()}.
+Referenced by \textbf{ assert()}, \textbf{ create\+\_\+menu()}, \textbf{ init\+\_\+encoders()}, and \textbf{ initialize()}.
 
-
-\begin{DoxyCode}
-00039                                       \{
-00040   \textcolor{keywordflow}{if}(log_level>NONE)
-00041     log_info(\textcolor{stringliteral}{"ERROR"}, error\_message);
-00042 \}
-\end{DoxyCode}
 \mbox{\label{log_8c_a1606d750e1bb8de9f9e917172bba3382}} 
 \index{log.\+c@{log.\+c}!info@{info}}
 \index{info@{info}!log.\+c@{log.\+c}}
-\subsubsection{info()}
+\paragraph{info()}
 {\footnotesize\ttfamily void info (\begin{DoxyParamCaption}\item[{const char $\ast$}]{info\+\_\+message }\end{DoxyParamCaption})}
 
 
@@ -143,20 +120,12 @@ References \textbf{ E\+R\+R\+OR}, \textbf{ log\+\_\+info()}, and \textbf{ log\+\
 
 
 
-Referenced by \textbf{ init\+\_\+slew()}, and \textbf{ initialize()}.
+Referenced by \textbf{ initialize()}.
 
-
-\begin{DoxyCode}
-00064                                     \{
-00065   \textcolor{keywordflow}{if}(log_level>ERROR) \{
-00066     log_info(\textcolor{stringliteral}{"INFO"}, info\_message);
-00067   \}
-00068 \}
-\end{DoxyCode}
 \mbox{\label{log_8c_a163f389b4f5cf440a807d8fb48aaa006}} 
 \index{log.\+c@{log.\+c}!init\+\_\+error@{init\+\_\+error}}
 \index{init\+\_\+error@{init\+\_\+error}!log.\+c@{log.\+c}}
-\subsubsection{init\+\_\+error()}
+\paragraph{init\+\_\+error()}
 {\footnotesize\ttfamily void init\+\_\+error (\begin{DoxyParamCaption}\item[{bool}]{use\+\_\+lcd,  }\item[{F\+I\+LE $\ast$}]{lcd }\end{DoxyParamCaption})}
 
 
@@ -188,21 +157,10 @@ References \textbf{ log\+\_\+lcd}.
 
 Referenced by \textbf{ initialize()}.
 
-
-\begin{DoxyCode}
-00014                                          \{
-00015   \textcolor{keywordflow}{if}(use\_lcd) \{
-00016     lcdInit(lcd);
-00017     log_lcd = lcd;
-00018     lcdClear(log_lcd);
-00019     printf(\textcolor{stringliteral}{"LCD Init\(\backslash\)n"});
-00020   \}
-00021 \}
-\end{DoxyCode}
 \mbox{\label{log_8c_afff22aff6749311a684a559cac3ac8bd}} 
 \index{log.\+c@{log.\+c}!log\+\_\+info@{log\+\_\+info}}
 \index{log\+\_\+info@{log\+\_\+info}!log.\+c@{log.\+c}}
-\subsubsection{log\+\_\+info()}
+\paragraph{log\+\_\+info()}
 {\footnotesize\ttfamily static void log\+\_\+info (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{const char $\ast$}]{mess }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -217,20 +175,10 @@ References \textbf{ B\+O\+T\+T\+O\+M\+\_\+\+R\+OW}, \textbf{ log\+\_\+lcd}, and 
 
 Referenced by \textbf{ error()}, \textbf{ info()}, and \textbf{ warning()}.
 
-
-\begin{DoxyCode}
-00023                                                       \{
-00024   printf(\textcolor{stringliteral}{"[%s]: %s\(\backslash\)n"}, s, mess);
-00025   lcdSetBacklight(log_lcd, \textcolor{keyword}{false});
-00026   lcdClear(log_lcd);
-00027   lcdPrint(log_lcd, TOP_ROW, s);
-00028   lcdPrint(log_lcd, BOTTOM_ROW, mess);
-00029 \}
-\end{DoxyCode}
 \mbox{\label{log_8c_a0bec2cf5fff7f607bc510b74aba9887c}} 
 \index{log.\+c@{log.\+c}!warning@{warning}}
 \index{warning@{warning}!log.\+c@{log.\+c}}
-\subsubsection{warning()}
+\paragraph{warning()}
 {\footnotesize\ttfamily void warning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{warning\+\_\+message }\end{DoxyParamCaption})}
 
 
@@ -264,19 +212,12 @@ References \textbf{ log\+\_\+info()}, \textbf{ log\+\_\+level}, and \textbf{ W\+
 Referenced by \textbf{ init\+\_\+slew()}.
 
 
-\begin{DoxyCode}
-00052                                           \{
-00053   \textcolor{keywordflow}{if}(log_level>WARNING)
-00054     log_info(\textcolor{stringliteral}{"WARNING"}, warning\_message);
-00055 \}
-\end{DoxyCode}
 
-
-\subsection{Variable Documentation}
+\subsubsection{Variable Documentation}
 \mbox{\label{log_8c_ac1b33b9fa813506300fa09c1b21ed20a}} 
 \index{log.\+c@{log.\+c}!log\+\_\+lcd@{log\+\_\+lcd}}
 \index{log\+\_\+lcd@{log\+\_\+lcd}!log.\+c@{log.\+c}}
-\subsubsection{log\+\_\+lcd}
+\paragraph{log\+\_\+lcd}
 {\footnotesize\ttfamily F\+I\+LE$\ast$ log\+\_\+lcd = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -290,7 +231,7 @@ Referenced by \textbf{ init\+\_\+error()}, and \textbf{ log\+\_\+info()}.
 \mbox{\label{log_8c_a8cf62743dafa288b58bd7c6028ec28e5}} 
 \index{log.\+c@{log.\+c}!log\+\_\+level@{log\+\_\+level}}
 \index{log\+\_\+level@{log\+\_\+level}!log.\+c@{log.\+c}}
-\subsubsection{log\+\_\+level}
+\paragraph{log\+\_\+level}
 {\footnotesize\ttfamily unsigned int log\+\_\+level = \textbf{ I\+N\+FO}}
 
 

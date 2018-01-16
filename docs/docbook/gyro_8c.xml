@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="gyro_8c">
+    <title>gyro.c File Reference</title>
+    <programlisting>#include &quot;gyro.h&quot;</programlisting>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static Gyro <link linkend="gyro_8c_1ab848a00cddfc20556aef426cf11f9a85">main_gyro</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="gyro_8c_1aec0963ebe3eb6cdfd7edaf486bbb0a87">get_main_gyro_angluar_velocity</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="gyro_8c_1a47c0a78a867be91a28e278bf433d699c">init_main_gyro</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/gyro.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="gyro_8h">gyro.h</link>&quot;</emphasis>
+2 
+<link linkend="gyro_8c_1ab848a00cddfc20556aef426cf11f9a85">3 </link><emphasis class="keyword">static</emphasis>&#32;Gyro&#32;<link linkend="gyro_8c_1ab848a00cddfc20556aef426cf11f9a85">main_gyro</link>;
+4 
+<link linkend="gyro_8c_1a47c0a78a867be91a28e278bf433d699c">5 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="gyro_8c_1a47c0a78a867be91a28e278bf433d699c">init_main_gyro</link>()&#32;{
+6 &#32;&#32;<link linkend="gyro_8c_1ab848a00cddfc20556aef426cf11f9a85">main_gyro</link>&#32;=&#32;gyroInit(<link linkend="gyro_8h_1a51d281e7676749d34aab3f8ba6fab960">GYRO_PORT</link>,&#32;<link linkend="gyro_8h_1a482017cc25be9213fef3222112eb1c7f">GYRO_MULTIPLIER</link>);
+7 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="gyro_8c_1ab848a00cddfc20556aef426cf11f9a85">main_gyro</link>&#32;!=&#32;NULL;
+8 }
+9 
+<link linkend="gyro_8c_1aec0963ebe3eb6cdfd7edaf486bbb0a87">10 </link><emphasis class="keywordtype">float</emphasis>&#32;<link linkend="gyro_8c_1aec0963ebe3eb6cdfd7edaf486bbb0a87">get_main_gyro_angluar_velocity</link>()&#32;{
+11 &#32;&#32;uint32_t&#32;port&#32;=&#32;<link linkend="gyro_8h_1a51d281e7676749d34aab3f8ba6fab960">GYRO_PORT</link>;
+12 &#32;&#32;int32_t&#32;reading&#32;=&#32;(int32_t)analogReadCalibratedHR(port&#32;+&#32;1);
+13 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;0;
+14 }
+    </computeroutput></literallayout>
+</section>

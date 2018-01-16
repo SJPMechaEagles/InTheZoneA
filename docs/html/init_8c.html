@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.0.2</span>
+   &#160;<span id="projectnumber">1.5.8</span>
    </div>
   </td>
  </tr>
@@ -81,7 +82,8 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">init.c File Reference</div>  </div>
 </div><!--header-->
@@ -89,17 +91,14 @@ $(document).ready(function(){initNavTree('init_8c.html','');});
 
 <p>File for initialization code.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="slew_8h_source.html">slew.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="lcd_8h_source.html">lcd.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="log_8h_source.html">log.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="battery_8h_source.html">battery.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="encoders_8h_source.html">encoders.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcd_8h_source.html">lcd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lifter_8h_source.html">lifter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="log_8h_source.html">log.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="menu_8h_source.html">menu.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for init.c:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="init_8c__incl.svg" width="100%" height="547"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
+<code>#include &quot;<a class="el" href="slew_8h_source.html">slew.h</a>&quot;</code><br />
 </div>
 <p><a href="init_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -109,6 +108,11 @@ Functions</h2></td></tr>
 <tr class="separator:a25a40b6614565f755233080a384c35f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9cda921edb01125bb13c2f86bcf624b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8c.html#ad9cda921edb01125bb13c2f86bcf624b">initializeIO</a> ()</td></tr>
 <tr class="separator:ad9cda921edb01125bb13c2f86bcf624b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a5dfaf05eb7e97b2e29d04eb068f9c240"><td class="memItemLeft" align="right" valign="top">Ultrasonic&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8c.html#a5dfaf05eb7e97b2e29d04eb068f9c240">lifter_ultrasonic</a></td></tr>
+<tr class="separator:a5dfaf05eb7e97b2e29d04eb068f9c240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>File for initialization code. </p>
@@ -136,17 +140,10 @@ Functions</h2></td></tr>
 <p>This function should initialize most sensors (gyro, encoders, ultrasonics), LCDs, global variables, and IMEs.</p>
 <p>This function must exit relatively promptly, or the <a class="el" href="main_8h.html#ac71a94af413917f27d108e95c4d6f6a7">operatorControl()</a> and <a class="el" href="main_8h.html#a3c7ca506bbc071fa740de13805b7f376">autonomous()</a> tasks will not start. An autonomous mode selection menu like the pre_auton() in other environments can be implemented in this task if desired. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00047">47</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00050">50</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
-<p class="reference">References <a class="el" href="menu_8c_source.html#l00148">display_menu()</a>, <a class="el" href="log_8c_source.html#l00064">info()</a>, <a class="el" href="log_8c_source.html#l00014">init_error()</a>, <a class="el" href="lcd_8c_source.html#l00061">init_main_lcd()</a>, <a class="el" href="menu_8c_source.html#l00045">init_menu_var()</a>, and <a class="el" href="menu_8h_source.html#l00051">STRING_TYPE</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                  {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="lcd_8h.html#a93b26f37d6b1687ad54c90feedfd29ca">init_main_lcd</a>(uart1);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="log_8h.html#a1606d750e1bb8de9f9e917172bba3382">info</a>(<span class="stringliteral">&quot;LCD Init&quot;</span>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="structmenu__t.html">menu_t</a> *t = <a class="code" href="menu_8h.html#af1bb786cb6014dcbfdb146878e713a3d">init_menu_var</a>(<a class="code" href="menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c">STRING_TYPE</a>, <span class="stringliteral">&quot;TEST Menu&quot;</span>, 5, <span class="stringliteral">&quot;1&quot;</span>,<span class="stringliteral">&quot;2&quot;</span>,<span class="stringliteral">&quot;3&quot;</span>,<span class="stringliteral">&quot;4&quot;</span>,<span class="stringliteral">&quot;5&quot;</span>);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="log_8h.html#a163f389b4f5cf440a807d8fb48aaa006">init_error</a>(<span class="keyword">true</span>, uart2);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="menu_8h.html#abfadedb104f89f672dd3045499975a71">display_menu</a>(t);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  setTeamName(<span class="stringliteral">&quot;9228A&quot;</span>);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div><div class="ttc" id="menu_8h_html_abfadedb104f89f672dd3045499975a71"><div class="ttname"><a href="menu_8h.html#abfadedb104f89f672dd3045499975a71">display_menu</a></div><div class="ttdeci">int display_menu(menu_t *menu)</div><div class="ttdoc">Displays a menu contex.  Menu must be freed or will cause memory leak!  Will exit if robot is enabled...</div><div class="ttdef"><b>Definition:</b> <a href="menu_8c_source.html#l00148">menu.c:148</a></div></div>
-<div class="ttc" id="log_8h_html_a163f389b4f5cf440a807d8fb48aaa006"><div class="ttname"><a href="log_8h.html#a163f389b4f5cf440a807d8fb48aaa006">init_error</a></div><div class="ttdeci">void init_error(bool use_lcd, FILE *lcd)</div><div class="ttdoc">Initializes the error lcd system Only required if using lcd. </div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00014">log.c:14</a></div></div>
-<div class="ttc" id="log_8h_html_a1606d750e1bb8de9f9e917172bba3382"><div class="ttname"><a href="log_8h.html#a1606d750e1bb8de9f9e917172bba3382">info</a></div><div class="ttdeci">void info(const char *info_message)</div><div class="ttdoc">prints a info message </div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00064">log.c:64</a></div></div>
-<div class="ttc" id="lcd_8h_html_a93b26f37d6b1687ad54c90feedfd29ca"><div class="ttname"><a href="lcd_8h.html#a93b26f37d6b1687ad54c90feedfd29ca">init_main_lcd</a></div><div class="ttdeci">void init_main_lcd(FILE *lcd)</div><div class="ttdoc">Initializes the lcd screen. Also will initialize the lcd_port var. Must be called before any lcd func...</div><div class="ttdef"><b>Definition:</b> <a href="lcd_8c_source.html#l00061">lcd.c:61</a></div></div>
-<div class="ttc" id="menu_8h_html_af1bb786cb6014dcbfdb146878e713a3d"><div class="ttname"><a href="menu_8h.html#af1bb786cb6014dcbfdb146878e713a3d">init_menu_var</a></div><div class="ttdeci">menu_t * init_menu_var(enum menu_type type, const char *prompt, int nums,...)</div><div class="ttdoc">Creates a menu context, but does not display.  Menu must be freed or will cause memory leak  ...</div><div class="ttdef"><b>Definition:</b> <a href="menu_8c_source.html#l00045">menu.c:45</a></div></div>
-<div class="ttc" id="menu_8h_html_a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c"><div class="ttname"><a href="menu_8h.html#a6bbf4baf5018b0d76aab6c2e6bf85e62a7823190eb356a6edf2f33589f250053c">STRING_TYPE</a></div><div class="ttdoc">Menu type allowing user to select a string from a array of strings. Will return the index of the sele...</div><div class="ttdef"><b>Definition:</b> <a href="menu_8h_source.html#l00051">menu.h:51</a></div></div>
-<div class="ttc" id="structmenu__t_html"><div class="ttname"><a href="structmenu__t.html">menu_t</a></div><div class="ttdoc">Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint_me...</div><div class="ttdef"><b>Definition:</b> <a href="menu_8h_source.html#l00067">menu.h:67</a></div></div>
-</div><!-- fragment -->
+<p class="reference">References <a class="el" href="battery_8c_source.html#l00023">battery_level_acceptable()</a>, <a class="el" href="log_8c_source.html#l00039">error()</a>, <a class="el" href="log_8c_source.html#l00064">info()</a>, <a class="el" href="encoders_8c_source.html#l00011">init_encoders()</a>, <a class="el" href="log_8c_source.html#l00014">init_error()</a>, <a class="el" href="lcd_8c_source.html#l00062">init_main_lcd()</a>, <a class="el" href="menu_8c_source.html#l00060">init_menu_var()</a>, <a class="el" href="lifter_8c_source.html#l00004">lifter_ultrasonic</a>, and <a class="el" href="menu_8h_source.html#l00050">STRING_TYPE</a>.</p>
+
 </div>
 </div>
 <a id="ad9cda921edb01125bb13c2f86bcf624b"></a>
@@ -166,8 +163,27 @@ Functions</h2></td></tr>
 <p>Runs pre-initialization code. This function will be started in kernel mode one time while the VEX Cortex is starting up. As the scheduler is still paused, most API functions will fail.</p>
 <p>The purpose of this function is solely to set the default pin modes (pinMode()) and port states (digitalWrite()) of limit switches, push buttons, and solenoids. It can also safely configure a UART port (usartOpen()) but cannot set up an LCD (lcdInit()). </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00030">30</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    watchdogInit();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00035">35</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a5dfaf05eb7e97b2e29d04eb068f9c240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dfaf05eb7e97b2e29d04eb068f9c240">&#9670;&nbsp;</a></span>lifter_ultrasonic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ultrasonic lifter_ultrasonic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00004">4</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00009">autostack_routine()</a>, <a class="el" href="init_8c_source.html#l00050">initialize()</a>, and <a class="el" href="lifter_8c_source.html#l00090">main_lifter_update()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

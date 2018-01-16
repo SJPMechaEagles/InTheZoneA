@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="motor__ports_8h">
+    <title>motor_ports.h File Reference</title>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1a96b0e64c39730b0c4ca0d9e493bc0f58">_MOTOR_PORTS_H_</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1aa3bcf05406f673f735df023643f347bb">CLAW_MOTOR</link> 10</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1a2badb0c22cf65b0e81743c90de9a3b41">INTAKE_MOTOR</link> 8</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1ac2cd96d53dd3ba6407db6766c3d92b26">MAX_SPEED</link> 127<para><emphasis>The max speed of a motor.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1ad5f5efaa5cb771bd06da4bfe6046809e">MIN_SPEED</link> -128<para><emphasis>The min speed of a motor.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1a36e9fda07b5cd4408170fe907b75a8b7">MOTOR_BACK_LEFT</link> 5<para><emphasis>Back left drive motor of robot base.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1ad85c5f3d6a2d00789c8c67b960c46c2b">MOTOR_BACK_RIGHT</link> 4<para><emphasis>Back right drive motor of robot base.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1a743b47e164fb23b30f4f2f228db0b338">MOTOR_FRONT_LEFT</link> 7<para><emphasis>Front left drive motor of robot base.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1a6f48bcc6d5fce24caeae0b17954c277a">MOTOR_FRONT_RIGHT</link> 2<para><emphasis>Front right drive motor of robot base.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1a0cbefbf749abca03437a97c9ca45863a">MOTOR_LIFT</link> 9</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1ac7dd3397e2f909b4dc11f2a2e6f28800">MOTOR_MIDDLE_LEFT</link> 6<para><emphasis>Middle left drive motor of robot base.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1a0da3f792b8f28ab09b339295859d8334">MOTOR_MIDDLE_RIGHT</link> 3<para><emphasis>Middle right drive motor of robot base.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="motor__ports_8h_1a85596f3eea4e187ef652eac88014726f">MOTOR_SECONDARY_LIFTER</link> 1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>The motor port definitions</para>
+
+<para>Macros for the different motors ports. </para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/motor_ports.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+6 <emphasis class="preprocessor">#ifndef&#32;_MOTOT_PORTS_H_</emphasis>
+<link linkend="motor__ports_8h_1a96b0e64c39730b0c4ca0d9e493bc0f58">7 </link><emphasis class="preprocessor">#define&#32;_MOTOR_PORTS_H_</emphasis>
+8 
+<link linkend="motor__ports_8h_1ac2cd96d53dd3ba6407db6766c3d92b26">12 </link><emphasis class="preprocessor">#define&#32;MAX_SPEED&#32;127</emphasis>
+13 
+<link linkend="motor__ports_8h_1ad5f5efaa5cb771bd06da4bfe6046809e">17 </link><emphasis class="preprocessor">#define&#32;MIN_SPEED&#32;-128</emphasis>
+18 
+<link linkend="motor__ports_8h_1a6f48bcc6d5fce24caeae0b17954c277a">24 </link><emphasis class="preprocessor">#define&#32;MOTOR_FRONT_RIGHT&#32;2</emphasis>
+25 
+<link linkend="motor__ports_8h_1a743b47e164fb23b30f4f2f228db0b338">31 </link><emphasis class="preprocessor">#define&#32;MOTOR_FRONT_LEFT&#32;7</emphasis>
+32 
+<link linkend="motor__ports_8h_1a0da3f792b8f28ab09b339295859d8334">38 </link><emphasis class="preprocessor">#define&#32;MOTOR_MIDDLE_RIGHT&#32;3</emphasis>
+39 
+<link linkend="motor__ports_8h_1ac7dd3397e2f909b4dc11f2a2e6f28800">45 </link><emphasis class="preprocessor">#define&#32;MOTOR_MIDDLE_LEFT&#32;6</emphasis>
+46 
+<link linkend="motor__ports_8h_1ad85c5f3d6a2d00789c8c67b960c46c2b">52 </link><emphasis class="preprocessor">#define&#32;MOTOR_BACK_RIGHT&#32;4</emphasis>
+53 
+<link linkend="motor__ports_8h_1a36e9fda07b5cd4408170fe907b75a8b7">58 </link><emphasis class="preprocessor">#define&#32;MOTOR_BACK_LEFT&#32;5</emphasis>
+59 
+<link linkend="motor__ports_8h_1a0cbefbf749abca03437a97c9ca45863a">60 </link><emphasis class="preprocessor">#define&#32;MOTOR_LIFT&#32;9</emphasis>
+61 
+<link linkend="motor__ports_8h_1aa3bcf05406f673f735df023643f347bb">62 </link><emphasis class="preprocessor">#define&#32;CLAW_MOTOR&#32;10</emphasis>
+<link linkend="motor__ports_8h_1a85596f3eea4e187ef652eac88014726f">63 </link><emphasis class="preprocessor">#define&#32;MOTOR_SECONDARY_LIFTER&#32;1</emphasis>
+<link linkend="motor__ports_8h_1a2badb0c22cf65b0e81743c90de9a3b41">64 </link><emphasis class="preprocessor">#define&#32;INTAKE_MOTOR&#32;8</emphasis>
+65 
+66 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

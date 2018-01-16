@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="localization_8h">
+    <title>localization.h File Reference</title>
+    <programlisting>#include &quot;encoders.h&quot;</programlisting>
+    <programlisting>#include &quot;matrix.h&quot;</programlisting>
+    <programlisting>#include &lt;API.h&gt;</programlisting>
+    <programlisting>#include &lt;math.h&gt;</programlisting>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structlocation">location</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="localization_8h_1a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</link> 0.500</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="localization_8h_1a5dd17937f5561711cd12cdefa8d31869">calculate_encoder_angle</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structlocation">location</link> <link linkend="localization_8h_1aadbff35bb757f60bc348d4d778f57a2f">get_position</link> (
+)<para><emphasis>Gets the current posituion of the robot.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="localization_8h_1afdd0147de6aa15957e9a125f9cd20578">init_localization</link> (
+const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, int start_theta)<para><emphasis>Starts the localization process.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="localization_8h_1afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</link> (
+)<para><emphasis>Updates the position from the localization.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Declarations and macros for determining the location of the robot. [WIP]. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett, Christian Desimone </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>9/27/2017 </para>
+</formalpara>
+</para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/localization.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+8 <emphasis class="preprocessor">#ifndef&#32;_LOCALIZATION_H_</emphasis>
+9 <emphasis class="preprocessor">#define&#32;_LOCALIZATION_H_</emphasis>
+10 
+11 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="encoders_8h">encoders.h</link>&quot;</emphasis>
+12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="matrix_8h">matrix.h</link>&quot;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+14 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
+15 
+<link linkend="localization_8h_1a4fa0a97f6aafe983a46ffc7188d1fab5">19 </link><emphasis class="preprocessor">#define&#32;LOCALIZATION_UPDATE_FREQUENCY&#32;0.500</emphasis>
+20 
+<link linkend="structlocation">24 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structlocation">location</link>&#32;{
+<link linkend="structlocation_1aacd18b2506c49d221cfc37b2119e3c3c">25 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structlocation_1aacd18b2506c49d221cfc37b2119e3c3c">x</link>;
+<link linkend="structlocation_1ad7197d1981d4ea5d8b36041473cac815">26 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structlocation_1ad7197d1981d4ea5d8b36041473cac815">y</link>;
+<link linkend="structlocation_1a4b415222b4dcf34e49dacd22384be9eb">27 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structlocation_1a4b415222b4dcf34e49dacd22384be9eb">theta</link>;
+28 };
+29 
+42 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="localization_8h_1afdd0147de6aa15957e9a125f9cd20578">init_localization</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;gyro1,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;multiplier,
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;start_x,&#32;<emphasis class="keywordtype">int</emphasis>&#32;start_y,&#32;<emphasis class="keywordtype">int</emphasis>&#32;start_theta);
+44 
+51 <emphasis class="keyword">struct&#32;</emphasis><link linkend="structlocation">location</link>&#32;<link linkend="localization_8h_1aadbff35bb757f60bc348d4d778f57a2f">get_position</link>();
+52 
+58 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="localization_8h_1afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</link>();
+59 
+60 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="localization_8h_1a5dd17937f5561711cd12cdefa8d31869">calculate_encoder_angle</link>();
+61 
+62 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

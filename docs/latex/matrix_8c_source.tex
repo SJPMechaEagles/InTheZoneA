@@ -1,318 +1,319 @@
-\section{matrix.\+c}
+\subsection{matrix.\+c}
 \label{matrix_8c_source}\index{src/matrix.\+c@{src/matrix.\+c}}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "matrix.h"}
-00002 \textcolor{preprocessor}{#include <stdio.h>}
-00003 \textcolor{preprocessor}{#include <stdlib.h>}
-00004 \textcolor{preprocessor}{#include <string.h>}
-00005 
-00014 \textcolor{keywordtype}{void} assert(\textcolor{keywordtype}{int} assertion, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* message) \{
-00015     \textcolor{keywordflow}{if} (assertion == 0) \{
-00016         fprintf(stderr, \textcolor{stringliteral}{"%s\(\backslash\)n"}, message);
-00017         exit(1);
-00018     \}
-00019 \}
-00020 
-00027 matrix* makeMatrix(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height) \{
-00028     matrix* out;
-00029     assert(width > 0 && height > 0, \textcolor{stringliteral}{"New matrix must be at least a 1 by 1"});
-00030     out = (matrix*) malloc(\textcolor{keyword}{sizeof}(matrix));
-00031 
-00032     assert(out != NULL, \textcolor{stringliteral}{"Out of memory."});
-00033 
-00034     out->width = width;
-00035     out->height = height;
-00036     out->data = (\textcolor{keywordtype}{double}*) malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}) * width * height);
-00037 
-00038     assert(out->data != NULL, \textcolor{stringliteral}{"Out of memory."});
-00039 
-00040     memset(out->data, 0.0, width * height * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
-00041 
-00042     \textcolor{keywordflow}{return} out;
-00043 \}
-00044 
-00052 matrix* copyMatrix(matrix* m) \{
-00053     \textcolor{keywordflow}{return} scaleMatrix(m, 1);
-00054 \}
-00055 
-00060 \textcolor{keywordtype}{void} freeMatrix(matrix* m) \{
-00061     \textcolor{keywordflow}{if} (m != NULL) \{
-00062         \textcolor{keywordflow}{if} (m->data != NULL) \{
-00063             free(m->data);
-00064             m->data = NULL;
-00065         \}
-00066         free(m);
-00067     \}
-00068     \textcolor{keywordflow}{return};
-00069 \}
-00070 
-00075 \textcolor{keywordtype}{void} printMatrix(matrix* m) \{
-00076     \textcolor{keywordtype}{int} i, j;
-00077     \textcolor{keywordtype}{double}* ptr = m->data;
-00078     printf(\textcolor{stringliteral}{"%d %d\(\backslash\)n"}, m->width, m->height);
-00079     \textcolor{keywordflow}{for} (i = 0; i < m->height; i++) \{
-00080         \textcolor{keywordflow}{for} (j = 0; j < m->width; j++) \{
-00081             printf(\textcolor{stringliteral}{" %9.6f"}, *(ptr++));
-00082         \}
-00083         printf(\textcolor{stringliteral}{"\(\backslash\)n"});
-00084     \}
-00085     \textcolor{keywordflow}{return};
-00086 \}
-00087 
-00094 matrix* identityMatrix(\textcolor{keywordtype}{int} n) \{
-00095     \textcolor{keywordtype}{int} i;
-00096     matrix *out;
-00097     \textcolor{keywordtype}{double}* ptr;
-00098 
-00099     assert(n > 0, \textcolor{stringliteral}{"Identity matrix must have value greater than zero."});
-00100 
-00101     out = makeMatrix(n, n);
-00102     ptr = out->data;
-00103     \textcolor{keywordflow}{for} (i = 0; i < n; i++) \{
-00104         *ptr = 1.0;
-00105         ptr += n + 1;
-00106     \}
-00107 
-00108     \textcolor{keywordflow}{return} out;
-00109 \}
-00110 
-00116 \textcolor{keywordtype}{double} traceMatrix(matrix* m) \{
-00117     \textcolor{keywordtype}{int} i;
-00118     \textcolor{keywordtype}{int} size;
-00119     \textcolor{keywordtype}{double}* ptr = m->data;
-00120     \textcolor{keywordtype}{double} sum = 0.0;
-00121 
-00122     \textcolor{keywordflow}{if} (m->height < m->width) \{
-00123         size = m->height;
-00124     \}
-00125     \textcolor{keywordflow}{else} \{
-00126         size = m->width;
-00127     \}
-00128 
-00129     \textcolor{keywordflow}{for} (i = 0; i < size; i++) \{
-00130         sum += *ptr;
-00131         ptr += m->width + 1;
-00132     \}
-00133 
-00134     \textcolor{keywordflow}{return} sum;
-00135 \}
-00136 
-00142 matrix* meanMatrix(matrix* m) \{
-00143     \textcolor{keywordtype}{int} i, j;
-00144     matrix* out;
+00002 \textcolor{preprocessor}{#include "log.h"}
+00003 \textcolor{preprocessor}{#include <stdio.h>}
+00004 \textcolor{preprocessor}{#include <stdlib.h>}
+00005 \textcolor{preprocessor}{#include <string.h>}
+00006 
+00015 \textcolor{keywordtype}{void} assert(\textcolor{keywordtype}{int} assertion, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *message) \{
+00016   \textcolor{keywordflow}{if} (assertion == 0) \{
+00017     error(message);
+00018     exit(1);
+00019   \}
+00020 \}
+00021 
+00028 matrix *makeMatrix(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height) \{
+00029   matrix *out;
+00030   assert(width > 0 && height > 0, \textcolor{stringliteral}{"New matrix must be at least a 1 by 1"});
+00031   out = (matrix *)malloc(\textcolor{keyword}{sizeof}(matrix));
+00032 
+00033   assert(out != NULL, \textcolor{stringliteral}{"Out of memory."});
+00034 
+00035   out->width = width;
+00036   out->height = height;
+00037   out->data = (\textcolor{keywordtype}{double} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}) * width * height);
+00038 
+00039   assert(out->data != NULL, \textcolor{stringliteral}{"Out of memory."});
+00040 
+00041   memset(out->data, 0.0, width * height * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+00042 
+00043   \textcolor{keywordflow}{return} out;
+00044 \}
+00045 
+00053 matrix *copyMatrix(matrix *m) \{ \textcolor{keywordflow}{return} scaleMatrix(m, 1); \}
+00054 
+00059 \textcolor{keywordtype}{void} freeMatrix(matrix *m) \{
+00060   \textcolor{keywordflow}{if} (m != NULL) \{
+00061     \textcolor{keywordflow}{if} (m->data != NULL) \{
+00062       free(m->data);
+00063       m->data = NULL;
+00064     \}
+00065     free(m);
+00066   \}
+00067   \textcolor{keywordflow}{return};
+00068 \}
+00069 
+00074 \textcolor{keywordtype}{void} printMatrix(matrix *m) \{
+00075   \textcolor{keywordtype}{int} i, j;
+00076   \textcolor{keywordtype}{double} *ptr = m->data;
+00077   printf(\textcolor{stringliteral}{"%d %d\(\backslash\)n"}, m->width, m->height);
+00078   \textcolor{keywordflow}{for} (i = 0; i < m->height; i++) \{
+00079     \textcolor{keywordflow}{for} (j = 0; j < m->width; j++) \{
+00080       printf(\textcolor{stringliteral}{" %9.6f"}, *(ptr++));
+00081     \}
+00082     printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+00083   \}
+00084   \textcolor{keywordflow}{return};
+00085 \}
+00086 
+00093 matrix *identityMatrix(\textcolor{keywordtype}{int} n) \{
+00094   \textcolor{keywordtype}{int} i;
+00095   matrix *out;
+00096   \textcolor{keywordtype}{double} *ptr;
+00097 
+00098   assert(n > 0, \textcolor{stringliteral}{"Identity matrix must have value greater than zero."});
+00099 
+00100   out = makeMatrix(n, n);
+00101   ptr = out->data;
+00102   \textcolor{keywordflow}{for} (i = 0; i < n; i++) \{
+00103     *ptr = 1.0;
+00104     ptr += n + 1;
+00105   \}
+00106 
+00107   \textcolor{keywordflow}{return} out;
+00108 \}
+00109 
+00115 \textcolor{keywordtype}{double} traceMatrix(matrix *m) \{
+00116   \textcolor{keywordtype}{int} i;
+00117   \textcolor{keywordtype}{int} size;
+00118   \textcolor{keywordtype}{double} *ptr = m->data;
+00119   \textcolor{keywordtype}{double} sum = 0.0;
+00120 
+00121   \textcolor{keywordflow}{if} (m->height < m->width) \{
+00122     size = m->height;
+00123   \} \textcolor{keywordflow}{else} \{
+00124     size = m->width;
+00125   \}
+00126 
+00127   \textcolor{keywordflow}{for} (i = 0; i < size; i++) \{
+00128     sum += *ptr;
+00129     ptr += m->width + 1;
+00130   \}
+00131 
+00132   \textcolor{keywordflow}{return} sum;
+00133 \}
+00134 
+00142 matrix *meanMatrix(matrix *m) \{
+00143   \textcolor{keywordtype}{int} i, j;
+00144   matrix *out;
 00145 
-00146     assert(m->height > 0, \textcolor{stringliteral}{"Height of matrix cannot be zero."});
+00146   assert(m->height > 0, \textcolor{stringliteral}{"Height of matrix cannot be zero."});
 00147 
-00148     out = makeMatrix(m->width, 1);
+00148   out = makeMatrix(m->width, 1);
 00149 
-00150     \textcolor{keywordflow}{for} (i = 0; i < m->width; i++) \{
-00151         \textcolor{keywordtype}{double}* ptr;
-00152         out->data[i] = 0.0;
-00153         ptr = &m->data[i];
-00154         \textcolor{keywordflow}{for} (j = 0; j < m->height; j++) \{
-00155             out->data[i] += *ptr;
-00156             ptr += out->width;
-00157         \}
-00158         out->data[i] /= (double) m->height;
-00159     \}
-00160     \textcolor{keywordflow}{return} out;
+00150   \textcolor{keywordflow}{for} (i = 0; i < m->width; i++) \{
+00151     \textcolor{keywordtype}{double} *ptr;
+00152     out->data[i] = 0.0;
+00153     ptr = &m->data[i];
+00154     \textcolor{keywordflow}{for} (j = 0; j < m->height; j++) \{
+00155       out->data[i] += *ptr;
+00156       ptr += out->width;
+00157     \}
+00158     out->data[i] /= (double)m->height;
+00159   \}
+00160   \textcolor{keywordflow}{return} out;
 00161 \}
 00162 
-00168 matrix* covarianceMatrix(matrix* m) \{
-00169     \textcolor{keywordtype}{int} i, j, k = 0;
-00170     matrix* out;
-00171     matrix* mean;
-00172     \textcolor{keywordtype}{double}* ptrA;
-00173     \textcolor{keywordtype}{double}* ptrB;
-00174     \textcolor{keywordtype}{double}* ptrOut;
-00175 
-00176     assert(m->height > 1, \textcolor{stringliteral}{"Height of matrix cannot be zero or one."});
-00177 
-00178     mean = meanMatrix(m);
-00179     out = makeMatrix(m->width, m->width);
-00180     ptrOut = out->data;
-00181 
-00182     \textcolor{keywordflow}{for} (i = 0; i < m->width; i++) \{
-00183         \textcolor{keywordflow}{for} (j = 0; j < m->width; j++) \{
-00184              ptrA = &m->data[i];
-00185              ptrB = &m->data[j];
-00186              *ptrOut = 0.0;
-00187              \textcolor{keywordflow}{for} (k = 0; k < m->height; k++) \{
-00188                  *ptrOut += (*ptrA - mean->data[i]) * (*ptrB - mean->data[j]);
-00189                  ptrA += m->width;
-00190                  ptrB += m->width;
-00191              \}
-00192              *ptrOut /= m->height - 1;
-00193              ptrOut++;
-00194         \}
+00169 matrix *covarianceMatrix(matrix *m) \{
+00170   \textcolor{keywordtype}{int} i, j, k = 0;
+00171   matrix *out;
+00172   matrix *mean;
+00173   \textcolor{keywordtype}{double} *ptrA;
+00174   \textcolor{keywordtype}{double} *ptrB;
+00175   \textcolor{keywordtype}{double} *ptrOut;
+00176 
+00177   assert(m->height > 1, \textcolor{stringliteral}{"Height of matrix cannot be zero or one."});
+00178 
+00179   mean = meanMatrix(m);
+00180   out = makeMatrix(m->width, m->width);
+00181   ptrOut = out->data;
+00182 
+00183   \textcolor{keywordflow}{for} (i = 0; i < m->width; i++) \{
+00184     \textcolor{keywordflow}{for} (j = 0; j < m->width; j++) \{
+00185       ptrA = &m->data[i];
+00186       ptrB = &m->data[j];
+00187       *ptrOut = 0.0;
+00188       \textcolor{keywordflow}{for} (k = 0; k < m->height; k++) \{
+00189         *ptrOut += (*ptrA - mean->data[i]) * (*ptrB - mean->data[j]);
+00190         ptrA += m->width;
+00191         ptrB += m->width;
+00192       \}
+00193       *ptrOut /= m->height - 1;
+00194       ptrOut++;
 00195     \}
-00196 
-00197     freeMatrix(mean);
-00198     \textcolor{keywordflow}{return} out;
-00199 \}
-00200 
-00206 matrix* transposeMatrix(matrix* m) \{
-00207     matrix* out = makeMatrix(m->height, m->width);
-00208     \textcolor{keywordtype}{double}* ptrM = m->data;
-00209     \textcolor{keywordtype}{int} i, j;
-00210 
-00211     \textcolor{keywordflow}{for} (i = 0; i < m->height; i++) \{
-00212         \textcolor{keywordtype}{double}* ptrOut;
-00213         ptrOut = &out->data[i];
-00214         \textcolor{keywordflow}{for} (j = 0; j < m->width; j++) \{
-00215             *ptrOut = *ptrM;
-00216             ptrM++;
-00217             ptrOut += out->width;
-00218         \}
+00196   \}
+00197 
+00198   freeMatrix(mean);
+00199   \textcolor{keywordflow}{return} out;
+00200 \}
+00201 
+00207 matrix *transposeMatrix(matrix *m) \{
+00208   matrix *out = makeMatrix(m->height, m->width);
+00209   \textcolor{keywordtype}{double} *ptrM = m->data;
+00210   \textcolor{keywordtype}{int} i, j;
+00211 
+00212   \textcolor{keywordflow}{for} (i = 0; i < m->height; i++) \{
+00213     \textcolor{keywordtype}{double} *ptrOut;
+00214     ptrOut = &out->data[i];
+00215     \textcolor{keywordflow}{for} (j = 0; j < m->width; j++) \{
+00216       *ptrOut = *ptrM;
+00217       ptrM++;
+00218       ptrOut += out->width;
 00219     \}
-00220 
-00221     \textcolor{keywordflow}{return} out;
-00222 \}
-00223 
-00230 matrix* multiplyMatrix(matrix* a, matrix* b) \{
-00231     \textcolor{keywordtype}{int} i, j, k;
-00232     matrix* out;
-00233     \textcolor{keywordtype}{double}* ptrOut;
-00234     \textcolor{keywordtype}{double}* ptrA;
-00235     \textcolor{keywordtype}{double}* ptrB;
-00236 
-00237     assert(a->width == b->height, \textcolor{stringliteral}{"Matrices have incorrect dimensions. a->width != b->height"});
-00238 
-00239     out = makeMatrix(b->width, a->height);
-00240     ptrOut = out->data;
-00241 
-00242     \textcolor{keywordflow}{for} (i = 0; i < a->height; i++) \{
+00220   \}
+00221 
+00222   \textcolor{keywordflow}{return} out;
+00223 \}
+00224 
+00231 matrix *multiplyMatrix(matrix *a, matrix *b) \{
+00232   \textcolor{keywordtype}{int} i, j, k;
+00233   matrix *out;
+00234   \textcolor{keywordtype}{double} *ptrOut;
+00235   \textcolor{keywordtype}{double} *ptrA;
+00236   \textcolor{keywordtype}{double} *ptrB;
+00237 
+00238   assert(a->width == b->height,
+00239          \textcolor{stringliteral}{"Matrices have incorrect dimensions. a->width != b->height"});
+00240 
+00241   out = makeMatrix(b->width, a->height);
+00242   ptrOut = out->data;
 00243 
-00244         \textcolor{keywordflow}{for} (j = 0; j < b->width; j++) \{
-00245             ptrA = &a->data[ i * a->width ];
-00246             ptrB = &b->data[ j ];
-00247 
-00248             *ptrOut = 0;
-00249             \textcolor{keywordflow}{for} (k = 0; k < a->width; k++) \{
-00250                 *ptrOut += *ptrA * *ptrB;
-00251                 ptrA++;
-00252                 ptrB += b->width;
-00253             \}
-00254             ptrOut++;
-00255         \}
-00256     \}
-00257 
-00258     \textcolor{keywordflow}{return} out;
-00259 \}
-00260 
-00268 matrix* scaleMatrix(matrix* m, \textcolor{keywordtype}{double} value) \{
-00269     \textcolor{keywordtype}{int} i, elements = m->width * m->height;
-00270     matrix* out = makeMatrix(m->width, m->height);
-00271     \textcolor{keywordtype}{double}* ptrM = m->data;
-00272     \textcolor{keywordtype}{double}* ptrOut = out->data;
-00273 
-00274     \textcolor{keywordflow}{for} (i = 0; i < elements; i++) \{
-00275         *(ptrOut++) = *(ptrM++) * value;
-00276     \}
-00277 
-00278     \textcolor{keywordflow}{return} out;
-00279 \}
-00280 
-00290 \textcolor{keywordtype}{void} rowSwap(matrix* a, \textcolor{keywordtype}{int} p, \textcolor{keywordtype}{int} q) \{
-00291     \textcolor{keywordtype}{int} i;
-00292     \textcolor{keywordtype}{double} temp;
-00293     \textcolor{keywordtype}{double}* pRow;
-00294     \textcolor{keywordtype}{double}* qRow;
-00295 
-00296     assert(a->height > 2, \textcolor{stringliteral}{"Matrix must have at least two rows to swap."});
-00297     assert(p < a->height && q < a->height, \textcolor{stringliteral}{"Values p and q must be less than the height of the matrix."});
-00298 
-00299     \textcolor{comment}{// If p and q are equal, do nothing.}
-00300     \textcolor{keywordflow}{if} (p == q) \{
-00301         \textcolor{keywordflow}{return};
-00302     \}
-00303 
-00304     pRow = a->data + (p * a->width);
-00305     qRow = a->data + (q * a->width);
+00244   \textcolor{keywordflow}{for} (i = 0; i < a->height; i++) \{
+00245 
+00246     \textcolor{keywordflow}{for} (j = 0; j < b->width; j++) \{
+00247       ptrA = &a->data[i * a->width];
+00248       ptrB = &b->data[j];
+00249 
+00250       *ptrOut = 0;
+00251       \textcolor{keywordflow}{for} (k = 0; k < a->width; k++) \{
+00252         *ptrOut += *ptrA * *ptrB;
+00253         ptrA++;
+00254         ptrB += b->width;
+00255       \}
+00256       ptrOut++;
+00257     \}
+00258   \}
+00259 
+00260   \textcolor{keywordflow}{return} out;
+00261 \}
+00262 
+00270 matrix *scaleMatrix(matrix *m, \textcolor{keywordtype}{double} value) \{
+00271   \textcolor{keywordtype}{int} i, elements = m->width * m->height;
+00272   matrix *out = makeMatrix(m->width, m->height);
+00273   \textcolor{keywordtype}{double} *ptrM = m->data;
+00274   \textcolor{keywordtype}{double} *ptrOut = out->data;
+00275 
+00276   \textcolor{keywordflow}{for} (i = 0; i < elements; i++) \{
+00277     *(ptrOut++) = *(ptrM++) * value;
+00278   \}
+00279 
+00280   \textcolor{keywordflow}{return} out;
+00281 \}
+00282 
+00292 \textcolor{keywordtype}{void} rowSwap(matrix *a, \textcolor{keywordtype}{int} p, \textcolor{keywordtype}{int} q) \{
+00293   \textcolor{keywordtype}{int} i;
+00294   \textcolor{keywordtype}{double} temp;
+00295   \textcolor{keywordtype}{double} *pRow;
+00296   \textcolor{keywordtype}{double} *qRow;
+00297 
+00298   assert(a->height > 2, \textcolor{stringliteral}{"Matrix must have at least two rows to swap."});
+00299   assert(p < a->height && q < a->height,
+00300          \textcolor{stringliteral}{"Values p and q must be less than the height of the matrix."});
+00301 
+00302   \textcolor{comment}{// If p and q are equal, do nothing.}
+00303   \textcolor{keywordflow}{if} (p == q) \{
+00304     \textcolor{keywordflow}{return};
+00305   \}
 00306 
-00307     \textcolor{comment}{// Swap!}
-00308     \textcolor{keywordflow}{for} (i = 0; i < a->width; i++) \{
-00309         temp = *pRow;
-00310         *pRow = *qRow;
-00311         *qRow = temp;
-00312         pRow++;
-00313         qRow++;
-00314     \}
-00315 
-00316     \textcolor{keywordflow}{return};
-00317 \}
+00307   pRow = a->data + (p * a->width);
+00308   qRow = a->data + (q * a->width);
+00309 
+00310   \textcolor{comment}{// Swap!}
+00311   \textcolor{keywordflow}{for} (i = 0; i < a->width; i++) \{
+00312     temp = *pRow;
+00313     *pRow = *qRow;
+00314     *qRow = temp;
+00315     pRow++;
+00316     qRow++;
+00317   \}
 00318 
-00333 matrix* dotProductMatrix(matrix* a, matrix* b) \{
-00334     matrix* out;
-00335     \textcolor{keywordtype}{double}* ptrOut;
-00336     \textcolor{keywordtype}{double}* ptrA;
-00337     \textcolor{keywordtype}{double}* ptrB;
-00338     \textcolor{keywordtype}{int} i, j, k;
-00339 
-00340     \textcolor{keywordflow}{if} (b != NULL) \{
-00341         assert(a->width == b->width, \textcolor{stringliteral}{"Matrices must be of the same dimensionality."});
-00342     \}
-00343 
-00344     \textcolor{comment}{// Are we computing the sum of squares of the same matrix?}
-00345     \textcolor{keywordflow}{if} (a == b || b == NULL) \{
-00346         b = a; \textcolor{comment}{// May not appear safe, but we can do this without risk of losing b.}
-00347     \}
-00348 
-00349     out = makeMatrix(b->height, a->height);
-00350     ptrOut = out->data;
-00351 
-00352     \textcolor{keywordflow}{for} (i = 0; i < a->height; i++) \{
-00353         ptrB = b->data;
-00354 
-00355         \textcolor{keywordflow}{for} (j = 0; j < b->height; j++) \{
-00356             ptrA = &a->data[ i * a->width ];
-00357 
-00358             *ptrOut = 0;
-00359             \textcolor{keywordflow}{for} (k = 0; k < a->width; k++) \{
-00360                 *ptrOut += *ptrA * *ptrB;
-00361                 ptrA++;
-00362                 ptrB++;
-00363             \}
-00364             ptrOut++;
-00365         \}
-00366     \}
-00367 
-00368     \textcolor{keywordflow}{return} out;
-00369 \}
-00370 
-00385 matrix* dotDiagonalMatrix(matrix* a, matrix* b) \{
-00386     matrix* out;
-00387     \textcolor{keywordtype}{double}* ptrOut;
-00388     \textcolor{keywordtype}{double}* ptrA;
-00389     \textcolor{keywordtype}{double}* ptrB;
-00390     \textcolor{keywordtype}{int} i, j;
-00391 
-00392     \textcolor{keywordflow}{if} (b != NULL) \{
-00393         assert(a->width == b->width && a->height == b->height, \textcolor{stringliteral}{"Matrices must be of the same
-       dimensionality."});
-00394     \}
+00319   \textcolor{keywordflow}{return};
+00320 \}
+00321 
+00336 matrix *dotProductMatrix(matrix *a, matrix *b) \{
+00337   matrix *out;
+00338   \textcolor{keywordtype}{double} *ptrOut;
+00339   \textcolor{keywordtype}{double} *ptrA;
+00340   \textcolor{keywordtype}{double} *ptrB;
+00341   \textcolor{keywordtype}{int} i, j, k;
+00342 
+00343   \textcolor{keywordflow}{if} (b != NULL) \{
+00344     assert(a->width == b->width,
+00345            \textcolor{stringliteral}{"Matrices must be of the same dimensionality."});
+00346   \}
+00347 
+00348   \textcolor{comment}{// Are we computing the sum of squares of the same matrix?}
+00349   \textcolor{keywordflow}{if} (a == b || b == NULL) \{
+00350     b = a; \textcolor{comment}{// May not appear safe, but we can do this without risk of losing b.}
+00351   \}
+00352 
+00353   out = makeMatrix(b->height, a->height);
+00354   ptrOut = out->data;
+00355 
+00356   \textcolor{keywordflow}{for} (i = 0; i < a->height; i++) \{
+00357     ptrB = b->data;
+00358 
+00359     \textcolor{keywordflow}{for} (j = 0; j < b->height; j++) \{
+00360       ptrA = &a->data[i * a->width];
+00361 
+00362       *ptrOut = 0;
+00363       \textcolor{keywordflow}{for} (k = 0; k < a->width; k++) \{
+00364         *ptrOut += *ptrA * *ptrB;
+00365         ptrA++;
+00366         ptrB++;
+00367       \}
+00368       ptrOut++;
+00369     \}
+00370   \}
+00371 
+00372   \textcolor{keywordflow}{return} out;
+00373 \}
+00374 
+00389 matrix *dotDiagonalMatrix(matrix *a, matrix *b) \{
+00390   matrix *out;
+00391   \textcolor{keywordtype}{double} *ptrOut;
+00392   \textcolor{keywordtype}{double} *ptrA;
+00393   \textcolor{keywordtype}{double} *ptrB;
+00394   \textcolor{keywordtype}{int} i, j;
 00395 
-00396     \textcolor{comment}{// Are we computing the sum of squares of the same matrix?}
-00397     \textcolor{keywordflow}{if} (a == b || b == NULL) \{
-00398         b = a; \textcolor{comment}{// May not appear safe, but we can do this without risk of losing b.}
-00399     \}
+00396   \textcolor{keywordflow}{if} (b != NULL) \{
+00397     assert(a->width == b->width && a->height == b->height,
+00398            \textcolor{stringliteral}{"Matrices must be of the same dimensionality."});
+00399   \}
 00400 
-00401     out = makeMatrix(1, a->height);
-00402     ptrOut = out->data;
-00403     ptrA = a->data;
-00404     ptrB = b->data;
+00401   \textcolor{comment}{// Are we computing the sum of squares of the same matrix?}
+00402   \textcolor{keywordflow}{if} (a == b || b == NULL) \{
+00403     b = a; \textcolor{comment}{// May not appear safe, but we can do this without risk of losing b.}
+00404   \}
 00405 
-00406     \textcolor{keywordflow}{for} (i = 0; i < a->height; i++) \{
-00407         *ptrOut = 0;
-00408         \textcolor{keywordflow}{for} (j = 0; j < a->width; j++) \{
-00409             *ptrOut += *ptrA * *ptrB;
-00410             ptrA++;
-00411             ptrB++;
-00412         \}
-00413         ptrOut++;
-00414     \}
-00415 
-00416     \textcolor{keywordflow}{return} out;
-00417 \}
+00406   out = makeMatrix(1, a->height);
+00407   ptrOut = out->data;
+00408   ptrA = a->data;
+00409   ptrB = b->data;
+00410 
+00411   \textcolor{keywordflow}{for} (i = 0; i < a->height; i++) \{
+00412     *ptrOut = 0;
+00413     \textcolor{keywordflow}{for} (j = 0; j < a->width; j++) \{
+00414       *ptrOut += *ptrA * *ptrB;
+00415       ptrA++;
+00416       ptrB++;
+00417     \}
+00418     ptrOut++;
+00419   \}
+00420 
+00421   \textcolor{keywordflow}{return} out;
+00422 \}
 \end{DoxyCode}

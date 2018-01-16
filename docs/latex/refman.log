@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  6 JAN 2018 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.11.24)  15 JAN 2018 12:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,28 +6,26 @@ entering extended mode
 (./refman.tex
 LaTeX2e <2017-04-15>
 Babel <3.15> and hyphenation patterns for 84 language(s) loaded.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
-Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/bk10.clo
-File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@chapter=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fixltx2e.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/fixltx2e.sty
 Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
 Applying: [2015/01/01] Old fixltx2e package on input line 46.
-
 
 Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 (fixltx2e)                All fixes are now in the LaTeX kernel.
@@ -36,66 +34,56 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count88
-\calc@Bcount=\count89
+\calc@Acount=\count87
+\calc@Bcount=\count88
 \calc@Adimen=\dimen103
 \calc@Bdimen=\dimen104
 \calc@Askip=\skip43
 \calc@Bskip=\skip44
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count90
+\calc@Ccount=\count89
 \calc@Cskip=\skip45
 ) (./doxygen.sty
 Package: doxygen 
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen105
 \extrarowheight=\dimen106
 \NC@list=\toks14
 \extratabsurround=\skip46
 \backup@length=\skip47
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count91
+\c@float@type=\count90
 \float@exts=\toks15
 \float@box=\box26
 \@float@everytoks=\toks16
 \@floatcapt=\box27
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks17
 \verbatim@line=\toks18
 \verbatim@in@stream=\read1
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package xcolor Info: Driver file: dvips.def on input line 225.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks19
 \minrowclearance=\skip48
 )
-\rownum=\count92
+\rownum=\count91
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -103,41 +91,38 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip49
 \LTright=\skip50
 \LTpre=\skip51
 \LTpost=\skip52
-\LTchunksize=\count93
+\LTchunksize=\count92
 \LTcapwidth=\dimen107
 \LT@head=\box28
 \LT@firsthead=\box29
 \LT@foot=\box30
 \LT@lastfoot=\box31
-\LT@cols=\count94
-\LT@rows=\count95
-\c@LT@tables=\count96
-\c@LT@chunks=\count97
+\LT@cols=\count93
+\LT@rows=\count94
+\c@LT@tables=\count95
+\c@LT@chunks=\count96
 \LT@p@ftn=\toks20
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tabu/tabu.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tabu/tabu.sty
 Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box32
-\sift@deathcycles=\count98
+\sift@deathcycles=\count97
 \@vwid@loff=\dimen108
 \@vwid@roff=\dimen109
 )
-\c@taburow=\count99
-\tabu@nbcols=\count100
-\tabu@cnt=\count101
-\tabu@Xcol=\count102
-\tabu@alloc=\count103
-\tabu@nested=\count104
+\c@taburow=\count98
+\tabu@nbcols=\count99
+\tabu@cnt=\count100
+\tabu@Xcol=\count101
+\tabu@alloc=\count102
+\tabu@nested=\count103
 \tabu@target=\dimen110
 \tabu@spreadtarget=\dimen111
 \tabu@naturalX=\dimen112
@@ -154,67 +139,54 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabu@hleads=\box35
 \tabu@vleads=\box36
 \tabu@cellskip=\skip53
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/tabularx.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 \TX@col@width=\dimen119
 \TX@old@table=\dimen120
 \TX@old@col=\dimen121
 \TX@target=\dimen122
 \TX@delta=\dimen123
-\TX@cols=\count105
+\TX@cols=\count104
 \TX@ftn=\toks23
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/multirow/multirow.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip54
-\multirow@cntb=\count106
+\multirow@cntb=\count105
 \multirow@dima=\skip55
 \bigstrutjot=\dimen124
 )
 \xrefbox=\box37
 \xreflength=\skip56
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local
+/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks24
 \XKV@tempa@toks=\toks25
-
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count107
+\XKV@depth=\count106
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/adjustbox/trimclip.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: dvips.def on input line 99.
 )
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/collectbox/collectbox.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box38
 )
@@ -222,32 +194,27 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@lly=\dimen128
 \tc@urx=\dimen129
 \tc@ury=\dimen130
-Package trimclip Info: Using driver 'tc-pdftex.def'.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
-File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+Package trimclip Info: Using driver 'tc-dvips.def'.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/adjustbox/tc-dvips.def
+File: tc-dvips.def 2012/05/13 v1.0 Clipping driver for dvips
 ))
 \adjbox@Width=\dimen131
 \adjbox@Height=\dimen132
 \adjbox@Depth=\dimen133
 \adjbox@Totalheight=\dimen134
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count108
-))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
+\c@checkoddpage=\count107
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks26
 \inpenc@posthook=\toks27
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
@@ -488,7 +455,6 @@ File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
@@ -529,7 +495,6 @@ File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 )
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
@@ -553,20 +518,18 @@ Now handling font encoding U ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/makeidx.sty
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/multicol.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count109
+\c@tracingmulticols=\count108
 \mult@box=\box39
 \multicol@leftmargin=\dimen135
-\c@unbalance=\count110
-\c@collectmore=\count111
-\doublecol@number=\count112
-\multicoltolerance=\count113
-\multicolpretolerance=\count114
+\c@unbalance=\count109
+\c@collectmore=\count110
+\doublecol@number=\count111
+\multicoltolerance=\count112
+\multicolpretolerance=\count113
 \full@width=\dimen136
 \page@free=\dimen137
 \premulticols=\dimen138
@@ -597,16 +560,15 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \@tempa=\box60
 \@tempa=\box61
 \@tempa=\box62
-\c@columnbadness=\count115
-\c@finalcolumnbadness=\count116
+\c@columnbadness=\count114
+\c@finalcolumnbadness=\count115
 \last@try=\dimen141
 \multicolovershoot=\dimen142
 \multicolundershoot=\dimen143
 \mult@nat@firstbox=\box63
 \colbreak@box=\box64
-\mc@col@check@num=\count117
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
+\mc@col@check@num=\count116
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -620,12 +582,10 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1enc.dfu
 File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
@@ -761,29 +721,22 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/wasysym/wasysym.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/wasysym/wasysym.sty
 Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
 \symwasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/helvet.sty
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/courier.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks28
@@ -791,27 +744,22 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/sectsty/sectsty.sty
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count118
-\Gm@cntv=\count119
-\c@Gm@tempcnt=\count120
+\Gm@cnth=\count117
+\Gm@cntv=\count118
+\c@Gm@tempcnt=\count119
 \Gm@bindingoffset=\dimen144
 \Gm@wd@mp=\dimen145
 \Gm@odd@mp=\dimen146
@@ -821,8 +769,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen150
 \Gm@layoutvoffset=\dimen151
 \Gm@dimlist=\toks29
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip59
@@ -834,62 +781,55 @@ s
 \f@nch@O@erf=\skip65
 \f@nch@O@olf=\skip66
 \f@nch@O@orf=\skip67
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip68
 \bibsep=\skip69
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count121
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tocloft/tocloft.sty
+\c@NAT@ctr=\count120
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
-Package tocloft Info: The document has chapter divisions on input line 51.
+Package tocloft Info: The document has section divisions on input line 51.
 \cftparskip=\skip70
 \cftbeforetoctitleskip=\skip71
 \cftaftertoctitleskip=\skip72
 \cftbeforepartskip=\skip73
 \cftpartnumwidth=\skip74
 \cftpartindent=\skip75
-\cftbeforechapskip=\skip76
-\cftchapindent=\skip77
-\cftchapnumwidth=\skip78
-\cftbeforesecskip=\skip79
-\cftsecindent=\skip80
-\cftsecnumwidth=\skip81
-\cftbeforesubsecskip=\skip82
-\cftsubsecindent=\skip83
-\cftsubsecnumwidth=\skip84
-\cftbeforesubsubsecskip=\skip85
-\cftsubsubsecindent=\skip86
-\cftsubsubsecnumwidth=\skip87
-\cftbeforeparaskip=\skip88
-\cftparaindent=\skip89
-\cftparanumwidth=\skip90
-\cftbeforesubparaskip=\skip91
-\cftsubparaindent=\skip92
-\cftsubparanumwidth=\skip93
-\cftbeforeloftitleskip=\skip94
-\cftafterloftitleskip=\skip95
-\cftbeforefigskip=\skip96
-\cftfigindent=\skip97
-\cftfignumwidth=\skip98
-\c@lofdepth=\count122
-\c@lotdepth=\count123
-\cftbeforelottitleskip=\skip99
-\cftafterlottitleskip=\skip100
-\cftbeforetabskip=\skip101
-\cfttabindent=\skip102
-\cfttabnumwidth=\skip103
+\cftbeforesecskip=\skip76
+\cftsecindent=\skip77
+\cftsecnumwidth=\skip78
+\cftbeforesubsecskip=\skip79
+\cftsubsecindent=\skip80
+\cftsubsecnumwidth=\skip81
+\cftbeforesubsubsecskip=\skip82
+\cftsubsubsecindent=\skip83
+\cftsubsubsecnumwidth=\skip84
+\cftbeforeparaskip=\skip85
+\cftparaindent=\skip86
+\cftparanumwidth=\skip87
+\cftbeforesubparaskip=\skip88
+\cftsubparaindent=\skip89
+\cftsubparanumwidth=\skip90
+\cftbeforeloftitleskip=\skip91
+\cftafterloftitleskip=\skip92
+\cftbeforefigskip=\skip93
+\cftfigindent=\skip94
+\cftfignumwidth=\skip95
+\c@lofdepth=\count121
+\c@lotdepth=\count122
+\cftbeforelottitleskip=\skip96
+\cftafterlottitleskip=\skip97
+\cftbeforetabskip=\skip98
+\cfttabindent=\skip99
+\cfttabnumwidth=\skip100
 )
 \@indexfile=\write3
 \openout3 = `refman.idx'.
 
-
 Writing index file refman.idx
 (/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
@@ -901,131 +841,75 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen157
 \caption@hangindent=\dimen158
 )
-\c@ContinuedFloat=\count124
+\c@ContinuedFloat=\count123
 Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
-))
-(./refman.aux)
+)) (./refman.aux
+
+LaTeX Warning: Label `localization_8c_ad8f1771d4051eafad228df4d397d7e47' multip
+ly defined.
+
+
+LaTeX Warning: Label `localization_8c_aaa6f04f6f0d7cf1008a53279acf49f07' multip
+ly defined.
+
+
+LaTeX Warning: Label `localization_8c_a241aeeb764887ae5e3de58b98f04b16d' multip
+ly defined.
+
+)
 \openout1 = `refman.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 101.
 
- (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 103.
-
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 101.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 103.
-
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count125
-\scratchdimen=\dimen159
-\scratchbox=\box65
-\nofMPsegments=\count126
-\nofMParguments=\count127
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count128
-\MPscratchDim=\dimen160
-\MPnumerator=\count129
-\makeMPintoPDFobject=\count130
-\everyMPtoPDFconversion=\toks31
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+(Font)              scaled to size 8.99994pt on input line 101.
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
+* driver: dvips
+* paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=652.70622pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-31.2056pt
+* \topmargin=-38.1381pt
 * \headheight=12.0pt
-* \headsep=18.06749pt
+* \headsep=25.0pt
 * \topskip=10.0pt
-* \footskip=25.29494pt
-* \marginparwidth=125.0pt
-* \marginparsep=7.0pt
+* \footskip=30.0pt
+* \marginparwidth=121.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
@@ -1040,39 +924,35 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 110.
+(Font)              scaled to size 12.9599pt on input line 108.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 110.
+(Font)              scaled to size 10.79993pt on input line 108.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 110.
-LaTeX Font Info:    Try loading font information for U+wasy on input line 110.
+(Font)              scaled to size 6.29996pt on input line 108.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 108.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 110.
-
+LaTeX Font Info:    Try loading font information for U+msa on input line 108.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 110.
-
+LaTeX Font Info:    Try loading font information for U+msb on input line 108.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 112.
+[1
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 117.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 117.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 116.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 117.
+(Font)              scaled to size 12.9599pt on input line 116.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 22.39185pt on input line 117.
- (./refman.toc
+(Font)              scaled to size 12.9599pt on input line 116.
+(./refman.toc
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
@@ -1081,60 +961,33 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 1.
-
-[1
-
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17])
+[1] [2] [3] [4] [5] [6] [7] [8] [9])
 \tf@toc=\write4
 \openout4 = `refman.toc'.
 
-
-[18]
-Chapter 1.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 122.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 122.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 122.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 18.66588pt on input line 122.
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 6.29996pt on input line 122.
-(./md__r_e_a_d_m_e.tex) [1
-
-
-] [2
-
-]
-Chapter 2.
-(./namespaces.tex
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              scaled to size 6.29996pt on input line 120.
+(./md__r_e_a_d_m_e.tex) (./namespaces.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 1.
+(Font)              scaled to size 10.79993pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 12.9599pt on input line 1.
-) [3] [4
-
-]
-Chapter 3.
-(./annotated.tex) [5] [6
-
-]
-Chapter 4.
-(./files.tex
+(Font)              scaled to size 10.79993pt on input line 1.
+) (./annotated.tex [1]) (./files.tex [2]
 Runaway argument?
 {include/\textbf { matrix.\+h} \\*Various Matrix operations. 
 ! Paragraph ended before \l@section was complete.
 <to be read again> 
                    \par 
-l.17 
+l.18 
      
-? R
-OK, entering \nonstopmode...
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
 ! Extra }, or forgotten \endgroup.
-l.18 ... function to reclaim some of that memory }
+l.19 ... function to reclaim some of that memory }
                                                   {\pageref{matrix_8h}}{}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1147,14 +1000,14 @@ Runaway argument?
 ! Paragraph ended before \l@section was complete.
 <to be read again> 
                    \par 
-l.22 
+l.23 
      
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 ! Extra }, or forgotten \endgroup.
-l.23 Macros for the different motors ports }
+l.24 Macros for the different motors ports }
                                             {\pageref{motor__ports_8h}}{}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1162,41 +1015,26 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[7]) [8]
-Chapter 5.
-(./namespacetest_math.tex
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 3.
+[3]) (./namespacetest_math.tex
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 10.79993pt on input line 3.
+(Font)              scaled to size 8.99994pt on input line 3.
+[4]
 LaTeX Font Info:    Try loading font information for TS1+phv on input line 6.
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 6.
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 14.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.19995pt on input line 15.
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 15.
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 15.
-) [9
-
-] [10
-
-]
-Chapter 6.
-(./struct__matrix.tex [11]) (./structaccelerometer__odometry.tex)
-(./structcord.tex [12]
+) (./struct__matrix.tex [5]) (./structaccelerometer__odometry.tex [6]) (./struc
+tcord.tex
 Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
@@ -1206,7 +1044,7 @@ Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
 
-) (./structencoder__odemtry.tex [13]) (./structlcd__buttons.tex [14]
+[7]) (./structencoder__odemtry.tex [8]) (./structlcd__buttons.tex
 Underfull \hbox (badness 10000) detected at line 26
 [][][]
  []
@@ -1220,18 +1058,18 @@ LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <7> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 43.
-[15]) (./structlocation.tex [16]) (./structmenu__t.tex
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 16.
+[9]) (./structlist__iterator__t.tex [10]) (./structlist__node.tex [11]) (./stru
+ctlist__t.tex [12]) (./structlocation.tex [13]) (./structmenu__t.tex
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 16.
+[14]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 34.
- [17]
+
 Underfull \hbox (badness 10000) detected at line 42
 [][][]
  []
@@ -1246,7 +1084,7 @@ Underfull \hbox (badness 10000) detected at line 48
 [][][]
  []
 
-
+[15]
 Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
@@ -1266,7 +1104,7 @@ Underfull \hbox (badness 10000) detected at line 107
 [][][]
  []
 
-[18]
+[16]
 Underfull \hbox (badness 10000) detected at line 128
 [][][]
  []
@@ -1291,12 +1129,12 @@ Underfull \hbox (badness 10000) detected at line 176
 [][][]
  []
 
-[19]
+
 Underfull \hbox (badness 10000) detected at line 179
 [][][]
  []
 
-
+[17]
 Underfull \hbox (badness 10000) detected at line 200
 [][][]
  []
@@ -1316,7 +1154,7 @@ Underfull \hbox (badness 10000) detected at line 227
 [][][]
  []
 
-[20]
+
 Underfull \hbox (badness 10000) detected at line 248
 [][][]
  []
@@ -1326,7 +1164,7 @@ Underfull \hbox (badness 10000) detected at line 251
 [][][]
  []
 
-
+[18]
 Underfull \hbox (badness 10000) detected at line 272
 [][][]
  []
@@ -1346,7 +1184,7 @@ Underfull \hbox (badness 10000) detected at line 299
 [][][]
  []
 
-[21]
+
 Underfull \hbox (badness 10000) detected at line 320
 [][][]
  []
@@ -1356,7 +1194,7 @@ Underfull \hbox (badness 10000) detected at line 323
 [][][]
  []
 
-) (./structpolar__cord.tex
+) (./structpolar__cord.tex [19]
 Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
@@ -1366,29 +1204,12 @@ Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
 
-[22]) [23] [24
+[20]) (./structroutine__t.tex [21]) (./auto_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
-]
-Chapter 7.
-(./auto_8h.tex
-<auto_8h__incl.pdf, id=154, pagebox=cropbox, 826.08624pt x 430.60875pt>
-File: auto_8h__incl.pdf Graphic file (type pdf)
-<use auto_8h__incl.pdf>
-Package pdftex.def Info: auto_8h__incl.pdf  used on input line 17. on input lin
-e 17.
-Package pdftex.def Info: Requested size: 350.0pt x 182.4445pt on input line 17.
+ []
 
-<auto_8h__dep__incl.pdf, id=155, pagebox=cropbox, 158.5925pt x 154.5775pt>
-File: auto_8h__dep__incl.pdf Graphic file (type pdf)
-<use auto_8h__dep__incl.pdf>
-Package pdftex.def Info: auto_8h__dep__incl.pdf  used on input line 25. on inpu
-t line 25.
-Package pdftex.def Info: Requested size: 158.0pt x 154.01338pt on input line 25
-.
-
-Underfull \vbox (badness 3815) has occurred while \output is active []
-
- [25 <./auto_8h__incl.pdf>]
+[22]
 Underfull \hbox (badness 10000) detected at line 46
 [][][]
  []
@@ -1398,449 +1219,22 @@ Underfull \hbox (badness 10000) detected at line 49
 [][][]
  []
 
-[26 <./auto_8h__dep__incl.pdf>]) (./auto_8h_source.tex [27]) (./battery_8h.tex
-<battery_8h__incl.pdf, id=190, pagebox=cropbox, 169.63374pt x 154.5775pt>
-File: battery_8h__incl.pdf Graphic file (type pdf)
-<use battery_8h__incl.pdf>
-Package pdftex.def Info: battery_8h__incl.pdf  used on input line 14. on input 
-line 14.
-Package pdftex.def Info: Requested size: 169.0pt x 154.0063pt on input line 14.
+[23] [24]) (./auto_8h_source.tex [25]) (./battery_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
-<battery_8h__dep__incl.pdf, id=191, pagebox=cropbox, 169.63374pt x 154.5775pt>
-File: battery_8h__dep__incl.pdf Graphic file (type pdf)
-<use battery_8h__dep__incl.pdf>
-Package pdftex.def Info: battery_8h__dep__incl.pdf  used on input line 22. on i
-nput line 22.
-Package pdftex.def Info: Requested size: 169.0pt x 154.0063pt on input line 22.
+ []
 
-
-[28 <./battery_8h__incl.pdf> <./battery_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 46
+[26]
+Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 49
+Underfull \hbox (badness 10000) detected at line 33
 [][][]
  []
 
-[29]
-Underfull \hbox (badness 10000) detected at line 108
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 135
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 140
-[][][]
- []
-
-[30]
-Underfull \hbox (badness 10000) detected at line 169
-[][][]
- []
-
-) (./battery_8h_source.tex) (./claw_8h.tex
-<claw_8h__incl.pdf, id=227, pagebox=cropbox, 421.575pt x 264.99pt>
-File: claw_8h__incl.pdf Graphic file (type pdf)
-<use claw_8h__incl.pdf>
-Package pdftex.def Info: claw_8h__incl.pdf  used on input line 18. on input lin
-e 18.
-Package pdftex.def Info: Requested size: 350.0pt x 220.00229pt on input line 18
-.
- [31]
-<claw_8h__dep__incl.pdf, id=231, pagebox=cropbox, 336.25626pt x 209.78375pt>
-File: claw_8h__dep__incl.pdf Graphic file (type pdf)
-<use claw_8h__dep__incl.pdf>
-Package pdftex.def Info: claw_8h__dep__incl.pdf  used on input line 26. on inpu
-t line 26.
-Package pdftex.def Info: Requested size: 335.0pt x 209.00215pt on input line 26
-.
- [32 <./claw_8h__incl.pdf> <./claw_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 70
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 73
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 93
-[][][]
- []
-
-[33]
-Underfull \hbox (badness 10000) detected at line 114
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 131
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 152
-[][][]
- []
-
-[34]
-Underfull \hbox (badness 10000) detected at line 169
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 190
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 214
-[][][]
- []
-
-[35]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7.1 on input line 230.
-
-
-Underfull \hbox (badness 10000) detected at line 256
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 287
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 300
-[][][]
- []
-
-[36]
-Underfull \hbox (badness 10000) detected at line 331
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 362
-[][][]
- []
-
-[37]) (./claw_8h_source.tex) (./controller_8h.tex [38]
-<controller_8h__incl.pdf, id=278, pagebox=cropbox, 190.7125pt x 209.78375pt>
-File: controller_8h__incl.pdf Graphic file (type pdf)
-<use controller_8h__incl.pdf>
-Package pdftex.def Info: controller_8h__incl.pdf  used on input line 15. on inp
-ut line 15.
-Package pdftex.def Info: Requested size: 190.0pt x 209.00856pt on input line 15
-.
-<controller_8h__dep__incl.pdf, id=279, pagebox=cropbox, 667.49374pt x 385.44pt>
-
-File: controller_8h__dep__incl.pdf Graphic file (type pdf)
-<use controller_8h__dep__incl.pdf>
-Package pdftex.def Info: controller_8h__dep__incl.pdf  used on input line 23. o
-n input line 23.
-Package pdftex.def Info: Requested size: 350.0pt x 202.11201pt on input line 23
-.
- [39 <./controller_8h__incl.pdf> <./controller_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 66
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 69
-[][][]
- []
-
-[40]
-Underfull \hbox (badness 10000) detected at line 109
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 112
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 133
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 136
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 157
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 160
-[][][]
- []
-
-[41]
-Underfull \hbox (badness 10000) detected at line 181
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 184
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 225
-[][][]
- []
-
-[42]
-Underfull \hbox (badness 10000) detected at line 228
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 249
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 252
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 276
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 279
-[][][]
- []
-
-[43]
-Underfull \hbox (badness 10000) detected at line 316
-[][][]
- []
-
-) (./controller_8h_source.tex [44]) (./drive_8h.tex
-<drive_8h__incl.pdf, id=324, pagebox=cropbox, 223.83624pt x 320.19624pt>
-File: drive_8h__incl.pdf Graphic file (type pdf)
-<use drive_8h__incl.pdf>
-Package pdftex.def Info: drive_8h__incl.pdf  used on input line 15. on input li
-ne 15.
-Package pdftex.def Info: Requested size: 223.0pt x 319.0082pt on input line 15.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [45]
-<drive_8h__dep__incl.pdf, id=328, pagebox=cropbox, 363.3575pt x 264.99pt>
-File: drive_8h__dep__incl.pdf Graphic file (type pdf)
-<use drive_8h__dep__incl.pdf>
-Package pdftex.def Info: drive_8h__dep__incl.pdf  used on input line 23. on inp
-ut line 23.
-Package pdftex.def Info: Requested size: 350.0pt x 255.25684pt on input line 23
-.
-
-[46 <./drive_8h__incl.pdf> <./drive_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 58
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 61
-[][][]
- []
-
-[47]
-Underfull \hbox (badness 10000) detected at line 102
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 105
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 121
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 124
-[][][]
- []
-
-[48]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7.3 on input line 140.
-
-
-Underfull \hbox (badness 10000) detected at line 166
-[][][]
- []
-
-[49]
-Underfull \hbox (badness 10000) detected at line 213
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 242
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 245
-[][][]
- []
-
-) (./drive_8h_source.tex [50]) (./encoders_8h.tex
-<encoders_8h__incl.pdf, id=369, pagebox=cropbox, 180.675pt x 154.5775pt>
-File: encoders_8h__incl.pdf Graphic file (type pdf)
-<use encoders_8h__incl.pdf>
-Package pdftex.def Info: encoders_8h__incl.pdf  used on input line 14. on input
- line 14.
-Package pdftex.def Info: Requested size: 180.0pt x 154.00159pt on input line 14
-.
-<encoders_8h__dep__incl.pdf, id=370, pagebox=cropbox, 401.5pt x 209.78375pt>
-File: encoders_8h__dep__incl.pdf Graphic file (type pdf)
-<use encoders_8h__dep__incl.pdf>
-Package pdftex.def Info: encoders_8h__dep__incl.pdf  used on input line 22. on 
-input line 22.
-Package pdftex.def Info: Requested size: 350.0pt x 182.88809pt on input line 22
-.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [51 <./encoders_8h__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 44
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 47
-[][][]
- []
-
-[52 <./encoders_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 67
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 70
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 73
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 76
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 100
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 103
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 128
-[][][]
- []
-
-[53]
-Underfull \hbox (badness 10000) detected at line 131
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 156
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 159
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 162
-[][][]
- []
-
-) (./encoders_8h_source.tex) (./gyro_8h.tex [54]
-<gyro_8h__incl.pdf, id=408, pagebox=cropbox, 158.5925pt x 154.5775pt>
-File: gyro_8h__incl.pdf Graphic file (type pdf)
-<use gyro_8h__incl.pdf>
-Package pdftex.def Info: gyro_8h__incl.pdf  used on input line 9. on input line
- 9.
-Package pdftex.def Info: Requested size: 158.0pt x 154.01338pt on input line 9.
-
-<gyro_8h__dep__incl.pdf, id=409, pagebox=cropbox, 158.5925pt x 154.5775pt>
-File: gyro_8h__dep__incl.pdf Graphic file (type pdf)
-<use gyro_8h__dep__incl.pdf>
-Package pdftex.def Info: gyro_8h__dep__incl.pdf  used on input line 17. on inpu
-t line 17.
-Package pdftex.def Info: Requested size: 158.0pt x 154.01338pt on input line 17
-.
- [55 <./gyro_8h__incl.pdf> <./gyro_8h__dep__incl.pdf>]) (./gyro_8h_source.tex [
-56]) (./lcd_8h.tex
-<lcd_8h__incl.pdf, id=440, pagebox=cropbox, 152.57pt x 154.5775pt>
-File: lcd_8h__incl.pdf Graphic file (type pdf)
-<use lcd_8h__incl.pdf>
-Package pdftex.def Info: lcd_8h__incl.pdf  used on input line 14. on input line
- 14.
-Package pdftex.def Info: Requested size: 152.0pt x 154.0063pt on input line 14.
-
-<lcd_8h__dep__incl.pdf, id=441, pagebox=cropbox, 840.13875pt x 264.99pt>
-File: lcd_8h__dep__incl.pdf Graphic file (type pdf)
-<use lcd_8h__dep__incl.pdf>
-Package pdftex.def Info: lcd_8h__dep__incl.pdf  used on input line 22. on input
- line 22.
-Package pdftex.def Info: Requested size: 350.0pt x 110.39336pt on input line 22
-.
- [57 <./lcd_8h__incl.pdf> <./lcd_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 66
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 69
-[][][]
- []
-
-[58]
-Underfull \hbox (badness 10000) detected at line 89
-[][][]
- []
-
-
+[27]
 Underfull \hbox (badness 10000) detected at line 92
 [][][]
  []
@@ -1851,52 +1245,155 @@ Underfull \hbox (badness 10000) detected at line 113
  []
 
 
-Underfull \hbox (badness 10000) detected at line 116
+Underfull \hbox (badness 10000) detected at line 118
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 142
+Underfull \hbox (badness 10000) detected at line 143
+[][][]
+ []
+
+) (./battery_8h_source.tex [28]) (./claw_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--13
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) detected at line 54
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 145
-[][][]
- []
-
-[59]
-Underfull \hbox (badness 10000) detected at line 187
+Underfull \hbox (badness 10000) detected at line 57
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 192
+Underfull \hbox (badness 10000) detected at line 77
+[][][]
+ []
+
+[30]
+Underfull \hbox (badness 10000) detected at line 98
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 195
-[][][]
- []
-
-[60]
-Underfull \hbox (badness 10000) detected at line 228
+Underfull \hbox (badness 10000) detected at line 115
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 231
+Underfull \hbox (badness 10000) detected at line 136
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 263
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+[31]
+Underfull \hbox (badness 10000) detected at line 174
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 266
+Underfull \hbox (badness 10000) detected at line 198
+[][][]
+ []
+
+
+Overfull \vbox (23.87122pt too high) has occurred while \output is active []
+
+[32]
+Underfull \hbox (badness 10000) detected at line 232
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 257
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 270
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 295
+[][][]
+ []
+
+[33]
+Underfull \hbox (badness 10000) detected at line 320
+[][][]
+ []
+
+) (./claw_8h_source.tex) (./controller_8h.tex [34]
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[][][]
+ []
+
+[35]
+Underfull \hbox (badness 10000) detected at line 89
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 129
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 132
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+[36]
+Underfull \hbox (badness 10000) detected at line 156
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 177
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 180
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 204
+[][][]
+ []
+
+[37]
+Underfull \hbox (badness 10000) detected at line 245
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 248
 [][][]
  []
 
@@ -1910,266 +1407,102 @@ Underfull \hbox (badness 10000) detected at line 272
 [][][]
  []
 
-[61]
-Underfull \hbox (badness 10000) detected at line 320
+[38]
+Underfull \hbox (badness 10000) detected at line 416
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 323
+Underfull \hbox (badness 10000) detected at line 419
 [][][]
  []
 
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 349.
-[62]
-Underfull \hbox (badness 10000) detected at line 362
+[39]
+Underfull \hbox (badness 10000) detected at line 449
 [][][]
  []
 
+) (./controller_8h_source.tex [40]) (./drive_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
-Underfull \hbox (badness 10000) detected at line 365
-[][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 398
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 401
-[][][]
- []
-
-[63]
-Underfull \hbox (badness 10000) detected at line 434
+[41]
+Underfull \hbox (badness 10000) detected at line 42
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 437
-[][][]
- []
-
-) (./lcd_8h_source.tex) (./lifter_8h.tex
-<lifter_8h__incl.pdf, id=489, pagebox=cropbox, 609.27625pt x 375.4025pt>
-File: lifter_8h__incl.pdf Graphic file (type pdf)
-<use lifter_8h__incl.pdf>
-Package pdftex.def Info: lifter_8h__incl.pdf  used on input line 21. on input l
-ine 21.
-Package pdftex.def Info: Requested size: 350.0pt x 215.65427pt on input line 21
-.
- [64]
-<lifter_8h__dep__incl.pdf, id=493, pagebox=cropbox, 335.2525pt x 209.78375pt>
-File: lifter_8h__dep__incl.pdf Graphic file (type pdf)
-<use lifter_8h__dep__incl.pdf>
-Package pdftex.def Info: lifter_8h__dep__incl.pdf  used on input line 29. on in
-put line 29.
-Package pdftex.def Info: Requested size: 334.0pt x 208.99896pt on input line 29
-.
- [65 <./lifter_8h__incl.pdf> <./lifter_8h__dep__incl.pdf>] [66]
-Underfull \hbox (badness 10000) detected at line 97
+Underfull \hbox (badness 10000) detected at line 45
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 100
-[][][]
- []
-
-[67] [68] [69]
-Underfull \hbox (badness 10000) detected at line 355
+Underfull \hbox (badness 10000) detected at line 86
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 358
+Underfull \hbox (badness 10000) detected at line 89
+[][][]
+ []
+
+[42]
+Underfull \hbox (badness 10000) detected at line 105
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 361
+Underfull \hbox (badness 10000) detected at line 108
 [][][]
  []
 
-[70]
-Underfull \hbox (badness 10000) detected at line 389
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 392
+[43]
+Underfull \hbox (badness 10000) detected at line 142
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 395
+Underfull \hbox (badness 10000) detected at line 174
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 431
+Underfull \hbox (badness 10000) detected at line 197
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 434
+Underfull \hbox (badness 10000) detected at line 200
+[][][]
+ []
+
+[44]) (./drive_8h_source.tex) (./encoders_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) detected at line 28
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 437
-[][][]
- []
-
-[71]
-Underfull \hbox (badness 10000) detected at line 464
+Underfull \hbox (badness 10000) detected at line 31
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 467
+Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 494
+Underfull \hbox (badness 10000) detected at line 54
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 497
-[][][]
- []
-
-[72]
-Underfull \hbox (badness 10000) detected at line 524
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 527
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 554
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 557
-[][][]
- []
-
-[73]
-Underfull \hbox (badness 10000) detected at line 589
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 592
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 620
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 623
-[][][]
- []
-
-[74]
-Underfull \hbox (badness 10000) detected at line 659
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 662
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 693
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 696
-[][][]
- []
-
-[75]) (./lifter_8h_source.tex [76]) (./localization_8h.tex
-<localization_8h__incl.pdf, id=556, pagebox=cropbox, 299.1175pt x 209.78375pt>
-File: localization_8h__incl.pdf Graphic file (type pdf)
-<use localization_8h__incl.pdf>
-Package pdftex.def Info: localization_8h__incl.pdf  used on input line 17. on i
-nput line 17.
-Package pdftex.def Info: Requested size: 298.0pt x 209.01497pt on input line 17
-.
-<localization_8h__dep__incl.pdf, id=557, pagebox=cropbox, 269.005pt x 154.5775p
-t>
-File: localization_8h__dep__incl.pdf Graphic file (type pdf)
-<use localization_8h__dep__incl.pdf>
-Package pdftex.def Info: localization_8h__dep__incl.pdf  used on input line 25.
- on input line 25.
-Package pdftex.def Info: Requested size: 268.0pt x 154.00159pt on input line 25
-.
- [77 <./localization_8h__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 52
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 55
-[][][]
- []
-
-[78 <./localization_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 97
-[][][]
- []
-
-[79]
-Underfull \hbox (badness 10000) detected at line 120
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 160
-[][][]
- []
-
-) (./localization_8h_source.tex [80]
-Overfull \hbox (15.15555pt too wide) in paragraph at lines 22--22
-[]\T1/pcr/m/n/7 00040 []bool[] init_localization([]const[] []unsigned[] []char[
-] gyro1, []unsigned[] []short[] multiplier, []int[] start_x, []int[] start_y, [
-]int[][] 
- []
-
-) (./log_8h.tex
-<log_8h__incl.pdf, id=595, pagebox=cropbox, 159.59625pt x 209.78375pt>
-File: log_8h__incl.pdf Graphic file (type pdf)
-<use log_8h__incl.pdf>
-Package pdftex.def Info: log_8h__incl.pdf  used on input line 15. on input line
- 15.
-Package pdftex.def Info: Requested size: 159.0pt x 209.00215pt on input line 15
-.
-<log_8h__dep__incl.pdf, id=596, pagebox=cropbox, 747.79375pt x 209.78375pt>
-File: log_8h__dep__incl.pdf Graphic file (type pdf)
-<use log_8h__dep__incl.pdf>
-Package pdftex.def Info: log_8h__dep__incl.pdf  used on input line 23. on input
- line 23.
-Package pdftex.def Info: Requested size: 350.0pt x 98.18863pt on input line 23.
-
-
-Underfull \vbox (badness 1365) has occurred while \output is active []
-
- [81 <./log_8h__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 57
 [][][]
  []
@@ -2179,239 +1512,23 @@ Underfull \hbox (badness 10000) detected at line 60
 [][][]
  []
 
-[82 <./log_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 80
+[46]
+Underfull \hbox (badness 10000) detected at line 84
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 83
+Underfull \hbox (badness 10000) detected at line 87
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 100
+Underfull \hbox (badness 10000) detected at line 108
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 103
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 124
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 127
-[][][]
- []
-
-[83]
-Underfull \hbox (badness 10000) detected at line 144
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 147
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 168
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 171
-[][][]
- []
-
-[84]
-Underfull \hbox (badness 10000) detected at line 195
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 233
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 236
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 239
-[][][]
- []
-
-[85]
-Underfull \hbox (badness 10000) detected at line 276
-[][][]
- []
-
-[86]
-Underfull \hbox (badness 10000) detected at line 314
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 317
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 360
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 363
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 366
-[][][]
- []
-
-[87]) (./log_8h_source.tex) (./main_8h.tex
-<main_8h__incl.pdf, id=644, pagebox=cropbox, 160.6pt x 154.5775pt>
-File: main_8h__incl.pdf Graphic file (type pdf)
-<use main_8h__incl.pdf>
-Package pdftex.def Info: main_8h__incl.pdf  used on input line 14. on input lin
-e 14.
-Package pdftex.def Info: Requested size: 160.0pt x 154.00394pt on input line 14
-.
-<main_8h__dep__incl.pdf, id=645, pagebox=cropbox, 310.15875pt x 154.5775pt>
-File: main_8h__dep__incl.pdf Graphic file (type pdf)
-<use main_8h__dep__incl.pdf>
-Package pdftex.def Info: main_8h__dep__incl.pdf  used on input line 22. on inpu
-t line 22.
-Package pdftex.def Info: Requested size: 309.0pt x 153.99922pt on input line 22
-.
- [88 <./main_8h__incl.pdf>] [89 <./main_8h__dep__incl.pdf>] [90] [91]) (./main_
-8h_source.tex [92]) (./matrix_8h.tex
-<matrix_8h__dep__incl.pdf, id=686, pagebox=cropbox, 316.18124pt x 209.78375pt>
-File: matrix_8h__dep__incl.pdf Graphic file (type pdf)
-<use matrix_8h__dep__incl.pdf>
-Package pdftex.def Info: matrix_8h__dep__incl.pdf  used on input line 15. on in
-put line 15.
-Package pdftex.def Info: Requested size: 315.0pt x 209.01497pt on input line 15
-.
-
-[93 <./matrix_8h__dep__incl.pdf>] [94]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [95]
-Underfull \hbox (badness 10000) detected at line 126
-[][][]
- []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7.23 on input line 157.
-
-
-Underfull \hbox (badness 10000) detected at line 158
-[][][]
- []
-
-[96]
-Underfull \hbox (badness 10000) detected at line 223
-[][][]
- []
-
-[97]
-Underfull \hbox (badness 10000) detected at line 290
-[][][]
- []
-
-[98]
-Underfull \hbox (badness 10000) detected at line 398
-[][][]
- []
-
-[99]
-Underfull \hbox (badness 10000) detected at line 445
-[][][]
- []
-
-[100]
-Underfull \hbox (badness 10000) detected at line 490
-[][][]
- []
-
-[101]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7.30 on input line 600.
-
-[102]
-Overfull \vbox (13.69385pt too high) has occurred while \output is active []
-
-
-[103]
-Underfull \hbox (badness 10000) detected at line 699
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 739
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 744
-[][][]
- []
-
-[104]
-Underfull \hbox (badness 10000) detected at line 793
-[][][]
- []
-
-) (./matrix_8h_source.tex) (./menu_8h.tex [105]
-<menu_8h__incl.pdf, id=741, pagebox=cropbox, 437.635pt x 264.99pt>
-File: menu_8h__incl.pdf Graphic file (type pdf)
-<use menu_8h__incl.pdf>
-Package pdftex.def Info: menu_8h__incl.pdf  used on input line 20. on input lin
-e 20.
-Package pdftex.def Info: Requested size: 350.0pt x 211.92758pt on input line 20
-.
-<menu_8h__dep__incl.pdf, id=742, pagebox=cropbox, 216.81pt x 154.5775pt>
-File: menu_8h__dep__incl.pdf Graphic file (type pdf)
-<use menu_8h__dep__incl.pdf>
-Package pdftex.def Info: menu_8h__dep__incl.pdf  used on input line 28. on inpu
-t line 28.
-Package pdftex.def Info: Requested size: 216.0pt x 154.00865pt on input line 28
-.
- [106 <./menu_8h__incl.pdf> <./menu_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 71
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 74
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 94
-[][][]
- []
-
-[107]
-Underfull \hbox (badness 10000) detected at line 97
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 100
+Underfull \hbox (badness 10000) detected at line 111
 [][][]
  []
 
@@ -2430,17 +1547,390 @@ Underfull \hbox (badness 10000) detected at line 134
 [][][]
  []
 
-[108]
-Underfull \hbox (badness 10000) detected at line 193
+) (./encoders_8h_source.tex [47]) (./gyro_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[48]) (./gyro_8h_source.tex) (./lcd_8h.tex [49]
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[50]
+Underfull \hbox (badness 10000) detected at line 50
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 196
+Underfull \hbox (badness 10000) detected at line 53
 [][][]
  []
 
-[109]
+
+Underfull \hbox (badness 10000) detected at line 73
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 97
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 100
+[][][]
+ []
+
+[51]
+Underfull \hbox (badness 10000) detected at line 126
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 129
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 164
+[][][]
+ []
+
+[52]
+Underfull \hbox (badness 10000) detected at line 169
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 197
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 200
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 225
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 228
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 231
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 234
+[][][]
+ []
+
+[53]
+Underfull \hbox (badness 10000) detected at line 266
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 269
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 288.
+
+Underfull \hbox (badness 10000) detected at line 301
+[][][]
+ []
+
+[54]
+Underfull \hbox (badness 10000) detected at line 304
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 330
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 333
+[][][]
+ []
+
+[55]
+Underfull \hbox (badness 10000) detected at line 359
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 362
+[][][]
+ []
+
+) (./lcd_8h_source.tex) (./lifter_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
+
+ []
+
+[56] [57]
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 94
+[][][]
+ []
+
+[58] [59] [60] [61]
+Underfull \hbox (badness 10000) detected at line 431
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 434
+[][][]
+ []
+
+[62]
+Underfull \hbox (badness 10000) detected at line 437
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 458
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 461
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 464
+[][][]
+ []
+
+[63]
+Underfull \hbox (badness 10000) detected at line 494
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 497
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 500
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 521
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 524
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 545
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 548
+[][][]
+ []
+
+[64]
+Underfull \hbox (badness 10000) detected at line 569
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 572
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 597
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 600
+[][][]
+ []
+
+[65]
+Underfull \hbox (badness 10000) detected at line 626
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 629
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 651
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 654
+[][][]
+ []
+
+[66]
+Underfull \hbox (badness 10000) detected at line 684
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 687
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 712
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 715
+[][][]
+ []
+
+) (./lifter_8h_source.tex [67]) (./list_8h.tex [68]
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[69] [70] [71] [72]) (./list_8h_source.tex [73] [74]) (./localization_8h.tex [7
+5]
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+[76]
+Underfull \hbox (badness 10000) detected at line 101
+[][][]
+ []
+
+[77]
+Underfull \hbox (badness 10000) detected at line 118
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 144
+[][][]
+ []
+
+) (./localization_8h_source.tex [78]) (./log_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[79]
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 64
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 67
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+[80]
+Underfull \hbox (badness 10000) detected at line 87
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 108
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 111
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 128
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 131
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 152
+[][][]
+ []
+
+[81]
+Underfull \hbox (badness 10000) detected at line 155
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 179
+[][][]
+ []
+
+[82]
 Underfull \hbox (badness 10000) detected at line 209
 [][][]
  []
@@ -2451,170 +1941,19 @@ Underfull \hbox (badness 10000) detected at line 212
  []
 
 
-Underfull \hbox (badness 10000) detected at line 230
+Underfull \hbox (badness 10000) detected at line 215
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 233
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 236
-[][][]
- []
-
-[110]
-Underfull \hbox (badness 10000) detected at line 270
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 273
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 276
-[][][]
- []
-
-[111]
-Underfull \hbox (badness 10000) detected at line 337
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 351
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 354
+Underfull \hbox (badness 10000) detected at line 245
 [][][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [112]
-Underfull \hbox (badness 10000) detected at line 390
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 404
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 407
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 444
-[][][]
- []
-
-[113]
-Underfull \hbox (badness 10000) detected at line 456
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 459
-[][][]
- []
-
-) (./menu_8h_source.tex [114]) (./mobile__goal__intake_8h.tex
-<mobile__goal__intake_8h__incl.pdf, id=797, pagebox=cropbox, 364.36125pt x 275.
-0275pt>
-File: mobile__goal__intake_8h__incl.pdf Graphic file (type pdf)
-<use mobile__goal__intake_8h__incl.pdf>
-Package pdftex.def Info: mobile__goal__intake_8h__incl.pdf  used on input line 
-11. on input line 11.
-Package pdftex.def Info: Requested size: 350.0pt x 264.19545pt on input line 11
-.
-<mobile__goal__intake_8h__dep__incl.pdf, id=798, pagebox=cropbox, 307.1475pt x 
-164.615pt>
-File: mobile__goal__intake_8h__dep__incl.pdf Graphic file (type pdf)
-<use mobile__goal__intake_8h__dep__incl.pdf>
-Package pdftex.def Info: mobile__goal__intake_8h__dep__incl.pdf  used on input 
-line 19. on input line 19.
-Package pdftex.def Info: Requested size: 306.0pt x 164.00923pt on input line 19
-.
-
-Underfull \vbox (badness 2080) has occurred while \output is active []
-
- [115 <./mobile__goal__intake_8h__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 40
-[][][]
- []
-
-) (./mobile__goal__intake_8h_source.tex) (./motor__ports_8h.tex [116 <./mobile_
-_goal__intake_8h__dep__incl.pdf>]
-<motor__ports_8h__dep__incl.pdf, id=829, pagebox=cropbox, 558.085pt x 275.0275p
-t>
-File: motor__ports_8h__dep__incl.pdf Graphic file (type pdf)
-<use motor__ports_8h__dep__incl.pdf>
-Package pdftex.def Info: motor__ports_8h__dep__incl.pdf  used on input line 15.
- on input line 15.
-Package pdftex.def Info: Requested size: 350.0pt x 172.48767pt on input line 15
-.
- [117 <./motor__ports_8h__dep__incl.pdf>]
-[118]
-Underfull \hbox (badness 10000) detected at line 141
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 144
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 165
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 168
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 189
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 192
-[][][]
- []
-
-[119]
-Underfull \hbox (badness 10000) detected at line 213
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 216
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 251
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 254
-[][][]
- []
-
-[120]
+[83]
 Underfull \hbox (badness 10000) detected at line 275
 [][][]
  []
@@ -2624,88 +1963,821 @@ Underfull \hbox (badness 10000) detected at line 278
 [][][]
  []
 
-) (./motor__ports_8h_source.tex [121]) (./partner_8h.tex
-<partner_8h__incl.pdf, id=858, pagebox=cropbox, 193.72375pt x 264.99pt>
-File: partner_8h__incl.pdf Graphic file (type pdf)
-<use partner_8h__incl.pdf>
-Package pdftex.def Info: partner_8h__incl.pdf  used on input line 10. on input 
-line 10.
-Package pdftex.def Info: Requested size: 193.0pt x 264.00275pt on input line 10
-.
-<partner_8h__dep__incl.pdf, id=859, pagebox=cropbox, 531.9875pt x 320.19624pt>
-File: partner_8h__dep__incl.pdf Graphic file (type pdf)
-<use partner_8h__dep__incl.pdf>
-Package pdftex.def Info: partner_8h__dep__incl.pdf  used on input line 18. on i
-nput line 18.
-Package pdftex.def Info: Requested size: 350.0pt x 210.6657pt on input line 18.
 
- [122 <./partner_8h__incl.pdf>]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7.44 on input line 53.
-
-[123 <./partner_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 102
-[][][]
- []
-
-) (./partner_8h_source.tex) (./potentiometer_8h.tex
-<potentiometer_8h__dep__incl.pdf, id=891, pagebox=cropbox, 335.2525pt x 264.99p
-t>
-File: potentiometer_8h__dep__incl.pdf Graphic file (type pdf)
-<use potentiometer_8h__dep__incl.pdf>
-Package pdftex.def Info: potentiometer_8h__dep__incl.pdf  used on input line 8.
- on input line 8.
-Package pdftex.def Info: Requested size: 334.0pt x 263.9987pt on input line 8.
- [124])
-(./potentiometer_8h_source.tex [125 <./potentiometer_8h__dep__incl.pdf>])
-(./sensor__ports_8h.tex
-<sensor__ports_8h__dep__incl.pdf, id=911, pagebox=cropbox, 413.545pt x 264.99pt
->
-File: sensor__ports_8h__dep__incl.pdf Graphic file (type pdf)
-<use sensor__ports_8h__dep__incl.pdf>
-Package pdftex.def Info: sensor__ports_8h__dep__incl.pdf  used on input line 8.
- on input line 8.
-Package pdftex.def Info: Requested size: 350.0pt x 224.27618pt on input line 8.
-
- [126 <./sensor__ports_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 43
+Underfull \hbox (badness 10000) detected at line 310
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 46
+Underfull \hbox (badness 10000) detected at line 313
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 49
+Underfull \hbox (badness 10000) detected at line 316
 [][][]
  []
 
-) (./sensor__ports_8h_source.tex) (./slew_8h.tex
-<slew_8h__incl.pdf, id=927, pagebox=cropbox, 253.94875pt x 209.78375pt>
-File: slew_8h__incl.pdf Graphic file (type pdf)
-<use slew_8h__incl.pdf>
-Package pdftex.def Info: slew_8h__incl.pdf  used on input line 16. on input lin
-e 16.
-Package pdftex.def Info: Requested size: 253.0pt x 209.00856pt on input line 16
-.
- [127]
-<slew_8h__dep__incl.pdf, id=931, pagebox=cropbox, 721.69624pt x 275.0275pt>
-File: slew_8h__dep__incl.pdf Graphic file (type pdf)
-<use slew_8h__dep__incl.pdf>
-Package pdftex.def Info: slew_8h__dep__incl.pdf  used on input line 24. on inpu
-t line 24.
-Package pdftex.def Info: Requested size: 350.0pt x 133.37978pt on input line 24
-.
- [128 <./slew_8h__incl.pdf> <./slew_8h__dep__incl.pdf>]
+[84]) (./log_8h_source.tex) (./main_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[85] [86] [87]) (./main_8h_source.tex [88]) (./matrix_8h.tex [89] [90] [91]
+Underfull \hbox (badness 10000) detected at line 113
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 139
+[][][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[92]
+Underfull \hbox (badness 10000) detected at line 169
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 199
+[][][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[93]
+Underfull \hbox (badness 10000) detected at line 254
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 282
+[][][]
+ []
+
+[94]
+Underfull \hbox (badness 10000) detected at line 307
+[][][]
+ []
+
+[95]
+Underfull \hbox (badness 10000) detected at line 414
+[][][]
+ []
+
+[96]
+Underfull \hbox (badness 10000) detected at line 439
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 444
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 470
+[][][]
+ []
+
+) (./matrix_8h_source.tex [97]) (./menu_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+
+ []
+
+[98]
+Underfull \hbox (badness 10000) detected at line 51
+[][][]
+ []
+
+
 Underfull \hbox (badness 10000) detected at line 54
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 57
+Underfull \hbox (badness 10000) detected at line 74
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 77
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 80
+[][][]
+ []
+
+[99]
+Underfull \hbox (badness 10000) detected at line 108
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 111
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 114
+[][][]
+ []
+
+[100]
+Underfull \hbox (badness 10000) detected at line 163
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 166
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 169
+[][][]
+ []
+
+[101]
+Underfull \hbox (badness 10000) detected at line 195
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 198
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 227
+[][][]
+ []
+
+
+Overfull \vbox (16.11903pt too high) has occurred while \output is active []
+
+[102]
+Underfull \hbox (badness 10000) detected at line 241
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 244
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 270
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 284
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 287
+[][][]
+ []
+
+[103]
+Underfull \hbox (badness 10000) detected at line 313
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 325
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 328
+[][][]
+ []
+
+) (./menu_8h_source.tex [104]) (./mobile__goal__intake_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+[105]
+Underfull \hbox (badness 10000) detected at line 74
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+[106]) (./mobile__goal__intake_8h_source.tex) (./motor__ports_8h.tex [107] [108
+]
+Underfull \hbox (badness 10000) detected at line 137
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 161
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 164
+[][][]
+ []
+
+[109]
+Underfull \hbox (badness 10000) detected at line 185
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 209
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 212
+[][][]
+ []
+
+[110]
+Underfull \hbox (badness 10000) detected at line 247
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 250
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 271
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 274
+[][][]
+ []
+
+) (./motor__ports_8h_source.tex [111]) (./partner_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+[112]
+Underfull \hbox (badness 10000) detected at line 73
+[][][]
+ []
+
+) (./partner_8h_source.tex) (./potentiometer_8h.tex [113]) (./potentiometer_8h_
+source.tex) (./routines_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[114] [115]) (./routines_8h_source.tex) (./sensor__ports_8h.tex [116]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+) (./sensor__ports_8h_source.tex) (./slew_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+[117]
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+[118]
+Underfull \hbox (badness 10000) detected at line 61
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 64
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 81
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 101
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 104
+[][][]
+ []
+
+[119]
+Underfull \hbox (badness 10000) detected at line 124
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 127
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 152
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 155
+[][][]
+ []
+
+[120]
+Underfull \hbox (badness 10000) detected at line 187
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 190
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 222
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 225
+[][][]
+ []
+
+[121]
+Underfull \hbox (badness 10000) detected at line 250
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 253
+[][][]
+ []
+
+) (./slew_8h_source.tex) (./toggle_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+[122]
+Underfull \hbox (badness 10000) detected at line 32
+[][][]
+ []
+
+[123] [124]
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 92
+[][][]
+ []
+
+) (./toggle_8h_source.tex) (./vlib_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+[125]
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 21.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 21.
+
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+[126]
+Underfull \hbox (badness 10000) detected at line 65
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 108
+[][][]
+ []
+
+[127]
+Underfull \hbox (badness 10000) detected at line 133
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 136
+[][][]
+ []
+
+) (./vlib_8h_source.tex) (./vmath_8h.tex [128]
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 39
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+[129]
+Underfull \hbox (badness 10000) detected at line 81
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 92
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+[130]
+Underfull \hbox (badness 10000) detected at line 118
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 121
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 131
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 134
+[][][]
+ []
+
+
+Overfull \vbox (14.43013pt too high) has occurred while \output is active []
+
+[131]
+Underfull \hbox (badness 10000) detected at line 166
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 194
+[][][]
+ []
+
+) (./vmath_8h_source.tex [132]) (./_r_e_a_d_m_e_8md.tex) (./_r_e_a_d_m_e_8md_so
+urce.tex) (./auto_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[133]) (./auto_8c_source.tex [134]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[135]) (./battery_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 48
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 53
+[][][]
+ []
+
+[136]
+Underfull \hbox (badness 10000) detected at line 78
+[][][]
+ []
+
+) (./battery_8c_source.tex) (./claw_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+[137]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 60
+[][][]
+ []
+
+[138]
+Underfull \hbox (badness 10000) detected at line 85
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 110
+[][][]
+ []
+
+) (./claw_8c_source.tex [139]) (./controller_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[140]
+Underfull \hbox (badness 10000) detected at line 22
+[][][]
+ []
+
+) (./controller_8c_source.tex) (./drive_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+
+ []
+
+[141]
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 62
+[][][]
+ []
+
+[142]
+Underfull \hbox (badness 10000) detected at line 70
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 123
+[][][]
+ []
+
+[143]
+Underfull \hbox (badness 10000) detected at line 144
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 147
+[][][]
+ []
+
+) (./drive_8c_source.tex [144]) (./encoders_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+[145]
+Underfull \hbox (badness 10000) detected at line 28
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 52
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 55
+[][][]
+ []
+
+[146]
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 78
+[][][]
+ []
+
+) (./encoders_8c_source.tex) (./gyro_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[147]) (./gyro_8c_source.tex) (./init_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
+
+ []
+
+[148] [149]) (./init_8c_source.tex [150]) (./lcd_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[151]
+Underfull \hbox (badness 10000) detected at line 46
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 51
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+[152]
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 107
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 110
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 135
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 138
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 141
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 144
+[][][]
+ []
+
+[153]
+Underfull \hbox (badness 10000) detected at line 176
+[][][]
+ []
+
+[154]
+Underfull \hbox (badness 10000) detected at line 179
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 211
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 214
+[][][]
+ []
+
+[155]
+Underfull \hbox (badness 10000) detected at line 240
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 243
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 269
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 272
+[][][]
+ []
+
+[156]) (./lcd_8c_source.tex) (./lifter_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+[157] [158]
+Underfull \hbox (badness 10000) detected at line 74
 [][][]
  []
 
@@ -2720,312 +2792,7 @@ Underfull \hbox (badness 10000) detected at line 80
  []
 
 
-Underfull \hbox (badness 10000) detected at line 97
-[][][]
- []
-
-[129]
-Underfull \hbox (badness 10000) detected at line 100
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 117
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 120
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 140
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 143
-[][][]
- []
-
-[130]
-Underfull \hbox (badness 10000) detected at line 177
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 180
-[][][]
- []
-
-[131]
-Underfull \hbox (badness 10000) detected at line 227
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 230
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 276
-[][][]
- []
-
-[132]
-Underfull \hbox (badness 10000) detected at line 279
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 316
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 319
-[][][]
- []
-
-) (./slew_8h_source.tex [133]) (./toggle_8h.tex
-<toggle_8h__incl.pdf, id=975, pagebox=cropbox, 166.6225pt x 154.5775pt>
-File: toggle_8h__incl.pdf Graphic file (type pdf)
-<use toggle_8h__incl.pdf>
-Package pdftex.def Info: toggle_8h__incl.pdf  used on input line 9. on input li
-ne 9.
-Package pdftex.def Info: Requested size: 166.0pt x 154.01102pt on input line 9.
-
-<toggle_8h__dep__incl.pdf, id=976, pagebox=cropbox, 166.6225pt x 154.5775pt>
-File: toggle_8h__dep__incl.pdf Graphic file (type pdf)
-<use toggle_8h__dep__incl.pdf>
-Package pdftex.def Info: toggle_8h__dep__incl.pdf  used on input line 17. on in
-put line 17.
-Package pdftex.def Info: Requested size: 166.0pt x 154.01102pt on input line 17
-.
- [134 <./toggle_8h__incl.pdf> <./toggle_8h__dep__incl.pdf>]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7.47 on input line 186.
-
-[135] [136]
-Underfull \hbox (badness 10000) detected at line 243
-[][][]
- []
-
-[137]
-Underfull \hbox (badness 10000) detected at line 393
-[][][]
- []
-
-[138]
-Underfull \hbox (badness 10000) detected at line 401
-[][][]
- []
-
-) (./toggle_8h_source.tex [139]) (./vlib_8h.tex
-<vlib_8h__incl.pdf, id=1020, pagebox=cropbox, 253.94875pt x 154.5775pt>
-File: vlib_8h__incl.pdf Graphic file (type pdf)
-<use vlib_8h__incl.pdf>
-Package pdftex.def Info: vlib_8h__incl.pdf  used on input line 16. on input lin
-e 16.
-Package pdftex.def Info: Requested size: 253.0pt x 154.0063pt on input line 16.
-
-<vlib_8h__dep__incl.pdf, id=1021, pagebox=cropbox, 810.02625pt x 330.23375pt>
-File: vlib_8h__dep__incl.pdf Graphic file (type pdf)
-<use vlib_8h__dep__incl.pdf>
-Package pdftex.def Info: vlib_8h__dep__incl.pdf  used on input line 24. on inpu
-t line 24.
-Package pdftex.def Info: Requested size: 350.0pt x 142.6931pt on input line 24.
-
-LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
-(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 37.
-LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 37.
- [140 <./vlib_8h__incl.pdf> <./vlib_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 43
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 46
-[][][]
- []
-
-[141]
-Underfull \hbox (badness 10000) detected at line 81
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 84
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 144
-[][][]
- []
-
-[142]
-Underfull \hbox (badness 10000) detected at line 147
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 150
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 194
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 197
-[][][]
- []
-
-[143]) (./vlib_8h_source.tex) (./vmath_8h.tex
-<vmath_8h__incl.pdf, id=1060, pagebox=cropbox, 166.6225pt x 154.5775pt>
-File: vmath_8h__incl.pdf Graphic file (type pdf)
-<use vmath_8h__incl.pdf>
-Package pdftex.def Info: vmath_8h__incl.pdf  used on input line 14. on input li
-ne 14.
-Package pdftex.def Info: Requested size: 166.0pt x 154.01102pt on input line 14
-.
-<vmath_8h__dep__incl.pdf, id=1061, pagebox=cropbox, 816.04875pt x 440.64626pt>
-File: vmath_8h__dep__incl.pdf Graphic file (type pdf)
-<use vmath_8h__dep__incl.pdf>
-Package pdftex.def Info: vmath_8h__dep__incl.pdf  used on input line 22. on inp
-ut line 22.
-Package pdftex.def Info: Requested size: 350.0pt x 188.99008pt on input line 22
-.
- [144 <./vmath_8h__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 55
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 60
-[][][]
- []
-
-[145 <./vmath_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 97
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 100
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 108
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 111
-[][][]
- []
-
-[146]
-Underfull \hbox (badness 10000) detected at line 140
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 143
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 153
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 156
-[][][]
- []
-
-[147]
-Underfull \hbox (badness 10000) detected at line 220
-[][][]
- []
-
-
-Overfull \vbox (17.87927pt too high) has occurred while \output is active []
-
-
-[148]
-Underfull \hbox (badness 10000) detected at line 255
-[][][]
- []
-
-) (./vmath_8h_source.tex) (./_r_e_a_d_m_e_8md.tex)
-(./_r_e_a_d_m_e_8md_source.tex) (./auto_8c.tex [149]
-<auto_8c__incl.pdf, id=1105, pagebox=cropbox, 787.94376pt x 485.815pt>
-File: auto_8c__incl.pdf Graphic file (type pdf)
-<use auto_8c__incl.pdf>
-Package pdftex.def Info: auto_8c__incl.pdf  used on input line 15. on input lin
-e 15.
-Package pdftex.def Info: Requested size: 350.0pt x 215.7904pt on input line 15.
-
-
-Overfull \hbox (27.1099pt too wide) in paragraph at lines 30--31
-[]\T1/phv/m/n/10 Any copy-right is ded-i-cated to the Pub-lic Do-main. \T1/pcr/
-m/n/10 http[]://creativecommons.[]org/publicdomain/zero/1.[]
- []
-
-[150 <./auto_8c__incl.pdf>]) (./auto_8c_source.tex [151]) (./battery_8c.tex
-<battery_8c__incl.pdf, id=1124, pagebox=cropbox, 169.63374pt x 209.78375pt>
-File: battery_8c__incl.pdf Graphic file (type pdf)
-<use battery_8c__incl.pdf>
-Package pdftex.def Info: battery_8c__incl.pdf  used on input line 10. on input 
-line 10.
-Package pdftex.def Info: Requested size: 169.0pt x 209.00856pt on input line 10
-.
-
-[152]
-Underfull \hbox (badness 10000) detected at line 35
-[][][]
- []
-
-[153 <./battery_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 62
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 67
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 96
-[][][]
- []
-
-) (./battery_8c_source.tex) (./claw_8c.tex
-<claw_8c__incl.pdf, id=1143, pagebox=cropbox, 569.12625pt x 320.19624pt>
-File: claw_8c__incl.pdf Graphic file (type pdf)
-<use claw_8c__incl.pdf>
-Package pdftex.def Info: claw_8c__incl.pdf  used on input line 10. on input lin
-e 10.
-Package pdftex.def Info: Requested size: 350.0pt x 196.92195pt on input line 10
-.
- [154] [155 <./claw_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 42
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 73
+Underfull \hbox (badness 10000) detected at line 101
 [][][]
  []
 
@@ -3034,722 +2801,33 @@ Underfull \hbox (badness 10000) detected at line 104
 [][][]
  []
 
-[156]
-Underfull \hbox (badness 10000) detected at line 135
-[][][]
- []
-
-) (./claw_8c_source.tex [157]) (./controller_8c.tex
-<controller_8c__incl.pdf, id=1170, pagebox=cropbox, 190.7125pt x 264.99pt>
-File: controller_8c__incl.pdf Graphic file (type pdf)
-<use controller_8c__incl.pdf>
-Package pdftex.def Info: controller_8c__incl.pdf  used on input line 9. on inpu
-t line 9.
-Package pdftex.def Info: Requested size: 190.0pt x 264.01083pt on input line 9.
-
- [158]
-Underfull \hbox (badness 10000) detected at line 30
-[][][]
- []
-
-[159 <./controller_8c__incl.pdf>]) (./controller_8c_source.tex) (./drive_8c.tex
-<drive_8c__incl.pdf, id=1189, pagebox=cropbox, 504.88625pt x 375.4025pt>
-File: drive_8c__incl.pdf Graphic file (type pdf)
-<use drive_8c__incl.pdf>
-Package pdftex.def Info: drive_8c__incl.pdf  used on input line 15. on input li
-ne 15.
-Package pdftex.def Info: Requested size: 350.0pt x 260.24237pt on input line 15
-.
-
-Underfull \vbox (badness 5175) has occurred while \output is active []
-
- [160]
-Underfull \hbox (badness 10000) detected at line 49
-[][][]
- []
-
-[161 <./drive_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 76
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 84
-[][][]
- []
-
-[162]
-Underfull \hbox (badness 10000) detected at line 124
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 171
-[][][]
- []
-
-[163]
-Underfull \hbox (badness 10000) detected at line 198
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 201
-[][][]
- []
-
-) (./drive_8c_source.tex [164] [165]) (./encoders_8c.tex
-<encoders_8c__incl.pdf, id=1221, pagebox=cropbox, 183.68625pt x 209.78375pt>
-File: encoders_8c__incl.pdf Graphic file (type pdf)
-<use encoders_8c__incl.pdf>
-Package pdftex.def Info: encoders_8c__incl.pdf  used on input line 10. on input
- line 10.
-Package pdftex.def Info: Requested size: 183.0pt x 209.01497pt on input line 10
-.
- [166 <./encoders_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 35
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 38
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 63
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 66
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 91
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 94
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 97
-[][][]
- []
-
-[167]) (./encoders_8c_source.tex) (./gyro_8c.tex
-<gyro_8c__incl.pdf, id=1241, pagebox=cropbox, 139.52126pt x 209.78375pt>
-File: gyro_8c__incl.pdf Graphic file (type pdf)
-<use gyro_8c__incl.pdf>
-Package pdftex.def Info: gyro_8c__incl.pdf  used on input line 9. on input line
- 9.
-Package pdftex.def Info: Requested size: 139.0pt x 209.00536pt on input line 9.
-
- [168] [169 <./gyro_8c__incl.pdf>]) (./gyro_8c_source.tex) (./init_8c.tex
-<init_8c__incl.pdf, id=1260, pagebox=cropbox, 634.37pt x 320.19624pt>
-File: init_8c__incl.pdf Graphic file (type pdf)
-<use init_8c__incl.pdf>
-Package pdftex.def Info: init_8c__incl.pdf  used on input line 19. on input lin
-e 19.
-Package pdftex.def Info: Requested size: 350.0pt x 176.66545pt on input line 19
-.
- [170]
-Overfull \hbox (27.1099pt too wide) in paragraph at lines 36--37
-[]\T1/phv/m/n/10 Any copy-right is ded-i-cated to the Pub-lic Do-main. \T1/pcr/
-m/n/10 http[]://creativecommons.[]org/publicdomain/zero/1.[]
- []
-
-[171 <./init_8c__incl.pdf>]) (./init_8c_source.tex [172]) (./lcd_8c.tex
-<lcd_8c__incl.pdf, id=1282, pagebox=cropbox, 133.49875pt x 209.78375pt>
-File: lcd_8c__incl.pdf Graphic file (type pdf)
-<use lcd_8c__incl.pdf>
-Package pdftex.def Info: lcd_8c__incl.pdf  used on input line 9. on input line 
-9.
-Package pdftex.def Info: Requested size: 133.0pt x 209.02136pt on input line 9.
-
-
-[173 <./lcd_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 54
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 59
-[][][]
- []
-
-[174]
-Underfull \hbox (badness 10000) detected at line 62
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 95
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 98
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 133
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 136
-[][][]
- []
-
-[175]
-Underfull \hbox (badness 10000) detected at line 168
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 171
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 174
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 177
-[][][]
- []
-
-[176]
-Underfull \hbox (badness 10000) detected at line 225
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 228
-[][][]
- []
-
-[177]
-Underfull \hbox (badness 10000) detected at line 267
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 270
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 303
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 306
-[][][]
- []
-
-[178]
-Underfull \hbox (badness 10000) detected at line 339
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 342
-[][][]
- []
-
-) (./lcd_8c_source.tex [179]) (./lifter_8c.tex
-<lifter_8c__incl.pdf, id=1319, pagebox=cropbox, 589.20125pt x 430.60875pt>
-File: lifter_8c__incl.pdf Graphic file (type pdf)
-<use lifter_8c__incl.pdf>
-Package pdftex.def Info: lifter_8c__incl.pdf  used on input line 10. on input l
-ine 10.
-Package pdftex.def Info: Requested size: 350.0pt x 255.79158pt on input line 10
-.
-
-Underfull \vbox (badness 3098) has occurred while \output is active []
-
- [180]
-[181 <./lifter_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 51
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 54
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 57
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 85
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 88
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 91
-[][][]
- []
-
-[182]
-Underfull \hbox (badness 10000) detected at line 127
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 130
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 133
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 160
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 163
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 190
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 193
-[][][]
- []
-
-[183]
-Underfull \hbox (badness 10000) detected at line 220
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 223
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 250
-[][][]
- []
-
 
-Underfull \hbox (badness 10000) detected at line 253
+Underfull \hbox (badness 10000) detected at line 107
 [][][]
  []
 
-[184]
-Underfull \hbox (badness 10000) detected at line 285
+[159]
+Underfull \hbox (badness 10000) detected at line 137
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 288
+Underfull \hbox (badness 10000) detected at line 140
 [][][]
  []
 
-[185]
-Underfull \hbox (badness 10000) detected at line 316
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 319
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 355
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 358
-[][][]
- []
-
-[186]
-Underfull \hbox (badness 10000) detected at line 389
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 392
-[][][]
- []
-
-) (./lifter_8c_source.tex [187]) (./localization_8c.tex
-<localization_8c__incl.pdf, id=1357, pagebox=cropbox, 299.1175pt x 264.99pt>
-File: localization_8c__incl.pdf Graphic file (type pdf)
-<use localization_8c__incl.pdf>
-Package pdftex.def Info: localization_8c__incl.pdf  used on input line 10. on i
-nput line 10.
-Package pdftex.def Info: Requested size: 298.0pt x 264.01892pt on input line 10
-.
- [188] [189 <./localization_8c__incl.pdf>] [190]
-Underfull \hbox (badness 10000) detected at line 142
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 165
-[][][]
- []
-
-[191]
-Underfull \hbox (badness 10000) detected at line 227
-[][][]
- []
-
-[192]) (./localization_8c_source.tex [193] [194]
-Overfull \hbox (15.15555pt too wide) in paragraph at lines 93--93
-[]\T1/pcr/m/n/7 00100 []bool[] init_localization([]const[] []unsigned[] []char[
-] gyro1, []unsigned[] []short[] multiplier, []int[] start_x, []int[] start_y, [
-]int[][] 
- []
-
-) (./log_8c.tex
-<log_8c__incl.pdf, id=1392, pagebox=cropbox, 149.55875pt x 264.99pt>
-File: log_8c__incl.pdf Graphic file (type pdf)
-<use log_8c__incl.pdf>
-Package pdftex.def Info: log_8c__incl.pdf  used on input line 9. on input line 
-9.
-Package pdftex.def Info: Requested size: 149.0pt x 264.01892pt on input line 9.
-
- [195 <./log_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 47
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 85
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 88
-[][][]
- []
-
-[196]
-Underfull \hbox (badness 10000) detected at line 91
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 128
-[][][]
- []
-
-[197]
-Underfull \hbox (badness 10000) detected at line 166
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 169
-[][][]
- []
-
-[198]
-Underfull \hbox (badness 10000) detected at line 240
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 243
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 246
-[][][]
- []
-
-) (./log_8c_source.tex [199]) (./matrix_8c.tex
-<matrix_8c__incl.pdf, id=1421, pagebox=cropbox, 329.23pt x 154.5775pt>
-File: matrix_8c__incl.pdf Graphic file (type pdf)
-<use matrix_8c__incl.pdf>
-Package pdftex.def Info: matrix_8c__incl.pdf  used on input line 12. on input l
-ine 12.
-Package pdftex.def Info: Requested size: 328.0pt x 154.00394pt on input line 12
-.
- [200] [201 <./matrix_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 93
-[][][]
- []
-
-[202]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7.77 on input line 124.
-
-
-Underfull \hbox (badness 10000) detected at line 125
-[][][]
- []
-
-[203]
-Underfull \hbox (badness 10000) detected at line 190
-[][][]
- []
-
-[204]
-Underfull \hbox (badness 10000) detected at line 257
-[][][]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [205]
-Underfull \hbox (badness 10000) detected at line 363
-[][][]
- []
-
-[206]
-Underfull \hbox (badness 10000) detected at line 410
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 455
-[][][]
- []
-
-[207]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 7.84 on input line 565.
 
-[208] [209]
-Underfull \hbox (badness 10000) detected at line 664
+Underfull \hbox (badness 10000) detected at line 143
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 706
+Underfull \hbox (badness 10000) detected at line 164
 [][][]
  []
 
-[210]
-Underfull \hbox (badness 10000) detected at line 755
-[][][]
- []
-
-) (./matrix_8c_source.tex [211] [212]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [213]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [214])
-(./menu_8c.tex
-<menu_8c__incl.pdf, id=1482, pagebox=cropbox, 437.635pt x 320.19624pt>
-File: menu_8c__incl.pdf Graphic file (type pdf)
-<use menu_8c__incl.pdf>
-Package pdftex.def Info: menu_8c__incl.pdf  used on input line 9. on input line
- 9.
-Package pdftex.def Info: Requested size: 350.0pt x 256.07916pt on input line 9.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [215]
-[216 <./menu_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 97
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 100
-[][][]
- []
-
-[217]
-Underfull \hbox (badness 10000) detected at line 153
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 156
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 159
-[][][]
- []
-
-[218]
-Underfull \hbox (badness 10000) detected at line 193
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 196
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 199
-[][][]
- []
-
-[219]
-Underfull \hbox (badness 10000) detected at line 260
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 274
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 277
-[][][]
- []
-
-[220]
-Underfull \hbox (badness 10000) detected at line 313
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 327
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 330
-[][][]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [221]
-Underfull \hbox (badness 10000) detected at line 367
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 379
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 382
-[][][]
- []
-
-) (./menu_8c_source.tex [222]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [223])
-(./mobile__goal__intake_8c.tex
-<mobile__goal__intake_8c__incl.pdf, id=1524, pagebox=cropbox, 409.53pt x 320.19
-624pt>
-File: mobile__goal__intake_8c__incl.pdf Graphic file (type pdf)
-<use mobile__goal__intake_8c__incl.pdf>
-Package pdftex.def Info: mobile__goal__intake_8c__incl.pdf  used on input line 
-11. on input line 11.
-Package pdftex.def Info: Requested size: 350.0pt x 273.66801pt on input line 11
-.
- [224 <./mobile__goal__intake_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 110
-[][][]
- []
-
-[225]) (./mobile__goal__intake_8c_source.tex) (./opcontrol_8c.tex
-<opcontrol_8c__incl.pdf, id=1543, pagebox=cropbox, 1034.86626pt x 430.60875pt>
-File: opcontrol_8c__incl.pdf Graphic file (type pdf)
-<use opcontrol_8c__incl.pdf>
-Package pdftex.def Info: opcontrol_8c__incl.pdf  used on input line 21. on inpu
-t line 21.
-Package pdftex.def Info: Requested size: 350.0pt x 145.63628pt on input line 21
-.
- [226]
-Overfull \hbox (27.1099pt too wide) in paragraph at lines 36--37
-[]\T1/phv/m/n/10 Any copy-right is ded-i-cated to the Pub-lic Do-main. \T1/pcr/
-m/n/10 http[]://creativecommons.[]org/publicdomain/zero/1.[]
- []
-
-[227 <./opcontrol_8c__incl.pdf>]) (./opcontrol_8c_source.tex) (./partner_8c.tex
-<partner_8c__incl.pdf, id=1563, pagebox=cropbox, 193.72375pt x 320.19624pt>
-File: partner_8c__incl.pdf Graphic file (type pdf)
-<use partner_8c__incl.pdf>
-Package pdftex.def Info: partner_8c__incl.pdf  used on input line 9. on input l
-ine 9.
-Package pdftex.def Info: Requested size: 193.0pt x 319.00331pt on input line 9.
-
-[228] [229 <./partner_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 61
-[][][]
- []
-
-) (./partner_8c_source.tex) (./slew_8c.tex
-<slew_8c__incl.pdf, id=1582, pagebox=cropbox, 277.035pt x 264.99pt>
-File: slew_8c__incl.pdf Graphic file (type pdf)
-<use slew_8c__incl.pdf>
-Package pdftex.def Info: slew_8c__incl.pdf  used on input line 10. on input lin
-e 10.
-Package pdftex.def Info: Requested size: 276.0pt x 264.00275pt on input line 10
-.
- [230] [231 <./slew_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 52
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 55
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 89
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 92
-[][][]
- []
-
-[232]
-Underfull \hbox (badness 10000) detected at line 139
-[][][]
- []
 
-[233]
-Underfull \hbox (badness 10000) detected at line 142
+Underfull \hbox (badness 10000) detected at line 167
 [][][]
  []
 
@@ -3763,99 +2841,502 @@ Underfull \hbox (badness 10000) detected at line 191
 [][][]
  []
 
-[234]
-Underfull \hbox (badness 10000) detected at line 228
+[160]
+Underfull \hbox (badness 10000) detected at line 230
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 231
+Underfull \hbox (badness 10000) detected at line 233
 [][][]
  []
 
-[235]) (./slew_8c_source.tex [236]) (./toggle_8c.tex
-<toggle_8c__incl.pdf, id=1618, pagebox=cropbox, 147.55125pt x 209.78375pt>
-File: toggle_8c__incl.pdf Graphic file (type pdf)
-<use toggle_8c__incl.pdf>
-Package pdftex.def Info: toggle_8c__incl.pdf  used on input line 9. on input li
-ne 9.
-Package pdftex.def Info: Requested size: 147.0pt x 209.00536pt on input line 9.
 
- [237] [238 <./toggle_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 44
+Underfull \hbox (badness 10000) detected at line 258
 [][][]
  []
 
-[239]
+
+Underfull \hbox (badness 10000) detected at line 261
+[][][]
+ []
+
+[161]
+Underfull \hbox (badness 10000) detected at line 305
+[][][]
+ []
+
+[162]
+Underfull \hbox (badness 10000) detected at line 308
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 330
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 333
+[][][]
+ []
+
+[163]
+Underfull \hbox (badness 10000) detected at line 363
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 366
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 391
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 394
+[][][]
+ []
+
+[164]) (./lifter_8c_source.tex [165]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[166]) (./list_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[167] [168]) (./list_8c_source.tex [169] [170]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[171]) (./list__iterator_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[172]) (./list__iterator_8c_source.tex [173]) (./list__node_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[174]) (./list__node_8c_source.tex) (./localization_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+[175]
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 7.19995pt on input line 66.
+
+LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
+(Font)              using `T1/pcr/m/n' instead on input line 66.
+
+[176] [177]
+Underfull \hbox (badness 10000) detected at line 195
+[][][]
+ []
+
+[178]
+Underfull \hbox (badness 10000) detected at line 212
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 252
+[][][]
+ []
+
+[179]) (./localization_8c_source.tex [180] [181]) (./log_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[182]
+Underfull \hbox (badness 10000) detected at line 39
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+[183]
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 135
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 138
+[][][]
+ []
+
+[184]
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 191
+[][][]
+ []
+
+
 Underfull \hbox (badness 10000) detected at line 194
 [][][]
  []
 
-[240]) (./toggle_8c_source.tex [241]
+[185]) (./log_8c_source.tex [186]) (./matrix_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
+
+ []
+
+[187]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [242])
-(./vlib_8c.tex
-<vlib_8c__incl.pdf, id=1650, pagebox=cropbox, 253.94875pt x 209.78375pt>
-File: vlib_8c__incl.pdf Graphic file (type pdf)
-<use vlib_8c__incl.pdf>
-Package pdftex.def Info: vlib_8c__incl.pdf  used on input line 9. on input line
- 9.
-Package pdftex.def Info: Requested size: 253.0pt x 209.00856pt on input line 9.
-
- [243 <./vlib_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 43
+[188]
+Underfull \hbox (badness 10000) detected at line 81
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 46
+Underfull \hbox (badness 10000) detected at line 107
 [][][]
  []
 
 
-Overfull \vbox (18.53357pt too high) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[189]
+Underfull \hbox (badness 10000) detected at line 137
+[][][]
+ []
 
 
-[244]
+Underfull \hbox (badness 10000) detected at line 167
+[][][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[190]
+Underfull \hbox (badness 10000) detected at line 220
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 248
+[][][]
+ []
+
+[191]
+Underfull \hbox (badness 10000) detected at line 273
+[][][]
+ []
+
+[192]
+Underfull \hbox (badness 10000) detected at line 380
+[][][]
+ []
+
+[193]
+Underfull \hbox (badness 10000) detected at line 407
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 433
+[][][]
+ []
+
+) (./matrix_8c_source.tex [194] [195]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[196]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[197]) (./menu_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[198]
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+[199]
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+[200]
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 108
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 134
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 137
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 140
+[][][]
+ []
+
+[201]
+Underfull \hbox (badness 10000) detected at line 166
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 180
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+[202]
+Underfull \hbox (badness 10000) detected at line 209
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 223
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 226
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 252
+[][][]
+ []
+
+
+Overfull \vbox (9.41423pt too high) has occurred while \output is active []
+
+[203]
+Underfull \hbox (badness 10000) detected at line 264
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 267
+[][][]
+ []
+
+) (./menu_8c_source.tex [204]) (./mobile__goal__intake_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+
+Underfull \vbox (badness 6204) has occurred while \output is active []
+
+[205]
+Underfull \hbox (badness 10000) detected at line 74
+[][][]
+ []
+
+[206]
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+) (./mobile__goal__intake_8c_source.tex) (./opcontrol_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--19
+
+ []
+
+[207]) (./opcontrol_8c_source.tex [208]) (./partner_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[209]
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+) (./partner_8c_source.tex [210]) (./routines_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
+
+ []
+
+[211]) (./routines_8c_source.tex [212]) (./slew_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+[213]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+[214]
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 107
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 110
+[][][]
+ []
+
+[215]
+Underfull \hbox (badness 10000) detected at line 142
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 145
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 170
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 173
+[][][]
+ []
+
+[216]) (./slew_8c_source.tex [217]) (./toggle_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[218]
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+[219]
+Underfull \hbox (badness 10000) detected at line 88
+[][][]
+ []
+
+) (./toggle_8c_source.tex [220] [221]) (./vlib_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[222]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 78
+[][][]
+ []
+
+[223]
+Underfull \hbox (badness 10000) detected at line 103
+[][][]
+ []
+
+
 Underfull \hbox (badness 10000) detected at line 106
 [][][]
  []
 
+) (./vlib_8c_source.tex [224]) (./vmath_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
-Underfull \hbox (badness 10000) detected at line 109
+ []
+
+[225]
+Underfull \hbox (badness 10000) detected at line 30
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 112
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 156
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 159
-[][][]
- []
-
-
-Overfull \vbox (11.59941pt too high) has occurred while \output is active []
-
-
-[245]) (./vlib_8c_source.tex) (./vmath_8c.tex
-<vmath_8c__incl.pdf, id=1673, pagebox=cropbox, 147.55125pt x 209.78375pt>
-File: vmath_8c__incl.pdf Graphic file (type pdf)
-<use vmath_8c__incl.pdf>
-Package pdftex.def Info: vmath_8c__incl.pdf  used on input line 9. on input lin
-e 9.
-Package pdftex.def Info: Requested size: 147.0pt x 209.00536pt on input line 9.
-
- [246]
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 33
 [][][]
  []
 
@@ -3864,85 +3345,60 @@ Underfull \hbox (badness 10000) detected at line 41
 [][][]
  []
 
-[247 <./vmath_8c__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 49
+
+Underfull \hbox (badness 10000) detected at line 44
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 52
+Underfull \hbox (badness 10000) detected at line 67
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 81
+Underfull \hbox (badness 10000) detected at line 70
+[][][]
+ []
+
+[226]
+Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 84
+Underfull \hbox (badness 10000) detected at line 83
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 94
+Underfull \hbox (badness 10000) detected at line 115
 [][][]
  []
 
-[248]
-Underfull \hbox (badness 10000) detected at line 97
+[227]
+Underfull \hbox (badness 10000) detected at line 143
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 161
-[][][]
- []
-
-[249]
-Underfull \hbox (badness 10000) detected at line 196
-[][][]
- []
-
-) (./vmath_8c_source.tex [250]) (./test__code_2test_math_8py.tex)
-(./test__code_2test_math_8py_source.tex [251]) (./test_math_8py.tex)
-(./test_math_8py_source.tex) [252]
+) (./vmath_8c_source.tex [228]) (./test__code_2test_math_8py.tex) (./test__code
+_2test_math_8py_source.tex) (./test_math_8py.tex) (./test_math_8py_source.tex [
+229]) [230]
 No file refman.ind.
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
 (./refman.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9405 strings out of 492985
- 150845 string characters out of 6132585
- 249060 words of memory out of 5000000
- 12358 multiletter control sequences out of 15000+600000
- 69074 words of font info for 96 fonts, out of 8000000 for 9000
+ 8351 strings out of 492986
+ 132905 string characters out of 6132611
+ 234514 words of memory out of 5000000
+ 11377 multiletter control sequences out of 15000+600000
+ 45569 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,16n,92p,3418b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/hel
-vetic/uhvb8ac.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/
-uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvro8a
-.pfb>
-Output written on refman.pdf (272 pages, 1176916 bytes).
-PDF statistics:
- 1765 PDF objects out of 2073 (max. 8388607)
- 1275 compressed objects within 13 object streams
- 0 named destinations out of 1000 (max. 500000)
- 316 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53i,16n,92p,3414b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on refman.dvi (240 pages, 718668 bytes).

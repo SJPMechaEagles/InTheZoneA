@@ -1,34 +1,32 @@
-\section{opcontrol.\+c}
+\subsection{opcontrol.\+c}
 \label{opcontrol_8c_source}\index{src/opcontrol.\+c@{src/opcontrol.\+c}}
 
 \begin{DoxyCode}
 00001 
-00013 \textcolor{preprocessor}{#include "main.h"}
-00014 \textcolor{preprocessor}{#include "slew.h"}
-00015 \textcolor{preprocessor}{#include "drive.h"}
-00016 
-00017 \textcolor{preprocessor}{#include "lifter.h"}
-00018 \textcolor{preprocessor}{#include "localization.h"}
-00019 \textcolor{preprocessor}{#include "claw.h"}
-00020 \textcolor{preprocessor}{#include "mobile_goal_intake.h"}
-00021 \textcolor{preprocessor}{#include "vmath.h"}
-00022 \textcolor{preprocessor}{#include "lifter.h"}
-00023 
-00024 
-00042 \textcolor{keywordtype}{void} operatorControl() \{
-00043 
-00044     init_slew();
-00045     delay(10);
-00046     \textcolor{keywordflow}{while} (1) \{
-00047         update_claw();
-00048         delay(5);
-00049         update_intake();
-00050         delay(5);
-00051         update_lifter();
-00052         delay(5);
-00053         update_drive_motors();
-00054         delay(25);
-00055 
-00056     \}
-00057 \}
+00014 \textcolor{preprocessor}{#include "drive.h"}
+00015 \textcolor{preprocessor}{#include "main.h"}
+00016 \textcolor{preprocessor}{#include "slew.h"}
+00017 
+00018 \textcolor{preprocessor}{#include "claw.h"}
+00019 \textcolor{preprocessor}{#include "lifter.h"}
+00020 \textcolor{preprocessor}{#include "localization.h"}
+00021 \textcolor{preprocessor}{#include "log.h"}
+00022 \textcolor{preprocessor}{#include "mobile_goal_intake.h"}
+00023 \textcolor{preprocessor}{#include "routines.h"}
+00024 \textcolor{preprocessor}{#include "toggle.h"}
+00025 \textcolor{preprocessor}{#include "vmath.h"}
+00026 
+00049 \textcolor{keywordtype}{void} operatorControl() \{
+00050   buttonInit();
+00051   init_routine();
+00052   init_slew();
+00053   delay(10);
+00054   \textcolor{keywordflow}{while} (1) \{
+00055     update_claw();
+00056     update_intake();
+00057     update_lifter();
+00058     update_drive_motors();
+00059     delay(10);
+00060   \}
+00061 \}
 \end{DoxyCode}

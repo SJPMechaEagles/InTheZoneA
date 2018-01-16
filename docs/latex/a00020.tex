@@ -1,0 +1,94 @@
+\subsection{include/gyro.h File Reference}
+\label{a00020}\index{include/gyro.\+h@{include/gyro.\+h}}
+{\ttfamily \#include \char`\"{}A\+P\+I.\+h\char`\"{}}\newline
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}~0
+\item 
+\#define \textbf{ G\+Y\+R\+O\+\_\+\+P\+O\+RT}~1
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \textbf{ get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity} ()
+\item 
+bool \textbf{ init\+\_\+main\+\_\+gyro} ()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Macro Definition Documentation}
+\mbox{\label{a00020_a482017cc25be9213fef3222112eb1c7f}} 
+\index{gyro.\+h@{gyro.\+h}!G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER@{G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}}
+\index{G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER@{G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}!gyro.\+h@{gyro.\+h}}
+\paragraph{G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}
+{\footnotesize\ttfamily \#define G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER~0}
+
+
+
+Definition at line \textbf{ 7} of file \textbf{ gyro.\+h}.
+
+
+
+Referenced by \textbf{ init\+\_\+main\+\_\+gyro()}.
+
+\mbox{\label{a00020_a51d281e7676749d34aab3f8ba6fab960}} 
+\index{gyro.\+h@{gyro.\+h}!G\+Y\+R\+O\+\_\+\+P\+O\+RT@{G\+Y\+R\+O\+\_\+\+P\+O\+RT}}
+\index{G\+Y\+R\+O\+\_\+\+P\+O\+RT@{G\+Y\+R\+O\+\_\+\+P\+O\+RT}!gyro.\+h@{gyro.\+h}}
+\paragraph{G\+Y\+R\+O\+\_\+\+P\+O\+RT}
+{\footnotesize\ttfamily \#define G\+Y\+R\+O\+\_\+\+P\+O\+RT~1}
+
+
+
+Definition at line \textbf{ 6} of file \textbf{ gyro.\+h}.
+
+
+
+Referenced by \textbf{ get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity()}, and \textbf{ init\+\_\+main\+\_\+gyro()}.
+
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{a00020_aec0963ebe3eb6cdfd7edaf486bbb0a87}} 
+\index{gyro.\+h@{gyro.\+h}!get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity@{get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity}}
+\index{get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity@{get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity}!gyro.\+h@{gyro.\+h}}
+\paragraph{get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity()}
+{\footnotesize\ttfamily float get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 10} of file \textbf{ gyro.\+c}.
+
+
+
+References \textbf{ G\+Y\+R\+O\+\_\+\+P\+O\+RT}.
+
+
+\begin{DoxyCode}
+00010                                        \{
+00011   uint32\_t port = GYRO_PORT;
+00012   int32\_t reading = (int32\_t)analogReadCalibratedHR(port + 1);
+00013   \textcolor{keywordflow}{return} 0;
+00014 \}
+\end{DoxyCode}
+\mbox{\label{a00020_a47c0a78a867be91a28e278bf433d699c}} 
+\index{gyro.\+h@{gyro.\+h}!init\+\_\+main\+\_\+gyro@{init\+\_\+main\+\_\+gyro}}
+\index{init\+\_\+main\+\_\+gyro@{init\+\_\+main\+\_\+gyro}!gyro.\+h@{gyro.\+h}}
+\paragraph{init\+\_\+main\+\_\+gyro()}
+{\footnotesize\ttfamily bool init\+\_\+main\+\_\+gyro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 5} of file \textbf{ gyro.\+c}.
+
+
+
+References \textbf{ G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}, \textbf{ G\+Y\+R\+O\+\_\+\+P\+O\+RT}, and \textbf{ main\+\_\+gyro}.
+
+
+\begin{DoxyCode}
+00005                       \{
+00006   main_gyro = gyroInit(GYRO_PORT, GYRO_MULTIPLIER);
+00007   \textcolor{keywordflow}{return} main_gyro != NULL;
+00008 \}
+\end{DoxyCode}

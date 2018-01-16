@@ -1,121 +1,120 @@
-\section{toggle.\+c}
+\subsection{toggle.\+c}
 \label{toggle_8c_source}\index{src/toggle.\+c@{src/toggle.\+c}}
 
 \begin{DoxyCode}
 00001 
-00010 \textcolor{preprocessor}{#include "toggle.h"}
-00011 
-00015 \textcolor{keywordtype}{bool} buttonPressed[27];
-00016 
-00020 \textcolor{keywordtype}{void} buttonInit() \{
-00021     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 27; i++)
-00022         buttonPressed[i] = \textcolor{keyword}{false};
-00023 \}
-00024 
-00025 \textcolor{keywordtype}{bool} buttonGetState(button_t button) \{
-00026     \textcolor{keywordtype}{bool} currentButton = \textcolor{keyword}{false};
-00027 
-00028     \textcolor{comment}{// Determine how to get the current button value (from what function) and where it}
-00029     \textcolor{comment}{// is, then get it.}
-00030     \textcolor{keywordflow}{if} (button < LCD_LEFT) \{
-00031         \textcolor{comment}{// button is a joystick button}
-00032         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} joystick;
-00033         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buttonGroup;
-00034         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buttonLocation;
-00035 
-00036         button_t newButton;
-00037         \textcolor{keywordflow}{if} (button <= 11) \{
-00038             \textcolor{comment}{// button is on joystick 1}
-00039             joystick = 1;
-00040             newButton = button;
-00041         \}
-00042         \textcolor{keywordflow}{else} \{
-00043             \textcolor{comment}{// button is on joystick 2}
-00044             joystick = 2;
-00045             \textcolor{comment}{// shift button down to joystick 1 buttons in order to}
-00046             \textcolor{comment}{// detect which button on joystick is queried}
-00047             newButton = (button_t)(button - 12);
-00048         \}
-00049 
-00050         \textcolor{keywordflow}{switch} (newButton) \{
-00051         \textcolor{keywordflow}{case} 0:
-00052             buttonGroup = 5;
-00053             buttonLocation = JOY\_DOWN;
-00054             \textcolor{keywordflow}{break};
-00055         \textcolor{keywordflow}{case} 1:
-00056             buttonGroup = 5;
-00057             buttonLocation = JOY\_UP;
-00058             \textcolor{keywordflow}{break};
-00059         \textcolor{keywordflow}{case} 2:
-00060             buttonGroup = 6;
-00061             buttonLocation = JOY\_DOWN;
-00062             \textcolor{keywordflow}{break};
-00063         \textcolor{keywordflow}{case} 3:
-00064             buttonGroup = 6;
-00065             buttonLocation = JOY\_UP;
-00066             \textcolor{keywordflow}{break};
-00067         \textcolor{keywordflow}{case} 4:
-00068             buttonGroup = 7;
-00069             buttonLocation = JOY\_UP;
-00070             \textcolor{keywordflow}{break};
-00071         \textcolor{keywordflow}{case} 5:
-00072             buttonGroup = 7;
-00073             buttonLocation = JOY\_LEFT;
-00074             \textcolor{keywordflow}{break};
-00075         \textcolor{keywordflow}{case} 6:
-00076             buttonGroup = 7;
-00077             buttonLocation = JOY\_RIGHT;
-00078             \textcolor{keywordflow}{break};
-00079         \textcolor{keywordflow}{case} 7:
-00080             buttonGroup = 7;
-00081             buttonLocation = JOY\_DOWN;
-00082             \textcolor{keywordflow}{break};
-00083         \textcolor{keywordflow}{case} 8:
-00084             buttonGroup = 8;
-00085             buttonLocation = JOY\_UP;
-00086             \textcolor{keywordflow}{break};
-00087         \textcolor{keywordflow}{case} 9:
-00088             buttonGroup = 8;
-00089             buttonLocation = JOY\_LEFT;
-00090             \textcolor{keywordflow}{break};
-00091         \textcolor{keywordflow}{case} 10:
-00092             buttonGroup = 8;
-00093             buttonLocation = JOY\_RIGHT;
-00094             \textcolor{keywordflow}{break};
-00095         \textcolor{keywordflow}{case} 11:
-00096             buttonGroup = 8;
-00097             buttonLocation = JOY\_DOWN;
-00098             \textcolor{keywordflow}{break};
-00099         \textcolor{keywordflow}{default}:
-00100             \textcolor{keywordflow}{break};
-00101         \}
-00102         currentButton = joystickGetDigital(joystick, buttonGroup, buttonLocation);
-00103     \}
-00104     \textcolor{keywordflow}{else} \{
-00105         \textcolor{comment}{// button is on LCD}
-00106         \textcolor{keywordflow}{if} (button == LCD_LEFT)
-00107             currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_LEFT);
+00012 \textcolor{preprocessor}{#include "toggle.h"}
+00013 
+00017 \textcolor{keywordtype}{bool} buttonPressed[27];
+00018 
+00022 \textcolor{keywordtype}{void} buttonInit() \{
+00023   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 27; i++)
+00024     buttonPressed[i] = \textcolor{keyword}{false};
+00025 \}
+00026 
+00027 \textcolor{keywordtype}{bool} buttonGetState(button_t button) \{
+00028   \textcolor{keywordtype}{bool} currentButton = \textcolor{keyword}{false};
+00029 
+00030   \textcolor{comment}{// Determine how to get the current button value (from what function) and}
+00031   \textcolor{comment}{// where it is, then get it.}
+00032   \textcolor{keywordflow}{if} (button < LCD_LEFT) \{
+00033     \textcolor{comment}{// button is a joystick button}
+00034     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} joystick;
+00035     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buttonGroup;
+00036     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buttonLocation;
+00037 
+00038     button_t newButton;
+00039     \textcolor{keywordflow}{if} (button <= 11) \{
+00040       \textcolor{comment}{// button is on joystick 1}
+00041       joystick = 1;
+00042       newButton = button;
+00043     \} \textcolor{keywordflow}{else} \{
+00044       \textcolor{comment}{// button is on joystick 2}
+00045       joystick = 2;
+00046       \textcolor{comment}{// shift button down to joystick 1 buttons in order to}
+00047       \textcolor{comment}{// detect which button on joystick is queried}
+00048       newButton = (button_t)(button - 12);
+00049     \}
+00050 
+00051     \textcolor{keywordflow}{switch} (newButton) \{
+00052     \textcolor{keywordflow}{case} 0:
+00053       buttonGroup = 5;
+00054       buttonLocation = JOY\_DOWN;
+00055       \textcolor{keywordflow}{break};
+00056     \textcolor{keywordflow}{case} 1:
+00057       buttonGroup = 5;
+00058       buttonLocation = JOY\_UP;
+00059       \textcolor{keywordflow}{break};
+00060     \textcolor{keywordflow}{case} 2:
+00061       buttonGroup = 6;
+00062       buttonLocation = JOY\_DOWN;
+00063       \textcolor{keywordflow}{break};
+00064     \textcolor{keywordflow}{case} 3:
+00065       buttonGroup = 6;
+00066       buttonLocation = JOY\_UP;
+00067       \textcolor{keywordflow}{break};
+00068     \textcolor{keywordflow}{case} 4:
+00069       buttonGroup = 7;
+00070       buttonLocation = JOY\_UP;
+00071       \textcolor{keywordflow}{break};
+00072     \textcolor{keywordflow}{case} 5:
+00073       buttonGroup = 7;
+00074       buttonLocation = JOY\_LEFT;
+00075       \textcolor{keywordflow}{break};
+00076     \textcolor{keywordflow}{case} 6:
+00077       buttonGroup = 7;
+00078       buttonLocation = JOY\_RIGHT;
+00079       \textcolor{keywordflow}{break};
+00080     \textcolor{keywordflow}{case} 7:
+00081       buttonGroup = 7;
+00082       buttonLocation = JOY\_DOWN;
+00083       \textcolor{keywordflow}{break};
+00084     \textcolor{keywordflow}{case} 8:
+00085       buttonGroup = 8;
+00086       buttonLocation = JOY\_UP;
+00087       \textcolor{keywordflow}{break};
+00088     \textcolor{keywordflow}{case} 9:
+00089       buttonGroup = 8;
+00090       buttonLocation = JOY\_LEFT;
+00091       \textcolor{keywordflow}{break};
+00092     \textcolor{keywordflow}{case} 10:
+00093       buttonGroup = 8;
+00094       buttonLocation = JOY\_RIGHT;
+00095       \textcolor{keywordflow}{break};
+00096     \textcolor{keywordflow}{case} 11:
+00097       buttonGroup = 8;
+00098       buttonLocation = JOY\_DOWN;
+00099       \textcolor{keywordflow}{break};
+00100     \textcolor{keywordflow}{default}:
+00101       \textcolor{keywordflow}{break};
+00102     \}
+00103     currentButton = joystickGetDigital(joystick, buttonGroup, buttonLocation);
+00104   \} \textcolor{keywordflow}{else} \{
+00105     \textcolor{comment}{// button is on LCD}
+00106     \textcolor{keywordflow}{if} (button == LCD_LEFT)
+00107       currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_LEFT);
 00108 
-00109         \textcolor{keywordflow}{if} (button == LCD_CENT)
-00110             currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_CENTER);
+00109     \textcolor{keywordflow}{if} (button == LCD_CENT)
+00110       currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_CENTER);
 00111 
-00112         \textcolor{keywordflow}{if} (button == LCD_RIGHT)
-00113             currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_RIGHT);
-00114     \}
-00115     \textcolor{keywordflow}{return} currentButton;
+00112     \textcolor{keywordflow}{if} (button == LCD_RIGHT)
+00113       currentButton = (lcdReadButtons(uart1) == LCD\_BTN\_RIGHT);
+00114   \}
+00115   \textcolor{keywordflow}{return} currentButton;
 00116 \}
 00117 
-00135 \textcolor{keywordtype}{bool} buttonIsNewPress(button_t button) \{
-00136     \textcolor{keywordtype}{bool} currentButton = buttonGetState(button);
-00137 
-00138     \textcolor{keywordflow}{if} (!currentButton) \textcolor{comment}{// buttons is not currently pressed}
-00139         buttonPressed[button] = \textcolor{keyword}{false};
-00140 
-00141     \textcolor{keywordflow}{if} (currentButton && !buttonPressed[button]) \{
-00142         \textcolor{comment}{// button is currently pressed and was not detected as being pressed during last check}
-00143         buttonPressed[button] = \textcolor{keyword}{true};
-00144         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-00145     \}
-00146     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// button is not pressed or was already detected}
-00147 \}
+00136 \textcolor{keywordtype}{bool} buttonIsNewPress(button_t button) \{
+00137   \textcolor{keywordtype}{bool} currentButton = buttonGetState(button);
+00138 
+00139   \textcolor{keywordflow}{if} (!currentButton) \textcolor{comment}{// buttons is not currently pressed}
+00140     buttonPressed[button] = \textcolor{keyword}{false};
+00141 
+00142   \textcolor{keywordflow}{if} (currentButton && !buttonPressed[button]) \{
+00143     \textcolor{comment}{// button is currently pressed and was not detected as being pressed during}
+00144     \textcolor{comment}{// last check}
+00145     buttonPressed[button] = \textcolor{keyword}{true};
+00146     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00147   \} \textcolor{keywordflow}{else}
+00148     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// button is not pressed or was already detected}
+00149 \}
 \end{DoxyCode}

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="mobile__goal__intake_8h">
+    <title>mobile_goal_intake.h File Reference</title>
+    <programlisting>#include &quot;controller.h&quot;</programlisting>
+    <programlisting>#include &quot;motor_ports.h&quot;</programlisting>
+    <programlisting>#include &quot;slew.h&quot;</programlisting>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="mobile__goal__intake_8h_1aef03134014e51a6a90dd3824f09f4d6c">lower_intake</link> (
+)<para><emphasis>lowers the intake</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="mobile__goal__intake_8h_1aa46a9341d1eb7b39a2ef4cc5079ee3ca">raise_intake</link> (
+)<para><emphasis>raises the intake</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="mobile__goal__intake_8h_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link> (
+int n)<para><emphasis>sets the intake motor</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="mobile__goal__intake_8h_1a5d7bad8a208988af743fd2e68f111286">update_intake</link> (
+)<para><emphasis>updates the mobile goal intake in teleop.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/mobile_goal_intake.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#ifndef&#32;_MOBLE_GOAL_INTAKE_</emphasis>
+2 <emphasis class="preprocessor">#define&#32;_MOBLE_GOAL_INTAKE_</emphasis>
+3 
+4 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="controller_8h">controller.h</link>&quot;</emphasis>
+5 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="motor__ports_8h">motor_ports.h</link>&quot;</emphasis>
+6 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="slew_8h">slew.h</link>&quot;</emphasis>
+7 
+13 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8h_1a5d7bad8a208988af743fd2e68f111286">update_intake</link>();
+14 
+19 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8h_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(<emphasis class="keywordtype">int</emphasis>&#32;n);
+20 
+24 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8h_1aa46a9341d1eb7b39a2ef4cc5079ee3ca">raise_intake</link>();
+25 
+29 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8h_1aef03134014e51a6a90dd3824f09f4d6c">lower_intake</link>();
+30 
+31 
+32 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

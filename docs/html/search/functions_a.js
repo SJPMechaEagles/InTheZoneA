@@ -1,6 +1,7 @@
 var searchData=
 [
   ['main_5fbattery_5fvoltage',['main_battery_voltage',['../battery_8h.html#a8c92c389534fdb079698cdebeb7f2efa',1,'main_battery_voltage():&#160;battery.c'],['../battery_8c.html#a8c92c389534fdb079698cdebeb7f2efa',1,'main_battery_voltage():&#160;battery.c']]],
+  ['main_5flifter_5fupdate',['main_lifter_update',['../lifter_8c.html#adfb6207ee1f20953058c8de81ec3386a',1,'lifter.c']]],
   ['makematrix',['makeMatrix',['../matrix_8h.html#aae8b56c6fb44d9147b835f4006ca872c',1,'makeMatrix(int width, int height):&#160;matrix.c'],['../matrix_8c.html#aae8b56c6fb44d9147b835f4006ca872c',1,'makeMatrix(int width, int height):&#160;matrix.c']]],
   ['max',['max',['../vmath_8h.html#af082905f7eac6d03e92015146bbc1925',1,'max(int a, int b):&#160;vmath.c'],['../vmath_8c.html#af082905f7eac6d03e92015146bbc1925',1,'max(int a, int b):&#160;vmath.c']]],
   ['meanmatrix',['meanMatrix',['../matrix_8h.html#ae4babf9b518a2d5d6b12776191e3b7de',1,'meanMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#ae4babf9b518a2d5d6b12776191e3b7de',1,'meanMatrix(matrix *m):&#160;matrix.c']]],

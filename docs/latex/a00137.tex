@@ -1,0 +1,88 @@
+\subsection{src/partner.c File Reference}
+\label{a00137}\index{src/partner.\+c@{src/partner.\+c}}
+{\ttfamily \#include \char`\"{}partner.\+h\char`\"{}}\newline
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ C\+O\+N\+T\+R\+O\+L\+L\+\_\+\+M\+O\+DE} \textbf{ get\+\_\+mode} ()
+\item 
+void \textbf{ update\+\_\+control} ()
+\begin{DoxyCompactList}\small\item\em Updates the controller mode between Driver and Partner modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static enum \textbf{ C\+O\+N\+T\+R\+O\+L\+L\+\_\+\+M\+O\+DE} \textbf{ mode} = \textbf{ M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\label{a00137_aacc86d07e59d3b919f5c5eae2ce5d404}} 
+\index{partner.\+c@{partner.\+c}!get\+\_\+mode@{get\+\_\+mode}}
+\index{get\+\_\+mode@{get\+\_\+mode}!partner.\+c@{partner.\+c}}
+\paragraph{get\+\_\+mode()}
+{\footnotesize\ttfamily enum \textbf{ C\+O\+N\+T\+R\+O\+L\+L\+\_\+\+M\+O\+DE} get\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \textbf{ 5} of file \textbf{ partner.\+c}.
+
+
+
+References \textbf{ mode}.
+
+
+
+Referenced by \textbf{ update\+\_\+drive\+\_\+motors()}.
+
+
+\begin{DoxyCode}
+00005 \{ \textcolor{keywordflow}{return} mode; \}
+\end{DoxyCode}
+\mbox{\label{a00137_ab2c78903a76d2ed8969271803c78368a}} 
+\index{partner.\+c@{partner.\+c}!update\+\_\+control@{update\+\_\+control}}
+\index{update\+\_\+control@{update\+\_\+control}!partner.\+c@{partner.\+c}}
+\paragraph{update\+\_\+control()}
+{\footnotesize\ttfamily void update\+\_\+control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the controller mode between Driver and Partner modes. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 7} of file \textbf{ partner.\+c}.
+
+
+
+References \textbf{ M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}, \textbf{ mode}, \textbf{ P\+A\+R\+T\+N\+ER}, and \textbf{ P\+A\+R\+T\+N\+E\+R\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}.
+
+
+\begin{DoxyCode}
+00007                       \{
+00008   \textcolor{keywordflow}{if} (joystickGetDigital(PARTNER, 7, JOY\_LEFT)) \{
+00009     mode = MAIN_CONTROLLER_MODE;
+00010   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(PARTNER, 7, JOY\_RIGHT)) \{
+00011     mode = PARTNER_CONTROLLER_MODE;
+00012   \}
+00013 \}
+\end{DoxyCode}
+
+
+\subsubsection{Variable Documentation}
+\mbox{\label{a00137_ac57f7e8cb1c4e638c8c477740314a109}} 
+\index{partner.\+c@{partner.\+c}!mode@{mode}}
+\index{mode@{mode}!partner.\+c@{partner.\+c}}
+\paragraph{mode}
+{\footnotesize\ttfamily enum \textbf{ C\+O\+N\+T\+R\+O\+L\+L\+\_\+\+M\+O\+DE} mode = \textbf{ M\+A\+I\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+M\+O\+DE}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \textbf{ 3} of file \textbf{ partner.\+c}.
+
+
+
+Referenced by \textbf{ get\+\_\+mode()}, and \textbf{ update\+\_\+control()}.
+

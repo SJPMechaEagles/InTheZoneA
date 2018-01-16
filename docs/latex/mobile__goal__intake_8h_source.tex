@@ -1,15 +1,22 @@
-\section{mobile\+\_\+goal\+\_\+intake.\+h}
+\subsection{mobile\+\_\+goal\+\_\+intake.\+h}
 \label{mobile__goal__intake_8h_source}\index{include/mobile\+\_\+goal\+\_\+intake.\+h@{include/mobile\+\_\+goal\+\_\+intake.\+h}}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#ifndef \_MOBLE\_GOAL\_INTAKE\_}
-00002 \textcolor{preprocessor}{#define  \_MOBLE\_GOAL\_INTAKE\_}
+00002 \textcolor{preprocessor}{#define \_MOBLE\_GOAL\_INTAKE\_}
 00003 
-00004 \textcolor{preprocessor}{#include "motor_ports.h"}
-00005 \textcolor{preprocessor}{#include "controller.h"}
+00004 \textcolor{preprocessor}{#include "controller.h"}
+00005 \textcolor{preprocessor}{#include "motor_ports.h"}
 00006 \textcolor{preprocessor}{#include "slew.h"}
 00007 
 00013 \textcolor{keywordtype}{void} update_intake();
 00014 
-00015 \textcolor{preprocessor}{#endif}
+00019 \textcolor{keywordtype}{void} set_intake_motor(\textcolor{keywordtype}{int} n);
+00020 
+00024 \textcolor{keywordtype}{void} raise_intake();
+00025 
+00029 \textcolor{keywordtype}{void} lower_intake();
+00030 
+00031 
+00032 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

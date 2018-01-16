@@ -1,0 +1,69 @@
+\subsection{controller.\+h}
+\label{a00011_source}\index{include/controller.\+h@{include/controller.\+h}}
+
+\begin{DoxyCode}
+00001 
+00009 \textcolor{preprocessor}{#ifndef \_CONTROLLER\_H\_}
+00010 \textcolor{preprocessor}{#define \_CONTROLLER\_H\_}
+00011 
+00012 \textcolor{preprocessor}{#include "vmath.h"}
+00013 \textcolor{preprocessor}{#include <API.h>}
+00014 
+00015 \textcolor{preprocessor}{#define RIGHT\_BUTTONS 8}
+00016 \textcolor{preprocessor}{#define LEFT\_BUTTONS 7}
+00017 \textcolor{preprocessor}{#define RIGHT\_BUMPERS 5}
+00018 \textcolor{preprocessor}{#define LEFT\_BUMPERS 6}
+00019 
+00023 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{
+00024   JOY1_5D = 0,
+00025   JOY1_5U = 1,
+00026   JOY1_6D = 2,
+00027   JOY1_6U = 3,
+00028   JOY1_7U = 4,
+00029   JOY1_7L = 5,
+00030   JOY1_7R = 6,
+00031   JOY1_7D = 7,
+00032   JOY1_8U = 8,
+00033   JOY1_8L = 9,
+00034   JOY1_8R = 10,
+00035   JOY1_8D = 11,
+00036 
+00037   JOY2_5D = 12,
+00038   JOY2_5U = 13,
+00039   JOY2_6D = 14,
+00040   JOY2_6U = 15,
+00041   JOY2_7U = 16,
+00042   JOY2_7L = 17,
+00043   JOY2_7R = 18,
+00044   JOY2_7D = 19,
+00045   JOY2_8U = 20,
+00046   JOY2_8L = 21,
+00047   JOY2_8R = 22,
+00048   JOY2_8D = 23,
+00049 
+00050   LCD_LEFT = 24,
+00051   LCD_CENT = 25,
+00052   LCD_RIGHT = 26
+00053 \} button_t;
+00054 
+00060 \textcolor{preprocessor}{#define MASTER 1}
+00061 
+00067 \textcolor{preprocessor}{#define PARTNER 2}
+00068 
+00074 \textcolor{preprocessor}{#define RIGHT\_JOY\_X 1}
+00075 
+00081 \textcolor{preprocessor}{#define RIGHT\_JOY\_Y 2}
+00082 
+00088 \textcolor{preprocessor}{#define LEFT\_JOY\_X 4}
+00089 
+00095 \textcolor{preprocessor}{#define LEFT\_JOY\_Y 3}
+00096 
+00102 \textcolor{keyword}{enum} joystick \{
+00104   RIGHT_JOY,
+00106   LEFT_JOY,
+00107 \};
+00108 
+00113 \textcolor{keyword}{struct }cord get_joystick_cord(enum joystick side, int controller);
+00114 
+00115 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

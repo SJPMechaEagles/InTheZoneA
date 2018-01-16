@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="toggle_8c">
+    <title>toggle.c File Reference</title>
+    <programlisting>#include &quot;toggle.h&quot;</programlisting>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="toggle_8c_1a66c983ca3b3f041a4e293f814a41198f">buttonPressed</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="toggle_8c_1ad2b7c969a01f85d57bdca0bc7f5cff81">buttonGetState</link> (
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link> )<para><emphasis>Returns the current status of a button (pressed or not pressed)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="toggle_8c_1a2b3d226371575c894979ab84bce95626">buttonInit</link> (
+)<para><emphasis>Initializes the buttons array.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="toggle_8c_1a07c56bf50097f5bf35c5e8c9067800e1">buttonIsNewPress</link> (
+<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link> button)<para><emphasis>Detects if button is a new press from most recent check by comparing
+previous value to current value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/toggle.c</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="toggle_8h">toggle.h</link>&quot;</emphasis>
+13 
+<link linkend="toggle_8c_1a66c983ca3b3f041a4e293f814a41198f">17 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="toggle_8c_1a66c983ca3b3f041a4e293f814a41198f">buttonPressed</link>[27];
+18 
+<link linkend="toggle_8c_1a2b3d226371575c894979ab84bce95626">22 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="toggle_8c_1a2b3d226371575c894979ab84bce95626">buttonInit</link>()&#32;{
+23 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(<emphasis class="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;27;&#32;i++)
+24 &#32;&#32;&#32;&#32;<link linkend="toggle_8c_1a66c983ca3b3f041a4e293f814a41198f">buttonPressed</link>[i]&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+25 }
+26 
+<link linkend="toggle_8c_1ad2b7c969a01f85d57bdca0bc7f5cff81">27 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="toggle_8c_1ad2b7c969a01f85d57bdca0bc7f5cff81">buttonGetState</link>(<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>&#32;button)&#32;{
+28 &#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;currentButton&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+29 
+30 &#32;&#32;<emphasis class="comment">//&#32;Determine&#32;how&#32;to&#32;get&#32;the&#32;current&#32;button&#32;value&#32;(from&#32;what&#32;function)&#32;and</emphasis>
+31 &#32;&#32;<emphasis class="comment">//&#32;where&#32;it&#32;is,&#32;then&#32;get&#32;it.</emphasis>
+32 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(button&#32;&lt;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660af74b6b5e3b92936d9d906ed8dd2fe0da">LCD_LEFT</link>)&#32;{
+33 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;button&#32;is&#32;a&#32;joystick&#32;button</emphasis>
+34 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5a">joystick</link>;
+35 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;buttonGroup;
+36 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;buttonLocation;
+37 
+38 &#32;&#32;&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>&#32;newButton;
+39 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(button&#32;&lt;=&#32;11)&#32;{
+40 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;button&#32;is&#32;on&#32;joystick&#32;1</emphasis>
+41 &#32;&#32;&#32;&#32;&#32;&#32;joystick&#32;=&#32;1;
+42 &#32;&#32;&#32;&#32;&#32;&#32;newButton&#32;=&#32;button;
+43 &#32;&#32;&#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+44 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;button&#32;is&#32;on&#32;joystick&#32;2</emphasis>
+45 &#32;&#32;&#32;&#32;&#32;&#32;joystick&#32;=&#32;2;
+46 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;shift&#32;button&#32;down&#32;to&#32;joystick&#32;1&#32;buttons&#32;in&#32;order&#32;to</emphasis>
+47 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;detect&#32;which&#32;button&#32;on&#32;joystick&#32;is&#32;queried</emphasis>
+48 &#32;&#32;&#32;&#32;&#32;&#32;newButton&#32;=&#32;(<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>)(button&#32;-&#32;12);
+49 &#32;&#32;&#32;&#32;}
+50 
+51 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">switch</emphasis>&#32;(newButton)&#32;{
+52 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;0:
+53 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;5;
+54 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_DOWN;
+55 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+56 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;1:
+57 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;5;
+58 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_UP;
+59 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+60 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;2:
+61 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;6;
+62 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_DOWN;
+63 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+64 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;3:
+65 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;6;
+66 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_UP;
+67 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+68 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;4:
+69 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;7;
+70 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_UP;
+71 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+72 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;5:
+73 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;7;
+74 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_LEFT;
+75 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+76 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;6:
+77 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;7;
+78 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_RIGHT;
+79 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+80 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;7:
+81 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;7;
+82 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_DOWN;
+83 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+84 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;8:
+85 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;8;
+86 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_UP;
+87 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+88 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;9:
+89 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;8;
+90 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_LEFT;
+91 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+92 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;10:
+93 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;8;
+94 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_RIGHT;
+95 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+96 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">case</emphasis>&#32;11:
+97 &#32;&#32;&#32;&#32;&#32;&#32;buttonGroup&#32;=&#32;8;
+98 &#32;&#32;&#32;&#32;&#32;&#32;buttonLocation&#32;=&#32;JOY_DOWN;
+99 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+100 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">default</emphasis>:
+101 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+102 &#32;&#32;&#32;&#32;}
+103 &#32;&#32;&#32;&#32;currentButton&#32;=&#32;joystickGetDigital(joystick,&#32;buttonGroup,&#32;buttonLocation);
+104 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+105 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;button&#32;is&#32;on&#32;LCD</emphasis>
+106 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(button&#32;==&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660af74b6b5e3b92936d9d906ed8dd2fe0da">LCD_LEFT</link>)
+107 &#32;&#32;&#32;&#32;&#32;&#32;currentButton&#32;=&#32;(lcdReadButtons(uart1)&#32;==&#32;LCD_BTN_LEFT);
+108 
+109 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(button&#32;==&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a71f1177926300c37f76f2b634cffd9cc">LCD_CENT</link>)
+110 &#32;&#32;&#32;&#32;&#32;&#32;currentButton&#32;=&#32;(lcdReadButtons(uart1)&#32;==&#32;LCD_BTN_CENTER);
+111 
+112 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(button&#32;==&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a2dff7dd85658b97c4309b10e7506491e">LCD_RIGHT</link>)
+113 &#32;&#32;&#32;&#32;&#32;&#32;currentButton&#32;=&#32;(lcdReadButtons(uart1)&#32;==&#32;LCD_BTN_RIGHT);
+114 &#32;&#32;}
+115 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;currentButton;
+116 }
+117 
+<link linkend="toggle_8c_1a07c56bf50097f5bf35c5e8c9067800e1">136 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="toggle_8c_1a07c56bf50097f5bf35c5e8c9067800e1">buttonIsNewPress</link>(<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>&#32;button)&#32;{
+137 &#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;currentButton&#32;=&#32;<link linkend="toggle_8c_1ad2b7c969a01f85d57bdca0bc7f5cff81">buttonGetState</link>(button);
+138 
+139 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!currentButton)&#32;<emphasis class="comment">//&#32;buttons&#32;is&#32;not&#32;currently&#32;pressed</emphasis>
+140 &#32;&#32;&#32;&#32;<link linkend="toggle_8c_1a66c983ca3b3f041a4e293f814a41198f">buttonPressed</link>[button]&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+141 
+142 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(currentButton&#32;&amp;&amp;&#32;!<link linkend="toggle_8c_1a66c983ca3b3f041a4e293f814a41198f">buttonPressed</link>[button])&#32;{
+143 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;button&#32;is&#32;currently&#32;pressed&#32;and&#32;was&#32;not&#32;detected&#32;as&#32;being&#32;pressed&#32;during</emphasis>
+144 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;last&#32;check</emphasis>
+145 &#32;&#32;&#32;&#32;<link linkend="toggle_8c_1a66c983ca3b3f041a4e293f814a41198f">buttonPressed</link>[button]&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+146 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">true</emphasis>;
+147 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>
+148 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">false</emphasis>;&#32;<emphasis class="comment">//&#32;button&#32;is&#32;not&#32;pressed&#32;or&#32;was&#32;already&#32;detected</emphasis>
+149 }
+    </computeroutput></literallayout>
+</section>

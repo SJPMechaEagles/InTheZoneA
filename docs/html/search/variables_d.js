@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['theta',['theta',['../structlocation.html#a4b415222b4dcf34e49dacd22384be9eb',1,'location::theta()'],['../structencoder__odemtry.html#af1a1e2a2a7a2f89138a8c261a3b82898',1,'encoder_odemtry::theta()']]],
-  ['thresh',['thresh',['../drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581',1,'drive.c']]],
-  ['type',['type',['../structmenu__t.html#a110244ceb7d2a7cba95cfc5758d61c01',1,'menu_t']]]
+  ['right',['right',['../structlcd__buttons.html#a2437d744e09ca1bb91ab4ca53ef77198',1,'lcd_buttons']]],
+  ['routine',['routine',['../structroutine__t.html#a016f918d811a58ee2b63a5e48161dcf8',1,'routine_t']]],
+  ['routine_5flist',['routine_list',['../routines_8c.html#a4d70ab7b0355718354a9678801101aa2',1,'routines.c']]],
+  ['routine_5ftask_5fvar',['routine_task_var',['../routines_8c.html#a8ac8c8354c257b390c000a5153f4fec6',1,'routines.c']]]
 ];

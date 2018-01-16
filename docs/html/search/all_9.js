@@ -14,6 +14,7 @@ var searchData=
   ['init_5fmenu_5fint',['init_menu_int',['../menu_8h.html#ac8efedba760ec35ebf841ab19543ba5a',1,'init_menu_int(enum menu_type type, int min, int max, int step, const char *prompt):&#160;menu.c'],['../menu_8c.html#ac8efedba760ec35ebf841ab19543ba5a',1,'init_menu_int(enum menu_type type, int min, int max, int step, const char *prompt):&#160;menu.c']]],
   ['init_5fmenu_5fvar',['init_menu_var',['../menu_8h.html#af1bb786cb6014dcbfdb146878e713a3d',1,'init_menu_var(enum menu_type type, const char *prompt, int nums,...):&#160;menu.c'],['../menu_8c.html#af1bb786cb6014dcbfdb146878e713a3d',1,'init_menu_var(enum menu_type type, const char *prompt, int nums,...):&#160;menu.c']]],
   ['init_5frotation',['INIT_ROTATION',['../lifter_8h.html#a0685a3cee7d5cabe98d2c9c97bed5727',1,'lifter.h']]],
+  ['init_5froutine',['init_routine',['../routines_8h.html#ab873e24fcc59a2bf7844618b664a5d26',1,'init_routine():&#160;routines.c'],['../routines_8c.html#ab873e24fcc59a2bf7844618b664a5d26',1,'init_routine():&#160;routines.c']]],
   ['init_5fslew',['init_slew',['../slew_8h.html#a321758941d88b75783955c819bb75005',1,'init_slew():&#160;slew.c'],['../slew_8c.html#a321758941d88b75783955c819bb75005',1,'init_slew():&#160;slew.c']]],
   ['initialize',['initialize',['../main_8h.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;init.c'],['../init_8c.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;init.c']]],
   ['initialized',['initialized',['../slew_8c.html#aedeffc7d23da25d52b9a50045189fe2b',1,'slew.c']]],
