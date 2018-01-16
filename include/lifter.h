@@ -203,4 +203,8 @@ int getLifterTicks();
  **/
 double getLifterHeight();
 
+void autostack_routine();
+
+void intertrupt_auto_stack() ;
+
 #endif

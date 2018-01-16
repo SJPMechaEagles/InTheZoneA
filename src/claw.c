@@ -1,13 +1,18 @@
 #include "claw.h"
+#include "lifter.h"
 #include "log.h"
 #include "toggle.h"
 static enum claw_state state = CLAW_NEUTRAL_STATE;
+
+extern bool lifter_autostack_running;
 
 /**
  * @brief Updates the claw motor values
  * @author Chris Jerrett
  **/
 void update_claw() {
+  if (lifter_autostack_running)
+    return;
   if (joystickGetDigital(CLAW_CLOSE)) {
     state = CLAW_CLOSE_STATE;
   } else if (joystickGetDigital(CLAW_OPEN)) {

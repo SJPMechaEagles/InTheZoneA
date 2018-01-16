@@ -50,7 +50,8 @@ void operatorControl() {
   buttonInit();
   init_routine();
   init_slew();
-  delay(10);
+  register_routine(&autostack_routine, JOY1_8R, NULL);
+  register_routine(&intertrupt_auto_stack, JOY1_8L, NULL);
   while (1) {
     update_claw();
     update_intake();
