@@ -56,6 +56,6 @@ void operatorControl() {
     update_intake();
     update_lifter();
     update_drive_motors();
-    delay(10);
+    delay(20);
   }
 }
