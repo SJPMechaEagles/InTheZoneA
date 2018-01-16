@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 
-#include <stdlib.h>
+#include <API.h>
 
 // Memory management macros
 
