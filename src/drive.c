@@ -6,7 +6,7 @@
 #include "vmath.h"
 #include <API.h>
 
-static int thresh = 30;
+static int thresh = 10;
 
 /**
  * @brief Gets the deadzone threshhold on the drive.
