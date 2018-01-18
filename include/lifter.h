@@ -64,22 +64,22 @@
 /**
  * @brief The lifter up controller params
  **/
-#define LIFTER_UP MASTER, 6, JOY_UP
+#define LIFTER_UP PARTNER, 6, JOY_UP
 
 /**
  * @brief The lifter down controller params
  **/
-#define LIFTER_DOWN MASTER, 6, JOY_DOWN
+#define LIFTER_DOWN PARTNER, 6, JOY_DOWN
 
 /**
 * @brief The secondary lifter up controller params
 **/
-#define SECONDARY_LIFTER_UP MASTER, 8, JOY_UP
+#define SECONDARY_LIFTER_UP PARTNER, 8, JOY_UP
 
 /**
 * @brief The secondary lifter down controller params
 **/
-#define SECONDARY_LIFTER_DOWN MASTER, 8, JOY_DOWN
+#define SECONDARY_LIFTER_DOWN PARTNER, 8, JOY_DOWN
 
 /**
  * @brief Height to raise lifter to driver preload height
