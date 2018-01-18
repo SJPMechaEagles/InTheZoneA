@@ -7,14 +7,27 @@ Ultrasonic lifter_ultrasonic;
 bool lifter_autostack_running = false;
 static bool lifter_autostack_routine_interupt = false;
 
-void intertrupt_auto_stack() { lifter_autostack_routine_interupt = false; }
+void intertrupt_auto_stack() { lifter_autostack_routine_interupt = true; }
+
+#define LIFTER_INTERUPT()                                                      \
+  if (lifter_autostack_routine_interupt) {                                     \
+    quit_auto_static();                                                        \
+    return;                                                                    \
+  }
+
+static inline void quit_auto_static() {
+  set_main_lifter_motors(0);
+  set_secondary_lifter_motors(0);
+  set_claw_motor(0);
+}
 
 void autostack_routine() {
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
   raise_secondary_lifter();
-  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 2000) {
+  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 1600) {
     set_secondary_lifter_motors(MIN_SPEED);
+    LIFTER_INTERUPT();
     delay(10);
     info("1");
   }
@@ -23,6 +36,7 @@ void autostack_routine() {
   int val = ultrasonicGet(lifter_ultrasonic);
   printf("%d\n", val);
   while (val < 10 && val != ULTRA_BAD_RESPONSE) {
+    LIFTER_INTERUPT()
     set_main_lifter_motors(MAX_SPEED);
     info("2");
     lifted = true;
@@ -30,18 +44,31 @@ void autostack_routine() {
     val = ultrasonicGet(lifter_ultrasonic);
     printf("%d\n", val);
   }
+  LIFTER_INTERUPT()
+  if (lifted)
+    delay(200);
+  LIFTER_INTERUPT()
   set_main_lifter_motors(0);
-  set_secondary_lifter_motors(0);
+  set_secondary_lifter_motors(-10);
 
-  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 3500) {
+  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 3800) {
+    if (lifter_autostack_routine_interupt) {
+      quit_auto_static();
+      return;
+    }
     set_secondary_lifter_motors(MIN_SPEED);
     delay(10);
     info("3");
   }
-  delay(500);
-  set_secondary_lifter_motors(10);
   set_claw_motor(MIN_CLAW_SPEED);
-  delay(2000);
+  LIFTER_INTERUPT()
+  delay(500);
+  LIFTER_INTERUPT()
+  set_main_lifter_motors(MAX_SPEED);
+  LIFTER_INTERUPT()
+  delay(300);
+
+  set_main_lifter_motors(0);
   set_claw_motor(0);
   set_secondary_lifter_motors(0);
 
