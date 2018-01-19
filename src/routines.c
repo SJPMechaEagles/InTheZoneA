@@ -1,9 +1,4 @@
-#include "routines.h"
-#include "controller.h"
-#include "list.h"
-#include "log.h"
-#include "toggle.h"
-#include <API.h>
+
 
 static list_t *routine_list;
 
@@ -23,6 +18,8 @@ void routine_task() {
         }
       }
     }
+  } else {
+    error("List iterator was null");
   }
   list_iterator_destroy(it);
 }

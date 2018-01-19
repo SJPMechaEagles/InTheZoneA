@@ -1,10 +1,4 @@
-#include "drive.h"
-#include "controller.h"
-#include "log.h"
-#include "motor_ports.h"
-#include "slew.h"
-#include "vmath.h"
-#include <API.h>
+
 
 static int thresh = 10;
 
@@ -29,13 +23,8 @@ void update_drive_motors() {
   // Get the joystick values from the controller
   int x = 0;
   int y = 0;
-  if (get_mode() == PARTNER_CONTROLLER_MODE) {
-    x = (joystickGetAnalog(PARTNER, 3));
-    y = (joystickGetAnalog(PARTNER, 1));
-  } else {
-    x = -(joystickGetAnalog(MASTER, 3));
-    y = (joystickGetAnalog(MASTER, 1));
-  }
+	x = -(joystickGetAnalog(MASTER, 3));
+	y = (joystickGetAnalog(MASTER, 1));
   // Make sure the joystick values are significant enough to change the motors
   if (x < thresh && x > -thresh) {
     x = 0;

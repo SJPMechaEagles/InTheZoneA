@@ -1,7 +1,4 @@
-#include "claw.h"
-#include "lifter.h"
-#include "log.h"
-#include "toggle.h"
+
 static enum claw_state state = CLAW_NEUTRAL_STATE;
 
 extern bool lifter_autostack_running;
@@ -45,17 +42,17 @@ void update_claw() {
 void set_claw_motor(const int v) { set_motor_immediate(CLAW_MOTOR, v); }
 
 /**
- * @brief Drives the motors to open the claw
+ * @brief Drives the motors to grab a cone
  * @author Chris Jerrett
  * @see CLAW_MOTOR
  * @see MAX_CLAW_SPEED
  **/
-void open_claw() { set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED); }
+void claw_grab_cone() { set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED); }
 
 /**
- * @brief Drives the motors to close the claw
+ * @brief Drives the motors to release a cone
  * @author Chris Jerrett
  * @see CLAW_MOTOR
  * @see MIN_CLAW_SPEED
  **/
-void close_claw() { set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED); }
+void claw_release_cone() { set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED); }

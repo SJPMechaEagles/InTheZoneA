@@ -10,9 +10,8 @@
 #include "controller.h"
 #include "drive.h"
 #include "motor_ports.h"
-#include "partner.h"
 #include "potentiometer.h"
-#include "sensor_ports.h"
+#include "sensors.h"
 #include "slew.h"
 #include <API.h>
 
@@ -72,13 +71,13 @@
 #define LIFTER_DOWN PARTNER, 6, JOY_DOWN
 
 /**
-* @brief The secondary lifter up controller params
-**/
+ * @brief The secondary lifter up controller params
+ **/
 #define SECONDARY_LIFTER_UP PARTNER, 5, JOY_UP
 
 /**
-* @brief The secondary lifter down controller params
-**/
+ * @brief The secondary lifter down controller params
+ **/
 #define SECONDARY_LIFTER_DOWN PARTNER, 5, JOY_DOWN
 
 /**
@@ -96,14 +95,29 @@
  **/
 #define LIFTER_DOWN_PARTNER PARTNER, 5, JOY_DOWN
 
+/**
+ * @brief The port the secondary lifter potenteometer is plugged into.
+ **/
 #define SECONDARY_LIFTER_POT_PORT 2
 
+/**
+ * @brief Max potentiomenter value for secondary lifter.
+ **/
 #define SECONDARY_LIFTER_MAX_HEIGHT 3120
 
+/**
+ * @brief Min potentiomenter value for secondary lifter.
+ */
 #define SECONDARY_LIFTER_MIN_HEIGHT 2000
 
+/**
+ * @brief The port the main lifter potentemometer is plugged into.
+ **/
 #define MAIN_LIFTER_POT 1
 
+/**
+ * @brief The port the main lifter potentemometer is plugged into.
+ **/
 #define MAIN_LIFTER_MIN_HEIGHT 1700
 
 /**
@@ -203,8 +217,16 @@ int getLifterTicks();
  **/
 double getLifterHeight();
 
-void autostack_routine();
+/**
+ * Autostacks a cone once picked up
+ * @param param ignored parameter
+ */
+void autostack_routine(void *param);
 
-void intertrupt_auto_stack() ;
+/**
+ * Stpos an autostack in case of an error
+ * @param param ignore parameter
+ */
+void interrupt_auto_stack(void *param);
 
 #endif

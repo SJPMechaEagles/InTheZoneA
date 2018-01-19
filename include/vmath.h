@@ -10,6 +10,10 @@
 #define _VMATH_H_
 
 #include <math.h>
+/**
+ * @brief PI
+ * 3.14159268...
+ */
 #define M_PI 3.14159265358979323846
 
 /**

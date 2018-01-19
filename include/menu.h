@@ -10,11 +10,11 @@
 
 #include "API.h"
 #include "lcd.h"
+#include "log.h"
 #include <float.h>
 #include <limits.h>
 #include <string.h>
 #include <vlib.h>
-#include "log.h"
 
 /**
  * @brief Represents the different types of menus.

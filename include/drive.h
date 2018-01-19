@@ -8,7 +8,6 @@
 #ifndef _DRIVE_H_
 #define _DRIVE_H_
 
-#include "partner.h"
 #include <API.h>
 
 /**
