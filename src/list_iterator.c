@@ -1,20 +1,26 @@
 #include "list.h"
 #include <API.h>
-/*
- * Allocate a new list_iterator_t. NULL on failure.
- * Accepts a direction, which may be LIST_HEAD or LIST_TAIL.
- */
-
+/**
+ * Creates a new iterator
+ * @param list the list
+ * @param direction direction the iterator should progress in
+ * @return the iterator created
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 list_iterator_t *list_iterator_new(list_t *list, list_direction_t direction) {
   list_node_t *node = direction == LIST_HEAD ? list->head : list->tail;
   return list_iterator_new_from_node(node, direction);
 }
 
-/*
- * Allocate a new list_iterator_t with the given start
- * node. NULL on failure.
- */
-
+/**
+ * Creates a new iterator by using the node to start at
+ * @param node the start node
+ * @param direction direction the iterator should progress in
+ * @return the iterator created
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 list_iterator_t *list_iterator_new_from_node(list_node_t *node,
                                              list_direction_t direction) {
   list_iterator_t *self;
@@ -25,11 +31,14 @@ list_iterator_t *list_iterator_new_from_node(list_node_t *node,
   return self;
 }
 
-/*
- * Return the next list_node_t or NULL when no more
- * nodes remain in the list.
- */
-
+/**
+ * @brief The next node in the iterator and advances the iterator. Returns NULL
+ *when done.
+ * @param self the iterator
+ * @return the next node.
+ * @author Chris Jerrett
+ * @date 1/3/17
+ **/
 list_node_t *list_iterator_next(list_iterator_t *self) {
   list_node_t *curr = self->next;
   if (curr) {
@@ -38,10 +47,12 @@ list_node_t *list_iterator_next(list_iterator_t *self) {
   return curr;
 }
 
-/*
- * Free the list iterator.
- */
-
+/**
+ * @brief Destroys the iterator
+ * @param self the iterator
+ * @author Chris Jerrett
+ * @date 1/3/17
+ **/
 void list_iterator_destroy(list_iterator_t *self) {
   free(self);
   self = NULL;

@@ -14,6 +14,13 @@
 #include "log.h"
 #include "slew.h"
 
+/**
+ * @brief sets up the IMEs for the autonomous portion.
+ * @author Christian DeSimone, Chris Jerrett
+ * @param counts_drive_left The encoder value from the left motors
+ * @param counts_drive_right The encoder value from the right motors
+ * @param counts_drive The average encoder value from both sides
+ **/
 static inline void setup_ime_auton(int *counts_drive_left,
                                    int *counts_drive_right, int *counts_drive) {
   imeReset(MID_LEFT_DRIVE);
@@ -24,7 +31,10 @@ static inline void setup_ime_auton(int *counts_drive_left,
   *counts_drive = *counts_drive_left + *counts_drive_right;
   *counts_drive /= 2;
 }
-
+/**
+ * @brief Starts the auntonomous program.
+ * @author Chris Jerrett, Christian DeSimone
+ **/
 static inline void
 start_auton() { // starts the slew rate controller to prevent ptc trips
   init_slew();
@@ -33,6 +43,10 @@ start_auton() { // starts the slew rate controller to prevent ptc trips
   info("AUTO");
 }
 
+/**
+ * @brief utility function which deploys the secondary lifter at the start of autonomous.
+ * @author Christian DeSimone, Chris Jerrett
+ **/
 void deploy_seoncdary_lifter() {
   while (analogRead(SECONDARY_LIFTER_POT_PORT) < DEPLOY_HEIGHT) {
     set_secondary_lifter_motors(MAX_SPEED);
@@ -40,6 +54,11 @@ void deploy_seoncdary_lifter() {
   set_secondary_lifter_motors(0);
 }
 
+/** 
+ * @brief utility function which raises the second lifter to its maximum height
+ * @author Chris Jerrett, Christian DeSimone
+ * @see MAX_HEIGHT
+ **/
 void auton_raise_sec_lifter_max() {
   while (analogRead(SECONDARY_LIFTER_POT_PORT) < MAX_HEIGHT) {
     set_secondary_lifter_motors(MAX_SPEED);
@@ -47,13 +66,20 @@ void auton_raise_sec_lifter_max() {
   set_secondary_lifter_motors(0);
 }
 
+/**
+ * @brief utility function to raise the mainlifter to the mobile goal height
+ * @author Chris Jerrett, Christian DeSimone
+ **/
 void auton_rasie_main_lifter() {
   while (analogRead(MAIN_LIFTER_POT) < MOBILE_GOAL_HEIGHT) {
     set_main_lifter_motors(MAX_SPEED);
   }
   set_main_lifter_motors(0);
 }
-
+/**
+ * @brief Drives the robot forward until it reaches the mobile goal
+ * @author Christian DeSimone, Chris Jerrett
+ **/
 void auton_drive_towards_mobile_goal(int counts_drive, int counts_drive_left,
                                      int counts_drive_right) {
   while (counts_drive < MOBILE_GOAL_DISTANCE) {
@@ -65,7 +91,10 @@ void auton_drive_towards_mobile_goal(int counts_drive, int counts_drive_left,
     counts_drive /= 2;
   }
 }
-
+/**
+ * @brief Rotates the robot 180 degrees clockwise
+ * @author Chris Jerrett, Christian DeSimone
+ **/
 void auton_turn_180() {
   int ang = 0;
   while (ang < HALF_ROTATE) {

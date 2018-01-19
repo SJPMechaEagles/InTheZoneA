@@ -7,7 +7,10 @@
 static list_t *routine_list;
 
 static TaskHandle routine_task_var;
-
+/**
+ * @brief Task that manages routines
+ * @author Chris Jerrett
+ */
 void routine_task() {
   list_node_t *node;
   list_iterator_t *it = list_iterator_new(routine_list, LIST_HEAD);
@@ -28,13 +31,28 @@ void routine_task() {
   list_iterator_destroy(it);
 }
 
+/**
+ * @brief Starts the routine system
+ * @author Chris Jerrett
+ */
 void init_routine() {
   routine_list = list_new();
   routine_task_var = taskRunLoop(routine_task, 20);
 }
 
+/**
+ * @brief Stops the routine system
+ * @author Chris Jerrett
+ */
 void deinit_routines() { list_destroy(routine_list); }
 
+/**
+ * @brief Registers a routine for the system to use
+ * @param routine The routine to register
+ * @param on_buttons the trigger button
+ * @param prohibited_buttons the buttons it blocks @todo
+ * @author Chris Jerrett
+ */
 void register_routine(void (*routine)(void *), button_t on_buttons,
                       button_t *prohibited_buttons) {
   struct routine_t *r = (struct routine_t *)malloc(sizeof(routine_t));

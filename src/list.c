@@ -1,10 +1,36 @@
+/**
+ * @file list.h
+ * A doubly linked list implementation.
+ *
+ * A linked list is a linear data structure where each element is a separate
+ * object.
+ *
+ * Each element (we will call it a node) of a list is comprising of two items -
+ * the data and a reference to the next node. The last node has a reference to
+ * null. The entry point into a linked list is called the head of the list. It
+ * should be noted that head is not a separate node, but the reference to the
+ * first node. If the list is empty then the head is a null reference. A linked
+ * list is a dynamic data structure. The number of nodes in a list is not fixed
+ * and can grow and shrink on demand. Any application which has to deal with an
+ * unknown number of objects will need to use a linked list.
+ *
+ * A Doubly Linked List is a variation of Linked list in which navigation is
+ * possible in both ways, either forward and backward easily as compared to
+ * Single Linked List.
+ *
+ * @author Chris Jerrett
+ * @date 1/3/18
+ */
+
 #include "list.h"
 #include <API.h>
 
-/*
- * Allocate a new list_t. NULL on failure.
- */
-
+/**
+ * @brief Allocated a new list
+ * @return the new list
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 list_t *list_new() {
   list_t *self;
   if (!(self = (list_t *)malloc(sizeof(list_t))))
@@ -37,11 +63,14 @@ void list_destroy(list_t *self) {
   free(self);
 }
 
-/*
- * Append the given node to the list
- * and return the node, NULL on failure.
- */
-
+/**
+ * @brief Pushed a node to the end of a list
+ * @param self the list
+ * @param node the node
+ * @return the node added
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 list_node_t *list_rpush(list_t *self, list_node_t *node) {
   if (!node)
     return NULL;
@@ -60,10 +89,13 @@ list_node_t *list_rpush(list_t *self, list_node_t *node) {
   return node;
 }
 
-/*
- * Return / detach the last node in the list, or NULL.
- */
-
+/**
+ * @brief removes and returns the end node
+ * @param self the list
+ * @return the node removed
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 list_node_t *list_rpop(list_t *self) {
   if (!self->len)
     return NULL;
@@ -80,10 +112,13 @@ list_node_t *list_rpop(list_t *self) {
   return node;
 }
 
-/*
- * Return / detach the first node in the list, or NULL.
- */
-
+/**
+ * @brief removes and returns the start node
+ * @param self the list
+ * @return the node removed
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 list_node_t *list_lpop(list_t *self) {
   if (!self->len)
     return NULL;
@@ -100,11 +135,14 @@ list_node_t *list_lpop(list_t *self) {
   return node;
 }
 
-/*
- * Prepend the given node to the list
- * and return the node, NULL on failure.
- */
-
+/**
+ * @brief Pushed a node to the start of a list
+ * @param self the list
+ * @param node the node
+ * @return the node added
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 list_node_t *list_lpush(list_t *self, list_node_t *node) {
   if (!node)
     return NULL;
@@ -123,10 +161,14 @@ list_node_t *list_lpush(list_t *self, list_node_t *node) {
   return node;
 }
 
-/*
- * Return the node associated to val or NULL.
- */
-
+/**
+ * @brief Finds a node in a list with a given value
+ * @param self the list
+ * @param val the value
+ * @return the node
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 list_node_t *list_find(list_t *self, void *val) {
   list_iterator_t *it = list_iterator_new(self, LIST_HEAD);
   list_node_t *node;
@@ -149,10 +191,14 @@ list_node_t *list_find(list_t *self, void *val) {
   return NULL;
 }
 
-/*
- * Return the node at the given index or NULL.
- */
-
+/**
+ * @brief Finds a node a given index
+ * @param self the list
+ * @param index the index
+ * @return the node
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 list_node_t *list_at(list_t *self, int index) {
   list_direction_t direction = LIST_HEAD;
 
@@ -173,10 +219,13 @@ list_node_t *list_at(list_t *self, int index) {
   return NULL;
 }
 
-/*
- * Remove the given node from the list, freeing it and it's value.
- */
-
+/**
+ * @brief removes and returns the a given node from the list
+ * @param self the list
+ * @return the node removed
+ * @author Chris Jerrett
+ * @date 1/3/18
+ **/
 void list_remove(list_t *self, list_node_t *node) {
   node->prev ? (node->prev->next = node->next) : (self->head = node->next);
 

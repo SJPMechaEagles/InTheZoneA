@@ -44,16 +44,32 @@
  **/
 #define DEPLOY_HEIGHT 2000
 
+/**
+ * @brief the lowest height of the secondary lifter
+ **/
 #define LOWEST_HEIGHT 0
 
+/**
+ * @brief the height of the second lifter for deploying the mobile goal lifter, posibly fixed in hardware
+ **/
 #define MOBILE_GOAL_HEIGHT 3570
 
+/**
+ * @brief The distance to drive, in encoder ticks, to reach the mobile goal from the starting zone
+ **/
 #define MOBILE_GOAL_DISTANCE 4000
 
+/**
+ * @brief the maximum height of the secondary lifter
+ **/
 #define MAX_HEIGHT 3570
-
+/**
+ * @brief the distance to be traveled by the robot after obtaining the mobile goal
+ **/
 #define ZONE_DISTANCE 1000
-
+/**
+ * @brief 180 degrees in radians
+ **/
 #define HALF_ROTATE M_PI
 
 #endif

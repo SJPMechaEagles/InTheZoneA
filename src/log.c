@@ -19,7 +19,13 @@ void init_error(bool use_lcd, FILE *lcd) {
     printf("LCD Init\n");
   }
 }
-
+/**
+ * @brief prints a log info message to the lcd
+ * @author Chris Jerrett
+ * @date 9/10/17
+ * @param s the string on the top line
+ * @param mess the string on the bottom line
+ **/
 static void log_info(const char *s, const char *mess) {
   printf("[%s]: %s\n", s, mess);
   lcdSetBacklight(log_lcd, false);

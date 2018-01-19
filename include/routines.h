@@ -24,12 +24,12 @@ typedef struct routine_t {
 void init_routine();
 
 /**
- * @brief Tasks the manages tourines
+ * @brief Task that manages routines
  */
 void routine_task();
 
 /**
- * @brief Stops the routine systsem
+ * @brief Stops the routine system
  */
 void deinit_routines();
 
