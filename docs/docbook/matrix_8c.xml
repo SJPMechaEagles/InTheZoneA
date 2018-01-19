@@ -1,11 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="matrix_8c">
     <title>matrix.c File Reference</title>
-    <programlisting>#include &quot;matrix.h&quot;</programlisting>
-    <programlisting>#include &quot;log.h&quot;</programlisting>
-    <programlisting>#include &lt;stdio.h&gt;</programlisting>
-    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
-    <programlisting>#include &lt;string.h&gt;</programlisting>
+<para>Include dependency diagram for matrix.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="matrix_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for matrix.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="matrix_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Functions</title>
             <para>
@@ -21,8 +38,7 @@ int assertion, const char * message)<para><emphasis>Asserts a condition is true.
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8c_1abbb8d2d20c2dd53a2269d017a336668f">copyMatrix</link> (
-<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>Copies a matrix. This function uses scaleMatrix, because scaling
-matrix by 1 is the same as a copy.</emphasis></para>
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>Copies a matrix.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -40,10 +56,7 @@ matrix by 1 is the same as a copy.</emphasis></para>
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8c_1af49b525d7476c365833db9acd975e3a5">dotDiagonalMatrix</link> (
-<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, <link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * b)<para><emphasis>performs a diagonial matrix dot product.
-Given a two matrices (or the same matrix twice) with identical widths and
-heights, this method returns a 1 by a-&gt;height matrix of the cross
-product of each matrix along the diagonal.</emphasis></para>
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, <link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * b)<para><emphasis>performs a diagonial matrix dot product.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -52,10 +65,7 @@ product of each matrix along the diagonal.</emphasis></para>
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8c_1a0b568a64e81a56779c2141b424475976">dotProductMatrix</link> (
-<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, <link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * b)<para><emphasis>returns the matrix dot product.
-Given a two matrices (or the same matrix twice) with identical widths and
-different heights, this method returns a a-&gt;height by b-&gt;height matrix of
-the cross product of each matrix.</emphasis></para>
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, <link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * b)<para><emphasis>returns the matrix dot product.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -92,8 +102,7 @@ int width, int height)<para><emphasis>Makes a matrix with a width and height par
                     <listitem>
                         <para><link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * <link linkend="matrix_8c_1ae4babf9b518a2d5d6b12776191e3b7de">meanMatrix</link> (
 <link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * m)<para><emphasis>Given an &quot;m rows by n columns&quot; matrix, return a matrix where each
-element represents the mean of that full column.
- @pram the matrix.</emphasis></para>
+element represents the mean of that full column.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -120,10 +129,7 @@ element represents the mean of that full column.
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="matrix_8c_1acdd57777a972ce339153878fa917db14">rowSwap</link> (
-<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, int p, int q)<para><emphasis>swaps the rows of a matrix. This method changes the input matrix.
-Given a matrix, this algorithm will swap rows p and q, provided
-that p and q are less than or equal to the height of matrix A and p
-and q are different values.</emphasis></para>
+<link linkend="matrix_8h_1abc75382643898dd572498a574bf891c7">matrix</link> * a, int p, int q)<para><emphasis>swaps the rows of a matrix.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -163,317 +169,317 @@ and q are different values.</emphasis></para>
     <literallayout><computeroutput>
 1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="matrix_8h">matrix.h</link>&quot;</emphasis>
 2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
-3 <emphasis class="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+3 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
 4 <emphasis class="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
 5 <emphasis class="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
 6 
-<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">15 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(<emphasis class="keywordtype">int</emphasis>&#32;assertion,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*message)&#32;{
-16 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(assertion&#32;==&#32;0)&#32;{
-17 &#32;&#32;&#32;&#32;<link linkend="log_8h_1a8e5bb8a2a372f5b066ff7af7044584c1">error</link>(message);
-18 &#32;&#32;&#32;&#32;exit(1);
-19 &#32;&#32;}
-20 }
-21 
-<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">28 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(<emphasis class="keywordtype">int</emphasis>&#32;width,&#32;<emphasis class="keywordtype">int</emphasis>&#32;height)&#32;{
-29 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
-30 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(width&#32;&gt;&#32;0&#32;&amp;&amp;&#32;height&#32;&gt;&#32;0,&#32;<emphasis class="stringliteral">&quot;New&#32;matrix&#32;must&#32;be&#32;at&#32;least&#32;a&#32;1&#32;by&#32;1&quot;</emphasis>);
-31 &#32;&#32;out&#32;=&#32;(<link linkend="struct__matrix">matrix</link>&#32;*)malloc(<emphasis class="keyword">sizeof</emphasis>(<link linkend="struct__matrix">matrix</link>));
-32 
-33 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(out&#32;!=&#32;NULL,&#32;<emphasis class="stringliteral">&quot;Out&#32;of&#32;memory.&quot;</emphasis>);
+<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">17 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(<emphasis class="keywordtype">int</emphasis>&#32;assertion,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*message)&#32;{
+18 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(assertion&#32;==&#32;0)&#32;{
+19 &#32;&#32;&#32;&#32;<link linkend="log_8h_1a8e5bb8a2a372f5b066ff7af7044584c1">error</link>(message);
+20 &#32;&#32;&#32;&#32;exit(1);
+21 &#32;&#32;}
+22 }
+23 
+<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">30 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(<emphasis class="keywordtype">int</emphasis>&#32;width,&#32;<emphasis class="keywordtype">int</emphasis>&#32;height)&#32;{
+31 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
+32 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(width&#32;&gt;&#32;0&#32;&amp;&amp;&#32;height&#32;&gt;&#32;0,&#32;<emphasis class="stringliteral">&quot;New&#32;matrix&#32;must&#32;be&#32;at&#32;least&#32;a&#32;1&#32;by&#32;1&quot;</emphasis>);
+33 &#32;&#32;out&#32;=&#32;(<link linkend="struct__matrix">matrix</link>&#32;*)malloc(<emphasis class="keyword">sizeof</emphasis>(<link linkend="struct__matrix">matrix</link>));
 34 
-35 &#32;&#32;out-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;=&#32;width;
-36 &#32;&#32;out-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;=&#32;height;
-37 &#32;&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;=&#32;(<emphasis class="keywordtype">double</emphasis>&#32;*)malloc(<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">double</emphasis>)&#32;*&#32;width&#32;*&#32;height);
-38 
-39 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;!=&#32;NULL,&#32;<emphasis class="stringliteral">&quot;Out&#32;of&#32;memory.&quot;</emphasis>);
+35 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(out&#32;!=&#32;NULL,&#32;<emphasis class="stringliteral">&quot;Out&#32;of&#32;memory.&quot;</emphasis>);
+36 
+37 &#32;&#32;out-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;=&#32;width;
+38 &#32;&#32;out-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;=&#32;height;
+39 &#32;&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;=&#32;(<emphasis class="keywordtype">double</emphasis>&#32;*)malloc(<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">double</emphasis>)&#32;*&#32;width&#32;*&#32;height);
 40 
-41 &#32;&#32;memset(out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>,&#32;0.0,&#32;width&#32;*&#32;height&#32;*&#32;<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">double</emphasis>));
+41 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;!=&#32;NULL,&#32;<emphasis class="stringliteral">&quot;Out&#32;of&#32;memory.&quot;</emphasis>);
 42 
-43 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
-44 }
-45 
-<link linkend="matrix_8c_1abbb8d2d20c2dd53a2269d017a336668f">53 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1abbb8d2d20c2dd53a2269d017a336668f">copyMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="matrix_8c_1a6b7faa6ba9ee987d0777d9d0bd0e7b32">scaleMatrix</link>(m,&#32;1);&#32;}
-54 
-<link linkend="matrix_8c_1ae98365c910e9d688d2bdedec50d89a6b">59 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8c_1ae98365c910e9d688d2bdedec50d89a6b">freeMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
-60 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(m&#32;!=&#32;NULL)&#32;{
-61 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;!=&#32;NULL)&#32;{
-62 &#32;&#32;&#32;&#32;&#32;&#32;free(m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>);
-63 &#32;&#32;&#32;&#32;&#32;&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;=&#32;NULL;
-64 &#32;&#32;&#32;&#32;}
-65 &#32;&#32;&#32;&#32;free(m);
-66 &#32;&#32;}
-67 &#32;&#32;<emphasis class="keywordflow">return</emphasis>;
-68 }
-69 
-<link linkend="matrix_8c_1a50ab2b1ac33d6993d93522fc4f30a051">74 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8c_1a50ab2b1ac33d6993d93522fc4f30a051">printMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
-75 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j;
-76 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptr&#32;=&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-77 &#32;&#32;printf(<emphasis class="stringliteral">&quot;%d&#32;%d\n&quot;</emphasis>,&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
-78 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
-79 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
-80 &#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;&#32;%9.6f&quot;</emphasis>,&#32;*(ptr++));
-81 &#32;&#32;&#32;&#32;}
-82 &#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;\n&quot;</emphasis>);
-83 &#32;&#32;}
-84 &#32;&#32;<emphasis class="keywordflow">return</emphasis>;
-85 }
-86 
-<link linkend="matrix_8c_1aa3f5e409b1641373be7cf7284e216d1a">93 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1aa3f5e409b1641373be7cf7284e216d1a">identityMatrix</link>(<emphasis class="keywordtype">int</emphasis>&#32;n)&#32;{
-94 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i;
-95 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
-96 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptr;
-97 
-98 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(n&#32;&gt;&#32;0,&#32;<emphasis class="stringliteral">&quot;Identity&#32;matrix&#32;must&#32;have&#32;value&#32;greater&#32;than&#32;zero.&quot;</emphasis>);
+43 &#32;&#32;memset(out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>,&#32;0.0,&#32;width&#32;*&#32;height&#32;*&#32;<emphasis class="keyword">sizeof</emphasis>(<emphasis class="keywordtype">double</emphasis>));
+44 
+45 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
+46 }
+47 
+<link linkend="matrix_8c_1abbb8d2d20c2dd53a2269d017a336668f">55 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1abbb8d2d20c2dd53a2269d017a336668f">copyMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="matrix_8c_1a6b7faa6ba9ee987d0777d9d0bd0e7b32">scaleMatrix</link>(m,&#32;1);&#32;}
+56 
+<link linkend="matrix_8c_1ae98365c910e9d688d2bdedec50d89a6b">61 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8c_1ae98365c910e9d688d2bdedec50d89a6b">freeMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
+62 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(m&#32;!=&#32;NULL)&#32;{
+63 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;!=&#32;NULL)&#32;{
+64 &#32;&#32;&#32;&#32;&#32;&#32;free(m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>);
+65 &#32;&#32;&#32;&#32;&#32;&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;=&#32;NULL;
+66 &#32;&#32;&#32;&#32;}
+67 &#32;&#32;&#32;&#32;free(m);
+68 &#32;&#32;}
+69 &#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+70 }
+71 
+<link linkend="matrix_8c_1a50ab2b1ac33d6993d93522fc4f30a051">76 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8c_1a50ab2b1ac33d6993d93522fc4f30a051">printMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
+77 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j;
+78 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptr&#32;=&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+79 &#32;&#32;<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>(<emphasis class="stringliteral">&quot;%d&#32;%d\n&quot;</emphasis>,&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
+80 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
+81 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
+82 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>(<emphasis class="stringliteral">&quot;&#32;%9.6f&quot;</emphasis>,&#32;*(ptr++));
+83 &#32;&#32;&#32;&#32;}
+84 &#32;&#32;&#32;&#32;<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>(<emphasis class="stringliteral">&quot;\n&quot;</emphasis>);
+85 &#32;&#32;}
+86 &#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+87 }
+88 
+<link linkend="matrix_8c_1aa3f5e409b1641373be7cf7284e216d1a">95 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1aa3f5e409b1641373be7cf7284e216d1a">identityMatrix</link>(<emphasis class="keywordtype">int</emphasis>&#32;n)&#32;{
+96 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i;
+97 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
+98 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptr;
 99 
-100 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(n,&#32;n);
-101 &#32;&#32;ptr&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-102 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;n;&#32;i++)&#32;{
-103 &#32;&#32;&#32;&#32;*ptr&#32;=&#32;1.0;
-104 &#32;&#32;&#32;&#32;ptr&#32;+=&#32;n&#32;+&#32;1;
-105 &#32;&#32;}
-106 
-107 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
-108 }
-109 
-<link linkend="matrix_8c_1a4794df8b2032f961dd8b2d90276bc417">115 </link><emphasis class="keywordtype">double</emphasis>&#32;<link linkend="matrix_8c_1a4794df8b2032f961dd8b2d90276bc417">traceMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
-116 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i;
-117 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;size;
-118 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptr&#32;=&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-119 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;sum&#32;=&#32;0.0;
-120 
-121 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>)&#32;{
-122 &#32;&#32;&#32;&#32;size&#32;=&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;
-123 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
-124 &#32;&#32;&#32;&#32;size&#32;=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
-125 &#32;&#32;}
-126 
-127 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;size;&#32;i++)&#32;{
-128 &#32;&#32;&#32;&#32;sum&#32;+=&#32;*ptr;
-129 &#32;&#32;&#32;&#32;ptr&#32;+=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;+&#32;1;
-130 &#32;&#32;}
-131 
-132 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;sum;
-133 }
-134 
-<link linkend="matrix_8c_1ae4babf9b518a2d5d6b12776191e3b7de">142 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1ae4babf9b518a2d5d6b12776191e3b7de">meanMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
-143 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j;
-144 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
-145 
-146 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;&gt;&#32;0,&#32;<emphasis class="stringliteral">&quot;Height&#32;of&#32;matrix&#32;cannot&#32;be&#32;zero.&quot;</emphasis>);
+100 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(n&#32;&gt;&#32;0,&#32;<emphasis class="stringliteral">&quot;Identity&#32;matrix&#32;must&#32;have&#32;value&#32;greater&#32;than&#32;zero.&quot;</emphasis>);
+101 
+102 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(n,&#32;n);
+103 &#32;&#32;ptr&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+104 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;n;&#32;i++)&#32;{
+105 &#32;&#32;&#32;&#32;*ptr&#32;=&#32;1.0;
+106 &#32;&#32;&#32;&#32;ptr&#32;+=&#32;n&#32;+&#32;1;
+107 &#32;&#32;}
+108 
+109 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
+110 }
+111 
+<link linkend="matrix_8c_1a4794df8b2032f961dd8b2d90276bc417">117 </link><emphasis class="keywordtype">double</emphasis>&#32;<link linkend="matrix_8c_1a4794df8b2032f961dd8b2d90276bc417">traceMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
+118 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i;
+119 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;size;
+120 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptr&#32;=&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+121 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;sum&#32;=&#32;0.0;
+122 
+123 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>)&#32;{
+124 &#32;&#32;&#32;&#32;size&#32;=&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;
+125 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+126 &#32;&#32;&#32;&#32;size&#32;=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
+127 &#32;&#32;}
+128 
+129 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;size;&#32;i++)&#32;{
+130 &#32;&#32;&#32;&#32;sum&#32;+=&#32;*ptr;
+131 &#32;&#32;&#32;&#32;ptr&#32;+=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;+&#32;1;
+132 &#32;&#32;}
+133 
+134 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;sum;
+135 }
+136 
+<link linkend="matrix_8c_1ae4babf9b518a2d5d6b12776191e3b7de">144 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1ae4babf9b518a2d5d6b12776191e3b7de">meanMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
+145 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j;
+146 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
 147 
-148 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;1);
+148 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;&gt;&#32;0,&#32;<emphasis class="stringliteral">&quot;Height&#32;of&#32;matrix&#32;cannot&#32;be&#32;zero.&quot;</emphasis>);
 149 
-150 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;i++)&#32;{
-151 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptr;
-152 &#32;&#32;&#32;&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i]&#32;=&#32;0.0;
-153 &#32;&#32;&#32;&#32;ptr&#32;=&#32;&amp;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i];
-154 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;j++)&#32;{
-155 &#32;&#32;&#32;&#32;&#32;&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i]&#32;+=&#32;*ptr;
-156 &#32;&#32;&#32;&#32;&#32;&#32;ptr&#32;+=&#32;out-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
-157 &#32;&#32;&#32;&#32;}
-158 &#32;&#32;&#32;&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i]&#32;/=&#32;(double)m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;
-159 &#32;&#32;}
-160 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
-161 }
-162 
-<link linkend="matrix_8c_1ae6dab569959c360cf165136a3b625edd">169 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1ae6dab569959c360cf165136a3b625edd">covarianceMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
-170 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j,&#32;k&#32;=&#32;0;
-171 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
-172 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*mean;
-173 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrA;
-174 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrB;
-175 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
-176 
-177 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;&gt;&#32;1,&#32;<emphasis class="stringliteral">&quot;Height&#32;of&#32;matrix&#32;cannot&#32;be&#32;zero&#32;or&#32;one.&quot;</emphasis>);
+150 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;1);
+151 
+152 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;i++)&#32;{
+153 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptr;
+154 &#32;&#32;&#32;&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i]&#32;=&#32;0.0;
+155 &#32;&#32;&#32;&#32;ptr&#32;=&#32;&amp;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i];
+156 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;j++)&#32;{
+157 &#32;&#32;&#32;&#32;&#32;&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i]&#32;+=&#32;*ptr;
+158 &#32;&#32;&#32;&#32;&#32;&#32;ptr&#32;+=&#32;out-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
+159 &#32;&#32;&#32;&#32;}
+160 &#32;&#32;&#32;&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i]&#32;/=&#32;(double)m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;
+161 &#32;&#32;}
+162 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
+163 }
+164 
+<link linkend="matrix_8c_1ae6dab569959c360cf165136a3b625edd">171 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1ae6dab569959c360cf165136a3b625edd">covarianceMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
+172 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j,&#32;k&#32;=&#32;0;
+173 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
+174 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*mean;
+175 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrA;
+176 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrB;
+177 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
 178 
-179 &#32;&#32;mean&#32;=&#32;<link linkend="matrix_8c_1ae4babf9b518a2d5d6b12776191e3b7de">meanMatrix</link>(m);
-180 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>);
-181 &#32;&#32;ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-182 
-183 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;i++)&#32;{
-184 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
-185 &#32;&#32;&#32;&#32;&#32;&#32;ptrA&#32;=&#32;&amp;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i];
-186 &#32;&#32;&#32;&#32;&#32;&#32;ptrB&#32;=&#32;&amp;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[j];
-187 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;0.0;
-188 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(k&#32;=&#32;0;&#32;k&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;k++)&#32;{
-189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;+=&#32;(*ptrA&#32;-&#32;mean-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i])&#32;*&#32;(*ptrB&#32;-&#32;mean-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[j]);
-190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrA&#32;+=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
-191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrB&#32;+=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
-192 &#32;&#32;&#32;&#32;&#32;&#32;}
-193 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;/=&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;-&#32;1;
-194 &#32;&#32;&#32;&#32;&#32;&#32;ptrOut++;
-195 &#32;&#32;&#32;&#32;}
-196 &#32;&#32;}
-197 
-198 &#32;&#32;<link linkend="matrix_8c_1ae98365c910e9d688d2bdedec50d89a6b">freeMatrix</link>(mean);
-199 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
-200 }
-201 
-<link linkend="matrix_8c_1a2936260302742748b0639e8ec71d4d9f">207 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1a2936260302742748b0639e8ec71d4d9f">transposeMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
-208 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>,&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>);
-209 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrM&#32;=&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-210 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j;
-211 
-212 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
-213 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
-214 &#32;&#32;&#32;&#32;ptrOut&#32;=&#32;&amp;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i];
-215 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
-216 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;*ptrM;
-217 &#32;&#32;&#32;&#32;&#32;&#32;ptrM++;
-218 &#32;&#32;&#32;&#32;&#32;&#32;ptrOut&#32;+=&#32;out-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
-219 &#32;&#32;&#32;&#32;}
-220 &#32;&#32;}
-221 
-222 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
-223 }
-224 
-<link linkend="matrix_8c_1a63ed5c518b34768e9ef8e9d5f7d0b534">231 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1a63ed5c518b34768e9ef8e9d5f7d0b534">multiplyMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<link linkend="struct__matrix">matrix</link>&#32;*b)&#32;{
-232 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j,&#32;k;
-233 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
-234 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
-235 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrA;
-236 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrB;
-237 
-238 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;==&#32;b-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>,
-239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;Matrices&#32;have&#32;incorrect&#32;dimensions.&#32;a-&gt;width&#32;!=&#32;b-&gt;height&quot;</emphasis>);
-240 
-241 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
-242 &#32;&#32;ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-243 
-244 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
+179 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;&gt;&#32;1,&#32;<emphasis class="stringliteral">&quot;Height&#32;of&#32;matrix&#32;cannot&#32;be&#32;zero&#32;or&#32;one.&quot;</emphasis>);
+180 
+181 &#32;&#32;mean&#32;=&#32;<link linkend="matrix_8c_1ae4babf9b518a2d5d6b12776191e3b7de">meanMatrix</link>(m);
+182 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>);
+183 &#32;&#32;ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+184 
+185 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;i++)&#32;{
+186 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
+187 &#32;&#32;&#32;&#32;&#32;&#32;ptrA&#32;=&#32;&amp;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i];
+188 &#32;&#32;&#32;&#32;&#32;&#32;ptrB&#32;=&#32;&amp;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[j];
+189 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;0.0;
+190 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(k&#32;=&#32;0;&#32;k&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;k++)&#32;{
+191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;+=&#32;(*ptrA&#32;-&#32;mean-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i])&#32;*&#32;(*ptrB&#32;-&#32;mean-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[j]);
+192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrA&#32;+=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
+193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrB&#32;+=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
+194 &#32;&#32;&#32;&#32;&#32;&#32;}
+195 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;/=&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;-&#32;1;
+196 &#32;&#32;&#32;&#32;&#32;&#32;ptrOut++;
+197 &#32;&#32;&#32;&#32;}
+198 &#32;&#32;}
+199 
+200 &#32;&#32;<link linkend="matrix_8c_1ae98365c910e9d688d2bdedec50d89a6b">freeMatrix</link>(mean);
+201 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
+202 }
+203 
+<link linkend="matrix_8c_1a2936260302742748b0639e8ec71d4d9f">209 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1a2936260302742748b0639e8ec71d4d9f">transposeMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m)&#32;{
+210 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>,&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>);
+211 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrM&#32;=&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+212 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j;
+213 
+214 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
+215 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
+216 &#32;&#32;&#32;&#32;ptrOut&#32;=&#32;&amp;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i];
+217 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
+218 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;*ptrM;
+219 &#32;&#32;&#32;&#32;&#32;&#32;ptrM++;
+220 &#32;&#32;&#32;&#32;&#32;&#32;ptrOut&#32;+=&#32;out-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
+221 &#32;&#32;&#32;&#32;}
+222 &#32;&#32;}
+223 
+224 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
+225 }
+226 
+<link linkend="matrix_8c_1a63ed5c518b34768e9ef8e9d5f7d0b534">233 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1a63ed5c518b34768e9ef8e9d5f7d0b534">multiplyMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<link linkend="struct__matrix">matrix</link>&#32;*b)&#32;{
+234 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j,&#32;k;
+235 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
+236 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
+237 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrA;
+238 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrB;
+239 
+240 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;==&#32;b-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>,
+241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;Matrices&#32;have&#32;incorrect&#32;dimensions.&#32;a-&gt;width&#32;!=&#32;b-&gt;height&quot;</emphasis>);
+242 
+243 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
+244 &#32;&#32;ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
 245 
-246 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
-247 &#32;&#32;&#32;&#32;&#32;&#32;ptrA&#32;=&#32;&amp;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i&#32;*&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>];
-248 &#32;&#32;&#32;&#32;&#32;&#32;ptrB&#32;=&#32;&amp;b-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[j];
-249 
-250 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;0;
-251 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(k&#32;=&#32;0;&#32;k&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;k++)&#32;{
-252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;+=&#32;*ptrA&#32;*&#32;*ptrB;
-253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrA++;
-254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrB&#32;+=&#32;b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
-255 &#32;&#32;&#32;&#32;&#32;&#32;}
-256 &#32;&#32;&#32;&#32;&#32;&#32;ptrOut++;
-257 &#32;&#32;&#32;&#32;}
-258 &#32;&#32;}
-259 
-260 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
-261 }
-262 
-<link linkend="matrix_8c_1a6b7faa6ba9ee987d0777d9d0bd0e7b32">270 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1a6b7faa6ba9ee987d0777d9d0bd0e7b32">scaleMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m,&#32;<emphasis class="keywordtype">double</emphasis>&#32;value)&#32;{
-271 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;elements&#32;=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;*&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;
-272 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
-273 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrM&#32;=&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-274 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-275 
-276 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;elements;&#32;i++)&#32;{
-277 &#32;&#32;&#32;&#32;*(ptrOut++)&#32;=&#32;*(ptrM++)&#32;*&#32;value;
-278 &#32;&#32;}
-279 
-280 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
-281 }
-282 
-<link linkend="matrix_8c_1acdd57777a972ce339153878fa917db14">292 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8c_1acdd57777a972ce339153878fa917db14">rowSwap</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<emphasis class="keywordtype">int</emphasis>&#32;p,&#32;<emphasis class="keywordtype">int</emphasis>&#32;q)&#32;{
-293 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i;
-294 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;temp;
-295 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*pRow;
-296 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*qRow;
-297 
-298 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;&gt;&#32;2,&#32;<emphasis class="stringliteral">&quot;Matrix&#32;must&#32;have&#32;at&#32;least&#32;two&#32;rows&#32;to&#32;swap.&quot;</emphasis>);
-299 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(p&#32;&lt;&#32;a-&gt;height&#32;&amp;&amp;&#32;q&#32;&lt;&#32;a-&gt;height,
-300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;Values&#32;p&#32;and&#32;q&#32;must&#32;be&#32;less&#32;than&#32;the&#32;height&#32;of&#32;the&#32;matrix.&quot;</emphasis>);
-301 
-302 &#32;&#32;<emphasis class="comment">//&#32;If&#32;p&#32;and&#32;q&#32;are&#32;equal,&#32;do&#32;nothing.</emphasis>
-303 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(p&#32;==&#32;q)&#32;{
-304 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
-305 &#32;&#32;}
-306 
-307 &#32;&#32;pRow&#32;=&#32;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;+&#32;(p&#32;*&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>);
-308 &#32;&#32;qRow&#32;=&#32;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;+&#32;(q&#32;*&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>);
-309 
-310 &#32;&#32;<emphasis class="comment">//&#32;Swap!</emphasis>
-311 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;i++)&#32;{
-312 &#32;&#32;&#32;&#32;temp&#32;=&#32;*pRow;
-313 &#32;&#32;&#32;&#32;*pRow&#32;=&#32;*qRow;
-314 &#32;&#32;&#32;&#32;*qRow&#32;=&#32;temp;
-315 &#32;&#32;&#32;&#32;pRow++;
-316 &#32;&#32;&#32;&#32;qRow++;
-317 &#32;&#32;}
-318 
-319 &#32;&#32;<emphasis class="keywordflow">return</emphasis>;
-320 }
-321 
-<link linkend="matrix_8c_1a0b568a64e81a56779c2141b424475976">336 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1a0b568a64e81a56779c2141b424475976">dotProductMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<link linkend="struct__matrix">matrix</link>&#32;*b)&#32;{
-337 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
-338 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
-339 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrA;
-340 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrB;
-341 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j,&#32;k;
-342 
-343 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(b&#32;!=&#32;NULL)&#32;{
-344 &#32;&#32;&#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;==&#32;b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,
-345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;Matrices&#32;must&#32;be&#32;of&#32;the&#32;same&#32;dimensionality.&quot;</emphasis>);
-346 &#32;&#32;}
-347 
-348 &#32;&#32;<emphasis class="comment">//&#32;Are&#32;we&#32;computing&#32;the&#32;sum&#32;of&#32;squares&#32;of&#32;the&#32;same&#32;matrix?</emphasis>
-349 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(a&#32;==&#32;b&#32;||&#32;b&#32;==&#32;NULL)&#32;{
-350 &#32;&#32;&#32;&#32;b&#32;=&#32;a;&#32;<emphasis class="comment">//&#32;May&#32;not&#32;appear&#32;safe,&#32;but&#32;we&#32;can&#32;do&#32;this&#32;without&#32;risk&#32;of&#32;losing&#32;b.</emphasis>
-351 &#32;&#32;}
-352 
-353 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(b-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>,&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
-354 &#32;&#32;ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-355 
-356 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
-357 &#32;&#32;&#32;&#32;ptrB&#32;=&#32;b-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-358 
-359 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;b-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;j++)&#32;{
-360 &#32;&#32;&#32;&#32;&#32;&#32;ptrA&#32;=&#32;&amp;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i&#32;*&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>];
-361 
-362 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;0;
-363 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(k&#32;=&#32;0;&#32;k&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;k++)&#32;{
-364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;+=&#32;*ptrA&#32;*&#32;*ptrB;
-365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrA++;
-366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrB++;
-367 &#32;&#32;&#32;&#32;&#32;&#32;}
-368 &#32;&#32;&#32;&#32;&#32;&#32;ptrOut++;
-369 &#32;&#32;&#32;&#32;}
-370 &#32;&#32;}
-371 
-372 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
-373 }
-374 
-<link linkend="matrix_8c_1af49b525d7476c365833db9acd975e3a5">389 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1af49b525d7476c365833db9acd975e3a5">dotDiagonalMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<link linkend="struct__matrix">matrix</link>&#32;*b)&#32;{
-390 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
-391 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
-392 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrA;
-393 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrB;
-394 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j;
-395 
-396 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(b&#32;!=&#32;NULL)&#32;{
-397 &#32;&#32;&#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;==&#32;b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;&amp;&amp;&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;==&#32;b-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>,
-398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;Matrices&#32;must&#32;be&#32;of&#32;the&#32;same&#32;dimensionality.&quot;</emphasis>);
-399 &#32;&#32;}
-400 
-401 &#32;&#32;<emphasis class="comment">//&#32;Are&#32;we&#32;computing&#32;the&#32;sum&#32;of&#32;squares&#32;of&#32;the&#32;same&#32;matrix?</emphasis>
-402 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(a&#32;==&#32;b&#32;||&#32;b&#32;==&#32;NULL)&#32;{
-403 &#32;&#32;&#32;&#32;b&#32;=&#32;a;&#32;<emphasis class="comment">//&#32;May&#32;not&#32;appear&#32;safe,&#32;but&#32;we&#32;can&#32;do&#32;this&#32;without&#32;risk&#32;of&#32;losing&#32;b.</emphasis>
-404 &#32;&#32;}
-405 
-406 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(1,&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
-407 &#32;&#32;ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-408 &#32;&#32;ptrA&#32;=&#32;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-409 &#32;&#32;ptrB&#32;=&#32;b-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
-410 
-411 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
-412 &#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;0;
-413 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
-414 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;+=&#32;*ptrA&#32;*&#32;*ptrB;
-415 &#32;&#32;&#32;&#32;&#32;&#32;ptrA++;
-416 &#32;&#32;&#32;&#32;&#32;&#32;ptrB++;
-417 &#32;&#32;&#32;&#32;}
-418 &#32;&#32;&#32;&#32;ptrOut++;
-419 &#32;&#32;}
-420 
-421 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
-422 }
+246 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
+247 
+248 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
+249 &#32;&#32;&#32;&#32;&#32;&#32;ptrA&#32;=&#32;&amp;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i&#32;*&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>];
+250 &#32;&#32;&#32;&#32;&#32;&#32;ptrB&#32;=&#32;&amp;b-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[j];
+251 
+252 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;0;
+253 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(k&#32;=&#32;0;&#32;k&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;k++)&#32;{
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;+=&#32;*ptrA&#32;*&#32;*ptrB;
+255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrA++;
+256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrB&#32;+=&#32;b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;
+257 &#32;&#32;&#32;&#32;&#32;&#32;}
+258 &#32;&#32;&#32;&#32;&#32;&#32;ptrOut++;
+259 &#32;&#32;&#32;&#32;}
+260 &#32;&#32;}
+261 
+262 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
+263 }
+264 
+<link linkend="matrix_8c_1a6b7faa6ba9ee987d0777d9d0bd0e7b32">272 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1a6b7faa6ba9ee987d0777d9d0bd0e7b32">scaleMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*m,&#32;<emphasis class="keywordtype">double</emphasis>&#32;value)&#32;{
+273 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;elements&#32;=&#32;m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;*&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;
+274 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(m-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,&#32;m-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
+275 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrM&#32;=&#32;m-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+276 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+277 
+278 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;elements;&#32;i++)&#32;{
+279 &#32;&#32;&#32;&#32;*(ptrOut++)&#32;=&#32;*(ptrM++)&#32;*&#32;value;
+280 &#32;&#32;}
+281 
+282 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
+283 }
+284 
+<link linkend="matrix_8c_1acdd57777a972ce339153878fa917db14">294 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="matrix_8c_1acdd57777a972ce339153878fa917db14">rowSwap</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<emphasis class="keywordtype">int</emphasis>&#32;p,&#32;<emphasis class="keywordtype">int</emphasis>&#32;q)&#32;{
+295 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i;
+296 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;temp;
+297 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*pRow;
+298 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*qRow;
+299 
+300 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;&gt;&#32;2,&#32;<emphasis class="stringliteral">&quot;Matrix&#32;must&#32;have&#32;at&#32;least&#32;two&#32;rows&#32;to&#32;swap.&quot;</emphasis>);
+301 &#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(p&#32;&lt;&#32;a-&gt;height&#32;&amp;&amp;&#32;q&#32;&lt;&#32;a-&gt;height,
+302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;Values&#32;p&#32;and&#32;q&#32;must&#32;be&#32;less&#32;than&#32;the&#32;height&#32;of&#32;the&#32;matrix.&quot;</emphasis>);
+303 
+304 &#32;&#32;<emphasis class="comment">//&#32;If&#32;p&#32;and&#32;q&#32;are&#32;equal,&#32;do&#32;nothing.</emphasis>
+305 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(p&#32;==&#32;q)&#32;{
+306 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+307 &#32;&#32;}
+308 
+309 &#32;&#32;pRow&#32;=&#32;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;+&#32;(p&#32;*&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>);
+310 &#32;&#32;qRow&#32;=&#32;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>&#32;+&#32;(q&#32;*&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>);
+311 
+312 &#32;&#32;<emphasis class="comment">//&#32;Swap!</emphasis>
+313 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;i++)&#32;{
+314 &#32;&#32;&#32;&#32;temp&#32;=&#32;*pRow;
+315 &#32;&#32;&#32;&#32;*pRow&#32;=&#32;*qRow;
+316 &#32;&#32;&#32;&#32;*qRow&#32;=&#32;temp;
+317 &#32;&#32;&#32;&#32;pRow++;
+318 &#32;&#32;&#32;&#32;qRow++;
+319 &#32;&#32;}
+320 
+321 &#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+322 }
+323 
+<link linkend="matrix_8c_1a0b568a64e81a56779c2141b424475976">338 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1a0b568a64e81a56779c2141b424475976">dotProductMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<link linkend="struct__matrix">matrix</link>&#32;*b)&#32;{
+339 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
+340 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
+341 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrA;
+342 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrB;
+343 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j,&#32;k;
+344 
+345 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(b&#32;!=&#32;NULL)&#32;{
+346 &#32;&#32;&#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;==&#32;b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>,
+347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;Matrices&#32;must&#32;be&#32;of&#32;the&#32;same&#32;dimensionality.&quot;</emphasis>);
+348 &#32;&#32;}
+349 
+350 &#32;&#32;<emphasis class="comment">//&#32;Are&#32;we&#32;computing&#32;the&#32;sum&#32;of&#32;squares&#32;of&#32;the&#32;same&#32;matrix?</emphasis>
+351 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(a&#32;==&#32;b&#32;||&#32;b&#32;==&#32;NULL)&#32;{
+352 &#32;&#32;&#32;&#32;b&#32;=&#32;a;&#32;<emphasis class="comment">//&#32;May&#32;not&#32;appear&#32;safe,&#32;but&#32;we&#32;can&#32;do&#32;this&#32;without&#32;risk&#32;of&#32;losing&#32;b.</emphasis>
+353 &#32;&#32;}
+354 
+355 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(b-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>,&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
+356 &#32;&#32;ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+357 
+358 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
+359 &#32;&#32;&#32;&#32;ptrB&#32;=&#32;b-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+360 
+361 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;b-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;j++)&#32;{
+362 &#32;&#32;&#32;&#32;&#32;&#32;ptrA&#32;=&#32;&amp;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>[i&#32;*&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>];
+363 
+364 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;0;
+365 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(k&#32;=&#32;0;&#32;k&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;k++)&#32;{
+366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;+=&#32;*ptrA&#32;*&#32;*ptrB;
+367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrA++;
+368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ptrB++;
+369 &#32;&#32;&#32;&#32;&#32;&#32;}
+370 &#32;&#32;&#32;&#32;&#32;&#32;ptrOut++;
+371 &#32;&#32;&#32;&#32;}
+372 &#32;&#32;}
+373 
+374 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
+375 }
+376 
+<link linkend="matrix_8c_1af49b525d7476c365833db9acd975e3a5">391 </link><link linkend="struct__matrix">matrix</link>&#32;*<link linkend="matrix_8c_1af49b525d7476c365833db9acd975e3a5">dotDiagonalMatrix</link>(<link linkend="struct__matrix">matrix</link>&#32;*a,&#32;<link linkend="struct__matrix">matrix</link>&#32;*b)&#32;{
+392 &#32;&#32;<link linkend="struct__matrix">matrix</link>&#32;*out;
+393 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrOut;
+394 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrA;
+395 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;*ptrB;
+396 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i,&#32;j;
+397 
+398 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(b&#32;!=&#32;NULL)&#32;{
+399 &#32;&#32;&#32;&#32;<link linkend="matrix_8c_1a8e41e30382335ea89f90b72db0b44d6f">assert</link>(a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;==&#32;b-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>&#32;&amp;&amp;&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>&#32;==&#32;b-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>,
+400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;Matrices&#32;must&#32;be&#32;of&#32;the&#32;same&#32;dimensionality.&quot;</emphasis>);
+401 &#32;&#32;}
+402 
+403 &#32;&#32;<emphasis class="comment">//&#32;Are&#32;we&#32;computing&#32;the&#32;sum&#32;of&#32;squares&#32;of&#32;the&#32;same&#32;matrix?</emphasis>
+404 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(a&#32;==&#32;b&#32;||&#32;b&#32;==&#32;NULL)&#32;{
+405 &#32;&#32;&#32;&#32;b&#32;=&#32;a;&#32;<emphasis class="comment">//&#32;May&#32;not&#32;appear&#32;safe,&#32;but&#32;we&#32;can&#32;do&#32;this&#32;without&#32;risk&#32;of&#32;losing&#32;b.</emphasis>
+406 &#32;&#32;}
+407 
+408 &#32;&#32;out&#32;=&#32;<link linkend="matrix_8c_1aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</link>(1,&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>);
+409 &#32;&#32;ptrOut&#32;=&#32;out-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+410 &#32;&#32;ptrA&#32;=&#32;a-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+411 &#32;&#32;ptrB&#32;=&#32;b-&gt;<link linkend="struct__matrix_1ad3fdadaa9e22623d5830e37663d500be">data</link>;
+412 
+413 &#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a8d3b2dbcf98704f11073d646273eb3b0">height</link>;&#32;i++)&#32;{
+414 &#32;&#32;&#32;&#32;*ptrOut&#32;=&#32;0;
+415 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">for</emphasis>&#32;(j&#32;=&#32;0;&#32;j&#32;&lt;&#32;a-&gt;<link linkend="struct__matrix_1a30d055d00e1b4afea4568f2aa1cf5c37">width</link>;&#32;j++)&#32;{
+416 &#32;&#32;&#32;&#32;&#32;&#32;*ptrOut&#32;+=&#32;*ptrA&#32;*&#32;*ptrB;
+417 &#32;&#32;&#32;&#32;&#32;&#32;ptrA++;
+418 &#32;&#32;&#32;&#32;&#32;&#32;ptrB++;
+419 &#32;&#32;&#32;&#32;}
+420 &#32;&#32;&#32;&#32;ptrOut++;
+421 &#32;&#32;}
+422 
+423 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;out;
+424 }
     </computeroutput></literallayout>
 </section>

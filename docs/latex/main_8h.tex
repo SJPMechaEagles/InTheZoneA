@@ -5,18 +5,17 @@
 Header file for global functions.  
 
 
-{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ autonomous} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Runs the user autonomous code. \end{DoxyCompactList}\item 
 void \textbf{ initialize} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Runs user initialization code. \end{DoxyCompactList}\item 
 void \textbf{ initialize\+IO} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Runs pre-\/initialization code. \end{DoxyCompactList}\item 
 void \textbf{ operator\+Control} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs the user operator control code. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
@@ -50,73 +49,233 @@ Definition in file \textbf{ main.\+h}.
 \paragraph{autonomous()}
 {\footnotesize\ttfamily void autonomous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Runs the user autonomous code. This function will be started in its own task with the default priority and stack size whenever the robot is enabled via the Field Management System or the V\+EX Competition Switch in the autonomous mode. If the robot is disabled or communications is lost, the autonomous task will be stopped by the kernel. Re-\/enabling the robot will restart the task, not re-\/start it from where it left off.
+
+
+Runs the user autonomous code. 
+
+This function will be started in its own task with the default priority and stack size whenever the robot is enabled via the Field Management System or the V\+EX Competition Switch in the autonomous mode. If the robot is disabled or communications is lost, the autonomous task will be stopped by the kernel. Re-\/enabling the robot will restart the task, not re-\/start it from where it left off.
 
 Code running in the autonomous task cannot access information from the V\+EX Joystick. However, the autonomous function can be invoked from another task if a V\+EX Competition Switch is not available, and it can access joystick information if called in this way.
 
 The autonomous task may exit, unlike \doxyref{operator\+Control()}{p.}{main_8h_ac71a94af413917f27d108e95c4d6f6a7} which should never exit. If it does so, the robot will await a switch to another mode or disable/enable cycle. 
 
-Definition at line \textbf{ 34} of file \textbf{ auto.\+c}.
+Definition at line \textbf{ 125} of file \textbf{ auto.\+c}.
 
 
 
-References \textbf{ B\+O\+TH}, \textbf{ calculate\+\_\+encoder\+\_\+angle()}, \textbf{ close\+\_\+claw()}, \textbf{ deinitslew()}, \textbf{ D\+E\+P\+L\+O\+Y\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ H\+A\+L\+F\+\_\+\+R\+O\+T\+A\+TE}, \textbf{ init\+\_\+slew()}, \textbf{ L\+E\+FT}, \textbf{ lower\+\_\+intake()}, \textbf{ L\+O\+W\+E\+S\+T\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT}, \textbf{ M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, \textbf{ M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, \textbf{ M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE}, \textbf{ M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ open\+\_\+claw()}, \textbf{ raise\+\_\+intake()}, \textbf{ R\+I\+G\+HT}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT}, \textbf{ set\+\_\+claw\+\_\+motor()}, \textbf{ set\+\_\+intake\+\_\+motor()}, \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}, \textbf{ set\+\_\+side\+\_\+speed()}, and \textbf{ Z\+O\+N\+E\+\_\+\+D\+I\+S\+T\+A\+N\+CE}.
+References \textbf{ auton\+\_\+drive\+\_\+towards\+\_\+mobile\+\_\+goal()}, \textbf{ auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max()}, \textbf{ auton\+\_\+rasie\+\_\+main\+\_\+lifter()}, \textbf{ auton\+\_\+turn\+\_\+180()}, \textbf{ B\+O\+TH}, \textbf{ claw\+\_\+grab\+\_\+cone()}, \textbf{ deinitslew()}, \textbf{ delay()}, \textbf{ deploy\+\_\+seoncdary\+\_\+lifter()}, \textbf{ ime\+Get()}, \textbf{ info()}, \textbf{ lower\+\_\+intake()}, \textbf{ raise\+\_\+intake()}, \textbf{ set\+\_\+intake\+\_\+motor()}, \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}, \textbf{ set\+\_\+side\+\_\+speed()}, \textbf{ setup\+\_\+ime\+\_\+auton()}, and \textbf{ start\+\_\+auton()}.
 
+
+\begin{DoxyCode}
+00125                   \{
+00126   start_auton();
+00127 
+00128   \textcolor{comment}{// How far the left wheels have gone}
+00129   \textcolor{keywordtype}{int} counts\_drive\_left;
+00130   \textcolor{comment}{// How far the right wheels have gone}
+00131   \textcolor{keywordtype}{int} counts\_drive\_right;
+00132   \textcolor{comment}{// The average distance traveled forward}
+00133   \textcolor{keywordtype}{int} counts\_drive;
+00134 
+00135   \textcolor{comment}{// Reset the integrated motor controllers}
+00136   setup_ime_auton(&counts\_drive\_left, &counts\_drive\_right, &counts\_drive);
+00137   info(\textcolor{stringliteral}{"break 0"});
+00138   \textcolor{comment}{// Deploy claw}
+00139   deploy_seoncdary_lifter();
+00140   info(\textcolor{stringliteral}{"break 1"});
+00141 
+00142   info(\textcolor{stringliteral}{"break 2"});
+00143   set_secondary_lifter_motors(0);
+00144 
+00145   \textcolor{comment}{// Grab pre-load cone}
+00146   delay(300);
+00147 
+00148   auton_raise_sec_lifter_max();
+00149   \textcolor{comment}{// Raise the lifter}
+00150   auton_rasie_main_lifter();
+00151   \textcolor{comment}{// Drive towards the goal}
+00152 
+00153   lower_intake();
+00154   delay(300);
+00155   set_intake_motor(0);
+00156 
+00157   auton_drive_towards_mobile_goal(counts\_drive, counts\_drive\_left,
+00158                                   counts\_drive\_right);
+00159   \textcolor{comment}{// Stop moving}
+00160   set_side_speed(BOTH, 0);
+00161   delay(1000);
+00162 
+00163   raise_intake();
+00164   delay(300);
+00165   set_intake_motor(0);
+00166 
+00167   \textcolor{comment}{// Drop the cone on the goal}
+00168   claw_grab_cone();
+00169   delay(1000);
+00170 
+00171   auton_turn_180();
+00172 
+00173   counts\_drive = 0;
+00174 
+00175   \textcolor{keywordflow}{while} (counts\_drive < MOBILE\_GOAL\_DISTANCE + ZONE\_DISTANCE) \{
+00176     set_side_speed(BOTH, 127);
+00177     \textcolor{comment}{// Restablish the distance traveled}
+00178     imeGet(MID\_LEFT\_DRIVE, &counts\_drive\_left);
+00179     imeGet(MID\_RIGHT\_DRIVE, &counts\_drive\_right);
+00180     counts\_drive = counts\_drive\_left + counts\_drive\_right;
+00181     counts\_drive /= 2;
+00182   \}
+00183 
+00184   lower_intake();
+00185   delay(300);
+00186   set_intake_motor(0);
+00187 
+00188   set_side_speed(BOTH, MIN\_SPEED);
+00189   delay(1000);
+00190   set_side_speed(BOTH, 0);
+00191 
+00192   deinitslew();
+00193 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8h_a3c7ca506bbc071fa740de13805b7f376_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{main_8h_a25a40b6614565f755233080a384c35f1}} 
 \index{main.\+h@{main.\+h}!initialize@{initialize}}
 \index{initialize@{initialize}!main.\+h@{main.\+h}}
 \paragraph{initialize()}
 {\footnotesize\ttfamily void initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Runs user initialization code. This function will be started in its own task with the default priority and stack size once when the robot is starting up. It is possible that the V\+E\+Xnet communication link may not be fully established at this time, so reading from the V\+EX Joystick may fail.
+
+
+Runs user initialization code. 
+
+This function will be started in its own task with the default priority and stack size once when the robot is starting up. It is possible that the V\+E\+Xnet communication link may not be fully established at this time, so reading from the V\+EX Joystick may fail.
 
 This function should initialize most sensors (gyro, encoders, ultrasonics), L\+C\+Ds, global variables, and I\+M\+Es.
 
 This function must exit relatively promptly, or the \doxyref{operator\+Control()}{p.}{main_8h_ac71a94af413917f27d108e95c4d6f6a7} and \doxyref{autonomous()}{p.}{main_8h_a3c7ca506bbc071fa740de13805b7f376} tasks will not start. An autonomous mode selection menu like the pre\+\_\+auton() in other environments can be implemented in this task if desired. 
 
-Definition at line \textbf{ 50} of file \textbf{ init.\+c}.
+Definition at line \textbf{ 52} of file \textbf{ init.\+c}.
 
 
 
-References \textbf{ battery\+\_\+level\+\_\+acceptable()}, \textbf{ error()}, \textbf{ info()}, \textbf{ init\+\_\+encoders()}, \textbf{ init\+\_\+error()}, \textbf{ init\+\_\+main\+\_\+lcd()}, \textbf{ init\+\_\+menu\+\_\+var()}, \textbf{ lifter\+\_\+ultrasonic}, and \textbf{ S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE}.
+References \textbf{ battery\+\_\+level\+\_\+acceptable()}, \textbf{ error()}, \textbf{ info()}, \textbf{ init\+\_\+encoders()}, \textbf{ init\+\_\+error()}, \textbf{ init\+\_\+main\+\_\+lcd()}, \textbf{ init\+\_\+menu\+\_\+var()}, \textbf{ lifter\+\_\+ultrasonic}, \textbf{ set\+Team\+Name()}, \textbf{ S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE}, and \textbf{ ultrasonic\+Init()}.
 
+
+\begin{DoxyCode}
+00052                   \{
+00053   init_main_lcd(uart1);
+00054   info(\textcolor{stringliteral}{"LCD Init"});
+00055   \textcolor{keywordflow}{if} (!battery_level_acceptable())
+00056     error(\textcolor{stringliteral}{"Bad main/backup bat"});
+00057   menu_t *t =
+00058       init_menu_var(STRING_TYPE, \textcolor{stringliteral}{"TEST Menu"}, 5, \textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}, \textcolor{stringliteral}{"3"}, \textcolor{stringliteral}{"4"}, \textcolor{stringliteral}{"5"});
+00059   init_error(\textcolor{keyword}{true}, uart2);
+00060   setTeamName(\textcolor{stringliteral}{"9228A"});
+00061   init_encoders();
+00062   lifter_ultrasonic = ultrasonicInit(4, 5);
+00063 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8h_a25a40b6614565f755233080a384c35f1_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{main_8h_ad9cda921edb01125bb13c2f86bcf624b}} 
 \index{main.\+h@{main.\+h}!initialize\+IO@{initialize\+IO}}
 \index{initialize\+IO@{initialize\+IO}!main.\+h@{main.\+h}}
 \paragraph{initialize\+I\+O()}
 {\footnotesize\ttfamily void initialize\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Runs pre-\/initialization code. This function will be started in kernel mode one time while the V\+EX Cortex is starting up. As the scheduler is still paused, most A\+PI functions will fail.
 
-The purpose of this function is solely to set the default pin modes (pin\+Mode()) and port states (digital\+Write()) of limit switches, push buttons, and solenoids. It can also safely configure a U\+A\+RT port (usart\+Open()) but cannot set up an L\+CD (lcd\+Init()). 
 
-Definition at line \textbf{ 35} of file \textbf{ init.\+c}.
+Runs pre-\/initialization code. 
 
+This function will be started in kernel mode one time while the V\+EX Cortex is starting up. As the scheduler is still paused, most A\+PI functions will fail.
+
+The purpose of this function is solely to set the default pin modes (\doxyref{pin\+Mode()}{p.}{_a_p_i_8h_a1875409d12eee562555bda94cad7f973}) and port states (\doxyref{digital\+Write()}{p.}{_a_p_i_8h_a23e767e5b47fa61d4e2cc02e6f15c7ab}) of limit switches, push buttons, and solenoids. It can also safely configure a U\+A\+RT port (usart\+Open()) but cannot set up an L\+CD (\doxyref{lcd\+Init()}{p.}{_a_p_i_8h_a43dc11a67b697c0d32315ea5a9af85f9}). 
+
+Definition at line \textbf{ 36} of file \textbf{ init.\+c}.
+
+
+
+References \textbf{ watchdog\+Init()}.
+
+
+\begin{DoxyCode}
+00036 \{ watchdogInit(); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{main_8h_ad9cda921edb01125bb13c2f86bcf624b_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{main_8h_ac71a94af413917f27d108e95c4d6f6a7}} 
 \index{main.\+h@{main.\+h}!operator\+Control@{operator\+Control}}
 \index{operator\+Control@{operator\+Control}!main.\+h@{main.\+h}}
 \paragraph{operator\+Control()}
 {\footnotesize\ttfamily void operator\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Runs the user operator control code. This function will be started in its own task with the default priority and stack size whenever the robot is enabled via the Field Management System or the V\+EX Competition Switch in the operator control mode. If the robot is disabled or communications is lost, the operator control task will be stopped by the kernel. Re-\/enabling the robot will restart the task, not resume it from where it left off.
+
+
+Runs the user operator control code. 
+
+This function will be started in its own task with the default priority and stack size whenever the robot is enabled via the Field Management System or the V\+EX Competition Switch in the operator control mode. If the robot is disabled or communications is lost, the operator control task will be stopped by the kernel. Re-\/enabling the robot will restart the task, not resume it from where it left off.
 
 If no V\+EX Competition Switch or Field Management system is plugged in, the V\+EX Cortex will run the operator control task. Be warned that this will also occur if the V\+EX Cortex is tethered directly to a computer via the U\+SB A to A cable without any V\+EX Joystick attached.
 
-Code running in this task can take almost any action, as the V\+EX Joystick is available and the scheduler is operational. However, proper use of delay() or task\+Delay\+Until() is highly recommended to give other tasks (including system tasks such as updating L\+C\+Ds) time to run.
+Code running in this task can take almost any action, as the V\+EX Joystick is available and the scheduler is operational. However, proper use of \doxyref{delay()}{p.}{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe} or \doxyref{task\+Delay\+Until()}{p.}{_a_p_i_8h_ae93bc867b1aa4a12d6536a497f1b6869} is highly recommended to give other tasks (including system tasks such as updating L\+C\+Ds) time to run.
 
 This task should never exit; it should end with some kind of infinite loop, even if empty.
 
-Runs the user operator control code. This function will be started in its own task with the default priority and stack size whenever the robot is enabled via the Field Management System or the V\+EX Competition Switch in the operator control mode. If the robot is disabled or communications is lost, the operator control task will be stopped by the kernel. Re-\/enabling the robot will restart the task, not resume it from where it left off.
+This function will be started in its own task with the default priority and stack size whenever the robot is enabled via the Field Management System or the V\+EX Competition Switch in the operator control mode. If the robot is disabled or communications is lost, the operator control task will be stopped by the kernel. Re-\/enabling the robot will restart the task, not resume it from where it left off.
 
 If no V\+EX Competition Switch or Field Management system is plugged in, the V\+EX Cortex will run the operator control task. Be warned that this will also occur if the V\+EX Cortex is tethered directly to a computer via the U\+SB A to A cable without any V\+EX Joystick attached.
 
-Code running in this task can take almost any action, as the V\+EX Joystick is available and the scheduler is operational. However, proper use of delay() or task\+Delay\+Until() is highly recommended to give other tasks (including system tasks such as updating L\+C\+Ds) time to run.
+Code running in this task can take almost any action, as the V\+EX Joystick is available and the scheduler is operational. However, proper use of \doxyref{delay()}{p.}{_a_p_i_8h_a1c59207742a1acf45a8957d7f04f9dfe} or \doxyref{task\+Delay\+Until()}{p.}{_a_p_i_8h_ae93bc867b1aa4a12d6536a497f1b6869} is highly recommended to give other tasks (including system tasks such as updating L\+C\+Ds) time to run.
 
 This task should never exit; its should end with some kind of infinite loop, even if empty. 
 
-Definition at line \textbf{ 49} of file \textbf{ opcontrol.\+c}.
+Definition at line \textbf{ 48} of file \textbf{ opcontrol.\+c}.
 
 
 
-References \textbf{ button\+Init()}, \textbf{ init\+\_\+routine()}, \textbf{ init\+\_\+slew()}, \textbf{ update\+\_\+claw()}, \textbf{ update\+\_\+drive\+\_\+motors()}, \textbf{ update\+\_\+intake()}, and \textbf{ update\+\_\+lifter()}.
+References \textbf{ autostack\+\_\+routine()}, \textbf{ button\+Init()}, \textbf{ delay()}, \textbf{ init\+\_\+routine()}, \textbf{ init\+\_\+slew()}, \textbf{ interrupt\+\_\+auto\+\_\+stack()}, \textbf{ J\+O\+Y2\+\_\+7D}, \textbf{ J\+O\+Y2\+\_\+7R}, \textbf{ register\+\_\+routine()}, \textbf{ update\+\_\+claw()}, \textbf{ update\+\_\+drive\+\_\+motors()}, \textbf{ update\+\_\+intake()}, and \textbf{ update\+\_\+lifter()}.
 
+
+\begin{DoxyCode}
+00048                        \{
+00049   buttonInit();
+00050   init_routine();
+00051   init_slew();
+00052   register_routine(&autostack_routine, JOY2_7D, NULL);
+00053   register_routine(&interrupt_auto_stack, JOY2_7R, NULL);
+00054   \textcolor{keywordflow}{while} (1) \{
+00055     update_claw();
+00056     update_intake();
+00057     update_lifter();
+00058     update_drive_motors();
+00059     delay(20);
+00060   \}
+00061 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8h_ac71a94af413917f27d108e95c4d6f6a7_cgraph}
+\end{center}
+\end{figure}

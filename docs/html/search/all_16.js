@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['x',['x',['../structlocation.html#aacd18b2506c49d221cfc37b2119e3c3c',1,'location::x()'],['../structcord.html#a2eef9b681474b679cf87b0c20eced2cd',1,'cord::x()'],['../structencoder__odemtry.html#a9a803978381f9b89a031d520a627cbcf',1,'encoder_odemtry::x()'],['../structaccelerometer__odometry.html#a83af671d99413a7c480678d5abb9c64a',1,'accelerometer_odometry::x()']]]
+  ['wait',['wait',['../_a_p_i_8h.html#add8964052eef78ca864990642888a7d7',1,'API.h']]],
+  ['waituntil',['waitUntil',['../_a_p_i_8h.html#a591705c8bd27fce32490b0bd4fb7ecd9',1,'API.h']]],
+  ['warning',['warning',['../log_8h.html#a0bec2cf5fff7f607bc510b74aba9887c',1,'warning(const char *warning_message):&#160;log.c'],['../log_8c.html#a0bec2cf5fff7f607bc510b74aba9887c',1,'warning(const char *warning_message):&#160;log.c']]],
+  ['watchdoginit',['watchdogInit',['../_a_p_i_8h.html#a8c2e4902f39a7abdea20cdf04007bb8e',1,'API.h']]],
+  ['width',['width',['../struct__matrix.html#a30d055d00e1b4afea4568f2aa1cf5c37',1,'_matrix']]]
 ];

@@ -25,5 +25,7 @@ var searchData=
   ['joy2_5f8r',['JOY2_8R',['../controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660abc764a5cd8d6f685af2a29052a4233c3',1,'controller.h']]],
   ['joy2_5f8u',['JOY2_8U',['../controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660a879b8a1b3acb52f73809d8edd8ffb06f',1,'controller.h']]],
   ['joystick',['joystick',['../controller_8h.html#ac365c9e892abe4a1b85ae8f56a4eae5a',1,'controller.h']]],
-  ['joystickexp',['joystickExp',['../drive_8c.html#a6de4fbb9197f2f350c53a9f8bf23a8f1',1,'drive.c']]]
+  ['joystickexp',['joystickExp',['../drive_8c.html#a6de4fbb9197f2f350c53a9f8bf23a8f1',1,'drive.c']]],
+  ['joystickgetanalog',['joystickGetAnalog',['../_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d',1,'API.h']]],
+  ['joystickgetdigital',['joystickGetDigital',['../_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92',1,'API.h']]]
 ];

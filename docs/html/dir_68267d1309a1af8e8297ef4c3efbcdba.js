@@ -19,7 +19,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "menu.c", "menu_8c.html", "menu_8c" ],
     [ "mobile_goal_intake.c", "mobile__goal__intake_8c.html", "mobile__goal__intake_8c" ],
     [ "opcontrol.c", "opcontrol_8c.html", "opcontrol_8c" ],
-    [ "partner.c", "partner_8c.html", "partner_8c" ],
     [ "routines.c", "routines_8c.html", "routines_8c" ],
     [ "slew.c", "slew_8c.html", "slew_8c" ],
     [ "toggle.c", "toggle_8c.html", "toggle_8c" ],

@@ -1,13 +1,21 @@
 var searchData=
 [
-  ['get_5fencoder_5fticks',['get_encoder_ticks',['../encoders_8h.html#aed261dd4dae33a48c42f2e363c84760f',1,'get_encoder_ticks(unsigned char address):&#160;encoders.c'],['../encoders_8c.html#aed261dd4dae33a48c42f2e363c84760f',1,'get_encoder_ticks(unsigned char address):&#160;encoders.c']]],
-  ['get_5fencoder_5fvelocity',['get_encoder_velocity',['../encoders_8h.html#a8e6b77703c5cf18e00709b052fb4bf22',1,'get_encoder_velocity(unsigned char address):&#160;encoders.c'],['../encoders_8c.html#a8e6b77703c5cf18e00709b052fb4bf22',1,'get_encoder_velocity(unsigned char address):&#160;encoders.c']]],
-  ['get_5fjoystick_5fcord',['get_joystick_cord',['../controller_8h.html#a0ce0176099c0bb15ad8c36123222059d',1,'get_joystick_cord(enum joystick side, int controller):&#160;controller.c'],['../controller_8c.html#a0ce0176099c0bb15ad8c36123222059d',1,'get_joystick_cord(enum joystick side, int controller):&#160;controller.c']]],
-  ['get_5fmain_5fgyro_5fangluar_5fvelocity',['get_main_gyro_angluar_velocity',['../gyro_8h.html#aec0963ebe3eb6cdfd7edaf486bbb0a87',1,'get_main_gyro_angluar_velocity():&#160;gyro.c'],['../gyro_8c.html#aec0963ebe3eb6cdfd7edaf486bbb0a87',1,'get_main_gyro_angluar_velocity():&#160;gyro.c']]],
-  ['get_5fmode',['get_mode',['../partner_8h.html#aacc86d07e59d3b919f5c5eae2ce5d404',1,'get_mode():&#160;partner.c'],['../partner_8c.html#aacc86d07e59d3b919f5c5eae2ce5d404',1,'get_mode():&#160;partner.c']]],
-  ['get_5fposition',['get_position',['../localization_8h.html#aadbff35bb757f60bc348d4d778f57a2f',1,'get_position():&#160;localization.c'],['../localization_8c.html#aadbff35bb757f60bc348d4d778f57a2f',1,'get_position():&#160;localization.c']]],
-  ['getclawticks',['getClawTicks',['../claw_8h.html#addd2004effae7c94400aed1fe6a90ead',1,'claw.h']]],
-  ['getlifterheight',['getLifterHeight',['../lifter_8h.html#a2719740958fd8a5926f88f6194e820e3',1,'getLifterHeight():&#160;lifter.c'],['../lifter_8c.html#a2719740958fd8a5926f88f6194e820e3',1,'getLifterHeight():&#160;lifter.c']]],
-  ['getlifterticks',['getLifterTicks',['../lifter_8h.html#acdf909159b0406c48099843f2306be78',1,'getLifterTicks():&#160;lifter.c'],['../lifter_8c.html#acdf909159b0406c48099843f2306be78',1,'getLifterTicks():&#160;lifter.c']]],
-  ['getthresh',['getThresh',['../drive_8c.html#a9caa5e772598f9182c9ec84cf8c351ee',1,'drive.c']]]
+  ['fclose',['fclose',['../_a_p_i_8h.html#a0990e9bf57d497796ddcf12f61122eb5',1,'API.h']]],
+  ['fcount',['fcount',['../_a_p_i_8h.html#aede7dd689fa991edc8e4c26908846606',1,'API.h']]],
+  ['fdelete',['fdelete',['../_a_p_i_8h.html#a27fc767a71921999f9651b1ca4cf1f93',1,'API.h']]],
+  ['feof',['feof',['../_a_p_i_8h.html#a4c92590178e34fbedcc6fde534a0afd1',1,'API.h']]],
+  ['fflush',['fflush',['../_a_p_i_8h.html#aec30d0b30f9f5b8a521dd8f9b6ec39c7',1,'API.h']]],
+  ['fgetc',['fgetc',['../_a_p_i_8h.html#a09f27f0f85db7ff4e2d98fef10c0dde1',1,'API.h']]],
+  ['fgets',['fgets',['../_a_p_i_8h.html#a6315d4a637f2c6a29ad9c1355dbd6b44',1,'API.h']]],
+  ['fopen',['fopen',['../_a_p_i_8h.html#a4cd09a1ff038c9ac9d461b077312beb6',1,'API.h']]],
+  ['fprint',['fprint',['../_a_p_i_8h.html#a874987bcf339f25df0bdbc24f27a03db',1,'API.h']]],
+  ['fprintf',['fprintf',['../_a_p_i_8h.html#ab9989f4619e4d3ccb13ed4c36d5f787a',1,'API.h']]],
+  ['fputc',['fputc',['../_a_p_i_8h.html#afe7d25ce198da1f8fec5a2dca770cb6a',1,'API.h']]],
+  ['fputs',['fputs',['../_a_p_i_8h.html#ae4859a13f64d3dc4d57875512f0d1171',1,'API.h']]],
+  ['fread',['fread',['../_a_p_i_8h.html#a01b4329a6303387a4187c94343c0cc59',1,'API.h']]],
+  ['freematrix',['freeMatrix',['../matrix_8h.html#ae98365c910e9d688d2bdedec50d89a6b',1,'freeMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#ae98365c910e9d688d2bdedec50d89a6b',1,'freeMatrix(matrix *m):&#160;matrix.c']]],
+  ['fseek',['fseek',['../_a_p_i_8h.html#adda53be8dacaa9deab92cabb9f2e54dd',1,'API.h']]],
+  ['ftell',['ftell',['../_a_p_i_8h.html#a1c2742ed272f2a5e12962df45653ff18',1,'API.h']]],
+  ['ftoaa',['ftoaa',['../vlib_8h.html#a4d26b0ac2f26341d827e0a13a0bd49b6',1,'ftoaa(float a, char *buffer, int precision):&#160;vlib.c'],['../vlib_8c.html#a4d26b0ac2f26341d827e0a13a0bd49b6',1,'ftoaa(float a, char *buffer, int precision):&#160;vlib.c']]],
+  ['fwrite',['fwrite',['../_a_p_i_8h.html#aaadc510ae9d7c433161a366de9fb828d',1,'API.h']]]
 ];

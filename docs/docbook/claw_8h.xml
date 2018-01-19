@@ -1,62 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="claw_8h">
     <title>claw.h File Reference</title>
-    <programlisting>#include &quot;controller.h&quot;</programlisting>
-    <programlisting>#include &quot;motor_ports.h&quot;</programlisting>
-    <programlisting>#include &quot;sensor_ports.h&quot;</programlisting>
-    <programlisting>#include &quot;slew.h&quot;</programlisting>
-    <programlisting>#include &lt;API.h&gt;</programlisting>
-        <section>
-            <title>Macros</title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="claw_8h_1af2a18397e9efae0be9470a76797b2077">CLAW_CLOSE</link> <link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link>, 5, JOY_UP<para><emphasis>The joystick parameters for closing the claw.</emphasis></para>
+<para>Include dependency diagram for claw.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="claw_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="claw_8h_1a78d3e6f3d4b60e1be137fdc6dd144224">CLAW_CLOSE_VAL</link> 3000<para><emphasis>The potentiometer value for a closed claw.</emphasis></para>
+<para>Included by dependency diagram for claw.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="claw_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="claw_8h_1ae42993ee3f6f4a0e47f99060fe736ba0">CLAW_OPEN</link> <link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link>, 5, JOY_DOWN<para><emphasis>The joystick parameters for opening the claw.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="claw_8h_1a519372d8dfa1706d706053ab035ea0b9">CLAW_OPEN_VAL</link> 1500<para><emphasis>The potentiometer value for a open claw.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="claw_8h_1ae3be50b28977dac719f086e131ba8fd7">MAX_CLAW_SPEED</link> 127<para><emphasis>The max motor vlaue of the claw.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="claw_8h_1a7306e61a4209c74862aa81d7b3de74e5">MIN_CLAW_SPEED</link> -127<para><emphasis>The min motor vlaue of the claw.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
         <section>
             <title>Enumerations</title>
             <para>
@@ -78,7 +44,16 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="claw_8h_1ac42dd40dbb37219295286859c6b068c2">close_claw</link> (
+                        <para>void <link linkend="claw_8h_1a3a6168bf4e2042115dd32542f1f6a2f5">claw_grab_cone</link> (
+)<para><emphasis>Drives the motors to open the claw.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="claw_8h_1aecaa4eedc34d6b164ee17ed104914227">claw_release_cone</link> (
 )<para><emphasis>Drives the motors to close the claw.</emphasis></para>
 </para>
                     </listitem>
@@ -89,15 +64,6 @@
                     <listitem>
                         <para>unsigned int <link linkend="claw_8h_1addd2004effae7c94400aed1fe6a90ead">getClawTicks</link> (
 )<para><emphasis>Gets the claw position in potentiometer ticks.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>void <link linkend="claw_8h_1a03023ca28f671b9fa7bac07782ccd8c1">open_claw</link> (
-)<para><emphasis>Drives the motors to open the claw.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -144,21 +110,21 @@ const int v)<para><emphasis>sets the claw motor speed</emphasis></para>
 9 
 10 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="controller_8h">controller.h</link>&quot;</emphasis>
 11 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="motor__ports_8h">motor_ports.h</link>&quot;</emphasis>
-12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="sensor__ports_8h">sensor_ports.h</link>&quot;</emphasis>
+12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="sensors_8h">sensors.h</link>&quot;</emphasis>
 13 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="slew_8h">slew.h</link>&quot;</emphasis>
-14 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+14 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
 15 
-<link linkend="claw_8h_1ae3be50b28977dac719f086e131ba8fd7">20 </link><emphasis class="preprocessor">#define&#32;MAX_CLAW_SPEED&#32;127</emphasis>
+20 <emphasis class="preprocessor">#define&#32;MAX_CLAW_SPEED&#32;127</emphasis>
 21 
-<link linkend="claw_8h_1a7306e61a4209c74862aa81d7b3de74e5">25 </link><emphasis class="preprocessor">#define&#32;MIN_CLAW_SPEED&#32;-127</emphasis>
+25 <emphasis class="preprocessor">#define&#32;MIN_CLAW_SPEED&#32;-127</emphasis>
 26 
-<link linkend="claw_8h_1af2a18397e9efae0be9470a76797b2077">31 </link><emphasis class="preprocessor">#define&#32;CLAW_CLOSE&#32;MASTER,&#32;5,&#32;JOY_UP</emphasis>
+31 <emphasis class="preprocessor">#define&#32;CLAW_CLOSE&#32;PARTNER,&#32;8,&#32;JOY_DOWN</emphasis>
 32 
-<link linkend="claw_8h_1ae42993ee3f6f4a0e47f99060fe736ba0">37 </link><emphasis class="preprocessor">#define&#32;CLAW_OPEN&#32;MASTER,&#32;5,&#32;JOY_DOWN</emphasis>
+37 <emphasis class="preprocessor">#define&#32;CLAW_OPEN&#32;PARTNER,&#32;8,&#32;JOY_RIGHT</emphasis>
 38 
-<link linkend="claw_8h_1a78d3e6f3d4b60e1be137fdc6dd144224">43 </link><emphasis class="preprocessor">#define&#32;CLAW_CLOSE_VAL&#32;3000</emphasis>
+43 <emphasis class="preprocessor">#define&#32;CLAW_CLOSE_VAL&#32;3000</emphasis>
 44 
-<link linkend="claw_8h_1a519372d8dfa1706d706053ab035ea0b9">49 </link><emphasis class="preprocessor">#define&#32;CLAW_OPEN_VAL&#32;1500</emphasis>
+49 <emphasis class="preprocessor">#define&#32;CLAW_OPEN_VAL&#32;1500</emphasis>
 50 
 55 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8h_1a0122b78972344264b8a276a559cfce4a">update_claw</link>();
 56 
@@ -166,9 +132,9 @@ const int v)<para><emphasis>sets the claw motor speed</emphasis></para>
 62 
 67 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="claw_8h_1addd2004effae7c94400aed1fe6a90ead">getClawTicks</link>();
 68 
-73 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8h_1a03023ca28f671b9fa7bac07782ccd8c1">open_claw</link>();
+73 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8h_1a3a6168bf4e2042115dd32542f1f6a2f5">claw_grab_cone</link>();
 74 
-79 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8h_1ac42dd40dbb37219295286859c6b068c2">close_claw</link>();
+79 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8h_1aecaa4eedc34d6b164ee17ed104914227">claw_release_cone</link>();
 80 
 <link linkend="claw_8h_1a600668fd307d596c3812126657335324">85 </link><emphasis class="keyword">enum</emphasis>&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324">claw_state</link>&#32;{&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd">CLAW_OPEN_STATE</link>,&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f">CLAW_CLOSE_STATE</link>,&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650">CLAW_NEUTRAL_STATE</link>&#32;};
 86 

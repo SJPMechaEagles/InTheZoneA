@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: src/routines.c File Reference</title>
+<title>VRC Team 9228A Code Documentation: src/routines.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.5.8</span>
+   <div id="projectname">VRC Team 9228A Code Documentation
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
   </td>
  </tr>
@@ -88,31 +87,29 @@ $(document).ready(function(){initNavTree('routines_8c.html','');});
 <div class="title">routines.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="routines_8h_source.html">routines.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="controller_8h_source.html">controller.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="log_8h_source.html">log.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="toggle_8h_source.html">toggle.h</a>&quot;</code><br />
-<code>#include &lt;API.h&gt;</code><br />
-</div>
+
 <p><a href="routines_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad908adbc884189372f72f882ec62d71d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="routines_8c.html#ad908adbc884189372f72f882ec62d71d">deinit_routines</a> ()</td></tr>
+<tr class="memdesc:ad908adbc884189372f72f882ec62d71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the routine system.  <a href="#ad908adbc884189372f72f882ec62d71d">More...</a><br /></td></tr>
 <tr class="separator:ad908adbc884189372f72f882ec62d71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab873e24fcc59a2bf7844618b664a5d26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="routines_8c.html#ab873e24fcc59a2bf7844618b664a5d26">init_routine</a> ()</td></tr>
+<tr class="memdesc:ab873e24fcc59a2bf7844618b664a5d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the routine system.  <a href="#ab873e24fcc59a2bf7844618b664a5d26">More...</a><br /></td></tr>
 <tr class="separator:ab873e24fcc59a2bf7844618b664a5d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bf3e235fcde5f0e1ce1f693cbb9c01c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="routines_8c.html#a4bf3e235fcde5f0e1ce1f693cbb9c01c">register_routine</a> (void(*routine)(), <a class="el" href="controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660">button_t</a> on_buttons, <a class="el" href="controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660">button_t</a> *prohibited_buttons)</td></tr>
-<tr class="separator:a4bf3e235fcde5f0e1ce1f693cbb9c01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9486ebd51b8c3d966619cf4617e6a930"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="routines_8c.html#a9486ebd51b8c3d966619cf4617e6a930">register_routine</a> (void(*routine)(void *), <a class="el" href="controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660">button_t</a> on_buttons, <a class="el" href="controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660">button_t</a> *prohibited_buttons)</td></tr>
+<tr class="memdesc:a9486ebd51b8c3d966619cf4617e6a930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a routine for the system to use.  <a href="#a9486ebd51b8c3d966619cf4617e6a930">More...</a><br /></td></tr>
+<tr class="separator:a9486ebd51b8c3d966619cf4617e6a930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a230cdcefb410a429fb6baba1f88fc9ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="routines_8c.html#a230cdcefb410a429fb6baba1f88fc9ba">routine_task</a> ()</td></tr>
+<tr class="memdesc:a230cdcefb410a429fb6baba1f88fc9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task that manages routines.  <a href="#a230cdcefb410a429fb6baba1f88fc9ba">More...</a><br /></td></tr>
 <tr class="separator:a230cdcefb410a429fb6baba1f88fc9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a4d70ab7b0355718354a9678801101aa2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structlist__t.html">list_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="routines_8c.html#a4d70ab7b0355718354a9678801101aa2">routine_list</a></td></tr>
 <tr class="separator:a4d70ab7b0355718354a9678801101aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ac8c8354c257b390c000a5153f4fec6"><td class="memItemLeft" align="right" valign="top">static TaskHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="routines_8c.html#a8ac8c8354c257b390c000a5153f4fec6">routine_task_var</a></td></tr>
+<tr class="memitem:a8ac8c8354c257b390c000a5153f4fec6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_a_p_i_8h.html#a23dca3c0de10682afb982677ff292f77">TaskHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="routines_8c.html#a8ac8c8354c257b390c000a5153f4fec6">routine_task_var</a></td></tr>
 <tr class="separator:a8ac8c8354c257b390c000a5153f4fec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -131,9 +128,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00033">33</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
+<p>Stops the routine system. </p>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="reference">References <a class="el" href="list_8c_source.html#l00030">list_destroy()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00047">47</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
+
+<p class="reference">References <a class="el" href="list_8c_source.html#l00050">list_destroy()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{ <a class="code" href="list_8h.html#ac2d2be572a896cccd0e76d56eeefcbdb">list_destroy</a>(<a class="code" href="routines_8c.html#a4d70ab7b0355718354a9678801101aa2">routine_list</a>); }</div><div class="ttc" id="list_8h_html_ac2d2be572a896cccd0e76d56eeefcbdb"><div class="ttname"><a href="list_8h.html#ac2d2be572a896cccd0e76d56eeefcbdb">list_destroy</a></div><div class="ttdeci">void list_destroy(list_t *self)</div><div class="ttdoc">Deallocates a list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8c_source.html#l00050">list.c:50</a></div></div>
+<div class="ttc" id="routines_8c_html_a4d70ab7b0355718354a9678801101aa2"><div class="ttname"><a href="routines_8c.html#a4d70ab7b0355718354a9678801101aa2">routine_list</a></div><div class="ttdeci">static list_t * routine_list</div><div class="ttdef"><b>Definition:</b> <a href="routines_8c_source.html#l00007">routines.c:7</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="routines_8c_ad908adbc884189372f72f882ec62d71d_cgraph.svg" width="256" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -152,16 +159,36 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00028">28</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
+<p>Starts the routine system. </p>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="reference">References <a class="el" href="list_8c_source.html#l00014">list_new()</a>, <a class="el" href="routines_8c_source.html#l00012">routine_task()</a>, and <a class="el" href="routines_8c_source.html#l00010">routine_task_var</a>.</p>
+<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00038">38</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00049">operatorControl()</a>.</p>
+<p class="reference">References <a class="el" href="list_8c_source.html#l00034">list_new()</a>, <a class="el" href="routines_8c_source.html#l00014">routine_task()</a>, <a class="el" href="routines_8c_source.html#l00009">routine_task_var</a>, and <a class="el" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00048">operatorControl()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="routines_8c.html#a4d70ab7b0355718354a9678801101aa2">routine_list</a> = <a class="code" href="list_8h.html#a9dd3eafdb56dcc64689f78fb4acdff3f">list_new</a>();</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="routines_8c.html#a8ac8c8354c257b390c000a5153f4fec6">routine_task_var</a> = <a class="code" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a>(<a class="code" href="routines_8c.html#a230cdcefb410a429fb6baba1f88fc9ba">routine_task</a>, 20);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="routines_8c_html_a230cdcefb410a429fb6baba1f88fc9ba"><div class="ttname"><a href="routines_8c.html#a230cdcefb410a429fb6baba1f88fc9ba">routine_task</a></div><div class="ttdeci">void routine_task()</div><div class="ttdoc">Task that manages routines. </div><div class="ttdef"><b>Definition:</b> <a href="routines_8c_source.html#l00014">routines.c:14</a></div></div>
+<div class="ttc" id="routines_8c_html_a8ac8c8354c257b390c000a5153f4fec6"><div class="ttname"><a href="routines_8c.html#a8ac8c8354c257b390c000a5153f4fec6">routine_task_var</a></div><div class="ttdeci">static TaskHandle routine_task_var</div><div class="ttdef"><b>Definition:</b> <a href="routines_8c_source.html#l00009">routines.c:9</a></div></div>
+<div class="ttc" id="_a_p_i_8h_html_ab05a241d6d1fd98b1ceb4665db678156"><div class="ttname"><a href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a></div><div class="ttdeci">TaskHandle taskRunLoop(void(*fn)(void), const unsigned long increment)</div><div class="ttdoc">Starts a task which will periodically call the specified function. </div></div>
+<div class="ttc" id="list_8h_html_a9dd3eafdb56dcc64689f78fb4acdff3f"><div class="ttname"><a href="list_8h.html#a9dd3eafdb56dcc64689f78fb4acdff3f">list_new</a></div><div class="ttdeci">list_t * list_new()</div><div class="ttdoc">Allocated a new list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8c_source.html#l00034">list.c:34</a></div></div>
+<div class="ttc" id="routines_8c_html_a4d70ab7b0355718354a9678801101aa2"><div class="ttname"><a href="routines_8c.html#a4d70ab7b0355718354a9678801101aa2">routine_list</a></div><div class="ttdeci">static list_t * routine_list</div><div class="ttdef"><b>Definition:</b> <a href="routines_8c_source.html#l00007">routines.c:7</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="routines_8c_ab873e24fcc59a2bf7844618b664a5d26_cgraph.svg" width="100%" height="549"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="routines_8c_ab873e24fcc59a2bf7844618b664a5d26_icgraph.svg" width="259" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
-<a id="a4bf3e235fcde5f0e1ce1f693cbb9c01c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bf3e235fcde5f0e1ce1f693cbb9c01c">&#9670;&nbsp;</a></span>register_routine()</h2>
+<a id="a9486ebd51b8c3d966619cf4617e6a930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9486ebd51b8c3d966619cf4617e6a930">&#9670;&nbsp;</a></span>register_routine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +196,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void register_routine </td>
           <td>(</td>
-          <td class="paramtype">void(*)()&#160;</td>
+          <td class="paramtype">void(*)(void *)&#160;</td>
           <td class="paramname"><em>routine</em>, </td>
         </tr>
         <tr>
@@ -192,9 +219,44 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00035">35</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
+<p>Registers a routine for the system to use. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">routine</td><td>The routine to register </td></tr>
+    <tr><td class="paramname">on_buttons</td><td>the trigger button </td></tr>
+    <tr><td class="paramname">prohibited_buttons</td><td>the buttons it blocks</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd></dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="reference">References <a class="el" href="routines_8h_source.html#l00005">routine_t::blocked_buttons</a>, <a class="el" href="list__node_8c_source.html#l00014">list_node_new()</a>, <a class="el" href="list_8c_source.html#l00051">list_rpush()</a>, <a class="el" href="routines_8h_source.html#l00004">routine_t::on_button</a>, <a class="el" href="routines_8h_source.html#l00006">routine_t::routine</a>, and <a class="el" href="list_8h_source.html#l00043">list_node::val</a>.</p>
+<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00056">56</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
+
+<p class="reference">References <a class="el" href="routines_8h_source.html#l00015">routine_t::blocked_buttons</a>, <a class="el" href="list__node_8c_source.html#l00012">list_node_new()</a>, <a class="el" href="list_8c_source.html#l00074">list_rpush()</a>, <a class="el" href="routines_8h_source.html#l00013">routine_t::on_button</a>, <a class="el" href="routines_8h_source.html#l00018">routine_t::routine</a>, and <a class="el" href="list_8h_source.html#l00056">list_node::val</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00048">operatorControl()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                                    {</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">struct </span><a class="code" href="structroutine__t.html">routine_t</a> *r = (<span class="keyword">struct </span><a class="code" href="structroutine__t.html">routine_t</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="structroutine__t.html">routine_t</a>));</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  r-&gt;<a class="code" href="structroutine__t.html#a8d278c682e01bd513956f9902772812a">blocked_buttons</a> = prohibited_buttons;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  r-&gt;<a class="code" href="structroutine__t.html#ac9915be4bb8f2415afe4bd27296cda14">routine</a> = <a class="code" href="structroutine__t.html#ac9915be4bb8f2415afe4bd27296cda14">routine</a>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  r-&gt;<a class="code" href="structroutine__t.html#a4600cad285b5643e422cb5bfe6ce7fa4">on_button</a> = on_buttons;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="structlist__node.html">list_node_t</a> *node = <a class="code" href="list_8h.html#a4ef36e0519514ac481d0d7e0b439d431">list_node_new</a>(r);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  node-&gt;<a class="code" href="structlist__node.html#a129de89b4c110fa54377ef16ab128ce0">val</a> = r;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="list_8h.html#a4edfa9b7742154bff4fc2cb05d044af9">list_rpush</a>(<a class="code" href="routines_8c.html#a4d70ab7b0355718354a9678801101aa2">routine_list</a>, node);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div><div class="ttc" id="list_8h_html_a4ef36e0519514ac481d0d7e0b439d431"><div class="ttname"><a href="list_8h.html#a4ef36e0519514ac481d0d7e0b439d431">list_node_new</a></div><div class="ttdeci">list_node_t * list_node_new(void *val)</div><div class="ttdoc">Allocates a new node. </div><div class="ttdef"><b>Definition:</b> <a href="list__node_8c_source.html#l00012">list_node.c:12</a></div></div>
+<div class="ttc" id="structroutine__t_html"><div class="ttname"><a href="structroutine__t.html">routine_t</a></div><div class="ttdoc">Routine system that allows mapping buttons to actions. </div><div class="ttdef"><b>Definition:</b> <a href="routines_8h_source.html#l00011">routines.h:11</a></div></div>
+<div class="ttc" id="list_8h_html_a4edfa9b7742154bff4fc2cb05d044af9"><div class="ttname"><a href="list_8h.html#a4edfa9b7742154bff4fc2cb05d044af9">list_rpush</a></div><div class="ttdeci">list_node_t * list_rpush(list_t *self, list_node_t *node)</div><div class="ttdoc">Pushed a node to the end of a list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8c_source.html#l00074">list.c:74</a></div></div>
+<div class="ttc" id="structroutine__t_html_a4600cad285b5643e422cb5bfe6ce7fa4"><div class="ttname"><a href="structroutine__t.html#a4600cad285b5643e422cb5bfe6ce7fa4">routine_t::on_button</a></div><div class="ttdeci">button_t on_button</div><div class="ttdef"><b>Definition:</b> <a href="routines_8h_source.html#l00013">routines.h:13</a></div></div>
+<div class="ttc" id="structlist__node_html"><div class="ttname"><a href="structlist__node.html">list_node</a></div><div class="ttdoc">A node in a list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00053">list.h:53</a></div></div>
+<div class="ttc" id="structroutine__t_html_ac9915be4bb8f2415afe4bd27296cda14"><div class="ttname"><a href="structroutine__t.html#ac9915be4bb8f2415afe4bd27296cda14">routine_t::routine</a></div><div class="ttdeci">void(* routine)(void *)</div><div class="ttdef"><b>Definition:</b> <a href="routines_8h_source.html#l00018">routines.h:18</a></div></div>
+<div class="ttc" id="routines_8c_html_a4d70ab7b0355718354a9678801101aa2"><div class="ttname"><a href="routines_8c.html#a4d70ab7b0355718354a9678801101aa2">routine_list</a></div><div class="ttdeci">static list_t * routine_list</div><div class="ttdef"><b>Definition:</b> <a href="routines_8c_source.html#l00007">routines.c:7</a></div></div>
+<div class="ttc" id="structlist__node_html_a129de89b4c110fa54377ef16ab128ce0"><div class="ttname"><a href="structlist__node.html#a129de89b4c110fa54377ef16ab128ce0">list_node::val</a></div><div class="ttdeci">void * val</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00056">list.h:56</a></div></div>
+<div class="ttc" id="structroutine__t_html_a8d278c682e01bd513956f9902772812a"><div class="ttname"><a href="structroutine__t.html#a8d278c682e01bd513956f9902772812a">routine_t::blocked_buttons</a></div><div class="ttdeci">button_t * blocked_buttons</div><div class="ttdef"><b>Definition:</b> <a href="routines_8h_source.html#l00015">routines.h:15</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="routines_8c_a9486ebd51b8c3d966619cf4617e6a930_cgraph.svg" width="279" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="routines_8c_a9486ebd51b8c3d966619cf4617e6a930_icgraph.svg" width="287" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -213,11 +275,41 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00012">12</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
+<p>Task that manages routines. </p>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
-<p class="reference">References <a class="el" href="toggle_8c_source.html#l00136">buttonIsNewPress()</a>, <a class="el" href="list_8h_source.html#l00032">LIST_HEAD</a>, <a class="el" href="list__iterator_8c_source.html#l00052">list_iterator_destroy()</a>, <a class="el" href="list__iterator_8c_source.html#l00015">list_iterator_new()</a>, <a class="el" href="list__iterator_8c_source.html#l00040">list_iterator_next()</a>, <a class="el" href="routines_8h_source.html#l00004">routine_t::on_button</a>, <a class="el" href="routines_8h_source.html#l00006">routine_t::routine</a>, and <a class="el" href="list_8h_source.html#l00043">list_node::val</a>.</p>
+<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00014">14</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00028">init_routine()</a>.</p>
+<p class="reference">References <a class="el" href="toggle_8c_source.html#l00136">buttonIsNewPress()</a>, <a class="el" href="log_8c_source.html#l00045">error()</a>, <a class="el" href="list_8h_source.html#l00040">LIST_HEAD</a>, <a class="el" href="list__iterator_8c_source.html#l00056">list_iterator_destroy()</a>, <a class="el" href="list__iterator_8c_source.html#l00011">list_iterator_new()</a>, <a class="el" href="list__iterator_8c_source.html#l00042">list_iterator_next()</a>, <a class="el" href="routines_8h_source.html#l00013">routine_t::on_button</a>, <a class="el" href="routines_8h_source.html#l00018">routine_t::routine</a>, <a class="el" href="_a_p_i_8h.html#abd5e503a273aaf6abf6869ebd76f2d2d">taskCreate()</a>, and <a class="el" href="list_8h_source.html#l00056">list_node::val</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00038">init_routine()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                    {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="structlist__node.html">list_node_t</a> *node;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="structlist__iterator__t.html">list_iterator_t</a> *it = <a class="code" href="list_8h.html#a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</a>(<a class="code" href="routines_8c.html#a4d70ab7b0355718354a9678801101aa2">routine_list</a>, <a class="code" href="list_8h.html#a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</a>);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">if</span> (it != NULL) {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">while</span> (node = <a class="code" href="list_8h.html#a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</a>(it)) {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keywordflow">if</span> (node-&gt;<a class="code" href="structlist__node.html#a129de89b4c110fa54377ef16ab128ce0">val</a> != NULL) {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="structroutine__t.html">routine_t</a> *<a class="code" href="structroutine__t.html#ac9915be4bb8f2415afe4bd27296cda14">routine</a> = (<a class="code" href="structroutine__t.html">routine_t</a> *)(node-&gt;<a class="code" href="structlist__node.html#a129de89b4c110fa54377ef16ab128ce0">val</a>);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="toggle_8h.html#ae819f86fad1b51d66f4294140b53ff77">buttonIsNewPress</a>(routine-&gt;<a class="code" href="structroutine__t.html#a4600cad285b5643e422cb5bfe6ce7fa4">on_button</a>)) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          <a class="code" href="_a_p_i_8h.html#a23dca3c0de10682afb982677ff292f77">TaskHandle</a> task =</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;              <a class="code" href="_a_p_i_8h.html#abd5e503a273aaf6abf6869ebd76f2d2d">taskCreate</a>(routine-&gt;<a class="code" href="structroutine__t.html#ac9915be4bb8f2415afe4bd27296cda14">routine</a>, TASK_DEFAULT_STACK_SIZE, NULL,</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                         TASK_PRIORITY_DEFAULT);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="log_8h.html#a8e5bb8a2a372f5b066ff7af7044584c1">error</a>(<span class="stringliteral">&quot;List iterator was null&quot;</span>);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="list_8h.html#ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</a>(it);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div><div class="ttc" id="list_8h_html_a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00"><div class="ttname"><a href="list_8h.html#a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</a></div><div class="ttdoc">start at head </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00040">list.h:40</a></div></div>
+<div class="ttc" id="list_8h_html_ad16fa29ddbb444070ea65f871e1c0ba2"><div class="ttname"><a href="list_8h.html#ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</a></div><div class="ttdeci">void list_iterator_destroy(list_iterator_t *self)</div><div class="ttdoc">Destroys the iterator. </div><div class="ttdef"><b>Definition:</b> <a href="list__iterator_8c_source.html#l00056">list_iterator.c:56</a></div></div>
+<div class="ttc" id="structroutine__t_html"><div class="ttname"><a href="structroutine__t.html">routine_t</a></div><div class="ttdoc">Routine system that allows mapping buttons to actions. </div><div class="ttdef"><b>Definition:</b> <a href="routines_8h_source.html#l00011">routines.h:11</a></div></div>
+<div class="ttc" id="structlist__iterator__t_html"><div class="ttname"><a href="structlist__iterator__t.html">list_iterator_t</a></div><div class="ttdoc">A iterator representation Allows automatic iteration through linked list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00086">list.h:86</a></div></div>
+<div class="ttc" id="toggle_8h_html_ae819f86fad1b51d66f4294140b53ff77"><div class="ttname"><a href="toggle_8h.html#ae819f86fad1b51d66f4294140b53ff77">buttonIsNewPress</a></div><div class="ttdeci">bool buttonIsNewPress(button_t)</div><div class="ttdoc">Detects if button is a new press from most recent check by comparing previous value to current value...</div><div class="ttdef"><b>Definition:</b> <a href="toggle_8c_source.html#l00136">toggle.c:136</a></div></div>
+<div class="ttc" id="list_8h_html_a2e5db981e32d3aef49ea79505a0615a6"><div class="ttname"><a href="list_8h.html#a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</a></div><div class="ttdeci">list_node_t * list_iterator_next(list_iterator_t *self)</div><div class="ttdoc">The next node in the iterator and advances the iterator. </div><div class="ttdef"><b>Definition:</b> <a href="list__iterator_8c_source.html#l00042">list_iterator.c:42</a></div></div>
+<div class="ttc" id="list_8h_html_a3c956afda343b4a6aaf68fbd4b446733"><div class="ttname"><a href="list_8h.html#a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</a></div><div class="ttdeci">list_iterator_t * list_iterator_new(list_t *list, list_direction_t direction)</div><div class="ttdoc">Creates a new iterator. </div><div class="ttdef"><b>Definition:</b> <a href="list__iterator_8c_source.html#l00011">list_iterator.c:11</a></div></div>
+<div class="ttc" id="structroutine__t_html_a4600cad285b5643e422cb5bfe6ce7fa4"><div class="ttname"><a href="structroutine__t.html#a4600cad285b5643e422cb5bfe6ce7fa4">routine_t::on_button</a></div><div class="ttdeci">button_t on_button</div><div class="ttdef"><b>Definition:</b> <a href="routines_8h_source.html#l00013">routines.h:13</a></div></div>
+<div class="ttc" id="structlist__node_html"><div class="ttname"><a href="structlist__node.html">list_node</a></div><div class="ttdoc">A node in a list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00053">list.h:53</a></div></div>
+<div class="ttc" id="_a_p_i_8h_html_abd5e503a273aaf6abf6869ebd76f2d2d"><div class="ttname"><a href="_a_p_i_8h.html#abd5e503a273aaf6abf6869ebd76f2d2d">taskCreate</a></div><div class="ttdeci">TaskHandle taskCreate(TaskCode taskCode, const unsigned int stackDepth, void *parameters, const unsigned int priority)</div><div class="ttdoc">Creates a new task and add it to the list of tasks that are ready to run. </div></div>
+<div class="ttc" id="structroutine__t_html_ac9915be4bb8f2415afe4bd27296cda14"><div class="ttname"><a href="structroutine__t.html#ac9915be4bb8f2415afe4bd27296cda14">routine_t::routine</a></div><div class="ttdeci">void(* routine)(void *)</div><div class="ttdef"><b>Definition:</b> <a href="routines_8h_source.html#l00018">routines.h:18</a></div></div>
+<div class="ttc" id="routines_8c_html_a4d70ab7b0355718354a9678801101aa2"><div class="ttname"><a href="routines_8c.html#a4d70ab7b0355718354a9678801101aa2">routine_list</a></div><div class="ttdeci">static list_t * routine_list</div><div class="ttdef"><b>Definition:</b> <a href="routines_8c_source.html#l00007">routines.c:7</a></div></div>
+<div class="ttc" id="log_8h_html_a8e5bb8a2a372f5b066ff7af7044584c1"><div class="ttname"><a href="log_8h.html#a8e5bb8a2a372f5b066ff7af7044584c1">error</a></div><div class="ttdeci">void error(const char *error_message)</div><div class="ttdoc">prints a error message and displays on lcd. </div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00045">log.c:45</a></div></div>
+<div class="ttc" id="structlist__node_html_a129de89b4c110fa54377ef16ab128ce0"><div class="ttname"><a href="structlist__node.html#a129de89b4c110fa54377ef16ab128ce0">list_node::val</a></div><div class="ttdeci">void * val</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00056">list.h:56</a></div></div>
+<div class="ttc" id="_a_p_i_8h_html_a23dca3c0de10682afb982677ff292f77"><div class="ttname"><a href="_a_p_i_8h.html#a23dca3c0de10682afb982677ff292f77">TaskHandle</a></div><div class="ttdeci">void * TaskHandle</div><div class="ttdoc">Type by which tasks are referenced. </div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i_8h_source.html#l01300">API.h:1300</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="routines_8c_a230cdcefb410a429fb6baba1f88fc9ba_cgraph.svg" width="100%" height="567"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="routines_8c_a230cdcefb410a429fb6baba1f88fc9ba_icgraph.svg" width="402" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -242,7 +334,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00008">8</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00007">7</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
 
 </div>
 </div>
@@ -256,7 +348,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TaskHandle routine_task_var</td>
+          <td class="memname"><a class="el" href="_a_p_i_8h.html#a23dca3c0de10682afb982677ff292f77">TaskHandle</a> routine_task_var</td>
         </tr>
       </table>
   </td>
@@ -266,9 +358,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00010">10</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="routines_8c_source.html#l00009">9</a> of file <a class="el" href="routines_8c_source.html">routines.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00028">init_routine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00038">init_routine()</a>.</p>
 
 </div>
 </div>

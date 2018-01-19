@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: src/claw.c File Reference</title>
+<title>VRC Team 9228A Code Documentation: src/claw.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.5.8</span>
+   <div id="projectname">VRC Team 9228A Code Documentation
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
   </td>
  </tr>
@@ -88,20 +87,17 @@ $(document).ready(function(){initNavTree('claw_8c.html','');});
 <div class="title">claw.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="claw_8h_source.html">claw.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="log_8h_source.html">log.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="toggle_8h_source.html">toggle.h</a>&quot;</code><br />
-</div>
+
 <p><a href="claw_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac42dd40dbb37219295286859c6b068c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="claw_8c.html#ac42dd40dbb37219295286859c6b068c2">close_claw</a> ()</td></tr>
-<tr class="memdesc:ac42dd40dbb37219295286859c6b068c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drives the motors to close the claw.  <a href="#ac42dd40dbb37219295286859c6b068c2">More...</a><br /></td></tr>
-<tr class="separator:ac42dd40dbb37219295286859c6b068c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03023ca28f671b9fa7bac07782ccd8c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="claw_8c.html#a03023ca28f671b9fa7bac07782ccd8c1">open_claw</a> ()</td></tr>
-<tr class="memdesc:a03023ca28f671b9fa7bac07782ccd8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drives the motors to open the claw.  <a href="#a03023ca28f671b9fa7bac07782ccd8c1">More...</a><br /></td></tr>
-<tr class="separator:a03023ca28f671b9fa7bac07782ccd8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6168bf4e2042115dd32542f1f6a2f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="claw_8c.html#a3a6168bf4e2042115dd32542f1f6a2f5">claw_grab_cone</a> ()</td></tr>
+<tr class="memdesc:a3a6168bf4e2042115dd32542f1f6a2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drives the motors to grab a cone.  <a href="#a3a6168bf4e2042115dd32542f1f6a2f5">More...</a><br /></td></tr>
+<tr class="separator:a3a6168bf4e2042115dd32542f1f6a2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecaa4eedc34d6b164ee17ed104914227"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="claw_8c.html#aecaa4eedc34d6b164ee17ed104914227">claw_release_cone</a> ()</td></tr>
+<tr class="memdesc:aecaa4eedc34d6b164ee17ed104914227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drives the motors to release a cone.  <a href="#aecaa4eedc34d6b164ee17ed104914227">More...</a><br /></td></tr>
+<tr class="separator:aecaa4eedc34d6b164ee17ed104914227"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a57f998b1884d39b0cc786689f7086f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="claw_8c.html#a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</a> (const int v)</td></tr>
 <tr class="memdesc:a3a57f998b1884d39b0cc786689f7086f"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the claw motor speed  <a href="#a3a57f998b1884d39b0cc786689f7086f">More...</a><br /></td></tr>
 <tr class="separator:a3a57f998b1884d39b0cc786689f7086f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,18 +107,20 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:ae1fc3deab25f0b9e6f636bb83e9bf5c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="claw_8c.html#ae1fc3deab25f0b9e6f636bb83e9bf5c2">lifter_autostack_running</a></td></tr>
+<tr class="separator:ae1fc3deab25f0b9e6f636bb83e9bf5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70d16bb05218682b0a5eaabb141e9d8f"><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="claw_8h.html#a600668fd307d596c3812126657335324">claw_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="claw_8c.html#a70d16bb05218682b0a5eaabb141e9d8f">state</a> = <a class="el" href="claw_8h.html#a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650">CLAW_NEUTRAL_STATE</a></td></tr>
 <tr class="separator:a70d16bb05218682b0a5eaabb141e9d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac42dd40dbb37219295286859c6b068c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac42dd40dbb37219295286859c6b068c2">&#9670;&nbsp;</a></span>close_claw()</h2>
+<a id="a3a6168bf4e2042115dd32542f1f6a2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a6168bf4e2042115dd32542f1f6a2f5">&#9670;&nbsp;</a></span>claw_grab_cone()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void close_claw </td>
+          <td class="memname">void claw_grab_cone </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -130,25 +128,42 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Drives the motors to close the claw. </p>
+<p>Drives the motors to grab a cone. </p>
+<p>Drives the motors to open the claw.</p>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>CLAW_MOTOR </dd>
+<dd>
+MAX_CLAW_SPEED </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00044">44</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00050">50</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00062">CLAW_MOTOR</a>, <a class="el" href="claw_8h_source.html#l00025">MIN_CLAW_SPEED</a>, and <a class="el" href="slew_8c_source.html#l00090">set_motor_immediate()</a>.</p>
+<p class="reference">References <a class="el" href="slew_8c_source.html#l00090">set_motor_immediate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00125">autonomous()</a>, and <a class="el" href="lifter_8c_source.html#l00223">secondary_lifter_update()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{ <a class="code" href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a>(CLAW_MOTOR, MAX_CLAW_SPEED); }</div><div class="ttc" id="slew_8h_html_a9f8b8ae577ef938622024545711f0151"><div class="ttname"><a href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a></div><div class="ttdeci">void set_motor_immediate(int motor, int speed)</div><div class="ttdoc">Sets the motor speed ignoring the slew controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00090">slew.c:90</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="claw_8c_a3a6168bf4e2042115dd32542f1f6a2f5_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="claw_8c_a3a6168bf4e2042115dd32542f1f6a2f5_icgraph.svg" width="646" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
-<a id="a03023ca28f671b9fa7bac07782ccd8c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03023ca28f671b9fa7bac07782ccd8c1">&#9670;&nbsp;</a></span>open_claw()</h2>
+<a id="aecaa4eedc34d6b164ee17ed104914227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecaa4eedc34d6b164ee17ed104914227">&#9670;&nbsp;</a></span>claw_release_cone()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void open_claw </td>
+          <td class="memname">void claw_release_cone </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -156,14 +171,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Drives the motors to open the claw. </p>
+<p>Drives the motors to release a cone. </p>
+<p>Drives the motors to close the claw.</p>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>CLAW_MOTOR </dd>
+<dd>
+MIN_CLAW_SPEED </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00038">38</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00058">58</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00062">CLAW_MOTOR</a>, <a class="el" href="claw_8h_source.html#l00020">MAX_CLAW_SPEED</a>, and <a class="el" href="slew_8c_source.html#l00090">set_motor_immediate()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
+<p class="reference">References <a class="el" href="slew_8c_source.html#l00090">set_motor_immediate()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{ <a class="code" href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a>(CLAW_MOTOR, MIN_CLAW_SPEED); }</div><div class="ttc" id="slew_8h_html_a9f8b8ae577ef938622024545711f0151"><div class="ttname"><a href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a></div><div class="ttdeci">void set_motor_immediate(int motor, int speed)</div><div class="ttdoc">Sets the motor speed ignoring the slew controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00090">slew.c:90</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="claw_8c_aecaa4eedc34d6b164ee17ed104914227_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -185,12 +209,26 @@ Variables</h2></td></tr>
 
 <p>sets the claw motor speed </p>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>CLAW_MOTOR </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00032">32</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00042">42</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
 
-<p class="reference">References <a class="el" href="motor__ports_8h_source.html#l00062">CLAW_MOTOR</a>, and <a class="el" href="slew_8c_source.html#l00090">set_motor_immediate()</a>.</p>
+<p class="reference">References <a class="el" href="slew_8c_source.html#l00090">set_motor_immediate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>, and <a class="el" href="claw_8c_source.html#l00010">update_claw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00020">autostack_routine()</a>, <a class="el" href="lifter_8c_source.html#l00013">quit_auto_static()</a>, and <a class="el" href="claw_8c_source.html#l00017">update_claw()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{ <a class="code" href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a>(CLAW_MOTOR, v); }</div><div class="ttc" id="slew_8h_html_a9f8b8ae577ef938622024545711f0151"><div class="ttname"><a href="slew_8h.html#a9f8b8ae577ef938622024545711f0151">set_motor_immediate</a></div><div class="ttdeci">void set_motor_immediate(int motor, int speed)</div><div class="ttdoc">Sets the motor speed ignoring the slew controller. </div><div class="ttdef"><b>Definition:</b> <a href="slew_8c_source.html#l00090">slew.c:90</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="claw_8c_a3a57f998b1884d39b0cc786689f7086f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="claw_8c_a3a57f998b1884d39b0cc786689f7086f_icgraph.svg" width="626" height="103"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -211,16 +249,66 @@ Variables</h2></td></tr>
 
 <p>Updates the claw motor values. </p>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>CLAW_CLOSE </dd>
+<dd>
+<a class="el" href="claw_8h.html#a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f">CLAW_CLOSE_STATE</a> </dd>
+<dd>
+CLAW_OPEN </dd>
+<dd>
+<a class="el" href="claw_8h.html#a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd">CLAW_OPEN_STATE</a> </dd>
+<dd>
+<a class="el" href="claw_8h.html#a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650">CLAW_NEUTRAL_STATE</a> </dd>
+<dd>
+MAX_CLAW_SPEED </dd>
+<dd>
+MIN_CLAW_SPEED </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00010">10</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00017">17</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
 
-<p class="reference">References <a class="el" href="claw_8h_source.html#l00031">CLAW_CLOSE</a>, <a class="el" href="claw_8h_source.html#l00085">CLAW_CLOSE_STATE</a>, <a class="el" href="claw_8h_source.html#l00085">CLAW_NEUTRAL_STATE</a>, <a class="el" href="claw_8h_source.html#l00037">CLAW_OPEN</a>, <a class="el" href="claw_8h_source.html#l00085">CLAW_OPEN_STATE</a>, <a class="el" href="claw_8h_source.html#l00020">MAX_CLAW_SPEED</a>, <a class="el" href="claw_8h_source.html#l00025">MIN_CLAW_SPEED</a>, <a class="el" href="claw_8c_source.html#l00032">set_claw_motor()</a>, and <a class="el" href="claw_8c_source.html#l00004">state</a>.</p>
+<p class="reference">References <a class="el" href="claw_8h_source.html#l00085">CLAW_CLOSE_STATE</a>, <a class="el" href="claw_8h_source.html#l00085">CLAW_NEUTRAL_STATE</a>, <a class="el" href="claw_8h_source.html#l00085">CLAW_OPEN_STATE</a>, <a class="el" href="_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital()</a>, <a class="el" href="lifter_8c_source.html#l00005">lifter_autostack_running</a>, <a class="el" href="claw_8c_source.html#l00042">set_claw_motor()</a>, and <a class="el" href="claw_8c_source.html#l00002">state</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00049">operatorControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="opcontrol_8c_source.html#l00048">operatorControl()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                   {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="claw_8c.html#ae1fc3deab25f0b9e6f636bb83e9bf5c2">lifter_autostack_running</a>)</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</a>(CLAW_CLOSE)) {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="claw_8c.html#a70d16bb05218682b0a5eaabb141e9d8f">state</a> = <a class="code" href="claw_8h.html#a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f">CLAW_CLOSE_STATE</a>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</a>(CLAW_OPEN)) {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="claw_8c.html#a70d16bb05218682b0a5eaabb141e9d8f">state</a> = <a class="code" href="claw_8h.html#a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd">CLAW_OPEN_STATE</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="claw_8c.html#a70d16bb05218682b0a5eaabb141e9d8f">state</a> = <a class="code" href="claw_8h.html#a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650">CLAW_NEUTRAL_STATE</a>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="claw_8c.html#a70d16bb05218682b0a5eaabb141e9d8f">state</a> == <a class="code" href="claw_8h.html#a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f">CLAW_CLOSE_STATE</a>) {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="claw_8c.html#a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</a>(MAX_CLAW_SPEED);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="claw_8c.html#a70d16bb05218682b0a5eaabb141e9d8f">state</a> == <a class="code" href="claw_8h.html#a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd">CLAW_OPEN_STATE</a>) {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="claw_8c.html#a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</a>(MIN_CLAW_SPEED);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="claw_8c.html#a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</a>(0);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div><div class="ttc" id="claw_8c_html_a3a57f998b1884d39b0cc786689f7086f"><div class="ttname"><a href="claw_8c.html#a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</a></div><div class="ttdeci">void set_claw_motor(const int v)</div><div class="ttdoc">sets the claw motor speed </div><div class="ttdef"><b>Definition:</b> <a href="claw_8c_source.html#l00042">claw.c:42</a></div></div>
+<div class="ttc" id="claw_8c_html_a70d16bb05218682b0a5eaabb141e9d8f"><div class="ttname"><a href="claw_8c.html#a70d16bb05218682b0a5eaabb141e9d8f">state</a></div><div class="ttdeci">static enum claw_state state</div><div class="ttdef"><b>Definition:</b> <a href="claw_8c_source.html#l00002">claw.c:2</a></div></div>
+<div class="ttc" id="claw_8h_html_a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650"><div class="ttname"><a href="claw_8h.html#a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650">CLAW_NEUTRAL_STATE</a></div><div class="ttdef"><b>Definition:</b> <a href="claw_8h_source.html#l00085">claw.h:85</a></div></div>
+<div class="ttc" id="claw_8h_html_a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f"><div class="ttname"><a href="claw_8h.html#a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f">CLAW_CLOSE_STATE</a></div><div class="ttdef"><b>Definition:</b> <a href="claw_8h_source.html#l00085">claw.h:85</a></div></div>
+<div class="ttc" id="claw_8h_html_a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd"><div class="ttname"><a href="claw_8h.html#a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd">CLAW_OPEN_STATE</a></div><div class="ttdef"><b>Definition:</b> <a href="claw_8h_source.html#l00085">claw.h:85</a></div></div>
+<div class="ttc" id="claw_8c_html_ae1fc3deab25f0b9e6f636bb83e9bf5c2"><div class="ttname"><a href="claw_8c.html#ae1fc3deab25f0b9e6f636bb83e9bf5c2">lifter_autostack_running</a></div><div class="ttdeci">bool lifter_autostack_running</div><div class="ttdef"><b>Definition:</b> <a href="lifter_8c_source.html#l00005">lifter.c:5</a></div></div>
+<div class="ttc" id="_a_p_i_8h_html_a792f1a80c62a63e764cf64aabf95db92"><div class="ttname"><a href="_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</a></div><div class="ttdeci">bool joystickGetDigital(unsigned char joystick, unsigned char buttonGroup, unsigned char button)</div><div class="ttdoc">Gets the value of a button on the VEX joystick. </div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="claw_8c_a0122b78972344264b8a276a559cfce4a_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="claw_8c_a0122b78972344264b8a276a559cfce4a_icgraph.svg" width="270" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="ae1fc3deab25f0b9e6f636bb83e9bf5c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1fc3deab25f0b9e6f636bb83e9bf5c2">&#9670;&nbsp;</a></span>lifter_autostack_running</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lifter_autostack_running</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="lifter_8c_source.html#l00005">5</a> of file <a class="el" href="lifter_8c_source.html">lifter.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="lifter_8c_source.html#l00020">autostack_routine()</a>, <a class="el" href="lifter_8c_source.html#l00180">main_lifter_update()</a>, <a class="el" href="lifter_8c_source.html#l00013">quit_auto_static()</a>, <a class="el" href="lifter_8c_source.html#l00223">secondary_lifter_update()</a>, and <a class="el" href="claw_8c_source.html#l00017">update_claw()</a>.</p>
+
+</div>
+</div>
 <a id="a70d16bb05218682b0a5eaabb141e9d8f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a70d16bb05218682b0a5eaabb141e9d8f">&#9670;&nbsp;</a></span>state</h2>
 
@@ -241,9 +329,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00004">4</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="claw_8c_source.html#l00002">2</a> of file <a class="el" href="claw_8c_source.html">claw.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="claw_8c_source.html#l00010">update_claw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="claw_8c_source.html#l00017">update_claw()</a>.</p>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: src/battery.c File Reference</title>
+<title>VRC Team 9228A Code Documentation: src/battery.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.5.8</span>
+   <div id="projectname">VRC Team 9228A Code Documentation
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
   </td>
  </tr>
@@ -87,9 +86,7 @@ $(document).ready(function(){initNavTree('battery_8c.html','');});
 <div class="title">battery.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="battery_8h_source.html">battery.h</a>&quot;</code><br />
-<code>#include &lt;API.h&gt;</code><br />
-</div>
+
 <p><a href="battery_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -125,7 +122,22 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="battery_8c_source.html#l00014">14</a> of file <a class="el" href="battery_8c_source.html">battery.c</a>.</p>
 
+<p class="reference">References <a class="el" href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd">powerLevelBackup()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="battery_8c_source.html#l00023">battery_level_acceptable()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd">powerLevelBackup</a>() / 1000.0; }</div><div class="ttc" id="_a_p_i_8h_html_a91ac9eacbf0930cd5f26bc12b90b9efd"><div class="ttname"><a href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd">powerLevelBackup</a></div><div class="ttdeci">unsigned int powerLevelBackup()</div><div class="ttdoc">Returns the backup battery voltage in millivolts. </div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="battery_8c_a9b1c5cf7ddddebf63796050a1d4a9969_cgraph.svg" width="356" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="battery_8c_a9b1c5cf7ddddebf63796050a1d4a9969_icgraph.svg" width="507" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -145,16 +157,30 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>returns if the batteries are acceptable </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="battery_8h.html#a63f8a91bb74417aa77dc00340b6fd007" title="The minimum acceptable main battery voltage beofre a match. ">MIN_MAIN_VOLTAGE</a> </dd>
+<dl class="section see"><dt>See also</dt><dd>MIN_MAIN_VOLTAGE </dd>
 <dd>
-<a class="el" href="battery_8h.html#a0713ec94f47c403bf536ab6b11833b81" title="The minimum acceptable backup battery voltage beofre a match. ">MIN_BACKUP_VOLTAGE</a></dd></dl>
+MIN_BACKUP_VOLTAGE</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="battery_8c_source.html#l00023">23</a> of file <a class="el" href="battery_8c_source.html">battery.c</a>.</p>
 
-<p class="reference">References <a class="el" href="battery_8c_source.html#l00014">backup_battery_voltage()</a>, <a class="el" href="battery_8c_source.html#l00008">main_battery_voltage()</a>, <a class="el" href="battery_8h_source.html#l00020">MIN_BACKUP_VOLTAGE</a>, and <a class="el" href="battery_8h_source.html#l00015">MIN_MAIN_VOLTAGE</a>.</p>
+<p class="reference">References <a class="el" href="battery_8c_source.html#l00014">backup_battery_voltage()</a>, and <a class="el" href="battery_8c_source.html#l00008">main_battery_voltage()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00050">initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00052">initialize()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="battery_8c.html#a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</a>() &lt; MIN_MAIN_VOLTAGE)</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="battery_8c.html#a9b1c5cf7ddddebf63796050a1d4a9969">backup_battery_voltage</a>() &lt; MIN_BACKUP_VOLTAGE)</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="ttc" id="battery_8c_html_a8c92c389534fdb079698cdebeb7f2efa"><div class="ttname"><a href="battery_8c.html#a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</a></div><div class="ttdeci">double main_battery_voltage()</div><div class="ttdoc">gets the main battery voltage </div><div class="ttdef"><b>Definition:</b> <a href="battery_8c_source.html#l00008">battery.c:8</a></div></div>
+<div class="ttc" id="battery_8c_html_a9b1c5cf7ddddebf63796050a1d4a9969"><div class="ttname"><a href="battery_8c.html#a9b1c5cf7ddddebf63796050a1d4a9969">backup_battery_voltage</a></div><div class="ttdeci">double backup_battery_voltage()</div><div class="ttdoc">gets the backup battery voltage </div><div class="ttdef"><b>Definition:</b> <a href="battery_8c_source.html#l00014">battery.c:14</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="battery_8c_a1097bbb878f6e2690f8eea6cd231959a_cgraph.svg" width="572" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="battery_8c_a1097bbb878f6e2690f8eea6cd231959a_icgraph.svg" width="296" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -178,7 +204,22 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="battery_8c_source.html#l00008">8</a> of file <a class="el" href="battery_8c_source.html">battery.c</a>.</p>
 
+<p class="reference">References <a class="el" href="_a_p_i_8h.html#aeb5efefae0d6fa559dae5a7e5a77c956">powerLevelMain()</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="battery_8c_source.html#l00023">battery_level_acceptable()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="_a_p_i_8h.html#aeb5efefae0d6fa559dae5a7e5a77c956">powerLevelMain</a>() / 1000.0; }</div><div class="ttc" id="_a_p_i_8h_html_aeb5efefae0d6fa559dae5a7e5a77c956"><div class="ttname"><a href="_a_p_i_8h.html#aeb5efefae0d6fa559dae5a7e5a77c956">powerLevelMain</a></div><div class="ttdeci">unsigned int powerLevelMain()</div><div class="ttdoc">Returns the main battery voltage in millivolts. </div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="battery_8c_a8c92c389534fdb079698cdebeb7f2efa_cgraph.svg" width="326" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="battery_8c_a8c92c389534fdb079698cdebeb7f2efa_icgraph.svg" width="494" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

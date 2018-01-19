@@ -28,14 +28,10 @@
                 </itemizedlist>
             </para>
         </section>
-        <simplesect>
-            <title>Detailed Description</title>
+    <simplesect>
 
-<para>Vector storing the cartesian cords and an angle </para>
-                <para>Definition at line 24 of file localization.h</para>
-                <para>The Documentation for this struct was generated from the following file: </para>
-                <para><itemizedlist><listitem><para>localization.h</para></listitem></itemizedlist></para>
-        </simplesect>
+<para>Vector storing the cartesian cords and an angle. </para>
+    </simplesect>
         <section>
             <title>Field Documentation</title>
         </section>

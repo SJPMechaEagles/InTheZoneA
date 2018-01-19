@@ -1,14 +1,36 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="main_8h">
     <title>main.h File Reference</title>
-    <programlisting>#include &lt;API.h&gt;</programlisting>
+<para>Include dependency diagram for main.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="main_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for main.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="main_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Functions</title>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="main_8h_1a3c7ca506bbc071fa740de13805b7f376">autonomous</link> (
-)</para>
+)<para><emphasis>Runs the user autonomous code.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -16,7 +38,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="main_8h_1a25a40b6614565f755233080a384c35f1">initialize</link> (
-)</para>
+)<para><emphasis>Runs user initialization code.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -24,7 +47,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="main_8h_1ad9cda921edb01125bb13c2f86bcf624b">initializeIO</link> (
-)</para>
+)<para><emphasis>Runs pre-initialization code.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -32,7 +56,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="main_8h_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl</link> (
-)</para>
+)<para><emphasis>Runs the user operator control code.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -71,31 +96,25 @@
 47 <emphasis class="comment">//&#32;practice</emphasis>
 48 <emphasis class="preprocessor">#define&#32;MAIN_H_</emphasis>
 49 
-50 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+50 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
 51 
 52 <emphasis class="comment">//&#32;Allow&#32;usage&#32;of&#32;this&#32;file&#32;in&#32;C++&#32;programs</emphasis>
 53 <emphasis class="preprocessor">#ifdef&#32;__cplusplus</emphasis>
 54 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;{
 55 <emphasis class="preprocessor">#endif</emphasis>
 56 
-57 <emphasis class="comment">//#define&#32;AUTO_DEBUG</emphasis>
+57 <emphasis class="comment">//&#32;Prototypes&#32;for&#32;initialization,&#32;operator&#32;control&#32;and&#32;autonomous</emphasis>
 58 
-59 <emphasis class="comment">//&#32;A&#32;function&#32;prototype&#32;looks&#32;exactly&#32;like&#32;its&#32;declaration,&#32;but&#32;with&#32;a&#32;semicolon</emphasis>
-60 <emphasis class="comment">//&#32;instead&#32;of&#32;actual&#32;code.&#32;If&#32;a&#32;function&#32;does&#32;not&#32;match&#32;a&#32;prototype,&#32;compile</emphasis>
-61 <emphasis class="comment">//&#32;errors&#32;will&#32;occur.</emphasis>
-62 
-63 <emphasis class="comment">//&#32;Prototypes&#32;for&#32;initialization,&#32;operator&#32;control&#32;and&#32;autonomous</emphasis>
-64 
-82 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="main_8h_1a3c7ca506bbc071fa740de13805b7f376">autonomous</link>();
-93 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="main_8h_1ad9cda921edb01125bb13c2f86bcf624b">initializeIO</link>();
-107 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="main_8h_1a25a40b6614565f755233080a384c35f1">initialize</link>();
-129 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="main_8h_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl</link>();
-130 
-131 <emphasis class="comment">//&#32;End&#32;C++&#32;export&#32;structure</emphasis>
-132 <emphasis class="preprocessor">#ifdef&#32;__cplusplus</emphasis>
-133 }
-134 <emphasis class="preprocessor">#endif</emphasis>
-135 
-136 <emphasis class="preprocessor">#endif</emphasis>
+76 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="main_8h_1a3c7ca506bbc071fa740de13805b7f376">autonomous</link>();
+87 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="main_8h_1ad9cda921edb01125bb13c2f86bcf624b">initializeIO</link>();
+101 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="main_8h_1a25a40b6614565f755233080a384c35f1">initialize</link>();
+123 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="main_8h_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl</link>();
+124 
+125 <emphasis class="comment">//&#32;End&#32;C++&#32;export&#32;structure</emphasis>
+126 <emphasis class="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+127 }
+128 <emphasis class="preprocessor">#endif</emphasis>
+129 
+130 <emphasis class="preprocessor">#endif</emphasis>
     </computeroutput></literallayout>
 </section>

@@ -12,34 +12,34 @@
 00019   \textcolor{keywordtype}{double} *data;
 00020 \} matrix;
 00021 
-00030 \textcolor{keywordtype}{void} assert(\textcolor{keywordtype}{int} assertion, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *message);
-00031 
-00035 matrix *makeMatrix(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);
-00036 
-00044 matrix *copyMatrix(matrix *m);
-00045 
-00050 \textcolor{keywordtype}{void} freeMatrix(matrix *m);
-00051 
-00056 \textcolor{keywordtype}{void} printMatrix(matrix *m);
-00057 
-00063 matrix *identityMatrix(\textcolor{keywordtype}{int} n);
-00064 
-00070 \textcolor{keywordtype}{double} traceMatrix(matrix *m);
-00071 
-00077 matrix *transposeMatrix(matrix *m);
-00078 
-00086 matrix *meanMatrix(matrix *m);
-00087 
-00094 matrix *multiplyMatrix(matrix *a, matrix *b);
-00095 
-00103 matrix *scaleMatrix(matrix *m, \textcolor{keywordtype}{double} value);
-00104 
-00111 matrix *covarianceMatrix(matrix *m);
-00112 
-00122 \textcolor{keywordtype}{void} rowSwap(matrix *a, \textcolor{keywordtype}{int} p, \textcolor{keywordtype}{int} q);
-00137 matrix *dotProductMatrix(matrix *a, matrix *b);
-00138 
-00153 matrix *dotDiagonalMatrix(matrix *a, matrix *b);
-00154 
-00155 \textcolor{preprocessor}{#endif}
+00032 \textcolor{keywordtype}{void} assert(\textcolor{keywordtype}{int} assertion, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *message);
+00033 
+00040 matrix *makeMatrix(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);
+00041 
+00049 matrix *copyMatrix(matrix *m);
+00050 
+00055 \textcolor{keywordtype}{void} freeMatrix(matrix *m);
+00056 
+00061 \textcolor{keywordtype}{void} printMatrix(matrix *m);
+00062 
+00068 matrix *identityMatrix(\textcolor{keywordtype}{int} n);
+00069 
+00076 \textcolor{keywordtype}{double} traceMatrix(matrix *m);
+00077 
+00083 matrix *transposeMatrix(matrix *m);
+00084 
+00092 matrix *meanMatrix(matrix *m);
+00093 
+00100 matrix *multiplyMatrix(matrix *a, matrix *b);
+00101 
+00109 matrix *scaleMatrix(matrix *m, \textcolor{keywordtype}{double} value);
+00110 
+00117 matrix *covarianceMatrix(matrix *m);
+00118 
+00128 \textcolor{keywordtype}{void} rowSwap(matrix *a, \textcolor{keywordtype}{int} p, \textcolor{keywordtype}{int} q);
+00143 matrix *dotProductMatrix(matrix *a, matrix *b);
+00144 
+00159 matrix *dotDiagonalMatrix(matrix *a, matrix *b);
+00160 
+00161 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

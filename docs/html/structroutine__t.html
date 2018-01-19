@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: routine_t Struct Reference</title>
+<title>VRC Team 9228A Code Documentation: routine_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.5.8</span>
+   <div id="projectname">VRC Team 9228A Code Documentation
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
   </td>
  </tr>
@@ -88,6 +87,9 @@ $(document).ready(function(){initNavTree('structroutine__t.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Routine system that allows mapping buttons to actions.  
+ <a href="structroutine__t.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="routines_8h_source.html">routines.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -96,12 +98,15 @@ Data Fields</h2></td></tr>
 <tr class="separator:a8d278c682e01bd513956f9902772812a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4600cad285b5643e422cb5bfe6ce7fa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="controller_8h.html#a7754652ebe470fb6cc5d30b4cd258660">button_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroutine__t.html#a4600cad285b5643e422cb5bfe6ce7fa4">on_button</a></td></tr>
 <tr class="separator:a4600cad285b5643e422cb5bfe6ce7fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a016f918d811a58ee2b63a5e48161dcf8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroutine__t.html#a016f918d811a58ee2b63a5e48161dcf8">routine</a> )()</td></tr>
-<tr class="separator:a016f918d811a58ee2b63a5e48161dcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9915be4bb8f2415afe4bd27296cda14"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroutine__t.html#ac9915be4bb8f2415afe4bd27296cda14">routine</a> )(void *)</td></tr>
+<tr class="separator:ac9915be4bb8f2415afe4bd27296cda14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="routines_8h_source.html#l00003">3</a> of file <a class="el" href="routines_8h_source.html">routines.h</a>.</p>
+<div class="textblock"><p>Routine system that allows mapping buttons to actions. </p>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>1/8/17 Struct representing a routine </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="routines_8h_source.html#l00011">11</a> of file <a class="el" href="routines_8h_source.html">routines.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a8d278c682e01bd513956f9902772812a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d278c682e01bd513956f9902772812a">&#9670;&nbsp;</a></span>blocked_buttons</h2>
@@ -115,9 +120,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="routines_8h_source.html#l00005">5</a> of file <a class="el" href="routines_8h_source.html">routines.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="routines_8h_source.html#l00015">15</a> of file <a class="el" href="routines_8h_source.html">routines.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00035">register_routine()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00056">register_routine()</a>.</p>
 
 </div>
 </div>
@@ -133,27 +138,27 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="routines_8h_source.html#l00004">4</a> of file <a class="el" href="routines_8h_source.html">routines.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="routines_8h_source.html#l00013">13</a> of file <a class="el" href="routines_8h_source.html">routines.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00035">register_routine()</a>, and <a class="el" href="routines_8c_source.html#l00012">routine_task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00056">register_routine()</a>, and <a class="el" href="routines_8c_source.html#l00014">routine_task()</a>.</p>
 
 </div>
 </div>
-<a id="a016f918d811a58ee2b63a5e48161dcf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a016f918d811a58ee2b63a5e48161dcf8">&#9670;&nbsp;</a></span>routine</h2>
+<a id="ac9915be4bb8f2415afe4bd27296cda14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9915be4bb8f2415afe4bd27296cda14">&#9670;&nbsp;</a></span>routine</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* routine_t::routine) ()</td>
+          <td class="memname">void(* routine_t::routine) (void *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="routines_8h_source.html#l00006">6</a> of file <a class="el" href="routines_8h_source.html">routines.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="routines_8h_source.html#l00018">18</a> of file <a class="el" href="routines_8h_source.html">routines.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00035">register_routine()</a>, and <a class="el" href="routines_8c_source.html#l00012">routine_task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00056">register_routine()</a>, and <a class="el" href="routines_8c_source.html#l00014">routine_task()</a>.</p>
 
 </div>
 </div>

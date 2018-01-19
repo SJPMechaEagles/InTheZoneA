@@ -1,7 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vmath_8h">
     <title>vmath.h File Reference</title>
-    <programlisting>#include &lt;math.h&gt;</programlisting>
+<para>Include dependency diagram for vmath.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="vmath_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for vmath.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="vmath_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title> Data Structures </title>
             <para>
@@ -17,16 +38,6 @@
                     <listitem>
                         <para>struct <link linkend="structpolar__cord">polar_cord</link></para>
 <para><emphasis>A struct that contains polar coordinates.</emphasis></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
-        <section>
-            <title>Macros</title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="vmath_8h_1ae71449b1cc6e6250b91f539153a7a0d3">M_PI</link> 3.14159265358979323846</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -105,27 +116,27 @@ double angle)<para><emphasis>sine of a angle in degrees</emphasis></para>
 10 <emphasis class="preprocessor">#define&#32;_VMATH_H_</emphasis>
 11 
 12 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
-<link linkend="vmath_8h_1ae71449b1cc6e6250b91f539153a7a0d3">13 </link><emphasis class="preprocessor">#define&#32;M_PI&#32;3.14159265358979323846</emphasis>
-14 
-<link linkend="structpolar__cord">20 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structpolar__cord">polar_cord</link>&#32;{
-<link linkend="structpolar__cord_1a81b3a11d38d76719b02fcd425adaa216">22 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structpolar__cord_1a81b3a11d38d76719b02fcd425adaa216">angle</link>;
-<link linkend="structpolar__cord_1aec2e25fecc82af176f0fcd23f1e02f0c">24 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structpolar__cord_1aec2e25fecc82af176f0fcd23f1e02f0c">magnitue</link>;
-25 };
-26 
-<link linkend="structcord">32 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structcord">cord</link>&#32;{
-<link linkend="structcord_1a2eef9b681474b679cf87b0c20eced2cd">34 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structcord_1a2eef9b681474b679cf87b0c20eced2cd">x</link>;
-<link linkend="structcord_1a4e7d289c55cfe511532e53a81dc19215">36 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structcord_1a4e7d289c55cfe511532e53a81dc19215">y</link>;
-37 };
-38 
-51 <emphasis class="keyword">struct&#32;</emphasis><link linkend="structpolar__cord">polar_cord</link>&#32;<link linkend="vmath_8h_1a1c4a1747b714f5d4654f0614193f9e49">cartesian_to_polar</link>(float&#32;x,&#32;float&#32;y);
-52 
-65 <emphasis class="keyword">struct&#32;</emphasis><link linkend="structpolar__cord">polar_cord</link>&#32;<link linkend="vmath_8h_1a832105cf858b3046c57c0d08a4e7c38b">cartesian_cord_to_polar</link>(struct&#32;<link linkend="structcord">cord</link>&#32;cords);
-66 
-73 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>(<emphasis class="keywordtype">int</emphasis>&#32;a,&#32;<emphasis class="keywordtype">int</emphasis>&#32;b);
-74 
-81 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>(<emphasis class="keywordtype">int</emphasis>&#32;a,&#32;<emphasis class="keywordtype">int</emphasis>&#32;b);
-82 
-86 <emphasis class="keywordtype">double</emphasis>&#32;<link linkend="vmath_8h_1a2b83ceb814c90ebfa042a26d884ac159">sind</link>(<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structpolar__cord_1a81b3a11d38d76719b02fcd425adaa216">angle</link>);
-87 <emphasis class="preprocessor">#endif</emphasis>
+17 <emphasis class="preprocessor">#define&#32;M_PI&#32;3.14159265358979323846</emphasis>
+18 
+<link linkend="structpolar__cord">24 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structpolar__cord">polar_cord</link>&#32;{
+<link linkend="structpolar__cord_1a81b3a11d38d76719b02fcd425adaa216">26 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structpolar__cord_1a81b3a11d38d76719b02fcd425adaa216">angle</link>;
+<link linkend="structpolar__cord_1aec2e25fecc82af176f0fcd23f1e02f0c">28 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structpolar__cord_1aec2e25fecc82af176f0fcd23f1e02f0c">magnitue</link>;
+29 };
+30 
+<link linkend="structcord">36 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structcord">cord</link>&#32;{
+<link linkend="structcord_1a2eef9b681474b679cf87b0c20eced2cd">38 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structcord_1a2eef9b681474b679cf87b0c20eced2cd">x</link>;
+<link linkend="structcord_1a4e7d289c55cfe511532e53a81dc19215">40 </link>&#32;&#32;<emphasis class="keywordtype">float</emphasis>&#32;<link linkend="structcord_1a4e7d289c55cfe511532e53a81dc19215">y</link>;
+41 };
+42 
+55 <emphasis class="keyword">struct&#32;</emphasis><link linkend="structpolar__cord">polar_cord</link>&#32;<link linkend="vmath_8h_1a1c4a1747b714f5d4654f0614193f9e49">cartesian_to_polar</link>(float&#32;x,&#32;float&#32;y);
+56 
+69 <emphasis class="keyword">struct&#32;</emphasis><link linkend="structpolar__cord">polar_cord</link>&#32;<link linkend="vmath_8h_1a832105cf858b3046c57c0d08a4e7c38b">cartesian_cord_to_polar</link>(struct&#32;<link linkend="structcord">cord</link>&#32;cords);
+70 
+77 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8h_1abd8bbcfabb3ddef2ccaafb9928a37b95">min</link>(<emphasis class="keywordtype">int</emphasis>&#32;a,&#32;<emphasis class="keywordtype">int</emphasis>&#32;b);
+78 
+85 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="vmath_8h_1af082905f7eac6d03e92015146bbc1925">max</link>(<emphasis class="keywordtype">int</emphasis>&#32;a,&#32;<emphasis class="keywordtype">int</emphasis>&#32;b);
+86 
+90 <emphasis class="keywordtype">double</emphasis>&#32;<link linkend="vmath_8h_1a2b83ceb814c90ebfa042a26d884ac159">sind</link>(<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structpolar__cord_1a81b3a11d38d76719b02fcd425adaa216">angle</link>);
+91 <emphasis class="preprocessor">#endif</emphasis>
     </computeroutput></literallayout>
 </section>

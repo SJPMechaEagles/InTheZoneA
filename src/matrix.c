@@ -11,6 +11,8 @@
  * If the assertion is zero (i.e. false), then it display the string and
  * aborts the program.
  * This is ment to act like Python's assert keyword.
+ * @param assertion the condition, acts like a bollean 0 = false else true
+ * @param message the message to print if it fails
  **/
 void assert(int assertion, const char *message) {
   if (assertion == 0) {

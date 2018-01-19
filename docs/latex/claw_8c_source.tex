@@ -3,31 +3,33 @@
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "claw.h"}
-00002 \textcolor{preprocessor}{#include "log.h"}
-00003 \textcolor{preprocessor}{#include "toggle.h"}
-00004 \textcolor{keyword}{static} \textcolor{keyword}{enum} claw_state state = CLAW_NEUTRAL_STATE;
+00002 \textcolor{keyword}{static} \textcolor{keyword}{enum} claw_state state = CLAW_NEUTRAL_STATE;
+00003 
+00004 \textcolor{keyword}{extern} \textcolor{keywordtype}{bool} lifter_autostack_running;
 00005 
-00010 \textcolor{keywordtype}{void} update_claw() \{
-00011   \textcolor{keywordflow}{if} (joystickGetDigital(CLAW_CLOSE)) \{
-00012     state = CLAW_CLOSE_STATE;
-00013   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(CLAW_OPEN)) \{
-00014     state = CLAW_OPEN_STATE;
-00015   \} \textcolor{keywordflow}{else} \{
-00016     state = CLAW_NEUTRAL_STATE;
-00017   \}
-00018 
-00019   \textcolor{keywordflow}{if} (state == CLAW_CLOSE_STATE) \{
-00020     set_claw_motor(MAX_CLAW_SPEED);
-00021   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (state == CLAW_OPEN_STATE) \{
-00022     set_claw_motor(MIN_CLAW_SPEED);
-00023   \} \textcolor{keywordflow}{else} \{
-00024     set_claw_motor(0);
-00025   \}
-00026 \}
+00017 \textcolor{keywordtype}{void} update_claw() \{
+00018   \textcolor{keywordflow}{if} (lifter_autostack_running)
+00019     \textcolor{keywordflow}{return};
+00020   \textcolor{keywordflow}{if} (joystickGetDigital(CLAW\_CLOSE)) \{
+00021     state = CLAW_CLOSE_STATE;
+00022   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(CLAW\_OPEN)) \{
+00023     state = CLAW_OPEN_STATE;
+00024   \} \textcolor{keywordflow}{else} \{
+00025     state = CLAW_NEUTRAL_STATE;
+00026   \}
 00027 
-00032 \textcolor{keywordtype}{void} set_claw_motor(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v) \{ set_motor_immediate(CLAW_MOTOR, v); \}
-00033 
-00038 \textcolor{keywordtype}{void} open_claw() \{ set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED); \}
-00039 
-00044 \textcolor{keywordtype}{void} close_claw() \{ set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED); \}
+00028   \textcolor{keywordflow}{if} (state == CLAW_CLOSE_STATE) \{
+00029     set_claw_motor(MAX\_CLAW\_SPEED);
+00030   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (state == CLAW_OPEN_STATE) \{
+00031     set_claw_motor(MIN\_CLAW\_SPEED);
+00032   \} \textcolor{keywordflow}{else} \{
+00033     set_claw_motor(0);
+00034   \}
+00035 \}
+00036 
+00042 \textcolor{keywordtype}{void} set_claw_motor(\textcolor{keyword}{const} \textcolor{keywordtype}{int} v) \{ set_motor_immediate(CLAW\_MOTOR, v); \}
+00043 
+00050 \textcolor{keywordtype}{void} claw_grab_cone() \{ set_motor_immediate(CLAW\_MOTOR, MAX\_CLAW\_SPEED); \}
+00051 
+00058 \textcolor{keywordtype}{void} claw_release_cone() \{ set_motor_immediate(CLAW\_MOTOR, MIN\_CLAW\_SPEED); \}
 \end{DoxyCode}

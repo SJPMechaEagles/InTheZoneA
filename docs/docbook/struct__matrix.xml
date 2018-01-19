@@ -28,14 +28,10 @@
                 </itemizedlist>
             </para>
         </section>
-        <simplesect>
-            <title>Detailed Description</title>
+    <simplesect>
 
-<para>A struct representing a matrix </para>
-                <para>Definition at line 16 of file matrix.h</para>
-                <para>The Documentation for this struct was generated from the following file: </para>
-                <para><itemizedlist><listitem><para>matrix.h</para></listitem></itemizedlist></para>
-        </simplesect>
+<para>A struct representing a matrix. </para>
+    </simplesect>
         <section>
             <title>Field Documentation</title>
         </section>

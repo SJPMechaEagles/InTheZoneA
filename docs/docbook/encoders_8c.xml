@@ -1,9 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="encoders_8c">
     <title>encoders.c File Reference</title>
-    <programlisting>#include &quot;encoders.h&quot;</programlisting>
-    <programlisting>#include &quot;log.h&quot;</programlisting>
-    <programlisting>#include &lt;API.h&gt;</programlisting>
+<para>Include dependency diagram for encoders.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="encoders_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for encoders.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="encoders_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Functions</title>
             <para>
@@ -41,31 +60,31 @@ unsigned char address)<para><emphasis>Gets the encoder reads.</emphasis></para>
     <literallayout><computeroutput>
 1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="encoders_8h">encoders.h</link>&quot;</emphasis>
 2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
-3 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+3 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
 4 
 <link linkend="encoders_8c_1aa6ec1ca17e907babd52803ecba451cd3">11 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="encoders_8c_1aa6ec1ca17e907babd52803ecba451cd3">init_encoders</link>()&#32;{
 12 <emphasis class="preprocessor">#ifdef&#32;IME_NUMBER</emphasis>
-13 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;count&#32;=&#32;imeInitializeAll();
-14 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(count&#32;!=&#32;<link linkend="encoders_8h_1a87db35d2735ef045f57d446b3bfe8d48">IME_NUMBER</link>)&#32;{
-15 &#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;detected&#32;only&#32;%d\n&quot;</emphasis>,&#32;count);
+13 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;count&#32;=&#32;<link linkend="_a_p_i_8h_1a868ab46aa5992e60829936c0109160bf">imeInitializeAll</link>();
+14 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(count&#32;!=&#32;IME_NUMBER)&#32;{
+15 &#32;&#32;&#32;&#32;<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>(<emphasis class="stringliteral">&quot;detected&#32;only&#32;%d\n&quot;</emphasis>,&#32;count);
 16 &#32;&#32;&#32;&#32;<link linkend="log_8h_1a8e5bb8a2a372f5b066ff7af7044584c1">error</link>(<emphasis class="stringliteral">&quot;Wrong&#32;Number&#32;of&#32;IMEs&#32;Connected&quot;</emphasis>);
 17 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">false</emphasis>;
 18 &#32;&#32;}
 19 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">true</emphasis>;
 20 <emphasis class="preprocessor">#else</emphasis>
-21 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;imeInitializeAll();
+21 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="_a_p_i_8h_1a868ab46aa5992e60829936c0109160bf">imeInitializeAll</link>();
 22 <emphasis class="preprocessor">#endif</emphasis>
 23 }
 24 
 <link linkend="encoders_8c_1aed261dd4dae33a48c42f2e363c84760f">30 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="encoders_8c_1aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;address)&#32;{
 31 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;
-32 &#32;&#32;imeGet(address,&#32;&amp;i);
+32 &#32;&#32;<link linkend="_a_p_i_8h_1ac4f1500418a729ac3ee95bce9768b20c">imeGet</link>(address,&#32;&amp;i);
 33 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;i;
 34 }
 35 
 <link linkend="encoders_8c_1a8e6b77703c5cf18e00709b052fb4bf22">41 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="encoders_8c_1a8e6b77703c5cf18e00709b052fb4bf22">get_encoder_velocity</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;address)&#32;{
 42 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;
-43 &#32;&#32;imeGetVelocity(address,&#32;&amp;i);
+43 &#32;&#32;<link linkend="_a_p_i_8h_1a2dfd22ed31510b48a91bd9cd3d04a72f">imeGetVelocity</link>(address,&#32;&amp;i);
 44 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;i;
 45 }
     </computeroutput></literallayout>

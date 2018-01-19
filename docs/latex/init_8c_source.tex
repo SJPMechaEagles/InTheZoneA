@@ -10,46 +10,48 @@
 00017 \textcolor{preprocessor}{#include "log.h"}
 00018 \textcolor{preprocessor}{#include "main.h"}
 00019 \textcolor{preprocessor}{#include "menu.h"}
-00020 \textcolor{preprocessor}{#include "slew.h"}
-00021 
-00022 \textcolor{keyword}{extern} Ultrasonic lifter_ultrasonic;
-00023 
-00024 \textcolor{comment}{/*}
-00025 \textcolor{comment}{ * Runs pre-initialization code. This function will be started in kernel mode}
-00026 \textcolor{comment}{ * one time while the VEX Cortex is starting up. As the scheduler is still}
-00027 \textcolor{comment}{ * paused, most API functions will fail.}
-00028 \textcolor{comment}{ *}
-00029 \textcolor{comment}{ * The purpose of this function is solely to set the default pin modes}
-00030 \textcolor{comment}{ * (pinMode()) and port states (digitalWrite()) of limit switches, push buttons,}
-00031 \textcolor{comment}{ * and solenoids. It can also safely configure a UART port (usartOpen()) but}
-00032 \textcolor{comment}{ * cannot set up an LCD (lcdInit()).}
-00033 \textcolor{comment}{ *}
-00034 \textcolor{comment}{ */}
-00035 \textcolor{keywordtype}{void} initializeIO() \{ watchdogInit(); \}
-00036 
-00037 \textcolor{comment}{/*}
-00038 \textcolor{comment}{ * Runs user initialization code. This function will be started in its own task}
-00039 \textcolor{comment}{ * with the default priority and stack size once when the robot is starting up.}
-00040 \textcolor{comment}{ * It is possible that the VEXnet communication link may not be fully}
-00041 \textcolor{comment}{ * established at this time, so reading from the VEX Joystick may fail.}
-00042 \textcolor{comment}{ *}
-00043 \textcolor{comment}{ * This function should initialize most sensors (gyro, encoders, ultrasonics),}
-00044 \textcolor{comment}{ * LCDs, global variables, and IMEs.}
-00045 \textcolor{comment}{ *}
-00046 \textcolor{comment}{ * This function must exit relatively promptly, or the operatorControl() and}
-00047 \textcolor{comment}{ * autonomous() tasks will not start. An autonomous mode selection menu like the}
-00048 \textcolor{comment}{ * pre\_auton() in other environments can be implemented in this task if desired.}
-00049 \textcolor{comment}{ */}
-00050 \textcolor{keywordtype}{void} initialize() \{
-00051   init_main_lcd(uart1);
-00052   info(\textcolor{stringliteral}{"LCD Init"});
-00053   \textcolor{keywordflow}{if} (!battery_level_acceptable())
-00054     error(\textcolor{stringliteral}{"Bad main/backup bat"});
-00055   menu_t *t =
-00056       init_menu_var(STRING_TYPE, \textcolor{stringliteral}{"TEST Menu"}, 5, \textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}, \textcolor{stringliteral}{"3"}, \textcolor{stringliteral}{"4"}, \textcolor{stringliteral}{"5"});
-00057   init_error(\textcolor{keyword}{true}, uart2);
-00058   setTeamName(\textcolor{stringliteral}{"9228A"});
-00059   init_encoders();
-00060   lifter_ultrasonic = ultrasonicInit(4, 5);
-00061 \}
+00020 \textcolor{preprocessor}{#include "sensors.h"}
+00021 \textcolor{preprocessor}{#include "slew.h"}
+00022 
+00023 \textcolor{keyword}{extern} Ultrasonic lifter_ultrasonic;
+00024 
+00025 \textcolor{comment}{/*}
+00026 \textcolor{comment}{ * Runs pre-initialization code. This function will be started in kernel mode}
+00027 \textcolor{comment}{ * one time while the VEX Cortex is starting up. As the scheduler is still}
+00028 \textcolor{comment}{ * paused, most API functions will fail.}
+00029 \textcolor{comment}{ *}
+00030 \textcolor{comment}{ * The purpose of this function is solely to set the default pin modes}
+00031 \textcolor{comment}{ * (pinMode()) and port states (digitalWrite()) of limit switches, push buttons,}
+00032 \textcolor{comment}{ * and solenoids. It can also safely configure a UART port (usartOpen()) but}
+00033 \textcolor{comment}{ * cannot set up an LCD (lcdInit()).}
+00034 \textcolor{comment}{ *}
+00035 \textcolor{comment}{ */}
+00036 \textcolor{keywordtype}{void} initializeIO() \{ watchdogInit(); \}
+00037 
+00038 \textcolor{comment}{/* @brief Initialization code to be run at startup of the cortex}
+00039 \textcolor{comment}{ * @author Chris Jerrett}
+00040 \textcolor{comment}{ * Runs user initialization code. This function will be started in its own task}
+00041 \textcolor{comment}{ * with the default priority and stack size once when the robot is starting up.}
+00042 \textcolor{comment}{ * It is possible that the VEXnet communication link may not be fully}
+00043 \textcolor{comment}{ * established at this time, so reading from the VEX Joystick may fail.}
+00044 \textcolor{comment}{ *}
+00045 \textcolor{comment}{ * This function should initialize most sensors (gyro, encoders, ultrasonics),}
+00046 \textcolor{comment}{ * LCDs, global variables, and IMEs.}
+00047 \textcolor{comment}{ *}
+00048 \textcolor{comment}{ * This function must exit relatively promptly, or the operatorControl() and}
+00049 \textcolor{comment}{ * autonomous() tasks will not start. An autonomous mode selection menu like the}
+00050 \textcolor{comment}{ * pre\_auton() in other environments can be implemented in this task if desired.}
+00051 \textcolor{comment}{ */}
+00052 \textcolor{keywordtype}{void} initialize() \{
+00053   init_main_lcd(uart1);
+00054   info(\textcolor{stringliteral}{"LCD Init"});
+00055   \textcolor{keywordflow}{if} (!battery_level_acceptable())
+00056     error(\textcolor{stringliteral}{"Bad main/backup bat"});
+00057   menu_t *t =
+00058       init_menu_var(STRING_TYPE, \textcolor{stringliteral}{"TEST Menu"}, 5, \textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}, \textcolor{stringliteral}{"3"}, \textcolor{stringliteral}{"4"}, \textcolor{stringliteral}{"5"});
+00059   init_error(\textcolor{keyword}{true}, uart2);
+00060   setTeamName(\textcolor{stringliteral}{"9228A"});
+00061   init_encoders();
+00062   lifter_ultrasonic = ultrasonicInit(4, 5);
+00063 \}
 \end{DoxyCode}

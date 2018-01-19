@@ -1,6 +1,5 @@
 \subsection{src/vmath.c File Reference}
 \label{vmath_8c}\index{src/vmath.\+c@{src/vmath.\+c}}
-{\ttfamily \#include \char`\"{}vmath.\+h\char`\"{}}\newline
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,6 +53,19 @@ Definition at line \textbf{ 53} of file \textbf{ vmath.\+c}.
 
 References \textbf{ cartesian\+\_\+to\+\_\+polar()}.
 
+
+\begin{DoxyCode}
+00053                                                              \{
+00054   \textcolor{keywordflow}{return} cartesian_to_polar(cords.x, cords.y);
+00055 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{vmath_8c_a832105cf858b3046c57c0d08a4e7c38b_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{vmath_8c_a1c4a1747b714f5d4654f0614193f9e49}} 
 \index{vmath.\+c@{vmath.\+c}!cartesian\+\_\+to\+\_\+polar@{cartesian\+\_\+to\+\_\+polar}}
 \index{cartesian\+\_\+to\+\_\+polar@{cartesian\+\_\+to\+\_\+polar}!vmath.\+c@{vmath.\+c}}
@@ -95,6 +107,41 @@ References \textbf{ polar\+\_\+cord\+::angle}, and \textbf{ polar\+\_\+cord\+::m
 
 Referenced by \textbf{ cartesian\+\_\+cord\+\_\+to\+\_\+polar()}.
 
+
+\begin{DoxyCode}
+00015                                                        \{
+00016   \textcolor{keywordtype}{float} degree = 0;
+00017   \textcolor{keywordtype}{double} magnitude = sqrt((fabs(x) * fabs(x)) + (fabs(y) * fabs(y)));
+00018 
+00019   \textcolor{keywordflow}{if} (x < 0) \{
+00020     degree += 180.0;
+00021   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (x > 0 && y < 0) \{
+00022     degree += 360.0;
+00023   \}
+00024 
+00025   \textcolor{keywordflow}{if} (x != 0 && y != 0) \{
+00026     degree += atan((\textcolor{keywordtype}{float})y / (\textcolor{keywordtype}{float})x);
+00027   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (x == 0 && y > 0) \{
+00028     degree = 90.0;
+00029   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (y == 0 && x < 0) \{
+00030     degree = 180.0;
+00031   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (x == 0 && y < 0) \{
+00032     degree = 270.0;
+00033   \}
+00034 
+00035   \textcolor{keyword}{struct }polar_cord p;
+00036   p.angle = degree;
+00037   p.magnitue = magnitude;
+00038   \textcolor{keywordflow}{return} p;
+00039 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{vmath_8c_a1c4a1747b714f5d4654f0614193f9e49_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{vmath_8c_af082905f7eac6d03e92015146bbc1925}} 
 \index{vmath.\+c@{vmath.\+c}!max@{max}}
 \index{max@{max}!vmath.\+c@{vmath.\+c}}
@@ -123,6 +170,21 @@ Definition at line \textbf{ 83} of file \textbf{ vmath.\+c}.
 
 Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ init\+\_\+menu\+\_\+float()}, and \textbf{ init\+\_\+menu\+\_\+int()}.
 
+
+\begin{DoxyCode}
+00083                       \{
+00084   \textcolor{keywordflow}{if} (a > b)
+00085     \textcolor{keywordflow}{return} a;
+00086   \textcolor{keywordflow}{return} b;
+00087 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vmath_8c_af082905f7eac6d03e92015146bbc1925_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{vmath_8c_abd8bbcfabb3ddef2ccaafb9928a37b95}} 
 \index{vmath.\+c@{vmath.\+c}!min@{min}}
 \index{min@{min}!vmath.\+c@{vmath.\+c}}
@@ -151,6 +213,21 @@ Definition at line \textbf{ 71} of file \textbf{ vmath.\+c}.
 
 Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ init\+\_\+menu\+\_\+float()}, and \textbf{ init\+\_\+menu\+\_\+int()}.
 
+
+\begin{DoxyCode}
+00071                       \{
+00072   \textcolor{keywordflow}{if} (a < b)
+00073     \textcolor{keywordflow}{return} a;
+00074   \textcolor{keywordflow}{return} b;
+00075 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vmath_8c_abd8bbcfabb3ddef2ccaafb9928a37b95_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{vmath_8c_a2b83ceb814c90ebfa042a26d884ac159}} 
 \index{vmath.\+c@{vmath.\+c}!sind@{sind}}
 \index{sind@{sind}!vmath.\+c@{vmath.\+c}}
@@ -166,6 +243,9 @@ sine of a angle in degrees
 Definition at line \textbf{ 60} of file \textbf{ vmath.\+c}.
 
 
-
-References \textbf{ M\+\_\+\+PI}.
-
+\begin{DoxyCode}
+00060                           \{
+00061   \textcolor{keywordtype}{double} angleradians = angle * M\_PI / 180.0f;
+00062   \textcolor{keywordflow}{return} sin(angleradians);
+00063 \}
+\end{DoxyCode}

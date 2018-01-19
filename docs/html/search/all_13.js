@@ -1,11 +1,25 @@
 var searchData=
 [
-  ['update_5fclaw',['update_claw',['../claw_8h.html#a0122b78972344264b8a276a559cfce4a',1,'update_claw():&#160;claw.c'],['../claw_8c.html#a0122b78972344264b8a276a559cfce4a',1,'update_claw():&#160;claw.c']]],
-  ['update_5fcontrol',['update_control',['../partner_8h.html#ab2c78903a76d2ed8969271803c78368a',1,'update_control():&#160;partner.c'],['../partner_8c.html#ab2c78903a76d2ed8969271803c78368a',1,'update_control():&#160;partner.c']]],
-  ['update_5fdrive_5fmotors',['update_drive_motors',['../drive_8h.html#a8224a4626a934d30ed587671b7004bf8',1,'update_drive_motors():&#160;drive.c'],['../drive_8c.html#a8224a4626a934d30ed587671b7004bf8',1,'update_drive_motors():&#160;drive.c']]],
-  ['update_5fintake',['update_intake',['../mobile__goal__intake_8h.html#a5d7bad8a208988af743fd2e68f111286',1,'update_intake():&#160;mobile_goal_intake.c'],['../mobile__goal__intake_8c.html#a5d7bad8a208988af743fd2e68f111286',1,'update_intake():&#160;mobile_goal_intake.c']]],
-  ['update_5flifter',['update_lifter',['../lifter_8h.html#a59bb7413777ca16aba124aaedf95c79b',1,'update_lifter():&#160;lifter.c'],['../lifter_8c.html#a59bb7413777ca16aba124aaedf95c79b',1,'update_lifter():&#160;lifter.c']]],
-  ['update_5fperiod_5fms',['UPDATE_PERIOD_MS',['../slew_8h.html#a4e8e7d6fdd1f5c6f8a0f341e4b61f025',1,'slew.h']]],
-  ['update_5fposition',['update_position',['../localization_8h.html#afacd5e0b3d5e677df26a4402bbd9ec9e',1,'update_position():&#160;localization.c'],['../localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e',1,'update_position():&#160;localization.c']]],
-  ['updatemotors',['updateMotors',['../slew_8h.html#a807a87c5df438fde21c1e8213906695b',1,'updateMotors():&#160;slew.c'],['../slew_8c.html#a807a87c5df438fde21c1e8213906695b',1,'updateMotors():&#160;slew.c']]]
+  ['tail',['tail',['../structlist__t.html#a45dc80e38f8869f66e5d006117aae5f2',1,'list_t']]],
+  ['taskcode',['TaskCode',['../_a_p_i_8h.html#af3bbcf99b9e4561ebbae4a1f283ba6a3',1,'API.h']]],
+  ['taskcreate',['taskCreate',['../_a_p_i_8h.html#abd5e503a273aaf6abf6869ebd76f2d2d',1,'API.h']]],
+  ['taskdelay',['taskDelay',['../_a_p_i_8h.html#ac89618d0782547d189fe412a9917639b',1,'API.h']]],
+  ['taskdelayuntil',['taskDelayUntil',['../_a_p_i_8h.html#ae93bc867b1aa4a12d6536a497f1b6869',1,'API.h']]],
+  ['taskdelete',['taskDelete',['../_a_p_i_8h.html#add3b8d580ea6ef5635c6d9ff88c68612',1,'API.h']]],
+  ['taskgetcount',['taskGetCount',['../_a_p_i_8h.html#a436fb5636d9a200ecebbb95968de91f6',1,'API.h']]],
+  ['taskgetstate',['taskGetState',['../_a_p_i_8h.html#a4f805fd479cb4c427e8f4edfa7d55143',1,'API.h']]],
+  ['taskhandle',['TaskHandle',['../_a_p_i_8h.html#a23dca3c0de10682afb982677ff292f77',1,'API.h']]],
+  ['taskpriorityget',['taskPriorityGet',['../_a_p_i_8h.html#ae62d015b8280e4c74ad9ee15c7ac790b',1,'API.h']]],
+  ['taskpriorityset',['taskPrioritySet',['../_a_p_i_8h.html#a91d8f7074c6cb12dfe163df17bdf5540',1,'API.h']]],
+  ['taskresume',['taskResume',['../_a_p_i_8h.html#afa2a4c5236b32bd9983bf19a4ac0cc23',1,'API.h']]],
+  ['taskrunloop',['taskRunLoop',['../_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156',1,'API.h']]],
+  ['tasksuspend',['taskSuspend',['../_a_p_i_8h.html#ab56a51f337ad1903ad2bbce095744170',1,'API.h']]],
+  ['theta',['theta',['../structlocation.html#a4b415222b4dcf34e49dacd22384be9eb',1,'location::theta()'],['../structencoder__odemtry.html#af1a1e2a2a7a2f89138a8c261a3b82898',1,'encoder_odemtry::theta()']]],
+  ['thresh',['thresh',['../drive_8c.html#a6cf8bf160a02413bc3d5d18b0294b581',1,'drive.c']]],
+  ['todo_20list',['Todo List',['../todo.html',1,'']]],
+  ['toggle_2ec',['toggle.c',['../toggle_8c.html',1,'']]],
+  ['toggle_2eh',['toggle.h',['../toggle_8h.html',1,'']]],
+  ['tracematrix',['traceMatrix',['../matrix_8h.html#a4794df8b2032f961dd8b2d90276bc417',1,'traceMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#a4794df8b2032f961dd8b2d90276bc417',1,'traceMatrix(matrix *m):&#160;matrix.c']]],
+  ['transposematrix',['transposeMatrix',['../matrix_8h.html#a2936260302742748b0639e8ec71d4d9f',1,'transposeMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#a2936260302742748b0639e8ec71d4d9f',1,'transposeMatrix(matrix *m):&#160;matrix.c']]],
+  ['type',['type',['../structmenu__t.html#a110244ceb7d2a7cba95cfc5758d61c01',1,'menu_t']]]
 ];

@@ -1,8 +1,6 @@
 var lcd_8h =
 [
     [ "lcd_buttons", "structlcd__buttons.html", "structlcd__buttons" ],
-    [ "BOTTOM_ROW", "lcd_8h.html#a7b55e87550874687b3e25a64e1cfda9d", null ],
-    [ "TOP_ROW", "lcd_8h.html#a18bab754c6ad16bc35c48333091516c9", null ],
     [ "button_state", "lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29b", [
       [ "RELEASED", "lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0", null ],
       [ "PRESSED", "lcd_8h.html#a0bbab92f5605e16a4162b6c5ccc2c29ba5ef9a100ac8b4b8d6dec477c377b7901", null ]

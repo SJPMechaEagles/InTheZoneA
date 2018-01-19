@@ -18,6 +18,10 @@
                 </itemizedlist>
             </para>
         </section>
+    <simplesect>
+
+<para>Structure for holding an xy position from the accelerometer. </para>
+    </simplesect>
         <section>
             <title>Field Documentation</title>
         </section>

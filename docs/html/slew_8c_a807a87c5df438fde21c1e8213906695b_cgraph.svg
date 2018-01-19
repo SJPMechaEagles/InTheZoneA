@@ -8,54 +8,54 @@
  viewBox="0.00 0.00 185.50 101.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 97)">
 <title>updateMotors</title>
-<!-- Node89 -->
+<!-- Node117 -->
 <g id="node1" class="node">
-<title>Node89</title>
+<title>Node117</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-37.5 0,-55.5 77.1475,-55.5 77.1475,-37.5 0,-37.5"/>
 <text text-anchor="middle" x="38.5737" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">updateMotors</text>
 </g>
-<!-- Node90 -->
+<!-- Node118 -->
 <g id="node2" class="node">
-<title>Node90</title>
-<g id="a_node2"><a xlink:href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e" target="_top" xlink:title="motorSet">
+<title>Node118</title>
+<g id="a_node2"><a xlink:href="_a_p_i_8h.html#a03c5b04b472d024281f62d7af8854a8e" target="_top" xlink:title="Sets the speed of the specified motor channel. ">
 <polygon fill="none" stroke="#000000" points="117.0391,-74.5 117.0391,-92.5 173.6104,-92.5 173.6104,-74.5 117.0391,-74.5"/>
 <text text-anchor="middle" x="145.3247" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">motorSet</text>
 </a>
 </g>
 </g>
-<!-- Node89&#45;&gt;Node90 -->
+<!-- Node117&#45;&gt;Node118 -->
 <g id="edge1" class="edge">
-<title>Node89&#45;&gt;Node90</title>
+<title>Node117&#45;&gt;Node118</title>
 <path fill="none" stroke="#191970" d="M64.688,-55.5512C78.1287,-60.2098 94.722,-65.9611 109.3553,-71.033"/>
 <polygon fill="#191970" stroke="#191970" points="108.5153,-74.446 119.1101,-74.414 110.8078,-67.832 108.5153,-74.446"/>
 </g>
-<!-- Node91 -->
+<!-- Node119 -->
 <g id="node3" class="node">
-<title>Node91</title>
-<g id="a_node3"><a xlink:href="_a_p_i_8h.html#afe171a08d22de18fc2ab604b2364959f" target="_top" xlink:title="mutexGive">
+<title>Node119</title>
+<g id="a_node3"><a xlink:href="_a_p_i_8h.html#afe171a08d22de18fc2ab604b2364959f" target="_top" xlink:title="Relinquishes a mutex so that other tasks can use the resource it guards. ">
 <polygon fill="none" stroke="#000000" points="113.4282,-37.5 113.4282,-55.5 177.2212,-55.5 177.2212,-37.5 113.4282,-37.5"/>
 <text text-anchor="middle" x="145.3247" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">mutexGive</text>
 </a>
 </g>
 </g>
-<!-- Node89&#45;&gt;Node91 -->
+<!-- Node117&#45;&gt;Node119 -->
 <g id="edge2" class="edge">
-<title>Node89&#45;&gt;Node91</title>
+<title>Node117&#45;&gt;Node119</title>
 <path fill="none" stroke="#191970" d="M77.4153,-46.5C85.807,-46.5 94.7175,-46.5 103.2273,-46.5"/>
 <polygon fill="#191970" stroke="#191970" points="103.3468,-50.0001 113.3467,-46.5 103.3467,-43.0001 103.3468,-50.0001"/>
 </g>
-<!-- Node92 -->
+<!-- Node120 -->
 <g id="node4" class="node">
-<title>Node92</title>
-<g id="a_node4"><a xlink:href="_a_p_i_8h.html#a8b51124628d2a7741738d48551d1e8ee" target="_top" xlink:title="mutexTake">
+<title>Node120</title>
+<g id="a_node4"><a xlink:href="_a_p_i_8h.html#a8b51124628d2a7741738d48551d1e8ee" target="_top" xlink:title="Requests a mutex so that other tasks cannot simultaneously use the resource it guards. ">
 <polygon fill="none" stroke="#000000" points="113.1475,-.5 113.1475,-18.5 177.502,-18.5 177.502,-.5 113.1475,-.5"/>
 <text text-anchor="middle" x="145.3247" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">mutexTake</text>
 </a>
 </g>
 </g>
-<!-- Node89&#45;&gt;Node92 -->
+<!-- Node117&#45;&gt;Node120 -->
 <g id="edge3" class="edge">
-<title>Node89&#45;&gt;Node92</title>
+<title>Node117&#45;&gt;Node120</title>
 <path fill="none" stroke="#191970" d="M64.688,-37.4488C78.1287,-32.7902 94.722,-27.0389 109.3553,-21.967"/>
 <polygon fill="#191970" stroke="#191970" points="110.8078,-25.168 119.1101,-18.586 108.5153,-18.554 110.8078,-25.168"/>
 </g>

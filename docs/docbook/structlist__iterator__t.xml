@@ -21,6 +21,26 @@
                 </itemizedlist>
             </para>
         </section>
+    <simplesect>
+
+<para>A iterator representation Allows automatic iteration through linked list. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>1/3/18 </para>
+</formalpara>
+</para>
+                <para>Definition at line 86 of file list.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>list.h</para></listitem></itemizedlist></para>
+        </simplesect>
         <section>
             <title>Field Documentation</title>
         </section>

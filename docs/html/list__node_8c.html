@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: src/list_node.c File Reference</title>
+<title>VRC Team 9228A Code Documentation: src/list_node.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.5.8</span>
+   <div id="projectname">VRC Team 9228A Code Documentation
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
   </td>
  </tr>
@@ -87,13 +86,13 @@ $(document).ready(function(){initNavTree('list__node_8c.html','');});
 <div class="title">list_node.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
-</div>
+
 <p><a href="list__node_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4ef36e0519514ac481d0d7e0b439d431"><td class="memItemLeft" align="right" valign="top"><a class="el" href="list_8h.html#ad8b8636e2e25308b521b32071e849c80">list_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__node_8c.html#a4ef36e0519514ac481d0d7e0b439d431">list_node_new</a> (void *val)</td></tr>
+<tr class="memdesc:a4ef36e0519514ac481d0d7e0b439d431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a new node.  <a href="#a4ef36e0519514ac481d0d7e0b439d431">More...</a><br /></td></tr>
 <tr class="separator:a4ef36e0519514ac481d0d7e0b439d431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -113,11 +112,31 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="list__node_8c_source.html#l00014">14</a> of file <a class="el" href="list__node_8c_source.html">list_node.c</a>.</p>
+<p>Allocates a new node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>The value the node contains. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The newly allocated node. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>1/3/18 Node must be freed </dd></dl>
 
-<p class="reference">References <a class="el" href="list_8h_source.html#l00020">LIST_MALLOC</a>, <a class="el" href="list_8h_source.html#l00042">list_node::next</a>, <a class="el" href="list_8h_source.html#l00041">list_node::prev</a>, and <a class="el" href="list_8h_source.html#l00043">list_node::val</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__node_8c_source.html#l00012">12</a> of file <a class="el" href="list__node_8c_source.html">list_node.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00035">register_routine()</a>.</p>
+<p class="reference">References <a class="el" href="list_8h_source.html#l00055">list_node::next</a>, <a class="el" href="list_8h_source.html#l00054">list_node::prev</a>, and <a class="el" href="list_8h_source.html#l00056">list_node::val</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="routines_8c_source.html#l00056">register_routine()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                      {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="structlist__node.html">list_node_t</a> *<span class="keyword">self</span>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (!(<span class="keyword">self</span> = (<a class="code" href="structlist__node.html">list_node_t</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="structlist__node.html">list_node_t</a>))))</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> NULL;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">self</span>-&gt;<a class="code" href="structlist__node.html#a30baba3b27442cbca9694076003ed65e">prev</a> = NULL;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">self</span>-&gt;<a class="code" href="structlist__node.html#a0b99ca890dbfe832a8475f4bbd72338c">next</a> = NULL;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">self</span>-&gt;<a class="code" href="structlist__node.html#a129de89b4c110fa54377ef16ab128ce0">val</a> = val;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">self</span>;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div><div class="ttc" id="structlist__node_html_a30baba3b27442cbca9694076003ed65e"><div class="ttname"><a href="structlist__node.html#a30baba3b27442cbca9694076003ed65e">list_node::prev</a></div><div class="ttdeci">struct list_node * prev</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00054">list.h:54</a></div></div>
+<div class="ttc" id="structlist__node_html"><div class="ttname"><a href="structlist__node.html">list_node</a></div><div class="ttdoc">A node in a list. </div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00053">list.h:53</a></div></div>
+<div class="ttc" id="structlist__node_html_a0b99ca890dbfe832a8475f4bbd72338c"><div class="ttname"><a href="structlist__node.html#a0b99ca890dbfe832a8475f4bbd72338c">list_node::next</a></div><div class="ttdeci">struct list_node * next</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00055">list.h:55</a></div></div>
+<div class="ttc" id="structlist__node_html_a129de89b4c110fa54377ef16ab128ce0"><div class="ttname"><a href="structlist__node.html#a129de89b4c110fa54377ef16ab128ce0">list_node::val</a></div><div class="ttdeci">void * val</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00056">list.h:56</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="list__node_8c_a4ef36e0519514ac481d0d7e0b439d431_icgraph.svg" width="442" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>

@@ -1,8 +1,5 @@
 \subsection{src/mobile\+\_\+goal\+\_\+intake.c File Reference}
 \label{mobile__goal__intake_8c}\index{src/mobile\+\_\+goal\+\_\+intake.\+c@{src/mobile\+\_\+goal\+\_\+intake.\+c}}
-{\ttfamily \#include \char`\"{}mobile\+\_\+goal\+\_\+intake.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}partner.\+h\char`\"{}}\newline
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,7 +26,7 @@ lowers the intake
 
 
 
-Definition at line \textbf{ 7} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
+Definition at line \textbf{ 5} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
 
 
 
@@ -39,6 +36,26 @@ References \textbf{ set\+\_\+intake\+\_\+motor()}.
 
 Referenced by \textbf{ autonomous()}, and \textbf{ update\+\_\+intake()}.
 
+
+\begin{DoxyCode}
+00005 \{ set_intake_motor(-100); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mobile__goal__intake_8c_aef03134014e51a6a90dd3824f09f4d6c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mobile__goal__intake_8c_aef03134014e51a6a90dd3824f09f4d6c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{mobile__goal__intake_8c_aa46a9341d1eb7b39a2ef4cc5079ee3ca}} 
 \index{mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}!raise\+\_\+intake@{raise\+\_\+intake}}
 \index{raise\+\_\+intake@{raise\+\_\+intake}!mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}}
@@ -51,7 +68,7 @@ raises the intake
 
 
 
-Definition at line \textbf{ 9} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
+Definition at line \textbf{ 7} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
 
 
 
@@ -61,6 +78,26 @@ References \textbf{ set\+\_\+intake\+\_\+motor()}.
 
 Referenced by \textbf{ autonomous()}, and \textbf{ update\+\_\+intake()}.
 
+
+\begin{DoxyCode}
+00007 \{ set_intake_motor(100); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mobile__goal__intake_8c_aa46a9341d1eb7b39a2ef4cc5079ee3ca_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mobile__goal__intake_8c_aa46a9341d1eb7b39a2ef4cc5079ee3ca_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{mobile__goal__intake_8c_ab31e12bb0fa46c77906a048666b699d5}} 
 \index{mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}!set\+\_\+intake\+\_\+motor@{set\+\_\+intake\+\_\+motor}}
 \index{set\+\_\+intake\+\_\+motor@{set\+\_\+intake\+\_\+motor}!mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}}
@@ -76,16 +113,36 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 5} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
+Definition at line \textbf{ 3} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
 
 
 
-References \textbf{ I\+N\+T\+A\+K\+E\+\_\+\+M\+O\+T\+OR}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
+References \textbf{ set\+\_\+motor\+\_\+immediate()}.
 
 
 
 Referenced by \textbf{ autonomous()}, \textbf{ lower\+\_\+intake()}, \textbf{ raise\+\_\+intake()}, and \textbf{ update\+\_\+intake()}.
 
+
+\begin{DoxyCode}
+00003 \{ set_motor_immediate(MOBILE\_INTAKE\_MOTOR, n); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mobile__goal__intake_8c_ab31e12bb0fa46c77906a048666b699d5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mobile__goal__intake_8c_ab31e12bb0fa46c77906a048666b699d5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{mobile__goal__intake_8c_a5d7bad8a208988af743fd2e68f111286}} 
 \index{mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}!update\+\_\+intake@{update\+\_\+intake}}
 \index{update\+\_\+intake@{update\+\_\+intake}!mobile\+\_\+goal\+\_\+intake.\+c@{mobile\+\_\+goal\+\_\+intake.\+c}}
@@ -101,13 +158,40 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 14} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
+Definition at line \textbf{ 12} of file \textbf{ mobile\+\_\+goal\+\_\+intake.\+c}.
 
 
 
-References \textbf{ lower\+\_\+intake()}, \textbf{ M\+A\+S\+T\+ER}, \textbf{ raise\+\_\+intake()}, and \textbf{ set\+\_\+intake\+\_\+motor()}.
+References \textbf{ joystick\+Get\+Digital()}, \textbf{ lower\+\_\+intake()}, \textbf{ raise\+\_\+intake()}, and \textbf{ set\+\_\+intake\+\_\+motor()}.
 
 
 
 Referenced by \textbf{ operator\+Control()}.
 
+
+\begin{DoxyCode}
+00012                      \{
+00013   \textcolor{keywordflow}{if} (joystickGetDigital(MASTER, 8, JOY\_UP)) \{
+00014     raise_intake();
+00015   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(MASTER, 8, JOY\_DOWN)) \{
+00016     lower_intake();
+00017   \} \textcolor{keywordflow}{else}
+00018     set_intake_motor(0);
+00019 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mobile__goal__intake_8c_a5d7bad8a208988af743fd2e68f111286_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{mobile__goal__intake_8c_a5d7bad8a208988af743fd2e68f111286_icgraph}
+\end{center}
+\end{figure}

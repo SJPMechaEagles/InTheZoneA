@@ -17,7 +17,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d" target="_top" xlink:title="joystickGetAnalog">
+<g id="a_node2"><a xlink:href="_a_p_i_8h.html#ad56fcec15d1a48deb8780bb0fc38be4d" target="_top" xlink:title="Gets the value of a control axis on the VEX joystick. ">
 <polygon fill="none" stroke="#000000" points="129.2607,-.5 129.2607,-18.5 225.2998,-18.5 225.2998,-.5 129.2607,-.5"/>
 <text text-anchor="middle" x="177.2803" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">joystickGetAnalog</text>
 </a>

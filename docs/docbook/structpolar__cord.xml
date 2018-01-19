@@ -9,14 +9,14 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>float angle</para>
+                        <para>float angle<para><emphasis>the angle of the vector</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>float magnitue</para>
+                        <para>float magnitue<para><emphasis>the magnitude of the vector</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -37,27 +37,11 @@
 <para>Chris Jerrett </para>
 </formalpara>
 </para>
-                <para>Definition at line 20 of file vmath.h</para>
+                <para>Definition at line 24 of file vmath.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>vmath.h</para></listitem></itemizedlist></para>
         </simplesect>
         <section>
             <title>Field Documentation</title>
-            <simplesect>
-                <title>float polar_cord::angle</title>                
-<para>the angle of the vector </para>
-
-                <para>Definition at line 22 of file vmath.h</para>
-                <para>The Documentation for this struct was generated from the following file: </para>
-                <para><itemizedlist><listitem><para>vmath.h</para></listitem></itemizedlist></para>
-            </simplesect>
-            <simplesect>
-                <title>float polar_cord::magnitue</title>                
-<para>the magnitude of the vector </para>
-
-                <para>Definition at line 24 of file vmath.h</para>
-                <para>The Documentation for this struct was generated from the following file: </para>
-                <para><itemizedlist><listitem><para>vmath.h</para></listitem></itemizedlist></para>
-            </simplesect>
         </section>
 </section>

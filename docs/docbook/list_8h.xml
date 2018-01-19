@@ -1,13 +1,36 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="list_8h">
     <title>list.h File Reference</title>
-    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+<para>Include dependency diagram for list.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="list_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for list.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="list_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title> Data Structures </title>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="structlist__iterator__t">list_iterator_t</link></para>
+<para><emphasis>A iterator representation
+Allows automatic iteration through linked list.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -15,6 +38,7 @@
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="structlist__node">list_node</link></para>
+<para><emphasis>A node in a list.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -22,23 +46,7 @@
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="structlist__t">list_t</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
-        <section>
-            <title>Macros</title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="list_8h_1a8968cfdd1e3404352d2c43dcb3bde04a">LIST_FREE</link> free</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="list_8h_1ab80cb68ecaaf76c970758cd702641cee">LIST_MALLOC</link> malloc</para>
+<para><emphasis>A struct representing a linked list.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -52,6 +60,7 @@
 <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>,
 <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae">LIST_TAIL</link>
 }</literallayout>
+<para><emphasis>list_t iterator direction.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -62,7 +71,8 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                            <para>typedef struct <link linkend="structlist__node">list_node</link>  <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link></para>
+                            <para>typedef struct <link linkend="structlist__node">list_node</link>  <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link><para><emphasis>A node in a list.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -73,7 +83,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8h_1ab3dacc64ceb63b0a0849312b0a14c91c">list_at</link> (
-<link linkend="structlist__t">list_t</link> * self, int index)</para>
+<link linkend="structlist__t">list_t</link> * self, int index)<para><emphasis>Finds a node a given index.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -81,7 +92,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="list_8h_1ac2d2be572a896cccd0e76d56eeefcbdb">list_destroy</link> (
-<link linkend="structlist__t">list_t</link> * self)</para>
+<link linkend="structlist__t">list_t</link> * self)<para><emphasis>Deallocates a list.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -89,7 +101,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8h_1a5d73352b7bfa0c5a8b33289d7b27a374">list_find</link> (
-<link linkend="structlist__t">list_t</link> * self, void * val)</para>
+<link linkend="structlist__t">list_t</link> * self, void * val)<para><emphasis>Finds a node in a list with a given value.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -97,7 +110,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link> (
-<link linkend="structlist__iterator__t">list_iterator_t</link> * self)</para>
+<link linkend="structlist__iterator__t">list_iterator_t</link> * self)<para><emphasis>Destroys the iterator.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -105,7 +119,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="structlist__iterator__t">list_iterator_t</link> * <link linkend="list_8h_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link> (
-<link linkend="structlist__t">list_t</link> * list, <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link> direction)</para>
+<link linkend="structlist__t">list_t</link> * list, <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link> direction)<para><emphasis>Creates a new iterator.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -113,7 +128,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="structlist__iterator__t">list_iterator_t</link> * <link linkend="list_8h_1af4136a8a27bdc8c0f967a708dd03d575">list_iterator_new_from_node</link> (
-<link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node, <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link> direction)</para>
+<link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node, <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link> direction)<para><emphasis>Creates a new iterator by using the node to start at.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -121,7 +137,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8h_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link> (
-<link linkend="structlist__iterator__t">list_iterator_t</link> * self)</para>
+<link linkend="structlist__iterator__t">list_iterator_t</link> * self)<para><emphasis>The next node in the iterator and advances the iterator.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -129,7 +146,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8h_1a97f6f9590b1cdedd5367b9139e9cc4ef">list_lpop</link> (
-<link linkend="structlist__t">list_t</link> * self)</para>
+<link linkend="structlist__t">list_t</link> * self)<para><emphasis>removes and returns the start node</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -137,7 +155,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8h_1a7e1b077416813dd474a54826347f7502">list_lpush</link> (
-<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)</para>
+<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)<para><emphasis>Pushed a node to the start of a list.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -145,7 +164,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="structlist__t">list_t</link> * <link linkend="list_8h_1a9dd3eafdb56dcc64689f78fb4acdff3f">list_new</link> (
-)</para>
+)<para><emphasis>Allocated a new list.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -153,7 +173,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8h_1a4ef36e0519514ac481d0d7e0b439d431">list_node_new</link> (
-void * val)</para>
+void * val)<para><emphasis>Allocates a new node.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -161,7 +182,8 @@ void * val)</para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="list_8h_1a5ef7843a8a481124bce3e93541ba379a">list_remove</link> (
-<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)</para>
+<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)<para><emphasis>removes and returns the a given node from the list</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -169,7 +191,8 @@ void * val)</para>
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8h_1a53460b319b561ce2201bbf95450f1af7">list_rpop</link> (
-<link linkend="structlist__t">list_t</link> * self)</para>
+<link linkend="structlist__t">list_t</link> * self)<para><emphasis>removes and returns the end node</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -177,134 +200,102 @@ void * val)</para>
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8h_1a4edfa9b7742154bff4fc2cb05d044af9">list_rpush</link> (
-<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)</para>
+<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)<para><emphasis>Pushed a node to the end of a list.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
         </section>
     <simplesect>
         <title>Detailed Description</title>
+
+<para>A doubly linked list implementation. </para>
+
+<para>A linked list is a linear data structure where each element is a separate object.</para>
+
+<para>Each element (we will call it a node) of a list is comprising of two items - the data and a reference to the next node. The last node has a reference to null. The entry point into a linked list is called the head of the list. It should be noted that head is not a separate node, but the reference to the first node. If the list is empty then the head is a null reference. A linked list is a dynamic data structure. The number of nodes in a list is not fixed and can grow and shrink on demand. Any application which has to deal with an unknown number of objects will need to use a linked list.</para>
+
+<para>A Doubly Linked List is a variation of Linked list in which navigation is possible in both ways, either forward and backward easily as compared to Single Linked List.</para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>1/3/18 </para>
+</formalpara>
+</para>
     <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/list.h</para>
     </simplesect>
     <literallayout><computeroutput>
 1 
-2 <emphasis class="comment">//</emphasis>
-3 <emphasis class="comment">//&#32;list.h</emphasis>
-4 <emphasis class="comment">//</emphasis>
-5 <emphasis class="comment">//&#32;Copyright&#32;(c)&#32;2010&#32;TJ&#32;Holowaychuk&#32;&lt;tj@vision-media.ca&gt;</emphasis>
-6 <emphasis class="comment">//</emphasis>
-7 
-8 <emphasis class="preprocessor">#ifndef&#32;LIST_H</emphasis>
-9 <emphasis class="preprocessor">#define&#32;LIST_H</emphasis>
-10 
-11 <emphasis class="preprocessor">#ifdef&#32;__cplusplus</emphasis>
-12 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;{
-13 <emphasis class="preprocessor">#endif</emphasis>
-14 
-15 <emphasis class="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
-16 
-17 <emphasis class="comment">//&#32;Memory&#32;management&#32;macros</emphasis>
-18 
-19 <emphasis class="preprocessor">#ifndef&#32;LIST_MALLOC</emphasis>
-<link linkend="list_8h_1ab80cb68ecaaf76c970758cd702641cee">20 </link><emphasis class="preprocessor">#define&#32;LIST_MALLOC&#32;malloc</emphasis>
-21 <emphasis class="preprocessor">#endif</emphasis>
-22 
-23 <emphasis class="preprocessor">#ifndef&#32;LIST_FREE</emphasis>
-<link linkend="list_8h_1a8968cfdd1e3404352d2c43dcb3bde04a">24 </link><emphasis class="preprocessor">#define&#32;LIST_FREE&#32;free</emphasis>
-25 <emphasis class="preprocessor">#endif</emphasis>
-26 
-27 <emphasis class="comment">/*</emphasis>
-28 <emphasis class="comment">&#32;*&#32;list_t&#32;iterator&#32;direction.</emphasis>
-29 <emphasis class="comment">&#32;*/</emphasis>
-30 
-<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">31 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;{
-<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">32 </link>&#32;&#32;&#32;&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>
-<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae">33 </link>&#32;&#32;,&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae">LIST_TAIL</link>
-34 }&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>;
-35 
-36 <emphasis class="comment">/*</emphasis>
-37 <emphasis class="comment">&#32;*&#32;list_t&#32;node&#32;struct.</emphasis>
-38 <emphasis class="comment">&#32;*/</emphasis>
-39 
-<link linkend="structlist__node">40 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structlist__node">list_node</link>&#32;{
-<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">41 </link>&#32;&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structlist__node">list_node</link>&#32;*<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>;
-<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">42 </link>&#32;&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structlist__node">list_node</link>&#32;*<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>;
-<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">43 </link>&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;*<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>;
-44 }&#32;<link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link>;
-45 
-46 <emphasis class="comment">/*</emphasis>
-47 <emphasis class="comment">&#32;*&#32;list_t&#32;struct.</emphasis>
-48 <emphasis class="comment">&#32;*/</emphasis>
-49 
-<link linkend="structlist__t">50 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis>{
-<link linkend="structlist__t_1a93ef6d995af96e73e226dc2b8a7232aa">51 </link>&#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="structlist__t_1a93ef6d995af96e73e226dc2b8a7232aa">head</link>;
-<link linkend="structlist__t_1a45dc80e38f8869f66e5d006117aae5f2">52 </link>&#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="structlist__t_1a45dc80e38f8869f66e5d006117aae5f2">tail</link>;
-<link linkend="structlist__t_1aba275113a143fe39c162f547c6792502">53 </link>&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structlist__t_1aba275113a143fe39c162f547c6792502">len</link>;
-<link linkend="structlist__t_1adbc5f9e0707a09a027c89218ff0a8f69">54 </link>&#32;&#32;void&#32;(*free)(<emphasis class="keywordtype">void</emphasis>&#32;*<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
-<link linkend="structlist__t_1a3cf6cc60206869f52386f1f72e161839">55 </link>&#32;&#32;int&#32;(*match)(<emphasis class="keywordtype">void</emphasis>&#32;*a,&#32;<emphasis class="keywordtype">void</emphasis>&#32;*b);
-56 }&#32;<link linkend="structlist__t">list_t</link>;
-57 
-58 <emphasis class="comment">/*</emphasis>
-59 <emphasis class="comment">&#32;*&#32;list_t&#32;iterator&#32;struct.</emphasis>
-60 <emphasis class="comment">&#32;*/</emphasis>
-61 
-<link linkend="structlist__iterator__t">62 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis>{
-<link linkend="structlist__iterator__t_1adfc911fa0f601936c4a58c95a08737ee">63 </link>&#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="structlist__iterator__t_1adfc911fa0f601936c4a58c95a08737ee">next</link>;
-<link linkend="structlist__iterator__t_1aa95ac6753d9a9e3671e4c21f3d05b32a">64 </link>&#32;&#32;list_direction_t&#32;<link linkend="structlist__iterator__t_1aa95ac6753d9a9e3671e4c21f3d05b32a">direction</link>;
-65 }&#32;<link linkend="structlist__iterator__t">list_iterator_t</link>;
-66 
-67 <emphasis class="comment">//&#32;Node&#32;prototypes.</emphasis>
-68 
-69 <link linkend="structlist__node">list_node_t</link>&#32;*
-70 <link linkend="list_8h_1a4ef36e0519514ac481d0d7e0b439d431">list_node_new</link>(<emphasis class="keywordtype">void</emphasis>&#32;*<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
+25 <emphasis class="preprocessor">#ifndef&#32;LIST_H</emphasis>
+26 <emphasis class="preprocessor">#define&#32;LIST_H</emphasis>
+27 
+28 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
+29 
+<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">36 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;{
+<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">40 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>
+44 &#32;&#32;&#32;&#32;,
+<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae">45 </link>&#32;&#32;&#32;&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae">LIST_TAIL</link>
+46 }&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>;
+47 
+<link linkend="structlist__node">53 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structlist__node">list_node</link>&#32;{
+<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">54 </link>&#32;&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structlist__node">list_node</link>&#32;*<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>;
+<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">55 </link>&#32;&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structlist__node">list_node</link>&#32;*<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>;
+<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">56 </link>&#32;&#32;<emphasis class="keywordtype">void</emphasis>&#32;*<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>;
+57 }&#32;<link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link>;
+58 
+<link linkend="structlist__t">64 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis>{
+65 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;start&#32;of&#32;list</emphasis>
+<link linkend="structlist__t_1a93ef6d995af96e73e226dc2b8a7232aa">66 </link>&#32;&#32;&#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="structlist__t_1a93ef6d995af96e73e226dc2b8a7232aa">head</link>;
+67 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;end&#32;of&#32;list</emphasis>
+<link linkend="structlist__t_1a45dc80e38f8869f66e5d006117aae5f2">68 </link>&#32;&#32;&#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="structlist__t_1a45dc80e38f8869f66e5d006117aae5f2">tail</link>;
+69 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;length&#32;of&#32;list</emphasis>
+<link linkend="structlist__t_1aba275113a143fe39c162f547c6792502">70 </link>&#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structlist__t_1aba275113a143fe39c162f547c6792502">len</link>;
 71 
-72 <emphasis class="comment">//&#32;list_t&#32;prototypes.</emphasis>
-73 
-74 <link linkend="structlist__t">list_t</link>&#32;*
-75 <link linkend="list_8h_1a9dd3eafdb56dcc64689f78fb4acdff3f">list_new</link>();
-76 
-77 <link linkend="structlist__node">list_node_t</link>&#32;*
-78 <link linkend="list_8h_1a4edfa9b7742154bff4fc2cb05d044af9">list_rpush</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node);
-79 
-80 <link linkend="structlist__node">list_node_t</link>&#32;*
-81 <link linkend="list_8h_1a7e1b077416813dd474a54826347f7502">list_lpush</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node);
-82 
-83 <link linkend="structlist__node">list_node_t</link>&#32;*
-84 <link linkend="list_8h_1a5d73352b7bfa0c5a8b33289d7b27a374">list_find</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<emphasis class="keywordtype">void</emphasis>&#32;*<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
-85 
-86 <link linkend="structlist__node">list_node_t</link>&#32;*
-87 <link linkend="list_8h_1ab3dacc64ceb63b0a0849312b0a14c91c">list_at</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;index);
-88 
-89 <link linkend="structlist__node">list_node_t</link>&#32;*
-90 <link linkend="list_8h_1a53460b319b561ce2201bbf95450f1af7">list_rpop</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
-91 
-92 <link linkend="structlist__node">list_node_t</link>&#32;*
-93 <link linkend="list_8h_1a97f6f9590b1cdedd5367b9139e9cc4ef">list_lpop</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
-94 
-95 <emphasis class="keywordtype">void</emphasis>
-96 <link linkend="list_8h_1a5ef7843a8a481124bce3e93541ba379a">list_remove</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node);
-97 
-98 <emphasis class="keywordtype">void</emphasis>
-99 <link linkend="list_8h_1ac2d2be572a896cccd0e76d56eeefcbdb">list_destroy</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
+72 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;the&#32;value</emphasis>
+<link linkend="structlist__t_1adbc5f9e0707a09a027c89218ff0a8f69">73 </link>&#32;&#32;&#32;&#32;void&#32;(*free)(<emphasis class="keywordtype">void</emphasis>&#32;*<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
+74 
+75 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;a&#32;compare&#32;function</emphasis>
+<link linkend="structlist__t_1a3cf6cc60206869f52386f1f72e161839">76 </link>&#32;&#32;&#32;&#32;int&#32;(*match)(<emphasis class="keywordtype">void</emphasis>&#32;*a,&#32;<emphasis class="keywordtype">void</emphasis>&#32;*b);
+77 }&#32;<link linkend="structlist__t">list_t</link>;
+78 
+<link linkend="structlist__iterator__t">86 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis>{
+<link linkend="structlist__iterator__t_1adfc911fa0f601936c4a58c95a08737ee">87 </link>&#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="structlist__iterator__t_1adfc911fa0f601936c4a58c95a08737ee">next</link>;
+<link linkend="structlist__iterator__t_1aa95ac6753d9a9e3671e4c21f3d05b32a">88 </link>&#32;&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>&#32;<link linkend="structlist__iterator__t_1aa95ac6753d9a9e3671e4c21f3d05b32a">direction</link>;
+89 }&#32;<link linkend="structlist__iterator__t">list_iterator_t</link>;
+90 
+99 <link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8h_1a4ef36e0519514ac481d0d7e0b439d431">list_node_new</link>(<emphasis class="keywordtype">void</emphasis>&#32;*<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
 100 
-101 <emphasis class="comment">//&#32;list_t&#32;iterator&#32;prototypes.</emphasis>
-102 
-103 <link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*
-104 <link linkend="list_8h_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link>(<link linkend="structlist__t">list_t</link>&#32;*list,&#32;list_direction_t&#32;direction);
-105 
-106 <link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*
-107 <link linkend="list_8h_1af4136a8a27bdc8c0f967a708dd03d575">list_iterator_new_from_node</link>(<link linkend="structlist__node">list_node_t</link>&#32;*node,&#32;list_direction_t&#32;direction);
+107 <link linkend="structlist__t">list_t</link>&#32;*<link linkend="list_8h_1a9dd3eafdb56dcc64689f78fb4acdff3f">list_new</link>();
 108 
-109 <link linkend="structlist__node">list_node_t</link>&#32;*
-110 <link linkend="list_8h_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
-111 
-112 <emphasis class="keywordtype">void</emphasis>
-113 <link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
-114 
-115 <emphasis class="preprocessor">#ifdef&#32;__cplusplus</emphasis>
-116 }
-117 <emphasis class="preprocessor">#endif</emphasis>
+117 <link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8h_1a4edfa9b7742154bff4fc2cb05d044af9">list_rpush</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node);
 118 
-119 <emphasis class="preprocessor">#endif&#32;</emphasis><emphasis class="comment">/*&#32;LIST_H&#32;*/</emphasis><emphasis class="preprocessor"></emphasis>
+127 <link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8h_1a7e1b077416813dd474a54826347f7502">list_lpush</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node);
+128 
+137 <link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8h_1a5d73352b7bfa0c5a8b33289d7b27a374">list_find</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<emphasis class="keywordtype">void</emphasis>&#32;*<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
+138 
+147 <link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8h_1ab3dacc64ceb63b0a0849312b0a14c91c">list_at</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;index);
+148 
+156 <link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8h_1a53460b319b561ce2201bbf95450f1af7">list_rpop</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
+157 
+165 <link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8h_1a97f6f9590b1cdedd5367b9139e9cc4ef">list_lpop</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
+166 
+174 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="list_8h_1a5ef7843a8a481124bce3e93541ba379a">list_remove</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node);
+175 
+182 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="list_8h_1ac2d2be572a896cccd0e76d56eeefcbdb">list_destroy</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
+183 
+192 <link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<link linkend="list_8h_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link>(<link linkend="structlist__t">list_t</link>&#32;*list,&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>&#32;direction);
+193 
+202 <link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<link linkend="list_8h_1af4136a8a27bdc8c0f967a708dd03d575">list_iterator_new_from_node</link>(<link linkend="structlist__node">list_node_t</link>&#32;*node,
+203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>&#32;direction);
+204 
+213 <link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8h_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
+214 
+221 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>);
+222 
+223 <emphasis class="preprocessor">#endif</emphasis>
     </computeroutput></literallayout>
 </section>

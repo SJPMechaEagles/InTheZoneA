@@ -1,20 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="drive_8h">
     <title>drive.h File Reference</title>
-    <programlisting>#include &quot;partner.h&quot;</programlisting>
-    <programlisting>#include &lt;API.h&gt;</programlisting>
-        <section>
-            <title>Macros</title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="drive_8h_1a4679d8ea8690999a6c6c7c0cb245c879">THRESHOLD</link> 10<para><emphasis>The dead spot on the controller to avoid running motors at low
-speeds.</emphasis></para>
+<para>Include dependency diagram for drive.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="drive_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
+<para>Included by dependency diagram for drive.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="drive_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Enumerations</title>
             <para>
@@ -93,19 +101,18 @@ int t)<para><emphasis>Sets the deadzone threshhold on the drive.</emphasis></par
 8 <emphasis class="preprocessor">#ifndef&#32;_DRIVE_H_</emphasis>
 9 <emphasis class="preprocessor">#define&#32;_DRIVE_H_</emphasis>
 10 
-11 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="partner_8h">partner.h</link>&quot;</emphasis>
-12 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
-13 
-<link linkend="drive_8h_1a4679d8ea8690999a6c6c7c0cb245c879">18 </link><emphasis class="preprocessor">#define&#32;THRESHOLD&#32;10</emphasis>
-19 
-<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">27 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">side</link>&#32;{&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</link>,&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</link>&#32;}&#32;<link linkend="drive_8h_1a9df2afd2f1acb97019655e5e730609c7">side_t</link>;
-28 
-36 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1a9df2afd2f1acb97019655e5e730609c7">side_t</link>&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">side</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed);
-37 
-42 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="drive_8h_1a53d6e35d53ec3e0b1b1c489d8203f204">setThresh</link>(<emphasis class="keywordtype">int</emphasis>&#32;t);
-43 
-49 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="drive_8h_1a8224a4626a934d30ed587671b7004bf8">update_drive_motors</link>();
-50 
-51 <emphasis class="preprocessor">#endif</emphasis>
+11 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
+12 
+17 <emphasis class="preprocessor">#define&#32;THRESHOLD&#32;10</emphasis>
+18 
+<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">26 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">side</link>&#32;{&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445adb45120aafd37a973140edee24708065">LEFT</link>,&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445a627abe5a430420baf29ebe1940a7f2fb">BOTH</link>,&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445aec8379af7490bb9eaaf579cf17876f38">RIGHT</link>&#32;}&#32;<link linkend="drive_8h_1a9df2afd2f1acb97019655e5e730609c7">side_t</link>;
+27 
+35 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="drive_8h_1a8df41fd50094c065eedc81fc5e6595d1">set_side_speed</link>(<link linkend="drive_8h_1a9df2afd2f1acb97019655e5e730609c7">side_t</link>&#32;<link linkend="drive_8h_1afc015eff6557e84151d2e53b94375445">side</link>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed);
+36 
+41 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="drive_8h_1a53d6e35d53ec3e0b1b1c489d8203f204">setThresh</link>(<emphasis class="keywordtype">int</emphasis>&#32;t);
+42 
+48 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="drive_8h_1a8224a4626a934d30ed587671b7004bf8">update_drive_motors</link>();
+49 
+50 <emphasis class="preprocessor">#endif</emphasis>
     </computeroutput></literallayout>
 </section>

@@ -1,0 +1,1403 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a_p_i_8h">
+    <title>API.h File Reference</title>
+<para>Include dependency diagram for API.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_a_p_i_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for API.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_a_p_i_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void *  <link linkend="_a_p_i_8h_1a8289b20280bf9db1462f60dae76d2939">Encoder</link><para><emphasis>Reference type for an initialized encoder.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void *  <link linkend="_a_p_i_8h_1a04e06985633aa933343fcfa3d7fb268d">Gyro</link><para><emphasis>Reference type for an initialized gyro.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_a_p_i_8h_1a5bbb1ca889e36aec7b4fce324c2662c4">InterruptHandler</link><para><emphasis>Type definition for interrupt handlers.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void *  <link linkend="_a_p_i_8h_1a9b40607ca13d2b5261f47f613e3c4fa4">Mutex</link><para><emphasis>Type by which mutexes are referenced.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef int  <link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link><para><emphasis>PROS_FILE is an integer referring to a stream for the standard I/O functions.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void *  <link linkend="_a_p_i_8h_1a884363b5e46c2eedeae95c179aaeb717">Semaphore</link><para><emphasis>Type by which semaphores are referenced.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void(*  <link linkend="_a_p_i_8h_1af3bbcf99b9e4561ebbae4a1f283ba6a3">TaskCode</link><para><emphasis>Type for defining task functions.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void *  <link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link><para><emphasis>Type by which tasks are referenced.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef void *  <link linkend="_a_p_i_8h_1a527ee5b64142c3505d6931d8ed7ac6b7">Ultrasonic</link><para><emphasis>Reference type for an initialized ultrasonic sensor.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void unsigned char const char * <link linkend="_a_p_i_8h_1aa3800794cdb71dc374a5ce3e645e4bb4">formatString</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void unsigned char <link linkend="_a_p_i_8h_1a58c3304a90ff2bb7064ff7187b2da466">line</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a7f8e65d04ad51cecfcf34cbb064e8ae5">__attribute__</link> (
+(format(<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>, 3, 4)) )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1aab54c390b2ff91b5b7861db877136392">analogCalibrate</link> (
+unsigned char channel)<para><emphasis>Calibrates the analog sensor on the specified channel.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a5da86064604c539c2b6a5e2993289108">analogRead</link> (
+unsigned char channel)<para><emphasis>Reads an analog input channel and returns the 12-bit value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1adefc4d860dbaed441901d47d8c3598ee">analogReadCalibrated</link> (
+unsigned char channel)<para><emphasis>Reads the calibrated value of an analog input channel.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a68b2c3e0863b8f4cb022fcdd77d2f5fd">analogReadCalibratedHR</link> (
+unsigned char channel)<para><emphasis>Reads the calibrated value of an analog input channel 1-8 with enhanced precision.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a1c59207742a1acf45a8957d7f04f9dfe">delay</link> (
+const unsigned long time)<para><emphasis>Wiring-compatible alias of taskDelay().</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1abee651cde0a0e6ed0df34c86ed5af756">delayMicroseconds</link> (
+const unsigned long us)<para><emphasis>Wait for approximately the given number of microseconds.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a7321930f297f38e246050f7f5b091722">digitalRead</link> (
+unsigned char pin)<para><emphasis>Gets the digital value (1 or 0) of a pin configured as a digital input.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a23e767e5b47fa61d4e2cc02e6f15c7ab">digitalWrite</link> (
+unsigned char pin, bool value)<para><emphasis>Sets the digital value (1 or 0) of a pin configured as a digital output.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a5cfffd673e7fc8bcd1827f11b2b1490b">encoderGet</link> (
+<link linkend="_a_p_i_8h_1a8289b20280bf9db1462f60dae76d2939">Encoder</link> enc)<para><emphasis>Gets the number of ticks recorded by the encoder.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_a_p_i_8h_1a8289b20280bf9db1462f60dae76d2939">Encoder</link> <link linkend="_a_p_i_8h_1aa68a1ba3d46d89bdb40961c52aa2c4d0">encoderInit</link> (
+unsigned char portTop, unsigned char portBottom, bool reverse)<para><emphasis>Initializes and enables a quadrature encoder on two digital ports.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a27500c21f56b2f44c62a9284ca5ebd44">encoderReset</link> (
+<link linkend="_a_p_i_8h_1a8289b20280bf9db1462f60dae76d2939">Encoder</link> enc)<para><emphasis>Resets the encoder to zero.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1ad068eaed82fe8c8f08ba02ea8eaf2d17">encoderShutdown</link> (
+<link linkend="_a_p_i_8h_1a8289b20280bf9db1462f60dae76d2939">Encoder</link> enc)<para><emphasis>Stops and disables the encoder.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a0990e9bf57d497796ddcf12f61122eb5">fclose</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Closes the specified file descriptor.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1aede7dd689fa991edc8e4c26908846606">fcount</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Returns the number of characters that can be read without blocking (the number of
+characters available) from the specified stream.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a27fc767a71921999f9651b1ca4cf1f93">fdelete</link> (
+const char * file)<para><emphasis>Delete the specified file if it exists and is not currently open.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a4c92590178e34fbedcc6fde534a0afd1">feof</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Checks to see if the specified stream is at its end.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1aec30d0b30f9f5b8a521dd8f9b6ec39c7">fflush</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Flushes the data on the specified file channel open in Write mode.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a09f27f0f85db7ff4e2d98fef10c0dde1">fgetc</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Reads and returns one character from the specified stream, blocking until complete.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>char * <link linkend="_a_p_i_8h_1a6315d4a637f2c6a29ad9c1355dbd6b44">fgets</link> (
+char * str, int num, <link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Reads a string from the specified stream, storing the characters into the memory at str.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * <link linkend="_a_p_i_8h_1a4cd09a1ff038c9ac9d461b077312beb6">fopen</link> (
+const char * file, const char * mode)<para><emphasis>Opens the given file in the specified mode.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a874987bcf339f25df0bdbc24f27a03db">fprint</link> (
+const char * string, <link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Prints the simple string to the specified stream.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1ab9989f4619e4d3ccb13ed4c36d5f787a">fprintf</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream, const char * formatString, ... )<para><emphasis>Prints the formatted string to the specified output stream.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1afe7d25ce198da1f8fec5a2dca770cb6a">fputc</link> (
+int value, <link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Writes one character to the specified stream.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1ae4859a13f64d3dc4d57875512f0d1171">fputs</link> (
+const char * string, <link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Behaves the same as the &quot;fprint&quot; function, and appends a trailing newline (&quot;\n&quot;).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>size_t <link linkend="_a_p_i_8h_1a01b4329a6303387a4187c94343c0cc59">fread</link> (
+void * ptr, size_t size, size_t count, <link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Reads data from a stream into memory.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1adda53be8dacaa9deab92cabb9f2e54dd">fseek</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream, long int offset, int origin)<para><emphasis>Seeks within a file open in Read mode.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int <link linkend="_a_p_i_8h_1a1c2742ed272f2a5e12962df45653ff18">ftell</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Returns the current position of the stream.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>size_t <link linkend="_a_p_i_8h_1aaadc510ae9d7c433161a366de9fb828d">fwrite</link> (
+const void * ptr, size_t size, size_t count, <link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * stream)<para><emphasis>Writes data from memory to a stream.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1ac45fdeab51c3197c1e7c4ec7beabaca9">getchar</link> (
+)<para><emphasis>Reads and returns one character from &quot;stdin&quot;, which is the PC debug terminal.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a0ae2ca5d2fd99f33aaef38786bb8ee59">gyroGet</link> (
+<link linkend="_a_p_i_8h_1a04e06985633aa933343fcfa3d7fb268d">Gyro</link> gyro)<para><emphasis>Gets the current gyro angle in degrees, rounded to the nearest degree.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_a_p_i_8h_1a04e06985633aa933343fcfa3d7fb268d">Gyro</link> <link linkend="_a_p_i_8h_1a17270080a32b64937a3669089a80120f">gyroInit</link> (
+unsigned char port, unsigned short multiplier)<para><emphasis>Initializes and enables a gyro on an analog port.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a5de4afb9c6bd747e8d7664e1c72390b2">gyroReset</link> (
+<link linkend="_a_p_i_8h_1a04e06985633aa933343fcfa3d7fb268d">Gyro</link> gyro)<para><emphasis>Resets the gyro to zero.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a4e50e79b76d956dd9d466a582a5bb7b5">gyroShutdown</link> (
+<link linkend="_a_p_i_8h_1a04e06985633aa933343fcfa3d7fb268d">Gyro</link> gyro)<para><emphasis>Stops and disables the gyro.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a591bdbd4df72ac4231feba723faac640">i2cRead</link> (
+uint8_t addr, uint8_t * data, uint16_t count)<para><emphasis>i2cRead - Reads the specified number of data bytes from the specified 7-bit I2C address.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a69670b44b640e824da387a6616dc2f9a">i2cReadRegister</link> (
+uint8_t addr, uint8_t reg, uint8_t * value, uint16_t count)<para><emphasis>i2cReadRegister - Reads the specified amount of data from the given register address on
+the specified 7-bit I2C address.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a2d286627370658ecee04a18335b91c39">i2cWrite</link> (
+uint8_t addr, uint8_t * data, uint16_t count)<para><emphasis>i2cWrite - Writes the specified number of data bytes to the specified 7-bit I2C address.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a51385d22e08f52852c85ad675e3523a9">i2cWriteRegister</link> (
+uint8_t addr, uint8_t reg, uint16_t value)<para><emphasis>i2cWriteRegister - Writes the specified data byte to a register address on the specified
+7-bit I2C address.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1ac4f1500418a729ac3ee95bce9768b20c">imeGet</link> (
+unsigned char address, int * value)<para><emphasis>Gets the current 32-bit count of the specified IME.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a2dfd22ed31510b48a91bd9cd3d04a72f">imeGetVelocity</link> (
+unsigned char address, int * value)<para><emphasis>Gets the current rotational velocity of the specified IME.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned int <link linkend="_a_p_i_8h_1a868ab46aa5992e60829936c0109160bf">imeInitializeAll</link> (
+)<para><emphasis>Initializes all IMEs.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1ab1ef9ee5f8878856896a6c920ed762fc">imeReset</link> (
+unsigned char address)<para><emphasis>Resets the specified IME&apos;s counters to zero.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a19de5a557348a6b4931c89eb82eb8fb7">imeShutdown</link> (
+)<para><emphasis>Shuts down all IMEs on the chain; their addresses return to the default and the stored
+counts and velocities are lost.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a9291f71712cfb21e9bfd51682260fa73">ioClearInterrupt</link> (
+unsigned char pin)<para><emphasis>Disables interrupts on the specified pin.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a8d0fd8e69a4c4c5aba981d106ee7f9ac">ioSetInterrupt</link> (
+unsigned char pin, unsigned char edges, <link linkend="_a_p_i_8h_1a5bbb1ca889e36aec7b4fce324c2662c4">InterruptHandler</link> handler)<para><emphasis>Sets up an interrupt to occur on the specified pin, and resets any counters or timers
+associated with the pin.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1aad3f43faea37dc2eddaf4ba0926a511f">isAutonomous</link> (
+)<para><emphasis>Returns true if the robot is in autonomous mode, or false otherwise.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a56722b6f1c22da04885bc9853148bb71">isEnabled</link> (
+)<para><emphasis>Returns true if the robot is enabled, or false otherwise.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a72aa0bce6b1d8ee298a60617f8fa74da">isJoystickConnected</link> (
+unsigned char joystick)<para><emphasis>Returns true if a joystick is connected to the specified slot number (1 or 2), or false
+otherwise.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a1eceab28885f971892b9d4fc76e0e542">isOnline</link> (
+)<para><emphasis>Returns true if a VEX field controller or competition switch is connected, or false
+otherwise.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</link> (
+unsigned char joystick, unsigned char axis)<para><emphasis>Gets the value of a control axis on the VEX joystick.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</link> (
+unsigned char joystick, unsigned char buttonGroup, unsigned char button)<para><emphasis>Gets the value of a button on the VEX joystick.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a5fa1d119fe3e836b5519f97eae7a1272">lcdClear</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * lcdPort)<para><emphasis>Clears the LCD screen on the specified port.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a43dc11a67b697c0d32315ea5a9af85f9">lcdInit</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * lcdPort)<para><emphasis>Initializes the LCD port, but does not change the text or settings.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a6cfad8271c6a566a2f51ca318f819a80">lcdPrint</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * lcdPort, unsigned char line, const char * formatString, ... )<para><emphasis>Prints the formatted string to the attached LCD.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void unsigned char const char unsigned int <link linkend="_a_p_i_8h_1a04541d90f60b1ccd3d036656673c972d">lcdReadButtons</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * lcdPort)<para><emphasis>Reads the user button status from the LCD display.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1aab53a247d88151a6623c20fa1ea940b0">lcdSetBacklight</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * lcdPort, bool backlight)<para><emphasis>Sets the specified LCD backlight to be on or off.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a5555228be96449af952aed5bcabb6d8d">lcdSetText</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * lcdPort, unsigned char line, const char * buffer)<para><emphasis>Prints the string buffer to the attached LCD.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1acf0a8389bc6078e4c40c3d59af814cb7">lcdShutdown</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * lcdPort)<para><emphasis>Shut down the specified LCD port.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned long <link linkend="_a_p_i_8h_1a8b24cbb7c3486e1bfa05c86db83ecb01">micros</link> (
+)<para><emphasis>Returns the number of microseconds since Cortex power-up.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned long <link linkend="_a_p_i_8h_1a6ff7f2532a22366f0013bc41397129fd">millis</link> (
+)<para><emphasis>Returns the number of milliseconds since Cortex power-up.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a4805c8fd29f9221d28ed2e673c06e6c4">motorGet</link> (
+unsigned char channel)<para><emphasis>Gets the last set speed of the specified motor channel.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a03c5b04b472d024281f62d7af8854a8e">motorSet</link> (
+unsigned char channel, int speed)<para><emphasis>Sets the speed of the specified motor channel.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a339844ebc35f48a14945b73edaeca498">motorStop</link> (
+unsigned char channel)<para><emphasis>Stops the motor on the specified channel, equivalent to calling motorSet() with an argument
+of zero.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a8966c541f3e9565aea1289f0d2f2cf43">motorStopAll</link> (
+)<para><emphasis>Stops all motors; significantly faster than looping through all motor ports and calling
+motorSet(channel, 0) on each one.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_a_p_i_8h_1a9b40607ca13d2b5261f47f613e3c4fa4">Mutex</link> <link linkend="_a_p_i_8h_1aecd027ce8f8b52a765735e9eb5b202b3">mutexCreate</link> (
+)<para><emphasis>Creates a mutex intended to allow only one task to use a resource at a time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a247598f8083a3ce6c39317d279f631cf">mutexDelete</link> (
+<link linkend="_a_p_i_8h_1a9b40607ca13d2b5261f47f613e3c4fa4">Mutex</link> mutex)<para><emphasis>Deletes the specified mutex.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1afe171a08d22de18fc2ab604b2364959f">mutexGive</link> (
+<link linkend="_a_p_i_8h_1a9b40607ca13d2b5261f47f613e3c4fa4">Mutex</link> mutex)<para><emphasis>Relinquishes a mutex so that other tasks can use the resource it guards.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a8b51124628d2a7741738d48551d1e8ee">mutexTake</link> (
+<link linkend="_a_p_i_8h_1a9b40607ca13d2b5261f47f613e3c4fa4">Mutex</link> mutex, const unsigned long blockTime)<para><emphasis>Requests a mutex so that other tasks cannot simultaneously use the resource it guards.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a1875409d12eee562555bda94cad7f973">pinMode</link> (
+unsigned char pin, unsigned char mode)<para><emphasis>Configures the pin as an input or output with a variety of settings.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned int <link linkend="_a_p_i_8h_1a91ac9eacbf0930cd5f26bc12b90b9efd">powerLevelBackup</link> (
+)<para><emphasis>Returns the backup battery voltage in millivolts.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned int <link linkend="_a_p_i_8h_1aeb5efefae0d6fa559dae5a7e5a77c956">powerLevelMain</link> (
+)<para><emphasis>Returns the main battery voltage in millivolts.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1ae2dd7886efd463e815dadf10eb54777e">print</link> (
+const char * string)<para><emphasis>Prints the simple string to the debug terminal without formatting.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link> (
+const char * formatString, ... )<para><emphasis>Prints the formatted string to the debug stream (the PC terminal).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a6c600555ec9aefb4c01fdb960ecc2809">putchar</link> (
+int value)<para><emphasis>Writes one character to &quot;stdout&quot;, which is the PC debug terminal, and returns the input
+value.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1af17f2f3fda696ddc3b7c1bac995edaf8">puts</link> (
+const char * string)<para><emphasis>Behaves the same as the &quot;print&quot; function, and appends a trailing newline (&quot;\n&quot;).</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_a_p_i_8h_1a884363b5e46c2eedeae95c179aaeb717">Semaphore</link> <link linkend="_a_p_i_8h_1a4461acf29574576dda6a3316117f85a9">semaphoreCreate</link> (
+)<para><emphasis>Creates a semaphore intended for synchronizing tasks.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1af27ba79dc102f914d31a3c20136b1cd9">semaphoreDelete</link> (
+<link linkend="_a_p_i_8h_1a884363b5e46c2eedeae95c179aaeb717">Semaphore</link> semaphore)<para><emphasis>Deletes the specified semaphore.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a9e5b0b6d5da138b4d5a077237894f96e">semaphoreGive</link> (
+<link linkend="_a_p_i_8h_1a884363b5e46c2eedeae95c179aaeb717">Semaphore</link> semaphore)<para><emphasis>Signals a semaphore.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="_a_p_i_8h_1a7520baa9cf5c9ec2f43925b098e7b46a">semaphoreTake</link> (
+<link linkend="_a_p_i_8h_1a884363b5e46c2eedeae95c179aaeb717">Semaphore</link> semaphore, const unsigned long blockTime)<para><emphasis>Waits on a semaphore.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a22269cefc22e487f7acdcc4737d58c4a">setTeamName</link> (
+const char * name)<para><emphasis>Sets the team name displayed to the VEX field control and VEX Firmware Upgrade.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1ada81026ae730d990159aab26c302a3ad">snprintf</link> (
+char * buffer, size_t limit, const char * formatString, ... )<para><emphasis>Prints the formatted string to the string buffer with the specified length limit.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a7e0b8a79a6f53f88329b87229e7d698b">speakerInit</link> (
+)<para><emphasis>Initializes VEX speaker support.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1af91f9f80737d283ff82a96596f833854">speakerPlayArray</link> (
+const char ** songs)<para><emphasis>Plays up to three RTTTL (Ring Tone Text Transfer Language) songs simultaneously over the
+VEX speaker.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a6971b95fa28048bf134b7421b7f2faee">speakerPlayRtttl</link> (
+const char * song)<para><emphasis>Plays an RTTTL (Ring Tone Text Transfer Language) song over the VEX speaker.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a8d6d3ddc25b8408b0270cd2ccb9505ce">speakerShutdown</link> (
+)<para><emphasis>Powers down and disables the VEX speaker.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1acbfbfc380f865613ad5ff3cae256bdc4">sprintf</link> (
+char * buffer, const char * formatString, ... )<para><emphasis>Prints the formatted string to the string buffer.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a7bf146d0ac724624ae0147c8e225b713">standaloneModeEnable</link> (
+)<para><emphasis>Enables the Cortex to run the op control task in a standalone mode- no VEXnet connection required.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link> <link linkend="_a_p_i_8h_1abd5e503a273aaf6abf6869ebd76f2d2d">taskCreate</link> (
+<link linkend="_a_p_i_8h_1af3bbcf99b9e4561ebbae4a1f283ba6a3">TaskCode</link> taskCode, const unsigned int stackDepth, void * parameters, const unsigned int priority)<para><emphasis>Creates a new task and add it to the list of tasks that are ready to run.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1ac89618d0782547d189fe412a9917639b">taskDelay</link> (
+const unsigned long msToDelay)<para><emphasis>Delays the current task for a given number of milliseconds.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1ae93bc867b1aa4a12d6536a497f1b6869">taskDelayUntil</link> (
+unsigned long * previousWakeTime, const unsigned long cycleTime)<para><emphasis>Delays the current task until a specified time.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1add3b8d580ea6ef5635c6d9ff88c68612">taskDelete</link> (
+<link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link> taskToDelete)<para><emphasis>Kills and removes the specified task from the kernel task list.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned int <link linkend="_a_p_i_8h_1a436fb5636d9a200ecebbb95968de91f6">taskGetCount</link> (
+)<para><emphasis>Determines the number of tasks that are currently being managed.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned int <link linkend="_a_p_i_8h_1a4f805fd479cb4c427e8f4edfa7d55143">taskGetState</link> (
+<link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link> task)<para><emphasis>Retrieves the state of the specified task.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned int <link linkend="_a_p_i_8h_1ae62d015b8280e4c74ad9ee15c7ac790b">taskPriorityGet</link> (
+const <link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link> task)<para><emphasis>Obtains the priority of the specified task.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a91d8f7074c6cb12dfe163df17bdf5540">taskPrioritySet</link> (
+<link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link> task, const unsigned int newPriority)<para><emphasis>Sets the priority of the specified task.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1afa2a4c5236b32bd9983bf19a4ac0cc23">taskResume</link> (
+<link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link> taskToResume)<para><emphasis>Resumes the specified task.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link> <link linkend="_a_p_i_8h_1ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</link> (
+void(*)(void) fn, const unsigned long increment)<para><emphasis>Starts a task which will periodically call the specified function.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1ab56a51f337ad1903ad2bbce095744170">taskSuspend</link> (
+<link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link> taskToSuspend)<para><emphasis>Suspends the specified task.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="_a_p_i_8h_1a435d7fc1c3c3da80ed64cf9dfed0bd42">ultrasonicGet</link> (
+<link linkend="_a_p_i_8h_1a527ee5b64142c3505d6931d8ed7ac6b7">Ultrasonic</link> ult)<para><emphasis>Gets the current ultrasonic sensor value in centimeters.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="_a_p_i_8h_1a527ee5b64142c3505d6931d8ed7ac6b7">Ultrasonic</link> <link linkend="_a_p_i_8h_1aed267558847e901e3741bd031c4fc83d">ultrasonicInit</link> (
+unsigned char portEcho, unsigned char portPing)<para><emphasis>Initializes an ultrasonic sensor on the specified digital ports.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a355f91a286a081b95104b09898b467ed">ultrasonicShutdown</link> (
+<link linkend="_a_p_i_8h_1a527ee5b64142c3505d6931d8ed7ac6b7">Ultrasonic</link> ult)<para><emphasis>Stops and disables the ultrasonic sensor.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a86066f3cf35f5fca7ec405189773182c">usartInit</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * usart, unsigned int baud, unsigned int flags)<para><emphasis>Initialize the specified serial interface with the given connection parameters.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a802efaab0ca93c799eb82d42cf009e07">usartShutdown</link> (
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link> * usart)<para><emphasis>Disables the specified USART interface.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1add8964052eef78ca864990642888a7d7">wait</link> (
+const unsigned long time)<para><emphasis>Alias of taskDelay() intended to help EasyC users.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a591705c8bd27fce32490b0bd4fb7ecd9">waitUntil</link> (
+unsigned long * previousWakeTime, const unsigned long time)<para><emphasis>Alias of taskDelayUntil() intended to help EasyC users.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="_a_p_i_8h_1a8c2e4902f39a7abdea20cdf04007bb8e">watchdogInit</link> (
+)<para><emphasis>Enables IWDG watchdog timer which will reset the cortex if it locks up due to static shock
+or a misbehaving task preventing the timer to be reset.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Provides the high-level user functionality intended for use by typical VEX Cortex programmers. </para>
+
+<para>This file should be included for you in the predefined stubs in each new VEX Cortex PROS project through the inclusion of &quot;main.h&quot;. In any new C source file, it is advisable to include <link linkend="main_8h">main.h</link> instead of referencing <link linkend="_a_p_i_8h">API.h</link> by name, to better handle any nomenclature changes to this file or its contents.</para>
+
+<para>Copyright (c) 2011-2016, Purdue University ACM SIGBots. All rights reserved.</para>
+
+<para>This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <link xlink:href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</link>.</para>
+
+<para>PROS contains FreeRTOS (<link xlink:href="http://www.freertos.org">http://www.freertos.org</link>) whose source code may be obtained from <link xlink:href="http://sourceforge.net/projects/freertos/files/">http://sourceforge.net/projects/freertos/files/</link> or on request. </para>
+    <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/API.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+21 <emphasis class="preprocessor">#ifndef&#32;API_H_</emphasis>
+22 <emphasis class="preprocessor">#define&#32;API_H_</emphasis>
+23 
+24 <emphasis class="comment">//&#32;System&#32;includes</emphasis>
+25 <emphasis class="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+26 <emphasis class="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+27 <emphasis class="preprocessor">#include&#32;&lt;stdarg.h&gt;</emphasis>
+28 <emphasis class="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>
+29 
+30 <emphasis class="comment">//&#32;Begin&#32;C++&#32;extern&#32;to&#32;C</emphasis>
+31 <emphasis class="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+32 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>&#32;{
+33 <emphasis class="preprocessor">#endif</emphasis>
+34 
+35 <emphasis class="comment">//&#32;--------------------&#32;VEX&#32;competition&#32;functions&#32;--------------------</emphasis>
+36 
+40 <emphasis class="preprocessor">#define&#32;JOY_DOWN&#32;1</emphasis>
+41 
+44 <emphasis class="preprocessor">#define&#32;JOY_LEFT&#32;2</emphasis>
+45 
+48 <emphasis class="preprocessor">#define&#32;JOY_UP&#32;4</emphasis>
+49 
+52 <emphasis class="preprocessor">#define&#32;JOY_RIGHT&#32;8</emphasis>
+53 
+56 <emphasis class="preprocessor">#define&#32;ACCEL_X&#32;5</emphasis>
+57 
+60 <emphasis class="preprocessor">#define&#32;ACCEL_Y&#32;6</emphasis>
+61 
+68 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1aad3f43faea37dc2eddaf4ba0926a511f">isAutonomous</link>();
+77 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a56722b6f1c22da04885bc9853148bb71">isEnabled</link>();
+88 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a72aa0bce6b1d8ee298a60617f8fa74da">isJoystickConnected</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5a">joystick</link>);
+96 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a1eceab28885f971892b9d4fc76e0e542">isOnline</link>();
+104 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1ad56fcec15d1a48deb8780bb0fc38be4d">joystickGetAnalog</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5a">joystick</link>,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;axis);
+114 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="controller_8h_1ac365c9e892abe4a1b85ae8f56a4eae5a">joystick</link>,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;buttonGroup,
+115 &#32;&#32;&#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;button);
+121 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a91ac9eacbf0930cd5f26bc12b90b9efd">powerLevelBackup</link>();
+128 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1aeb5efefae0d6fa559dae5a7e5a77c956">powerLevelMain</link>();
+134 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a22269cefc22e487f7acdcc4737d58c4a">setTeamName</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*name);
+135 
+136 <emphasis class="comment">//&#32;--------------------&#32;Pin&#32;control&#32;functions&#32;--------------------</emphasis>
+137 
+141 <emphasis class="preprocessor">#define&#32;BOARD_NR_ADC_PINS&#32;8</emphasis>
+142 
+151 <emphasis class="preprocessor">#define&#32;BOARD_NR_GPIO_PINS&#32;27</emphasis>
+152 
+157 <emphasis class="preprocessor">#define&#32;HIGH&#32;1</emphasis>
+158 
+163 <emphasis class="preprocessor">#define&#32;LOW&#32;0</emphasis>
+164 
+172 <emphasis class="preprocessor">#define&#32;INPUT&#32;0x0A</emphasis>
+173 
+179 <emphasis class="preprocessor">#define&#32;INPUT_ANALOG&#32;0x00</emphasis>
+180 
+186 <emphasis class="preprocessor">#define&#32;INPUT_FLOATING&#32;0x04</emphasis>
+187 
+193 <emphasis class="preprocessor">#define&#32;OUTPUT&#32;0x01</emphasis>
+194 
+200 <emphasis class="preprocessor">#define&#32;OUTPUT_OD&#32;0x05</emphasis>
+201 
+221 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1aab54c390b2ff91b5b7861db877136392">analogCalibrate</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;channel);
+237 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a5da86064604c539c2b6a5e2993289108">analogRead</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;channel);
+252 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1adefc4d860dbaed441901d47d8c3598ee">analogReadCalibrated</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;channel);
+271 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a68b2c3e0863b8f4cb022fcdd77d2f5fd">analogReadCalibratedHR</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;channel);
+287 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a7321930f297f38e246050f7f5b091722">digitalRead</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;pin);
+298 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a23e767e5b47fa61d4e2cc02e6f15c7ab">digitalWrite</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;pin,&#32;<emphasis class="keywordtype">bool</emphasis>&#32;value);
+309 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a1875409d12eee562555bda94cad7f973">pinMode</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;pin,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;mode);
+310 
+311 <emphasis class="comment">/*</emphasis>
+312 <emphasis class="comment">&#32;*&#32;Digital&#32;port&#32;10&#32;cannot&#32;be&#32;used&#32;as&#32;an&#32;interrupt&#32;port,&#32;or&#32;for&#32;an&#32;encoder.&#32;Plan&#32;accordingly.</emphasis>
+313 <emphasis class="comment">&#32;*/</emphasis>
+314 
+318 <emphasis class="preprocessor">#define&#32;INTERRUPT_EDGE_RISING&#32;1</emphasis>
+319 
+322 <emphasis class="preprocessor">#define&#32;INTERRUPT_EDGE_FALLING&#32;2</emphasis>
+323 
+327 <emphasis class="preprocessor">#define&#32;INTERRUPT_EDGE_BOTH&#32;3</emphasis>
+328 
+<link linkend="_a_p_i_8h_1a5bbb1ca889e36aec7b4fce324c2662c4">332 </link><emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*<link linkend="_a_p_i_8h_1a5bbb1ca889e36aec7b4fce324c2662c4">InterruptHandler</link>)(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;pin);
+333 
+341 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a9291f71712cfb21e9bfd51682260fa73">ioClearInterrupt</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;pin);
+362 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a8d0fd8e69a4c4c5aba981d106ee7f9ac">ioSetInterrupt</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;pin,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;edges,&#32;<link linkend="_a_p_i_8h_1a5bbb1ca889e36aec7b4fce324c2662c4">InterruptHandler</link>&#32;handler);
+363 
+364 <emphasis class="comment">//&#32;--------------------&#32;Physical&#32;output&#32;control&#32;functions&#32;--------------------</emphasis>
+365 
+379 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a4805c8fd29f9221d28ed2e673c06e6c4">motorGet</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;channel);
+390 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a03c5b04b472d024281f62d7af8854a8e">motorSet</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;channel,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed);
+400 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a339844ebc35f48a14945b73edaeca498">motorStop</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;channel);
+405 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a8966c541f3e9565aea1289f0d2f2cf43">motorStopAll</link>();
+406 
+414 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a7e0b8a79a6f53f88329b87229e7d698b">speakerInit</link>();
+429 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1af91f9f80737d283ff82a96596f833854">speakerPlayArray</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*&#32;*&#32;songs);
+443 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a6971b95fa28048bf134b7421b7f2faee">speakerPlayRtttl</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*song);
+450 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a8d6d3ddc25b8408b0270cd2ccb9505ce">speakerShutdown</link>();
+451 
+452 <emphasis class="comment">//&#32;--------------------&#32;VEX&#32;sensor&#32;control&#32;functions&#32;--------------------</emphasis>
+453 
+458 <emphasis class="preprocessor">#define&#32;IME_ADDR_MAX&#32;0x1F</emphasis>
+459 
+479 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a868ab46aa5992e60829936c0109160bf">imeInitializeAll</link>();
+500 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1ac4f1500418a729ac3ee95bce9768b20c">imeGet</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;address,&#32;<emphasis class="keywordtype">int</emphasis>&#32;*value);
+523 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a2dfd22ed31510b48a91bd9cd3d04a72f">imeGetVelocity</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;address,&#32;<emphasis class="keywordtype">int</emphasis>&#32;*value);
+532 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1ab1ef9ee5f8878856896a6c920ed762fc">imeReset</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;address);
+540 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a19de5a557348a6b4931c89eb82eb8fb7">imeShutdown</link>();
+541 
+<link linkend="_a_p_i_8h_1a04e06985633aa933343fcfa3d7fb268d">548 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;*&#32;<link linkend="_a_p_i_8h_1a04e06985633aa933343fcfa3d7fb268d">Gyro</link>;
+549 
+559 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a0ae2ca5d2fd99f33aaef38786bb8ee59">gyroGet</link>(Gyro&#32;gyro);
+579 Gyro&#32;<link linkend="_a_p_i_8h_1a17270080a32b64937a3669089a80120f">gyroInit</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;port,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">short</emphasis>&#32;multiplier);
+588 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a5de4afb9c6bd747e8d7664e1c72390b2">gyroReset</link>(Gyro&#32;gyro);
+597 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a4e50e79b76d956dd9d466a582a5bb7b5">gyroShutdown</link>(Gyro&#32;gyro);
+598 
+<link linkend="_a_p_i_8h_1a8289b20280bf9db1462f60dae76d2939">605 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;*&#32;<link linkend="_a_p_i_8h_1a8289b20280bf9db1462f60dae76d2939">Encoder</link>;
+614 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a5cfffd673e7fc8bcd1827f11b2b1490b">encoderGet</link>(Encoder&#32;enc);
+627 Encoder&#32;<link linkend="_a_p_i_8h_1aa68a1ba3d46d89bdb40961c52aa2c4d0">encoderInit</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;portTop,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;portBottom,&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="vlib_8h_1aad7fea725cb4b198ace1aa3df5051244">reverse</link>);
+636 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a27500c21f56b2f44c62a9284ca5ebd44">encoderReset</link>(Encoder&#32;enc);
+645 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1ad068eaed82fe8c8f08ba02ea8eaf2d17">encoderShutdown</link>(Encoder&#32;enc);
+646 
+650 <emphasis class="preprocessor">#define&#32;ULTRA_BAD_RESPONSE&#32;-1</emphasis>
+651 
+<link linkend="_a_p_i_8h_1a527ee5b64142c3505d6931d8ed7ac6b7">658 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;*&#32;<link linkend="_a_p_i_8h_1a527ee5b64142c3505d6931d8ed7ac6b7">Ultrasonic</link>;
+670 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a435d7fc1c3c3da80ed64cf9dfed0bd42">ultrasonicGet</link>(Ultrasonic&#32;ult);
+682 Ultrasonic&#32;<link linkend="_a_p_i_8h_1aed267558847e901e3741bd031c4fc83d">ultrasonicInit</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;portEcho,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;portPing);
+691 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a355f91a286a081b95104b09898b467ed">ultrasonicShutdown</link>(Ultrasonic&#32;ult);
+692 
+693 <emphasis class="comment">//&#32;--------------------&#32;Custom&#32;sensor&#32;control&#32;functions&#32;--------------------</emphasis>
+694 
+695 <emphasis class="comment">//&#32;----&#32;I2C&#32;port&#32;control&#32;----</emphasis>
+706 <emphasis class="comment"></emphasis><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a591bdbd4df72ac4231feba723faac640">i2cRead</link>(uint8_t&#32;addr,&#32;uint8_t&#32;*data,&#32;uint16_t&#32;count);
+719 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a69670b44b640e824da387a6616dc2f9a">i2cReadRegister</link>(uint8_t&#32;addr,&#32;uint8_t&#32;reg,&#32;uint8_t&#32;*value,&#32;uint16_t&#32;count);
+732 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a2d286627370658ecee04a18335b91c39">i2cWrite</link>(uint8_t&#32;addr,&#32;uint8_t&#32;*data,&#32;uint16_t&#32;count);
+742 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a51385d22e08f52852c85ad675e3523a9">i2cWriteRegister</link>(uint8_t&#32;addr,&#32;uint8_t&#32;reg,&#32;uint16_t&#32;value);
+743 
+<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">750 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1ae253844f8b4cd62a302db7e3a486beb1">PROS_FILE</link>;
+751 
+752 
+753 <emphasis class="preprocessor">#ifndef&#32;FILE</emphasis>
+754 
+759 <emphasis class="preprocessor">#define&#32;FILE&#32;PROS_FILE</emphasis>
+760 <emphasis class="preprocessor">#endif</emphasis>
+761 
+765 <emphasis class="preprocessor">#define&#32;SERIAL_DATABITS_8&#32;0x0000</emphasis>
+766 
+769 <emphasis class="preprocessor">#define&#32;SERIAL_DATABITS_9&#32;0x1000</emphasis>
+770 
+773 <emphasis class="preprocessor">#define&#32;SERIAL_STOPBITS_1&#32;0x0000</emphasis>
+774 
+777 <emphasis class="preprocessor">#define&#32;SERIAL_STOPBITS_2&#32;0x2000</emphasis>
+778 
+781 <emphasis class="preprocessor">#define&#32;SERIAL_PARITY_NONE&#32;0x0000</emphasis>
+782 
+785 <emphasis class="preprocessor">#define&#32;SERIAL_PARITY_EVEN&#32;0x0400</emphasis>
+786 
+789 <emphasis class="preprocessor">#define&#32;SERIAL_PARITY_ODD&#32;0x0600</emphasis>
+790 
+793 <emphasis class="preprocessor">#define&#32;SERIAL_8N1&#32;0x0000</emphasis>
+794 
+811 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a86066f3cf35f5fca7ec405189773182c">usartInit</link>(PROS_FILE&#32;*usart,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;baud,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;flags);
+821 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a802efaab0ca93c799eb82d42cf009e07">usartShutdown</link>(PROS_FILE&#32;*usart);
+822 
+823 <emphasis class="comment">//&#32;--------------------&#32;Character&#32;input&#32;and&#32;output&#32;--------------------</emphasis>
+824 
+828 <emphasis class="preprocessor">#define&#32;stdout&#32;((PROS_FILE&#32;*)3)</emphasis>
+829 
+832 <emphasis class="preprocessor">#define&#32;stdin&#32;((PROS_FILE&#32;*)3)</emphasis>
+833 
+836 <emphasis class="preprocessor">#define&#32;uart1&#32;((PROS_FILE&#32;*)1)</emphasis>
+837 
+840 <emphasis class="preprocessor">#define&#32;uart2&#32;((PROS_FILE&#32;*)2)</emphasis>
+841 
+842 <emphasis class="preprocessor">#ifndef&#32;EOF</emphasis>
+843 
+846 <emphasis class="preprocessor">#define&#32;EOF&#32;((int)-1)</emphasis>
+847 <emphasis class="preprocessor">#endif</emphasis>
+848 
+849 <emphasis class="preprocessor">#ifndef&#32;SEEK_SET</emphasis>
+850 
+854 <emphasis class="preprocessor">#define&#32;SEEK_SET&#32;0</emphasis>
+855 <emphasis class="preprocessor">#endif</emphasis>
+856 <emphasis class="preprocessor">#ifndef&#32;SEEK_CUR</emphasis>
+857 
+861 <emphasis class="preprocessor">#define&#32;SEEK_CUR&#32;1</emphasis>
+862 <emphasis class="preprocessor">#endif</emphasis>
+863 <emphasis class="preprocessor">#ifndef&#32;SEEK_END</emphasis>
+864 
+868 <emphasis class="preprocessor">#define&#32;SEEK_END&#32;2</emphasis>
+869 <emphasis class="preprocessor">#endif</emphasis>
+870 
+877 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a0990e9bf57d497796ddcf12f61122eb5">fclose</link>(PROS_FILE&#32;*stream);
+890 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1aede7dd689fa991edc8e4c26908846606">fcount</link>(PROS_FILE&#32;*stream);
+901 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a27fc767a71921999f9651b1ca4cf1f93">fdelete</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*file);
+909 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a4c92590178e34fbedcc6fde534a0afd1">feof</link>(PROS_FILE&#32;*stream);
+921 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1aec30d0b30f9f5b8a521dd8f9b6ec39c7">fflush</link>(PROS_FILE&#32;*stream);
+930 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a09f27f0f85db7ff4e2d98fef10c0dde1">fgetc</link>(PROS_FILE&#32;*stream);
+945 <emphasis class="keywordtype">char</emphasis>*&#32;<link linkend="_a_p_i_8h_1a6315d4a637f2c6a29ad9c1355dbd6b44">fgets</link>(<emphasis class="keywordtype">char</emphasis>&#32;*str,&#32;<emphasis class="keywordtype">int</emphasis>&#32;num,&#32;PROS_FILE&#32;*stream);
+969 PROS_FILE&#32;*&#32;<link linkend="_a_p_i_8h_1a4cd09a1ff038c9ac9d461b077312beb6">fopen</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*file,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*mode);
+979 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a874987bcf339f25df0bdbc24f27a03db">fprint</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<emphasis class="keywordtype">string</emphasis>,&#32;PROS_FILE&#32;*stream);
+989 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1afe7d25ce198da1f8fec5a2dca770cb6a">fputc</link>(<emphasis class="keywordtype">int</emphasis>&#32;value,&#32;PROS_FILE&#32;*stream);
+999 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1ae4859a13f64d3dc4d57875512f0d1171">fputs</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<emphasis class="keywordtype">string</emphasis>,&#32;PROS_FILE&#32;*stream);
+1011 <emphasis class="keywordtype">size_t</emphasis>&#32;<link linkend="_a_p_i_8h_1a01b4329a6303387a4187c94343c0cc59">fread</link>(<emphasis class="keywordtype">void</emphasis>&#32;*ptr,&#32;<emphasis class="keywordtype">size_t</emphasis>&#32;size,&#32;<emphasis class="keywordtype">size_t</emphasis>&#32;count,&#32;PROS_FILE&#32;*stream);
+1021 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1adda53be8dacaa9deab92cabb9f2e54dd">fseek</link>(PROS_FILE&#32;*stream,&#32;<emphasis class="keywordtype">long</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;offset,&#32;<emphasis class="keywordtype">int</emphasis>&#32;origin);
+1029 <emphasis class="keywordtype">long</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a1c2742ed272f2a5e12962df45653ff18">ftell</link>(PROS_FILE&#32;*stream);
+1041 <emphasis class="keywordtype">size_t</emphasis>&#32;<link linkend="_a_p_i_8h_1aaadc510ae9d7c433161a366de9fb828d">fwrite</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;*ptr,&#32;<emphasis class="keywordtype">size_t</emphasis>&#32;size,&#32;<emphasis class="keywordtype">size_t</emphasis>&#32;count,&#32;PROS_FILE&#32;*stream);
+1047 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1ac45fdeab51c3197c1e7c4ec7beabaca9">getchar</link>();
+1055 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1ae2dd7886efd463e815dadf10eb54777e">print</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<emphasis class="keywordtype">string</emphasis>);
+1066 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a6c600555ec9aefb4c01fdb960ecc2809">putchar</link>(<emphasis class="keywordtype">int</emphasis>&#32;value);
+1073 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1af17f2f3fda696ddc3b7c1bac995edaf8">puts</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<emphasis class="keywordtype">string</emphasis>);
+1074 
+1104 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1ab9989f4619e4d3ccb13ed4c36d5f787a">fprintf</link>(PROS_FILE&#32;*stream,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="_a_p_i_8h_1aa3800794cdb71dc374a5ce3e645e4bb4">formatString</link>,&#32;...);
+1111 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="_a_p_i_8h_1aa3800794cdb71dc374a5ce3e645e4bb4">formatString</link>,&#32;...);
+1124 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1ada81026ae730d990159aab26c302a3ad">snprintf</link>(<emphasis class="keywordtype">char</emphasis>&#32;*buffer,&#32;<emphasis class="keywordtype">size_t</emphasis>&#32;limit,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="_a_p_i_8h_1aa3800794cdb71dc374a5ce3e645e4bb4">formatString</link>,&#32;...);
+1135 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1acbfbfc380f865613ad5ff3cae256bdc4">sprintf</link>(<emphasis class="keywordtype">char</emphasis>&#32;*buffer,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="_a_p_i_8h_1aa3800794cdb71dc374a5ce3e645e4bb4">formatString</link>,&#32;...);
+1136 
+1140 <emphasis class="preprocessor">#define&#32;LCD_BTN_LEFT&#32;1</emphasis>
+1141 
+1144 <emphasis class="preprocessor">#define&#32;LCD_BTN_CENTER&#32;2</emphasis>
+1145 
+1148 <emphasis class="preprocessor">#define&#32;LCD_BTN_RIGHT&#32;4</emphasis>
+1149 
+1158 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a5fa1d119fe3e836b5519f97eae7a1272">lcdClear</link>(PROS_FILE&#32;*lcdPort);
+1167 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a43dc11a67b697c0d32315ea5a9af85f9">lcdInit</link>(PROS_FILE&#32;*lcdPort);
+1179 <emphasis class="preprocessor">#ifdef&#32;DOXYGEN</emphasis>
+1180 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a6cfad8271c6a566a2f51ca318f819a80">lcdPrint</link>(PROS_FILE&#32;*lcdPort,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="_a_p_i_8h_1a58c3304a90ff2bb7064ff7187b2da466">line</link>,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="_a_p_i_8h_1aa3800794cdb71dc374a5ce3e645e4bb4">formatString</link>,&#32;...);
+1181 <emphasis class="preprocessor">#else</emphasis>
+<link linkend="_a_p_i_8h_1a58c3304a90ff2bb7064ff7187b2da466">1182 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a7f8e65d04ad51cecfcf34cbb064e8ae5">__attribute__</link>&#32;((format&#32;(<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>,&#32;3,&#32;4)))&#32;<link linkend="_a_p_i_8h_1a6cfad8271c6a566a2f51ca318f819a80">lcdPrint</link>(PROS_FILE&#32;*lcdPort,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;<link linkend="_a_p_i_8h_1a58c3304a90ff2bb7064ff7187b2da466">line</link>,
+1183 &#32;&#32;&#32;&#32;const&#32;<emphasis class="keywordtype">char</emphasis>&#32;*<link linkend="_a_p_i_8h_1aa3800794cdb71dc374a5ce3e645e4bb4">formatString</link>,&#32;...);
+1184 <emphasis class="preprocessor">#endif</emphasis>
+1185 
+1194 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a04541d90f60b1ccd3d036656673c972d">lcdReadButtons</link>(PROS_FILE&#32;*lcdPort);
+1203 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1aab53a247d88151a6623c20fa1ea940b0">lcdSetBacklight</link>(PROS_FILE&#32;*lcdPort,&#32;<emphasis class="keywordtype">bool</emphasis>&#32;backlight);
+1215 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a5555228be96449af952aed5bcabb6d8d">lcdSetText</link>(PROS_FILE&#32;*lcdPort,&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;line,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*buffer);
+1221 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1acf0a8389bc6078e4c40c3d59af814cb7">lcdShutdown</link>(PROS_FILE&#32;*lcdPort);
+1222 
+1223 <emphasis class="comment">//&#32;--------------------&#32;Real-time&#32;scheduler&#32;functions&#32;--------------------</emphasis>
+1232 <emphasis class="comment"></emphasis><emphasis class="preprocessor">#define&#32;TASK_MAX&#32;16</emphasis>
+1233 
+1238 <emphasis class="preprocessor">#define&#32;TASK_MAX_PRIORITIES&#32;6</emphasis>
+1239 
+1243 <emphasis class="preprocessor">#define&#32;TASK_PRIORITY_LOWEST&#32;0</emphasis>
+1244 
+1249 <emphasis class="preprocessor">#define&#32;TASK_PRIORITY_DEFAULT&#32;2</emphasis>
+1250 
+1254 <emphasis class="preprocessor">#define&#32;TASK_PRIORITY_HIGHEST&#32;(TASK_MAX_PRIORITIES&#32;-&#32;1)</emphasis>
+1255 
+1262 <emphasis class="preprocessor">#define&#32;TASK_DEFAULT_STACK_SIZE&#32;512</emphasis>
+1263 
+1270 <emphasis class="preprocessor">#define&#32;TASK_MINIMAL_STACK_SIZE&#32;64</emphasis>
+1271 
+1275 <emphasis class="preprocessor">#define&#32;TASK_DEAD&#32;0</emphasis>
+1276 
+1279 <emphasis class="preprocessor">#define&#32;TASK_RUNNING&#32;1</emphasis>
+1280 
+1284 <emphasis class="preprocessor">#define&#32;TASK_RUNNABLE&#32;2</emphasis>
+1285 
+1289 <emphasis class="preprocessor">#define&#32;TASK_SLEEPING&#32;3</emphasis>
+1290 
+1293 <emphasis class="preprocessor">#define&#32;TASK_SUSPENDED&#32;4</emphasis>
+1294 
+<link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">1300 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;*&#32;<link linkend="_a_p_i_8h_1a23dca3c0de10682afb982677ff292f77">TaskHandle</link>;
+<link linkend="_a_p_i_8h_1a9b40607ca13d2b5261f47f613e3c4fa4">1306 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;*&#32;<link linkend="_a_p_i_8h_1a9b40607ca13d2b5261f47f613e3c4fa4">Mutex</link>;
+<link linkend="_a_p_i_8h_1a884363b5e46c2eedeae95c179aaeb717">1312 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;*&#32;<link linkend="_a_p_i_8h_1a884363b5e46c2eedeae95c179aaeb717">Semaphore</link>;
+<link linkend="_a_p_i_8h_1af3bbcf99b9e4561ebbae4a1f283ba6a3">1323 </link><emphasis class="keyword">typedef</emphasis>&#32;void&#32;(*<link linkend="_a_p_i_8h_1af3bbcf99b9e4561ebbae4a1f283ba6a3">TaskCode</link>)(<emphasis class="keywordtype">void</emphasis>&#32;*);
+1324 
+1336 TaskHandle&#32;<link linkend="_a_p_i_8h_1abd5e503a273aaf6abf6869ebd76f2d2d">taskCreate</link>(<link linkend="_a_p_i_8h_1af3bbcf99b9e4561ebbae4a1f283ba6a3">TaskCode</link>&#32;taskCode,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;stackDepth,&#32;<emphasis class="keywordtype">void</emphasis>&#32;*parameters,
+1337 &#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;priority);
+1352 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1ac89618d0782547d189fe412a9917639b">taskDelay</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;msToDelay);
+1373 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1ae93bc867b1aa4a12d6536a497f1b6869">taskDelayUntil</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;*previousWakeTime,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;cycleTime);
+1387 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1add3b8d580ea6ef5635c6d9ff88c68612">taskDelete</link>(TaskHandle&#32;taskToDelete);
+1397 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a436fb5636d9a200ecebbb95968de91f6">taskGetCount</link>();
+1409 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a4f805fd479cb4c427e8f4edfa7d55143">taskGetState</link>(TaskHandle&#32;task);
+1416 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1ae62d015b8280e4c74ad9ee15c7ac790b">taskPriorityGet</link>(<emphasis class="keyword">const</emphasis>&#32;TaskHandle&#32;task);
+1427 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a91d8f7074c6cb12dfe163df17bdf5540">taskPrioritySet</link>(TaskHandle&#32;task,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;newPriority);
+1438 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1afa2a4c5236b32bd9983bf19a4ac0cc23">taskResume</link>(TaskHandle&#32;taskToResume);
+1454 TaskHandle&#32;<link linkend="_a_p_i_8h_1ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</link>(<emphasis class="keywordtype">void</emphasis>&#32;(*fn)(<emphasis class="keywordtype">void</emphasis>),&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;increment);
+1463 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1ab56a51f337ad1903ad2bbce095744170">taskSuspend</link>(TaskHandle&#32;taskToSuspend);
+1464 
+1477 Semaphore&#32;<link linkend="_a_p_i_8h_1a4461acf29574576dda6a3316117f85a9">semaphoreCreate</link>();
+1489 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a9e5b0b6d5da138b4d5a077237894f96e">semaphoreGive</link>(Semaphore&#32;semaphore);
+1499 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a7520baa9cf5c9ec2f43925b098e7b46a">semaphoreTake</link>(Semaphore&#32;semaphore,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;blockTime);
+1506 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1af27ba79dc102f914d31a3c20136b1cd9">semaphoreDelete</link>(Semaphore&#32;semaphore);
+1507 
+1520 Mutex&#32;<link linkend="_a_p_i_8h_1aecd027ce8f8b52a765735e9eb5b202b3">mutexCreate</link>();
+1528 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1afe171a08d22de18fc2ab604b2364959f">mutexGive</link>(Mutex&#32;mutex);
+1540 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="_a_p_i_8h_1a8b51124628d2a7741738d48551d1e8ee">mutexTake</link>(Mutex&#32;mutex,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;blockTime);
+1547 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a247598f8083a3ce6c39317d279f631cf">mutexDelete</link>(Mutex&#32;mutex);
+1548 
+1554 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a1c59207742a1acf45a8957d7f04f9dfe">delay</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;time);
+1565 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1abee651cde0a0e6ed0df34c86ed5af756">delayMicroseconds</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;us);
+1575 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;<link linkend="_a_p_i_8h_1a8b24cbb7c3486e1bfa05c86db83ecb01">micros</link>();
+1584 <emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;<link linkend="_a_p_i_8h_1a6ff7f2532a22366f0013bc41397129fd">millis</link>();
+1590 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1add8964052eef78ca864990642888a7d7">wait</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;time);
+1597 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a591705c8bd27fce32490b0bd4fb7ecd9">waitUntil</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;*previousWakeTime,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">long</emphasis>&#32;time);
+1605 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a8c2e4902f39a7abdea20cdf04007bb8e">watchdogInit</link>();
+1611 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="_a_p_i_8h_1a7bf146d0ac724624ae0147c8e225b713">standaloneModeEnable</link>();
+1612 
+1613 <emphasis class="comment">//&#32;End&#32;C++&#32;extern&#32;to&#32;C</emphasis>
+1614 <emphasis class="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+1615 }
+1616 <emphasis class="preprocessor">#endif</emphasis>
+1617 
+1618 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

@@ -2,7 +2,7 @@
 \label{structmenu__t}\index{menu\+\_\+t@{menu\+\_\+t}}
 
 
-Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint\+\_\+menu.  
+Represents a specific instance of a menu.  
 
 
 
@@ -17,29 +17,29 @@ int \textbf{ current}
 unsigned int \textbf{ length}
 \begin{DoxyCompactList}\small\item\em contains the length of options char$\ast$$\ast$. \end{DoxyCompactList}\item 
 int \textbf{ max}
-\begin{DoxyCompactList}\small\item\em contains the maximum int value of menu. Defaults to minimum int value \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em contains the maximum int value of menu. \end{DoxyCompactList}\item 
 float \textbf{ max\+\_\+f}
-\begin{DoxyCompactList}\small\item\em contains the maximum float value of menu. Defaults to minimum int value \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em contains the maximum float value of menu. \end{DoxyCompactList}\item 
 int \textbf{ min}
-\begin{DoxyCompactList}\small\item\em contains the minimum int value of menu. Defaults to minimum int value \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em contains the minimum int value of menu. \end{DoxyCompactList}\item 
 float \textbf{ min\+\_\+f}
-\begin{DoxyCompactList}\small\item\em contains the minimum float value of menu. Defaults to minimum int value \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em contains the minimum float value of menu. \end{DoxyCompactList}\item 
 char $\ast$$\ast$ \textbf{ options}
 \begin{DoxyCompactList}\small\item\em contains the array of string options. \end{DoxyCompactList}\item 
 char $\ast$ \textbf{ prompt}
-\begin{DoxyCompactList}\small\item\em contains the prompt to display on the first line. Step is how much the int menu will increase of decrease with each press. Defaults to one \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em contains the prompt to display on the first line. \end{DoxyCompactList}\item 
 int \textbf{ step}
-\begin{DoxyCompactList}\small\item\em contains the step int value of menu. Step is how much the int menu will increase of decrease with each press. Defaults to one \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em contains the step int value of menu. \end{DoxyCompactList}\item 
 float \textbf{ step\+\_\+f}
-\begin{DoxyCompactList}\small\item\em contains the step float value of menu. Step is how much the int menu will increase of decrease with each press. Defaults to 1.\+0f \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em contains the step float value of menu. \end{DoxyCompactList}\item 
 enum \textbf{ menu\+\_\+type} \textbf{ type}
 \begin{DoxyCompactList}\small\item\em contains the type of menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
-Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint\+\_\+menu. 
+Represents a specific instance of a menu. 
 
-\begin{DoxyAuthor}{Author}
+Will cause a memory leak if not deinitialized via denint\+\_\+menu. \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -123,9 +123,9 @@ Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, and \textbf{ init
 
 
 
-contains the maximum int value of menu. Defaults to minimum int value 
+contains the maximum int value of menu. 
 
-\begin{DoxyAuthor}{Author}
+Defaults to minimum int value \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -147,9 +147,9 @@ Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ create\+
 
 
 
-contains the maximum float value of menu. Defaults to minimum int value 
+contains the maximum float value of menu. 
 
-\begin{DoxyAuthor}{Author}
+Defaults to minimum int value \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -171,9 +171,9 @@ Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ create\+
 
 
 
-contains the minimum int value of menu. Defaults to minimum int value 
+contains the minimum int value of menu. 
 
-\begin{DoxyAuthor}{Author}
+Defaults to minimum int value \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -195,9 +195,9 @@ Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ create\+
 
 
 
-contains the minimum float value of menu. Defaults to minimum int value 
+contains the minimum float value of menu. 
 
-\begin{DoxyAuthor}{Author}
+Defaults to minimum int value \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -243,9 +243,9 @@ Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ denint\+
 
 
 
-contains the prompt to display on the first line. Step is how much the int menu will increase of decrease with each press. Defaults to one 
+contains the prompt to display on the first line. 
 
-\begin{DoxyAuthor}{Author}
+Step is how much the int menu will increase of decrease with each press. Defaults to one \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -267,9 +267,9 @@ Referenced by \textbf{ create\+\_\+menu()}, \textbf{ denint\+\_\+menu()}, and \t
 
 
 
-contains the step int value of menu. Step is how much the int menu will increase of decrease with each press. Defaults to one 
+contains the step int value of menu. 
 
-\begin{DoxyAuthor}{Author}
+Step is how much the int menu will increase of decrease with each press. Defaults to one \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -291,9 +291,9 @@ Referenced by \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ create\+
 
 
 
-contains the step float value of menu. Step is how much the int menu will increase of decrease with each press. Defaults to 1.\+0f 
+contains the step float value of menu. 
 
-\begin{DoxyAuthor}{Author}
+Step is how much the int menu will increase of decrease with each press. Defaults to 1.\+0f \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}

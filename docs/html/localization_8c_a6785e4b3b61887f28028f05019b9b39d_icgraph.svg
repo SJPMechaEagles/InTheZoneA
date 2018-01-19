@@ -18,7 +18,7 @@
 <!-- Node5 -->
 <g id="node2" class="node">
 <title>Node5</title>
-<g id="a_node2"><a xlink:href="localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e" target="_top" xlink:title="update_position">
+<g id="a_node2"><a xlink:href="localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e" target="_top" xlink:title="Updates the position from the localization. ">
 <polygon fill="none" stroke="#000000" points="160.3887,-5.5 160.3887,-23.5 247.0039,-23.5 247.0039,-5.5 160.3887,-5.5"/>
 <text text-anchor="middle" x="203.6963" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">update_position</text>
 </a>
@@ -33,7 +33,7 @@
 <!-- Node6 -->
 <g id="node3" class="node">
 <title>Node6</title>
-<g id="a_node3"><a xlink:href="localization_8c.html#afdd0147de6aa15957e9a125f9cd20578" target="_top" xlink:title="Starts the localization process. ">
+<g id="a_node3"><a xlink:href="localization_8c.html#afdd0147de6aa15957e9a125f9cd20578" target="_top" xlink:title="initializes the localization ">
 <polygon fill="none" stroke="#000000" points="283.0039,-5.5 283.0039,-23.5 366.8213,-23.5 366.8213,-5.5 283.0039,-5.5"/>
 <text text-anchor="middle" x="324.9126" y="-11.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">init_localization</text>
 </a>

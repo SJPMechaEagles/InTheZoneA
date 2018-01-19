@@ -16,23 +16,17 @@
 00054 \textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \{
 00055 \textcolor{preprocessor}{#endif}
 00056 
-00057 \textcolor{comment}{//#define AUTO\_DEBUG}
+00057 \textcolor{comment}{// Prototypes for initialization, operator control and autonomous}
 00058 
-00059 \textcolor{comment}{// A function prototype looks exactly like its declaration, but with a semicolon}
-00060 \textcolor{comment}{// instead of actual code. If a function does not match a prototype, compile}
-00061 \textcolor{comment}{// errors will occur.}
-00062 
-00063 \textcolor{comment}{// Prototypes for initialization, operator control and autonomous}
-00064 
-00082 \textcolor{keywordtype}{void} autonomous();
-00093 \textcolor{keywordtype}{void} initializeIO();
-00107 \textcolor{keywordtype}{void} initialize();
-00129 \textcolor{keywordtype}{void} operatorControl();
-00130 
-00131 \textcolor{comment}{// End C++ export structure}
-00132 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
-00133 \}
-00134 \textcolor{preprocessor}{#endif}
-00135 
-00136 \textcolor{preprocessor}{#endif}
+00076 \textcolor{keywordtype}{void} autonomous();
+00087 \textcolor{keywordtype}{void} initializeIO();
+00101 \textcolor{keywordtype}{void} initialize();
+00123 \textcolor{keywordtype}{void} operatorControl();
+00124 
+00125 \textcolor{comment}{// End C++ export structure}
+00126 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
+00127 \}
+00128 \textcolor{preprocessor}{#endif}
+00129 
+00130 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

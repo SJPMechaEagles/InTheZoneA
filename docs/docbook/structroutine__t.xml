@@ -23,11 +23,31 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void(* routine)()</para>
+                        <para>void(* routine)(void *)</para>
                     </listitem>
                 </itemizedlist>
             </para>
         </section>
+    <simplesect>
+
+<para>Routine system that allows mapping buttons to actions. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Chris Jerrett </para>
+</formalpara>
+<formalpara><title>Date: </title>
+
+<para>1/8/17 Struct representing a routine </para>
+</formalpara>
+</para>
+                <para>Definition at line 11 of file routines.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>routines.h</para></listitem></itemizedlist></para>
+        </simplesect>
         <section>
             <title>Field Documentation</title>
         </section>

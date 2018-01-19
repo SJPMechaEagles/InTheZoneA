@@ -5,14 +5,6 @@
 Battery management related functions.  
 
 
-{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
-\subsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \textbf{ M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}~7.\+8
-\begin{DoxyCompactList}\small\item\em The minimum acceptable backup battery voltage beofre a match. \end{DoxyCompactList}\item 
-\#define \textbf{ M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}~7.\+8
-\begin{DoxyCompactList}\small\item\em The minimum acceptable main battery voltage beofre a match. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,45 +31,6 @@ Definition in file \textbf{ battery.\+h}.
 
 
 
-\subsubsection{Macro Definition Documentation}
-\mbox{\label{battery_8h_a0713ec94f47c403bf536ab6b11833b81}} 
-\index{battery.\+h@{battery.\+h}!M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE@{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}}
-\index{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE@{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}!battery.\+h@{battery.\+h}}
-\paragraph{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}
-{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE~7.\+8}
-
-
-
-The minimum acceptable backup battery voltage beofre a match. 
-
-
-
-Definition at line \textbf{ 20} of file \textbf{ battery.\+h}.
-
-
-
-Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
-
-\mbox{\label{battery_8h_a63f8a91bb74417aa77dc00340b6fd007}} 
-\index{battery.\+h@{battery.\+h}!M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE@{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}}
-\index{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE@{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}!battery.\+h@{battery.\+h}}
-\paragraph{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}
-{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE~7.\+8}
-
-
-
-The minimum acceptable main battery voltage beofre a match. 
-
-
-
-Definition at line \textbf{ 15} of file \textbf{ battery.\+h}.
-
-
-
-Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
-
-
-
 \subsubsection{Function Documentation}
 \mbox{\label{battery_8h_a9b1c5cf7ddddebf63796050a1d4a9969}} 
 \index{battery.\+h@{battery.\+h}!backup\+\_\+battery\+\_\+voltage@{backup\+\_\+battery\+\_\+voltage}}
@@ -98,8 +51,32 @@ Definition at line \textbf{ 14} of file \textbf{ battery.\+c}.
 
 
 
+References \textbf{ power\+Level\+Backup()}.
+
+
+
 Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 
+
+\begin{DoxyCode}
+00014 \{ \textcolor{keywordflow}{return} powerLevelBackup() / 1000.0; \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{battery_8h_a9b1c5cf7ddddebf63796050a1d4a9969_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_8h_a9b1c5cf7ddddebf63796050a1d4a9969_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{battery_8h_a1097bbb878f6e2690f8eea6cd231959a}} 
 \index{battery.\+h@{battery.\+h}!battery\+\_\+level\+\_\+acceptable@{battery\+\_\+level\+\_\+acceptable}}
 \index{battery\+\_\+level\+\_\+acceptable@{battery\+\_\+level\+\_\+acceptable}!battery.\+h@{battery.\+h}}
@@ -111,9 +88,9 @@ Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 returns if the batteries are acceptable 
 
 \begin{DoxySeeAlso}{See also}
-\doxyref{M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}{p.}{battery_8h_a63f8a91bb74417aa77dc00340b6fd007} 
+M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE 
 
-\doxyref{M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}{p.}{battery_8h_a0713ec94f47c403bf536ab6b11833b81}
+M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE
 \end{DoxySeeAlso}
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
@@ -124,12 +101,38 @@ Definition at line \textbf{ 23} of file \textbf{ battery.\+c}.
 
 
 
-References \textbf{ backup\+\_\+battery\+\_\+voltage()}, \textbf{ main\+\_\+battery\+\_\+voltage()}, \textbf{ M\+I\+N\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+V\+O\+L\+T\+A\+GE}, and \textbf{ M\+I\+N\+\_\+\+M\+A\+I\+N\+\_\+\+V\+O\+L\+T\+A\+GE}.
+References \textbf{ backup\+\_\+battery\+\_\+voltage()}, and \textbf{ main\+\_\+battery\+\_\+voltage()}.
 
 
 
 Referenced by \textbf{ initialize()}.
 
+
+\begin{DoxyCode}
+00023                                 \{
+00024   \textcolor{keywordflow}{if} (main_battery_voltage() < MIN\_MAIN\_VOLTAGE)
+00025     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00026   \textcolor{keywordflow}{if} (backup_battery_voltage() < MIN\_BACKUP\_VOLTAGE)
+00027     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00028   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00029 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_8h_a1097bbb878f6e2690f8eea6cd231959a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{battery_8h_a1097bbb878f6e2690f8eea6cd231959a_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{battery_8h_a8c92c389534fdb079698cdebeb7f2efa}} 
 \index{battery.\+h@{battery.\+h}!main\+\_\+battery\+\_\+voltage@{main\+\_\+battery\+\_\+voltage}}
 \index{main\+\_\+battery\+\_\+voltage@{main\+\_\+battery\+\_\+voltage}!battery.\+h@{battery.\+h}}
@@ -149,5 +152,29 @@ Definition at line \textbf{ 8} of file \textbf{ battery.\+c}.
 
 
 
+References \textbf{ power\+Level\+Main()}.
+
+
+
 Referenced by \textbf{ battery\+\_\+level\+\_\+acceptable()}.
 
+
+\begin{DoxyCode}
+00008 \{ \textcolor{keywordflow}{return} powerLevelMain() / 1000.0; \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{battery_8h_a8c92c389534fdb079698cdebeb7f2efa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{battery_8h_a8c92c389534fdb079698cdebeb7f2efa_icgraph}
+\end{center}
+\end{figure}

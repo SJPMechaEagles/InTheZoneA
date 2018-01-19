@@ -17,7 +17,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="_a_p_i_8h.html#add3b8d580ea6ef5635c6d9ff88c68612" target="_top" xlink:title="taskDelete">
+<g id="a_node2"><a xlink:href="_a_p_i_8h.html#add3b8d580ea6ef5635c6d9ff88c68612" target="_top" xlink:title="Kills and removes the specified task from the kernel task list. ">
 <polygon fill="none" stroke="#000000" points="95.9111,-.5 95.9111,-18.5 159.1572,-18.5 159.1572,-.5 95.9111,-.5"/>
 <text text-anchor="middle" x="127.5342" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">taskDelete</text>
 </a>

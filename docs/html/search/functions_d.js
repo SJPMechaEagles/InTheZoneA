@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['raise_5fintake',['raise_intake',['../mobile__goal__intake_8h.html#aa46a9341d1eb7b39a2ef4cc5079ee3ca',1,'raise_intake():&#160;mobile_goal_intake.c'],['../mobile__goal__intake_8c.html#aa46a9341d1eb7b39a2ef4cc5079ee3ca',1,'raise_intake():&#160;mobile_goal_intake.c']]],
-  ['raise_5fmain_5flifter',['raise_main_lifter',['../lifter_8h.html#a2e2bd38b5b8b52378f3510368bf8aa0a',1,'raise_main_lifter():&#160;lifter.c'],['../lifter_8c.html#a2e2bd38b5b8b52378f3510368bf8aa0a',1,'raise_main_lifter():&#160;lifter.c']]],
-  ['raise_5fsecondary_5flifter',['raise_secondary_lifter',['../lifter_8h.html#a786f679ea48bb8c80e00fbac9a69911b',1,'raise_secondary_lifter():&#160;lifter.c'],['../lifter_8c.html#a786f679ea48bb8c80e00fbac9a69911b',1,'raise_secondary_lifter():&#160;lifter.c']]],
-  ['register_5froutine',['register_routine',['../routines_8h.html#a4bf3e235fcde5f0e1ce1f693cbb9c01c',1,'register_routine(void(*routine)(), button_t on_buttons, button_t *prohibited_buttons):&#160;routines.c'],['../routines_8c.html#a4bf3e235fcde5f0e1ce1f693cbb9c01c',1,'register_routine(void(*routine)(), button_t on_buttons, button_t *prohibited_buttons):&#160;routines.c']]],
-  ['reverse',['reverse',['../vlib_8h.html#aad7fea725cb4b198ace1aa3df5051244',1,'reverse(char *str, int len):&#160;vlib.c'],['../vlib_8c.html#aad7fea725cb4b198ace1aa3df5051244',1,'reverse(char *str, int len):&#160;vlib.c']]],
-  ['routine_5ftask',['routine_task',['../routines_8h.html#a230cdcefb410a429fb6baba1f88fc9ba',1,'routine_task():&#160;routines.c'],['../routines_8c.html#a230cdcefb410a429fb6baba1f88fc9ba',1,'routine_task():&#160;routines.c']]],
-  ['rowswap',['rowSwap',['../matrix_8h.html#acdd57777a972ce339153878fa917db14',1,'rowSwap(matrix *a, int p, int q):&#160;matrix.c'],['../matrix_8c.html#acdd57777a972ce339153878fa917db14',1,'rowSwap(matrix *a, int p, int q):&#160;matrix.c']]]
+  ['pinmode',['pinMode',['../_a_p_i_8h.html#a1875409d12eee562555bda94cad7f973',1,'API.h']]],
+  ['powerlevelbackup',['powerLevelBackup',['../_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd',1,'API.h']]],
+  ['powerlevelmain',['powerLevelMain',['../_a_p_i_8h.html#aeb5efefae0d6fa559dae5a7e5a77c956',1,'API.h']]],
+  ['print',['print',['../_a_p_i_8h.html#ae2dd7886efd463e815dadf10eb54777e',1,'API.h']]],
+  ['printf',['printf',['../_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6',1,'API.h']]],
+  ['printmatrix',['printMatrix',['../matrix_8h.html#a50ab2b1ac33d6993d93522fc4f30a051',1,'printMatrix(matrix *m):&#160;matrix.c'],['../matrix_8c.html#a50ab2b1ac33d6993d93522fc4f30a051',1,'printMatrix(matrix *m):&#160;matrix.c']]],
+  ['promt_5fconfirmation',['promt_confirmation',['../lcd_8h.html#a99f4683e1990edf624ab216bf327cba4',1,'promt_confirmation(const char *confirm_text):&#160;lcd.c'],['../lcd_8c.html#a99f4683e1990edf624ab216bf327cba4',1,'promt_confirmation(const char *confirm_text):&#160;lcd.c']]],
+  ['putchar',['putchar',['../_a_p_i_8h.html#a6c600555ec9aefb4c01fdb960ecc2809',1,'API.h']]],
+  ['puts',['puts',['../_a_p_i_8h.html#af17f2f3fda696ddc3b7c1bac995edaf8',1,'API.h']]]
 ];

@@ -1,7 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="vmath_8c">
     <title>vmath.c File Reference</title>
-    <programlisting>#include &quot;vmath.h&quot;</programlisting>
+<para>Include dependency diagram for vmath.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="vmath_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for vmath.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="vmath_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Functions</title>
             <para>
@@ -90,7 +111,7 @@ double angle)<para><emphasis>sine of a angle in degrees</emphasis></para>
 55 }
 56 
 <link linkend="vmath_8c_1a2b83ceb814c90ebfa042a26d884ac159">60 </link><emphasis class="keywordtype">double</emphasis>&#32;<link linkend="vmath_8c_1a2b83ceb814c90ebfa042a26d884ac159">sind</link>(<emphasis class="keywordtype">double</emphasis>&#32;<link linkend="structpolar__cord_1a81b3a11d38d76719b02fcd425adaa216">angle</link>)&#32;{
-61 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;angleradians&#32;=&#32;angle&#32;*&#32;<link linkend="vmath_8h_1ae71449b1cc6e6250b91f539153a7a0d3">M_PI</link>&#32;/&#32;180.0f;
+61 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;angleradians&#32;=&#32;angle&#32;*&#32;M_PI&#32;/&#32;180.0f;
 62 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;sin(angleradians);
 63 }
 64 

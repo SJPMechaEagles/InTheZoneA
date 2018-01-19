@@ -1,6 +1,5 @@
 \subsection{src/controller.c File Reference}
 \label{controller_8c}\index{src/controller.\+c@{src/controller.\+c}}
-{\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,11 +21,51 @@ Gets the location of a joystick on the controller.
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\doxyref{R\+I\+G\+H\+T\+\_\+\+J\+OY}{p.}{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe} 
+
+R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X 
+
+R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y 
+
+L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X 
+
+L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y 
+\end{DoxySeeAlso}
 
 
-Definition at line \textbf{ 7} of file \textbf{ controller.\+c}.
+Definition at line \textbf{ 12} of file \textbf{ controller.\+c}.
 
 
 
-References \textbf{ L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X}, \textbf{ L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y}, \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+OY}, \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X}, \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y}, \textbf{ cord\+::x}, and \textbf{ cord\+::y}.
+References \textbf{ joystick\+Get\+Analog()}, \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+OY}, \textbf{ cord\+::x}, and \textbf{ cord\+::y}.
 
+
+\begin{DoxyCode}
+00012                                                                   \{
+00013   \textcolor{keywordtype}{int} x;
+00014   \textcolor{keywordtype}{int} y;
+00015   \textcolor{comment}{// Get the joystick value for either the right or left,}
+00016   \textcolor{comment}{// depending on the mode}
+00017   \textcolor{keywordflow}{if} (side == RIGHT_JOY) \{
+00018     y = joystickGetAnalog(controller, RIGHT\_JOY\_X);
+00019     x = joystickGetAnalog(controller, RIGHT\_JOY\_Y);
+00020   \} \textcolor{keywordflow}{else} \{
+00021     y = joystickGetAnalog(controller, LEFT\_JOY\_X);
+00022     x = joystickGetAnalog(controller, LEFT\_JOY\_Y);
+00023   \}
+00024   \textcolor{comment}{// Define a coordinate for the joystick value}
+00025   \textcolor{keyword}{struct }cord c;
+00026   c.x = x;
+00027   c.y = y;
+00028   \textcolor{keywordflow}{return} c;
+00029 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{controller_8c_a0ce0176099c0bb15ad8c36123222059d_cgraph}
+\end{center}
+\end{figure}

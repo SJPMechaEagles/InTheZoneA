@@ -13,116 +13,116 @@
 00009 
 00010 matrix *state_matrix;
 00011 
-00012 \textcolor{keyword}{struct }encoder_odemtry \{
-00013   \textcolor{keywordtype}{double} x;
-00014   \textcolor{keywordtype}{double} y;
-00015   \textcolor{keywordtype}{double} theta;
-00016 \};
-00017 
-00018 \textcolor{keyword}{struct }accelerometer_odometry \{
-00019   \textcolor{keywordtype}{double} x;
-00020   \textcolor{keywordtype}{double} y;
-00021 \};
-00022 
-00023 \textcolor{keyword}{static} \textcolor{keywordtype}{double} calculate_angle();
-00024 \textcolor{keyword}{static} \textcolor{keyword}{struct }accelerometer_odometry calculate_accelerometer_odemetry();
-00025 
-00032 \textcolor{keyword}{struct }location get_position() \{\}
-00033 
-00039 \textcolor{keywordtype}{void} update_position() \{
-00040   \textcolor{comment}{// int curr\_theta = calculate\_angle();}
-00041 
-00042   \textcolor{keyword}{struct }accelerometer_odometry oddem = calculate_accelerometer_odemetry();
-00043   \textcolor{comment}{// printf("x: %d y: %d T: %d\(\backslash\)n", a.x, a.y, 0);}
-00044 
-00045   \textcolor{comment}{/*int l = 1;}
-00046 \textcolor{comment}{  int vr = get\_encoder\_velocity(1);}
-00047 \textcolor{comment}{  int vl = get\_encoder\_velocity(2);}
-00048 \textcolor{comment}{  int theta\_dot = (vr - vl) / l;}
-00049 \textcolor{comment}{  int curr\_theta = theta + theta\_dot;}
-00050 \textcolor{comment}{  double dt = LOCALIZATION\_UPDATE\_FREQUENCY;}
-00051 \textcolor{comment}{  double v\_tot = (vr+vl)/2.0;}
-00052 \textcolor{comment}{  int x\_curr = x - v\_tot*dt*sin(curr\_theta);}
-00053 \textcolor{comment}{  int y\_curr = y + v\_tot*dt*cos(curr\_theta);}
-00054 \textcolor{comment}{  x = x\_curr;}
-00055 \textcolor{comment}{  y = y\_curr;*/}
-00056   last_call = millis();
-00057 \}
-00058 
-00059 \textcolor{keyword}{static} \textcolor{keyword}{struct }accelerometer_odometry calculate_accelerometer_odemetry() \{
-00060   \textcolor{keyword}{static} \textcolor{keywordtype}{double} vel\_acumm\_x = 0;
-00061   \textcolor{keyword}{static} \textcolor{keywordtype}{double} vel\_acumm\_y = 0;
-00062 
-00063   int32\_t accel\_x\_rel = (int32\_t)analogReadCalibratedHR(2);
-00064   int32\_t accel\_y\_rel = (int32\_t)analogReadCalibratedHR(3);
-00065 
-00066   \textcolor{comment}{// Ignore atom format string errors}
-00067   printf(\textcolor{stringliteral}{"x: %+"} PRId32 \textcolor{stringliteral}{" y: %+"} PRId32 \textcolor{stringliteral}{"\(\backslash\)n"}, accel\_x\_rel, accel\_y\_rel);
-00068 
-00069   \textcolor{keywordtype}{double} delta\_time = ((millis() - last_call) / 1000.0);
-00070   \textcolor{comment}{// double accel\_x\_abs = (accel\_x\_rel *  cos(theta) + accel\_y\_rel * sin(theta))}
-00071   \textcolor{comment}{// * delta\_time;  double accel\_y\_abs = (accel\_y\_rel *  cos(theta) +}
-00072   \textcolor{comment}{// accel\_x\_rel}
-00073   \textcolor{comment}{// * sin(theta)) * delta\_time;}
-00074 
-00075   \textcolor{comment}{// vel\_acumm\_x += accel\_x\_abs;}
-00076   \textcolor{comment}{// vel\_acumm\_y += accel\_y\_abs;}
-00077 
-00078   \textcolor{comment}{// double new\_x = x + vel\_acumm\_x * delta\_time;}
-00079   \textcolor{comment}{// double new\_y = y + vel\_acumm\_y * delta\_time;}
-00080 
-00081   \textcolor{keyword}{struct }accelerometer_odometry od;
-00082   \textcolor{comment}{// od.x = new\_x;}
-00083   \textcolor{comment}{// od.y = new\_y;}
-00084   \textcolor{keywordflow}{return} od;
-00085 \}
-00086 
-00087 \textcolor{keyword}{static} \textcolor{keywordtype}{double} integrate_gyro_w(\textcolor{keywordtype}{int} new\_w) \{
-00088   \textcolor{keyword}{static} \textcolor{keywordtype}{double} theta = 0;
-00089   \textcolor{keywordtype}{double} delta\_theta = new\_w * LOCALIZATION_UPDATE_FREQUENCY;
-00090   theta += delta\_theta;
-00091 \}
-00092 
-00093 \textcolor{keyword}{static} \textcolor{keywordtype}{double} calculate_gryo_anglular_velocity() \{
-00094   \textcolor{keyword}{static} \textcolor{keywordtype}{int} last\_gyro = 0;
-00095   \textcolor{keywordtype}{int} current = gyroGet(g1);
-00096   \textcolor{comment}{// Calculate w (angluar velocity in degrees per second)}
-00097   \textcolor{keywordtype}{double} w = (current - last\_gyro) / (LOCALIZATION_UPDATE_FREQUENCY / 1000.0);
-00098   \textcolor{keywordflow}{return} w;
-00099 \}
-00100 
-00101 \textcolor{keywordtype}{int} calculate_encoder_angle() \{
-00102 \textcolor{preprocessor}{#define WIDTH 13.5}
-00103 \textcolor{preprocessor}{#define CPR 392.0}
-00104 \textcolor{preprocessor}{#define WHEEL\_RADIUS 2}
-00105   \textcolor{keywordtype}{int} dist\_r = get_encoder_ticks(0) / CPR;
-00106   \textcolor{keywordtype}{int} dist\_l = get_encoder_ticks(1) / CPR;
-00107   \textcolor{keywordflow}{return} ((dist\_r - dist\_l) / WIDTH);
-00108 \}
-00109 
-00110 \textcolor{keyword}{static} \textcolor{keywordtype}{void} calculate_encoder_odemetry() \{
-00111 \textcolor{preprocessor}{#define WIDTH 13.5}
-00112 \textcolor{preprocessor}{#define CPR 392.0}
-00113 \textcolor{preprocessor}{#define WHEEL\_RADIUS 2}
-00114 
-00115   \textcolor{keywordtype}{int} dist\_r = get_encoder_ticks(0) / CPR;
-00116   \textcolor{keywordtype}{int} dist\_l = get_encoder_ticks(1) / CPR;
-00117   printf(\textcolor{stringliteral}{"dist\_r: %d dist\_l: %d\(\backslash\)n"}, dist\_r, dist\_l);
-00118   \textcolor{keywordtype}{int} theta = (dist\_l - dist\_r) / WIDTH;
-00119   printf(\textcolor{stringliteral}{"theta: %d\(\backslash\)n"}, theta);
-00120   \textcolor{keywordtype}{int} arc\_length = ((M_PI * theta) * (WIDTH * WIDTH) / (8));
-00121 \}
-00122 
-00123 \textcolor{keywordtype}{bool} init_localization(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} gyro1, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} multiplier,
-00124                        \textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y, \textcolor{keywordtype}{int} start\_theta) \{
-00125   g1 = gyroInit(gyro1, multiplier);
-00126   \textcolor{comment}{// init state matrix}
-00127 
-00128   \textcolor{comment}{// one dimensional vector with x, y, theta, acceleration in x and y}
-00129   state\_matrix = makeMatrix(1, 5);
-00130   localization_task =
-00131       taskRunLoop(update_position, LOCALIZATION_UPDATE_FREQUENCY * 1000);
-00132   last_call = millis();
-00133   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-00134 \}
+00015 \textcolor{keyword}{struct }encoder_odemtry \{
+00016   \textcolor{keywordtype}{double} x;
+00017   \textcolor{keywordtype}{double} y;
+00018   \textcolor{keywordtype}{double} theta;
+00019 \};
+00020 
+00024 \textcolor{keyword}{struct }accelerometer_odometry \{
+00025   \textcolor{keywordtype}{double} x;
+00026   \textcolor{keywordtype}{double} y;
+00027 \};
+00028 
+00029 \textcolor{keyword}{static} \textcolor{keywordtype}{double} calculate_angle();
+00030 \textcolor{keyword}{static} \textcolor{keyword}{struct }accelerometer_odometry calculate_accelerometer_odemetry();
+00031 
+00038 \textcolor{keyword}{struct }location get_position() \{\}
+00039 
+00045 \textcolor{keywordtype}{void} update_position() \{
+00046   \textcolor{comment}{// int curr\_theta = calculate\_angle();}
+00047 
+00048   \textcolor{keyword}{struct }accelerometer_odometry oddem = calculate_accelerometer_odemetry();
+00049   \textcolor{comment}{// printf("x: %d y: %d T: %d\(\backslash\)n", a.x, a.y, 0);}
+00050 
+00051   \textcolor{comment}{/*int l = 1;}
+00052 \textcolor{comment}{  int vr = get\_encoder\_velocity(1);}
+00053 \textcolor{comment}{  int vl = get\_encoder\_velocity(2);}
+00054 \textcolor{comment}{  int theta\_dot = (vr - vl) / l;}
+00055 \textcolor{comment}{  int curr\_theta = theta + theta\_dot;}
+00056 \textcolor{comment}{  double dt = LOCALIZATION\_UPDATE\_FREQUENCY;}
+00057 \textcolor{comment}{  double v\_tot = (vr+vl)/2.0;}
+00058 \textcolor{comment}{  int x\_curr = x - v\_tot*dt*sin(curr\_theta);}
+00059 \textcolor{comment}{  int y\_curr = y + v\_tot*dt*cos(curr\_theta);}
+00060 \textcolor{comment}{  x = x\_curr;}
+00061 \textcolor{comment}{  y = y\_curr;*/}
+00062   last_call = millis();
+00063 \}
+00070 \textcolor{keyword}{static} \textcolor{keyword}{struct }accelerometer_odometry calculate_accelerometer_odemetry() \{
+00071   \textcolor{keyword}{static} \textcolor{keywordtype}{double} vel\_acumm\_x = 0;
+00072   \textcolor{keyword}{static} \textcolor{keywordtype}{double} vel\_acumm\_y = 0;
+00073 
+00074   int32\_t accel\_x\_rel = (int32\_t)analogReadCalibratedHR(2);
+00075   int32\_t accel\_y\_rel = (int32\_t)analogReadCalibratedHR(3);
+00076 
+00077   \textcolor{comment}{// Ignore atom format string errors}
+00078   printf(\textcolor{stringliteral}{"x: %+"} PRId32 \textcolor{stringliteral}{" y: %+"} PRId32 \textcolor{stringliteral}{"\(\backslash\)n"}, accel\_x\_rel, accel\_y\_rel);
+00079 
+00080   \textcolor{keywordtype}{double} delta\_time = ((millis() - last_call) / 1000.0);
+00081   \textcolor{comment}{// double accel\_x\_abs = (accel\_x\_rel *  cos(theta) + accel\_y\_rel * sin(theta))}
+00082   \textcolor{comment}{// * delta\_time;  double accel\_y\_abs = (accel\_y\_rel *  cos(theta) +}
+00083   \textcolor{comment}{// accel\_x\_rel}
+00084   \textcolor{comment}{// * sin(theta)) * delta\_time;}
+00085 
+00086   \textcolor{comment}{// vel\_acumm\_x += accel\_x\_abs;}
+00087   \textcolor{comment}{// vel\_acumm\_y += accel\_y\_abs;}
+00088 
+00089   \textcolor{comment}{// double new\_x = x + vel\_acumm\_x * delta\_time;}
+00090   \textcolor{comment}{// double new\_y = y + vel\_acumm\_y * delta\_time;}
+00091 
+00092   \textcolor{keyword}{struct }accelerometer_odometry od;
+00093   \textcolor{comment}{// od.x = new\_x;}
+00094   \textcolor{comment}{// od.y = new\_y;}
+00095   \textcolor{keywordflow}{return} od;
+00096 \}
+00097 
+00104 \textcolor{keyword}{static} \textcolor{keywordtype}{double} integrate_gyro_w(\textcolor{keywordtype}{int} new\_w) \{
+00105   \textcolor{keyword}{static} \textcolor{keywordtype}{double} theta = 0;
+00106   \textcolor{keywordtype}{double} delta\_theta = new\_w * LOCALIZATION\_UPDATE\_FREQUENCY;
+00107   theta += delta\_theta;
+00108   \textcolor{keywordflow}{return} theta;
+00109 \}
+00110 
+00116 \textcolor{keyword}{static} \textcolor{keywordtype}{double} calculate_gryo_anglular_velocity() \{
+00117   \textcolor{keyword}{static} \textcolor{keywordtype}{int} last\_gyro = 0;
+00118   \textcolor{keywordtype}{int} current = gyroGet(g1);
+00119   \textcolor{comment}{// Calculate w (angluar velocity in degrees per second)}
+00120   \textcolor{keywordtype}{double} w = (current - last\_gyro) / (LOCALIZATION\_UPDATE\_FREQUENCY / 1000.0);
+00121   \textcolor{keywordflow}{return} w;
+00122 \}
+00123 
+00129 \textcolor{keywordtype}{int} calculate_encoder_angle() \{
+00130 \textcolor{preprocessor}{#define WIDTH 13.5}
+00131 \textcolor{preprocessor}{#define CPR 392.0}
+00132 \textcolor{preprocessor}{#define WHEEL\_RADIUS 2}
+00133   \textcolor{keywordtype}{int} dist\_r = get_encoder_ticks(0) / CPR;
+00134   \textcolor{keywordtype}{int} dist\_l = get_encoder_ticks(1) / CPR;
+00135   \textcolor{keywordflow}{return} ((dist\_r - dist\_l) / WIDTH);
+00136 \}
+00137 
+00142 \textcolor{keyword}{static} \textcolor{keywordtype}{void} calculate_encoder_odemetry() \{
+00143 \textcolor{preprocessor}{#define WIDTH 13.5}
+00144 \textcolor{preprocessor}{#define CPR 392.0}
+00145 \textcolor{preprocessor}{#define WHEEL\_RADIUS 2}
+00146 
+00147   \textcolor{keywordtype}{int} dist\_r = get_encoder_ticks(0) / CPR;
+00148   \textcolor{keywordtype}{int} dist\_l = get_encoder_ticks(1) / CPR;
+00149   printf(\textcolor{stringliteral}{"dist\_r: %d dist\_l: %d\(\backslash\)n"}, dist\_r, dist\_l);
+00150   \textcolor{keywordtype}{int} theta = (dist\_l - dist\_r) / WIDTH;
+00151   printf(\textcolor{stringliteral}{"theta: %d\(\backslash\)n"}, theta);
+00152   \textcolor{keywordtype}{int} arc\_length = ((M\_PI * theta) * (WIDTH * WIDTH) / (8));
+00153 \}
+00154 
+00160 \textcolor{keywordtype}{bool} init_localization(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} gyro1, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} multiplier,
+00161                        \textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y, \textcolor{keywordtype}{int} start\_theta) \{
+00162   g1 = gyroInit(gyro1, multiplier);
+00163   \textcolor{comment}{// init state matrix}
+00164 
+00165   \textcolor{comment}{// one dimensional vector with x, y, theta, acceleration in x and y}
+00166   state\_matrix = makeMatrix(1, 5);
+00167   localization_task =
+00168       taskRunLoop(update_position, LOCALIZATION\_UPDATE\_FREQUENCY * 1000);
+00169   last_call = millis();
+00170   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00171 \}
 \end{DoxyCode}

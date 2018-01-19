@@ -2,16 +2,19 @@
 \label{gyro_8h_source}\index{include/gyro.\+h@{include/gyro.\+h}}
 
 \begin{DoxyCode}
-00001 \textcolor{preprocessor}{#ifndef \_GYRO\_H\_}
-00002 \textcolor{preprocessor}{#define \_GYRO\_H\_}
-00003 
-00004 \textcolor{preprocessor}{#include "API.h"}
-00005 
-00006 \textcolor{preprocessor}{#define GYRO\_PORT 1}
-00007 \textcolor{preprocessor}{#define GYRO\_MULTIPLIER 0}
+00001 
+00006 \textcolor{preprocessor}{#ifndef \_GYRO\_H\_}
+00007 \textcolor{preprocessor}{#define \_GYRO\_H\_}
 00008 
-00009 \textcolor{keywordtype}{bool} init_main_gyro();
-00010 \textcolor{keywordtype}{float} get_main_gyro_angluar_velocity();
-00011 
-00012 \textcolor{preprocessor}{#endif}
+00009 \textcolor{preprocessor}{#include "API.h"}
+00010 
+00014 \textcolor{preprocessor}{#define GYRO\_PORT 1}
+00015 
+00020 \textcolor{preprocessor}{#define GYRO\_MULTIPLIER 0}
+00021 
+00030 \textcolor{keywordtype}{bool} init_main_gyro();
+00031 
+00039 \textcolor{keywordtype}{float} get_main_gyro_angluar_velocity();
+00040 
+00041 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

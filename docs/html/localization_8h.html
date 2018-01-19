@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: include/localization.h File Reference</title>
+<title>VRC Team 9228A Code Documentation: include/localization.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.5.8</span>
+   <div id="projectname">VRC Team 9228A Code Documentation
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
   </td>
  </tr>
@@ -83,7 +82,6 @@ $(document).ready(function(){initNavTree('localization_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">localization.h File Reference</div>  </div>
@@ -92,26 +90,19 @@ $(document).ready(function(){initNavTree('localization_8h.html','');});
 
 <p>Declarations and macros for determining the location of the robot. [WIP].  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="encoders_8h_source.html">encoders.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="matrix_8h_source.html">matrix.h</a>&quot;</code><br />
-<code>#include &lt;API.h&gt;</code><br />
-<code>#include &lt;math.h&gt;</code><br />
-</div>
+
 <p><a href="localization_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlocation.html">location</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector storing the cartesian cords and an angle.  <a href="structlocation.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a4fa0a97f6aafe983a46ffc7188d1fab5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="localization_8h.html#a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</a>&#160;&#160;&#160;0.500</td></tr>
-<tr class="separator:a4fa0a97f6aafe983a46ffc7188d1fab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5dd17937f5561711cd12cdefa8d31869"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="localization_8h.html#a5dd17937f5561711cd12cdefa8d31869">calculate_encoder_angle</a> ()</td></tr>
+<tr class="memdesc:a5dd17937f5561711cd12cdefa8d31869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the angle using the encoders.  <a href="#a5dd17937f5561711cd12cdefa8d31869">More...</a><br /></td></tr>
 <tr class="separator:a5dd17937f5561711cd12cdefa8d31869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadbff35bb757f60bc348d4d778f57a2f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structlocation.html">location</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="localization_8h.html#aadbff35bb757f60bc348d4d778f57a2f">get_position</a> ()</td></tr>
 <tr class="memdesc:aadbff35bb757f60bc348d4d778f57a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current posituion of the robot.  <a href="#aadbff35bb757f60bc348d4d778f57a2f">More...</a><br /></td></tr>
@@ -129,27 +120,7 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/27/2017 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="localization_8h_source.html">localization.h</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a4fa0a97f6aafe983a46ffc7188d1fab5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fa0a97f6aafe983a46ffc7188d1fab5">&#9670;&nbsp;</a></span>LOCALIZATION_UPDATE_FREQUENCY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LOCALIZATION_UPDATE_FREQUENCY&#160;&#160;&#160;0.500</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>How often the localization code updates the position. </p>
-
-<p class="definition">Definition at line <a class="el" href="localization_8h_source.html#l00019">19</a> of file <a class="el" href="localization_8h_source.html">localization.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00093">calculate_gryo_anglular_velocity()</a>, <a class="el" href="localization_8c_source.html#l00123">init_localization()</a>, and <a class="el" href="localization_8c_source.html#l00087">integrate_gyro_w()</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a5dd17937f5561711cd12cdefa8d31869"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5dd17937f5561711cd12cdefa8d31869">&#9670;&nbsp;</a></span>calculate_encoder_angle()</h2>
 
@@ -165,11 +136,30 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00101">101</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p>Calculates the angle using the encoders. </p>
+<dl class="section return"><dt>Returns</dt><dd>the angle</dd></dl>
+<p>Calculates the angle using the encoders.</p>
+<dl class="section return"><dt>Returns</dt><dd>the angle of rotation </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett, Christian DeSimone </dd></dl>
 
-<p class="reference">References <a class="el" href="localization_8c.html#ad8f1771d4051eafad228df4d397d7e47">CPR</a>, <a class="el" href="encoders_8c_source.html#l00030">get_encoder_ticks()</a>, and <a class="el" href="localization_8c.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00129">129</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00034">autonomous()</a>.</p>
+<p class="reference">References <a class="el" href="encoders_8c_source.html#l00030">get_encoder_ticks()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00098">auton_turn_180()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                              {</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#define WIDTH 13.5</span></div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#define CPR 392.0</span></div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#define WHEEL_RADIUS 2</span></div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">int</span> dist_r = <a class="code" href="encoders_8h.html#aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</a>(0) / CPR;</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">int</span> dist_l = <a class="code" href="encoders_8h.html#aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</a>(1) / CPR;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">return</span> ((dist_r - dist_l) / WIDTH);</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div><div class="ttc" id="encoders_8h_html_aed261dd4dae33a48c42f2e363c84760f"><div class="ttname"><a href="encoders_8h.html#aed261dd4dae33a48c42f2e363c84760f">get_encoder_ticks</a></div><div class="ttdeci">int get_encoder_ticks(unsigned char address)</div><div class="ttdoc">Gets the encoder ticks since last reset. </div><div class="ttdef"><b>Definition:</b> <a href="encoders_8c_source.html#l00030">encoders.c:30</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8h_a5dd17937f5561711cd12cdefa8d31869_cgraph.svg" width="471" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8h_a5dd17937f5561711cd12cdefa8d31869_icgraph.svg" width="486" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -195,10 +185,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>the loacation of the robot as a struct.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gyro1</td><td>The first gyro </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>the loacation of the robot as a struct. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00032">32</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00038">38</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="afdd0147de6aa15957e9a125f9cd20578"></a>
@@ -249,14 +247,32 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">gyro1</td><td>The first gyro  The multiplier parameter can tune the gyro to adapt to specific sensors. The default value at this time is 196; higher values will increase the number of degrees reported for a fixed actual rotation, while lower values will decrease the number of degrees reported. If your robot is consistently turning too far, increase the multiplier, and if it is not turning far enough, decrease the multiplier. </td></tr>
+    <tr><td class="paramname">gyro1</td><td>The first gyro  The multiplier parameter can tune the gyro to adapt to specific sensors. The default value at this time is 196; higher values will increase the number of degrees reported for a fixed actual rotation, while lower values will decrease the number of degrees reported. If your robot is consistently turning too far, increase the multiplier, and if it is not turning far enough, decrease the multiplier.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Starts the localization process.</p>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>returns true when initialization is complete. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00123">123</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00160">160</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">References <a class="el" href="localization_8c_source.html#l00005">g1</a>, <a class="el" href="localization_8c_source.html#l00008">last_call</a>, <a class="el" href="localization_8c_source.html#l00006">localization_task</a>, <a class="el" href="localization_8h_source.html#l00019">LOCALIZATION_UPDATE_FREQUENCY</a>, <a class="el" href="matrix_8c_source.html#l00028">makeMatrix()</a>, and <a class="el" href="localization_8c_source.html#l00039">update_position()</a>.</p>
+<p class="reference">References <a class="el" href="localization_8c_source.html#l00005">g1</a>, <a class="el" href="_a_p_i_8h.html#a17270080a32b64937a3669089a80120f">gyroInit()</a>, <a class="el" href="localization_8c_source.html#l00008">last_call</a>, <a class="el" href="localization_8c_source.html#l00006">localization_task</a>, <a class="el" href="matrix_8c_source.html#l00030">makeMatrix()</a>, <a class="el" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis()</a>, <a class="el" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop()</a>, and <a class="el" href="localization_8c_source.html#l00045">update_position()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                                                                  {</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a> = <a class="code" href="_a_p_i_8h.html#a17270080a32b64937a3669089a80120f">gyroInit</a>(gyro1, multiplier);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="comment">// init state matrix</span></div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="comment">// one dimensional vector with x, y, theta, acceleration in x and y</span></div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <a class="code" href="localization_8c.html#a424e677cc0238390cb4a3068a6f3518c">state_matrix</a> = <a class="code" href="matrix_8h.html#aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</a>(1, 5);</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <a class="code" href="localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488">localization_task</a> =</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <a class="code" href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a>(<a class="code" href="localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</a>, LOCALIZATION_UPDATE_FREQUENCY * 1000);</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <a class="code" href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a> = <a class="code" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a>();</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a6ff7f2532a22366f0013bc41397129fd"><div class="ttname"><a href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a></div><div class="ttdeci">unsigned long millis()</div><div class="ttdoc">Returns the number of milliseconds since Cortex power-up. </div></div>
+<div class="ttc" id="_a_p_i_8h_html_a17270080a32b64937a3669089a80120f"><div class="ttname"><a href="_a_p_i_8h.html#a17270080a32b64937a3669089a80120f">gyroInit</a></div><div class="ttdeci">Gyro gyroInit(unsigned char port, unsigned short multiplier)</div><div class="ttdoc">Initializes and enables a gyro on an analog port. </div></div>
+<div class="ttc" id="localization_8c_html_a5be50f74f0f5a3aea13f2bd8db891488"><div class="ttname"><a href="localization_8c.html#a5be50f74f0f5a3aea13f2bd8db891488">localization_task</a></div><div class="ttdeci">static TaskHandle localization_task</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00006">localization.c:6</a></div></div>
+<div class="ttc" id="localization_8c_html_afacd5e0b3d5e677df26a4402bbd9ec9e"><div class="ttname"><a href="localization_8c.html#afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</a></div><div class="ttdeci">void update_position()</div><div class="ttdoc">Updates the position from the localization. </div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00045">localization.c:45</a></div></div>
+<div class="ttc" id="matrix_8h_html_aae8b56c6fb44d9147b835f4006ca872c"><div class="ttname"><a href="matrix_8h.html#aae8b56c6fb44d9147b835f4006ca872c">makeMatrix</a></div><div class="ttdeci">matrix * makeMatrix(int width, int height)</div><div class="ttdoc">Makes a matrix with a width and height parameters. </div><div class="ttdef"><b>Definition:</b> <a href="matrix_8c_source.html#l00030">matrix.c:30</a></div></div>
+<div class="ttc" id="_a_p_i_8h_html_ab05a241d6d1fd98b1ceb4665db678156"><div class="ttname"><a href="_a_p_i_8h.html#ab05a241d6d1fd98b1ceb4665db678156">taskRunLoop</a></div><div class="ttdeci">TaskHandle taskRunLoop(void(*fn)(void), const unsigned long increment)</div><div class="ttdoc">Starts a task which will periodically call the specified function. </div></div>
+<div class="ttc" id="localization_8c_html_a0f327d31da83831114e7417abb7b6b63"><div class="ttname"><a href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a></div><div class="ttdeci">static int last_call</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00008">localization.c:8</a></div></div>
+<div class="ttc" id="localization_8c_html_a424e677cc0238390cb4a3068a6f3518c"><div class="ttname"><a href="localization_8c.html#a424e677cc0238390cb4a3068a6f3518c">state_matrix</a></div><div class="ttdeci">matrix * state_matrix</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00010">localization.c:10</a></div></div>
+<div class="ttc" id="localization_8c_html_a46b8f25ffa3bbee071a0468eac654393"><div class="ttname"><a href="localization_8c.html#a46b8f25ffa3bbee071a0468eac654393">g1</a></div><div class="ttdeci">static Gyro g1</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00005">localization.c:5</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="localization_8h_afdd0147de6aa15957e9a125f9cd20578_cgraph.svg" width="100%" height="499"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -276,13 +292,31 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Updates the position from the localization. </p>
-<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Chris Jerrett</dd>
+<dd>
+Chris Jerrett, Christian DeSimone </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00039">39</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="localization_8c_source.html#l00045">45</a> of file <a class="el" href="localization_8c_source.html">localization.c</a>.</p>
 
-<p class="reference">References <a class="el" href="localization_8c_source.html#l00059">calculate_accelerometer_odemetry()</a>, and <a class="el" href="localization_8c_source.html#l00008">last_call</a>.</p>
+<p class="reference">References <a class="el" href="localization_8c_source.html#l00070">calculate_accelerometer_odemetry()</a>, <a class="el" href="localization_8c_source.html#l00008">last_call</a>, and <a class="el" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00123">init_localization()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="localization_8c_source.html#l00160">init_localization()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                       {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="comment">// int curr_theta = calculate_angle();</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">struct </span><a class="code" href="structaccelerometer__odometry.html">accelerometer_odometry</a> oddem = <a class="code" href="localization_8c.html#a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">// printf(&quot;x: %d y: %d T: %d\n&quot;, a.x, a.y, 0);</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">/*int l = 1;</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">  int vr = get_encoder_velocity(1);</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">  int vl = get_encoder_velocity(2);</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">  int theta_dot = (vr - vl) / l;</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">  int curr_theta = theta + theta_dot;</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">  double dt = LOCALIZATION_UPDATE_FREQUENCY;</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">  double v_tot = (vr+vl)/2.0;</span></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">  int x_curr = x - v_tot*dt*sin(curr_theta);</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">  int y_curr = y + v_tot*dt*cos(curr_theta);</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">  x = x_curr;</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">  y = y_curr;*/</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a> = <a class="code" href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a>();</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a6ff7f2532a22366f0013bc41397129fd"><div class="ttname"><a href="_a_p_i_8h.html#a6ff7f2532a22366f0013bc41397129fd">millis</a></div><div class="ttdeci">unsigned long millis()</div><div class="ttdoc">Returns the number of milliseconds since Cortex power-up. </div></div>
+<div class="ttc" id="structaccelerometer__odometry_html"><div class="ttname"><a href="structaccelerometer__odometry.html">accelerometer_odometry</a></div><div class="ttdoc">Structure for holding an xy position from the accelerometer. </div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00024">localization.c:24</a></div></div>
+<div class="ttc" id="localization_8c_html_a6785e4b3b61887f28028f05019b9b39d"><div class="ttname"><a href="localization_8c.html#a6785e4b3b61887f28028f05019b9b39d">calculate_accelerometer_odemetry</a></div><div class="ttdeci">static struct accelerometer_odometry calculate_accelerometer_odemetry()</div><div class="ttdoc">calculats the robot&amp;#39;s position using the accelerometer </div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00070">localization.c:70</a></div></div>
+<div class="ttc" id="localization_8c_html_a0f327d31da83831114e7417abb7b6b63"><div class="ttname"><a href="localization_8c.html#a0f327d31da83831114e7417abb7b6b63">last_call</a></div><div class="ttdeci">static int last_call</div><div class="ttdef"><b>Definition:</b> <a href="localization_8c_source.html#l00008">localization.c:8</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8h_afacd5e0b3d5e677df26a4402bbd9ec9e_cgraph.svg" width="562" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="localization_8h_afacd5e0b3d5e677df26a4402bbd9ec9e_icgraph.svg" width="286" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>

@@ -25,6 +25,10 @@
                 </itemizedlist>
             </para>
         </section>
+    <simplesect>
+
+<para>Structure for holding an xy position and an angle theta from the IMEs. </para>
+    </simplesect>
         <section>
             <title>Field Documentation</title>
         </section>

@@ -47,7 +47,7 @@
 <!-- Node138 -->
 <g id="node4" class="node">
 <title>Node138</title>
-<g id="a_node4"><a xlink:href="opcontrol_8c.html#ac71a94af413917f27d108e95c4d6f6a7" target="_top" xlink:title="operatorControl">
+<g id="a_node4"><a xlink:href="opcontrol_8c.html#ac71a94af413917f27d108e95c4d6f6a7" target="_top" xlink:title="Runs the user operator control code. ">
 <polygon fill="none" stroke="#000000" points="277.9844,-.5 277.9844,-18.5 363.4668,-18.5 363.4668,-.5 277.9844,-.5"/>
 <text text-anchor="middle" x="320.7256" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">operatorControl</text>
 </a>

@@ -1,24 +1,36 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="opcontrol_8c">
     <title>opcontrol.c File Reference</title>
-    <programlisting>#include &quot;drive.h&quot;</programlisting>
-    <programlisting>#include &quot;main.h&quot;</programlisting>
-    <programlisting>#include &quot;slew.h&quot;</programlisting>
-    <programlisting>#include &quot;claw.h&quot;</programlisting>
-    <programlisting>#include &quot;lifter.h&quot;</programlisting>
-    <programlisting>#include &quot;localization.h&quot;</programlisting>
-    <programlisting>#include &quot;log.h&quot;</programlisting>
-    <programlisting>#include &quot;mobile_goal_intake.h&quot;</programlisting>
-    <programlisting>#include &quot;routines.h&quot;</programlisting>
-    <programlisting>#include &quot;toggle.h&quot;</programlisting>
-    <programlisting>#include &quot;vmath.h&quot;</programlisting>
+<para>Include dependency diagram for opcontrol.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="opcontrol_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for opcontrol.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="opcontrol_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Functions</title>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl</link> (
-)</para>
+)<para><emphasis>Runs the user operator control code.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -37,30 +49,30 @@
     </simplesect>
     <literallayout><computeroutput>
 1 
-14 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="drive_8h">drive.h</link>&quot;</emphasis>
-15 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="main_8h">main.h</link>&quot;</emphasis>
-16 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="slew_8h">slew.h</link>&quot;</emphasis>
-17 
-18 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="claw_8h">claw.h</link>&quot;</emphasis>
-19 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="lifter_8h">lifter.h</link>&quot;</emphasis>
-20 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="localization_8h">localization.h</link>&quot;</emphasis>
-21 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
-22 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="mobile__goal__intake_8h">mobile_goal_intake.h</link>&quot;</emphasis>
-23 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="routines_8h">routines.h</link>&quot;</emphasis>
-24 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="toggle_8h">toggle.h</link>&quot;</emphasis>
-25 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="vmath_8h">vmath.h</link>&quot;</emphasis>
-26 
-<link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">49 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl</link>()&#32;{
-50 &#32;&#32;<link linkend="toggle_8h_1a2b3d226371575c894979ab84bce95626">buttonInit</link>();
-51 &#32;&#32;<link linkend="routines_8h_1ab873e24fcc59a2bf7844618b664a5d26">init_routine</link>();
-52 &#32;&#32;<link linkend="slew_8h_1a321758941d88b75783955c819bb75005">init_slew</link>();
-53 &#32;&#32;delay(10);
+14 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="claw_8h">claw.h</link>&quot;</emphasis>
+15 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="drive_8h">drive.h</link>&quot;</emphasis>
+16 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="lifter_8h">lifter.h</link>&quot;</emphasis>
+17 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="localization_8h">localization.h</link>&quot;</emphasis>
+18 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
+19 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="main_8h">main.h</link>&quot;</emphasis>
+20 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="mobile__goal__intake_8h">mobile_goal_intake.h</link>&quot;</emphasis>
+21 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="routines_8h">routines.h</link>&quot;</emphasis>
+22 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="slew_8h">slew.h</link>&quot;</emphasis>
+23 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="toggle_8h">toggle.h</link>&quot;</emphasis>
+24 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="vmath_8h">vmath.h</link>&quot;</emphasis>
+25 
+<link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">48 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="opcontrol_8c_1ac71a94af413917f27d108e95c4d6f6a7">operatorControl</link>()&#32;{
+49 &#32;&#32;<link linkend="toggle_8h_1a2b3d226371575c894979ab84bce95626">buttonInit</link>();
+50 &#32;&#32;<link linkend="routines_8h_1ab873e24fcc59a2bf7844618b664a5d26">init_routine</link>();
+51 &#32;&#32;<link linkend="slew_8h_1a321758941d88b75783955c819bb75005">init_slew</link>();
+52 &#32;&#32;<link linkend="routines_8h_1a9486ebd51b8c3d966619cf4617e6a930">register_routine</link>(&amp;<link linkend="lifter_8h_1a8a64fa88b389b39c236c5c57a7fb5c67">autostack_routine</link>,&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a7505f547a11254e8c9a86aa6e3b8a0f5">JOY2_7D</link>,&#32;NULL);
+53 &#32;&#32;<link linkend="routines_8h_1a9486ebd51b8c3d966619cf4617e6a930">register_routine</link>(&amp;<link linkend="lifter_8h_1a3738d33dc870f98243a93bddd855b43e">interrupt_auto_stack</link>,&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a4408894064745f57f75ba137dc669e5d">JOY2_7R</link>,&#32;NULL);
 54 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(1)&#32;{
 55 &#32;&#32;&#32;&#32;<link linkend="claw_8h_1a0122b78972344264b8a276a559cfce4a">update_claw</link>();
 56 &#32;&#32;&#32;&#32;<link linkend="mobile__goal__intake_8h_1a5d7bad8a208988af743fd2e68f111286">update_intake</link>();
 57 &#32;&#32;&#32;&#32;<link linkend="lifter_8h_1a59bb7413777ca16aba124aaedf95c79b">update_lifter</link>();
 58 &#32;&#32;&#32;&#32;<link linkend="drive_8h_1a8224a4626a934d30ed587671b7004bf8">update_drive_motors</link>();
-59 &#32;&#32;&#32;&#32;delay(10);
+59 &#32;&#32;&#32;&#32;<link linkend="_a_p_i_8h_1a1c59207742a1acf45a8957d7f04f9dfe">delay</link>(20);
 60 &#32;&#32;}
 61 }
     </computeroutput></literallayout>

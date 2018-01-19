@@ -1,17 +1,16 @@
 \subsection{src/list\+\_\+iterator.c File Reference}
 \label{list__iterator_8c}\index{src/list\+\_\+iterator.\+c@{src/list\+\_\+iterator.\+c}}
-{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\newline
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ list\+\_\+iterator\+\_\+destroy} (\textbf{ list\+\_\+iterator\+\_\+t} $\ast$self)
-\item 
+\begin{DoxyCompactList}\small\item\em Destroys the iterator. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+iterator\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+new} (\textbf{ list\+\_\+t} $\ast$list, \textbf{ list\+\_\+direction\+\_\+t} direction)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a new iterator. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+iterator\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node} (\textbf{ list\+\_\+node\+\_\+t} $\ast$node, \textbf{ list\+\_\+direction\+\_\+t} direction)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a new iterator by using the node to start at. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+next} (\textbf{ list\+\_\+iterator\+\_\+t} $\ast$self)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The next node in the iterator and advances the iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Function Documentation}
@@ -23,16 +22,41 @@ void \textbf{ list\+\_\+iterator\+\_\+destroy} (\textbf{ list\+\_\+iterator\+\_\
 
 
 
-Definition at line \textbf{ 52} of file \textbf{ list\+\_\+iterator.\+c}.
+Destroys the iterator. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em self} & the iterator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/17 
+\end{DoxyDate}
 
-References \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}.
+
+Definition at line \textbf{ 56} of file \textbf{ list\+\_\+iterator.\+c}.
 
 
 
 Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
 
+
+\begin{DoxyCode}
+00056                                                   \{
+00057   free(\textcolor{keyword}{self});
+00058   \textcolor{keyword}{self} = NULL;
+00059 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list__iterator_8c_ad16fa29ddbb444070ea65f871e1c0ba2_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list__iterator_8c_a3c956afda343b4a6aaf68fbd4b446733}} 
 \index{list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}!list\+\_\+iterator\+\_\+new@{list\+\_\+iterator\+\_\+new}}
 \index{list\+\_\+iterator\+\_\+new@{list\+\_\+iterator\+\_\+new}!list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}}
@@ -41,7 +65,27 @@ Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{
 
 
 
-Definition at line \textbf{ 15} of file \textbf{ list\+\_\+iterator.\+c}.
+Creates a new iterator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the list \\
+\hline
+{\em direction} & direction the iterator should progress in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the iterator created 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 11} of file \textbf{ list\+\_\+iterator.\+c}.
 
 
 
@@ -51,6 +95,27 @@ References \textbf{ list\+\_\+t\+::head}, \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, 
 
 Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
 
+
+\begin{DoxyCode}
+00011                                                                              \{
+00012   list_node_t *node = direction == LIST_HEAD ? list->head : list->tail;
+00013   \textcolor{keywordflow}{return} list_iterator_new_from_node(node, direction);
+00014 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{list__iterator_8c_a3c956afda343b4a6aaf68fbd4b446733_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list__iterator_8c_a3c956afda343b4a6aaf68fbd4b446733_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list__iterator_8c_af4136a8a27bdc8c0f967a708dd03d575}} 
 \index{list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}!list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node@{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node}}
 \index{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node@{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node}!list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}}
@@ -59,16 +124,54 @@ Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{
 
 
 
-Definition at line \textbf{ 25} of file \textbf{ list\+\_\+iterator.\+c}.
+Creates a new iterator by using the node to start at. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the start node \\
+\hline
+{\em direction} & direction the iterator should progress in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the iterator created 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 24} of file \textbf{ list\+\_\+iterator.\+c}.
 
 
 
-References \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}, and \textbf{ list\+\_\+iterator\+\_\+t\+::next}.
+References \textbf{ list\+\_\+iterator\+\_\+t\+::next}.
 
 
 
 Referenced by \textbf{ list\+\_\+iterator\+\_\+new()}.
 
+
+\begin{DoxyCode}
+00025                                                                          \{
+00026   list_iterator_t *\textcolor{keyword}{self};
+00027   \textcolor{keywordflow}{if} (!(\textcolor{keyword}{self} = (list_iterator_t *)malloc(\textcolor{keyword}{sizeof}(list_iterator_t))))
+00028     \textcolor{keywordflow}{return} NULL;
+00029   \textcolor{keyword}{self}->next = node;
+00030   \textcolor{keyword}{self}->direction = direction;
+00031   \textcolor{keywordflow}{return} \textcolor{keyword}{self};
+00032 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list__iterator_8c_af4136a8a27bdc8c0f967a708dd03d575_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list__iterator_8c_a2e5db981e32d3aef49ea79505a0615a6}} 
 \index{list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}!list\+\_\+iterator\+\_\+next@{list\+\_\+iterator\+\_\+next}}
 \index{list\+\_\+iterator\+\_\+next@{list\+\_\+iterator\+\_\+next}!list\+\_\+iterator.\+c@{list\+\_\+iterator.\+c}}
@@ -77,7 +180,25 @@ Referenced by \textbf{ list\+\_\+iterator\+\_\+new()}.
 
 
 
-Definition at line \textbf{ 40} of file \textbf{ list\+\_\+iterator.\+c}.
+The next node in the iterator and advances the iterator. 
+
+Returns N\+U\+LL when done. 
+\begin{DoxyParams}{Parameters}
+{\em self} & the iterator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the next node. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 42} of file \textbf{ list\+\_\+iterator.\+c}.
 
 
 
@@ -87,3 +208,20 @@ References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+node\+::next
 
 Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
 
+
+\begin{DoxyCode}
+00042                                                        \{
+00043   list_node_t *curr = \textcolor{keyword}{self}->next;
+00044   \textcolor{keywordflow}{if} (curr) \{
+00045     \textcolor{keyword}{self}->next = \textcolor{keyword}{self}->direction == LIST_HEAD ? curr->next : curr->prev;
+00046   \}
+00047   \textcolor{keywordflow}{return} curr;
+00048 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list__iterator_8c_a2e5db981e32d3aef49ea79505a0615a6_icgraph}
+\end{center}
+\end{figure}

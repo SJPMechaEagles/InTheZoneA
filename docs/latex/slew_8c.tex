@@ -1,7 +1,5 @@
 \subsection{src/slew.c File Reference}
 \label{slew_8c}\index{src/slew.\+c@{src/slew.\+c}}
-{\ttfamily \#include \char`\"{}slew.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,9 +22,9 @@ static int \textbf{ motors\+\_\+curr\+\_\+speeds} [10]
 \item 
 static int \textbf{ motors\+\_\+set\+\_\+speeds} [10]
 \item 
-static Task\+Handle \textbf{ slew} = N\+U\+LL
+static \textbf{ Task\+Handle} \textbf{ slew} = N\+U\+LL
 \item 
-static Mutex \textbf{ speeds\+\_\+mutex}
+static \textbf{ Mutex} \textbf{ speeds\+\_\+mutex}
 \end{DoxyCompactItemize}
 
 
@@ -53,12 +51,37 @@ Definition at line \textbf{ 59} of file \textbf{ slew.\+c}.
 
 
 
-References \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, and \textbf{ slew}.
+References \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, \textbf{ slew}, and \textbf{ task\+Delete()}.
 
 
 
 Referenced by \textbf{ autonomous()}.
 
+
+\begin{DoxyCode}
+00059                   \{
+00060   taskDelete(slew);
+00061   memset(motors_set_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00062   memset(motors_curr_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00063   initialized = \textcolor{keyword}{false};
+00064 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{slew_8c_a981c9990a969d2587e66e550737f7cd9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{slew_8c_a981c9990a969d2587e66e550737f7cd9_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{slew_8c_a321758941d88b75783955c819bb75005}} 
 \index{slew.\+c@{slew.\+c}!init\+\_\+slew@{init\+\_\+slew}}
 \index{init\+\_\+slew@{init\+\_\+slew}!slew.\+c@{slew.\+c}}
@@ -81,12 +104,42 @@ Definition at line \textbf{ 42} of file \textbf{ slew.\+c}.
 
 
 
-References \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, \textbf{ slew}, \textbf{ speeds\+\_\+mutex}, \textbf{ update\+Motors()}, and \textbf{ warning()}.
+References \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, \textbf{ motor\+Stop\+All()}, \textbf{ mutex\+Create()}, \textbf{ slew}, \textbf{ speeds\+\_\+mutex}, \textbf{ task\+Run\+Loop()}, \textbf{ update\+Motors()}, and \textbf{ warning()}.
 
 
 
-Referenced by \textbf{ autonomous()}, \textbf{ operator\+Control()}, \textbf{ set\+\_\+motor\+\_\+immediate()}, and \textbf{ set\+\_\+motor\+\_\+slew()}.
+Referenced by \textbf{ operator\+Control()}, \textbf{ set\+\_\+motor\+\_\+immediate()}, \textbf{ set\+\_\+motor\+\_\+slew()}, and \textbf{ start\+\_\+auton()}.
 
+
+\begin{DoxyCode}
+00042                  \{
+00043   \textcolor{keywordflow}{if} (initialized) \{
+00044     warning(\textcolor{stringliteral}{"Trying to init already init slew"});
+00045   \}
+00046   memset(motors_set_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00047   memset(motors_curr_speeds, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}) * 10);
+00048   motorStopAll();
+00049   speeds_mutex = mutexCreate();
+00050   slew = taskRunLoop(updateMotors, 100);
+00051   initialized = \textcolor{keyword}{true};
+00052 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a321758941d88b75783955c819bb75005_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a321758941d88b75783955c819bb75005_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{slew_8c_a9f8b8ae577ef938622024545711f0151}} 
 \index{slew.\+c@{slew.\+c}!set\+\_\+motor\+\_\+immediate@{set\+\_\+motor\+\_\+immediate}}
 \index{set\+\_\+motor\+\_\+immediate@{set\+\_\+motor\+\_\+immediate}!slew.\+c@{slew.\+c}}
@@ -116,12 +169,42 @@ Definition at line \textbf{ 90} of file \textbf{ slew.\+c}.
 
 
 
-References \textbf{ debug()}, \textbf{ init\+\_\+slew()}, \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, and \textbf{ speeds\+\_\+mutex}.
+References \textbf{ debug()}, \textbf{ init\+\_\+slew()}, \textbf{ initialized}, \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, \textbf{ motor\+Set()}, \textbf{ mutex\+Give()}, \textbf{ mutex\+Take()}, and \textbf{ speeds\+\_\+mutex}.
 
 
 
-Referenced by \textbf{ close\+\_\+claw()}, \textbf{ open\+\_\+claw()}, \textbf{ set\+\_\+claw\+\_\+motor()}, \textbf{ set\+\_\+intake\+\_\+motor()}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+Referenced by \textbf{ claw\+\_\+grab\+\_\+cone()}, \textbf{ claw\+\_\+release\+\_\+cone()}, \textbf{ set\+\_\+claw\+\_\+motor()}, \textbf{ set\+\_\+intake\+\_\+motor()}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
 
+
+\begin{DoxyCode}
+00090                                                \{
+00091   \textcolor{keywordflow}{if} (!initialized) \{
+00092     debug(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
+00093     init_slew();
+00094   \}
+00095   motorSet(motor, speed);
+00096   mutexTake(speeds_mutex, 10);
+00097   motors_curr_speeds[motor - 1] = speed;
+00098   motors_set_speeds[motor - 1] = speed;
+00099   mutexGive(speeds_mutex);
+00100 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a9f8b8ae577ef938622024545711f0151_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a9f8b8ae577ef938622024545711f0151_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{slew_8c_a7dff2b79dffe55fb936d977594d7c01d}} 
 \index{slew.\+c@{slew.\+c}!set\+\_\+motor\+\_\+slew@{set\+\_\+motor\+\_\+slew}}
 \index{set\+\_\+motor\+\_\+slew@{set\+\_\+motor\+\_\+slew}!slew.\+c@{slew.\+c}}
@@ -151,12 +234,40 @@ Definition at line \textbf{ 73} of file \textbf{ slew.\+c}.
 
 
 
-References \textbf{ debug()}, \textbf{ init\+\_\+slew()}, \textbf{ initialized}, \textbf{ motors\+\_\+set\+\_\+speeds}, and \textbf{ speeds\+\_\+mutex}.
+References \textbf{ debug()}, \textbf{ init\+\_\+slew()}, \textbf{ initialized}, \textbf{ motors\+\_\+set\+\_\+speeds}, \textbf{ mutex\+Give()}, \textbf{ mutex\+Take()}, and \textbf{ speeds\+\_\+mutex}.
 
 
 
 Referenced by \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, and \textbf{ set\+\_\+side\+\_\+speed()}.
 
+
+\begin{DoxyCode}
+00073                                           \{
+00074   \textcolor{keywordflow}{if} (!initialized) \{
+00075     debug(\textcolor{stringliteral}{"Slew Not Initialized! Initializing"});
+00076     init_slew();
+00077   \}
+00078   mutexTake(speeds_mutex, 10);
+00079   motors_set_speeds[motor - 1] = speed;
+00080   mutexGive(speeds_mutex);
+00081 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a7dff2b79dffe55fb936d977594d7c01d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a7dff2b79dffe55fb936d977594d7c01d_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{slew_8c_a807a87c5df438fde21c1e8213906695b}} 
 \index{slew.\+c@{slew.\+c}!update\+Motors@{update\+Motors}}
 \index{update\+Motors@{update\+Motors}!slew.\+c@{slew.\+c}}
@@ -179,12 +290,48 @@ Definition at line \textbf{ 19} of file \textbf{ slew.\+c}.
 
 
 
-References \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, and \textbf{ speeds\+\_\+mutex}.
+References \textbf{ motors\+\_\+curr\+\_\+speeds}, \textbf{ motors\+\_\+set\+\_\+speeds}, \textbf{ motor\+Set()}, \textbf{ mutex\+Give()}, \textbf{ mutex\+Take()}, and \textbf{ speeds\+\_\+mutex}.
 
 
 
 Referenced by \textbf{ init\+\_\+slew()}.
 
+
+\begin{DoxyCode}
+00019                     \{
+00020   \textcolor{comment}{// Take back half approach}
+00021   \textcolor{comment}{// Not linear but equal to setSpeed(1-(1/2)^x)}
+00022   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < 9; i++) \{
+00023     \textcolor{keywordflow}{if} (motors_set_speeds[i] == motors_curr_speeds[i])
+00024       \textcolor{keywordflow}{continue};
+00025     mutexTake(speeds_mutex, 10);
+00026     \textcolor{keywordtype}{int} set\_speed = (motors_set_speeds[i]);
+00027     \textcolor{keywordtype}{int} curr\_speed = motors_curr_speeds[i];
+00028     mutexGive(speeds_mutex);
+00029     \textcolor{keywordtype}{int} diff = set\_speed - curr\_speed;
+00030     \textcolor{keywordtype}{int} offset = diff;
+00031     \textcolor{keywordtype}{int} n = curr\_speed + offset;
+00032     motors_curr_speeds[i] = n;
+00033     motorSet(i + 1, n);
+00034   \}
+00035 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{slew_8c_a807a87c5df438fde21c1e8213906695b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{slew_8c_a807a87c5df438fde21c1e8213906695b_icgraph}
+\end{center}
+\end{figure}
 
 
 \subsubsection{Variable Documentation}
@@ -234,7 +381,7 @@ Referenced by \textbf{ deinitslew()}, \textbf{ init\+\_\+slew()}, \textbf{ set\+
 \index{slew.\+c@{slew.\+c}!slew@{slew}}
 \index{slew@{slew}!slew.\+c@{slew.\+c}}
 \paragraph{slew}
-{\footnotesize\ttfamily Task\+Handle slew = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \textbf{ Task\+Handle} slew = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -248,7 +395,7 @@ Referenced by \textbf{ deinitslew()}, and \textbf{ init\+\_\+slew()}.
 \index{slew.\+c@{slew.\+c}!speeds\+\_\+mutex@{speeds\+\_\+mutex}}
 \index{speeds\+\_\+mutex@{speeds\+\_\+mutex}!slew.\+c@{slew.\+c}}
 \paragraph{speeds\+\_\+mutex}
-{\footnotesize\ttfamily Mutex speeds\+\_\+mutex\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \textbf{ Mutex} speeds\+\_\+mutex\hspace{0.3cm}{\ttfamily [static]}}
 
 
 

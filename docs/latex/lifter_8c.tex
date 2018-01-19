@@ -1,16 +1,16 @@
 \subsection{src/lifter.c File Reference}
 \label{lifter_8c}\index{src/lifter.\+c@{src/lifter.\+c}}
-{\ttfamily \#include \char`\"{}lifter.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ autostack\+\_\+routine} ()
-\item 
+void \textbf{ autostack\+\_\+routine} (void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Autostacks a cone once picked up. \end{DoxyCompactList}\item 
 double \textbf{ get\+Lifter\+Height} ()
 \begin{DoxyCompactList}\small\item\em Gets the height of the lifter in inches. \end{DoxyCompactList}\item 
 int \textbf{ get\+Lifter\+Ticks} ()
 \begin{DoxyCompactList}\small\item\em Gets the value of the lifter pot. \end{DoxyCompactList}\item 
+void \textbf{ interrupt\+\_\+auto\+\_\+stack} (void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Stpos an autostack in case of an error. \end{DoxyCompactList}\item 
 float \textbf{ lifter\+Potentiometer\+To\+Degree} (int x)
 \begin{DoxyCompactList}\small\item\em height of the lifter in degrees from 0 height \end{DoxyCompactList}\item 
 void \textbf{ lower\+\_\+main\+\_\+lifter} ()
@@ -18,6 +18,8 @@ void \textbf{ lower\+\_\+main\+\_\+lifter} ()
 void \textbf{ lower\+\_\+secondary\+\_\+lifter} ()
 \begin{DoxyCompactList}\small\item\em Lowers the secondary lifter. \end{DoxyCompactList}\item 
 static void \textbf{ main\+\_\+lifter\+\_\+update} ()
+\item 
+static void \textbf{ quit\+\_\+auto\+\_\+static} ()
 \item 
 void \textbf{ raise\+\_\+main\+\_\+lifter} ()
 \begin{DoxyCompactList}\small\item\em Raises the main lifter. \end{DoxyCompactList}\item 
@@ -38,29 +40,151 @@ void \textbf{ update\+\_\+lifter} ()
 \item 
 static bool \textbf{ lifter\+\_\+autostack\+\_\+routine\+\_\+interupt} = false
 \item 
-static bool \textbf{ lifter\+\_\+autostack\+\_\+running} = false
-\item 
-Ultrasonic \textbf{ lifter\+\_\+ultrasonic}
+bool \textbf{ lifter\+\_\+autostack\+\_\+running} = false
 \item 
 static bool \textbf{ secondary\+\_\+override} = false
 \end{DoxyCompactItemize}
 
 
 \subsubsection{Function Documentation}
-\mbox{\label{lifter_8c_a453a3fb02960a7b90435e942bbe90d7a}} 
+\mbox{\label{lifter_8c_a8a64fa88b389b39c236c5c57a7fb5c67}} 
 \index{lifter.\+c@{lifter.\+c}!autostack\+\_\+routine@{autostack\+\_\+routine}}
 \index{autostack\+\_\+routine@{autostack\+\_\+routine}!lifter.\+c@{lifter.\+c}}
 \paragraph{autostack\+\_\+routine()}
-{\footnotesize\ttfamily void autostack\+\_\+routine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void autostack\+\_\+routine (\begin{DoxyParamCaption}\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
 
 
 
-Definition at line \textbf{ 9} of file \textbf{ lifter.\+c}.
+Autostacks a cone once picked up. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & ignored parameter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 20} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ lifter\+\_\+ultrasonic}, \textbf{ raise\+\_\+main\+\_\+lifter()}, and \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}.
+References \textbf{ analog\+Read()}, \textbf{ delay()}, \textbf{ info()}, \textbf{ lifter\+\_\+autostack\+\_\+routine\+\_\+interupt}, \textbf{ lifter\+\_\+autostack\+\_\+running}, \textbf{ lifter\+\_\+ultrasonic}, \textbf{ printf()}, \textbf{ quit\+\_\+auto\+\_\+static()}, \textbf{ raise\+\_\+secondary\+\_\+lifter()}, \textbf{ set\+\_\+claw\+\_\+motor()}, \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}, and \textbf{ ultrasonic\+Get()}.
 
+
+
+Referenced by \textbf{ operator\+Control()}.
+
+
+\begin{DoxyCode}
+00020                                     \{
+00021   lifter_autostack_routine_interupt = \textcolor{keyword}{false};
+00022   lifter_autostack_running = \textcolor{keyword}{true};
+00023   raise_secondary_lifter();
+00024   \textcolor{keywordflow}{while} (analogRead(SECONDARY\_LIFTER\_POT\_PORT) < 1600) \{
+00025     set_secondary_lifter_motors(MIN\_SPEED);
+00026     \textcolor{keywordflow}{if} (lifter_autostack_routine_interupt) \{
+00027       quit_auto_static();
+00028       \textcolor{keywordflow}{return};
+00029     \}
+00030     delay(50);
+00031     info(\textcolor{stringliteral}{"1"});
+00032   \}
+00033   set_secondary_lifter_motors(0);
+00034   \textcolor{keywordtype}{bool} lifted = \textcolor{keyword}{false};
+00035   \textcolor{keywordtype}{int} val = ultrasonicGet(lifter_ultrasonic);
+00036   printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, val);
+00037   \textcolor{keywordflow}{while} (val < 10 && val != ULTRA\_BAD\_RESPONSE) \{
+00038     \textcolor{keywordflow}{if} (lifter_autostack_routine_interupt) \{
+00039       quit_auto_static();
+00040       \textcolor{keywordflow}{return};
+00041     \}
+00042     set_main_lifter_motors(MAX\_SPEED);
+00043     info(\textcolor{stringliteral}{"2"});
+00044     lifted = \textcolor{keyword}{true};
+00045     delay(50);
+00046     val = ultrasonicGet(lifter_ultrasonic);
+00047     printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, val);
+00048   \}
+00049   \textcolor{keywordflow}{if} (lifter_autostack_routine_interupt) \{
+00050     quit_auto_static();
+00051     \textcolor{keywordflow}{return};
+00052   \}
+00053   delay(200);
+00054   \textcolor{keywordflow}{if} (lifted)
+00055     delay(50);
+00056   \textcolor{keywordflow}{if} (lifter_autostack_routine_interupt) \{
+00057     quit_auto_static();
+00058     \textcolor{keywordflow}{return};
+00059   \}
+00060   set_main_lifter_motors(0);
+00061   set_secondary_lifter_motors(0);
+00062 
+00063   \textcolor{keywordflow}{while} (analogRead(SECONDARY\_LIFTER\_POT\_PORT) < 3000) \{
+00064     \textcolor{keywordflow}{if} (lifter_autostack_routine_interupt) \{
+00065       quit_auto_static();
+00066       \textcolor{keywordflow}{return};
+00067     \}
+00068     set_secondary_lifter_motors(MIN\_SPEED);
+00069     delay(50);
+00070     info(\textcolor{stringliteral}{"3"});
+00071   \}
+00072 
+00073   set_main_lifter_motors(MIN\_SPEED / 1.333);
+00074 
+00075   \textcolor{keywordflow}{while} (val > 10) \{
+00076     \textcolor{keywordflow}{if} (lifter_autostack_routine_interupt) \{
+00077       quit_auto_static();
+00078       \textcolor{keywordflow}{return};
+00079     \}
+00080     info(\textcolor{stringliteral}{"2"});
+00081     lifted = \textcolor{keyword}{true};
+00082     delay(30);
+00083     val = ultrasonicGet(lifter_ultrasonic);
+00084     printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, val);
+00085   \}
+00086 
+00087   set_main_lifter_motors(0);
+00088 
+00089   set_claw_motor(MIN\_CLAW\_SPEED);
+00090   \textcolor{keywordflow}{if} (lifter_autostack_routine_interupt) \{
+00091     quit_auto_static();
+00092     \textcolor{keywordflow}{return};
+00093   \}
+00094   delay(500);
+00095   \textcolor{keywordflow}{if} (lifter_autostack_routine_interupt) \{
+00096     quit_auto_static();
+00097     \textcolor{keywordflow}{return};
+00098   \}
+00099   set_main_lifter_motors(MAX\_SPEED);
+00100   \textcolor{keywordflow}{if} (lifter_autostack_routine_interupt) \{
+00101     quit_auto_static();
+00102     \textcolor{keywordflow}{return};
+00103   \}
+00104   delay(300);
+00105 
+00106   set_main_lifter_motors(MIN\_SPEED);
+00107   set_claw_motor(0);
+00108   set_secondary_lifter_motors(0);
+00109 
+00110   lifter_autostack_running = \textcolor{keyword}{false};
+00111 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a8a64fa88b389b39c236c5c57a7fb5c67_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{lifter_8c_a8a64fa88b389b39c236c5c57a7fb5c67_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_a2719740958fd8a5926f88f6194e820e3}} 
 \index{lifter.\+c@{lifter.\+c}!get\+Lifter\+Height@{get\+Lifter\+Height}}
 \index{get\+Lifter\+Height@{get\+Lifter\+Height}!lifter.\+c@{lifter.\+c}}
@@ -82,12 +206,28 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 216} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 306} of file \textbf{ lifter.\+c}.
 
 
 
 References \textbf{ get\+Lifter\+Ticks()}.
 
+
+\begin{DoxyCode}
+00306                          \{
+00307   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ticks = getLifterTicks();
+00308   \textcolor{keywordflow}{return} (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) +
+00309           0.0198 * ticks + 2.3033);
+00310 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a2719740958fd8a5926f88f6194e820e3_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_acdf909159b0406c48099843f2306be78}} 
 \index{lifter.\+c@{lifter.\+c}!get\+Lifter\+Ticks@{get\+Lifter\+Ticks}}
 \index{get\+Lifter\+Ticks@{get\+Lifter\+Ticks}!lifter.\+c@{lifter.\+c}}
@@ -109,16 +249,86 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 207} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 297} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ L\+I\+F\+T\+ER}.
+References \textbf{ analog\+Read()}.
 
 
 
 Referenced by \textbf{ get\+Lifter\+Height()}.
 
+
+\begin{DoxyCode}
+00297 \{ \textcolor{keywordflow}{return} analogRead(LIFTER); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{lifter_8c_acdf909159b0406c48099843f2306be78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{lifter_8c_acdf909159b0406c48099843f2306be78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{lifter_8c_a3738d33dc870f98243a93bddd855b43e}} 
+\index{lifter.\+c@{lifter.\+c}!interrupt\+\_\+auto\+\_\+stack@{interrupt\+\_\+auto\+\_\+stack}}
+\index{interrupt\+\_\+auto\+\_\+stack@{interrupt\+\_\+auto\+\_\+stack}!lifter.\+c@{lifter.\+c}}
+\paragraph{interrupt\+\_\+auto\+\_\+stack()}
+{\footnotesize\ttfamily void interrupt\+\_\+auto\+\_\+stack (\begin{DoxyParamCaption}\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Stpos an autostack in case of an error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & ignore parameter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 8} of file \textbf{ lifter.\+c}.
+
+
+
+References \textbf{ info()}, and \textbf{ lifter\+\_\+autostack\+\_\+routine\+\_\+interupt}.
+
+
+
+Referenced by \textbf{ operator\+Control()}.
+
+
+\begin{DoxyCode}
+00008                                        \{
+00009   info(\textcolor{stringliteral}{"int"});
+00010   lifter_autostack_routine_interupt = \textcolor{keyword}{true};
+00011 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a3738d33dc870f98243a93bddd855b43e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{lifter_8c_a3738d33dc870f98243a93bddd855b43e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_ab0460888f3213e5510bd25ae1e152a75}} 
 \index{lifter.\+c@{lifter.\+c}!lifter\+Potentiometer\+To\+Degree@{lifter\+Potentiometer\+To\+Degree}}
 \index{lifter\+Potentiometer\+To\+Degree@{lifter\+Potentiometer\+To\+Degree}!lifter.\+c@{lifter.\+c}}
@@ -145,12 +355,14 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 196} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 286} of file \textbf{ lifter.\+c}.
 
 
-
-References \textbf{ D\+E\+G\+\_\+\+M\+AX}, \textbf{ I\+N\+I\+T\+\_\+\+R\+O\+T\+A\+T\+I\+ON}, and \textbf{ T\+I\+C\+K\+\_\+\+M\+AX}.
-
+\begin{DoxyCode}
+00286                                          \{
+00287   \textcolor{keywordflow}{return} (x - INIT\_ROTATION) / TICK\_MAX * DEG\_MAX;
+00288 \}
+\end{DoxyCode}
 \mbox{\label{lifter_8c_ad36c37086a91046af4e6f619618b7719}} 
 \index{lifter.\+c@{lifter.\+c}!lower\+\_\+main\+\_\+lifter@{lower\+\_\+main\+\_\+lifter}}
 \index{lower\+\_\+main\+\_\+lifter@{lower\+\_\+main\+\_\+lifter}!lifter.\+c@{lifter.\+c}}
@@ -169,12 +381,24 @@ Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 70} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 160} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}.
+References \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}.
 
+
+\begin{DoxyCode}
+00160 \{ set_main_lifter_motors(MAX\_SPEED); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_ad36c37086a91046af4e6f619618b7719_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_af76abbd394bf206ab56fa237d776f2b3}} 
 \index{lifter.\+c@{lifter.\+c}!lower\+\_\+secondary\+\_\+lifter@{lower\+\_\+secondary\+\_\+lifter}}
 \index{lower\+\_\+secondary\+\_\+lifter@{lower\+\_\+secondary\+\_\+lifter}!lifter.\+c@{lifter.\+c}}
@@ -193,12 +417,24 @@ Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 86} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 176} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+References \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
 
+
+\begin{DoxyCode}
+00176 \{ set_secondary_lifter_motors(MAX\_SPEED); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_af76abbd394bf206ab56fa237d776f2b3_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_adfb6207ee1f20953058c8de81ec3386a}} 
 \index{lifter.\+c@{lifter.\+c}!main\+\_\+lifter\+\_\+update@{main\+\_\+lifter\+\_\+update}}
 \index{main\+\_\+lifter\+\_\+update@{main\+\_\+lifter\+\_\+update}!lifter.\+c@{lifter.\+c}}
@@ -207,16 +443,120 @@ References \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+secondary
 
 
 
-Definition at line \textbf{ 90} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 180} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ lifter\+\_\+autostack\+\_\+running}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+WN}, \textbf{ lifter\+\_\+ultrasonic}, \textbf{ L\+I\+F\+T\+E\+R\+\_\+\+UP}, \textbf{ M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT}, \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, \textbf{ secondary\+\_\+override}, and \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}.
+References \textbf{ analog\+Read()}, \textbf{ error()}, \textbf{ joystick\+Get\+Digital()}, \textbf{ lifter\+\_\+autostack\+\_\+running}, \textbf{ lifter\+\_\+ultrasonic}, \textbf{ secondary\+\_\+override}, \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, and \textbf{ ultrasonic\+Get()}.
 
 
 
 Referenced by \textbf{ update\+\_\+lifter()}.
 
+
+\begin{DoxyCode}
+00180                                  \{
+00181   \textcolor{keywordflow}{if} (lifter_autostack_running) \{
+00182     error(\textcolor{stringliteral}{"True"});
+00183     \textcolor{keywordflow}{return};
+00184   \}
+00185   error(\textcolor{stringliteral}{"1"});
+00186   \textcolor{keyword}{static} \textcolor{keywordtype}{int} count = 0;
+00187   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} pid\_on = \textcolor{keyword}{false};
+00188   \textcolor{keyword}{static} \textcolor{keywordtype}{int} main\_target = 0;
+00189   \textcolor{keywordtype}{int} main\_motor\_speed = 0;
+00190   \textcolor{keyword}{static} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} main\_i = 0;
+00191   \textcolor{keywordflow}{if} (count == 20) \{
+00192     main\_target = analogRead(MAIN\_LIFTER\_POT);
+00193   \}
+00194   \textcolor{keywordflow}{if} (pid\_on && count > 20) \{
+00195     \textcolor{keywordtype}{int} curr = analogRead(MAIN\_LIFTER\_POT);
+00196     \textcolor{keyword}{static} \textcolor{keywordtype}{int} main\_last\_p = 0;
+00197     \textcolor{keywordtype}{int} main\_p = curr - main\_target;
+00198     main\_i += main\_p;
+00199     \textcolor{keywordtype}{int} main\_d = main\_last\_p - main\_p;
+00200     \textcolor{comment}{// main\_motor\_speed = MAIN\_LIFTER\_P * main\_p + MAIN\_LIFTER\_I * main\_i +}
+00201     \textcolor{comment}{// MAIN\_LIFTER\_D * main\_d;}
+00202     main\_last\_p = main\_p;
+00203   \} \textcolor{keywordflow}{else} \{
+00204     main\_i = 0;
+00205     count++;
+00206   \}
+00207   error(\textcolor{stringliteral}{"2"});
+00208   \textcolor{keywordflow}{if} (joystickGetDigital(LIFTER\_UP)) \{
+00209     \textcolor{keywordtype}{int} ultra = ultrasonicGet(lifter_ultrasonic);
+00210     main\_motor\_speed = MAX\_SPEED;
+00211     count = 0;
+00212   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(LIFTER\_DOWN)) \{
+00213     main\_motor\_speed = MIN\_SPEED;
+00214     count = 0;
+00215     secondary_override = \textcolor{keyword}{false};
+00216   \} \textcolor{keywordflow}{else} \{
+00217     secondary_override = \textcolor{keyword}{false};
+00218   \}
+00219   set_main_lifter_motors(main\_motor\_speed);
+00220   pid\_on = \textcolor{keyword}{true};
+00221 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_adfb6207ee1f20953058c8de81ec3386a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_adfb6207ee1f20953058c8de81ec3386a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{lifter_8c_aa4d172cbde795bc13fe6baabd074717e}} 
+\index{lifter.\+c@{lifter.\+c}!quit\+\_\+auto\+\_\+static@{quit\+\_\+auto\+\_\+static}}
+\index{quit\+\_\+auto\+\_\+static@{quit\+\_\+auto\+\_\+static}!lifter.\+c@{lifter.\+c}}
+\paragraph{quit\+\_\+auto\+\_\+static()}
+{\footnotesize\ttfamily static void quit\+\_\+auto\+\_\+static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \textbf{ 13} of file \textbf{ lifter.\+c}.
+
+
+
+References \textbf{ lifter\+\_\+autostack\+\_\+running}, \textbf{ set\+\_\+claw\+\_\+motor()}, \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+
+
+
+Referenced by \textbf{ autostack\+\_\+routine()}.
+
+
+\begin{DoxyCode}
+00013                                       \{
+00014   set_main_lifter_motors(0);
+00015   set_secondary_lifter_motors(0);
+00016   set_claw_motor(0);
+00017   lifter_autostack_running = \textcolor{keyword}{false};
+00018 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_aa4d172cbde795bc13fe6baabd074717e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_aa4d172cbde795bc13fe6baabd074717e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_a2e2bd38b5b8b52378f3510368bf8aa0a}} 
 \index{lifter.\+c@{lifter.\+c}!raise\+\_\+main\+\_\+lifter@{raise\+\_\+main\+\_\+lifter}}
 \index{raise\+\_\+main\+\_\+lifter@{raise\+\_\+main\+\_\+lifter}!lifter.\+c@{lifter.\+c}}
@@ -235,16 +575,24 @@ Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 62} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 152} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}.
+References \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}.
 
 
-
-Referenced by \textbf{ autostack\+\_\+routine()}.
-
+\begin{DoxyCode}
+00152 \{ set_main_lifter_motors(MAX\_SPEED); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a2e2bd38b5b8b52378f3510368bf8aa0a_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_a786f679ea48bb8c80e00fbac9a69911b}} 
 \index{lifter.\+c@{lifter.\+c}!raise\+\_\+secondary\+\_\+lifter@{raise\+\_\+secondary\+\_\+lifter}}
 \index{raise\+\_\+secondary\+\_\+lifter@{raise\+\_\+secondary\+\_\+lifter}!lifter.\+c@{lifter.\+c}}
@@ -263,12 +611,36 @@ Christian De\+Simone
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 78} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 168} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+References \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
 
+
+
+Referenced by \textbf{ autostack\+\_\+routine()}.
+
+
+\begin{DoxyCode}
+00168 \{ set_secondary_lifter_motors(MIN\_SPEED / 1.5); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a786f679ea48bb8c80e00fbac9a69911b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a786f679ea48bb8c80e00fbac9a69911b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_ac59fe6ffc80bab7f117ec0a8e482277b}} 
 \index{lifter.\+c@{lifter.\+c}!secondary\+\_\+lifter\+\_\+update@{secondary\+\_\+lifter\+\_\+update}}
 \index{secondary\+\_\+lifter\+\_\+update@{secondary\+\_\+lifter\+\_\+update}!lifter.\+c@{lifter.\+c}}
@@ -277,16 +649,77 @@ References \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+secondary
 
 
 
-Definition at line \textbf{ 130} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 223} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ lifter\+\_\+autostack\+\_\+running}, \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+D}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+D\+O\+WN}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+I}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+P}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+UP}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+References \textbf{ analog\+Read()}, \textbf{ claw\+\_\+grab\+\_\+cone()}, \textbf{ joystick\+Get\+Digital()}, \textbf{ lifter\+\_\+autostack\+\_\+running}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
 
 
 
 Referenced by \textbf{ update\+\_\+lifter()}.
 
+
+\begin{DoxyCode}
+00223                                       \{
+00224   \textcolor{keywordflow}{if} (lifter_autostack_running)
+00225     \textcolor{keywordflow}{return};
+00226   \textcolor{keyword}{static} \textcolor{keywordtype}{int} count = 0;
+00227   \textcolor{comment}{// static bool pid\_on = false;}
+00228   \textcolor{keyword}{static} \textcolor{keywordtype}{int} second\_target = 0;
+00229   \textcolor{keywordtype}{int} second\_motor\_speed = 0;
+00230   \textcolor{keyword}{static} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} second\_i = 0;
+00231 
+00232   \textcolor{keywordflow}{if} (count < 10) \{
+00233     second\_target = analogRead(SECONDARY\_LIFTER\_POT\_PORT);
+00234     count++;
+00235   \}
+00236 
+00237   \textcolor{keywordtype}{int} curr = analogRead(SECONDARY\_LIFTER\_POT\_PORT);
+00238   \textcolor{keyword}{static} \textcolor{keywordtype}{int} second\_last\_p = 0;
+00239   \textcolor{keywordtype}{int} second\_p = curr - second\_target;
+00240   second\_i += second\_p;
+00241   \textcolor{keywordtype}{int} second\_d = second\_last\_p - second\_p;
+00242   second\_motor\_speed = SECONDARY\_LIFTER\_P * second\_p +
+00243                        SECONDARY\_LIFTER\_I * second\_i +
+00244                        SECONDARY\_LIFTER\_D * second\_d;
+00245   second\_last\_p = second\_p;
+00246 
+00247   \textcolor{keywordflow}{if} (joystickGetDigital(SECONDARY\_LIFTER\_DOWN)) \{
+00248     second\_motor\_speed = MAX\_SPEED;
+00249     count = 0;
+00250     second\_i = 0;
+00251     second\_target = analogRead(SECONDARY\_LIFTER\_POT\_PORT);
+00252     claw_grab_cone();
+00253   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(SECONDARY\_LIFTER\_UP)) \{
+00254     second\_motor\_speed = MIN\_SPEED;
+00255     count = 0;
+00256     second\_i = 0;
+00257     second\_target =
+00258         second\_target > 3000 ? 4095 : analogRead(SECONDARY\_LIFTER\_POT\_PORT);
+00259   \} \textcolor{keywordflow}{else} \{
+00260     second\_target = second\_target > 3000 ? 4095 : second\_target;
+00261   \}
+00262   second\_motor\_speed = abs(second\_motor\_speed) < 20 ? 0 : second\_motor\_speed;
+00263   set_secondary_lifter_motors(second\_motor\_speed);
+00264 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_ac59fe6ffc80bab7f117ec0a8e482277b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_ac59fe6ffc80bab7f117ec0a8e482277b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_abddc7cb502e12fa277b627c90a45efb1}} 
 \index{lifter.\+c@{lifter.\+c}!set\+\_\+lifter\+\_\+pos@{set\+\_\+lifter\+\_\+pos}}
 \index{set\+\_\+lifter\+\_\+pos@{set\+\_\+lifter\+\_\+pos}!lifter.\+c@{lifter.\+c}}
@@ -310,8 +743,12 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 54} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 144} of file \textbf{ lifter.\+c}.
 
+
+\begin{DoxyCode}
+00144 \{\}
+\end{DoxyCode}
 \mbox{\label{lifter_8c_ad00a195af30f246924d6e1a30095b882}} 
 \index{lifter.\+c@{lifter.\+c}!set\+\_\+main\+\_\+lifter\+\_\+motors@{set\+\_\+main\+\_\+lifter\+\_\+motors}}
 \index{set\+\_\+main\+\_\+lifter\+\_\+motors@{set\+\_\+main\+\_\+lifter\+\_\+motors}!lifter.\+c@{lifter.\+c}}
@@ -335,16 +772,38 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 45} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 133} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ M\+O\+T\+O\+R\+\_\+\+L\+I\+FT}, and \textbf{ set\+\_\+motor\+\_\+slew()}.
+References \textbf{ set\+\_\+motor\+\_\+slew()}.
 
 
 
-Referenced by \textbf{ autonomous()}, \textbf{ autostack\+\_\+routine()}, \textbf{ lower\+\_\+main\+\_\+lifter()}, \textbf{ main\+\_\+lifter\+\_\+update()}, and \textbf{ raise\+\_\+main\+\_\+lifter()}.
+Referenced by \textbf{ auton\+\_\+rasie\+\_\+main\+\_\+lifter()}, \textbf{ autostack\+\_\+routine()}, \textbf{ lower\+\_\+main\+\_\+lifter()}, \textbf{ main\+\_\+lifter\+\_\+update()}, \textbf{ quit\+\_\+auto\+\_\+static()}, and \textbf{ raise\+\_\+main\+\_\+lifter()}.
 
+
+\begin{DoxyCode}
+00133                                          \{
+00134   set_motor_slew(MOTOR\_MAIN\_LIFTER, v);
+00135 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_ad00a195af30f246924d6e1a30095b882_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_ad00a195af30f246924d6e1a30095b882_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_a78640d547d9361951a92d0bc00939536}} 
 \index{lifter.\+c@{lifter.\+c}!set\+\_\+secondary\+\_\+lifter\+\_\+motors@{set\+\_\+secondary\+\_\+lifter\+\_\+motors}}
 \index{set\+\_\+secondary\+\_\+lifter\+\_\+motors@{set\+\_\+secondary\+\_\+lifter\+\_\+motors}!lifter.\+c@{lifter.\+c}}
@@ -368,16 +827,38 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 33} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 121} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ M\+O\+T\+O\+R\+\_\+\+S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+ER}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
+References \textbf{ set\+\_\+motor\+\_\+immediate()}.
 
 
 
-Referenced by \textbf{ autonomous()}, \textbf{ lower\+\_\+secondary\+\_\+lifter()}, \textbf{ raise\+\_\+secondary\+\_\+lifter()}, and \textbf{ secondary\+\_\+lifter\+\_\+update()}.
+Referenced by \textbf{ auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max()}, \textbf{ autonomous()}, \textbf{ autostack\+\_\+routine()}, \textbf{ deploy\+\_\+seoncdary\+\_\+lifter()}, \textbf{ lower\+\_\+secondary\+\_\+lifter()}, \textbf{ quit\+\_\+auto\+\_\+static()}, \textbf{ raise\+\_\+secondary\+\_\+lifter()}, and \textbf{ secondary\+\_\+lifter\+\_\+update()}.
 
+
+\begin{DoxyCode}
+00121                                               \{
+00122   set_motor_immediate(MOTOR\_SECONDARY\_LIFTER, v);
+00123 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a78640d547d9361951a92d0bc00939536_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a78640d547d9361951a92d0bc00939536_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{lifter_8c_a59bb7413777ca16aba124aaedf95c79b}} 
 \index{lifter.\+c@{lifter.\+c}!update\+\_\+lifter@{update\+\_\+lifter}}
 \index{update\+\_\+lifter@{update\+\_\+lifter}!lifter.\+c@{lifter.\+c}}
@@ -396,16 +877,41 @@ Chris Jerrett
 \end{DoxyDate}
 
 
-Definition at line \textbf{ 183} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 272} of file \textbf{ lifter.\+c}.
 
 
 
-References \textbf{ main\+\_\+lifter\+\_\+update()}, \textbf{ secondary\+\_\+lifter\+\_\+update()}, and \textbf{ secondary\+\_\+override}.
+References \textbf{ analog\+Read()}, \textbf{ main\+\_\+lifter\+\_\+update()}, \textbf{ printf()}, \textbf{ secondary\+\_\+lifter\+\_\+update()}, and \textbf{ secondary\+\_\+override}.
 
 
 
 Referenced by \textbf{ operator\+Control()}.
 
+
+\begin{DoxyCode}
+00272                      \{
+00273   printf(\textcolor{stringliteral}{"%d \(\backslash\)n"}, analogRead(SECONDARY\_LIFTER\_POT\_PORT));
+00274   main_lifter_update();
+00275   \textcolor{keywordflow}{if} (!secondary_override)
+00276     secondary_lifter_update();
+00277 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lifter_8c_a59bb7413777ca16aba124aaedf95c79b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{lifter_8c_a59bb7413777ca16aba124aaedf95c79b_icgraph}
+\end{center}
+\end{figure}
 
 
 \subsubsection{Variable Documentation}
@@ -417,35 +923,25 @@ Referenced by \textbf{ operator\+Control()}.
 
 
 
-Definition at line \textbf{ 7} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 6} of file \textbf{ lifter.\+c}.
+
+
+
+Referenced by \textbf{ autostack\+\_\+routine()}, and \textbf{ interrupt\+\_\+auto\+\_\+stack()}.
 
 \mbox{\label{lifter_8c_ae1fc3deab25f0b9e6f636bb83e9bf5c2}} 
 \index{lifter.\+c@{lifter.\+c}!lifter\+\_\+autostack\+\_\+running@{lifter\+\_\+autostack\+\_\+running}}
 \index{lifter\+\_\+autostack\+\_\+running@{lifter\+\_\+autostack\+\_\+running}!lifter.\+c@{lifter.\+c}}
 \paragraph{lifter\+\_\+autostack\+\_\+running}
-{\footnotesize\ttfamily bool lifter\+\_\+autostack\+\_\+running = false\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily bool lifter\+\_\+autostack\+\_\+running = false}
 
 
 
-Definition at line \textbf{ 6} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 5} of file \textbf{ lifter.\+c}.
 
 
 
-Referenced by \textbf{ main\+\_\+lifter\+\_\+update()}, and \textbf{ secondary\+\_\+lifter\+\_\+update()}.
-
-\mbox{\label{lifter_8c_a5dfaf05eb7e97b2e29d04eb068f9c240}} 
-\index{lifter.\+c@{lifter.\+c}!lifter\+\_\+ultrasonic@{lifter\+\_\+ultrasonic}}
-\index{lifter\+\_\+ultrasonic@{lifter\+\_\+ultrasonic}!lifter.\+c@{lifter.\+c}}
-\paragraph{lifter\+\_\+ultrasonic}
-{\footnotesize\ttfamily Ultrasonic lifter\+\_\+ultrasonic}
-
-
-
-Definition at line \textbf{ 4} of file \textbf{ lifter.\+c}.
-
-
-
-Referenced by \textbf{ autostack\+\_\+routine()}, \textbf{ initialize()}, and \textbf{ main\+\_\+lifter\+\_\+update()}.
+Referenced by \textbf{ autostack\+\_\+routine()}, \textbf{ main\+\_\+lifter\+\_\+update()}, \textbf{ quit\+\_\+auto\+\_\+static()}, \textbf{ secondary\+\_\+lifter\+\_\+update()}, and \textbf{ update\+\_\+claw()}.
 
 \mbox{\label{lifter_8c_ad0dce62ab81a71d1c53831e375cde64c}} 
 \index{lifter.\+c@{lifter.\+c}!secondary\+\_\+override@{secondary\+\_\+override}}
@@ -455,7 +951,7 @@ Referenced by \textbf{ autostack\+\_\+routine()}, \textbf{ initialize()}, and \t
 
 
 
-Definition at line \textbf{ 88} of file \textbf{ lifter.\+c}.
+Definition at line \textbf{ 178} of file \textbf{ lifter.\+c}.
 
 
 

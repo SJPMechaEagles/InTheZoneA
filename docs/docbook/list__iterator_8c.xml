@@ -1,14 +1,36 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="list__iterator_8c">
     <title>list_iterator.c File Reference</title>
-    <programlisting>#include &quot;list.h&quot;</programlisting>
+<para>Include dependency diagram for list_iterator.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="list__iterator_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for list_iterator.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="list__iterator_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Functions</title>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="list__iterator_8c_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link> (
-<link linkend="structlist__iterator__t">list_iterator_t</link> * self)</para>
+<link linkend="structlist__iterator__t">list_iterator_t</link> * self)<para><emphasis>Destroys the iterator.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -16,7 +38,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="structlist__iterator__t">list_iterator_t</link> * <link linkend="list__iterator_8c_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link> (
-<link linkend="structlist__t">list_t</link> * list, <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link> direction)</para>
+<link linkend="structlist__t">list_t</link> * list, <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link> direction)<para><emphasis>Creates a new iterator.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -24,7 +47,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="structlist__iterator__t">list_iterator_t</link> * <link linkend="list__iterator_8c_1af4136a8a27bdc8c0f967a708dd03d575">list_iterator_new_from_node</link> (
-<link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node, <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link> direction)</para>
+<link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node, <link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link> direction)<para><emphasis>Creates a new iterator by using the node to start at.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -32,7 +56,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list__iterator_8c_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link> (
-<link linkend="structlist__iterator__t">list_iterator_t</link> * self)</para>
+<link linkend="structlist__iterator__t">list_iterator_t</link> * self)<para><emphasis>The next node in the iterator and advances the iterator.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -42,60 +67,34 @@
     <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/src/list_iterator.c</para>
     </simplesect>
     <literallayout><computeroutput>
-1 
-2 <emphasis class="comment">//</emphasis>
-3 <emphasis class="comment">//&#32;iterator.c</emphasis>
-4 <emphasis class="comment">//</emphasis>
-5 <emphasis class="comment">//&#32;Copyright&#32;(c)&#32;2010&#32;TJ&#32;Holowaychuk&#32;&lt;tj@vision-media.ca&gt;</emphasis>
-6 <emphasis class="comment">//</emphasis>
-7 
-8 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="list_8h">list.h</link>&quot;</emphasis>
-9 
-10 <emphasis class="comment">/*</emphasis>
-11 <emphasis class="comment">&#32;*&#32;Allocate&#32;a&#32;new&#32;list_iterator_t.&#32;NULL&#32;on&#32;failure.</emphasis>
-12 <emphasis class="comment">&#32;*&#32;Accepts&#32;a&#32;direction,&#32;which&#32;may&#32;be&#32;LIST_HEAD&#32;or&#32;LIST_TAIL.</emphasis>
-13 <emphasis class="comment">&#32;*/</emphasis>
-14 
-<link linkend="list__iterator_8c_1a3c956afda343b4a6aaf68fbd4b446733">15 </link><link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<link linkend="list__iterator_8c_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link>(<link linkend="structlist__t">list_t</link>&#32;*list,&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>&#32;direction)&#32;{
-16 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node&#32;=&#32;direction&#32;==&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>&#32;?&#32;list-&gt;<link linkend="structlist__t_1a93ef6d995af96e73e226dc2b8a7232aa">head</link>&#32;:&#32;list-&gt;<link linkend="structlist__t_1a45dc80e38f8869f66e5d006117aae5f2">tail</link>;
-17 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="list__iterator_8c_1af4136a8a27bdc8c0f967a708dd03d575">list_iterator_new_from_node</link>(node,&#32;direction);
-18 }
-19 
-20 <emphasis class="comment">/*</emphasis>
-21 <emphasis class="comment">&#32;*&#32;Allocate&#32;a&#32;new&#32;list_iterator_t&#32;with&#32;the&#32;given&#32;start</emphasis>
-22 <emphasis class="comment">&#32;*&#32;node.&#32;NULL&#32;on&#32;failure.</emphasis>
-23 <emphasis class="comment">&#32;*/</emphasis>
-24 
-<link linkend="list__iterator_8c_1af4136a8a27bdc8c0f967a708dd03d575">25 </link><link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<link linkend="list__iterator_8c_1af4136a8a27bdc8c0f967a708dd03d575">list_iterator_new_from_node</link>(<link linkend="structlist__node">list_node_t</link>&#32;*node,
-26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>&#32;direction)&#32;{
-27 &#32;&#32;<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>;
-28 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!(<emphasis class="keyword">self</emphasis>&#32;=&#32;<link linkend="list_8h_1ab80cb68ecaaf76c970758cd702641cee">LIST_MALLOC</link>(<emphasis class="keyword">sizeof</emphasis>(<link linkend="structlist__iterator__t">list_iterator_t</link>))))
-29 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
-30 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__iterator__t_1adfc911fa0f601936c4a58c95a08737ee">next</link>&#32;=&#32;node;
-31 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;direction&#32;=&#32;direction;
-32 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">self</emphasis>;
-33 }
-34 
-35 <emphasis class="comment">/*</emphasis>
-36 <emphasis class="comment">&#32;*&#32;Return&#32;the&#32;next&#32;list_node_t&#32;or&#32;NULL&#32;when&#32;no&#32;more</emphasis>
-37 <emphasis class="comment">&#32;*&#32;nodes&#32;remain&#32;in&#32;the&#32;list.</emphasis>
-38 <emphasis class="comment">&#32;*/</emphasis>
-39 
-<link linkend="list__iterator_8c_1a2e5db981e32d3aef49ea79505a0615a6">40 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list__iterator_8c_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
-41 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*curr&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>;
-42 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(curr)&#32;{
-43 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;direction&#32;==&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>&#32;?&#32;curr-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;:&#32;curr-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>;
-44 &#32;&#32;}
-45 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;curr;
-46 }
-47 
-48 <emphasis class="comment">/*</emphasis>
-49 <emphasis class="comment">&#32;*&#32;Free&#32;the&#32;list&#32;iterator.</emphasis>
-50 <emphasis class="comment">&#32;*/</emphasis>
-51 
-<link linkend="list__iterator_8c_1ad16fa29ddbb444070ea65f871e1c0ba2">52 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="list__iterator_8c_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
-53 &#32;&#32;<link linkend="list_8h_1a8968cfdd1e3404352d2c43dcb3bde04a">LIST_FREE</link>(<emphasis class="keyword">self</emphasis>);
-54 &#32;&#32;<emphasis class="keyword">self</emphasis>&#32;=&#32;NULL;
-55 }
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="list_8h">list.h</link>&quot;</emphasis>
+2 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
+<link linkend="list__iterator_8c_1a3c956afda343b4a6aaf68fbd4b446733">11 </link><link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<link linkend="list__iterator_8c_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link>(<link linkend="structlist__t">list_t</link>&#32;*list,&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>&#32;direction)&#32;{
+12 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node&#32;=&#32;direction&#32;==&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>&#32;?&#32;list-&gt;<link linkend="structlist__t_1a93ef6d995af96e73e226dc2b8a7232aa">head</link>&#32;:&#32;list-&gt;<link linkend="structlist__t_1a45dc80e38f8869f66e5d006117aae5f2">tail</link>;
+13 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<link linkend="list__iterator_8c_1af4136a8a27bdc8c0f967a708dd03d575">list_iterator_new_from_node</link>(node,&#32;direction);
+14 }
+15 
+<link linkend="list__iterator_8c_1af4136a8a27bdc8c0f967a708dd03d575">24 </link><link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<link linkend="list__iterator_8c_1af4136a8a27bdc8c0f967a708dd03d575">list_iterator_new_from_node</link>(<link linkend="structlist__node">list_node_t</link>&#32;*node,
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>&#32;direction)&#32;{
+26 &#32;&#32;<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>;
+27 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!(<emphasis class="keyword">self</emphasis>&#32;=&#32;(<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*)malloc(<emphasis class="keyword">sizeof</emphasis>(<link linkend="structlist__iterator__t">list_iterator_t</link>))))
+28 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+29 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__iterator__t_1adfc911fa0f601936c4a58c95a08737ee">next</link>&#32;=&#32;node;
+30 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;direction&#32;=&#32;direction;
+31 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">self</emphasis>;
+32 }
+33 
+<link linkend="list__iterator_8c_1a2e5db981e32d3aef49ea79505a0615a6">42 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list__iterator_8c_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
+43 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*curr&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>;
+44 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(curr)&#32;{
+45 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;direction&#32;==&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>&#32;?&#32;curr-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;:&#32;curr-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>;
+46 &#32;&#32;}
+47 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;curr;
+48 }
+49 
+<link linkend="list__iterator_8c_1ad16fa29ddbb444070ea65f871e1c0ba2">56 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="list__iterator_8c_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
+57 &#32;&#32;free(<emphasis class="keyword">self</emphasis>);
+58 &#32;&#32;<emphasis class="keyword">self</emphasis>&#32;=&#32;NULL;
+59 }
     </computeroutput></literallayout>
 </section>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vex Team A: include/log.h File Reference</title>
+<title>VRC Team 9228A Code Documentation: include/log.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="15384495_1251069754954513_2511683665962769870_o.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vex Team A
-   &#160;<span id="projectnumber">1.5.8</span>
+   <div id="projectname">VRC Team 9228A Code Documentation
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
   </td>
  </tr>
@@ -82,7 +81,6 @@ $(document).ready(function(){initNavTree('log_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">log.h File Reference</div>  </div>
@@ -91,36 +89,16 @@ $(document).ready(function(){initNavTree('log_8h.html','');});
 
 <p>Contains logging functions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="lcd_8h_source.html">lcd.h</a>&quot;</code><br />
-<code>#include &lt;API.h&gt;</code><br />
-</div>
+
 <p><a href="log_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>&#160;&#160;&#160;4</td></tr>
-<tr class="memdesc:ad72dbcf6d0153db1b8d8a58001feed83"><td class="mdescLeft">&#160;</td><td class="mdescRight">logging only info debug. most verbose level  <a href="#ad72dbcf6d0153db1b8d8a58001feed83">More...</a><br /></td></tr>
-<tr class="separator:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fe83ac76edc595f6b98cd4a4127aed5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:a8fe83ac76edc595f6b98cd4a4127aed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">logging only errors. Also displays error to lcd  <a href="#a8fe83ac76edc595f6b98cd4a4127aed5">More...</a><br /></td></tr>
-<tr class="separator:a8fe83ac76edc595f6b98cd4a4127aed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1103fea1e1b3c41ca3322d5389f7162"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#ae1103fea1e1b3c41ca3322d5389f7162">INFO</a>&#160;&#160;&#160;3</td></tr>
-<tr class="memdesc:ae1103fea1e1b3c41ca3322d5389f7162"><td class="mdescLeft">&#160;</td><td class="mdescRight">logging only info messages and higher.  <a href="#ae1103fea1e1b3c41ca3322d5389f7162">More...</a><br /></td></tr>
-<tr class="separator:ae1103fea1e1b3c41ca3322d5389f7162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a655c84af1b0034986ff56e12e84f983d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a655c84af1b0034986ff56e12e84f983d">NONE</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memdesc:a655c84af1b0034986ff56e12e84f983d"><td class="mdescLeft">&#160;</td><td class="mdescRight">No logging. Should be used in competition to reduce serial communication.  <a href="#a655c84af1b0034986ff56e12e84f983d">More...</a><br /></td></tr>
-<tr class="separator:a655c84af1b0034986ff56e12e84f983d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb439d9f933fde4cf23caa370c030e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a5cb439d9f933fde4cf23caa370c030e7">WARNING</a>&#160;&#160;&#160;2</td></tr>
-<tr class="memdesc:a5cb439d9f933fde4cf23caa370c030e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">logs errors and warnings. Also displays error to lcd  <a href="#a5cb439d9f933fde4cf23caa370c030e7">More...</a><br /></td></tr>
-<tr class="separator:a5cb439d9f933fde4cf23caa370c030e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af3668f40d1ad1b4f3418869ac9a31f34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#af3668f40d1ad1b4f3418869ac9a31f34">debug</a> (const char *debug_message)</td></tr>
 <tr class="memdesc:af3668f40d1ad1b4f3418869ac9a31f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints a info message  <a href="#af3668f40d1ad1b4f3418869ac9a31f34">More...</a><br /></td></tr>
 <tr class="separator:af3668f40d1ad1b4f3418869ac9a31f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e5bb8a2a372f5b066ff7af7044584c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a8e5bb8a2a372f5b066ff7af7044584c1">error</a> (const char *error_message)</td></tr>
-<tr class="memdesc:a8e5bb8a2a372f5b066ff7af7044584c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints a error message and displays on lcd. Only will print and display if log_level is greater than NONE  <a href="#a8e5bb8a2a372f5b066ff7af7044584c1">More...</a><br /></td></tr>
+<tr class="memdesc:a8e5bb8a2a372f5b066ff7af7044584c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints a error message and displays on lcd.  <a href="#a8e5bb8a2a372f5b066ff7af7044584c1">More...</a><br /></td></tr>
 <tr class="separator:a8e5bb8a2a372f5b066ff7af7044584c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1606d750e1bb8de9f9e917172bba3382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a1606d750e1bb8de9f9e917172bba3382">info</a> (const char *info_message)</td></tr>
 <tr class="memdesc:a1606d750e1bb8de9f9e917172bba3382"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints a info message  <a href="#a1606d750e1bb8de9f9e917172bba3382">More...</a><br /></td></tr>
@@ -129,7 +107,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a163f389b4f5cf440a807d8fb48aaa006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the error lcd system Only required if using lcd.  <a href="#a163f389b4f5cf440a807d8fb48aaa006">More...</a><br /></td></tr>
 <tr class="separator:a163f389b4f5cf440a807d8fb48aaa006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bec2cf5fff7f607bc510b74aba9887c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a0bec2cf5fff7f607bc510b74aba9887c">warning</a> (const char *warning_message)</td></tr>
-<tr class="memdesc:a0bec2cf5fff7f607bc510b74aba9887c"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints a warning message and displays on lcd. Only will print and display if log_level is greater than NONE  <a href="#a0bec2cf5fff7f607bc510b74aba9887c">More...</a><br /></td></tr>
+<tr class="memdesc:a0bec2cf5fff7f607bc510b74aba9887c"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints a warning message and displays on lcd.  <a href="#a0bec2cf5fff7f607bc510b74aba9887c">More...</a><br /></td></tr>
 <tr class="separator:a0bec2cf5fff7f607bc510b74aba9887c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -138,114 +116,7 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>9/16/2017 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="log_8h_source.html">log.h</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ad72dbcf6d0153db1b8d8a58001feed83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad72dbcf6d0153db1b8d8a58001feed83">&#9670;&nbsp;</a></span>DEBUG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DEBUG&#160;&#160;&#160;4</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>logging only info debug. most verbose level </p>
-<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>9/10/17 </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="log_8h_source.html#l00050">50</a> of file <a class="el" href="log_8h_source.html">log.h</a>.</p>
-
-</div>
-</div>
-<a id="a8fe83ac76edc595f6b98cd4a4127aed5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fe83ac76edc595f6b98cd4a4127aed5">&#9670;&nbsp;</a></span>ERROR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ERROR&#160;&#160;&#160;1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>logging only errors. Also displays error to lcd </p>
-<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>9/10/17 </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="log_8h_source.html#l00027">27</a> of file <a class="el" href="log_8h_source.html">log.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="log_8c_source.html#l00077">debug()</a>, and <a class="el" href="log_8c_source.html#l00064">info()</a>.</p>
-
-</div>
-</div>
-<a id="ae1103fea1e1b3c41ca3322d5389f7162"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1103fea1e1b3c41ca3322d5389f7162">&#9670;&nbsp;</a></span>INFO</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define INFO&#160;&#160;&#160;3</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>logging only info messages and higher. </p>
-<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>9/10/17 </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="log_8h_source.html#l00042">42</a> of file <a class="el" href="log_8h_source.html">log.h</a>.</p>
-
-</div>
-</div>
-<a id="a655c84af1b0034986ff56e12e84f983d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a655c84af1b0034986ff56e12e84f983d">&#9670;&nbsp;</a></span>NONE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NONE&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>No logging. Should be used in competition to reduce serial communication. </p>
-<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>9/10/17 </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="log_8h_source.html#l00019">19</a> of file <a class="el" href="log_8h_source.html">log.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="log_8c_source.html#l00039">error()</a>.</p>
-
-</div>
-</div>
-<a id="a5cb439d9f933fde4cf23caa370c030e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cb439d9f933fde4cf23caa370c030e7">&#9670;&nbsp;</a></span>WARNING</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define WARNING&#160;&#160;&#160;2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>logs errors and warnings. Also displays error to lcd </p>
-<dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>9/10/17 </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="log_8h_source.html#l00035">35</a> of file <a class="el" href="log_8h_source.html">log.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="log_8c_source.html#l00052">warning()</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="af3668f40d1ad1b4f3418869ac9a31f34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3668f40d1ad1b4f3418869ac9a31f34">&#9670;&nbsp;</a></span>debug()</h2>
 
@@ -271,11 +142,25 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00077">77</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00083">83</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
 
-<p class="reference">References <a class="el" href="log_8h_source.html#l00027">ERROR</a>, and <a class="el" href="log_8c_source.html#l00003">log_level</a>.</p>
+<p class="reference">References <a class="el" href="log_8c_source.html#l00003">log_level</a>, and <a class="el" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00090">set_motor_immediate()</a>, and <a class="el" href="slew_8c_source.html#l00073">set_motor_slew()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                      {</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a> &gt; ERROR) {</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a>(<span class="stringliteral">&quot;[INFO]: %s\n&quot;</span>, debug_message);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div><div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
+<div class="ttc" id="_a_p_i_8h_html_a403c82418e475fa4a8273719e6a7f3e6"><div class="ttname"><a href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a></div><div class="ttdeci">int printf(const char *formatString,...)</div><div class="ttdoc">Prints the formatted string to the debug stream (the PC terminal). </div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_af3668f40d1ad1b4f3418869ac9a31f34_cgraph.svg" width="168" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="log_8h_af3668f40d1ad1b4f3418869ac9a31f34_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -295,8 +180,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>prints a error message and displays on lcd. Only will print and display if log_level is greater than NONE </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a> </dd></dl>
+<p>prints a error message and displays on lcd. </p>
+<p>Only will print and display if log_level is greater than NONE </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a> </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/10/17 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -306,11 +191,25 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00039">39</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00045">45</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
 
-<p class="reference">References <a class="el" href="log_8c_source.html#l00023">log_info()</a>, <a class="el" href="log_8c_source.html#l00003">log_level</a>, and <a class="el" href="log_8h_source.html#l00019">NONE</a>.</p>
+<p class="reference">References <a class="el" href="log_8c_source.html#l00029">log_info()</a>, and <a class="el" href="log_8c_source.html#l00003">log_level</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="matrix_8c_source.html#l00015">assert()</a>, <a class="el" href="menu_8c_source.html#l00027">create_menu()</a>, <a class="el" href="encoders_8c_source.html#l00011">init_encoders()</a>, and <a class="el" href="init_8c_source.html#l00050">initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="matrix_8c_source.html#l00017">assert()</a>, <a class="el" href="menu_8c_source.html#l00027">create_menu()</a>, <a class="el" href="encoders_8c_source.html#l00011">init_encoders()</a>, <a class="el" href="init_8c_source.html#l00052">initialize()</a>, <a class="el" href="lifter_8c_source.html#l00180">main_lifter_update()</a>, and <a class="el" href="routines_8c_source.html#l00014">routine_task()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                      {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a> &gt; NONE)</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a>(<span class="stringliteral">&quot;ERROR&quot;</span>, error_message);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div><div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
+<div class="ttc" id="log_8c_html_afff22aff6749311a684a559cac3ac8bd"><div class="ttname"><a href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a></div><div class="ttdeci">static void log_info(const char *s, const char *mess)</div><div class="ttdoc">prints a log info message to the lcd </div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00029">log.c:29</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_cgraph.svg" width="338" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="log_8h_a8e5bb8a2a372f5b066ff7af7044584c1_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -339,11 +238,25 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00064">64</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00070">70</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
 
-<p class="reference">References <a class="el" href="log_8h_source.html#l00027">ERROR</a>, <a class="el" href="log_8c_source.html#l00023">log_info()</a>, and <a class="el" href="log_8c_source.html#l00003">log_level</a>.</p>
+<p class="reference">References <a class="el" href="log_8c_source.html#l00029">log_info()</a>, and <a class="el" href="log_8c_source.html#l00003">log_level</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00050">initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="auto_8c_source.html#l00125">autonomous()</a>, <a class="el" href="lifter_8c_source.html#l00020">autostack_routine()</a>, <a class="el" href="init_8c_source.html#l00052">initialize()</a>, <a class="el" href="lifter_8c_source.html#l00008">interrupt_auto_stack()</a>, and <a class="el" href="auto_8c_source.html#l00039">start_auton()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                    {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a> &gt; ERROR) {</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a>(<span class="stringliteral">&quot;INFO&quot;</span>, info_message);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div><div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
+<div class="ttc" id="log_8c_html_afff22aff6749311a684a559cac3ac8bd"><div class="ttname"><a href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a></div><div class="ttdeci">static void log_info(const char *s, const char *mess)</div><div class="ttdoc">prints a log info message to the lcd </div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00029">log.c:29</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a1606d750e1bb8de9f9e917172bba3382_cgraph.svg" width="331" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a1606d750e1bb8de9f9e917172bba3382_icgraph.svg" width="406" height="236"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -386,9 +299,25 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00014">14</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
 
-<p class="reference">References <a class="el" href="log_8c_source.html#l00004">log_lcd</a>.</p>
+<p class="reference">References <a class="el" href="_a_p_i_8h.html#a5fa1d119fe3e836b5519f97eae7a1272">lcdClear()</a>, <a class="el" href="_a_p_i_8h.html#a43dc11a67b697c0d32315ea5a9af85f9">lcdInit()</a>, <a class="el" href="log_8c_source.html#l00004">log_lcd</a>, and <a class="el" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00050">initialize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="init_8c_source.html#l00052">initialize()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                         {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">if</span> (use_lcd) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="_a_p_i_8h.html#a43dc11a67b697c0d32315ea5a9af85f9">lcdInit</a>(lcd);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a> = lcd;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="_a_p_i_8h.html#a5fa1d119fe3e836b5519f97eae7a1272">lcdClear</a>(<a class="code" href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a>);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a>(<span class="stringliteral">&quot;LCD Init\n&quot;</span>);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="ttc" id="_a_p_i_8h_html_a43dc11a67b697c0d32315ea5a9af85f9"><div class="ttname"><a href="_a_p_i_8h.html#a43dc11a67b697c0d32315ea5a9af85f9">lcdInit</a></div><div class="ttdeci">void lcdInit(PROS_FILE *lcdPort)</div><div class="ttdoc">Initializes the LCD port, but does not change the text or settings. </div></div>
+<div class="ttc" id="_a_p_i_8h_html_a5fa1d119fe3e836b5519f97eae7a1272"><div class="ttname"><a href="_a_p_i_8h.html#a5fa1d119fe3e836b5519f97eae7a1272">lcdClear</a></div><div class="ttdeci">void lcdClear(PROS_FILE *lcdPort)</div><div class="ttdoc">Clears the LCD screen on the specified port. </div></div>
+<div class="ttc" id="_a_p_i_8h_html_a403c82418e475fa4a8273719e6a7f3e6"><div class="ttname"><a href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6">printf</a></div><div class="ttdeci">int printf(const char *formatString,...)</div><div class="ttdoc">Prints the formatted string to the debug stream (the PC terminal). </div></div>
+<div class="ttc" id="log_8c_html_ac1b33b9fa813506300fa09c1b21ed20a"><div class="ttname"><a href="log_8c.html#ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</a></div><div class="ttdeci">static FILE * log_lcd</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00004">log.c:4</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a163f389b4f5cf440a807d8fb48aaa006_cgraph.svg" width="203" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a163f389b4f5cf440a807d8fb48aaa006_icgraph.svg" width="202" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -408,8 +337,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>prints a warning message and displays on lcd. Only will print and display if log_level is greater than NONE </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a> </dd></dl>
+<p>prints a warning message and displays on lcd. </p>
+<p>Only will print and display if log_level is greater than NONE </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a> </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Chris Jerrett </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>9/10/17 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -419,11 +348,25 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00052">52</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="log_8c_source.html#l00058">58</a> of file <a class="el" href="log_8c_source.html">log.c</a>.</p>
 
-<p class="reference">References <a class="el" href="log_8c_source.html#l00023">log_info()</a>, <a class="el" href="log_8c_source.html#l00003">log_level</a>, and <a class="el" href="log_8h_source.html#l00035">WARNING</a>.</p>
+<p class="reference">References <a class="el" href="log_8c_source.html#l00029">log_info()</a>, and <a class="el" href="log_8c_source.html#l00003">log_level</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="slew_8c_source.html#l00042">init_slew()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                          {</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a> &gt; WARNING)</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a>(<span class="stringliteral">&quot;WARNING&quot;</span>, warning_message);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div><div class="ttc" id="log_8c_html_a8cf62743dafa288b58bd7c6028ec28e5"><div class="ttname"><a href="log_8c.html#a8cf62743dafa288b58bd7c6028ec28e5">log_level</a></div><div class="ttdeci">unsigned int log_level</div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00003">log.c:3</a></div></div>
+<div class="ttc" id="log_8c_html_afff22aff6749311a684a559cac3ac8bd"><div class="ttname"><a href="log_8c.html#afff22aff6749311a684a559cac3ac8bd">log_info</a></div><div class="ttdeci">static void log_info(const char *s, const char *mess)</div><div class="ttdoc">prints a log info message to the lcd </div><div class="ttdef"><b>Definition:</b> <a href="log_8c_source.html#l00029">log.c:29</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8h_a0bec2cf5fff7f607bc510b74aba9887c_cgraph.svg" width="355" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="log_8h_a0bec2cf5fff7f607bc510b74aba9887c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>

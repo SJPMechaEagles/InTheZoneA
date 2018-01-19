@@ -23,32 +23,28 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>int max<para><emphasis>contains the maximum int value of menu.
-Defaults to minimum int value</emphasis></para></para>
+                        <para>int max<para><emphasis>contains the maximum int value of menu.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>float max_f<para><emphasis>contains the maximum float value of menu.
-Defaults to minimum int value</emphasis></para></para>
+                        <para>float max_f<para><emphasis>contains the maximum float value of menu.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>int min<para><emphasis>contains the minimum int value of menu.
-Defaults to minimum int value</emphasis></para></para>
+                        <para>int min<para><emphasis>contains the minimum int value of menu.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>float min_f<para><emphasis>contains the minimum float value of menu.
-Defaults to minimum int value</emphasis></para></para>
+                        <para>float min_f<para><emphasis>contains the minimum float value of menu.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -62,27 +58,21 @@ Defaults to minimum int value</emphasis></para></para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>char * prompt<para><emphasis>contains the prompt to display on the first line.
- Step is how much the int menu will increase of decrease with each press.
-Defaults to one</emphasis></para></para>
+                        <para>char * prompt<para><emphasis>contains the prompt to display on the first line.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>int step<para><emphasis>contains the step int value of menu.
- Step is how much the int menu will increase of decrease with each press.
-Defaults to one</emphasis></para></para>
+                        <para>int step<para><emphasis>contains the step int value of menu.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>float step_f<para><emphasis>contains the step float value of menu.
- Step is how much the int menu will increase of decrease with each press.
-Defaults to 1.0f</emphasis></para></para>
+                        <para>float step_f<para><emphasis>contains the step float value of menu.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -96,12 +86,12 @@ Defaults to 1.0f</emphasis></para></para>
         </section>
     <simplesect>
 
-<para>Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint_menu. </para>
+<para>Represents a specific instance of a menu. </para>
     </simplesect>
         <simplesect>
             <title>Detailed Description</title>
 
-<para><formalpara><title>Author: </title>
+<para>Will cause a memory leak if not deinitialized via denint_menu. <formalpara><title>Author: </title>
 
 <para>Chris Jerrett </para>
 </formalpara>
@@ -166,7 +156,7 @@ Defaults to 1.0f</emphasis></para></para>
             </simplesect>
             <simplesect>
                 <title>int menu_t::max</title>                
-<para><formalpara><title>Author: </title>
+<para>Defaults to minimum int value <formalpara><title>Author: </title>
 
 <para>Chris Jerrett </para>
 </formalpara>
@@ -182,7 +172,7 @@ Defaults to 1.0f</emphasis></para></para>
             </simplesect>
             <simplesect>
                 <title>float menu_t::max_f</title>                
-<para><formalpara><title>Author: </title>
+<para>Defaults to minimum int value <formalpara><title>Author: </title>
 
 <para>Chris Jerrett </para>
 </formalpara>
@@ -198,7 +188,7 @@ Defaults to 1.0f</emphasis></para></para>
             </simplesect>
             <simplesect>
                 <title>int menu_t::min</title>                
-<para><formalpara><title>Author: </title>
+<para>Defaults to minimum int value <formalpara><title>Author: </title>
 
 <para>Chris Jerrett </para>
 </formalpara>
@@ -214,7 +204,7 @@ Defaults to 1.0f</emphasis></para></para>
             </simplesect>
             <simplesect>
                 <title>float menu_t::min_f</title>                
-<para><formalpara><title>Author: </title>
+<para>Defaults to minimum int value <formalpara><title>Author: </title>
 
 <para>Chris Jerrett </para>
 </formalpara>
@@ -246,7 +236,7 @@ Defaults to 1.0f</emphasis></para></para>
             </simplesect>
             <simplesect>
                 <title>char* menu_t::prompt</title>                
-<para><formalpara><title>Author: </title>
+<para>Step is how much the int menu will increase of decrease with each press. Defaults to one <formalpara><title>Author: </title>
 
 <para>Chris Jerrett </para>
 </formalpara>
@@ -262,7 +252,7 @@ Defaults to 1.0f</emphasis></para></para>
             </simplesect>
             <simplesect>
                 <title>int menu_t::step</title>                
-<para><formalpara><title>Author: </title>
+<para>Step is how much the int menu will increase of decrease with each press. Defaults to one <formalpara><title>Author: </title>
 
 <para>Chris Jerrett </para>
 </formalpara>
@@ -278,7 +268,7 @@ Defaults to 1.0f</emphasis></para></para>
             </simplesect>
             <simplesect>
                 <title>float menu_t::step_f</title>                
-<para><formalpara><title>Author: </title>
+<para>Step is how much the int menu will increase of decrease with each press. Defaults to 1.0f <formalpara><title>Author: </title>
 
 <para>Chris Jerrett </para>
 </formalpara>

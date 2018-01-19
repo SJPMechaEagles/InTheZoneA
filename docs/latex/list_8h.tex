@@ -1,95 +1,82 @@
 \subsection{include/list.h File Reference}
 \label{list_8h}\index{include/list.\+h@{include/list.\+h}}
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+
+
+A doubly linked list implementation.  
+
+
 \subsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ list\+\_\+iterator\+\_\+t}
-\item 
+\begin{DoxyCompactList}\small\item\em A iterator representation Allows automatic iteration through linked list. \end{DoxyCompactList}\item 
 struct \textbf{ list\+\_\+node}
-\item 
+\begin{DoxyCompactList}\small\item\em A node in a list. \end{DoxyCompactList}\item 
 struct \textbf{ list\+\_\+t}
-\end{DoxyCompactItemize}
-\subsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}~free
-\item 
-\#define \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}~malloc
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A struct representing a linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \textbf{ list\+\_\+node} \textbf{ list\+\_\+node\+\_\+t}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A node in a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum \textbf{ list\+\_\+direction\+\_\+t} \{ \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, 
 \textbf{ L\+I\+S\+T\+\_\+\+T\+A\+IL}
- \}
+ \}\begin{DoxyCompactList}\small\item\em \doxyref{list\+\_\+t}{p.}{structlist__t} iterator direction. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+at} (\textbf{ list\+\_\+t} $\ast$self, int index)
-\item 
+\begin{DoxyCompactList}\small\item\em Finds a node a given index. \end{DoxyCompactList}\item 
 void \textbf{ list\+\_\+destroy} (\textbf{ list\+\_\+t} $\ast$self)
-\item 
+\begin{DoxyCompactList}\small\item\em Deallocates a list. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+find} (\textbf{ list\+\_\+t} $\ast$self, void $\ast$val)
-\item 
+\begin{DoxyCompactList}\small\item\em Finds a node in a list with a given value. \end{DoxyCompactList}\item 
 void \textbf{ list\+\_\+iterator\+\_\+destroy} (\textbf{ list\+\_\+iterator\+\_\+t} $\ast$self)
-\item 
+\begin{DoxyCompactList}\small\item\em Destroys the iterator. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+iterator\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+new} (\textbf{ list\+\_\+t} $\ast$list, \textbf{ list\+\_\+direction\+\_\+t} direction)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a new iterator. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+iterator\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node} (\textbf{ list\+\_\+node\+\_\+t} $\ast$node, \textbf{ list\+\_\+direction\+\_\+t} direction)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a new iterator by using the node to start at. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+iterator\+\_\+next} (\textbf{ list\+\_\+iterator\+\_\+t} $\ast$self)
-\item 
+\begin{DoxyCompactList}\small\item\em The next node in the iterator and advances the iterator. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+lpop} (\textbf{ list\+\_\+t} $\ast$self)
-\item 
+\begin{DoxyCompactList}\small\item\em removes and returns the start node \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+lpush} (\textbf{ list\+\_\+t} $\ast$self, \textbf{ list\+\_\+node\+\_\+t} $\ast$node)
-\item 
+\begin{DoxyCompactList}\small\item\em Pushed a node to the start of a list. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+t} $\ast$ \textbf{ list\+\_\+new} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Allocated a new list. \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+node\+\_\+new} (void $\ast$val)
-\item 
+\begin{DoxyCompactList}\small\item\em Allocates a new node. \end{DoxyCompactList}\item 
 void \textbf{ list\+\_\+remove} (\textbf{ list\+\_\+t} $\ast$self, \textbf{ list\+\_\+node\+\_\+t} $\ast$node)
-\item 
+\begin{DoxyCompactList}\small\item\em removes and returns the a given node from the list \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+rpop} (\textbf{ list\+\_\+t} $\ast$self)
-\item 
+\begin{DoxyCompactList}\small\item\em removes and returns the end node \end{DoxyCompactList}\item 
 \textbf{ list\+\_\+node\+\_\+t} $\ast$ \textbf{ list\+\_\+rpush} (\textbf{ list\+\_\+t} $\ast$self, \textbf{ list\+\_\+node\+\_\+t} $\ast$node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pushed a node to the end of a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Macro Definition Documentation}
-\mbox{\label{list_8h_a8968cfdd1e3404352d2c43dcb3bde04a}} 
-\index{list.\+h@{list.\+h}!L\+I\+S\+T\+\_\+\+F\+R\+EE@{L\+I\+S\+T\+\_\+\+F\+R\+EE}}
-\index{L\+I\+S\+T\+\_\+\+F\+R\+EE@{L\+I\+S\+T\+\_\+\+F\+R\+EE}!list.\+h@{list.\+h}}
-\paragraph{L\+I\+S\+T\+\_\+\+F\+R\+EE}
-{\footnotesize\ttfamily \#define L\+I\+S\+T\+\_\+\+F\+R\+EE~free}
+\subsubsection{Detailed Description}
+A doubly linked list implementation. 
+
+A linked list is a linear data structure where each element is a separate object.
+
+Each element (we will call it a node) of a list is comprising of two items -\/ the data and a reference to the next node. The last node has a reference to null. The entry point into a linked list is called the head of the list. It should be noted that head is not a separate node, but the reference to the first node. If the list is empty then the head is a null reference. A linked list is a dynamic data structure. The number of nodes in a list is not fixed and can grow and shrink on demand. Any application which has to deal with an unknown number of objects will need to use a linked list.
+
+A Doubly Linked List is a variation of Linked list in which navigation is possible in both ways, either forward and backward easily as compared to Single Linked List.
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
 
 
-
-Definition at line \textbf{ 24} of file \textbf{ list.\+h}.
-
-
-
-Referenced by \textbf{ list\+\_\+destroy()}, \textbf{ list\+\_\+iterator\+\_\+destroy()}, and \textbf{ list\+\_\+remove()}.
-
-\mbox{\label{list_8h_ab80cb68ecaaf76c970758cd702641cee}} 
-\index{list.\+h@{list.\+h}!L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC@{L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}}
-\index{L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC@{L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}!list.\+h@{list.\+h}}
-\paragraph{L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}
-{\footnotesize\ttfamily \#define L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC~malloc}
-
-
-
-Definition at line \textbf{ 20} of file \textbf{ list.\+h}.
-
-
-
-Referenced by \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node()}, \textbf{ list\+\_\+new()}, and \textbf{ list\+\_\+node\+\_\+new()}.
+Definition in file \textbf{ list.\+h}.
 
 
 
@@ -102,6 +89,16 @@ Referenced by \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node()}, \text
 
 
 
+A node in a list. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
 \subsubsection{Enumeration Type Documentation}
 \mbox{\label{list_8h_a2c3af7de0b7ab9c3a84fbc039e75ec66}} 
 \index{list.\+h@{list.\+h}!list\+\_\+direction\+\_\+t@{list\+\_\+direction\+\_\+t}}
@@ -109,9 +106,19 @@ Referenced by \textbf{ list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node()}, \text
 \paragraph{list\+\_\+direction\+\_\+t}
 {\footnotesize\ttfamily enum \textbf{ list\+\_\+direction\+\_\+t}}
 
+
+
+\doxyref{list\+\_\+t}{p.}{structlist__t} iterator direction. 
+
+Tells a iterator what direction to traverse the linked list in. \begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{L\+I\+S\+T\+\_\+\+H\+E\+AD@{L\+I\+S\+T\+\_\+\+H\+E\+AD}!list.\+h@{list.\+h}}\index{list.\+h@{list.\+h}!L\+I\+S\+T\+\_\+\+H\+E\+AD@{L\+I\+S\+T\+\_\+\+H\+E\+AD}}}\mbox{\label{list_8h_a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00}} 
-L\+I\+S\+T\+\_\+\+H\+E\+AD&\\
+L\+I\+S\+T\+\_\+\+H\+E\+AD&start at head start at tail \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{L\+I\+S\+T\+\_\+\+T\+A\+IL@{L\+I\+S\+T\+\_\+\+T\+A\+IL}!list.\+h@{list.\+h}}\index{list.\+h@{list.\+h}!L\+I\+S\+T\+\_\+\+T\+A\+IL@{L\+I\+S\+T\+\_\+\+T\+A\+IL}}}\mbox{\label{list_8h_a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae}} 
@@ -121,8 +128,16 @@ L\+I\+S\+T\+\_\+\+T\+A\+IL&\\
 \end{DoxyEnumFields}
 
 
-Definition at line \textbf{ 31} of file \textbf{ list.\+h}.
+Definition at line \textbf{ 36} of file \textbf{ list.\+h}.
 
+
+\begin{DoxyCode}
+00036              \{
+00040             LIST_HEAD
+00044     ,
+00045     LIST_TAIL
+00046 \} list_direction_t;
+\end{DoxyCode}
 
 
 \subsubsection{Function Documentation}
@@ -134,12 +149,61 @@ Definition at line \textbf{ 31} of file \textbf{ list.\+h}.
 
 
 
-Definition at line \textbf{ 162} of file \textbf{ list.\+c}.
+Finds a node a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the list \\
+\hline
+{\em index} & the index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the node 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 202} of file \textbf{ list.\+c}.
 
 
 
 References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_\+destroy()}, \textbf{ list\+\_\+iterator\+\_\+new()}, \textbf{ list\+\_\+iterator\+\_\+next()}, and \textbf{ L\+I\+S\+T\+\_\+\+T\+A\+IL}.
 
+
+\begin{DoxyCode}
+00202                                               \{
+00203   list_direction_t direction = LIST_HEAD;
+00204 
+00205   \textcolor{keywordflow}{if} (index < 0) \{
+00206     direction = LIST_TAIL;
+00207     index = ~index;
+00208   \}
+00209 
+00210   \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{unsigned})index < self->len) \{
+00211     list_iterator_t *it = list_iterator_new(\textcolor{keyword}{self}, direction);
+00212     list_node_t *node = list_iterator_next(it);
+00213     \textcolor{keywordflow}{while} (index--)
+00214       node = list_iterator_next(it);
+00215     list_iterator_destroy(it);
+00216     \textcolor{keywordflow}{return} node;
+00217   \}
+00218 
+00219   \textcolor{keywordflow}{return} NULL;
+00220 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list_8h_ab3dacc64ceb63b0a0849312b0a14c91c_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list_8h_ac2d2be572a896cccd0e76d56eeefcbdb}} 
 \index{list.\+h@{list.\+h}!list\+\_\+destroy@{list\+\_\+destroy}}
 \index{list\+\_\+destroy@{list\+\_\+destroy}!list.\+h@{list.\+h}}
@@ -148,16 +212,56 @@ References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_
 
 
 
-Definition at line \textbf{ 30} of file \textbf{ list.\+c}.
+Deallocates a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 50} of file \textbf{ list.\+c}.
 
 
 
-References \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}, \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::val}.
+References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::val}.
 
 
 
 Referenced by \textbf{ deinit\+\_\+routines()}.
 
+
+\begin{DoxyCode}
+00050                                 \{
+00051   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} len = \textcolor{keyword}{self}->len;
+00052   list_node_t *next;
+00053   list_node_t *curr = \textcolor{keyword}{self}->head;
+00054 
+00055   \textcolor{keywordflow}{while} (len--) \{
+00056     next = curr->next;
+00057     \textcolor{keywordflow}{if} (self->free)
+00058       \textcolor{keyword}{self}->free(curr->val);
+00059     free(curr);
+00060     curr = next;
+00061   \}
+00062 
+00063   free(\textcolor{keyword}{self});
+00064 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{list_8h_ac2d2be572a896cccd0e76d56eeefcbdb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list_8h_a5d73352b7bfa0c5a8b33289d7b27a374}} 
 \index{list.\+h@{list.\+h}!list\+\_\+find@{list\+\_\+find}}
 \index{list\+\_\+find@{list\+\_\+find}!list.\+h@{list.\+h}}
@@ -166,12 +270,63 @@ Referenced by \textbf{ deinit\+\_\+routines()}.
 
 
 
-Definition at line \textbf{ 136} of file \textbf{ list.\+c}.
+Finds a node in a list with a given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the list \\
+\hline
+{\em val} & the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the node 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 172} of file \textbf{ list.\+c}.
 
 
 
 References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_\+destroy()}, \textbf{ list\+\_\+iterator\+\_\+new()}, \textbf{ list\+\_\+iterator\+\_\+next()}, and \textbf{ list\+\_\+node\+::val}.
 
+
+\begin{DoxyCode}
+00172                                                 \{
+00173   list_iterator_t *it = list_iterator_new(\textcolor{keyword}{self}, LIST_HEAD);
+00174   list_node_t *node;
+00175 
+00176   \textcolor{keywordflow}{while} ((node = list_iterator_next(it))) \{
+00177     \textcolor{keywordflow}{if} (self->match) \{
+00178       \textcolor{keywordflow}{if} (self->match(val, node->val)) \{
+00179         list_iterator_destroy(it);
+00180         \textcolor{keywordflow}{return} node;
+00181       \}
+00182     \} \textcolor{keywordflow}{else} \{
+00183       \textcolor{keywordflow}{if} (val == node->val) \{
+00184         list_iterator_destroy(it);
+00185         \textcolor{keywordflow}{return} node;
+00186       \}
+00187     \}
+00188   \}
+00189 
+00190   list_iterator_destroy(it);
+00191   \textcolor{keywordflow}{return} NULL;
+00192 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list_8h_a5d73352b7bfa0c5a8b33289d7b27a374_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list_8h_ad16fa29ddbb444070ea65f871e1c0ba2}} 
 \index{list.\+h@{list.\+h}!list\+\_\+iterator\+\_\+destroy@{list\+\_\+iterator\+\_\+destroy}}
 \index{list\+\_\+iterator\+\_\+destroy@{list\+\_\+iterator\+\_\+destroy}!list.\+h@{list.\+h}}
@@ -180,16 +335,41 @@ References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+iterator\+\_
 
 
 
-Definition at line \textbf{ 52} of file \textbf{ list\+\_\+iterator.\+c}.
+Destroys the iterator. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em self} & the iterator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/17 
+\end{DoxyDate}
 
-References \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}.
+
+Definition at line \textbf{ 56} of file \textbf{ list\+\_\+iterator.\+c}.
 
 
 
 Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
 
+
+\begin{DoxyCode}
+00056                                                   \{
+00057   free(\textcolor{keyword}{self});
+00058   \textcolor{keyword}{self} = NULL;
+00059 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list_8h_ad16fa29ddbb444070ea65f871e1c0ba2_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list_8h_a3c956afda343b4a6aaf68fbd4b446733}} 
 \index{list.\+h@{list.\+h}!list\+\_\+iterator\+\_\+new@{list\+\_\+iterator\+\_\+new}}
 \index{list\+\_\+iterator\+\_\+new@{list\+\_\+iterator\+\_\+new}!list.\+h@{list.\+h}}
@@ -198,7 +378,27 @@ Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{
 
 
 
-Definition at line \textbf{ 15} of file \textbf{ list\+\_\+iterator.\+c}.
+Creates a new iterator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & the list \\
+\hline
+{\em direction} & direction the iterator should progress in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the iterator created 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 11} of file \textbf{ list\+\_\+iterator.\+c}.
 
 
 
@@ -208,6 +408,27 @@ References \textbf{ list\+\_\+t\+::head}, \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, 
 
 Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
 
+
+\begin{DoxyCode}
+00011                                                                              \{
+00012   list_node_t *node = direction == LIST_HEAD ? list->head : list->tail;
+00013   \textcolor{keywordflow}{return} list_iterator_new_from_node(node, direction);
+00014 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{list_8h_a3c956afda343b4a6aaf68fbd4b446733_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list_8h_a3c956afda343b4a6aaf68fbd4b446733_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list_8h_af4136a8a27bdc8c0f967a708dd03d575}} 
 \index{list.\+h@{list.\+h}!list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node@{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node}}
 \index{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node@{list\+\_\+iterator\+\_\+new\+\_\+from\+\_\+node}!list.\+h@{list.\+h}}
@@ -216,16 +437,54 @@ Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{
 
 
 
-Definition at line \textbf{ 25} of file \textbf{ list\+\_\+iterator.\+c}.
+Creates a new iterator by using the node to start at. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the start node \\
+\hline
+{\em direction} & direction the iterator should progress in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the iterator created 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 24} of file \textbf{ list\+\_\+iterator.\+c}.
 
 
 
-References \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}, and \textbf{ list\+\_\+iterator\+\_\+t\+::next}.
+References \textbf{ list\+\_\+iterator\+\_\+t\+::next}.
 
 
 
 Referenced by \textbf{ list\+\_\+iterator\+\_\+new()}.
 
+
+\begin{DoxyCode}
+00025                                                                          \{
+00026   list_iterator_t *\textcolor{keyword}{self};
+00027   \textcolor{keywordflow}{if} (!(\textcolor{keyword}{self} = (list_iterator_t *)malloc(\textcolor{keyword}{sizeof}(list_iterator_t))))
+00028     \textcolor{keywordflow}{return} NULL;
+00029   \textcolor{keyword}{self}->next = node;
+00030   \textcolor{keyword}{self}->direction = direction;
+00031   \textcolor{keywordflow}{return} \textcolor{keyword}{self};
+00032 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list_8h_af4136a8a27bdc8c0f967a708dd03d575_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list_8h_a2e5db981e32d3aef49ea79505a0615a6}} 
 \index{list.\+h@{list.\+h}!list\+\_\+iterator\+\_\+next@{list\+\_\+iterator\+\_\+next}}
 \index{list\+\_\+iterator\+\_\+next@{list\+\_\+iterator\+\_\+next}!list.\+h@{list.\+h}}
@@ -234,7 +493,25 @@ Referenced by \textbf{ list\+\_\+iterator\+\_\+new()}.
 
 
 
-Definition at line \textbf{ 40} of file \textbf{ list\+\_\+iterator.\+c}.
+The next node in the iterator and advances the iterator. 
+
+Returns N\+U\+LL when done. 
+\begin{DoxyParams}{Parameters}
+{\em self} & the iterator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the next node. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/17 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 42} of file \textbf{ list\+\_\+iterator.\+c}.
 
 
 
@@ -244,6 +521,23 @@ References \textbf{ L\+I\+S\+T\+\_\+\+H\+E\+AD}, \textbf{ list\+\_\+node\+::next
 
 Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{ routine\+\_\+task()}.
 
+
+\begin{DoxyCode}
+00042                                                        \{
+00043   list_node_t *curr = \textcolor{keyword}{self}->next;
+00044   \textcolor{keywordflow}{if} (curr) \{
+00045     \textcolor{keyword}{self}->next = \textcolor{keyword}{self}->direction == LIST_HEAD ? curr->next : curr->prev;
+00046   \}
+00047   \textcolor{keywordflow}{return} curr;
+00048 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list_8h_a2e5db981e32d3aef49ea79505a0615a6_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list_8h_a97f6f9590b1cdedd5367b9139e9cc4ef}} 
 \index{list.\+h@{list.\+h}!list\+\_\+lpop@{list\+\_\+lpop}}
 \index{list\+\_\+lpop@{list\+\_\+lpop}!list.\+h@{list.\+h}}
@@ -252,12 +546,48 @@ Referenced by \textbf{ list\+\_\+at()}, \textbf{ list\+\_\+find()}, and \textbf{
 
 
 
-Definition at line \textbf{ 93} of file \textbf{ list.\+c}.
+removes and returns the start node 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the node removed 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 122} of file \textbf{ list.\+c}.
 
 
 
 References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev}.
 
+
+\begin{DoxyCode}
+00122                                      \{
+00123   \textcolor{keywordflow}{if} (!self->len)
+00124     \textcolor{keywordflow}{return} NULL;
+00125 
+00126   list_node_t *node = \textcolor{keyword}{self}->head;
+00127 
+00128   \textcolor{keywordflow}{if} (--self->len) \{
+00129     (\textcolor{keyword}{self}->head = node->next)->prev = NULL;
+00130   \} \textcolor{keywordflow}{else} \{
+00131     \textcolor{keyword}{self}->head = \textcolor{keyword}{self}->tail = NULL;
+00132   \}
+00133 
+00134   node->next = node->prev = NULL;
+00135   \textcolor{keywordflow}{return} node;
+00136 \}
+\end{DoxyCode}
 \mbox{\label{list_8h_a7e1b077416813dd474a54826347f7502}} 
 \index{list.\+h@{list.\+h}!list\+\_\+lpush@{list\+\_\+lpush}}
 \index{list\+\_\+lpush@{list\+\_\+lpush}!list.\+h@{list.\+h}}
@@ -266,12 +596,52 @@ References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev
 
 
 
-Definition at line \textbf{ 114} of file \textbf{ list.\+c}.
+Pushed a node to the start of a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the list \\
+\hline
+{\em node} & the node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the node added 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 146} of file \textbf{ list.\+c}.
 
 
 
 References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev}.
 
+
+\begin{DoxyCode}
+00146                                                          \{
+00147   \textcolor{keywordflow}{if} (!node)
+00148     \textcolor{keywordflow}{return} NULL;
+00149 
+00150   \textcolor{keywordflow}{if} (self->len) \{
+00151     node->next = \textcolor{keyword}{self}->head;
+00152     node->prev = NULL;
+00153     \textcolor{keyword}{self}->head->prev = node;
+00154     \textcolor{keyword}{self}->head = node;
+00155   \} \textcolor{keywordflow}{else} \{
+00156     \textcolor{keyword}{self}->head = \textcolor{keyword}{self}->tail = node;
+00157     node->prev = node->next = NULL;
+00158   \}
+00159 
+00160   ++\textcolor{keyword}{self}->len;
+00161   \textcolor{keywordflow}{return} node;
+00162 \}
+\end{DoxyCode}
 \mbox{\label{list_8h_a9dd3eafdb56dcc64689f78fb4acdff3f}} 
 \index{list.\+h@{list.\+h}!list\+\_\+new@{list\+\_\+new}}
 \index{list\+\_\+new@{list\+\_\+new}!list.\+h@{list.\+h}}
@@ -280,16 +650,50 @@ References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev
 
 
 
-Definition at line \textbf{ 14} of file \textbf{ list.\+c}.
+Allocated a new list. 
+
+\begin{DoxyReturn}{Returns}
+the new list 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 34} of file \textbf{ list.\+c}.
 
 
 
-References \textbf{ list\+\_\+t\+::head}, and \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}.
+References \textbf{ list\+\_\+t\+::head}.
 
 
 
 Referenced by \textbf{ init\+\_\+routine()}.
 
+
+\begin{DoxyCode}
+00034                    \{
+00035   list_t *\textcolor{keyword}{self};
+00036   \textcolor{keywordflow}{if} (!(\textcolor{keyword}{self} = (list_t *)malloc(\textcolor{keyword}{sizeof}(list_t))))
+00037     \textcolor{keywordflow}{return} NULL;
+00038   \textcolor{keyword}{self}->head = NULL;
+00039   \textcolor{keyword}{self}->tail = NULL;
+00040   \textcolor{keyword}{self}->free = NULL;
+00041   \textcolor{keyword}{self}->match = NULL;
+00042   \textcolor{keyword}{self}->len = 0;
+00043   \textcolor{keywordflow}{return} \textcolor{keyword}{self};
+00044 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list_8h_a9dd3eafdb56dcc64689f78fb4acdff3f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list_8h_a4ef36e0519514ac481d0d7e0b439d431}} 
 \index{list.\+h@{list.\+h}!list\+\_\+node\+\_\+new@{list\+\_\+node\+\_\+new}}
 \index{list\+\_\+node\+\_\+new@{list\+\_\+node\+\_\+new}!list.\+h@{list.\+h}}
@@ -298,16 +702,53 @@ Referenced by \textbf{ init\+\_\+routine()}.
 
 
 
-Definition at line \textbf{ 14} of file \textbf{ list\+\_\+node.\+c}.
+Allocates a new node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value the node contains. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly allocated node. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 Node must be freed 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 12} of file \textbf{ list\+\_\+node.\+c}.
 
 
 
-References \textbf{ L\+I\+S\+T\+\_\+\+M\+A\+L\+L\+OC}, \textbf{ list\+\_\+node\+::next}, \textbf{ list\+\_\+node\+::prev}, and \textbf{ list\+\_\+node\+::val}.
+References \textbf{ list\+\_\+node\+::next}, \textbf{ list\+\_\+node\+::prev}, and \textbf{ list\+\_\+node\+::val}.
 
 
 
 Referenced by \textbf{ register\+\_\+routine()}.
 
+
+\begin{DoxyCode}
+00012                                       \{
+00013   list_node_t *\textcolor{keyword}{self};
+00014   \textcolor{keywordflow}{if} (!(\textcolor{keyword}{self} = (list_node_t *)malloc(\textcolor{keyword}{sizeof}(list_node_t))))
+00015     \textcolor{keywordflow}{return} NULL;
+00016   \textcolor{keyword}{self}->prev = NULL;
+00017   \textcolor{keyword}{self}->next = NULL;
+00018   \textcolor{keyword}{self}->val = val;
+00019   \textcolor{keywordflow}{return} \textcolor{keyword}{self};
+00020 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list_8h_a4ef36e0519514ac481d0d7e0b439d431_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{list_8h_a5ef7843a8a481124bce3e93541ba379a}} 
 \index{list.\+h@{list.\+h}!list\+\_\+remove@{list\+\_\+remove}}
 \index{list\+\_\+remove@{list\+\_\+remove}!list.\+h@{list.\+h}}
@@ -316,12 +757,44 @@ Referenced by \textbf{ register\+\_\+routine()}.
 
 
 
-Definition at line \textbf{ 186} of file \textbf{ list.\+c}.
+removes and returns the a given node from the list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the node removed 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 229} of file \textbf{ list.\+c}.
 
 
 
-References \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}, \textbf{ list\+\_\+node\+::next}, \textbf{ list\+\_\+node\+::prev}, and \textbf{ list\+\_\+node\+::val}.
+References \textbf{ list\+\_\+node\+::next}, \textbf{ list\+\_\+node\+::prev}, and \textbf{ list\+\_\+node\+::val}.
 
+
+\begin{DoxyCode}
+00229                                                   \{
+00230   node->prev ? (node->prev->next = node->next) : (self->head = node->next);
+00231 
+00232   node->next ? (node->next->prev = node->prev) : (self->tail = node->prev);
+00233 
+00234   \textcolor{keywordflow}{if} (self->free)
+00235     \textcolor{keyword}{self}->free(node->val);
+00236 
+00237   free(node);
+00238   --\textcolor{keyword}{self}->len;
+00239 \}
+\end{DoxyCode}
 \mbox{\label{list_8h_a53460b319b561ce2201bbf95450f1af7}} 
 \index{list.\+h@{list.\+h}!list\+\_\+rpop@{list\+\_\+rpop}}
 \index{list\+\_\+rpop@{list\+\_\+rpop}!list.\+h@{list.\+h}}
@@ -330,12 +803,48 @@ References \textbf{ L\+I\+S\+T\+\_\+\+F\+R\+EE}, \textbf{ list\+\_\+node\+::next
 
 
 
-Definition at line \textbf{ 73} of file \textbf{ list.\+c}.
+removes and returns the end node 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the node removed 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 99} of file \textbf{ list.\+c}.
 
 
 
 References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev}.
 
+
+\begin{DoxyCode}
+00099                                      \{
+00100   \textcolor{keywordflow}{if} (!self->len)
+00101     \textcolor{keywordflow}{return} NULL;
+00102 
+00103   list_node_t *node = \textcolor{keyword}{self}->tail;
+00104 
+00105   \textcolor{keywordflow}{if} (--self->len) \{
+00106     (\textcolor{keyword}{self}->tail = node->prev)->next = NULL;
+00107   \} \textcolor{keywordflow}{else} \{
+00108     \textcolor{keyword}{self}->tail = \textcolor{keyword}{self}->head = NULL;
+00109   \}
+00110 
+00111   node->next = node->prev = NULL;
+00112   \textcolor{keywordflow}{return} node;
+00113 \}
+\end{DoxyCode}
 \mbox{\label{list_8h_a4edfa9b7742154bff4fc2cb05d044af9}} 
 \index{list.\+h@{list.\+h}!list\+\_\+rpush@{list\+\_\+rpush}}
 \index{list\+\_\+rpush@{list\+\_\+rpush}!list.\+h@{list.\+h}}
@@ -344,7 +853,27 @@ References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev
 
 
 
-Definition at line \textbf{ 51} of file \textbf{ list.\+c}.
+Pushed a node to the end of a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & the list \\
+\hline
+{\em node} & the node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the node added 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/3/18 
+\end{DoxyDate}
+
+
+Definition at line \textbf{ 74} of file \textbf{ list.\+c}.
 
 
 
@@ -354,3 +883,30 @@ References \textbf{ list\+\_\+node\+::next}, and \textbf{ list\+\_\+node\+::prev
 
 Referenced by \textbf{ register\+\_\+routine()}.
 
+
+\begin{DoxyCode}
+00074                                                          \{
+00075   \textcolor{keywordflow}{if} (!node)
+00076     \textcolor{keywordflow}{return} NULL;
+00077 
+00078   \textcolor{keywordflow}{if} (self->len) \{
+00079     node->prev = \textcolor{keyword}{self}->tail;
+00080     node->next = NULL;
+00081     \textcolor{keyword}{self}->tail->next = node;
+00082     \textcolor{keyword}{self}->tail = node;
+00083   \} \textcolor{keywordflow}{else} \{
+00084     \textcolor{keyword}{self}->head = \textcolor{keyword}{self}->tail = node;
+00085     node->prev = node->next = NULL;
+00086   \}
+00087 
+00088   ++\textcolor{keyword}{self}->len;
+00089   \textcolor{keywordflow}{return} node;
+00090 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{list_8h_a4edfa9b7742154bff4fc2cb05d044af9_icgraph}
+\end{center}
+\end{figure}

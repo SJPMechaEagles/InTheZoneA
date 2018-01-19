@@ -3,21 +3,19 @@
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "mobile_goal_intake.h"}
-00002 \textcolor{preprocessor}{#include "log.h"}
-00003 \textcolor{preprocessor}{#include "partner.h"}
+00002 
+00003 \textcolor{keywordtype}{void} set_intake_motor(\textcolor{keywordtype}{int} n) \{ set_motor_immediate(MOBILE\_INTAKE\_MOTOR, n); \}
 00004 
-00005 \textcolor{keywordtype}{void} set_intake_motor(\textcolor{keywordtype}{int} n) \{ set_motor_immediate(INTAKE_MOTOR, n); \}
+00005 \textcolor{keywordtype}{void} lower_intake() \{ set_intake_motor(-100); \}
 00006 
-00007 \textcolor{keywordtype}{void} lower_intake() \{ set_intake_motor(-100); \}
+00007 \textcolor{keywordtype}{void} raise_intake() \{ set_intake_motor(100); \}
 00008 
-00009 \textcolor{keywordtype}{void} raise_intake() \{ set_intake_motor(100); \}
-00010 
-00014 \textcolor{keywordtype}{void} update_intake() \{
-00015   \textcolor{keywordflow}{if} (joystickGetDigital(MASTER, 7, JOY\_UP)) \{
-00016     raise_intake();
-00017   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(MASTER, 7, JOY\_DOWN)) \{
-00018     lower_intake();
-00019   \} \textcolor{keywordflow}{else}
-00020     set_intake_motor(0);
-00021 \}
+00012 \textcolor{keywordtype}{void} update_intake() \{
+00013   \textcolor{keywordflow}{if} (joystickGetDigital(MASTER, 8, JOY\_UP)) \{
+00014     raise_intake();
+00015   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(MASTER, 8, JOY\_DOWN)) \{
+00016     lower_intake();
+00017   \} \textcolor{keywordflow}{else}
+00018     set_intake_motor(0);
+00019 \}
 \end{DoxyCode}

@@ -1,117 +1,36 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="auto_8h">
     <title>auto.h File Reference</title>
-    <programlisting>#include &quot;claw.h&quot;</programlisting>
-    <programlisting>#include &quot;drive.h&quot;</programlisting>
-    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
-    <programlisting>#include &lt;stdbool.h&gt;</programlisting>
-    <programlisting>#include &lt;stdarg.h&gt;</programlisting>
-    <programlisting>#include &lt;stdint.h&gt;</programlisting>
-    <programlisting>#include &quot;lifter.h&quot;</programlisting>
-    <programlisting>#include &quot;sensor_ports.h&quot;</programlisting>
-    <programlisting>#include &quot;mobile_goal_intake.h&quot;</programlisting>
-    <programlisting>#include &quot;localization.h&quot;</programlisting>
-        <section>
-            <title>Macros</title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1afe2ab4383f3cf46d67e74834f691976f">DEPLOY_HEIGHT</link> 500<para><emphasis>height at which rubber bands do a do</emphasis></para>
+<para>Include dependency diagram for auto.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="auto_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1a7bc3203ebc61f8414788156a8616047c">FRONT_LEFT_IME</link> 0<para><emphasis>Front left motor integrated motor encoder.</emphasis></para>
+<para>Included by dependency diagram for auto.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="auto_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1a83cf08759ac4ffc3ea6e3b7f9c406b3c">GOAL_HEIGHT</link> 1325<para><emphasis>The height of the goal using potentiometer readings.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1a57b89da6e342bd7556800463135d03ee">HALF_ROTATE</link> <link linkend="vmath_8h_1ae71449b1cc6e6250b91f539153a7a0d3">M_PI</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1af364d4d51593fe601f20090221f9ddab">LOWEST_HEIGHT</link> 0</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1a9059fa76eb5e8e86f870405d63e72c4c">MAX_HEIGHT</link> 3090</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1a811b1777cccc7f0e3abbec1874715f0a">MID_LEFT_DRIVE</link> 1<para><emphasis>Middle left motor integrated motor encoder.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1a2919b1b6b7bf06fab5b5bbf09d8d2761">MID_RIGHT_DRIVE</link> 4<para><emphasis>Middle right motor integrated motor encoder.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1a504fa7d477dd649d731953ec495b1492">MOBILE_GOAL_DISTANCE</link> 4000</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1ad266821cf9c9fa6af01be95baed80644">MOBILE_GOAL_HEIGHT</link> 3090</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1a67c9207ce99d4414dce28d8c42ba1d2a">STOP_ONE</link> 500<para><emphasis>First Stop position for stationary autonomous.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="auto_8h_1abe0d1da59836694bca507d0a5b61423b">ZONE_DISTANCE</link> 1000</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
     <simplesect>
         <title>Detailed Description</title>
 
 <para>Autonomous declarations and macros. </para>
 
-<para><formalpara><title>Author: </title>
+<para><formalpara><title>Authors: </title>
 
-<para>Chris Jerrett </para>
+<para>Chris Jerrett, Christian Desimone </para>
 </formalpara>
 <formalpara><title>Date: </title>
 
@@ -128,34 +47,34 @@
 10 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="claw_8h">claw.h</link>&quot;</emphasis>
 11 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="drive_8h">drive.h</link>&quot;</emphasis>
 12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="lifter_8h">lifter.h</link>&quot;</emphasis>
-13 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="sensor__ports_8h">sensor_ports.h</link>&quot;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="localization_8h">localization.h</link>&quot;</emphasis>
 14 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="mobile__goal__intake_8h">mobile_goal_intake.h</link>&quot;</emphasis>
-15 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="localization_8h">localization.h</link>&quot;</emphasis>
+15 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="sensors_8h">sensors.h</link>&quot;</emphasis>
 16 
-<link linkend="auto_8h_1a7bc3203ebc61f8414788156a8616047c">20 </link><emphasis class="preprocessor">#define&#32;FRONT_LEFT_IME&#32;0</emphasis>
+20 <emphasis class="preprocessor">#define&#32;FRONT_LEFT_IME&#32;0</emphasis>
 21 
-<link linkend="auto_8h_1a811b1777cccc7f0e3abbec1874715f0a">25 </link><emphasis class="preprocessor">#define&#32;MID_LEFT_DRIVE&#32;1</emphasis>
+25 <emphasis class="preprocessor">#define&#32;MID_LEFT_DRIVE&#32;1</emphasis>
 26 
-<link linkend="auto_8h_1a2919b1b6b7bf06fab5b5bbf09d8d2761">30 </link><emphasis class="preprocessor">#define&#32;MID_RIGHT_DRIVE&#32;4</emphasis>
+30 <emphasis class="preprocessor">#define&#32;MID_RIGHT_DRIVE&#32;4</emphasis>
 31 
-<link linkend="auto_8h_1a67c9207ce99d4414dce28d8c42ba1d2a">35 </link><emphasis class="preprocessor">#define&#32;STOP_ONE&#32;500</emphasis>
+35 <emphasis class="preprocessor">#define&#32;STOP_ONE&#32;500</emphasis>
 36 
-<link linkend="auto_8h_1a83cf08759ac4ffc3ea6e3b7f9c406b3c">40 </link><emphasis class="preprocessor">#define&#32;GOAL_HEIGHT&#32;1325</emphasis>
+40 <emphasis class="preprocessor">#define&#32;GOAL_HEIGHT&#32;1325</emphasis>
 41 
-<link linkend="auto_8h_1afe2ab4383f3cf46d67e74834f691976f">45 </link><emphasis class="preprocessor">#define&#32;DEPLOY_HEIGHT&#32;500</emphasis>
+45 <emphasis class="preprocessor">#define&#32;DEPLOY_HEIGHT&#32;2000</emphasis>
 46 
-<link linkend="auto_8h_1af364d4d51593fe601f20090221f9ddab">47 </link><emphasis class="preprocessor">#define&#32;LOWEST_HEIGHT&#32;0</emphasis>
-48 
-<link linkend="auto_8h_1ad266821cf9c9fa6af01be95baed80644">49 </link><emphasis class="preprocessor">#define&#32;MOBILE_GOAL_HEIGHT&#32;3090</emphasis>
-50 
-<link linkend="auto_8h_1a504fa7d477dd649d731953ec495b1492">51 </link><emphasis class="preprocessor">#define&#32;MOBILE_GOAL_DISTANCE&#32;4000</emphasis>
-52 
-<link linkend="auto_8h_1a9059fa76eb5e8e86f870405d63e72c4c">53 </link><emphasis class="preprocessor">#define&#32;MAX_HEIGHT&#32;3090</emphasis>
-54 
-<link linkend="auto_8h_1abe0d1da59836694bca507d0a5b61423b">55 </link><emphasis class="preprocessor">#define&#32;ZONE_DISTANCE&#32;1000</emphasis>
+50 <emphasis class="preprocessor">#define&#32;LOWEST_HEIGHT&#32;0</emphasis>
+51 
+55 <emphasis class="preprocessor">#define&#32;MOBILE_GOAL_HEIGHT&#32;3570</emphasis>
 56 
-<link linkend="auto_8h_1a57b89da6e342bd7556800463135d03ee">57 </link><emphasis class="preprocessor">#define&#32;HALF_ROTATE&#32;M_PI</emphasis>
-58 
-59 <emphasis class="preprocessor">#endif</emphasis>
+60 <emphasis class="preprocessor">#define&#32;MOBILE_GOAL_DISTANCE&#32;4000</emphasis>
+61 
+65 <emphasis class="preprocessor">#define&#32;MAX_HEIGHT&#32;3570</emphasis>
+66 
+69 <emphasis class="preprocessor">#define&#32;ZONE_DISTANCE&#32;1000</emphasis>
+70 
+73 <emphasis class="preprocessor">#define&#32;HALF_ROTATE&#32;M_PI</emphasis>
+74 
+75 <emphasis class="preprocessor">#endif</emphasis>
     </computeroutput></literallayout>
 </section>

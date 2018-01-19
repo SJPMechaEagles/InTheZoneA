@@ -15,34 +15,33 @@
 00019     printf(\textcolor{stringliteral}{"LCD Init\(\backslash\)n"});
 00020   \}
 00021 \}
-00022 
-00023 \textcolor{keyword}{static} \textcolor{keywordtype}{void} log_info(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *mess) \{
-00024   printf(\textcolor{stringliteral}{"[%s]: %s\(\backslash\)n"}, s, mess);
-00025   lcdSetBacklight(log_lcd, \textcolor{keyword}{false});
-00026   lcdClear(log_lcd);
-00027   lcdPrint(log_lcd, TOP_ROW, s);
-00028   lcdPrint(log_lcd, BOTTOM_ROW, mess);
-00029 \}
-00030 
-00039 \textcolor{keywordtype}{void} error(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *error\_message) \{
-00040   \textcolor{keywordflow}{if} (log_level > NONE)
-00041     log_info(\textcolor{stringliteral}{"ERROR"}, error\_message);
-00042 \}
-00043 
-00052 \textcolor{keywordtype}{void} warning(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *warning\_message) \{
-00053   \textcolor{keywordflow}{if} (log_level > WARNING)
-00054     log_info(\textcolor{stringliteral}{"WARNING"}, warning\_message);
-00055 \}
-00056 
-00064 \textcolor{keywordtype}{void} info(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *info\_message) \{
-00065   \textcolor{keywordflow}{if} (log_level > ERROR) \{
-00066     log_info(\textcolor{stringliteral}{"INFO"}, info\_message);
-00067   \}
-00068 \}
-00069 
-00077 \textcolor{keywordtype}{void} debug(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *debug\_message) \{
-00078   \textcolor{keywordflow}{if} (log_level > ERROR) \{
-00079     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
-00080   \}
-00081 \}
+00029 \textcolor{keyword}{static} \textcolor{keywordtype}{void} log_info(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *mess) \{
+00030   printf(\textcolor{stringliteral}{"[%s]: %s\(\backslash\)n"}, s, mess);
+00031   lcdSetBacklight(log_lcd, \textcolor{keyword}{false});
+00032   lcdClear(log_lcd);
+00033   lcdPrint(log_lcd, TOP\_ROW, s);
+00034   lcdPrint(log_lcd, BOTTOM\_ROW, mess);
+00035 \}
+00036 
+00045 \textcolor{keywordtype}{void} error(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *error\_message) \{
+00046   \textcolor{keywordflow}{if} (log_level > NONE)
+00047     log_info(\textcolor{stringliteral}{"ERROR"}, error\_message);
+00048 \}
+00049 
+00058 \textcolor{keywordtype}{void} warning(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *warning\_message) \{
+00059   \textcolor{keywordflow}{if} (log_level > WARNING)
+00060     log_info(\textcolor{stringliteral}{"WARNING"}, warning\_message);
+00061 \}
+00062 
+00070 \textcolor{keywordtype}{void} info(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *info\_message) \{
+00071   \textcolor{keywordflow}{if} (log_level > ERROR) \{
+00072     log_info(\textcolor{stringliteral}{"INFO"}, info\_message);
+00073   \}
+00074 \}
+00075 
+00083 \textcolor{keywordtype}{void} debug(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *debug\_message) \{
+00084   \textcolor{keywordflow}{if} (log_level > ERROR) \{
+00085     printf(\textcolor{stringliteral}{"[INFO]: %s\(\backslash\)n"}, debug\_message);
+00086   \}
+00087 \}
 \end{DoxyCode}

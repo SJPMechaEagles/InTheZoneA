@@ -1,37 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="slew_8h">
     <title>slew.h File Reference</title>
-    <programlisting>#include &lt;API.h&gt;</programlisting>
-    <programlisting>#include &lt;math.h&gt;</programlisting>
-    <programlisting>#include &lt;vlib.h&gt;</programlisting>
-        <section>
-            <title>Macros</title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="slew_8h_1ad1ad4b29af4180aa00713599367fbc98">MOTOR_PORTS</link> 12<para><emphasis>The number of motor ports on the robot.</emphasis></para>
+<para>Include dependency diagram for slew.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="slew_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="slew_8h_1a4a3ff8667251227c99f8f4c81e9ff467">RAMP_PROPORTION</link> 1<para><emphasis>proportion defining how quickly the motor should converge on the
-correct value. higher value leads to slower convergence</emphasis></para>
+<para>Included by dependency diagram for slew.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="slew_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="slew_8h_1a4e8e7d6fdd1f5c6f8a0f341e4b61f025">UPDATE_PERIOD_MS</link> 25<para><emphasis>How frequently to update the motors, in milliseconds.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
         <section>
             <title>Functions</title>
             <para>
@@ -102,15 +93,15 @@ motor value by half for each motor.</emphasis></para>
 8 <emphasis class="preprocessor">#ifndef&#32;_SLEW_H_</emphasis>
 9 <emphasis class="preprocessor">#define&#32;_SLEW_H_</emphasis>
 10 
-11 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+11 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
 12 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
 13 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="vlib_8h">vlib.h</link>&gt;</emphasis>
 14 
-<link linkend="slew_8h_1a4e8e7d6fdd1f5c6f8a0f341e4b61f025">20 </link><emphasis class="preprocessor">#define&#32;UPDATE_PERIOD_MS&#32;25</emphasis>
+20 <emphasis class="preprocessor">#define&#32;UPDATE_PERIOD_MS&#32;25</emphasis>
 21 
-<link linkend="slew_8h_1ad1ad4b29af4180aa00713599367fbc98">27 </link><emphasis class="preprocessor">#define&#32;MOTOR_PORTS&#32;12</emphasis>
+27 <emphasis class="preprocessor">#define&#32;MOTOR_PORTS&#32;12</emphasis>
 28 
-<link linkend="slew_8h_1a4a3ff8667251227c99f8f4c81e9ff467">35 </link><emphasis class="preprocessor">#define&#32;RAMP_PROPORTION&#32;1</emphasis>
+35 <emphasis class="preprocessor">#define&#32;RAMP_PROPORTION&#32;1</emphasis>
 36 
 43 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="slew_8h_1a807a87c5df438fde21c1e8213906695b">updateMotors</link>();
 44 

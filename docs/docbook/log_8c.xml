@@ -1,7 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="log_8c">
     <title>log.c File Reference</title>
-    <programlisting>#include &quot;log.h&quot;</programlisting>
+<para>Include dependency diagram for log.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="log_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for log.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="log_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Variables</title>
             <para>
@@ -34,8 +55,7 @@ const char * debug_message)<para><emphasis>prints a info message</emphasis></par
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="log_8c_1a8e5bb8a2a372f5b066ff7af7044584c1">error</link> (
-const char * error_message)<para><emphasis>prints a error message and displays on lcd.
-Only will print and display if log_level is greater than NONE</emphasis></para>
+const char * error_message)<para><emphasis>prints a error message and displays on lcd.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -63,7 +83,8 @@ Only required if using lcd.</emphasis></para>
                 <itemizedlist>
                     <listitem>
                         <para>static void <link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">log_info</link> (
-const char * s, const char * mess)</para>
+const char * s, const char * mess)<para><emphasis>prints a log info message to the lcd</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -71,8 +92,7 @@ const char * s, const char * mess)</para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="log_8c_1a0bec2cf5fff7f607bc510b74aba9887c">warning</link> (
-const char * warning_message)<para><emphasis>prints a warning message and displays on lcd.
-Only will print and display if log_level is greater than NONE</emphasis></para>
+const char * warning_message)<para><emphasis>prints a warning message and displays on lcd.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -85,46 +105,45 @@ Only will print and display if log_level is greater than NONE</emphasis></para>
     <literallayout><computeroutput>
 1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
 2 
-<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">3 </link><emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;=&#32;<link linkend="log_8h_1ae1103fea1e1b3c41ca3322d5389f7162">INFO</link>;
+<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">3 </link><emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;=&#32;INFO;
 <link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">4 </link><emphasis class="keyword">static</emphasis>&#32;FILE&#32;*<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>&#32;=&#32;NULL;
 5 
 <link linkend="log_8c_1a163f389b4f5cf440a807d8fb48aaa006">14 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1a163f389b4f5cf440a807d8fb48aaa006">init_error</link>(<emphasis class="keywordtype">bool</emphasis>&#32;use_lcd,&#32;FILE&#32;*lcd)&#32;{
 15 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(use_lcd)&#32;{
-16 &#32;&#32;&#32;&#32;lcdInit(lcd);
+16 &#32;&#32;&#32;&#32;<link linkend="_a_p_i_8h_1a43dc11a67b697c0d32315ea5a9af85f9">lcdInit</link>(lcd);
 17 &#32;&#32;&#32;&#32;<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>&#32;=&#32;lcd;
-18 &#32;&#32;&#32;&#32;lcdClear(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>);
-19 &#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;LCD&#32;Init\n&quot;</emphasis>);
+18 &#32;&#32;&#32;&#32;<link linkend="_a_p_i_8h_1a5fa1d119fe3e836b5519f97eae7a1272">lcdClear</link>(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>);
+19 &#32;&#32;&#32;&#32;<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>(<emphasis class="stringliteral">&quot;LCD&#32;Init\n&quot;</emphasis>);
 20 &#32;&#32;}
 21 }
-22 
-<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">23 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">log_info</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*s,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*mess)&#32;{
-24 &#32;&#32;printf(<emphasis class="stringliteral">&quot;[%s]:&#32;%s\n&quot;</emphasis>,&#32;s,&#32;mess);
-25 &#32;&#32;lcdSetBacklight(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>,&#32;<emphasis class="keyword">false</emphasis>);
-26 &#32;&#32;lcdClear(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>);
-27 &#32;&#32;lcdPrint(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>,&#32;<link linkend="lcd_8h_1a18bab754c6ad16bc35c48333091516c9">TOP_ROW</link>,&#32;s);
-28 &#32;&#32;lcdPrint(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>,&#32;<link linkend="lcd_8h_1a7b55e87550874687b3e25a64e1cfda9d">BOTTOM_ROW</link>,&#32;mess);
-29 }
-30 
-<link linkend="log_8c_1a8e5bb8a2a372f5b066ff7af7044584c1">39 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1a8e5bb8a2a372f5b066ff7af7044584c1">error</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*error_message)&#32;{
-40 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;&gt;&#32;<link linkend="log_8h_1a655c84af1b0034986ff56e12e84f983d">NONE</link>)
-41 &#32;&#32;&#32;&#32;<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">log_info</link>(<emphasis class="stringliteral">&quot;ERROR&quot;</emphasis>,&#32;error_message);
-42 }
-43 
-<link linkend="log_8c_1a0bec2cf5fff7f607bc510b74aba9887c">52 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1a0bec2cf5fff7f607bc510b74aba9887c">warning</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*warning_message)&#32;{
-53 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;&gt;&#32;<link linkend="log_8h_1a5cb439d9f933fde4cf23caa370c030e7">WARNING</link>)
-54 &#32;&#32;&#32;&#32;<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">log_info</link>(<emphasis class="stringliteral">&quot;WARNING&quot;</emphasis>,&#32;warning_message);
-55 }
-56 
-<link linkend="log_8c_1a1606d750e1bb8de9f9e917172bba3382">64 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1a1606d750e1bb8de9f9e917172bba3382">info</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*info_message)&#32;{
-65 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;&gt;&#32;<link linkend="log_8h_1a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</link>)&#32;{
-66 &#32;&#32;&#32;&#32;<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">log_info</link>(<emphasis class="stringliteral">&quot;INFO&quot;</emphasis>,&#32;info_message);
-67 &#32;&#32;}
-68 }
-69 
-<link linkend="log_8c_1af3668f40d1ad1b4f3418869ac9a31f34">77 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1af3668f40d1ad1b4f3418869ac9a31f34">debug</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*debug_message)&#32;{
-78 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;&gt;&#32;<link linkend="log_8h_1a8fe83ac76edc595f6b98cd4a4127aed5">ERROR</link>)&#32;{
-79 &#32;&#32;&#32;&#32;printf(<emphasis class="stringliteral">&quot;[INFO]:&#32;%s\n&quot;</emphasis>,&#32;debug_message);
-80 &#32;&#32;}
-81 }
+<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">29 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">log_info</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*s,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*mess)&#32;{
+30 &#32;&#32;<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>(<emphasis class="stringliteral">&quot;[%s]:&#32;%s\n&quot;</emphasis>,&#32;s,&#32;mess);
+31 &#32;&#32;<link linkend="_a_p_i_8h_1aab53a247d88151a6623c20fa1ea940b0">lcdSetBacklight</link>(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>,&#32;<emphasis class="keyword">false</emphasis>);
+32 &#32;&#32;<link linkend="_a_p_i_8h_1a5fa1d119fe3e836b5519f97eae7a1272">lcdClear</link>(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>);
+33 &#32;&#32;<link linkend="_a_p_i_8h_1a6cfad8271c6a566a2f51ca318f819a80">lcdPrint</link>(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>,&#32;TOP_ROW,&#32;s);
+34 &#32;&#32;<link linkend="_a_p_i_8h_1a6cfad8271c6a566a2f51ca318f819a80">lcdPrint</link>(<link linkend="log_8c_1ac1b33b9fa813506300fa09c1b21ed20a">log_lcd</link>,&#32;BOTTOM_ROW,&#32;mess);
+35 }
+36 
+<link linkend="log_8c_1a8e5bb8a2a372f5b066ff7af7044584c1">45 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1a8e5bb8a2a372f5b066ff7af7044584c1">error</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*error_message)&#32;{
+46 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;&gt;&#32;NONE)
+47 &#32;&#32;&#32;&#32;<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">log_info</link>(<emphasis class="stringliteral">&quot;ERROR&quot;</emphasis>,&#32;error_message);
+48 }
+49 
+<link linkend="log_8c_1a0bec2cf5fff7f607bc510b74aba9887c">58 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1a0bec2cf5fff7f607bc510b74aba9887c">warning</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*warning_message)&#32;{
+59 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;&gt;&#32;WARNING)
+60 &#32;&#32;&#32;&#32;<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">log_info</link>(<emphasis class="stringliteral">&quot;WARNING&quot;</emphasis>,&#32;warning_message);
+61 }
+62 
+<link linkend="log_8c_1a1606d750e1bb8de9f9e917172bba3382">70 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1a1606d750e1bb8de9f9e917172bba3382">info</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*info_message)&#32;{
+71 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;&gt;&#32;ERROR)&#32;{
+72 &#32;&#32;&#32;&#32;<link linkend="log_8c_1afff22aff6749311a684a559cac3ac8bd">log_info</link>(<emphasis class="stringliteral">&quot;INFO&quot;</emphasis>,&#32;info_message);
+73 &#32;&#32;}
+74 }
+75 
+<link linkend="log_8c_1af3668f40d1ad1b4f3418869ac9a31f34">83 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="log_8c_1af3668f40d1ad1b4f3418869ac9a31f34">debug</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*debug_message)&#32;{
+84 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="log_8c_1a8cf62743dafa288b58bd7c6028ec28e5">log_level</link>&#32;&gt;&#32;ERROR)&#32;{
+85 &#32;&#32;&#32;&#32;<link linkend="_a_p_i_8h_1a403c82418e475fa4a8273719e6a7f3e6">printf</link>(<emphasis class="stringliteral">&quot;[INFO]:&#32;%s\n&quot;</emphasis>,&#32;debug_message);
+86 &#32;&#32;}
+87 }
     </computeroutput></literallayout>
 </section>

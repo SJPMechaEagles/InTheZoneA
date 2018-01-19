@@ -1,13 +1,35 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="routines_8h">
     <title>routines.h File Reference</title>
-    <programlisting>#include &quot;controller.h&quot;</programlisting>
+<para>Include dependency diagram for routines.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="routines_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for routines.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="routines_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title> Data Structures </title>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="structroutine__t">routine_t</link></para>
+<para><emphasis>Routine system that allows mapping buttons to actions.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -17,7 +39,8 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                            <para>typedef struct <link linkend="structroutine__t">routine_t</link>  <link linkend="routines_8h_1a9105ef626cef6848419da1a89fe90e07">routine_t</link></para>
+                            <para>typedef struct <link linkend="structroutine__t">routine_t</link>  <link linkend="routines_8h_1ac59bb3af7d2d19d489ef5f76c778bfed">routine_t</link><para><emphasis>Routine system that allows mapping buttons to actions.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -28,7 +51,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="routines_8h_1ad908adbc884189372f72f882ec62d71d">deinit_routines</link> (
-)</para>
+)<para><emphasis>Stops the routine system.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -36,15 +60,17 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="routines_8h_1ab873e24fcc59a2bf7844618b664a5d26">init_routine</link> (
-)</para>
+)<para><emphasis>Starts the routine system.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="routines_8h_1a4bf3e235fcde5f0e1ce1f693cbb9c01c">register_routine</link> (
-void(*)() routine, <link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link> on_buttons, <link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link> * prohibited_buttons)</para>
+                        <para>void <link linkend="routines_8h_1a9486ebd51b8c3d966619cf4617e6a930">register_routine</link> (
+void(*)(void *) routine, <link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link> on_buttons, <link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link> * prohibited_buttons)<para><emphasis>Registers a routine for the system to use.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -52,7 +78,8 @@ void(*)() routine, <link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd2586
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="routines_8h_1a230cdcefb410a429fb6baba1f88fc9ba">routine_task</link> (
-)</para>
+)<para><emphasis>Task that manages routines.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -62,20 +89,26 @@ void(*)() routine, <link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd2586
     <para>Definition in file /Users/chrisjerrett/Desktop/InTheZoneA/include/routines.h</para>
     </simplesect>
     <literallayout><computeroutput>
-1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="controller_8h">controller.h</link>&quot;</emphasis>
-2 
-<link linkend="structroutine__t">3 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structroutine__t">routine_t</link>&#32;{
-<link linkend="structroutine__t_1a4600cad285b5643e422cb5bfe6ce7fa4">4 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>&#32;<link linkend="structroutine__t_1a4600cad285b5643e422cb5bfe6ce7fa4">on_button</link>;
-<link linkend="structroutine__t_1a8d278c682e01bd513956f9902772812a">5 </link>&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>*&#32;<link linkend="structroutine__t_1a8d278c682e01bd513956f9902772812a">blocked_buttons</link>;
-<link linkend="structroutine__t_1a016f918d811a58ee2b63a5e48161dcf8">6 </link>&#32;&#32;void(*<link linkend="structroutine__t_1a016f918d811a58ee2b63a5e48161dcf8">routine</link>)();
-7 }<link linkend="routines_8h_1a9105ef626cef6848419da1a89fe90e07">routine_t</link>;
-8 
-9 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="routines_8h_1ab873e24fcc59a2bf7844618b664a5d26">init_routine</link>();
-10 
-11 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="routines_8h_1a230cdcefb410a429fb6baba1f88fc9ba">routine_task</link>();
-12 
-13 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="routines_8h_1ad908adbc884189372f72f882ec62d71d">deinit_routines</link>();
-14 
-15 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="routines_8h_1a4bf3e235fcde5f0e1ce1f693cbb9c01c">register_routine</link>(<emphasis class="keywordtype">void</emphasis>(*<link linkend="structroutine__t_1a016f918d811a58ee2b63a5e48161dcf8">routine</link>)(),&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>&#32;on_buttons,&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>*&#32;prohibited_buttons);
+1 
+6 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="controller_8h">controller.h</link>&quot;</emphasis>
+7 
+<link linkend="structroutine__t">11 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">struct&#32;</emphasis><link linkend="structroutine__t">routine_t</link>&#32;{
+12 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;the&#32;button&#32;it&#32;triggers&#32;on</emphasis>
+<link linkend="structroutine__t_1a4600cad285b5643e422cb5bfe6ce7fa4">13 </link>&#32;&#32;&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>&#32;<link linkend="structroutine__t_1a4600cad285b5643e422cb5bfe6ce7fa4">on_button</link>;
+14 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;buttons&#32;it&#32;disables&#32;@todo</emphasis>
+<link linkend="structroutine__t_1a8d278c682e01bd513956f9902772812a">15 </link>&#32;&#32;&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>&#32;*<link linkend="structroutine__t_1a8d278c682e01bd513956f9902772812a">blocked_buttons</link>;
+16 
+17 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;the&#32;routine&#32;to&#32;start&#32;the&#32;function&#32;on</emphasis>
+<link linkend="structroutine__t_1ac9915be4bb8f2415afe4bd27296cda14">18 </link>&#32;&#32;&#32;&#32;void&#32;(*<link linkend="structroutine__t_1ac9915be4bb8f2415afe4bd27296cda14">routine</link>)(<emphasis class="keywordtype">void</emphasis>&#32;*);
+19 }&#32;<link linkend="routines_8h_1ac59bb3af7d2d19d489ef5f76c778bfed">routine_t</link>;
+20 
+24 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="routines_8h_1ab873e24fcc59a2bf7844618b664a5d26">init_routine</link>();
+25 
+29 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="routines_8h_1a230cdcefb410a429fb6baba1f88fc9ba">routine_task</link>();
+30 
+34 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="routines_8h_1ad908adbc884189372f72f882ec62d71d">deinit_routines</link>();
+35 
+42 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="routines_8h_1a9486ebd51b8c3d966619cf4617e6a930">register_routine</link>(<emphasis class="keywordtype">void</emphasis>&#32;(*<link linkend="structroutine__t_1ac9915be4bb8f2415afe4bd27296cda14">routine</link>)(<emphasis class="keywordtype">void</emphasis>&#32;*),&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>&#32;on_buttons,
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660">button_t</link>&#32;*prohibited_buttons);
     </computeroutput></literallayout>
 </section>

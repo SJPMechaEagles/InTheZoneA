@@ -8,54 +8,54 @@
  viewBox="0.00 0.00 353.11 64.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 60)">
 <title>buttonIsNewPress</title>
-<!-- Node7 -->
+<!-- Node11 -->
 <g id="node1" class="node">
-<title>Node7</title>
+<title>Node11</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-18.5 0,-36.5 97.1475,-36.5 97.1475,-18.5 0,-18.5"/>
 <text text-anchor="middle" x="48.5737" y="-24.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">buttonIsNewPress</text>
 </g>
-<!-- Node8 -->
+<!-- Node12 -->
 <g id="node2" class="node">
-<title>Node8</title>
+<title>Node12</title>
 <g id="a_node2"><a xlink:href="toggle_8c.html#ad2b7c969a01f85d57bdca0bc7f5cff81" target="_top" xlink:title="Returns the current status of a button (pressed or not pressed) ">
 <polygon fill="none" stroke="#000000" points="133.1475,-18.5 133.1475,-36.5 216.418,-36.5 216.418,-18.5 133.1475,-18.5"/>
 <text text-anchor="middle" x="174.7827" y="-24.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">buttonGetState</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node8 -->
+<!-- Node11&#45;&gt;Node12 -->
 <g id="edge1" class="edge">
-<title>Node7&#45;&gt;Node8</title>
+<title>Node11&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M97.3694,-27.5C105.7529,-27.5 114.4921,-27.5 122.9518,-27.5"/>
 <polygon fill="#191970" stroke="#191970" points="123.0896,-31.0001 133.0896,-27.5 123.0896,-24.0001 123.0896,-31.0001"/>
 </g>
-<!-- Node9 -->
+<!-- Node13 -->
 <g id="node3" class="node">
-<title>Node9</title>
-<g id="a_node3"><a xlink:href="_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92" target="_top" xlink:title="joystickGetDigital">
+<title>Node13</title>
+<g id="a_node3"><a xlink:href="_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92" target="_top" xlink:title="Gets the value of a button on the VEX joystick. ">
 <polygon fill="none" stroke="#000000" points="252.418,-37.5 252.418,-55.5 345.1074,-55.5 345.1074,-37.5 252.418,-37.5"/>
 <text text-anchor="middle" x="298.7627" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">joystickGetDigital</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
+<!-- Node12&#45;&gt;Node13 -->
 <g id="edge2" class="edge">
-<title>Node8&#45;&gt;Node9</title>
+<title>Node12&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M216.7567,-33.9325C224.9363,-35.1861 233.6368,-36.5194 242.1982,-37.8315"/>
 <polygon fill="#191970" stroke="#191970" points="241.7303,-41.3005 252.1451,-39.3558 242.7907,-34.3813 241.7303,-41.3005"/>
 </g>
-<!-- Node10 -->
+<!-- Node14 -->
 <g id="node4" class="node">
-<title>Node10</title>
-<g id="a_node4"><a xlink:href="_a_p_i_8h.html#a04541d90f60b1ccd3d036656673c972d" target="_top" xlink:title="lcdReadButtons">
+<title>Node14</title>
+<g id="a_node4"><a xlink:href="_a_p_i_8h.html#a04541d90f60b1ccd3d036656673c972d" target="_top" xlink:title="Reads the user button status from the LCD display. ">
 <polygon fill="none" stroke="#000000" points="255.4624,-.5 255.4624,-18.5 342.063,-18.5 342.063,-.5 255.4624,-.5"/>
 <text text-anchor="middle" x="298.7627" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcdReadButtons</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node10 -->
+<!-- Node12&#45;&gt;Node14 -->
 <g id="edge3" class="edge">
-<title>Node8&#45;&gt;Node10</title>
+<title>Node12&#45;&gt;Node14</title>
 <path fill="none" stroke="#191970" d="M216.7567,-21.406C225.8364,-20.0878 235.5579,-18.6764 245.0185,-17.3028"/>
 <polygon fill="#191970" stroke="#191970" points="245.7458,-20.734 255.1392,-15.8335 244.74,-13.8067 245.7458,-20.734"/>
 </g>

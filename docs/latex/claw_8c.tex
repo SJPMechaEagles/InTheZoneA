@@ -1,15 +1,12 @@
 \subsection{src/claw.c File Reference}
 \label{claw_8c}\index{src/claw.\+c@{src/claw.\+c}}
-{\ttfamily \#include \char`\"{}claw.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}toggle.\+h\char`\"{}}\newline
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ close\+\_\+claw} ()
-\begin{DoxyCompactList}\small\item\em Drives the motors to close the claw. \end{DoxyCompactList}\item 
-void \textbf{ open\+\_\+claw} ()
-\begin{DoxyCompactList}\small\item\em Drives the motors to open the claw. \end{DoxyCompactList}\item 
+void \textbf{ claw\+\_\+grab\+\_\+cone} ()
+\begin{DoxyCompactList}\small\item\em Drives the motors to grab a cone. \end{DoxyCompactList}\item 
+void \textbf{ claw\+\_\+release\+\_\+cone} ()
+\begin{DoxyCompactList}\small\item\em Drives the motors to release a cone. \end{DoxyCompactList}\item 
 void \textbf{ set\+\_\+claw\+\_\+motor} (const int v)
 \begin{DoxyCompactList}\small\item\em sets the claw motor speed \end{DoxyCompactList}\item 
 void \textbf{ update\+\_\+claw} ()
@@ -17,61 +14,105 @@ void \textbf{ update\+\_\+claw} ()
 \subsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
+bool \textbf{ lifter\+\_\+autostack\+\_\+running}
+\item 
 static enum \textbf{ claw\+\_\+state} \textbf{ state} = \textbf{ C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE}
 \end{DoxyCompactItemize}
 
 
 \subsubsection{Function Documentation}
-\mbox{\label{claw_8c_ac42dd40dbb37219295286859c6b068c2}} 
-\index{claw.\+c@{claw.\+c}!close\+\_\+claw@{close\+\_\+claw}}
-\index{close\+\_\+claw@{close\+\_\+claw}!claw.\+c@{claw.\+c}}
-\paragraph{close\+\_\+claw()}
-{\footnotesize\ttfamily void close\+\_\+claw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\label{claw_8c_a3a6168bf4e2042115dd32542f1f6a2f5}} 
+\index{claw.\+c@{claw.\+c}!claw\+\_\+grab\+\_\+cone@{claw\+\_\+grab\+\_\+cone}}
+\index{claw\+\_\+grab\+\_\+cone@{claw\+\_\+grab\+\_\+cone}!claw.\+c@{claw.\+c}}
+\paragraph{claw\+\_\+grab\+\_\+cone()}
+{\footnotesize\ttfamily void claw\+\_\+grab\+\_\+cone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Drives the motors to close the claw. 
+Drives the motors to grab a cone. 
 
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 44} of file \textbf{ claw.\+c}.
-
-
-
-References \textbf{ C\+L\+A\+W\+\_\+\+M\+O\+T\+OR}, \textbf{ M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
-
-
-
-Referenced by \textbf{ autonomous()}.
-
-\mbox{\label{claw_8c_a03023ca28f671b9fa7bac07782ccd8c1}} 
-\index{claw.\+c@{claw.\+c}!open\+\_\+claw@{open\+\_\+claw}}
-\index{open\+\_\+claw@{open\+\_\+claw}!claw.\+c@{claw.\+c}}
-\paragraph{open\+\_\+claw()}
-{\footnotesize\ttfamily void open\+\_\+claw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Drives the motors to open the claw. 
+Drives the motors to open the claw.
 
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+C\+L\+A\+W\+\_\+\+M\+O\+T\+OR 
+
+M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED 
+\end{DoxySeeAlso}
 
 
-Definition at line \textbf{ 38} of file \textbf{ claw.\+c}.
+Definition at line \textbf{ 50} of file \textbf{ claw.\+c}.
 
 
 
-References \textbf{ C\+L\+A\+W\+\_\+\+M\+O\+T\+OR}, \textbf{ M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
+References \textbf{ set\+\_\+motor\+\_\+immediate()}.
 
 
 
-Referenced by \textbf{ autonomous()}.
+Referenced by \textbf{ autonomous()}, and \textbf{ secondary\+\_\+lifter\+\_\+update()}.
 
+
+\begin{DoxyCode}
+00050 \{ set_motor_immediate(CLAW\_MOTOR, MAX\_CLAW\_SPEED); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_a3a6168bf4e2042115dd32542f1f6a2f5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_a3a6168bf4e2042115dd32542f1f6a2f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{claw_8c_aecaa4eedc34d6b164ee17ed104914227}} 
+\index{claw.\+c@{claw.\+c}!claw\+\_\+release\+\_\+cone@{claw\+\_\+release\+\_\+cone}}
+\index{claw\+\_\+release\+\_\+cone@{claw\+\_\+release\+\_\+cone}!claw.\+c@{claw.\+c}}
+\paragraph{claw\+\_\+release\+\_\+cone()}
+{\footnotesize\ttfamily void claw\+\_\+release\+\_\+cone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drives the motors to release a cone. 
+
+Drives the motors to close the claw.
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+C\+L\+A\+W\+\_\+\+M\+O\+T\+OR 
+
+M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED 
+\end{DoxySeeAlso}
+
+
+Definition at line \textbf{ 58} of file \textbf{ claw.\+c}.
+
+
+
+References \textbf{ set\+\_\+motor\+\_\+immediate()}.
+
+
+\begin{DoxyCode}
+00058 \{ set_motor_immediate(CLAW\_MOTOR, MIN\_CLAW\_SPEED); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_aecaa4eedc34d6b164ee17ed104914227_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{claw_8c_a3a57f998b1884d39b0cc786689f7086f}} 
 \index{claw.\+c@{claw.\+c}!set\+\_\+claw\+\_\+motor@{set\+\_\+claw\+\_\+motor}}
 \index{set\+\_\+claw\+\_\+motor@{set\+\_\+claw\+\_\+motor}!claw.\+c@{claw.\+c}}
@@ -85,18 +126,41 @@ sets the claw motor speed
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+C\+L\+A\+W\+\_\+\+M\+O\+T\+OR 
+\end{DoxySeeAlso}
 
 
-Definition at line \textbf{ 32} of file \textbf{ claw.\+c}.
+Definition at line \textbf{ 42} of file \textbf{ claw.\+c}.
 
 
 
-References \textbf{ C\+L\+A\+W\+\_\+\+M\+O\+T\+OR}, and \textbf{ set\+\_\+motor\+\_\+immediate()}.
+References \textbf{ set\+\_\+motor\+\_\+immediate()}.
 
 
 
-Referenced by \textbf{ autonomous()}, and \textbf{ update\+\_\+claw()}.
+Referenced by \textbf{ autostack\+\_\+routine()}, \textbf{ quit\+\_\+auto\+\_\+static()}, and \textbf{ update\+\_\+claw()}.
 
+
+\begin{DoxyCode}
+00042 \{ set_motor_immediate(CLAW\_MOTOR, v); \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_a3a57f998b1884d39b0cc786689f7086f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_a3a57f998b1884d39b0cc786689f7086f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{claw_8c_a0122b78972344264b8a276a559cfce4a}} 
 \index{claw.\+c@{claw.\+c}!update\+\_\+claw@{update\+\_\+claw}}
 \index{update\+\_\+claw@{update\+\_\+claw}!claw.\+c@{claw.\+c}}
@@ -110,21 +174,88 @@ Updates the claw motor values.
 \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+C\+L\+A\+W\+\_\+\+C\+L\+O\+SE 
+
+\doxyref{C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}{p.}{claw_8h_a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f} 
+
+C\+L\+A\+W\+\_\+\+O\+P\+EN 
+
+\doxyref{C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE}{p.}{claw_8h_a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd} 
+
+\doxyref{C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE}{p.}{claw_8h_a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650} 
+
+M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED 
+
+M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED 
+\end{DoxySeeAlso}
 
 
-Definition at line \textbf{ 10} of file \textbf{ claw.\+c}.
+Definition at line \textbf{ 17} of file \textbf{ claw.\+c}.
 
 
 
-References \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+SE}, \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+EN}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE}, \textbf{ M\+A\+X\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}, \textbf{ M\+I\+N\+\_\+\+C\+L\+A\+W\+\_\+\+S\+P\+E\+ED}, \textbf{ set\+\_\+claw\+\_\+motor()}, and \textbf{ state}.
+References \textbf{ C\+L\+A\+W\+\_\+\+C\+L\+O\+S\+E\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+N\+E\+U\+T\+R\+A\+L\+\_\+\+S\+T\+A\+TE}, \textbf{ C\+L\+A\+W\+\_\+\+O\+P\+E\+N\+\_\+\+S\+T\+A\+TE}, \textbf{ joystick\+Get\+Digital()}, \textbf{ lifter\+\_\+autostack\+\_\+running}, \textbf{ set\+\_\+claw\+\_\+motor()}, and \textbf{ state}.
 
 
 
 Referenced by \textbf{ operator\+Control()}.
 
 
+\begin{DoxyCode}
+00017                    \{
+00018   \textcolor{keywordflow}{if} (lifter_autostack_running)
+00019     \textcolor{keywordflow}{return};
+00020   \textcolor{keywordflow}{if} (joystickGetDigital(CLAW\_CLOSE)) \{
+00021     state = CLAW_CLOSE_STATE;
+00022   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (joystickGetDigital(CLAW\_OPEN)) \{
+00023     state = CLAW_OPEN_STATE;
+00024   \} \textcolor{keywordflow}{else} \{
+00025     state = CLAW_NEUTRAL_STATE;
+00026   \}
+00027 
+00028   \textcolor{keywordflow}{if} (state == CLAW_CLOSE_STATE) \{
+00029     set_claw_motor(MAX\_CLAW\_SPEED);
+00030   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (state == CLAW_OPEN_STATE) \{
+00031     set_claw_motor(MIN\_CLAW\_SPEED);
+00032   \} \textcolor{keywordflow}{else} \{
+00033     set_claw_motor(0);
+00034   \}
+00035 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{claw_8c_a0122b78972344264b8a276a559cfce4a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{claw_8c_a0122b78972344264b8a276a559cfce4a_icgraph}
+\end{center}
+\end{figure}
+
 
 \subsubsection{Variable Documentation}
+\mbox{\label{claw_8c_ae1fc3deab25f0b9e6f636bb83e9bf5c2}} 
+\index{claw.\+c@{claw.\+c}!lifter\+\_\+autostack\+\_\+running@{lifter\+\_\+autostack\+\_\+running}}
+\index{lifter\+\_\+autostack\+\_\+running@{lifter\+\_\+autostack\+\_\+running}!claw.\+c@{claw.\+c}}
+\paragraph{lifter\+\_\+autostack\+\_\+running}
+{\footnotesize\ttfamily bool lifter\+\_\+autostack\+\_\+running}
+
+
+
+Definition at line \textbf{ 5} of file \textbf{ lifter.\+c}.
+
+
+
+Referenced by \textbf{ autostack\+\_\+routine()}, \textbf{ main\+\_\+lifter\+\_\+update()}, \textbf{ quit\+\_\+auto\+\_\+static()}, \textbf{ secondary\+\_\+lifter\+\_\+update()}, and \textbf{ update\+\_\+claw()}.
+
 \mbox{\label{claw_8c_a70d16bb05218682b0a5eaabb141e9d8f}} 
 \index{claw.\+c@{claw.\+c}!state@{state}}
 \index{state@{state}!claw.\+c@{claw.\+c}}
@@ -133,7 +264,7 @@ Referenced by \textbf{ operator\+Control()}.
 
 
 
-Definition at line \textbf{ 4} of file \textbf{ claw.\+c}.
+Definition at line \textbf{ 2} of file \textbf{ claw.\+c}.
 
 
 

@@ -1,14 +1,36 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="list_8c">
     <title>list.c File Reference</title>
-    <programlisting>#include &quot;list.h&quot;</programlisting>
+<para>Include dependency diagram for list.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="list_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for list.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="list_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Functions</title>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8c_1ab3dacc64ceb63b0a0849312b0a14c91c">list_at</link> (
-<link linkend="structlist__t">list_t</link> * self, int index)</para>
+<link linkend="structlist__t">list_t</link> * self, int index)<para><emphasis>Finds a node a given index.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -16,7 +38,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="list_8c_1ac2d2be572a896cccd0e76d56eeefcbdb">list_destroy</link> (
-<link linkend="structlist__t">list_t</link> * self)</para>
+<link linkend="structlist__t">list_t</link> * self)<para><emphasis>Deallocates a list.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -24,7 +47,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8c_1a5d73352b7bfa0c5a8b33289d7b27a374">list_find</link> (
-<link linkend="structlist__t">list_t</link> * self, void * val)</para>
+<link linkend="structlist__t">list_t</link> * self, void * val)<para><emphasis>Finds a node in a list with a given value.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -32,7 +56,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8c_1a97f6f9590b1cdedd5367b9139e9cc4ef">list_lpop</link> (
-<link linkend="structlist__t">list_t</link> * self)</para>
+<link linkend="structlist__t">list_t</link> * self)<para><emphasis>removes and returns the start node</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -40,7 +65,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8c_1a7e1b077416813dd474a54826347f7502">list_lpush</link> (
-<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)</para>
+<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)<para><emphasis>Pushed a node to the start of a list.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -48,7 +74,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="structlist__t">list_t</link> * <link linkend="list_8c_1a9dd3eafdb56dcc64689f78fb4acdff3f">list_new</link> (
-)</para>
+)<para><emphasis>Allocated a new list.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -56,7 +83,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="list_8c_1a5ef7843a8a481124bce3e93541ba379a">list_remove</link> (
-<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)</para>
+<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)<para><emphasis>removes and returns the a given node from the list</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -64,7 +92,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8c_1a53460b319b561ce2201bbf95450f1af7">list_rpop</link> (
-<link linkend="structlist__t">list_t</link> * self)</para>
+<link linkend="structlist__t">list_t</link> * self)<para><emphasis>removes and returns the end node</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -72,7 +101,8 @@
                 <itemizedlist>
                     <listitem>
                         <para><link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * <link linkend="list_8c_1a4edfa9b7742154bff4fc2cb05d044af9">list_rpush</link> (
-<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)</para>
+<link linkend="structlist__t">list_t</link> * self, <link linkend="list_8h_1ad8b8636e2e25308b521b32071e849c80">list_node_t</link> * node)<para><emphasis>Pushed a node to the end of a list.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -83,200 +113,161 @@
     </simplesect>
     <literallayout><computeroutput>
 1 
-2 <emphasis class="comment">//</emphasis>
-3 <emphasis class="comment">//&#32;list.c</emphasis>
-4 <emphasis class="comment">//</emphasis>
-5 <emphasis class="comment">//&#32;Copyright&#32;(c)&#32;2010&#32;TJ&#32;Holowaychuk&#32;&lt;tj@vision-media.ca&gt;</emphasis>
-6 <emphasis class="comment">//</emphasis>
-7 
-8 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="list_8h">list.h</link>&quot;</emphasis>
-9 
-10 <emphasis class="comment">/*</emphasis>
-11 <emphasis class="comment">&#32;*&#32;Allocate&#32;a&#32;new&#32;list_t.&#32;NULL&#32;on&#32;failure.</emphasis>
-12 <emphasis class="comment">&#32;*/</emphasis>
-13 
-<link linkend="list_8c_1a9dd3eafdb56dcc64689f78fb4acdff3f">14 </link><link linkend="structlist__t">list_t</link>&#32;*<link linkend="list_8c_1a9dd3eafdb56dcc64689f78fb4acdff3f">list_new</link>()&#32;{
-15 &#32;&#32;<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>;
-16 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!(<emphasis class="keyword">self</emphasis>&#32;=&#32;<link linkend="list_8h_1ab80cb68ecaaf76c970758cd702641cee">LIST_MALLOC</link>(<emphasis class="keyword">sizeof</emphasis>(<link linkend="structlist__t">list_t</link>))))
-17 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
-18 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__t_1a93ef6d995af96e73e226dc2b8a7232aa">head</link>&#32;=&#32;NULL;
-19 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;NULL;
-20 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;free&#32;=&#32;NULL;
-21 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;match&#32;=&#32;NULL;
-22 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;len&#32;=&#32;0;
-23 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">self</emphasis>;
-24 }
-25 
-26 <emphasis class="comment">/*</emphasis>
-27 <emphasis class="comment">&#32;*&#32;Free&#32;the&#32;list.</emphasis>
-28 <emphasis class="comment">&#32;*/</emphasis>
-29 
-<link linkend="list_8c_1ac2d2be572a896cccd0e76d56eeefcbdb">30 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="list_8c_1ac2d2be572a896cccd0e76d56eeefcbdb">list_destroy</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
-31 &#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;len&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;len;
-32 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*next;
-33 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*curr&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;head;
-34 
-35 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(len--)&#32;{
-36 &#32;&#32;&#32;&#32;next&#32;=&#32;curr-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>;
-37 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;free)
-38 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;free(curr-&gt;<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
-39 &#32;&#32;&#32;&#32;<link linkend="list_8h_1a8968cfdd1e3404352d2c43dcb3bde04a">LIST_FREE</link>(curr);
-40 &#32;&#32;&#32;&#32;curr&#32;=&#32;next;
-41 &#32;&#32;}
-42 
-43 &#32;&#32;<link linkend="list_8h_1a8968cfdd1e3404352d2c43dcb3bde04a">LIST_FREE</link>(<emphasis class="keyword">self</emphasis>);
+25 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="list_8h">list.h</link>&quot;</emphasis>
+26 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
+27 
+<link linkend="list_8c_1a9dd3eafdb56dcc64689f78fb4acdff3f">34 </link><link linkend="structlist__t">list_t</link>&#32;*<link linkend="list_8c_1a9dd3eafdb56dcc64689f78fb4acdff3f">list_new</link>()&#32;{
+35 &#32;&#32;<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>;
+36 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!(<emphasis class="keyword">self</emphasis>&#32;=&#32;(<link linkend="structlist__t">list_t</link>&#32;*)malloc(<emphasis class="keyword">sizeof</emphasis>(<link linkend="structlist__t">list_t</link>))))
+37 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+38 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;<link linkend="structlist__t_1a93ef6d995af96e73e226dc2b8a7232aa">head</link>&#32;=&#32;NULL;
+39 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;NULL;
+40 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;free&#32;=&#32;NULL;
+41 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;match&#32;=&#32;NULL;
+42 &#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;len&#32;=&#32;0;
+43 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;<emphasis class="keyword">self</emphasis>;
 44 }
 45 
 46 <emphasis class="comment">/*</emphasis>
-47 <emphasis class="comment">&#32;*&#32;Append&#32;the&#32;given&#32;node&#32;to&#32;the&#32;list</emphasis>
-48 <emphasis class="comment">&#32;*&#32;and&#32;return&#32;the&#32;node,&#32;NULL&#32;on&#32;failure.</emphasis>
-49 <emphasis class="comment">&#32;*/</emphasis>
-50 
-<link linkend="list_8c_1a4edfa9b7742154bff4fc2cb05d044af9">51 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a4edfa9b7742154bff4fc2cb05d044af9">list_rpush</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node)&#32;{
-52 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!node)
-53 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+47 <emphasis class="comment">&#32;*&#32;Free&#32;the&#32;list.</emphasis>
+48 <emphasis class="comment">&#32;*/</emphasis>
+49 
+<link linkend="list_8c_1ac2d2be572a896cccd0e76d56eeefcbdb">50 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="list_8c_1ac2d2be572a896cccd0e76d56eeefcbdb">list_destroy</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
+51 &#32;&#32;<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;len&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;len;
+52 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*next;
+53 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*curr&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;head;
 54 
-55 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;len)&#32;{
-56 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail;
-57 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;NULL;
-58 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;tail-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;node;
-59 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;node;
-60 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
-61 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;node;
-62 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;NULL;
-63 &#32;&#32;}
-64 
-65 &#32;&#32;++<emphasis class="keyword">self</emphasis>-&gt;len;
-66 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
-67 }
-68 
-69 <emphasis class="comment">/*</emphasis>
-70 <emphasis class="comment">&#32;*&#32;Return&#32;/&#32;detach&#32;the&#32;last&#32;node&#32;in&#32;the&#32;list,&#32;or&#32;NULL.</emphasis>
-71 <emphasis class="comment">&#32;*/</emphasis>
-72 
-<link linkend="list_8c_1a53460b319b561ce2201bbf95450f1af7">73 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a53460b319b561ce2201bbf95450f1af7">list_rpop</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
-74 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!self-&gt;len)
-75 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
-76 
-77 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail;
-78 
-79 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(--self-&gt;len)&#32;{
-80 &#32;&#32;&#32;&#32;(<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>)-&gt;next&#32;=&#32;NULL;
-81 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
-82 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;NULL;
-83 &#32;&#32;}
-84 
-85 &#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;NULL;
-86 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
-87 }
-88 
-89 <emphasis class="comment">/*</emphasis>
-90 <emphasis class="comment">&#32;*&#32;Return&#32;/&#32;detach&#32;the&#32;first&#32;node&#32;in&#32;the&#32;list,&#32;or&#32;NULL.</emphasis>
-91 <emphasis class="comment">&#32;*/</emphasis>
-92 
-<link linkend="list_8c_1a97f6f9590b1cdedd5367b9139e9cc4ef">93 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a97f6f9590b1cdedd5367b9139e9cc4ef">list_lpop</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
-94 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!self-&gt;len)
-95 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
-96 
-97 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;head;
-98 
-99 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(--self-&gt;len)&#32;{
-100 &#32;&#32;&#32;&#32;(<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>)-&gt;prev&#32;=&#32;NULL;
-101 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
-102 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;NULL;
-103 &#32;&#32;}
+55 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(len--)&#32;{
+56 &#32;&#32;&#32;&#32;next&#32;=&#32;curr-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>;
+57 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;free)
+58 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;free(curr-&gt;<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
+59 &#32;&#32;&#32;&#32;free(curr);
+60 &#32;&#32;&#32;&#32;curr&#32;=&#32;next;
+61 &#32;&#32;}
+62 
+63 &#32;&#32;free(<emphasis class="keyword">self</emphasis>);
+64 }
+65 
+<link linkend="list_8c_1a4edfa9b7742154bff4fc2cb05d044af9">74 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a4edfa9b7742154bff4fc2cb05d044af9">list_rpush</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node)&#32;{
+75 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!node)
+76 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+77 
+78 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;len)&#32;{
+79 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail;
+80 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;NULL;
+81 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;tail-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;node;
+82 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;node;
+83 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+84 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;node;
+85 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;NULL;
+86 &#32;&#32;}
+87 
+88 &#32;&#32;++<emphasis class="keyword">self</emphasis>-&gt;len;
+89 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
+90 }
+91 
+<link linkend="list_8c_1a53460b319b561ce2201bbf95450f1af7">99 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a53460b319b561ce2201bbf95450f1af7">list_rpop</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
+100 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!self-&gt;len)
+101 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+102 
+103 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail;
 104 
-105 &#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;NULL;
-106 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
-107 }
-108 
-109 <emphasis class="comment">/*</emphasis>
-110 <emphasis class="comment">&#32;*&#32;Prepend&#32;the&#32;given&#32;node&#32;to&#32;the&#32;list</emphasis>
-111 <emphasis class="comment">&#32;*&#32;and&#32;return&#32;the&#32;node,&#32;NULL&#32;on&#32;failure.</emphasis>
-112 <emphasis class="comment">&#32;*/</emphasis>
-113 
-<link linkend="list_8c_1a7e1b077416813dd474a54826347f7502">114 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a7e1b077416813dd474a54826347f7502">list_lpush</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node)&#32;{
-115 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!node)
-116 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
-117 
-118 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;len)&#32;{
-119 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;head;
-120 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;NULL;
-121 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;node;
-122 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;node;
-123 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
-124 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;node;
-125 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;NULL;
-126 &#32;&#32;}
+105 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(--self-&gt;len)&#32;{
+106 &#32;&#32;&#32;&#32;(<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>)-&gt;next&#32;=&#32;NULL;
+107 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+108 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;NULL;
+109 &#32;&#32;}
+110 
+111 &#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;NULL;
+112 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
+113 }
+114 
+<link linkend="list_8c_1a97f6f9590b1cdedd5367b9139e9cc4ef">122 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a97f6f9590b1cdedd5367b9139e9cc4ef">list_lpop</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>)&#32;{
+123 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!self-&gt;len)
+124 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+125 
+126 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;head;
 127 
-128 &#32;&#32;++<emphasis class="keyword">self</emphasis>-&gt;len;
-129 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
-130 }
-131 
-132 <emphasis class="comment">/*</emphasis>
-133 <emphasis class="comment">&#32;*&#32;Return&#32;the&#32;node&#32;associated&#32;to&#32;val&#32;or&#32;NULL.</emphasis>
-134 <emphasis class="comment">&#32;*/</emphasis>
-135 
-<link linkend="list_8c_1a5d73352b7bfa0c5a8b33289d7b27a374">136 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a5d73352b7bfa0c5a8b33289d7b27a374">list_find</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<emphasis class="keywordtype">void</emphasis>&#32;*val)&#32;{
-137 &#32;&#32;<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*it&#32;=&#32;<link linkend="list_8h_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link>(<emphasis class="keyword">self</emphasis>,&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>);
-138 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node;
-139 
-140 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;((node&#32;=&#32;<link linkend="list_8h_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(it)))&#32;{
-141 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;match)&#32;{
-142 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;match(val,&#32;node-&gt;<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>))&#32;{
-143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(it);
-144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
-145 &#32;&#32;&#32;&#32;&#32;&#32;}
-146 &#32;&#32;&#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
-147 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(val&#32;==&#32;node-&gt;<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>)&#32;{
-148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(it);
-149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
-150 &#32;&#32;&#32;&#32;&#32;&#32;}
-151 &#32;&#32;&#32;&#32;}
-152 &#32;&#32;}
-153 
-154 &#32;&#32;<link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(it);
-155 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
-156 }
-157 
-158 <emphasis class="comment">/*</emphasis>
-159 <emphasis class="comment">&#32;*&#32;Return&#32;the&#32;node&#32;at&#32;the&#32;given&#32;index&#32;or&#32;NULL.</emphasis>
-160 <emphasis class="comment">&#32;*/</emphasis>
-161 
-<link linkend="list_8c_1ab3dacc64ceb63b0a0849312b0a14c91c">162 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1ab3dacc64ceb63b0a0849312b0a14c91c">list_at</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;index)&#32;{
-163 &#32;&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>&#32;direction&#32;=&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>;
-164 
-165 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(index&#32;&lt;&#32;0)&#32;{
-166 &#32;&#32;&#32;&#32;direction&#32;=&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae">LIST_TAIL</link>;
-167 &#32;&#32;&#32;&#32;index&#32;=&#32;~index;
-168 &#32;&#32;}
-169 
-170 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((<emphasis class="keywordtype">unsigned</emphasis>)index&#32;&lt;&#32;self-&gt;len)&#32;{
-171 &#32;&#32;&#32;&#32;<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*it&#32;=&#32;<link linkend="list_8h_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link>(<emphasis class="keyword">self</emphasis>,&#32;direction);
-172 &#32;&#32;&#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node&#32;=&#32;<link linkend="list_8h_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(it);
-173 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(index--)
-174 &#32;&#32;&#32;&#32;&#32;&#32;node&#32;=&#32;<link linkend="list_8h_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(it);
-175 &#32;&#32;&#32;&#32;<link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(it);
-176 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
-177 &#32;&#32;}
-178 
-179 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
-180 }
-181 
-182 <emphasis class="comment">/*</emphasis>
-183 <emphasis class="comment">&#32;*&#32;Remove&#32;the&#32;given&#32;node&#32;from&#32;the&#32;list,&#32;freeing&#32;it&#32;and&#32;it&apos;s&#32;value.</emphasis>
-184 <emphasis class="comment">&#32;*/</emphasis>
-185 
-<link linkend="list_8c_1a5ef7843a8a481124bce3e93541ba379a">186 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="list_8c_1a5ef7843a8a481124bce3e93541ba379a">list_remove</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node)&#32;{
-187 &#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;?&#32;(node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>)&#32;:&#32;(self-&gt;head&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>);
-188 
-189 &#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;?&#32;(node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>)&#32;:&#32;(self-&gt;tail&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>);
-190 
-191 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;free)
-192 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;free(node-&gt;<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
+128 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(--self-&gt;len)&#32;{
+129 &#32;&#32;&#32;&#32;(<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>)-&gt;prev&#32;=&#32;NULL;
+130 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+131 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;NULL;
+132 &#32;&#32;}
+133 
+134 &#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;NULL;
+135 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
+136 }
+137 
+<link linkend="list_8c_1a7e1b077416813dd474a54826347f7502">146 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a7e1b077416813dd474a54826347f7502">list_lpush</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node)&#32;{
+147 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!node)
+148 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+149 
+150 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;len)&#32;{
+151 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;head;
+152 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;NULL;
+153 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;node;
+154 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;node;
+155 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+156 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;head&#32;=&#32;<emphasis class="keyword">self</emphasis>-&gt;tail&#32;=&#32;node;
+157 &#32;&#32;&#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;NULL;
+158 &#32;&#32;}
+159 
+160 &#32;&#32;++<emphasis class="keyword">self</emphasis>-&gt;len;
+161 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
+162 }
+163 
+<link linkend="list_8c_1a5d73352b7bfa0c5a8b33289d7b27a374">172 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1a5d73352b7bfa0c5a8b33289d7b27a374">list_find</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<emphasis class="keywordtype">void</emphasis>&#32;*val)&#32;{
+173 &#32;&#32;<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*it&#32;=&#32;<link linkend="list_8h_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link>(<emphasis class="keyword">self</emphasis>,&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>);
+174 &#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node;
+175 
+176 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;((node&#32;=&#32;<link linkend="list_8h_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(it)))&#32;{
+177 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;match)&#32;{
+178 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;match(val,&#32;node-&gt;<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>))&#32;{
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(it);
+180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
+181 &#32;&#32;&#32;&#32;&#32;&#32;}
+182 &#32;&#32;&#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+183 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(val&#32;==&#32;node-&gt;<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>)&#32;{
+184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(it);
+185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
+186 &#32;&#32;&#32;&#32;&#32;&#32;}
+187 &#32;&#32;&#32;&#32;}
+188 &#32;&#32;}
+189 
+190 &#32;&#32;<link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(it);
+191 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+192 }
 193 
-194 &#32;&#32;<link linkend="list_8h_1a8968cfdd1e3404352d2c43dcb3bde04a">LIST_FREE</link>(node);
-195 &#32;&#32;--<emphasis class="keyword">self</emphasis>-&gt;len;
-196 }
+<link linkend="list_8c_1ab3dacc64ceb63b0a0849312b0a14c91c">202 </link><link linkend="structlist__node">list_node_t</link>&#32;*<link linkend="list_8c_1ab3dacc64ceb63b0a0849312b0a14c91c">list_at</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<emphasis class="keywordtype">int</emphasis>&#32;index)&#32;{
+203 &#32;&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66">list_direction_t</link>&#32;direction&#32;=&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00">LIST_HEAD</link>;
+204 
+205 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(index&#32;&lt;&#32;0)&#32;{
+206 &#32;&#32;&#32;&#32;direction&#32;=&#32;<link linkend="list_8h_1a2c3af7de0b7ab9c3a84fbc039e75ec66a92ccc72d8839c5167e82e2a7771215ae">LIST_TAIL</link>;
+207 &#32;&#32;&#32;&#32;index&#32;=&#32;~index;
+208 &#32;&#32;}
+209 
+210 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;((<emphasis class="keywordtype">unsigned</emphasis>)index&#32;&lt;&#32;self-&gt;len)&#32;{
+211 &#32;&#32;&#32;&#32;<link linkend="structlist__iterator__t">list_iterator_t</link>&#32;*it&#32;=&#32;<link linkend="list_8h_1a3c956afda343b4a6aaf68fbd4b446733">list_iterator_new</link>(<emphasis class="keyword">self</emphasis>,&#32;direction);
+212 &#32;&#32;&#32;&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node&#32;=&#32;<link linkend="list_8h_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(it);
+213 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(index--)
+214 &#32;&#32;&#32;&#32;&#32;&#32;node&#32;=&#32;<link linkend="list_8h_1a2e5db981e32d3aef49ea79505a0615a6">list_iterator_next</link>(it);
+215 &#32;&#32;&#32;&#32;<link linkend="list_8h_1ad16fa29ddbb444070ea65f871e1c0ba2">list_iterator_destroy</link>(it);
+216 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;node;
+217 &#32;&#32;}
+218 
+219 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;NULL;
+220 }
+221 
+<link linkend="list_8c_1a5ef7843a8a481124bce3e93541ba379a">229 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="list_8c_1a5ef7843a8a481124bce3e93541ba379a">list_remove</link>(<link linkend="structlist__t">list_t</link>&#32;*<emphasis class="keyword">self</emphasis>,&#32;<link linkend="structlist__node">list_node_t</link>&#32;*node)&#32;{
+230 &#32;&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;?&#32;(node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>)&#32;:&#32;(self-&gt;head&#32;=&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>);
+231 
+232 &#32;&#32;node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>&#32;?&#32;(node-&gt;<link linkend="structlist__node_1a0b99ca890dbfe832a8475f4bbd72338c">next</link>-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>)&#32;:&#32;(self-&gt;tail&#32;=&#32;node-&gt;<link linkend="structlist__node_1a30baba3b27442cbca9694076003ed65e">prev</link>);
+233 
+234 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(self-&gt;free)
+235 &#32;&#32;&#32;&#32;<emphasis class="keyword">self</emphasis>-&gt;free(node-&gt;<link linkend="structlist__node_1a129de89b4c110fa54377ef16ab128ce0">val</link>);
+236 
+237 &#32;&#32;free(node);
+238 &#32;&#32;--<emphasis class="keyword">self</emphasis>-&gt;len;
+239 }
     </computeroutput></literallayout>
 </section>

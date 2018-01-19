@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Todo List</title>
+
+<para><variablelist>
+<varlistentry><term><anchor id="todo_1_todo000002"/>Global <link linkend="gyro_8c_1aec0963ebe3eb6cdfd7edaf486bbb0a87">get_main_gyro_angluar_velocity</link>  ()</term>
+<listitem>
+<para></para>
+</listitem></varlistentry>
+<varlistentry><term><anchor id="todo_1_todo000003"/>Global <link linkend="routines_8h_1a9486ebd51b8c3d966619cf4617e6a930">register_routine</link>  (void(*routine)(void *), button_t on_buttons, button_t *prohibited_buttons)</term>
+<listitem>
+<para></para>
+
+<para></para>
+</listitem></varlistentry>
+</variablelist>
+</para>
+
+</chapter>

@@ -9,14 +9,14 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>float x</para>
+                        <para>float x<para><emphasis>the x coordinate</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>float y</para>
+                        <para>float y<para><emphasis>the y coordinate</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -37,27 +37,11 @@
 <para>Chris Jerrett </para>
 </formalpara>
 </para>
-                <para>Definition at line 32 of file vmath.h</para>
+                <para>Definition at line 36 of file vmath.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>vmath.h</para></listitem></itemizedlist></para>
         </simplesect>
         <section>
             <title>Field Documentation</title>
-            <simplesect>
-                <title>float cord::x</title>                
-<para>the x coordinate </para>
-
-                <para>Definition at line 34 of file vmath.h</para>
-                <para>The Documentation for this struct was generated from the following file: </para>
-                <para><itemizedlist><listitem><para>vmath.h</para></listitem></itemizedlist></para>
-            </simplesect>
-            <simplesect>
-                <title>float cord::y</title>                
-<para>the y coordinate </para>
-
-                <para>Definition at line 36 of file vmath.h</para>
-                <para>The Documentation for this struct was generated from the following file: </para>
-                <para><itemizedlist><listitem><para>vmath.h</para></listitem></itemizedlist></para>
-            </simplesect>
         </section>
 </section>

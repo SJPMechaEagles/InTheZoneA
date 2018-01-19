@@ -150,13 +150,6 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>file <link linkend="partner_8c">partner.c</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
                         <para>file <link linkend="routines_8c">routines.c</link></para>
                     </listitem>
                 </itemizedlist>

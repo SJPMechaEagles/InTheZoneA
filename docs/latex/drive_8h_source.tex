@@ -6,18 +6,17 @@
 00008 \textcolor{preprocessor}{#ifndef \_DRIVE\_H\_}
 00009 \textcolor{preprocessor}{#define \_DRIVE\_H\_}
 00010 
-00011 \textcolor{preprocessor}{#include "partner.h"}
-00012 \textcolor{preprocessor}{#include <API.h>}
-00013 
-00018 \textcolor{preprocessor}{#define THRESHOLD 10}
-00019 
-00027 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} side \{ LEFT, BOTH, RIGHT \} side_t;
-00028 
-00036 \textcolor{keywordtype}{void} set_side_speed(side_t side, \textcolor{keywordtype}{int} speed);
-00037 
-00042 \textcolor{keywordtype}{void} setThresh(\textcolor{keywordtype}{int} t);
-00043 
-00049 \textcolor{keywordtype}{void} update_drive_motors();
-00050 
-00051 \textcolor{preprocessor}{#endif}
+00011 \textcolor{preprocessor}{#include <API.h>}
+00012 
+00017 \textcolor{preprocessor}{#define THRESHOLD 10}
+00018 
+00026 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} side \{ LEFT, BOTH, RIGHT \} side_t;
+00027 
+00035 \textcolor{keywordtype}{void} set_side_speed(side_t side, \textcolor{keywordtype}{int} speed);
+00036 
+00041 \textcolor{keywordtype}{void} setThresh(\textcolor{keywordtype}{int} t);
+00042 
+00048 \textcolor{keywordtype}{void} update_drive_motors();
+00049 
+00050 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

@@ -5,23 +5,16 @@
 Contains menu functionality and abstraction.  
 
 
-{\ttfamily \#include \char`\"{}A\+P\+I.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
-{\ttfamily \#include $<$float.\+h$>$}\newline
-{\ttfamily \#include $<$limits.\+h$>$}\newline
-{\ttfamily \#include $<$string.\+h$>$}\newline
-{\ttfamily \#include $<$vlib.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
 \subsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ menu\+\_\+t}
-\begin{DoxyCompactList}\small\item\em Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint\+\_\+menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Represents a specific instance of a menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \textbf{ menu\+\_\+t} \textbf{ menu\+\_\+t}
-\begin{DoxyCompactList}\small\item\em Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint\+\_\+menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Represents a specific instance of a menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,13 +29,13 @@ enum \textbf{ menu\+\_\+type} \{ \textbf{ I\+N\+T\+\_\+\+T\+Y\+PE},
 void \textbf{ denint\+\_\+menu} (\textbf{ menu\+\_\+t} $\ast$menu)
 \begin{DoxyCompactList}\small\item\em Destroys a menu {\itshape  Menu must be freed or will cause memory leak {\itshape  }}\end{DoxyCompactList}\item 
 int \textbf{ display\+\_\+menu} (\textbf{ menu\+\_\+t} $\ast$menu)
-\begin{DoxyCompactList}\small\item\em Displays a menu contex. {\itshape  Menu must be freed or will cause memory leak! {\itshape  Will exit if robot is enabled. This prevents menu from locking up system in even of a reset. }}\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Displays a menu contex. \end{DoxyCompactList}\item 
 \textbf{ menu\+\_\+t} $\ast$ \textbf{ init\+\_\+menu\+\_\+float} (enum \textbf{ menu\+\_\+type} type, float \textbf{ min}, float \textbf{ max}, float step, const char $\ast$prompt)
-\begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak! {\itshape  }}\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. \end{DoxyCompactList}\item 
 \textbf{ menu\+\_\+t} $\ast$ \textbf{ init\+\_\+menu\+\_\+int} (enum \textbf{ menu\+\_\+type} type, int \textbf{ min}, int \textbf{ max}, int step, const char $\ast$prompt)
-\begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak {\itshape  }}\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. \end{DoxyCompactList}\item 
 \textbf{ menu\+\_\+t} $\ast$ \textbf{ init\+\_\+menu\+\_\+var} (enum \textbf{ menu\+\_\+type} type, const char $\ast$prompt, int nums,...)
-\begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak {\itshape  }}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a menu context, but does not display. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
@@ -69,9 +62,9 @@ Definition in file \textbf{ menu.\+h}.
 
 
 
-Represents a specific instance of a menu. Will cause a memory leak if not deinitialized via denint\+\_\+menu. 
+Represents a specific instance of a menu. 
 
-\begin{DoxyAuthor}{Author}
+Will cause a memory leak if not deinitialized via denint\+\_\+menu. \begin{DoxyAuthor}{Author}
 Chris Jerrett 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -143,6 +136,14 @@ S\+T\+R\+I\+N\+G\+\_\+\+T\+Y\+PE&Menu type allowing user to select a string from
 Definition at line \textbf{ 30} of file \textbf{ menu.\+h}.
 
 
+\begin{DoxyCode}
+00030                \{
+00037   INT_TYPE,
+00044   FLOAT_TYPE,
+00050   STRING_TYPE
+00051 \};
+\end{DoxyCode}
+
 
 \subsubsection{Function Documentation}
 \mbox{\label{menu_8h_a05a36619ac6c9ba4544eddb83ee2a50d}} 
@@ -177,6 +178,15 @@ Definition at line \textbf{ 203} of file \textbf{ menu.\+c}.
 
 References \textbf{ menu\+\_\+t\+::options}, and \textbf{ menu\+\_\+t\+::prompt}.
 
+
+\begin{DoxyCode}
+00203                                \{
+00204   free(menu->prompt);
+00205   \textcolor{keywordflow}{if} (menu->options != NULL)
+00206     free(menu->options);
+00207   free(menu);
+00208 \}
+\end{DoxyCode}
 \mbox{\label{menu_8h_abfadedb104f89f672dd3045499975a71}} 
 \index{menu.\+h@{menu.\+h}!display\+\_\+menu@{display\+\_\+menu}}
 \index{display\+\_\+menu@{display\+\_\+menu}!menu.\+h@{menu.\+h}}
@@ -185,9 +195,11 @@ References \textbf{ menu\+\_\+t\+::options}, and \textbf{ menu\+\_\+t\+::prompt}
 
 
 
-Displays a menu contex. {\itshape  Menu must be freed or will cause memory leak! {\itshape  Will exit if robot is enabled. This prevents menu from locking up system in even of a reset. }}
+Displays a menu contex. 
 
+{\itshape  Menu must be freed or will cause memory leak! {\itshape  Will exit if robot is enabled. This prevents menu from locking up system in even of a reset.}}
 
+{\itshape {\itshape  
 \begin{DoxyParams}{Parameters}
 {\em menu} & the menu to display \\
 \hline
@@ -201,14 +213,54 @@ Chris Jerrett
 \begin{DoxyDate}{Date}
 9/8/17 
 \end{DoxyDate}
-
+}}
 
 Definition at line \textbf{ 164} of file \textbf{ menu.\+c}.
 
 
 
-References \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ menu\+\_\+t\+::current}, \textbf{ lcd\+\_\+clear()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, \textbf{ P\+R\+E\+S\+S\+ED}, \textbf{ menu\+\_\+t\+::prompt}, \textbf{ R\+E\+L\+E\+A\+S\+ED}, and \textbf{ T\+O\+P\+\_\+\+R\+OW}.
+References \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ menu\+\_\+t\+::current}, \textbf{ delay()}, \textbf{ lcd\+\_\+clear()}, \textbf{ lcd\+\_\+get\+\_\+pressed\+\_\+buttons()}, \textbf{ lcd\+\_\+print()}, \textbf{ P\+R\+E\+S\+S\+ED}, \textbf{ printf()}, \textbf{ menu\+\_\+t\+::prompt}, and \textbf{ R\+E\+L\+E\+A\+S\+ED}.
 
+
+\begin{DoxyCode}
+00164                                \{
+00165   lcd_print(TOP\_ROW, menu->prompt);
+00166   printf(\textcolor{stringliteral}{"printed prompt\(\backslash\)n"});
+00167   \textcolor{comment}{// Will exit if teleop or autonomous begin. This is extremely important if}
+00168   \textcolor{comment}{// robot disconnects or resets.}
+00169   \textcolor{keywordtype}{char} val[16];
+00170   \textcolor{keywordflow}{while} (lcd_get_pressed_buttons().middle == RELEASED) \{
+00171     calculate_current_display(val, menu);
+00172 
+00173     \textcolor{keywordflow}{if} (lcd_get_pressed_buttons().right == PRESSED) \{
+00174       menu->current += 1;
+00175     \}
+00176     \textcolor{keywordflow}{if} (lcd_get_pressed_buttons().left == PRESSED) \{
+00177       menu->current -= 1;
+00178     \}
+00179     printf(\textcolor{stringliteral}{"%s\(\backslash\)n"}, val);
+00180     printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, menu->current);
+00181     lcd_print(2, val);
+00182     delay(300);
+00183   \}
+00184   printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, menu->current);
+00185   printf(\textcolor{stringliteral}{"return\(\backslash\)n"});
+00186   lcd_clear();
+00187   lcd_print(1, \textcolor{stringliteral}{"Thk Cm Agn"});
+00188   lcd_print(2, val);
+00189   delay(800);
+00190   lcd_clear();
+00191   \textcolor{keywordflow}{return} menu->current;
+00192 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_abfadedb104f89f672dd3045499975a71_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{menu_8h_a5abb752733423805f59ef3b92e3c2e57}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu\+\_\+float@{init\+\_\+menu\+\_\+float}}
 \index{init\+\_\+menu\+\_\+float@{init\+\_\+menu\+\_\+float}!menu.\+h@{menu.\+h}}
@@ -217,9 +269,11 @@ References \textbf{ calculate\+\_\+current\+\_\+display()}, \textbf{ menu\+\_\+t
 
 
 
-Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak! {\itshape  }}
+Creates a menu context, but does not display. 
 
+{\itshape  Menu must be freed or will cause memory leak! {\itshape }}
 
+{\itshape {\itshape 
 \begin{DoxyParams}{Parameters}
 {\em type} & the type of menu \\
 \hline
@@ -244,7 +298,7 @@ Chris Jerrett
 \begin{DoxyDate}{Date}
 9/8/17 
 \end{DoxyDate}
-
+}}
 
 Definition at line \textbf{ 111} of file \textbf{ menu.\+c}.
 
@@ -252,6 +306,24 @@ Definition at line \textbf{ 111} of file \textbf{ menu.\+c}.
 
 References \textbf{ create\+\_\+menu()}, \textbf{ max()}, \textbf{ menu\+\_\+t\+::max\+\_\+f}, \textbf{ min()}, \textbf{ menu\+\_\+t\+::min\+\_\+f}, and \textbf{ menu\+\_\+t\+::step\+\_\+f}.
 
+
+\begin{DoxyCode}
+00112                                             \{
+00113   menu_t *menu = create_menu(type, prompt);
+00114   menu->min_f = min;
+00115   menu->max_f = max;
+00116   menu->step_f = step;
+00117   \textcolor{keywordflow}{return} menu;
+00118 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a5abb752733423805f59ef3b92e3c2e57_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{menu_8h_ac8efedba760ec35ebf841ab19543ba5a}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu\+\_\+int@{init\+\_\+menu\+\_\+int}}
 \index{init\+\_\+menu\+\_\+int@{init\+\_\+menu\+\_\+int}!menu.\+h@{menu.\+h}}
@@ -260,9 +332,11 @@ References \textbf{ create\+\_\+menu()}, \textbf{ max()}, \textbf{ menu\+\_\+t\+
 
 
 
-Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak {\itshape  }}
+Creates a menu context, but does not display. 
 
+{\itshape  Menu must be freed or will cause memory leak {\itshape }}
 
+{\itshape {\itshape 
 \begin{DoxyParams}{Parameters}
 {\em type} & the type of menu \\
 \hline
@@ -287,7 +361,7 @@ Chris Jerrett
 \begin{DoxyDate}{Date}
 9/8/17 
 \end{DoxyDate}
-
+}}
 
 Definition at line \textbf{ 88} of file \textbf{ menu.\+c}.
 
@@ -295,6 +369,25 @@ Definition at line \textbf{ 88} of file \textbf{ menu.\+c}.
 
 References \textbf{ create\+\_\+menu()}, \textbf{ menu\+\_\+t\+::current}, \textbf{ max()}, \textbf{ menu\+\_\+t\+::max}, \textbf{ min()}, \textbf{ menu\+\_\+t\+::min}, and \textbf{ menu\+\_\+t\+::step}.
 
+
+\begin{DoxyCode}
+00089                                           \{
+00090   menu_t *menu = create_menu(type, prompt);
+00091   menu->min = min;
+00092   menu->max = max;
+00093   menu->step = step;
+00094   menu->current = 0;
+00095   \textcolor{keywordflow}{return} menu;
+00096 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_ac8efedba760ec35ebf841ab19543ba5a_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{menu_8h_af1bb786cb6014dcbfdb146878e713a3d}} 
 \index{menu.\+h@{menu.\+h}!init\+\_\+menu\+\_\+var@{init\+\_\+menu\+\_\+var}}
 \index{init\+\_\+menu\+\_\+var@{init\+\_\+menu\+\_\+var}!menu.\+h@{menu.\+h}}
@@ -303,9 +396,11 @@ References \textbf{ create\+\_\+menu()}, \textbf{ menu\+\_\+t\+::current}, \text
 
 
 
-Creates a menu context, but does not display. {\itshape  Menu must be freed or will cause memory leak {\itshape  }}
+Creates a menu context, but does not display. 
 
+{\itshape  Menu must be freed or will cause memory leak {\itshape }}
 
+{\itshape {\itshape 
 \begin{DoxyParams}{Parameters}
 {\em type} & the type of menu \\
 \hline
@@ -328,15 +423,48 @@ Chris Jerrett
 \begin{DoxyDate}{Date}
 9/8/17 
 \end{DoxyDate}
-
+}}
 
 Definition at line \textbf{ 60} of file \textbf{ menu.\+c}.
 
 
 
-References \textbf{ create\+\_\+menu()}, \textbf{ menu\+\_\+t\+::length}, and \textbf{ menu\+\_\+t\+::options}.
+References \textbf{ create\+\_\+menu()}, \textbf{ menu\+\_\+t\+::length}, \textbf{ menu\+\_\+t\+::options}, and \textbf{ printf()}.
 
 
 
 Referenced by \textbf{ initialize()}.
 
+
+\begin{DoxyCode}
+00060                                                                               \{
+00061   menu_t *menu = create_menu(type, prompt);
+00062   va\_list ap;
+00063   \textcolor{keywordtype}{char} **options\_array = (\textcolor{keywordtype}{char} **)calloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char} *), nums);
+00064   va\_start(ap, nums);
+00065   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nums; i++) \{
+00066     options\_array[i] = (\textcolor{keywordtype}{char} *)va\_arg(ap, \textcolor{keywordtype}{char} *);
+00067     printf(\textcolor{stringliteral}{"%s\(\backslash\)n"}, options\_array[i]);
+00068   \}
+00069   va\_end(ap);
+00070   menu->options = options\_array;
+00071   menu->length = nums;
+00072   \textcolor{keywordflow}{return} menu;
+00073 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_af1bb786cb6014dcbfdb146878e713a3d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{menu_8h_af1bb786cb6014dcbfdb146878e713a3d_icgraph}
+\end{center}
+\end{figure}

@@ -17,7 +17,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92" target="_top" xlink:title="joystickGetDigital">
+<g id="a_node2"><a xlink:href="_a_p_i_8h.html#a792f1a80c62a63e764cf64aabf95db92" target="_top" xlink:title="Gets the value of a button on the VEX joystick. ">
 <polygon fill="none" stroke="#000000" points="119.2705,-37.5 119.2705,-55.5 211.96,-55.5 211.96,-37.5 119.2705,-37.5"/>
 <text text-anchor="middle" x="165.6152" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">joystickGetDigital</text>
 </a>
@@ -32,7 +32,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="_a_p_i_8h.html#a04541d90f60b1ccd3d036656673c972d" target="_top" xlink:title="lcdReadButtons">
+<g id="a_node3"><a xlink:href="_a_p_i_8h.html#a04541d90f60b1ccd3d036656673c972d" target="_top" xlink:title="Reads the user button status from the LCD display. ">
 <polygon fill="none" stroke="#000000" points="122.3149,-.5 122.3149,-18.5 208.9155,-18.5 208.9155,-.5 122.3149,-.5"/>
 <text text-anchor="middle" x="165.6152" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcdReadButtons</text>
 </a>

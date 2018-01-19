@@ -1,26 +1,35 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="localization_8h">
     <title>localization.h File Reference</title>
-    <programlisting>#include &quot;encoders.h&quot;</programlisting>
-    <programlisting>#include &quot;matrix.h&quot;</programlisting>
-    <programlisting>#include &lt;API.h&gt;</programlisting>
-    <programlisting>#include &lt;math.h&gt;</programlisting>
+<para>Include dependency diagram for localization.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="localization_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for localization.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="localization_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title> Data Structures </title>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="structlocation">location</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
-        <section>
-            <title>Macros</title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="localization_8h_1a4fa0a97f6aafe983a46ffc7188d1fab5">LOCALIZATION_UPDATE_FREQUENCY</link> 0.500</para>
+<para><emphasis>Vector storing the cartesian cords and an angle.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -31,7 +40,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>int <link linkend="localization_8h_1a5dd17937f5561711cd12cdefa8d31869">calculate_encoder_angle</link> (
-)</para>
+)<para><emphasis>Calculates the angle using the encoders.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -86,10 +96,10 @@ const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, 
 10 
 11 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="encoders_8h">encoders.h</link>&quot;</emphasis>
 12 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="matrix_8h">matrix.h</link>&quot;</emphasis>
-13 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+13 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
 14 <emphasis class="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
 15 
-<link linkend="localization_8h_1a4fa0a97f6aafe983a46ffc7188d1fab5">19 </link><emphasis class="preprocessor">#define&#32;LOCALIZATION_UPDATE_FREQUENCY&#32;0.500</emphasis>
+19 <emphasis class="preprocessor">#define&#32;LOCALIZATION_UPDATE_FREQUENCY&#32;5</emphasis>
 20 
 <link linkend="structlocation">24 </link><emphasis class="keyword">struct&#32;</emphasis><link linkend="structlocation">location</link>&#32;{
 <link linkend="structlocation_1aacd18b2506c49d221cfc37b2119e3c3c">25 </link>&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="structlocation_1aacd18b2506c49d221cfc37b2119e3c3c">x</link>;
@@ -104,8 +114,8 @@ const unsigned char gyro1, unsigned short multiplier, int start_x, int start_y, 
 52 
 58 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="localization_8h_1afacd5e0b3d5e677df26a4402bbd9ec9e">update_position</link>();
 59 
-60 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="localization_8h_1a5dd17937f5561711cd12cdefa8d31869">calculate_encoder_angle</link>();
-61 
-62 <emphasis class="preprocessor">#endif</emphasis>
+64 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="localization_8h_1a5dd17937f5561711cd12cdefa8d31869">calculate_encoder_angle</link>();
+65 
+66 <emphasis class="preprocessor">#endif</emphasis>
     </computeroutput></literallayout>
 </section>

@@ -17,6 +17,13 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>file <link linkend="_a_p_i_8h">API.h</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>file <link linkend="auto_8h">auto.h</link></para>
                     </listitem>
                 </itemizedlist>
@@ -136,13 +143,6 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>file <link linkend="partner_8h">partner.h</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
                         <para>file <link linkend="potentiometer_8h">potentiometer.h</link></para>
                     </listitem>
                 </itemizedlist>
@@ -157,7 +157,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>file <link linkend="sensor__ports_8h">sensor_ports.h</link></para>
+                        <para>file <link linkend="sensors_8h">sensors.h</link></para>
                     </listitem>
                 </itemizedlist>
             </para>

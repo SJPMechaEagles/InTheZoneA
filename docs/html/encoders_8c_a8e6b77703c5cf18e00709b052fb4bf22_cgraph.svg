@@ -8,24 +8,24 @@
  viewBox="0.00 0.00 237.21 27.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 23)">
 <title>get_encoder_velocity</title>
-<!-- Node3 -->
+<!-- Node7 -->
 <g id="node1" class="node">
-<title>Node3</title>
+<title>Node7</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-18.5 110.5068,-18.5 110.5068,-.5 0,-.5"/>
 <text text-anchor="middle" x="55.2534" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">get_encoder_velocity</text>
 </g>
-<!-- Node4 -->
+<!-- Node8 -->
 <g id="node2" class="node">
-<title>Node4</title>
-<g id="a_node2"><a xlink:href="_a_p_i_8h.html#a2dfd22ed31510b48a91bd9cd3d04a72f" target="_top" xlink:title="imeGetVelocity">
+<title>Node8</title>
+<g id="a_node2"><a xlink:href="_a_p_i_8h.html#a2dfd22ed31510b48a91bd9cd3d04a72f" target="_top" xlink:title="Gets the current rotational velocity of the specified IME. ">
 <polygon fill="none" stroke="#000000" points="146.5068,-.5 146.5068,-18.5 229.2061,-18.5 229.2061,-.5 146.5068,-.5"/>
 <text text-anchor="middle" x="187.8564" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">imeGetVelocity</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node4 -->
+<!-- Node7&#45;&gt;Node8 -->
 <g id="edge1" class="edge">
-<title>Node3&#45;&gt;Node4</title>
+<title>Node7&#45;&gt;Node8</title>
 <path fill="none" stroke="#191970" d="M110.7207,-9.5C119.1972,-9.5 127.9165,-9.5 136.3041,-9.5"/>
 <polygon fill="#191970" stroke="#191970" points="136.332,-13.0001 146.332,-9.5 136.3319,-6.0001 136.332,-13.0001"/>
 </g>

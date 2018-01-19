@@ -2,12 +2,6 @@ var localization_8c =
 [
     [ "accelerometer_odometry", "structaccelerometer__odometry.html", "structaccelerometer__odometry" ],
     [ "encoder_odemtry", "structencoder__odemtry.html", "structencoder__odemtry" ],
-    [ "CPR", "localization_8c.html#ad8f1771d4051eafad228df4d397d7e47", null ],
-    [ "CPR", "localization_8c.html#ad8f1771d4051eafad228df4d397d7e47", null ],
-    [ "WHEEL_RADIUS", "localization_8c.html#aaa6f04f6f0d7cf1008a53279acf49f07", null ],
-    [ "WHEEL_RADIUS", "localization_8c.html#aaa6f04f6f0d7cf1008a53279acf49f07", null ],
-    [ "WIDTH", "localization_8c.html#a241aeeb764887ae5e3de58b98f04b16d", null ],
-    [ "WIDTH", "localization_8c.html#a241aeeb764887ae5e3de58b98f04b16d", null ],
     [ "calculate_accelerometer_odemetry", "localization_8c.html#a6785e4b3b61887f28028f05019b9b39d", null ],
     [ "calculate_angle", "localization_8c.html#a3774a84284eeb9f5efa7c23aa5ffcd9e", null ],
     [ "calculate_encoder_angle", "localization_8c.html#a5dd17937f5561711cd12cdefa8d31869", null ],

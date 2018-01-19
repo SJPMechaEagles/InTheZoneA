@@ -5,25 +5,16 @@
 Declarations and macros for determining the location of the robot. [W\+IP].  
 
 
-{\ttfamily \#include \char`\"{}encoders.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\newline
-{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
-{\ttfamily \#include $<$math.\+h$>$}\newline
 \subsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ location}
-\end{DoxyCompactItemize}
-\subsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \textbf{ L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}~0.\+500
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Vector storing the cartesian cords and an angle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \textbf{ calculate\+\_\+encoder\+\_\+angle} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the angle using the encoders. \end{DoxyCompactList}\item 
 struct \textbf{ location} \textbf{ get\+\_\+position} ()
 \begin{DoxyCompactList}\small\item\em Gets the current posituion of the robot. \end{DoxyCompactList}\item 
 bool \textbf{ init\+\_\+localization} (const unsigned char gyro1, unsigned short multiplier, int start\+\_\+x, int start\+\_\+y, int start\+\_\+theta)
@@ -47,23 +38,6 @@ Definition in file \textbf{ localization.\+h}.
 
 
 
-\subsubsection{Macro Definition Documentation}
-\mbox{\label{localization_8h_a4fa0a97f6aafe983a46ffc7188d1fab5}} 
-\index{localization.\+h@{localization.\+h}!L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}
-\index{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}!localization.\+h@{localization.\+h}}
-\paragraph{L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}
-{\footnotesize\ttfamily \#define L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY~0.\+500}
-
-How often the localization code updates the position. 
-
-Definition at line \textbf{ 19} of file \textbf{ localization.\+h}.
-
-
-
-Referenced by \textbf{ calculate\+\_\+gryo\+\_\+anglular\+\_\+velocity()}, \textbf{ init\+\_\+localization()}, and \textbf{ integrate\+\_\+gyro\+\_\+w()}.
-
-
-
 \subsubsection{Function Documentation}
 \mbox{\label{localization_8h_a5dd17937f5561711cd12cdefa8d31869}} 
 \index{localization.\+h@{localization.\+h}!calculate\+\_\+encoder\+\_\+angle@{calculate\+\_\+encoder\+\_\+angle}}
@@ -73,16 +47,58 @@ Referenced by \textbf{ calculate\+\_\+gryo\+\_\+anglular\+\_\+velocity()}, \text
 
 
 
-Definition at line \textbf{ 101} of file \textbf{ localization.\+c}.
+Calculates the angle using the encoders. 
+
+\begin{DoxyReturn}{Returns}
+the angle
+\end{DoxyReturn}
+Calculates the angle using the encoders.
+
+\begin{DoxyReturn}{Returns}
+the angle of rotation 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett, Christian De\+Simone 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 129} of file \textbf{ localization.\+c}.
 
 
 
-References \textbf{ C\+PR}, \textbf{ get\+\_\+encoder\+\_\+ticks()}, and \textbf{ W\+I\+D\+TH}.
+References \textbf{ get\+\_\+encoder\+\_\+ticks()}.
 
 
 
-Referenced by \textbf{ autonomous()}.
+Referenced by \textbf{ auton\+\_\+turn\+\_\+180()}.
 
+
+\begin{DoxyCode}
+00129                               \{
+00130 \textcolor{preprocessor}{#define WIDTH 13.5}
+00131 \textcolor{preprocessor}{#define CPR 392.0}
+00132 \textcolor{preprocessor}{#define WHEEL\_RADIUS 2}
+00133   \textcolor{keywordtype}{int} dist\_r = get_encoder_ticks(0) / CPR;
+00134   \textcolor{keywordtype}{int} dist\_l = get_encoder_ticks(1) / CPR;
+00135   \textcolor{keywordflow}{return} ((dist\_r - dist\_l) / WIDTH);
+00136 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{localization_8h_a5dd17937f5561711cd12cdefa8d31869_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{localization_8h_a5dd17937f5561711cd12cdefa8d31869_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{localization_8h_aadbff35bb757f60bc348d4d778f57a2f}} 
 \index{localization.\+h@{localization.\+h}!get\+\_\+position@{get\+\_\+position}}
 \index{get\+\_\+position@{get\+\_\+position}!localization.\+h@{localization.\+h}}
@@ -99,12 +115,27 @@ Gets the current posituion of the robot.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+the loacation of the robot as a struct.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em gyro1} & The first gyro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 the loacation of the robot as a struct. 
 \end{DoxyReturn}
 
 
-Definition at line \textbf{ 32} of file \textbf{ localization.\+c}.
+Definition at line \textbf{ 38} of file \textbf{ localization.\+c}.
 
+
+\begin{DoxyCode}
+00038 \{\}
+\end{DoxyCode}
 \mbox{\label{localization_8h_afdd0147de6aa15957e9a125f9cd20578}} 
 \index{localization.\+h@{localization.\+h}!init\+\_\+localization@{init\+\_\+localization}}
 \index{init\+\_\+localization@{init\+\_\+localization}!localization.\+h@{localization.\+h}}
@@ -120,17 +151,47 @@ Chris Jerrett
 \end{DoxyAuthor}
 
 \begin{DoxyParams}{Parameters}
-{\em gyro1} & The first gyro  The multiplier parameter can tune the gyro to adapt to specific sensors. The default value at this time is 196; higher values will increase the number of degrees reported for a fixed actual rotation, while lower values will decrease the number of degrees reported. If your robot is consistently turning too far, increase the multiplier, and if it is not turning far enough, decrease the multiplier. \\
+{\em gyro1} & The first gyro  The multiplier parameter can tune the gyro to adapt to specific sensors. The default value at this time is 196; higher values will increase the number of degrees reported for a fixed actual rotation, while lower values will decrease the number of degrees reported. If your robot is consistently turning too far, increase the multiplier, and if it is not turning far enough, decrease the multiplier.\\
 \hline
 \end{DoxyParams}
+Starts the localization process.
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+returns true when initialization is complete. 
+\end{DoxyReturn}
 
 
-Definition at line \textbf{ 123} of file \textbf{ localization.\+c}.
+Definition at line \textbf{ 160} of file \textbf{ localization.\+c}.
 
 
 
-References \textbf{ g1}, \textbf{ last\+\_\+call}, \textbf{ localization\+\_\+task}, \textbf{ L\+O\+C\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}, \textbf{ make\+Matrix()}, and \textbf{ update\+\_\+position()}.
+References \textbf{ g1}, \textbf{ gyro\+Init()}, \textbf{ last\+\_\+call}, \textbf{ localization\+\_\+task}, \textbf{ make\+Matrix()}, \textbf{ millis()}, \textbf{ task\+Run\+Loop()}, and \textbf{ update\+\_\+position()}.
 
+
+\begin{DoxyCode}
+00161                                                                   \{
+00162   g1 = gyroInit(gyro1, multiplier);
+00163   \textcolor{comment}{// init state matrix}
+00164 
+00165   \textcolor{comment}{// one dimensional vector with x, y, theta, acceleration in x and y}
+00166   state_matrix = makeMatrix(1, 5);
+00167   localization_task =
+00168       taskRunLoop(update_position, LOCALIZATION\_UPDATE\_FREQUENCY * 1000);
+00169   last_call = millis();
+00170   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00171 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{localization_8h_afdd0147de6aa15957e9a125f9cd20578_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{localization_8h_afacd5e0b3d5e677df26a4402bbd9ec9e}} 
 \index{localization.\+h@{localization.\+h}!update\+\_\+position@{update\+\_\+position}}
 \index{update\+\_\+position@{update\+\_\+position}!localization.\+h@{localization.\+h}}
@@ -142,17 +203,57 @@ References \textbf{ g1}, \textbf{ last\+\_\+call}, \textbf{ localization\+\_\+ta
 Updates the position from the localization. 
 
 \begin{DoxyAuthor}{Author}
-Chris Jerrett 
+Chris Jerrett
+
+Chris Jerrett, Christian De\+Simone 
 \end{DoxyAuthor}
 
 
-Definition at line \textbf{ 39} of file \textbf{ localization.\+c}.
+Definition at line \textbf{ 45} of file \textbf{ localization.\+c}.
 
 
 
-References \textbf{ calculate\+\_\+accelerometer\+\_\+odemetry()}, and \textbf{ last\+\_\+call}.
+References \textbf{ calculate\+\_\+accelerometer\+\_\+odemetry()}, \textbf{ last\+\_\+call}, and \textbf{ millis()}.
 
 
 
 Referenced by \textbf{ init\+\_\+localization()}.
 
+
+\begin{DoxyCode}
+00045                        \{
+00046   \textcolor{comment}{// int curr\_theta = calculate\_angle();}
+00047 
+00048   \textcolor{keyword}{struct }accelerometer_odometry oddem = calculate_accelerometer_odemetry();
+00049   \textcolor{comment}{// printf("x: %d y: %d T: %d\(\backslash\)n", a.x, a.y, 0);}
+00050 
+00051   \textcolor{comment}{/*int l = 1;}
+00052 \textcolor{comment}{  int vr = get\_encoder\_velocity(1);}
+00053 \textcolor{comment}{  int vl = get\_encoder\_velocity(2);}
+00054 \textcolor{comment}{  int theta\_dot = (vr - vl) / l;}
+00055 \textcolor{comment}{  int curr\_theta = theta + theta\_dot;}
+00056 \textcolor{comment}{  double dt = LOCALIZATION\_UPDATE\_FREQUENCY;}
+00057 \textcolor{comment}{  double v\_tot = (vr+vl)/2.0;}
+00058 \textcolor{comment}{  int x\_curr = x - v\_tot*dt*sin(curr\_theta);}
+00059 \textcolor{comment}{  int y\_curr = y + v\_tot*dt*cos(curr\_theta);}
+00060 \textcolor{comment}{  x = x\_curr;}
+00061 \textcolor{comment}{  y = y\_curr;*/}
+00062   last_call = millis();
+00063 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{localization_8h_afacd5e0b3d5e677df26a4402bbd9ec9e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{localization_8h_afacd5e0b3d5e677df26a4402bbd9ec9e_icgraph}
+\end{center}
+\end{figure}

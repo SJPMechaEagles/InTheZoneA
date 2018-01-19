@@ -1,11 +1,37 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="claw_8c">
     <title>claw.c File Reference</title>
-    <programlisting>#include &quot;claw.h&quot;</programlisting>
-    <programlisting>#include &quot;log.h&quot;</programlisting>
-    <programlisting>#include &quot;toggle.h&quot;</programlisting>
+<para>Include dependency diagram for claw.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="claw_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for claw.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="claw_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="claw_8c_1ae1fc3deab25f0b9e6f636bb83e9bf5c2">lifter_autostack_running</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -19,8 +45,8 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="claw_8c_1ac42dd40dbb37219295286859c6b068c2">close_claw</link> (
-)<para><emphasis>Drives the motors to close the claw.</emphasis></para>
+                        <para>void <link linkend="claw_8c_1a3a6168bf4e2042115dd32542f1f6a2f5">claw_grab_cone</link> (
+)<para><emphasis>Drives the motors to grab a cone.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -28,8 +54,8 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="claw_8c_1a03023ca28f671b9fa7bac07782ccd8c1">open_claw</link> (
-)<para><emphasis>Drives the motors to open the claw.</emphasis></para>
+                        <para>void <link linkend="claw_8c_1aecaa4eedc34d6b164ee17ed104914227">claw_release_cone</link> (
+)<para><emphasis>Drives the motors to release a cone.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -59,32 +85,34 @@ const int v)<para><emphasis>sets the claw motor speed</emphasis></para>
     </simplesect>
     <literallayout><computeroutput>
 1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="claw_8h">claw.h</link>&quot;</emphasis>
-2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
-3 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="toggle_8h">toggle.h</link>&quot;</emphasis>
-<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">4 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324">claw_state</link>&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;=&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650">CLAW_NEUTRAL_STATE</link>;
+<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">2 </link><emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324">claw_state</link>&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;=&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650">CLAW_NEUTRAL_STATE</link>;
+3 
+4 <emphasis class="keyword">extern</emphasis>&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="claw_8c_1ae1fc3deab25f0b9e6f636bb83e9bf5c2">lifter_autostack_running</link>;
 5 
-<link linkend="claw_8c_1a0122b78972344264b8a276a559cfce4a">10 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8c_1a0122b78972344264b8a276a559cfce4a">update_claw</link>()&#32;{
-11 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(joystickGetDigital(<link linkend="claw_8h_1af2a18397e9efae0be9470a76797b2077">CLAW_CLOSE</link>))&#32;{
-12 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;=&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f">CLAW_CLOSE_STATE</link>;
-13 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(joystickGetDigital(<link linkend="claw_8h_1ae42993ee3f6f4a0e47f99060fe736ba0">CLAW_OPEN</link>))&#32;{
-14 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;=&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd">CLAW_OPEN_STATE</link>;
-15 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
-16 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;=&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650">CLAW_NEUTRAL_STATE</link>;
-17 &#32;&#32;}
-18 
-19 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;==&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f">CLAW_CLOSE_STATE</link>)&#32;{
-20 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</link>(<link linkend="claw_8h_1ae3be50b28977dac719f086e131ba8fd7">MAX_CLAW_SPEED</link>);
-21 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;==&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd">CLAW_OPEN_STATE</link>)&#32;{
-22 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</link>(<link linkend="claw_8h_1a7306e61a4209c74862aa81d7b3de74e5">MIN_CLAW_SPEED</link>);
-23 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
-24 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</link>(0);
-25 &#32;&#32;}
-26 }
+<link linkend="claw_8c_1a0122b78972344264b8a276a559cfce4a">17 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8c_1a0122b78972344264b8a276a559cfce4a">update_claw</link>()&#32;{
+18 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="claw_8c_1ae1fc3deab25f0b9e6f636bb83e9bf5c2">lifter_autostack_running</link>)
+19 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+20 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="_a_p_i_8h_1a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</link>(CLAW_CLOSE))&#32;{
+21 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;=&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f">CLAW_CLOSE_STATE</link>;
+22 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="_a_p_i_8h_1a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</link>(CLAW_OPEN))&#32;{
+23 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;=&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd">CLAW_OPEN_STATE</link>;
+24 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+25 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;=&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324af68f1430eb4b0f878fcf1dc75d289650">CLAW_NEUTRAL_STATE</link>;
+26 &#32;&#32;}
 27 
-<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">32 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;v)&#32;{&#32;<link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(<link linkend="motor__ports_8h_1aa3bcf05406f673f735df023643f347bb">CLAW_MOTOR</link>,&#32;v);&#32;}
-33 
-<link linkend="claw_8c_1a03023ca28f671b9fa7bac07782ccd8c1">38 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8c_1a03023ca28f671b9fa7bac07782ccd8c1">open_claw</link>()&#32;{&#32;<link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(<link linkend="motor__ports_8h_1aa3bcf05406f673f735df023643f347bb">CLAW_MOTOR</link>,&#32;<link linkend="claw_8h_1ae3be50b28977dac719f086e131ba8fd7">MAX_CLAW_SPEED</link>);&#32;}
-39 
-<link linkend="claw_8c_1ac42dd40dbb37219295286859c6b068c2">44 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8c_1ac42dd40dbb37219295286859c6b068c2">close_claw</link>()&#32;{&#32;<link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(<link linkend="motor__ports_8h_1aa3bcf05406f673f735df023643f347bb">CLAW_MOTOR</link>,&#32;<link linkend="claw_8h_1a7306e61a4209c74862aa81d7b3de74e5">MIN_CLAW_SPEED</link>);&#32;}
+28 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;==&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324a3948a2d760f710e9087edded3df98b5f">CLAW_CLOSE_STATE</link>)&#32;{
+29 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</link>(MAX_CLAW_SPEED);
+30 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>&#32;==&#32;<link linkend="claw_8h_1a600668fd307d596c3812126657335324ab871ce9ec2796d275c09bf01abcac2cd">CLAW_OPEN_STATE</link>)&#32;{
+31 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</link>(MIN_CLAW_SPEED);
+32 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+33 &#32;&#32;&#32;&#32;<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</link>(0);
+34 &#32;&#32;}
+35 }
+36 
+<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">42 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8c_1a3a57f998b1884d39b0cc786689f7086f">set_claw_motor</link>(<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;v)&#32;{&#32;<link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(CLAW_MOTOR,&#32;v);&#32;}
+43 
+<link linkend="claw_8c_1a3a6168bf4e2042115dd32542f1f6a2f5">50 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8c_1a3a6168bf4e2042115dd32542f1f6a2f5">claw_grab_cone</link>()&#32;{&#32;<link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(CLAW_MOTOR,&#32;MAX_CLAW_SPEED);&#32;}
+51 
+<link linkend="claw_8c_1aecaa4eedc34d6b164ee17ed104914227">58 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="claw_8c_1aecaa4eedc34d6b164ee17ed104914227">claw_release_cone</link>()&#32;{&#32;<link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(CLAW_MOTOR,&#32;MIN_CLAW_SPEED);&#32;}
     </computeroutput></literallayout>
 </section>

@@ -1,7 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="lcd_8h">
     <title>lcd.h File Reference</title>
-    <programlisting>#include &lt;API.h&gt;</programlisting>
+<para>Include dependency diagram for lcd.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="lcd_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for lcd.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="lcd_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title> Data Structures </title>
             <para>
@@ -9,25 +30,6 @@
                     <listitem>
                         <para>struct <link linkend="structlcd__buttons">lcd_buttons</link></para>
 <para><emphasis>represents the state of the lcd buttons</emphasis></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
-        <section>
-            <title>Macros</title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="lcd_8h_1a7b55e87550874687b3e25a64e1cfda9d">BOTTOM_ROW</link> 2<para><emphasis>The bottom row on the lcd screen.</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="lcd_8h_1a18bab754c6ad16bc35c48333091516c9">TOP_ROW</link> 1<para><emphasis>The top row on the lcd screen.</emphasis></para>
-</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -53,9 +55,7 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="lcd_8h_1a93b26f37d6b1687ad54c90feedfd29ca">init_main_lcd</link> (
-FILE * lcd)<para><emphasis>Initializes the lcd screen.
- Also will initialize the lcd_port var. Must be called before any lcd function
-can be called.</emphasis></para>
+FILE * lcd)<para><emphasis>Initializes the lcd screen.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -91,7 +91,7 @@ unsigned int line, const char * str)<para><emphasis>prints a string to a line on
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="lcd_8h_1aa0d4ca88701dfecf98796e2028482b69">lcd_printf</link> (
-unsigned int line, const char * format_str, ... )<para><emphasis>prints a formated string to a line on the lcd. Smilar to printf</emphasis></para>
+unsigned int line, const char * format_str, ... )<para><emphasis>prints a formated string to a line on the lcd.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -109,9 +109,7 @@ bool state)<para><emphasis>sets the backlight of the lcd</emphasis></para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="lcd_8h_1a99f4683e1990edf624ab216bf327cba4">promt_confirmation</link> (
-const char * confirm_text)<para><emphasis>Prompts the user to confirm a string.
-User must press middle button to confirm.
-Function is not thread safe and will stall a thread.</emphasis></para>
+const char * confirm_text)<para><emphasis>Prompts the user to confirm a string.</emphasis></para>
 </para>
                     </listitem>
                 </itemizedlist>
@@ -138,11 +136,11 @@ Function is not thread safe and will stall a thread.</emphasis></para>
 8 <emphasis class="preprocessor">#ifndef&#32;_LCD_H_</emphasis>
 9 <emphasis class="preprocessor">#define&#32;_LCD_H_</emphasis>
 10 
-11 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+11 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
 12 
-<link linkend="lcd_8h_1a18bab754c6ad16bc35c48333091516c9">18 </link><emphasis class="preprocessor">#define&#32;TOP_ROW&#32;1</emphasis>
+18 <emphasis class="preprocessor">#define&#32;TOP_ROW&#32;1</emphasis>
 19 
-<link linkend="lcd_8h_1a7b55e87550874687b3e25a64e1cfda9d">25 </link><emphasis class="preprocessor">#define&#32;BOTTOM_ROW&#32;2</emphasis>
+25 <emphasis class="preprocessor">#define&#32;BOTTOM_ROW&#32;2</emphasis>
 26 
 <link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29b">36 </link><emphasis class="keyword">typedef</emphasis>&#32;<emphasis class="keyword">enum</emphasis>&#32;{
 <link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">38 </link>&#32;&#32;<link linkend="lcd_8h_1a0bbab92f5605e16a4162b6c5ccc2c29baa38d18fe73a7fc82c112b6917d0b5cd0">RELEASED</link>&#32;=&#32;<emphasis class="keyword">false</emphasis>,
@@ -161,9 +159,9 @@ Function is not thread safe and will stall a thread.</emphasis></para>
 69 
 80 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8h_1a93b26f37d6b1687ad54c90feedfd29ca">init_main_lcd</link>(FILE&#32;*lcd);
 81 
-89 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8h_1adabd3f7cdda45119604b488caf22bba8">lcd_print</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;line,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*str);
+89 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8h_1adabd3f7cdda45119604b488caf22bba8">lcd_print</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a58c3304a90ff2bb7064ff7187b2da466">line</link>,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*str);
 90 
-98 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8h_1aa0d4ca88701dfecf98796e2028482b69">lcd_printf</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;line,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*format_str,&#32;...);
+98 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8h_1aa0d4ca88701dfecf98796e2028482b69">lcd_printf</link>(<emphasis class="keywordtype">unsigned</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="_a_p_i_8h_1a58c3304a90ff2bb7064ff7187b2da466">line</link>,&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">char</emphasis>&#32;*format_str,&#32;...);
 99 
 107 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="lcd_8h_1a245902a4d48a6d9bd1ab308bf9b7e6b5">lcd_set_backlight</link>(<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="claw_8c_1a70d16bb05218682b0a5eaabb141e9d8f">state</link>);
 108 

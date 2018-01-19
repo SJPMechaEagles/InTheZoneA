@@ -17,7 +17,7 @@
 <!-- Node3 -->
 <g id="node2" class="node">
 <title>Node3</title>
-<g id="a_node2"><a xlink:href="auto_8c.html#a3c7ca506bbc071fa740de13805b7f376" target="_top" xlink:title="autonomous">
+<g id="a_node2"><a xlink:href="auto_8c.html#a3c7ca506bbc071fa740de13805b7f376" target="_top" xlink:title="Runs the user autonomous code. ">
 <polygon fill="none" stroke="#000000" points="95.9111,-.5 95.9111,-18.5 166.9502,-18.5 166.9502,-.5 95.9111,-.5"/>
 <text text-anchor="middle" x="131.4307" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">autonomous</text>
 </a>

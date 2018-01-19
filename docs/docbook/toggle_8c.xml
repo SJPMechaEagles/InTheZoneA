@@ -1,13 +1,35 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="toggle_8c">
     <title>toggle.c File Reference</title>
-    <programlisting>#include &quot;toggle.h&quot;</programlisting>
+<para>Include dependency diagram for toggle.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="toggle_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for toggle.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="toggle_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Variables</title>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>bool <link linkend="toggle_8c_1a66c983ca3b3f041a4e293f814a41198f">buttonPressed</link></para>
+                        <para>bool <link linkend="toggle_8c_1a66c983ca3b3f041a4e293f814a41198f">buttonPressed</link><para><emphasis>Represents the array of &quot;wasPressed&quot; for all 27 available buttons.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -134,17 +156,17 @@ previous value to current value.</emphasis></para>
 100 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">default</emphasis>:
 101 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
 102 &#32;&#32;&#32;&#32;}
-103 &#32;&#32;&#32;&#32;currentButton&#32;=&#32;joystickGetDigital(joystick,&#32;buttonGroup,&#32;buttonLocation);
+103 &#32;&#32;&#32;&#32;currentButton&#32;=&#32;<link linkend="_a_p_i_8h_1a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</link>(joystick,&#32;buttonGroup,&#32;buttonLocation);
 104 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
 105 &#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;button&#32;is&#32;on&#32;LCD</emphasis>
 106 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(button&#32;==&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660af74b6b5e3b92936d9d906ed8dd2fe0da">LCD_LEFT</link>)
-107 &#32;&#32;&#32;&#32;&#32;&#32;currentButton&#32;=&#32;(lcdReadButtons(uart1)&#32;==&#32;LCD_BTN_LEFT);
+107 &#32;&#32;&#32;&#32;&#32;&#32;currentButton&#32;=&#32;(<link linkend="_a_p_i_8h_1a04541d90f60b1ccd3d036656673c972d">lcdReadButtons</link>(uart1)&#32;==&#32;LCD_BTN_LEFT);
 108 
 109 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(button&#32;==&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a71f1177926300c37f76f2b634cffd9cc">LCD_CENT</link>)
-110 &#32;&#32;&#32;&#32;&#32;&#32;currentButton&#32;=&#32;(lcdReadButtons(uart1)&#32;==&#32;LCD_BTN_CENTER);
+110 &#32;&#32;&#32;&#32;&#32;&#32;currentButton&#32;=&#32;(<link linkend="_a_p_i_8h_1a04541d90f60b1ccd3d036656673c972d">lcdReadButtons</link>(uart1)&#32;==&#32;LCD_BTN_CENTER);
 111 
 112 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(button&#32;==&#32;<link linkend="controller_8h_1a7754652ebe470fb6cc5d30b4cd258660a2dff7dd85658b97c4309b10e7506491e">LCD_RIGHT</link>)
-113 &#32;&#32;&#32;&#32;&#32;&#32;currentButton&#32;=&#32;(lcdReadButtons(uart1)&#32;==&#32;LCD_BTN_RIGHT);
+113 &#32;&#32;&#32;&#32;&#32;&#32;currentButton&#32;=&#32;(<link linkend="_a_p_i_8h_1a04541d90f60b1ccd3d036656673c972d">lcdReadButtons</link>(uart1)&#32;==&#32;LCD_BTN_RIGHT);
 114 &#32;&#32;}
 115 &#32;&#32;<emphasis class="keywordflow">return</emphasis>&#32;currentButton;
 116 }

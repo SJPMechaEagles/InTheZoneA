@@ -5,31 +5,6 @@
 controller definitions, macros and functions to assist with usig the vex controllers.  
 
 
-{\ttfamily \#include \char`\"{}vmath.\+h\char`\"{}}\newline
-{\ttfamily \#include $<$A\+P\+I.\+h$>$}\newline
-\subsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \textbf{ L\+E\+F\+T\+\_\+\+B\+U\+M\+P\+E\+RS}~6
-\item 
-\#define \textbf{ L\+E\+F\+T\+\_\+\+B\+U\+T\+T\+O\+NS}~7
-\item 
-\#define \textbf{ L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X}~4
-\begin{DoxyCompactList}\small\item\em the left x joystick on controller \end{DoxyCompactList}\item 
-\#define \textbf{ L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y}~3
-\begin{DoxyCompactList}\small\item\em the left y joystick on controller \end{DoxyCompactList}\item 
-\#define \textbf{ M\+A\+S\+T\+ER}~1
-\begin{DoxyCompactList}\small\item\em the master controller \end{DoxyCompactList}\item 
-\#define \textbf{ P\+A\+R\+T\+N\+ER}~2
-\begin{DoxyCompactList}\small\item\em the slave/partner controller \end{DoxyCompactList}\item 
-\#define \textbf{ R\+I\+G\+H\+T\+\_\+\+B\+U\+M\+P\+E\+RS}~5
-\item 
-\#define \textbf{ R\+I\+G\+H\+T\+\_\+\+B\+U\+T\+T\+O\+NS}~8
-\item 
-\#define \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X}~1
-\begin{DoxyCompactList}\small\item\em the right x joystick on controller \end{DoxyCompactList}\item 
-\#define \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y}~2
-\begin{DoxyCompactList}\small\item\em the right y joystick on controller \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -67,7 +42,7 @@ enum \textbf{ button\+\_\+t} \{ \newline
 \textbf{ L\+C\+D\+\_\+\+L\+E\+FT} = 24, 
 \textbf{ L\+C\+D\+\_\+\+C\+E\+NT} = 25, 
 \textbf{ L\+C\+D\+\_\+\+R\+I\+G\+HT} = 26
- \}
+ \}\begin{DoxyCompactList}\small\item\em renames the controller inputs. \end{DoxyCompactList}
 \item 
 enum \textbf{ joystick} \{ \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+OY}, 
 \textbf{ L\+E\+F\+T\+\_\+\+J\+OY}
@@ -95,193 +70,6 @@ Definition in file \textbf{ controller.\+h}.
 
 
 
-\subsubsection{Macro Definition Documentation}
-\mbox{\label{controller_8h_ad61eb6d28a76985afb8d39ef925541bb}} 
-\index{controller.\+h@{controller.\+h}!L\+E\+F\+T\+\_\+\+B\+U\+M\+P\+E\+RS@{L\+E\+F\+T\+\_\+\+B\+U\+M\+P\+E\+RS}}
-\index{L\+E\+F\+T\+\_\+\+B\+U\+M\+P\+E\+RS@{L\+E\+F\+T\+\_\+\+B\+U\+M\+P\+E\+RS}!controller.\+h@{controller.\+h}}
-\paragraph{L\+E\+F\+T\+\_\+\+B\+U\+M\+P\+E\+RS}
-{\footnotesize\ttfamily \#define L\+E\+F\+T\+\_\+\+B\+U\+M\+P\+E\+RS~6}
-
-
-
-Definition at line \textbf{ 18} of file \textbf{ controller.\+h}.
-
-\mbox{\label{controller_8h_a9b885de9f143efd0c862ceb054256536}} 
-\index{controller.\+h@{controller.\+h}!L\+E\+F\+T\+\_\+\+B\+U\+T\+T\+O\+NS@{L\+E\+F\+T\+\_\+\+B\+U\+T\+T\+O\+NS}}
-\index{L\+E\+F\+T\+\_\+\+B\+U\+T\+T\+O\+NS@{L\+E\+F\+T\+\_\+\+B\+U\+T\+T\+O\+NS}!controller.\+h@{controller.\+h}}
-\paragraph{L\+E\+F\+T\+\_\+\+B\+U\+T\+T\+O\+NS}
-{\footnotesize\ttfamily \#define L\+E\+F\+T\+\_\+\+B\+U\+T\+T\+O\+NS~7}
-
-
-
-Definition at line \textbf{ 16} of file \textbf{ controller.\+h}.
-
-\mbox{\label{controller_8h_ac055a23829dc64aa20b8e2e1bcfbf316}} 
-\index{controller.\+h@{controller.\+h}!L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X@{L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X}}
-\index{L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X@{L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X}!controller.\+h@{controller.\+h}}
-\paragraph{L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X}
-{\footnotesize\ttfamily \#define L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X~4}
-
-
-
-the left x joystick on controller 
-
-\begin{DoxyDate}{Date}
-9/1/2017 
-\end{DoxyDate}
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 88} of file \textbf{ controller.\+h}.
-
-
-
-Referenced by \textbf{ get\+\_\+joystick\+\_\+cord()}.
-
-\mbox{\label{controller_8h_ae0a2b64db5fc4f4bf4b169185be93db3}} 
-\index{controller.\+h@{controller.\+h}!L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y@{L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y}}
-\index{L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y@{L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y}!controller.\+h@{controller.\+h}}
-\paragraph{L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y}
-{\footnotesize\ttfamily \#define L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y~3}
-
-
-
-the left y joystick on controller 
-
-\begin{DoxyDate}{Date}
-9/1/2017 
-\end{DoxyDate}
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 95} of file \textbf{ controller.\+h}.
-
-
-
-Referenced by \textbf{ get\+\_\+joystick\+\_\+cord()}.
-
-\mbox{\label{controller_8h_a3fa2d3bf1901157f734a584d47b25d8b}} 
-\index{controller.\+h@{controller.\+h}!M\+A\+S\+T\+ER@{M\+A\+S\+T\+ER}}
-\index{M\+A\+S\+T\+ER@{M\+A\+S\+T\+ER}!controller.\+h@{controller.\+h}}
-\paragraph{M\+A\+S\+T\+ER}
-{\footnotesize\ttfamily \#define M\+A\+S\+T\+ER~1}
-
-
-
-the master controller 
-
-\begin{DoxyDate}{Date}
-9/1/2017 
-\end{DoxyDate}
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 60} of file \textbf{ controller.\+h}.
-
-
-
-Referenced by \textbf{ update\+\_\+drive\+\_\+motors()}, and \textbf{ update\+\_\+intake()}.
-
-\mbox{\label{controller_8h_a136e64cf351535da81cacb6a546cade6}} 
-\index{controller.\+h@{controller.\+h}!P\+A\+R\+T\+N\+ER@{P\+A\+R\+T\+N\+ER}}
-\index{P\+A\+R\+T\+N\+ER@{P\+A\+R\+T\+N\+ER}!controller.\+h@{controller.\+h}}
-\paragraph{P\+A\+R\+T\+N\+ER}
-{\footnotesize\ttfamily \#define P\+A\+R\+T\+N\+ER~2}
-
-
-
-the slave/partner controller 
-
-\begin{DoxyDate}{Date}
-9/1/2017 
-\end{DoxyDate}
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 67} of file \textbf{ controller.\+h}.
-
-
-
-Referenced by \textbf{ update\+\_\+control()}, and \textbf{ update\+\_\+drive\+\_\+motors()}.
-
-\mbox{\label{controller_8h_a635896b08789914290171051d1b82465}} 
-\index{controller.\+h@{controller.\+h}!R\+I\+G\+H\+T\+\_\+\+B\+U\+M\+P\+E\+RS@{R\+I\+G\+H\+T\+\_\+\+B\+U\+M\+P\+E\+RS}}
-\index{R\+I\+G\+H\+T\+\_\+\+B\+U\+M\+P\+E\+RS@{R\+I\+G\+H\+T\+\_\+\+B\+U\+M\+P\+E\+RS}!controller.\+h@{controller.\+h}}
-\paragraph{R\+I\+G\+H\+T\+\_\+\+B\+U\+M\+P\+E\+RS}
-{\footnotesize\ttfamily \#define R\+I\+G\+H\+T\+\_\+\+B\+U\+M\+P\+E\+RS~5}
-
-
-
-Definition at line \textbf{ 17} of file \textbf{ controller.\+h}.
-
-\mbox{\label{controller_8h_a68881b6085c880930037b20764fe5aee}} 
-\index{controller.\+h@{controller.\+h}!R\+I\+G\+H\+T\+\_\+\+B\+U\+T\+T\+O\+NS@{R\+I\+G\+H\+T\+\_\+\+B\+U\+T\+T\+O\+NS}}
-\index{R\+I\+G\+H\+T\+\_\+\+B\+U\+T\+T\+O\+NS@{R\+I\+G\+H\+T\+\_\+\+B\+U\+T\+T\+O\+NS}!controller.\+h@{controller.\+h}}
-\paragraph{R\+I\+G\+H\+T\+\_\+\+B\+U\+T\+T\+O\+NS}
-{\footnotesize\ttfamily \#define R\+I\+G\+H\+T\+\_\+\+B\+U\+T\+T\+O\+NS~8}
-
-
-
-Definition at line \textbf{ 15} of file \textbf{ controller.\+h}.
-
-\mbox{\label{controller_8h_ad74f84aad465437cc1e0f914dbd6fab5}} 
-\index{controller.\+h@{controller.\+h}!R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X@{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X}}
-\index{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X@{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X}!controller.\+h@{controller.\+h}}
-\paragraph{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X}
-{\footnotesize\ttfamily \#define R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X~1}
-
-
-
-the right x joystick on controller 
-
-\begin{DoxyDate}{Date}
-9/1/2017 
-\end{DoxyDate}
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 74} of file \textbf{ controller.\+h}.
-
-
-
-Referenced by \textbf{ get\+\_\+joystick\+\_\+cord()}.
-
-\mbox{\label{controller_8h_a99457bf9dee795334411ea77f0858b16}} 
-\index{controller.\+h@{controller.\+h}!R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y@{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y}}
-\index{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y@{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y}!controller.\+h@{controller.\+h}}
-\paragraph{R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y}
-{\footnotesize\ttfamily \#define R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y~2}
-
-
-
-the right y joystick on controller 
-
-\begin{DoxyDate}{Date}
-9/1/2017 
-\end{DoxyDate}
-\begin{DoxyAuthor}{Author}
-Chris Jerrett 
-\end{DoxyAuthor}
-
-
-Definition at line \textbf{ 81} of file \textbf{ controller.\+h}.
-
-
-
-Referenced by \textbf{ get\+\_\+joystick\+\_\+cord()}.
-
-
-
 \subsubsection{Enumeration Type Documentation}
 \mbox{\label{controller_8h_a7754652ebe470fb6cc5d30b4cd258660}} 
 \index{controller.\+h@{controller.\+h}!button\+\_\+t@{button\+\_\+t}}
@@ -289,7 +77,17 @@ Referenced by \textbf{ get\+\_\+joystick\+\_\+cord()}.
 \paragraph{button\+\_\+t}
 {\footnotesize\ttfamily enum \textbf{ button\+\_\+t}}
 
-Renames the input channels \begin{DoxyEnumFields}{Enumerator}
+
+
+renames the controller inputs. 
+
+Allows more readable controls. \begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/18/17 
+\end{DoxyDate}
+\begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{J\+O\+Y1\+\_\+5D@{J\+O\+Y1\+\_\+5D}!controller.\+h@{controller.\+h}}\index{controller.\+h@{controller.\+h}!J\+O\+Y1\+\_\+5D@{J\+O\+Y1\+\_\+5D}}}\mbox{\label{controller_8h_a7754652ebe470fb6cc5d30b4cd258660a9d8cffd9c0e3484aa4eee63888646cd5}} 
 J\+O\+Y1\+\_\+5D&\\
 \hline
@@ -401,8 +199,42 @@ L\+C\+D\+\_\+\+R\+I\+G\+HT&\\
 \end{DoxyEnumFields}
 
 
-Definition at line \textbf{ 23} of file \textbf{ controller.\+h}.
+Definition at line \textbf{ 25} of file \textbf{ controller.\+h}.
 
+
+\begin{DoxyCode}
+00025              \{
+00026   JOY1_5D = 0,
+00027   JOY1_5U = 1,
+00028   JOY1_6D = 2,
+00029   JOY1_6U = 3,
+00030   JOY1_7U = 4,
+00031   JOY1_7L = 5,
+00032   JOY1_7R = 6,
+00033   JOY1_7D = 7,
+00034   JOY1_8U = 8,
+00035   JOY1_8L = 9,
+00036   JOY1_8R = 10,
+00037   JOY1_8D = 11,
+00038 
+00039   JOY2_5D = 12,
+00040   JOY2_5U = 13,
+00041   JOY2_6D = 14,
+00042   JOY2_6U = 15,
+00043   JOY2_7U = 16,
+00044   JOY2_7L = 17,
+00045   JOY2_7R = 18,
+00046   JOY2_7D = 19,
+00047   JOY2_8U = 20,
+00048   JOY2_8L = 21,
+00049   JOY2_8R = 22,
+00050   JOY2_8D = 23,
+00051 
+00052   LCD_LEFT = 24,
+00053   LCD_CENT = 25,
+00054   LCD_RIGHT = 26
+00055 \} button_t;
+\end{DoxyCode}
 \mbox{\label{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5a}} 
 \index{controller.\+h@{controller.\+h}!joystick@{joystick}}
 \index{joystick@{joystick}!controller.\+h@{controller.\+h}}
@@ -421,18 +253,25 @@ Chris Jerrett
 \end{DoxyAuthor}
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+G\+H\+T\+\_\+\+J\+OY@{R\+I\+G\+H\+T\+\_\+\+J\+OY}!controller.\+h@{controller.\+h}}\index{controller.\+h@{controller.\+h}!R\+I\+G\+H\+T\+\_\+\+J\+OY@{R\+I\+G\+H\+T\+\_\+\+J\+OY}}}\mbox{\label{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe}} 
-R\+I\+G\+H\+T\+\_\+\+J\+OY&The right joystick \\
+R\+I\+G\+H\+T\+\_\+\+J\+OY&The right joystick. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+F\+T\+\_\+\+J\+OY@{L\+E\+F\+T\+\_\+\+J\+OY}!controller.\+h@{controller.\+h}}\index{controller.\+h@{controller.\+h}!L\+E\+F\+T\+\_\+\+J\+OY@{L\+E\+F\+T\+\_\+\+J\+OY}}}\mbox{\label{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5aaf822d7888862e67a3c624775b85c50a9}} 
-L\+E\+F\+T\+\_\+\+J\+OY&The left joystick \\
+L\+E\+F\+T\+\_\+\+J\+OY&The left joystick. \\
 \hline
 
 \end{DoxyEnumFields}
 
 
-Definition at line \textbf{ 102} of file \textbf{ controller.\+h}.
+Definition at line \textbf{ 104} of file \textbf{ controller.\+h}.
 
+
+\begin{DoxyCode}
+00104               \{
+00106   RIGHT_JOY,
+00108   LEFT_JOY,
+00109 \};
+\end{DoxyCode}
 
 
 \subsubsection{Function Documentation}
@@ -447,13 +286,55 @@ Definition at line \textbf{ 102} of file \textbf{ controller.\+h}.
 Gets the location of a joystick on the controller. 
 
 \begin{DoxyAuthor}{Author}
+Chris Jerrett
+
 Chris Jerrett 
 \end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\doxyref{R\+I\+G\+H\+T\+\_\+\+J\+OY}{p.}{controller_8h_ac365c9e892abe4a1b85ae8f56a4eae5aae08a2d362c677f96f72d93047513cafe} 
+
+R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X 
+
+R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y 
+
+L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X 
+
+L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y 
+\end{DoxySeeAlso}
 
 
-Definition at line \textbf{ 7} of file \textbf{ controller.\+c}.
+Definition at line \textbf{ 12} of file \textbf{ controller.\+c}.
 
 
 
-References \textbf{ L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+X}, \textbf{ L\+E\+F\+T\+\_\+\+J\+O\+Y\+\_\+Y}, \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+OY}, \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+X}, \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+O\+Y\+\_\+Y}, \textbf{ cord\+::x}, and \textbf{ cord\+::y}.
+References \textbf{ joystick\+Get\+Analog()}, \textbf{ R\+I\+G\+H\+T\+\_\+\+J\+OY}, \textbf{ cord\+::x}, and \textbf{ cord\+::y}.
 
+
+\begin{DoxyCode}
+00012                                                                   \{
+00013   \textcolor{keywordtype}{int} x;
+00014   \textcolor{keywordtype}{int} y;
+00015   \textcolor{comment}{// Get the joystick value for either the right or left,}
+00016   \textcolor{comment}{// depending on the mode}
+00017   \textcolor{keywordflow}{if} (side == RIGHT_JOY) \{
+00018     y = joystickGetAnalog(controller, RIGHT\_JOY\_X);
+00019     x = joystickGetAnalog(controller, RIGHT\_JOY\_Y);
+00020   \} \textcolor{keywordflow}{else} \{
+00021     y = joystickGetAnalog(controller, LEFT\_JOY\_X);
+00022     x = joystickGetAnalog(controller, LEFT\_JOY\_Y);
+00023   \}
+00024   \textcolor{comment}{// Define a coordinate for the joystick value}
+00025   \textcolor{keyword}{struct }cord c;
+00026   c.x = x;
+00027   c.y = y;
+00028   \textcolor{keywordflow}{return} c;
+00029 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{controller_8h_a0ce0176099c0bb15ad8c36123222059d_cgraph}
+\end{center}
+\end{figure}

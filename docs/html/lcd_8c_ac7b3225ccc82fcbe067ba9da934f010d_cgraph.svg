@@ -8,54 +8,54 @@
  viewBox="0.00 0.00 332.58 64.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 60)">
 <title>lcd_get_pressed_buttons</title>
-<!-- Node19 -->
+<!-- Node28 -->
 <g id="node1" class="node">
-<title>Node19</title>
+<title>Node28</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-18.5 0,-36.5 127.748,-36.5 127.748,-18.5 0,-18.5"/>
 <text text-anchor="middle" x="63.874" y="-24.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcd_get_pressed_buttons</text>
 </g>
-<!-- Node20 -->
+<!-- Node29 -->
 <g id="node2" class="node">
-<title>Node20</title>
-<g id="a_node2"><a xlink:href="lcd_8c.html#a07f04b524b5ded617d5f193db05ba0ad" target="_top" xlink:title="Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...">
+<title>Node29</title>
+<g id="a_node2"><a xlink:href="lcd_8c.html#aa03fd2deaeec8fc3f42a0975d587bad8" target="_top" xlink:title="Asserts the lcd is initialized Works by checking is the File *lcd_port is the default NULL value and ...">
 <polygon fill="none" stroke="#000000" points="176.2603,-37.5 176.2603,-55.5 237.8364,-55.5 237.8364,-37.5 176.2603,-37.5"/>
 <text text-anchor="middle" x="207.0483" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcd_assert</text>
 </a>
 </g>
 </g>
-<!-- Node19&#45;&gt;Node20 -->
+<!-- Node28&#45;&gt;Node29 -->
 <g id="edge1" class="edge">
-<title>Node19&#45;&gt;Node20</title>
+<title>Node28&#45;&gt;Node29</title>
 <path fill="none" stroke="#191970" d="M127.9234,-35.9997C140.8227,-37.7115 154.0522,-39.4671 165.9113,-41.0409"/>
 <polygon fill="#191970" stroke="#191970" points="165.564,-44.5254 175.9375,-42.3714 166.4849,-37.5862 165.564,-44.5254"/>
 </g>
-<!-- Node22 -->
+<!-- Node31 -->
 <g id="node4" class="node">
-<title>Node22</title>
-<g id="a_node4"><a xlink:href="_a_p_i_8h.html#a04541d90f60b1ccd3d036656673c972d" target="_top" xlink:title="lcdReadButtons">
+<title>Node31</title>
+<g id="a_node4"><a xlink:href="_a_p_i_8h.html#a04541d90f60b1ccd3d036656673c972d" target="_top" xlink:title="Reads the user button status from the LCD display. ">
 <polygon fill="none" stroke="#000000" points="163.748,-.5 163.748,-18.5 250.3486,-18.5 250.3486,-.5 163.748,-.5"/>
 <text text-anchor="middle" x="207.0483" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">lcdReadButtons</text>
 </a>
 </g>
 </g>
-<!-- Node19&#45;&gt;Node22 -->
+<!-- Node28&#45;&gt;Node31 -->
 <g id="edge3" class="edge">
-<title>Node19&#45;&gt;Node22</title>
+<title>Node28&#45;&gt;Node31</title>
 <path fill="none" stroke="#191970" d="M127.9234,-19.4477C136.4985,-18.3696 145.2195,-17.2732 153.5869,-16.2212"/>
 <polygon fill="#191970" stroke="#191970" points="154.0989,-19.6845 163.5842,-14.9643 153.2257,-12.7392 154.0989,-19.6845"/>
 </g>
-<!-- Node21 -->
+<!-- Node30 -->
 <g id="node3" class="node">
-<title>Node21</title>
-<g id="a_node3"><a xlink:href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6" target="_top" xlink:title="printf">
+<title>Node30</title>
+<g id="a_node3"><a xlink:href="_a_p_i_8h.html#a403c82418e475fa4a8273719e6a7f3e6" target="_top" xlink:title="Prints the formatted string to the debug stream (the PC terminal). ">
 <polygon fill="none" stroke="#000000" points="286.3486,-37.5 286.3486,-55.5 324.5801,-55.5 324.5801,-37.5 286.3486,-37.5"/>
 <text text-anchor="middle" x="305.4644" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">printf</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node21 -->
+<!-- Node29&#45;&gt;Node30 -->
 <g id="edge2" class="edge">
-<title>Node20&#45;&gt;Node21</title>
+<title>Node29&#45;&gt;Node30</title>
 <path fill="none" stroke="#191970" d="M237.9178,-46.5C250.1257,-46.5 264.0909,-46.5 276.1427,-46.5"/>
 <polygon fill="#191970" stroke="#191970" points="276.149,-50.0001 286.1489,-46.5 276.1489,-43.0001 276.149,-50.0001"/>
 </g>

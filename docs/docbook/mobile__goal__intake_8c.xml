@@ -1,9 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="mobile__goal__intake_8c">
     <title>mobile_goal_intake.c File Reference</title>
-    <programlisting>#include &quot;mobile_goal_intake.h&quot;</programlisting>
-    <programlisting>#include &quot;log.h&quot;</programlisting>
-    <programlisting>#include &quot;partner.h&quot;</programlisting>
+<para>Include dependency diagram for mobile_goal_intake.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="mobile__goal__intake_8c__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for mobile_goal_intake.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="mobile__goal__intake_8c__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Functions</title>
             <para>
@@ -49,22 +68,20 @@ int n)<para><emphasis>sets the intake motor</emphasis></para>
     </simplesect>
     <literallayout><computeroutput>
 1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="mobile__goal__intake_8h">mobile_goal_intake.h</link>&quot;</emphasis>
-2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="log_8h">log.h</link>&quot;</emphasis>
-3 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="partner_8h">partner.h</link>&quot;</emphasis>
+2 
+<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">3 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(<emphasis class="keywordtype">int</emphasis>&#32;n)&#32;{&#32;<link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(MOBILE_INTAKE_MOTOR,&#32;n);&#32;}
 4 
-<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">5 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(<emphasis class="keywordtype">int</emphasis>&#32;n)&#32;{&#32;<link linkend="slew_8h_1a9f8b8ae577ef938622024545711f0151">set_motor_immediate</link>(<link linkend="motor__ports_8h_1a2badb0c22cf65b0e81743c90de9a3b41">INTAKE_MOTOR</link>,&#32;n);&#32;}
+<link linkend="mobile__goal__intake_8c_1aef03134014e51a6a90dd3824f09f4d6c">5 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8c_1aef03134014e51a6a90dd3824f09f4d6c">lower_intake</link>()&#32;{&#32;<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(-100);&#32;}
 6 
-<link linkend="mobile__goal__intake_8c_1aef03134014e51a6a90dd3824f09f4d6c">7 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8c_1aef03134014e51a6a90dd3824f09f4d6c">lower_intake</link>()&#32;{&#32;<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(-100);&#32;}
+<link linkend="mobile__goal__intake_8c_1aa46a9341d1eb7b39a2ef4cc5079ee3ca">7 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8c_1aa46a9341d1eb7b39a2ef4cc5079ee3ca">raise_intake</link>()&#32;{&#32;<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(100);&#32;}
 8 
-<link linkend="mobile__goal__intake_8c_1aa46a9341d1eb7b39a2ef4cc5079ee3ca">9 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8c_1aa46a9341d1eb7b39a2ef4cc5079ee3ca">raise_intake</link>()&#32;{&#32;<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(100);&#32;}
-10 
-<link linkend="mobile__goal__intake_8c_1a5d7bad8a208988af743fd2e68f111286">14 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8c_1a5d7bad8a208988af743fd2e68f111286">update_intake</link>()&#32;{
-15 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(joystickGetDigital(<link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link>,&#32;7,&#32;JOY_UP))&#32;{
-16 &#32;&#32;&#32;&#32;<link linkend="mobile__goal__intake_8c_1aa46a9341d1eb7b39a2ef4cc5079ee3ca">raise_intake</link>();
-17 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(joystickGetDigital(<link linkend="controller_8h_1a3fa2d3bf1901157f734a584d47b25d8b">MASTER</link>,&#32;7,&#32;JOY_DOWN))&#32;{
-18 &#32;&#32;&#32;&#32;<link linkend="mobile__goal__intake_8c_1aef03134014e51a6a90dd3824f09f4d6c">lower_intake</link>();
-19 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>
-20 &#32;&#32;&#32;&#32;<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(0);
-21 }
+<link linkend="mobile__goal__intake_8c_1a5d7bad8a208988af743fd2e68f111286">12 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8c_1a5d7bad8a208988af743fd2e68f111286">update_intake</link>()&#32;{
+13 &#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="_a_p_i_8h_1a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</link>(MASTER,&#32;8,&#32;JOY_UP))&#32;{
+14 &#32;&#32;&#32;&#32;<link linkend="mobile__goal__intake_8c_1aa46a9341d1eb7b39a2ef4cc5079ee3ca">raise_intake</link>();
+15 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="_a_p_i_8h_1a792f1a80c62a63e764cf64aabf95db92">joystickGetDigital</link>(MASTER,&#32;8,&#32;JOY_DOWN))&#32;{
+16 &#32;&#32;&#32;&#32;<link linkend="mobile__goal__intake_8c_1aef03134014e51a6a90dd3824f09f4d6c">lower_intake</link>();
+17 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>
+18 &#32;&#32;&#32;&#32;<link linkend="mobile__goal__intake_8c_1ab31e12bb0fa46c77906a048666b699d5">set_intake_motor</link>(0);
+19 }
     </computeroutput></literallayout>
 </section>

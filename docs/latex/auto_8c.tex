@@ -5,13 +5,25 @@
 File for autonomous code.  
 
 
-{\ttfamily \#include \char`\"{}auto.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \textbf{ auton\+\_\+drive\+\_\+towards\+\_\+mobile\+\_\+goal} (int counts\+\_\+drive, int counts\+\_\+drive\+\_\+left, int counts\+\_\+drive\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Drives the robot forward until it reaches the mobile goal. \end{DoxyCompactList}\item 
+void \textbf{ auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max} ()
+\begin{DoxyCompactList}\small\item\em utility function which raises the second lifter to its maximum height \end{DoxyCompactList}\item 
+void \textbf{ auton\+\_\+rasie\+\_\+main\+\_\+lifter} ()
+\begin{DoxyCompactList}\small\item\em utility function to raise the mainlifter to the mobile goal height \end{DoxyCompactList}\item 
+void \textbf{ auton\+\_\+turn\+\_\+180} ()
+\begin{DoxyCompactList}\small\item\em Rotates the robot 180 degrees clockwise. \end{DoxyCompactList}\item 
 void \textbf{ autonomous} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs the user autonomous code. \end{DoxyCompactList}\item 
+void \textbf{ deploy\+\_\+seoncdary\+\_\+lifter} ()
+\begin{DoxyCompactList}\small\item\em utility function which deploys the secondary lifter at the start of autonomous. \end{DoxyCompactList}\item 
+static void \textbf{ setup\+\_\+ime\+\_\+auton} (int $\ast$counts\+\_\+drive\+\_\+left, int $\ast$counts\+\_\+drive\+\_\+right, int $\ast$counts\+\_\+drive)
+\begin{DoxyCompactList}\small\item\em sets up the I\+M\+Es for the autonomous portion. \end{DoxyCompactList}\item 
+static void \textbf{ start\+\_\+auton} ()
+\begin{DoxyCompactList}\small\item\em Starts the auntonomous program. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Detailed Description}
@@ -28,21 +40,477 @@ Definition in file \textbf{ auto.\+c}.
 
 
 \subsubsection{Function Documentation}
+\mbox{\label{auto_8c_a42084538c07a7089a1fe425c4f97650a}} 
+\index{auto.\+c@{auto.\+c}!auton\+\_\+drive\+\_\+towards\+\_\+mobile\+\_\+goal@{auton\+\_\+drive\+\_\+towards\+\_\+mobile\+\_\+goal}}
+\index{auton\+\_\+drive\+\_\+towards\+\_\+mobile\+\_\+goal@{auton\+\_\+drive\+\_\+towards\+\_\+mobile\+\_\+goal}!auto.\+c@{auto.\+c}}
+\paragraph{auton\+\_\+drive\+\_\+towards\+\_\+mobile\+\_\+goal()}
+{\footnotesize\ttfamily void auton\+\_\+drive\+\_\+towards\+\_\+mobile\+\_\+goal (\begin{DoxyParamCaption}\item[{int}]{counts\+\_\+drive,  }\item[{int}]{counts\+\_\+drive\+\_\+left,  }\item[{int}]{counts\+\_\+drive\+\_\+right }\end{DoxyParamCaption})}
+
+
+
+Drives the robot forward until it reaches the mobile goal. 
+
+\begin{DoxyAuthor}{Author}
+Christian De\+Simone, Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 83} of file \textbf{ auto.\+c}.
+
+
+
+References \textbf{ B\+O\+TH}, \textbf{ ime\+Get()}, and \textbf{ set\+\_\+side\+\_\+speed()}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00084                                                              \{
+00085   \textcolor{keywordflow}{while} (counts\_drive < MOBILE\_GOAL\_DISTANCE) \{
+00086     set_side_speed(BOTH, 127);
+00087     \textcolor{comment}{// Restablish the distance traveled}
+00088     imeGet(MID\_LEFT\_DRIVE, &counts\_drive\_left);
+00089     imeGet(MID\_RIGHT\_DRIVE, &counts\_drive\_right);
+00090     counts\_drive = counts\_drive\_left + counts\_drive\_right;
+00091     counts\_drive /= 2;
+00092   \}
+00093 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{auto_8c_a42084538c07a7089a1fe425c4f97650a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{auto_8c_a42084538c07a7089a1fe425c4f97650a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{auto_8c_a55085901854f29969753bfd62c70049c}} 
+\index{auto.\+c@{auto.\+c}!auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max@{auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max}}
+\index{auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max@{auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max}!auto.\+c@{auto.\+c}}
+\paragraph{auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max()}
+{\footnotesize\ttfamily void auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+utility function which raises the second lifter to its maximum height 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett, Christian De\+Simone 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+M\+A\+X\+\_\+\+H\+E\+I\+G\+HT 
+\end{DoxySeeAlso}
+
+
+Definition at line \textbf{ 62} of file \textbf{ auto.\+c}.
+
+
+
+References \textbf{ analog\+Read()}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00062                                   \{
+00063   \textcolor{keywordflow}{while} (analogRead(SECONDARY\_LIFTER\_POT\_PORT) < MAX\_HEIGHT) \{
+00064     set_secondary_lifter_motors(MAX\_SPEED);
+00065   \}
+00066   set_secondary_lifter_motors(0);
+00067 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{auto_8c_a55085901854f29969753bfd62c70049c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{auto_8c_a55085901854f29969753bfd62c70049c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{auto_8c_a51a62a1a0851cc5939a2c6034849e380}} 
+\index{auto.\+c@{auto.\+c}!auton\+\_\+rasie\+\_\+main\+\_\+lifter@{auton\+\_\+rasie\+\_\+main\+\_\+lifter}}
+\index{auton\+\_\+rasie\+\_\+main\+\_\+lifter@{auton\+\_\+rasie\+\_\+main\+\_\+lifter}!auto.\+c@{auto.\+c}}
+\paragraph{auton\+\_\+rasie\+\_\+main\+\_\+lifter()}
+{\footnotesize\ttfamily void auton\+\_\+rasie\+\_\+main\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+utility function to raise the mainlifter to the mobile goal height 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett, Christian De\+Simone 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 73} of file \textbf{ auto.\+c}.
+
+
+
+References \textbf{ analog\+Read()}, and \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00073                                \{
+00074   \textcolor{keywordflow}{while} (analogRead(MAIN\_LIFTER\_POT) < MOBILE\_GOAL\_HEIGHT) \{
+00075     set_main_lifter_motors(MAX\_SPEED);
+00076   \}
+00077   set_main_lifter_motors(0);
+00078 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{auto_8c_a51a62a1a0851cc5939a2c6034849e380_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{auto_8c_a51a62a1a0851cc5939a2c6034849e380_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{auto_8c_a8141105864165fcb16d70f7cc72a1b6f}} 
+\index{auto.\+c@{auto.\+c}!auton\+\_\+turn\+\_\+180@{auton\+\_\+turn\+\_\+180}}
+\index{auton\+\_\+turn\+\_\+180@{auton\+\_\+turn\+\_\+180}!auto.\+c@{auto.\+c}}
+\paragraph{auton\+\_\+turn\+\_\+180()}
+{\footnotesize\ttfamily void auton\+\_\+turn\+\_\+180 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rotates the robot 180 degrees clockwise. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett, Christian De\+Simone 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 98} of file \textbf{ auto.\+c}.
+
+
+
+References \textbf{ B\+O\+TH}, \textbf{ calculate\+\_\+encoder\+\_\+angle()}, \textbf{ L\+E\+FT}, \textbf{ R\+I\+G\+HT}, and \textbf{ set\+\_\+side\+\_\+speed()}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00098                       \{
+00099   \textcolor{keywordtype}{int} ang = 0;
+00100   \textcolor{keywordflow}{while} (ang < HALF\_ROTATE) \{
+00101     ang += calculate_encoder_angle();
+00102     set_side_speed(LEFT, MAX\_SPEED);
+00103     set_side_speed(RIGHT, MIN\_SPEED);
+00104   \}
+00105   set_side_speed(BOTH, 0);
+00106 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{auto_8c_a8141105864165fcb16d70f7cc72a1b6f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{auto_8c_a8141105864165fcb16d70f7cc72a1b6f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\label{auto_8c_a3c7ca506bbc071fa740de13805b7f376}} 
 \index{auto.\+c@{auto.\+c}!autonomous@{autonomous}}
 \index{autonomous@{autonomous}!auto.\+c@{auto.\+c}}
 \paragraph{autonomous()}
 {\footnotesize\ttfamily void autonomous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Runs the user autonomous code. This function will be started in its own task with the default priority and stack size whenever the robot is enabled via the Field Management System or the V\+EX Competition Switch in the autonomous mode. If the robot is disabled or communications is lost, the autonomous task will be stopped by the kernel. Re-\/enabling the robot will restart the task, not re-\/start it from where it left off.
+
+
+Runs the user autonomous code. 
+
+This function will be started in its own task with the default priority and stack size whenever the robot is enabled via the Field Management System or the V\+EX Competition Switch in the autonomous mode. If the robot is disabled or communications is lost, the autonomous task will be stopped by the kernel. Re-\/enabling the robot will restart the task, not re-\/start it from where it left off.
 
 Code running in the autonomous task cannot access information from the V\+EX Joystick. However, the autonomous function can be invoked from another task if a V\+EX Competition Switch is not available, and it can access joystick information if called in this way.
 
 The autonomous task may exit, unlike \doxyref{operator\+Control()}{p.}{main_8h_ac71a94af413917f27d108e95c4d6f6a7} which should never exit. If it does so, the robot will await a switch to another mode or disable/enable cycle. 
 
-Definition at line \textbf{ 34} of file \textbf{ auto.\+c}.
+Definition at line \textbf{ 125} of file \textbf{ auto.\+c}.
 
 
 
-References \textbf{ B\+O\+TH}, \textbf{ calculate\+\_\+encoder\+\_\+angle()}, \textbf{ close\+\_\+claw()}, \textbf{ deinitslew()}, \textbf{ D\+E\+P\+L\+O\+Y\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ H\+A\+L\+F\+\_\+\+R\+O\+T\+A\+TE}, \textbf{ init\+\_\+slew()}, \textbf{ L\+E\+FT}, \textbf{ lower\+\_\+intake()}, \textbf{ L\+O\+W\+E\+S\+T\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ M\+A\+I\+N\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+OT}, \textbf{ M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ M\+A\+X\+\_\+\+S\+P\+E\+ED}, \textbf{ M\+I\+D\+\_\+\+L\+E\+F\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ M\+I\+D\+\_\+\+R\+I\+G\+H\+T\+\_\+\+D\+R\+I\+VE}, \textbf{ M\+I\+N\+\_\+\+S\+P\+E\+ED}, \textbf{ M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE}, \textbf{ M\+O\+B\+I\+L\+E\+\_\+\+G\+O\+A\+L\+\_\+\+H\+E\+I\+G\+HT}, \textbf{ open\+\_\+claw()}, \textbf{ raise\+\_\+intake()}, \textbf{ R\+I\+G\+HT}, \textbf{ S\+E\+C\+O\+N\+D\+A\+R\+Y\+\_\+\+L\+I\+F\+T\+E\+R\+\_\+\+P\+O\+T\+\_\+\+P\+O\+RT}, \textbf{ set\+\_\+claw\+\_\+motor()}, \textbf{ set\+\_\+intake\+\_\+motor()}, \textbf{ set\+\_\+main\+\_\+lifter\+\_\+motors()}, \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}, \textbf{ set\+\_\+side\+\_\+speed()}, and \textbf{ Z\+O\+N\+E\+\_\+\+D\+I\+S\+T\+A\+N\+CE}.
+References \textbf{ auton\+\_\+drive\+\_\+towards\+\_\+mobile\+\_\+goal()}, \textbf{ auton\+\_\+raise\+\_\+sec\+\_\+lifter\+\_\+max()}, \textbf{ auton\+\_\+rasie\+\_\+main\+\_\+lifter()}, \textbf{ auton\+\_\+turn\+\_\+180()}, \textbf{ B\+O\+TH}, \textbf{ claw\+\_\+grab\+\_\+cone()}, \textbf{ deinitslew()}, \textbf{ delay()}, \textbf{ deploy\+\_\+seoncdary\+\_\+lifter()}, \textbf{ ime\+Get()}, \textbf{ info()}, \textbf{ lower\+\_\+intake()}, \textbf{ raise\+\_\+intake()}, \textbf{ set\+\_\+intake\+\_\+motor()}, \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}, \textbf{ set\+\_\+side\+\_\+speed()}, \textbf{ setup\+\_\+ime\+\_\+auton()}, and \textbf{ start\+\_\+auton()}.
 
+
+\begin{DoxyCode}
+00125                   \{
+00126   start_auton();
+00127 
+00128   \textcolor{comment}{// How far the left wheels have gone}
+00129   \textcolor{keywordtype}{int} counts\_drive\_left;
+00130   \textcolor{comment}{// How far the right wheels have gone}
+00131   \textcolor{keywordtype}{int} counts\_drive\_right;
+00132   \textcolor{comment}{// The average distance traveled forward}
+00133   \textcolor{keywordtype}{int} counts\_drive;
+00134 
+00135   \textcolor{comment}{// Reset the integrated motor controllers}
+00136   setup_ime_auton(&counts\_drive\_left, &counts\_drive\_right, &counts\_drive);
+00137   info(\textcolor{stringliteral}{"break 0"});
+00138   \textcolor{comment}{// Deploy claw}
+00139   deploy_seoncdary_lifter();
+00140   info(\textcolor{stringliteral}{"break 1"});
+00141 
+00142   info(\textcolor{stringliteral}{"break 2"});
+00143   set_secondary_lifter_motors(0);
+00144 
+00145   \textcolor{comment}{// Grab pre-load cone}
+00146   delay(300);
+00147 
+00148   auton_raise_sec_lifter_max();
+00149   \textcolor{comment}{// Raise the lifter}
+00150   auton_rasie_main_lifter();
+00151   \textcolor{comment}{// Drive towards the goal}
+00152 
+00153   lower_intake();
+00154   delay(300);
+00155   set_intake_motor(0);
+00156 
+00157   auton_drive_towards_mobile_goal(counts\_drive, counts\_drive\_left,
+00158                                   counts\_drive\_right);
+00159   \textcolor{comment}{// Stop moving}
+00160   set_side_speed(BOTH, 0);
+00161   delay(1000);
+00162 
+00163   raise_intake();
+00164   delay(300);
+00165   set_intake_motor(0);
+00166 
+00167   \textcolor{comment}{// Drop the cone on the goal}
+00168   claw_grab_cone();
+00169   delay(1000);
+00170 
+00171   auton_turn_180();
+00172 
+00173   counts\_drive = 0;
+00174 
+00175   \textcolor{keywordflow}{while} (counts\_drive < MOBILE\_GOAL\_DISTANCE + ZONE\_DISTANCE) \{
+00176     set_side_speed(BOTH, 127);
+00177     \textcolor{comment}{// Restablish the distance traveled}
+00178     imeGet(MID\_LEFT\_DRIVE, &counts\_drive\_left);
+00179     imeGet(MID\_RIGHT\_DRIVE, &counts\_drive\_right);
+00180     counts\_drive = counts\_drive\_left + counts\_drive\_right;
+00181     counts\_drive /= 2;
+00182   \}
+00183 
+00184   lower_intake();
+00185   delay(300);
+00186   set_intake_motor(0);
+00187 
+00188   set_side_speed(BOTH, MIN\_SPEED);
+00189   delay(1000);
+00190   set_side_speed(BOTH, 0);
+00191 
+00192   deinitslew();
+00193 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{auto_8c_a3c7ca506bbc071fa740de13805b7f376_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{auto_8c_a64bd65456b81f16eb4ff67237159f984}} 
+\index{auto.\+c@{auto.\+c}!deploy\+\_\+seoncdary\+\_\+lifter@{deploy\+\_\+seoncdary\+\_\+lifter}}
+\index{deploy\+\_\+seoncdary\+\_\+lifter@{deploy\+\_\+seoncdary\+\_\+lifter}!auto.\+c@{auto.\+c}}
+\paragraph{deploy\+\_\+seoncdary\+\_\+lifter()}
+{\footnotesize\ttfamily void deploy\+\_\+seoncdary\+\_\+lifter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+utility function which deploys the secondary lifter at the start of autonomous. 
+
+\begin{DoxyAuthor}{Author}
+Christian De\+Simone, Chris Jerrett 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 50} of file \textbf{ auto.\+c}.
+
+
+
+References \textbf{ analog\+Read()}, and \textbf{ set\+\_\+secondary\+\_\+lifter\+\_\+motors()}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00050                                \{
+00051   \textcolor{keywordflow}{while} (analogRead(SECONDARY\_LIFTER\_POT\_PORT) < DEPLOY\_HEIGHT) \{
+00052     set_secondary_lifter_motors(MAX\_SPEED);
+00053   \}
+00054   set_secondary_lifter_motors(0);
+00055 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{auto_8c_a64bd65456b81f16eb4ff67237159f984_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{auto_8c_a64bd65456b81f16eb4ff67237159f984_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{auto_8c_ac033c02ada6071c5f064cac73bead0fd}} 
+\index{auto.\+c@{auto.\+c}!setup\+\_\+ime\+\_\+auton@{setup\+\_\+ime\+\_\+auton}}
+\index{setup\+\_\+ime\+\_\+auton@{setup\+\_\+ime\+\_\+auton}!auto.\+c@{auto.\+c}}
+\paragraph{setup\+\_\+ime\+\_\+auton()}
+{\footnotesize\ttfamily static void setup\+\_\+ime\+\_\+auton (\begin{DoxyParamCaption}\item[{int $\ast$}]{counts\+\_\+drive\+\_\+left,  }\item[{int $\ast$}]{counts\+\_\+drive\+\_\+right,  }\item[{int $\ast$}]{counts\+\_\+drive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+sets up the I\+M\+Es for the autonomous portion. 
+
+\begin{DoxyAuthor}{Author}
+Christian De\+Simone, Chris Jerrett 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em counts\+\_\+drive\+\_\+left} & The encoder value from the left motors \\
+\hline
+{\em counts\+\_\+drive\+\_\+right} & The encoder value from the right motors \\
+\hline
+{\em counts\+\_\+drive} & The average encoder value from both sides \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \textbf{ 24} of file \textbf{ auto.\+c}.
+
+
+
+References \textbf{ ime\+Get()}, and \textbf{ ime\+Reset()}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00025                                                                                \{
+00026   imeReset(MID\_LEFT\_DRIVE);
+00027   imeReset(MID\_RIGHT\_DRIVE);
+00028   \textcolor{comment}{// Set initial values for how far the wheels have gone}
+00029   imeGet(MID\_LEFT\_DRIVE, counts\_drive\_left);
+00030   imeGet(MID\_RIGHT\_DRIVE, counts\_drive\_right);
+00031   *counts\_drive = *counts\_drive\_left + *counts\_drive\_right;
+00032   *counts\_drive /= 2;
+00033 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{auto_8c_ac033c02ada6071c5f064cac73bead0fd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{auto_8c_ac033c02ada6071c5f064cac73bead0fd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{auto_8c_ae66ea80c777135c9f4d288a05f40ca86}} 
+\index{auto.\+c@{auto.\+c}!start\+\_\+auton@{start\+\_\+auton}}
+\index{start\+\_\+auton@{start\+\_\+auton}!auto.\+c@{auto.\+c}}
+\paragraph{start\+\_\+auton()}
+{\footnotesize\ttfamily static void start\+\_\+auton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Starts the auntonomous program. 
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett, Christian De\+Simone 
+\end{DoxyAuthor}
+
+
+Definition at line \textbf{ 39} of file \textbf{ auto.\+c}.
+
+
+
+References \textbf{ delay()}, \textbf{ info()}, and \textbf{ init\+\_\+slew()}.
+
+
+
+Referenced by \textbf{ autonomous()}.
+
+
+\begin{DoxyCode}
+00039               \{ \textcolor{comment}{// starts the slew rate controller to prevent ptc trips}
+00040   init_slew();
+00041 
+00042   delay(10);
+00043   info(\textcolor{stringliteral}{"AUTO"});
+00044 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{auto_8c_ae66ea80c777135c9f4d288a05f40ca86_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{auto_8c_ae66ea80c777135c9f4d288a05f40ca86_icgraph}
+\end{center}
+\end{figure}

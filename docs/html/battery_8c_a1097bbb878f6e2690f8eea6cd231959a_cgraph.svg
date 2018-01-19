@@ -8,69 +8,69 @@
  viewBox="0.00 0.00 429.31 64.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 60)">
 <title>battery_level_acceptable</title>
-<!-- Node4 -->
+<!-- Node5 -->
 <g id="node1" class="node">
-<title>Node4</title>
+<title>Node5</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-18.5 0,-36.5 126.6299,-36.5 126.6299,-18.5 0,-18.5"/>
 <text text-anchor="middle" x="63.3149" y="-24.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">battery_level_acceptable</text>
 </g>
-<!-- Node5 -->
+<!-- Node6 -->
 <g id="node2" class="node">
-<title>Node5</title>
+<title>Node6</title>
 <g id="a_node2"><a xlink:href="battery_8c.html#a9b1c5cf7ddddebf63796050a1d4a9969" target="_top" xlink:title="gets the backup battery voltage ">
 <polygon fill="none" stroke="#000000" points="162.6299,-37.5 162.6299,-55.5 284.8164,-55.5 284.8164,-37.5 162.6299,-37.5"/>
 <text text-anchor="middle" x="223.7231" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">backup_battery_voltage</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node5 -->
+<!-- Node5&#45;&gt;Node6 -->
 <g id="edge1" class="edge">
-<title>Node4&#45;&gt;Node5</title>
+<title>Node5&#45;&gt;Node6</title>
 <path fill="none" stroke="#191970" d="M126.7125,-35.0093C135.2097,-36.0158 143.9705,-37.0535 152.5896,-38.0744"/>
 <polygon fill="#191970" stroke="#191970" points="152.2762,-41.5617 162.6185,-39.2623 153.0996,-34.6102 152.2762,-41.5617"/>
 </g>
-<!-- Node7 -->
+<!-- Node8 -->
 <g id="node4" class="node">
-<title>Node7</title>
+<title>Node8</title>
 <g id="a_node4"><a xlink:href="battery_8c.html#a8c92c389534fdb079698cdebeb7f2efa" target="_top" xlink:title="gets the main battery voltage ">
 <polygon fill="none" stroke="#000000" points="167.9155,-.5 167.9155,-18.5 279.5308,-18.5 279.5308,-.5 167.9155,-.5"/>
 <text text-anchor="middle" x="223.7231" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">main_battery_voltage</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node7 -->
+<!-- Node5&#45;&gt;Node8 -->
 <g id="edge3" class="edge">
-<title>Node4&#45;&gt;Node7</title>
+<title>Node5&#45;&gt;Node8</title>
 <path fill="none" stroke="#191970" d="M126.7125,-20.3859C136.8928,-19.2436 147.4512,-18.0588 157.6914,-16.9097"/>
 <polygon fill="#191970" stroke="#191970" points="158.2523,-20.3688 167.7996,-15.7754 157.4716,-13.4124 158.2523,-20.3688"/>
 </g>
-<!-- Node6 -->
+<!-- Node7 -->
 <g id="node3" class="node">
-<title>Node6</title>
-<g id="a_node3"><a xlink:href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd" target="_top" xlink:title="powerLevelBackup">
+<title>Node7</title>
+<g id="a_node3"><a xlink:href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd" target="_top" xlink:title="Returns the backup battery voltage in millivolts. ">
 <polygon fill="none" stroke="#000000" points="320.8164,-37.5 320.8164,-55.5 421.3135,-55.5 421.3135,-37.5 320.8164,-37.5"/>
 <text text-anchor="middle" x="371.0649" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">powerLevelBackup</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node6 -->
+<!-- Node6&#45;&gt;Node7 -->
 <g id="edge2" class="edge">
-<title>Node5&#45;&gt;Node6</title>
+<title>Node6&#45;&gt;Node7</title>
 <path fill="none" stroke="#191970" d="M284.9293,-46.5C293.361,-46.5 302.017,-46.5 310.4382,-46.5"/>
 <polygon fill="#191970" stroke="#191970" points="310.5628,-50.0001 320.5628,-46.5 310.5627,-43.0001 310.5628,-50.0001"/>
 </g>
-<!-- Node8 -->
+<!-- Node9 -->
 <g id="node5" class="node">
-<title>Node8</title>
-<g id="a_node5"><a xlink:href="_a_p_i_8h.html#aeb5efefae0d6fa559dae5a7e5a77c956" target="_top" xlink:title="powerLevelMain">
+<title>Node9</title>
+<g id="a_node5"><a xlink:href="_a_p_i_8h.html#aeb5efefae0d6fa559dae5a7e5a77c956" target="_top" xlink:title="Returns the main battery voltage in millivolts. ">
 <polygon fill="none" stroke="#000000" points="326.6563,-.5 326.6563,-18.5 415.4736,-18.5 415.4736,-.5 326.6563,-.5"/>
 <text text-anchor="middle" x="371.0649" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">powerLevelMain</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node8 -->
+<!-- Node8&#45;&gt;Node9 -->
 <g id="edge4" class="edge">
-<title>Node7&#45;&gt;Node8</title>
+<title>Node8&#45;&gt;Node9</title>
 <path fill="none" stroke="#191970" d="M279.8471,-9.5C291.7981,-9.5 304.4033,-9.5 316.3026,-9.5"/>
 <polygon fill="#191970" stroke="#191970" points="316.5437,-13.0001 326.5437,-9.5 316.5436,-6.0001 316.5437,-13.0001"/>
 </g>

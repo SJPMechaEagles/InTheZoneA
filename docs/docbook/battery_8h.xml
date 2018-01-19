@@ -1,26 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="battery_8h">
     <title>battery.h File Reference</title>
-    <programlisting>#include &lt;API.h&gt;</programlisting>
-        <section>
-            <title>Macros</title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="battery_8h_1a0713ec94f47c403bf536ab6b11833b81">MIN_BACKUP_VOLTAGE</link> 7.8<para><emphasis>The minimum acceptable backup battery voltage beofre a match.</emphasis></para>
+<para>Include dependency diagram for battery.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="battery_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>#define <link linkend="battery_8h_1a63f8a91bb74417aa77dc00340b6fd007">MIN_MAIN_VOLTAGE</link> 7.8<para><emphasis>The minimum acceptable main battery voltage beofre a match.</emphasis></para>
+<para>Included by dependency diagram for battery.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="battery_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
 </para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
         <section>
             <title>Functions</title>
             <para>
@@ -72,11 +74,11 @@
 7 <emphasis class="preprocessor">#ifndef&#32;_BATTERY_H_</emphasis>
 8 <emphasis class="preprocessor">#define&#32;_BATTERY_H_</emphasis>
 9 
-10 <emphasis class="preprocessor">#include&#32;&lt;API.h&gt;</emphasis>
+10 <emphasis class="preprocessor">#include&#32;&lt;<link linkend="_a_p_i_8h">API.h</link>&gt;</emphasis>
 11 
-<link linkend="battery_8h_1a63f8a91bb74417aa77dc00340b6fd007">15 </link><emphasis class="preprocessor">#define&#32;MIN_MAIN_VOLTAGE&#32;7.8</emphasis>
+15 <emphasis class="preprocessor">#define&#32;MIN_MAIN_VOLTAGE&#32;7.8</emphasis>
 16 
-<link linkend="battery_8h_1a0713ec94f47c403bf536ab6b11833b81">20 </link><emphasis class="preprocessor">#define&#32;MIN_BACKUP_VOLTAGE&#32;7.8</emphasis>
+20 <emphasis class="preprocessor">#define&#32;MIN_BACKUP_VOLTAGE&#32;7.8</emphasis>
 21 
 26 <emphasis class="keywordtype">double</emphasis>&#32;<link linkend="battery_8h_1a8c92c389534fdb079698cdebeb7f2efa">main_battery_voltage</link>();
 27 

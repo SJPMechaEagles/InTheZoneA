@@ -1,51 +1,12 @@
 \subsection{include/gyro.h File Reference}
 \label{gyro_8h}\index{include/gyro.\+h@{include/gyro.\+h}}
-{\ttfamily \#include \char`\"{}A\+P\+I.\+h\char`\"{}}\newline
-\subsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \textbf{ G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}~0
-\item 
-\#define \textbf{ G\+Y\+R\+O\+\_\+\+P\+O\+RT}~1
-\end{DoxyCompactItemize}
 \subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 float \textbf{ get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Gets the Gyro angular velocity. \end{DoxyCompactList}\item 
 bool \textbf{ init\+\_\+main\+\_\+gyro} ()
-\end{DoxyCompactItemize}
-
-
-\subsubsection{Macro Definition Documentation}
-\mbox{\label{gyro_8h_a482017cc25be9213fef3222112eb1c7f}} 
-\index{gyro.\+h@{gyro.\+h}!G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER@{G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}}
-\index{G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER@{G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}!gyro.\+h@{gyro.\+h}}
-\paragraph{G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}
-{\footnotesize\ttfamily \#define G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER~0}
-
-
-
-Definition at line \textbf{ 7} of file \textbf{ gyro.\+h}.
-
-
-
-Referenced by \textbf{ init\+\_\+main\+\_\+gyro()}.
-
-\mbox{\label{gyro_8h_a51d281e7676749d34aab3f8ba6fab960}} 
-\index{gyro.\+h@{gyro.\+h}!G\+Y\+R\+O\+\_\+\+P\+O\+RT@{G\+Y\+R\+O\+\_\+\+P\+O\+RT}}
-\index{G\+Y\+R\+O\+\_\+\+P\+O\+RT@{G\+Y\+R\+O\+\_\+\+P\+O\+RT}!gyro.\+h@{gyro.\+h}}
-\paragraph{G\+Y\+R\+O\+\_\+\+P\+O\+RT}
-{\footnotesize\ttfamily \#define G\+Y\+R\+O\+\_\+\+P\+O\+RT~1}
-
-
-
-Definition at line \textbf{ 6} of file \textbf{ gyro.\+h}.
-
-
-
-Referenced by \textbf{ get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity()}, and \textbf{ init\+\_\+main\+\_\+gyro()}.
-
+\begin{DoxyCompactList}\small\item\em Initializes the main robot gryoscope/ Only call function when robot still and ready to start autonomous. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsubsection{Function Documentation}
@@ -57,12 +18,51 @@ Referenced by \textbf{ get\+\_\+main\+\_\+gyro\+\_\+angluar\+\_\+velocity()}, an
 
 
 
-Definition at line \textbf{ 10} of file \textbf{ gyro.\+c}.
+Gets the Gyro angular velocity. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\textbf{ Todo}]\end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+the angular velocity 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/30/17
+\end{DoxyDate}
+Gets the Gyro angular velocity.
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+G\+Y\+R\+O\+\_\+\+P\+O\+RT 
+\end{DoxySeeAlso}
+
+
+Definition at line \textbf{ 20} of file \textbf{ gyro.\+c}.
 
 
 
-References \textbf{ G\+Y\+R\+O\+\_\+\+P\+O\+RT}.
+References \textbf{ analog\+Read\+Calibrated\+H\+R()}.
 
+
+\begin{DoxyCode}
+00020                                        \{
+00021   uint32\_t port = GYRO\_PORT;
+00022   int32\_t reading = (int32\_t)analogReadCalibratedHR(port + 1);
+00023   \textcolor{keywordflow}{return} 0;
+00024 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gyro_8h_aec0963ebe3eb6cdfd7edaf486bbb0a87_cgraph}
+\end{center}
+\end{figure}
 \mbox{\label{gyro_8h_a47c0a78a867be91a28e278bf433d699c}} 
 \index{gyro.\+h@{gyro.\+h}!init\+\_\+main\+\_\+gyro@{init\+\_\+main\+\_\+gyro}}
 \index{init\+\_\+main\+\_\+gyro@{init\+\_\+main\+\_\+gyro}!gyro.\+h@{gyro.\+h}}
@@ -71,9 +71,47 @@ References \textbf{ G\+Y\+R\+O\+\_\+\+P\+O\+RT}.
 
 
 
-Definition at line \textbf{ 5} of file \textbf{ gyro.\+c}.
+Initializes the main robot gryoscope/ Only call function when robot still and ready to start autonomous. 
+
+Robot should not move for five seconds while Gyro calibrates \begin{DoxyReturn}{Returns}
+if the Gyro was sucessfully calibrated 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+11/30/17 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Chris Jerrett
+\end{DoxyAuthor}
+Initializes the main robot gryoscope/ Only call function when robot still and ready to start autonomous.
+
+\begin{DoxyAuthor}{Author}
+Chris Jerrett 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+G\+Y\+R\+O\+\_\+\+P\+O\+RT 
+
+G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER 
+\end{DoxySeeAlso}
+
+
+Definition at line \textbf{ 10} of file \textbf{ gyro.\+c}.
 
 
 
-References \textbf{ G\+Y\+R\+O\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER}, \textbf{ G\+Y\+R\+O\+\_\+\+P\+O\+RT}, and \textbf{ main\+\_\+gyro}.
+References \textbf{ gyro\+Init()}, and \textbf{ main\+\_\+gyro}.
 
+
+\begin{DoxyCode}
+00010                       \{
+00011   main_gyro = gyroInit(GYRO\_PORT, GYRO\_MULTIPLIER);
+00012   \textcolor{keywordflow}{return} main_gyro != NULL;
+00013 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{gyro_8h_a47c0a78a867be91a28e278bf433d699c_cgraph}
+\end{center}
+\end{figure}

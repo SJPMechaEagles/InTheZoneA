@@ -17,7 +17,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd" target="_top" xlink:title="powerLevelBackup">
+<g id="a_node2"><a xlink:href="_a_p_i_8h.html#a91ac9eacbf0930cd5f26bc12b90b9efd" target="_top" xlink:title="Returns the backup battery voltage in millivolts. ">
 <polygon fill="none" stroke="#000000" points="158.1865,-.5 158.1865,-18.5 258.6836,-18.5 258.6836,-.5 158.1865,-.5"/>
 <text text-anchor="middle" x="208.4351" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">powerLevelBackup</text>
 </a>

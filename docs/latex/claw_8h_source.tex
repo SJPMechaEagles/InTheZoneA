@@ -8,7 +8,7 @@
 00009 
 00010 \textcolor{preprocessor}{#include "controller.h"}
 00011 \textcolor{preprocessor}{#include "motor_ports.h"}
-00012 \textcolor{preprocessor}{#include "sensor_ports.h"}
+00012 \textcolor{preprocessor}{#include "sensors.h"}
 00013 \textcolor{preprocessor}{#include "slew.h"}
 00014 \textcolor{preprocessor}{#include <API.h>}
 00015 
@@ -16,9 +16,9 @@
 00021 
 00025 \textcolor{preprocessor}{#define MIN\_CLAW\_SPEED -127}
 00026 
-00031 \textcolor{preprocessor}{#define CLAW\_CLOSE MASTER, 5, JOY\_UP}
+00031 \textcolor{preprocessor}{#define CLAW\_CLOSE PARTNER, 8, JOY\_DOWN}
 00032 
-00037 \textcolor{preprocessor}{#define CLAW\_OPEN MASTER, 5, JOY\_DOWN}
+00037 \textcolor{preprocessor}{#define CLAW\_OPEN PARTNER, 8, JOY\_RIGHT}
 00038 
 00043 \textcolor{preprocessor}{#define CLAW\_CLOSE\_VAL 3000}
 00044 
@@ -30,9 +30,9 @@
 00062 
 00067 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getClawTicks();
 00068 
-00073 \textcolor{keywordtype}{void} open_claw();
+00073 \textcolor{keywordtype}{void} claw_grab_cone();
 00074 
-00079 \textcolor{keywordtype}{void} close_claw();
+00079 \textcolor{keywordtype}{void} claw_release_cone();
 00080 
 00085 \textcolor{keyword}{enum} claw_state \{ CLAW_OPEN_STATE, CLAW_CLOSE_STATE, CLAW_NEUTRAL_STATE \};
 00086 

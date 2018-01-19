@@ -1,9 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="mobile__goal__intake_8h">
     <title>mobile_goal_intake.h File Reference</title>
-    <programlisting>#include &quot;controller.h&quot;</programlisting>
-    <programlisting>#include &quot;motor_ports.h&quot;</programlisting>
-    <programlisting>#include &quot;slew.h&quot;</programlisting>
+<para>Include dependency diagram for mobile_goal_intake.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="mobile__goal__intake_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for mobile_goal_intake.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="mobile__goal__intake_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
         <section>
             <title>Functions</title>
             <para>
@@ -63,7 +82,6 @@ int n)<para><emphasis>sets the intake motor</emphasis></para>
 25 
 29 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="mobile__goal__intake_8h_1aef03134014e51a6a90dd3824f09f4d6c">lower_intake</link>();
 30 
-31 
-32 <emphasis class="preprocessor">#endif</emphasis>
+31 <emphasis class="preprocessor">#endif</emphasis>
     </computeroutput></literallayout>
 </section>

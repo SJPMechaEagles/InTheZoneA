@@ -3,8 +3,6 @@ var list_8h =
     [ "list_iterator_t", "structlist__iterator__t.html", "structlist__iterator__t" ],
     [ "list_node", "structlist__node.html", "structlist__node" ],
     [ "list_t", "structlist__t.html", "structlist__t" ],
-    [ "LIST_FREE", "list_8h.html#a8968cfdd1e3404352d2c43dcb3bde04a", null ],
-    [ "LIST_MALLOC", "list_8h.html#ab80cb68ecaaf76c970758cd702641cee", null ],
     [ "list_node_t", "list_8h.html#ad8b8636e2e25308b521b32071e849c80", null ],
     [ "list_direction_t", "list_8h.html#a2c3af7de0b7ab9c3a84fbc039e75ec66", [
       [ "LIST_HEAD", "list_8h.html#a2c3af7de0b7ab9c3a84fbc039e75ec66abdf0fd732c6a91b57c5cbea177f1ae00", null ],

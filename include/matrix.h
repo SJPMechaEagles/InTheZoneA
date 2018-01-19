@@ -26,11 +26,16 @@ typedef struct _matrix {
  * If the assertion is zero (i.e. false), then it display the string and
  * aborts the program.
  * This is ment to act like Python's assert keyword.
+ * @param assertion the condition, acts like a bollean 0 = false else true
+ * @param message the message to print if it fails
  **/
 void assert(int assertion, const char *message);
 
 /**
  * @brief Makes a matrix with a width and height parameters.
+ *  @param width The width of the matrix
+ * @param height the height of the matrix
+ * @return the new matrix
  **/
 matrix *makeMatrix(int width, int height);
 
@@ -45,13 +50,13 @@ matrix *copyMatrix(matrix *m);
 
 /**
  * @brief Frees the resources of a matrix
- * @param the matrix to free
+ * @param m the matrix to free
  **/
 void freeMatrix(matrix *m);
 
 /**
  * @brief Prints a matrix.
- * @param the matrix
+ * @param m the matrix
  **/
 void printMatrix(matrix *m);
 
@@ -66,6 +71,7 @@ matrix *identityMatrix(int n);
  * @brief Given an "m rows by n columns" matrix
  * @return the sum of the elements
  * along the diagonal.
+ * param m the matrix to trace
  **/
 double traceMatrix(matrix *m);
 
