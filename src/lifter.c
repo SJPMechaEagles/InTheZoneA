@@ -1,8 +1,4 @@
-#include "lifter.h"
-#include "claw.h"
-#include "log.h"
-#include "sensors.h"
-#include "motor_ports.h"
+
 
 bool lifter_autostack_running = false;
 static bool lifter_autostack_routine_interupt = false;
@@ -132,7 +128,9 @@ void set_secondary_lifter_motors(const int v) {
  * @author Chris Jerrett
  * @date 9/9/2017
  **/
-void set_main_lifter_motors(const int v) { set_motor_slew(MOTOR_MAIN_LIFTER, v); }
+void set_main_lifter_motors(const int v) {
+	set_motor_slew(MOTOR_MAIN_LIFTER, v);
+}
 
 /**
  * @brief Sets the lifter positions to the given value
@@ -249,7 +247,7 @@ static void secondary_lifter_update() {
     count = 0;
     second_i = 0;
     second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
-	  open_claw();
+	  claw_grab_cone();
   } else if (joystickGetDigital(SECONDARY_LIFTER_UP)) {
     second_motor_speed = MIN_SPEED;
     count = 0;

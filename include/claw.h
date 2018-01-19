@@ -70,13 +70,13 @@ unsigned int getClawTicks();
  * @brief Drives the motors to open the claw
  * @author Chris Jerrett
  **/
-void open_claw();
+void claw_grab_cone();
 
 /**
  * @brief Drives the motors to close the claw
  * @author Chris Jerrett
  **/
-void close_claw();
+void claw_release_cone();
 
 /**
  * @brief The different states of the claw

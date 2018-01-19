@@ -5,8 +5,6 @@
 // Copyright (c) 2010 TJ Holowaychuk <tj@vision-media.ca>
 //
 
-#include "list.h"
-
 /*
  * Allocate a new list_iterator_t. NULL on failure.
  * Accepts a direction, which may be LIST_HEAD or LIST_TAIL.

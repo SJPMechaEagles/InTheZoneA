@@ -1,5 +1,4 @@
-#include "mobile_goal_intake.h"
-#include "log.h"
+
 
 void set_intake_motor(int n) { set_motor_immediate(MOBILE_INTAKE_MOTOR, n); }
 
