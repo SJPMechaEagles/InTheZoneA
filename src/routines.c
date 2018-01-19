@@ -1,4 +1,8 @@
-
+#include "routines.h"
+#include "controller.h"
+#include "list.h"
+#include "log.h"
+#include "toggle.h"
 
 static list_t *routine_list;
 
@@ -13,8 +17,8 @@ void routine_task() {
         routine_t *routine = (routine_t *)(node->val);
         if (buttonIsNewPress(routine->on_button)) {
           TaskHandle task =
-                  taskCreate(routine->routine, TASK_DEFAULT_STACK_SIZE, NULL,
-                             TASK_PRIORITY_DEFAULT);
+              taskCreate(routine->routine, TASK_DEFAULT_STACK_SIZE, NULL,
+                         TASK_PRIORITY_DEFAULT);
         }
       }
     }
@@ -31,7 +35,7 @@ void init_routine() {
 
 void deinit_routines() { list_destroy(routine_list); }
 
-void register_routine(void (*routine)(), button_t on_buttons,
+void register_routine(void (*routine)(void *), button_t on_buttons,
                       button_t *prohibited_buttons) {
   struct routine_t *r = (struct routine_t *)malloc(sizeof(routine_t));
   r->blocked_buttons = prohibited_buttons;

@@ -17,8 +17,8 @@
 #include "log.h"
 #include "main.h"
 #include "menu.h"
-#include "slew.h"
 #include "sensors.h"
+#include "slew.h"
 
 extern Ultrasonic lifter_ultrasonic;
 

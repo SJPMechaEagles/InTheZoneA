@@ -96,15 +96,16 @@ static struct accelerometer_odometry calculate_accelerometer_odemetry() {
 }
 
 /**
- * @brief Increases the stored angle based upon the update frequency and the current angular velocity
+ * @brief Increases the stored angle based upon the update frequency and the
+ *current angular velocity
  * @author Chris Jerrett
- * @return returns the angle theta of the robot 
+ * @return returns the angle theta of the robot
  **/
 static double integrate_gyro_w(int new_w) {
   static double theta = 0;
   double delta_theta = new_w * LOCALIZATION_UPDATE_FREQUENCY;
   theta += delta_theta;
-  return theta
+  return theta;
 }
 
 /**

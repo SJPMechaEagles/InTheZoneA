@@ -1,10 +1,5 @@
-
-//
-// iterator.c
-//
-// Copyright (c) 2010 TJ Holowaychuk <tj@vision-media.ca>
-//
-
+#include "list.h"
+#include <API.h>
 /*
  * Allocate a new list_iterator_t. NULL on failure.
  * Accepts a direction, which may be LIST_HEAD or LIST_TAIL.
@@ -23,7 +18,7 @@ list_iterator_t *list_iterator_new(list_t *list, list_direction_t direction) {
 list_iterator_t *list_iterator_new_from_node(list_node_t *node,
                                              list_direction_t direction) {
   list_iterator_t *self;
-	if (!(self = malloc(sizeof(list_iterator_t))))
+  if (!(self = (list_iterator_t *)malloc(sizeof(list_iterator_t))))
     return NULL;
   self->next = node;
   self->direction = direction;
@@ -48,6 +43,6 @@ list_node_t *list_iterator_next(list_iterator_t *self) {
  */
 
 void list_iterator_destroy(list_iterator_t *self) {
-	free(self);
+  free(self);
   self = NULL;
 }

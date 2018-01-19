@@ -1,4 +1,4 @@
-
+#include "claw.h"
 static enum claw_state state = CLAW_NEUTRAL_STATE;
 
 extern bool lifter_autostack_running;

@@ -1,7 +1,5 @@
-
-//
-// Copyright (c) 2010 TJ Holowaychuk <tj@vision-media.ca>
-//
+#include "list.h"
+#include <API.h>
 
 /*
  * Allocate a new list_t. NULL on failure.
@@ -9,7 +7,7 @@
 
 list_t *list_new() {
   list_t *self;
-	if (!(self = malloc(sizeof(list_t))))
+  if (!(self = (list_t *)malloc(sizeof(list_t))))
     return NULL;
   self->head = NULL;
   self->tail = NULL;
@@ -32,11 +30,11 @@ void list_destroy(list_t *self) {
     next = curr->next;
     if (self->free)
       self->free(curr->val);
-	  free(curr);
+    free(curr);
     curr = next;
   }
 
-	free(self);
+  free(self);
 }
 
 /*
@@ -187,6 +185,6 @@ void list_remove(list_t *self, list_node_t *node) {
   if (self->free)
     self->free(node->val);
 
-	free(node);
+  free(node);
   --self->len;
 }
