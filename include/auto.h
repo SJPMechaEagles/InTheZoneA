@@ -10,9 +10,9 @@
 #include "claw.h"
 #include "drive.h"
 #include "lifter.h"
-#include "sensors.h"
-#include "mobile_goal_intake.h"
 #include "localization.h"
+#include "mobile_goal_intake.h"
+#include "sensors.h"
 
 /**
  * @brief Front left motor integrated motor encoder
@@ -40,10 +40,9 @@
 #define GOAL_HEIGHT 1325
 
 /**
-* @brief height at which rubber bands release claw
-**/
+ * @brief height at which rubber bands release claw
+ **/
 #define DEPLOY_HEIGHT 2000
-
 
 #define LOWEST_HEIGHT 0
 

@@ -41,9 +41,6 @@ int itoaa(int a, char *buffer, int digits);
  * @author Christian DeSimone
  * @date 9/26/2017
  **/
-
 void ftoaa(float a, char *buffer, int precision);
-
-void *calloc_real(size_t elements, size_t size);
 
 #endif

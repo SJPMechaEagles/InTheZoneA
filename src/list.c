@@ -13,7 +13,7 @@
 
 list_t *list_new() {
   list_t *self;
-  if (!(self = LIST_MALLOC(sizeof(list_t))))
+	if (!(self = malloc(sizeof(list_t))))
     return NULL;
   self->head = NULL;
   self->tail = NULL;
@@ -36,11 +36,11 @@ void list_destroy(list_t *self) {
     next = curr->next;
     if (self->free)
       self->free(curr->val);
-    LIST_FREE(curr);
+	  free(curr);
     curr = next;
   }
 
-  LIST_FREE(self);
+	free(self);
 }
 
 /*
@@ -191,6 +191,6 @@ void list_remove(list_t *self, list_node_t *node) {
   if (self->free)
     self->free(node->val);
 
-  LIST_FREE(node);
+	free(node);
   --self->len;
 }

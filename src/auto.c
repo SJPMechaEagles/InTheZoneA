@@ -32,10 +32,11 @@
  * disable/enable cycle.
  */
 void autonomous() {
+	//starts the slew rate controller to prevent ptc trips
   init_slew();
 
   delay(10);
-  printf("auto\n");
+	info("AUTO");
   // How far the left wheels have gone
   int counts_drive_left;
   // How far the right wheels have gone
@@ -51,19 +52,18 @@ void autonomous() {
   imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
   counts_drive = counts_drive_left + counts_drive_right;
   counts_drive /= 2;
-  print("break 0");
+	info("break 0");
   // Deploy claw
   while (analogRead(SECONDARY_LIFTER_POT_PORT) < DEPLOY_HEIGHT) {
-
     set_secondary_lifter_motors(MAX_SPEED);
   }
   set_secondary_lifter_motors(0);
-  print("break 1");
+	info("break 1");
 
   //while (analogRead(SECONDARY_LIFTER_POT_PORT) > LOWEST_HEIGHT) {
   //  set_secondary_lifter_motors(MIN_SPEED);
   //}
-  print("break 2");
+	info("break 2");
   set_secondary_lifter_motors(0);
 
   // Grab pre-load cone

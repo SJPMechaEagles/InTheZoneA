@@ -1,3 +1,8 @@
+/**
+ * @file gyri.h
+ * @brief Declarations and macros for the VEX gyroscope.
+ * @author Chris Jerrett, Christian Desimone
+ */
 #ifndef _GYRO_H_
 #define _GYRO_H_
 
@@ -16,8 +21,8 @@
 
 /**
  * @brief Initializes the main robot gryoscope/
- * Only call function when robot still and ready to start autonomous. Robot should not move for five seconds while Gyro
- * calibrates
+ * Only call function when robot still and ready to start autonomous. Robot
+ * should not move for five seconds while Gyro calibrates
  * @return if the Gyro was sucessfully calibrated
  * @date 11/30/17
  * @author Chris Jerrett

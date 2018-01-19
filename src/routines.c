@@ -23,6 +23,8 @@ void routine_task() {
         }
       }
     }
+  } else {
+    error("List iterator was null");
   }
   list_iterator_destroy(it);
 }

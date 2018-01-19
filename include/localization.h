@@ -16,7 +16,7 @@
 /**
  * How often the localization code updates the position.
  **/
-#define LOCALIZATION_UPDATE_FREQUENCY 0.500
+#define LOCALIZATION_UPDATE_FREQUENCY 5
 
 /**
  * Vector storing the cartesian cords and an angle
@@ -57,6 +57,10 @@ struct location get_position();
  **/
 void update_position();
 
+/**
+ * @brief Calculates the angle using the encoders
+ * @return the angle
+ */
 int calculate_encoder_angle();
 
 #endif

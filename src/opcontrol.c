@@ -50,7 +50,7 @@ void operatorControl() {
   init_routine();
   init_slew();
     register_routine(&autostack_routine, JOY2_7D, NULL);
-    register_routine(&intertrupt_auto_stack, JOY2_7R, NULL);
+	register_routine(&interrupt_auto_stack, JOY2_7R, NULL);
   while (1) {
     update_claw();
     update_intake();

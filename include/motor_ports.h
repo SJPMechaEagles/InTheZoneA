@@ -57,10 +57,24 @@
  **/
 #define MOTOR_BACK_LEFT 5
 
-#define MOTOR_LIFT 9
+/**
+ * @brief Port for the main lifter
+ */
+#define MOTOR_MAIN_LIFTER 9
 
+/**
+ * @brief The port for the roller claw
+ */
 #define CLAW_MOTOR 10
+
+/**
+ * @brief Port for the secondary lifter
+ */
 #define MOTOR_SECONDARY_LIFTER 1
-#define INTAKE_MOTOR 8
+
+/**
+ * @brief Port for the main lifter
+ */
+#define MOBILE_INTAKE_MOTOR 8
 
 #endif
