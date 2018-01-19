@@ -35,7 +35,8 @@ extern Ultrasonic lifter_ultrasonic;
  */
 void initializeIO() { watchdogInit(); }
 
-/*
+/* @brief Initialization code to be run at startup of the cortex
+ * @author Chris Jerrett
  * Runs user initialization code. This function will be started in its own task
  * with the default priority and stack size once when the robot is starting up.
  * It is possible that the VEXnet communication link may not be fully

@@ -9,6 +9,13 @@ extern bool lifter_autostack_running;
 /**
  * @brief Updates the claw motor values
  * @author Chris Jerrett
+ * @see CLAW_CLOSE
+ * @see CLAW_CLOSE_STATE
+ * @see CLAW_OPEN
+ * @see CLAW_OPEN_STATE
+ * @see CLAW_NEUTRAL_STATE
+ * @see MAX_CLAW_SPEED
+ * @see MIN_CLAW_SPEED
  **/
 void update_claw() {
   if (lifter_autostack_running)
@@ -33,17 +40,22 @@ void update_claw() {
 /**
  * @brief sets the claw motor speed
  * @author Chris Jerrett
+ * @see CLAW_MOTOR
  **/
 void set_claw_motor(const int v) { set_motor_immediate(CLAW_MOTOR, v); }
 
 /**
  * @brief Drives the motors to open the claw
  * @author Chris Jerrett
+ * @see CLAW_MOTOR
+ * @see MAX_CLAW_SPEED
  **/
 void open_claw() { set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED); }
 
 /**
  * @brief Drives the motors to close the claw
  * @author Chris Jerrett
+ * @see CLAW_MOTOR
+ * @see MIN_CLAW_SPEED
  **/
 void close_claw() { set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED); }

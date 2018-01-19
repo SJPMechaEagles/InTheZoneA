@@ -9,12 +9,18 @@ static int last_call = 0;
 
 matrix *state_matrix;
 
+/**
+ * @brief Structure for holding an xy position and an angle theta from the IMEs
+ **/
 struct encoder_odemtry {
   double x;
   double y;
   double theta;
 };
 
+/**
+ * @brief Structure for holding an xy position from the accelerometer
+ **/
 struct accelerometer_odometry {
   double x;
   double y;
@@ -25,7 +31,7 @@ static struct accelerometer_odometry calculate_accelerometer_odemetry();
 
 /**
  * @brief Gets the current posituion of the robot
- *
+ * @author Chris Jerrett
  * @param gyro1 The first gyro
  * @return the loacation of the robot as a struct.
  **/
@@ -34,7 +40,7 @@ struct location get_position() {}
 /**
  * @brief Updates the position from the localization
  *
- * @author Chris Jerrett
+ * @author Chris Jerrett, Christian DeSimone
  **/
 void update_position() {
   // int curr_theta = calculate_angle();
@@ -55,7 +61,12 @@ void update_position() {
   y = y_curr;*/
   last_call = millis();
 }
-
+/**
+ * @brief calculats the robot's position using the accelerometer
+ * @author Chris Jerrett, Christian DeSimone
+ * @return the xy position of the robot
+ * @see accelerometer_odometry
+ **/
 static struct accelerometer_odometry calculate_accelerometer_odemetry() {
   static double vel_acumm_x = 0;
   static double vel_acumm_y = 0;
@@ -84,12 +95,23 @@ static struct accelerometer_odometry calculate_accelerometer_odemetry() {
   return od;
 }
 
+/**
+ * @brief Increases the stored angle based upon the update frequency and the current angular velocity
+ * @author Chris Jerrett
+ * @return returns the angle theta of the robot 
+ **/
 static double integrate_gyro_w(int new_w) {
   static double theta = 0;
   double delta_theta = new_w * LOCALIZATION_UPDATE_FREQUENCY;
   theta += delta_theta;
+  return theta
 }
 
+/**
+ * @brief calculates the angular velocity using the gyro positions
+ * @author Chris Jerrett, Christian DeSimone
+ * @return the angular velocity of the robot.
+ **/
 static double calculate_gryo_anglular_velocity() {
   static int last_gyro = 0;
   int current = gyroGet(g1);
@@ -98,6 +120,11 @@ static double calculate_gryo_anglular_velocity() {
   return w;
 }
 
+/**
+ * @brief calculates the current angle using the IMEs
+ * @return the angle of rotation
+ * @author Chris Jerrett, Christian DeSimone
+ **/
 int calculate_encoder_angle() {
 #define WIDTH 13.5
 #define CPR 392.0
@@ -107,6 +134,10 @@ int calculate_encoder_angle() {
   return ((dist_r - dist_l) / WIDTH);
 }
 
+/**
+ * @brief calculates the x y posistion of the robot based upon the IMEs
+ * @author Chris Jerrett, Christian DeSimone
+ **/
 static void calculate_encoder_odemetry() {
 #define WIDTH 13.5
 #define CPR 392.0
@@ -120,6 +151,11 @@ static void calculate_encoder_odemetry() {
   int arc_length = ((M_PI * theta) * (WIDTH * WIDTH) / (8));
 }
 
+/**
+ * @brief initializes the localization
+ * @author Chris Jerrett
+ * @return returns true when initialization is complete.
+ **/
 bool init_localization(const unsigned char gyro1, unsigned short multiplier,
                        int start_x, int start_y, int start_theta) {
   g1 = gyroInit(gyro1, multiplier);

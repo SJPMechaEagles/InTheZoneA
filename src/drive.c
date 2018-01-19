@@ -9,13 +9,13 @@
 static int thresh = 10;
 
 /**
- * @brief Gets the deadzone threshhold on the drive.
+ * @brief Gets the deadzone threshhold on the joystick.
  * @author Christian Desimone
  **/
 int getThresh() { return thresh; }
 
 /**
- * @brief Sets the deadzone threshhold on the drive.
+ * @brief Sets the deadzone threshhold on the joystick.
  * @author Christian Desimone
  **/
 void setThresh(int t) { thresh = t; }
@@ -57,7 +57,7 @@ void update_drive_motors() {
  * @author Christian Desimone
  * @param side a side enum which indicates the size.
  * @param speed the speed of the side. Can range from -127 - 127 negative being
- *back and positive forwards
+ *		  back and positive forwards
  **/
 void set_side_speed(side_t side, int speed) {
   if (side == RIGHT || side == BOTH) {
@@ -80,16 +80,16 @@ void set_side_speed(side_t side, int speed) {
  **/
 static float joystickExp(int joystickVal) {
   // make the offset negative if moving backwards
-  if (abs(joystickVal) < THRESHOLD) {
+  if (abs(joystickVal) < thresh) {
     return 0;
   }
 
   int offset;
   // Use the threshold to ensure the joystick values are significant
   if (joystickVal < 0) {
-    offset = -(THRESHOLD);
+    offset = -(thresh);
   } else {
-    offset = THRESHOLD;
+    offset = thresh;
   }
   // Apply the function ((((x/10)^3)/18) + offset) * 0.8 to the joystick value
   return (pow(joystickVal / 10, 3) / 18 + offset) * 0.8;

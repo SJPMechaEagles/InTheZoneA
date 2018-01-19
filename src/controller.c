@@ -3,6 +3,11 @@
 /**
  * @brief Gets the location of a joystick on the controller
  * @author Chris Jerrett
+ * @see RIGHT_JOY
+ * @see RIGHT_JOY_X
+ * @see RIGHT_JOY_Y
+ * @see LEFT_JOY_X
+ * @see LEFT_JOY_Y
  **/
 struct cord get_joystick_cord(enum joystick side, int controller) {
   int x;
