@@ -9,7 +9,7 @@
 
 #include "controller.h"
 #include "motor_ports.h"
-#include "sensor_ports.h"
+#include "sensors.h"
 #include "slew.h"
 #include <API.h>
 

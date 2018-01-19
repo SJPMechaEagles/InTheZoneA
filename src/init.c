@@ -18,6 +18,7 @@
 #include "main.h"
 #include "menu.h"
 #include "slew.h"
+#include "sensors.h"
 
 extern Ultrasonic lifter_ultrasonic;
 

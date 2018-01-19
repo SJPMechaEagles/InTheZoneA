@@ -11,16 +11,15 @@
  * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
  */
 
-#include "drive.h"
-#include "main.h"
-#include "slew.h"
-
 #include "claw.h"
+#include "drive.h"
 #include "lifter.h"
 #include "localization.h"
 #include "log.h"
+#include "main.h"
 #include "mobile_goal_intake.h"
 #include "routines.h"
+#include "slew.h"
 #include "toggle.h"
 #include "vmath.h"
 
@@ -50,8 +49,8 @@ void operatorControl() {
   buttonInit();
   init_routine();
   init_slew();
-  register_routine(&autostack_routine, JOY1_8R, NULL);
-  register_routine(&intertrupt_auto_stack, JOY1_8L, NULL);
+    register_routine(&autostack_routine, JOY2_7D, NULL);
+    register_routine(&intertrupt_auto_stack, JOY2_7R, NULL);
   while (1) {
     update_claw();
     update_intake();

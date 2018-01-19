@@ -18,7 +18,9 @@
 #define LEFT_BUMPERS 6
 
 /**
- * Renames the input channels
+ * @brief renames the controller inputs. Allows more readable controls.
+ * @author Chris Jerrett
+ * @date 12/18/17
  */
 typedef enum {
   JOY1_5D = 0,

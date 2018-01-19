@@ -17,7 +17,9 @@ void routine_task() {
       if (node->val != NULL) {
         routine_t *routine = (routine_t *)(node->val);
         if (buttonIsNewPress(routine->on_button)) {
-          routine->routine();
+          TaskHandle task =
+                  taskCreate(routine->routine, TASK_DEFAULT_STACK_SIZE, NULL,
+                             TASK_PRIORITY_DEFAULT);
         }
       }
     }

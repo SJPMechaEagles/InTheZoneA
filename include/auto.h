@@ -1,6 +1,6 @@
 /**
  * @file auto.h
- * @author Chris Jerrett
+ * @authors Chris Jerrett, Christian Desimone
  * @date 9/18/2017
  * @brief Autonomous declarations and macros
  **/
@@ -10,7 +10,7 @@
 #include "claw.h"
 #include "drive.h"
 #include "lifter.h"
-#include "sensor_ports.h"
+#include "sensors.h"
 #include "mobile_goal_intake.h"
 #include "localization.h"
 
@@ -40,9 +40,10 @@
 #define GOAL_HEIGHT 1325
 
 /**
-* @brief height at which rubber bands do a do
+* @brief height at which rubber bands release claw
 **/
 #define DEPLOY_HEIGHT 2000
+
 
 #define LOWEST_HEIGHT 0
 

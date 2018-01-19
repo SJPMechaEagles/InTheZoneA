@@ -8,6 +8,8 @@
 #ifndef _PORTS_H_
 #define _PORTS_H_
 
+#include "API.h"
+
 /**
  * @brief Number of integrated motor encoders
  * Used when checking to see if all imes are plugged in
@@ -18,5 +20,7 @@
 #define IME_FRONT_RIGHT 0
 #define LIFTER 2
 #define CLAW_POT 1
+
+Ultrasonic lifter_ultrasonic;
 
 #endif

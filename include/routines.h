@@ -12,4 +12,4 @@ void routine_task();
 
 void deinit_routines();
 
-void register_routine(void(*routine)(), button_t on_buttons, button_t* prohibited_buttons);
+void register_routine(void(*routine)(void *), button_t on_buttons, button_t *prohibited_buttons);
