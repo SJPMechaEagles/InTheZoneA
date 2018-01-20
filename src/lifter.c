@@ -48,7 +48,7 @@ void autostack_routine(void *param) {
   delay(10);
   int val2 = ultrasonicGet(lifter_ultrasonic);
   printf("%d, %d\n", val1, val2);
-  while (min(val1, val2) < 20) {
+  while (min(val1, val2) < 20 && !(val1 == -1 || val2 == -1)) {
     raise_main_lifter();
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();

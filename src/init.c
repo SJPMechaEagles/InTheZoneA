@@ -21,6 +21,7 @@
 #include "slew.h"
 
 extern Ultrasonic lifter_ultrasonic;
+extern int fiveorten;
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode
@@ -55,9 +56,13 @@ void initialize() {
   if (!battery_level_acceptable())
     error("Bad main/backup bat");
   menu_t *t =
-      init_menu_var(STRING_TYPE, "TEST Menu", 5, "1", "2", "3", "4", "5");
+      init_menu_var(STRING_TYPE, "TEST Menu", 2, "Five PT", "Ten Pt");
+  int opt = display_menu(t);
+  if(opt == 1) {
+    fiveorten+=200;
+  }
   init_error(true, uart2);
   setTeamName("9228A");
-  // init_encoders();
+  //init_encoders();
   lifter_ultrasonic = ultrasonicInit(4, 5);
 }

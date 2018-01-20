@@ -42,7 +42,7 @@
 /**
  * @brief height at which rubber bands release claw
  **/
-#define DEPLOY_HEIGHT 2000
+#define DEPLOY_HEIGHT 3500
 
 /**
  * @brief the lowest height of the secondary lifter
@@ -53,13 +53,15 @@
  * @brief the height of the second lifter for deploying the mobile goal lifter,
  *posibly fixed in hardware
  **/
-#define MOBILE_GOAL_HEIGHT 3570
+#define MOBILE_GOAL_HEIGHT 1800
 
 /**
  * @brief The distance to drive, in encoder ticks, to reach the mobile goal from
  *the starting zone
  **/
-#define MOBILE_GOAL_DISTANCE 4000
+#define MOBILE_GOAL_DISTANCE 2000
+
+#define STATIONARY_GOAL_DISTANCE 1000
 
 /**
  * @brief the maximum height of the secondary lifter
