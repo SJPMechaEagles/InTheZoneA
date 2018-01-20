@@ -58,6 +58,6 @@ void initialize() {
       init_menu_var(STRING_TYPE, "TEST Menu", 5, "1", "2", "3", "4", "5");
   init_error(true, uart2);
   setTeamName("9228A");
-  init_encoders();
+  // init_encoders();
   lifter_ultrasonic = ultrasonicInit(4, 5);
 }

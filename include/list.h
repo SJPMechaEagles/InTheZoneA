@@ -34,15 +34,15 @@
  * @date 1/3/18
  */
 typedef enum {
-	/**
-	 * @brief start at head
-	 */
-			LIST_HEAD
-	/**
-	 *@brief start at tail
-	 */
-	,
-	LIST_TAIL
+  /**
+   * @brief start at head
+   */
+  LIST_HEAD
+  /**
+   *@brief start at tail
+   */
+  ,
+  LIST_TAIL
 } list_direction_t;
 
 /**
@@ -62,18 +62,18 @@ typedef struct list_node {
  * @date 1/3/18
  **/
 typedef struct {
-	// start of list
-	list_node_t *head;
-	// end of list
-	list_node_t *tail;
-	// length of list
-	unsigned int len;
+  // start of list
+  list_node_t *head;
+  // end of list
+  list_node_t *tail;
+  // length of list
+  unsigned int len;
 
-	// the value
-	void (*free)(void *val);
+  // the value
+  void (*free)(void *val);
 
-	// a compare function
-	int (*match)(void *a, void *b);
+  // a compare function
+  int (*match)(void *a, void *b);
 } list_t;
 
 /**

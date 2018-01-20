@@ -1,15 +1,23 @@
 #include "lifter.h"
 #include "claw.h"
 #include "log.h"
+#include "routines.h"
+#include "vmath.h"
 
 bool lifter_autostack_running = false;
 static bool lifter_autostack_routine_interupt = false;
 
+/**
+ * @brief interupts an autostack routine.
+ * @param param the task the interupt is running on.
+ **/
 void interrupt_auto_stack(void *param) {
-  info("int");
   lifter_autostack_routine_interupt = true;
 }
 
+/**
+ * @brief call when the autostack can exit to stop the motors.
+ **/
 static inline void quit_auto_static() {
   set_main_lifter_motors(0);
   set_secondary_lifter_motors(0);
@@ -17,11 +25,16 @@ static inline void quit_auto_static() {
   lifter_autostack_running = false;
 }
 
+/**
+ * @brief automatically stacks a cone on the stack.
+ * @param param the taskt the routine is running in.
+ **/
 void autostack_routine(void *param) {
+  set_claw_motor(0);
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
   raise_secondary_lifter();
-  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 1600) {
+  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 1800) {
     set_secondary_lifter_motors(MIN_SPEED);
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
@@ -31,81 +44,60 @@ void autostack_routine(void *param) {
     info("1");
   }
   set_secondary_lifter_motors(0);
-  bool lifted = false;
-  int val = ultrasonicGet(lifter_ultrasonic);
-  printf("%d\n", val);
-  while (val < 10 && val != ULTRA_BAD_RESPONSE) {
+  int val1 = ultrasonicGet(lifter_ultrasonic);
+  delay(10);
+  int val2 = ultrasonicGet(lifter_ultrasonic);
+  printf("%d, %d\n", val1, val2);
+  while (min(val1, val2) < 20) {
+    raise_main_lifter();
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
       return;
     }
-    set_main_lifter_motors(MAX_SPEED);
-    info("2");
-    lifted = true;
-    delay(50);
-    val = ultrasonicGet(lifter_ultrasonic);
-    printf("%d\n", val);
+    val1 = ultrasonicGet(lifter_ultrasonic);
+    delay(20);
+    val2 = ultrasonicGet(lifter_ultrasonic);
+    printf("%d, %d\n", val1, val2);
+    delay(20);
   }
-  if (lifter_autostack_routine_interupt) {
-    quit_auto_static();
-    return;
-  }
-  delay(200);
-  if (lifted)
-    delay(50);
   if (lifter_autostack_routine_interupt) {
     quit_auto_static();
     return;
   }
   set_main_lifter_motors(0);
-  set_secondary_lifter_motors(0);
-
-  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 3000) {
+  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 3150) {
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
       return;
     }
     set_secondary_lifter_motors(MIN_SPEED);
     delay(50);
-    info("3");
   }
 
-  set_main_lifter_motors(MIN_SPEED / 1.333);
-
-  while (val > 10) {
-    if (lifter_autostack_routine_interupt) {
-      quit_auto_static();
-      return;
-    }
-    info("2");
-    lifted = true;
-    delay(30);
-    val = ultrasonicGet(lifter_ultrasonic);
-    printf("%d\n", val);
-  }
-
+  set_secondary_lifter_motors(-10);
   set_main_lifter_motors(0);
 
+  if (lifter_autostack_routine_interupt) {
+    quit_auto_static();
+    return;
+  }
+  delay(300);
+  set_main_lifter_motors(MIN_SPEED);
+  delay(200);
+  set_main_lifter_motors(0);
+  delay(50);
   set_claw_motor(MIN_CLAW_SPEED);
   if (lifter_autostack_routine_interupt) {
     quit_auto_static();
     return;
   }
   delay(500);
-  if (lifter_autostack_routine_interupt) {
-    quit_auto_static();
-    return;
-  }
-  set_main_lifter_motors(MAX_SPEED);
-  if (lifter_autostack_routine_interupt) {
-    quit_auto_static();
-    return;
-  }
-  delay(300);
-
-  set_main_lifter_motors(MIN_SPEED);
   set_claw_motor(0);
   set_secondary_lifter_motors(0);
+
+  raise_main_lifter();
+  delay(200);
+  set_main_lifter_motors(0);
 
   lifter_autostack_running = false;
 }
@@ -179,10 +171,8 @@ static bool secondary_override = false;
 
 static void main_lifter_update() {
   if (lifter_autostack_running) {
-    error("True");
     return;
   }
-  error("1");
   static int count = 0;
   static bool pid_on = false;
   static int main_target = 0;
@@ -204,7 +194,6 @@ static void main_lifter_update() {
     main_i = 0;
     count++;
   }
-  error("2");
   if (joystickGetDigital(LIFTER_UP)) {
     int ultra = ultrasonicGet(lifter_ultrasonic);
     main_motor_speed = MAX_SPEED;
@@ -270,7 +259,7 @@ static void secondary_lifter_update() {
  * @date 9/9/2017
  **/
 void update_lifter() {
-  printf("%d \n", analogRead(SECONDARY_LIFTER_POT_PORT));
+  // printf("%d \n", analogRead(SECONDARY_LIFTER_POT_PORT));
   main_lifter_update();
   if (!secondary_override)
     secondary_lifter_update();

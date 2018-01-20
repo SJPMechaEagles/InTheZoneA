@@ -9,13 +9,13 @@
  * @brief Struct representing a routine
  */
 typedef struct routine_t {
-	// the button it triggers on
-	button_t on_button;
-	// buttons it disables @todo
-	button_t *blocked_buttons;
+  // the button it triggers on
+  button_t on_button;
+  // buttons it disables @todo
+  button_t *blocked_buttons;
 
-	// the routine to start the function on
-	void (*routine)(void *);
+  // the routine to start the function on
+  void (*routine)(void *);
 } routine_t;
 
 /**

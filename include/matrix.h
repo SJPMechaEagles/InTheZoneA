@@ -85,7 +85,7 @@ matrix *transposeMatrix(matrix *m);
 /**
  * @brief Given an "m rows by n columns" matrix, return a matrix where each
  * element represents the mean of that full column.
- * @pram the matrix
+ * @param m the matrix
  * @return matrix with 1 row and n columns each element represents the mean of
  * that full column.
  **/
@@ -102,7 +102,7 @@ matrix *multiplyMatrix(matrix *a, matrix *b);
 /**
  * @brief scales a matrix.
  * @param m the matrix to scale
- * @param the value to scale by
+ * @param value the value to scale by
  * @return a new matrix where each element in the input matrix is
  * multiplied by the scalar value
  **/
@@ -110,7 +110,7 @@ matrix *scaleMatrix(matrix *m, double value);
 
 /**
  * @brief returns the covariance of the matrix
- * @param the matrix
+ * @param m the matrix
  * @return a matrix with n row and n columns, where each element represents
  *covariance of 2 columns.
  **/
@@ -121,9 +121,9 @@ matrix *covarianceMatrix(matrix *m);
  * Given a matrix, this algorithm will swap rows p and q, provided
  * that p and q are less than or equal to the height of matrix A and p
  * and q are different values.
- * @param the matrix to swap. This method changes the input matrix.
- * @param the first row
- * @param the second row
+ * @param a the matrix to swap. This method changes the input matrix.
+ * @param p the first row
+ * @param q the second row
  **/
 void rowSwap(matrix *a, int p, int q);
 /**
@@ -137,7 +137,7 @@ void rowSwap(matrix *a, int p, int q);
  * Also, if the second paramter is NULL, it is assumed that we
  * are performing a cross product with itself.
  * @param a the first matrix
- * @param the second matrix
+ * @param b the second matrix
  * @return the result of the dot product
  **/
 matrix *dotProductMatrix(matrix *a, matrix *b);

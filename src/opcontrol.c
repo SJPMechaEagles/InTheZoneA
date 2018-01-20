@@ -23,6 +23,8 @@
 #include "toggle.h"
 #include "vmath.h"
 
+extern Ultrasonic lifter_ultrasonic;
+
 /**
  * Runs the user operator control code. This function will be started in its own
  * task with the default priority and stack size whenever the robot is enabled
@@ -46,12 +48,13 @@
  */
 
 void operatorControl() {
+  lifter_ultrasonic = ultrasonicInit(4, 5);
   buttonInit();
   init_routine();
   init_slew();
   register_routine(&autostack_routine, JOY2_7D, NULL);
   register_routine(&interrupt_auto_stack, JOY2_7R, NULL);
-  while (1) {
+  for (;;) {
     update_claw();
     update_intake();
     update_lifter();

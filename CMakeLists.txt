@@ -2,8 +2,9 @@
 project(InTheZoneA)
 
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror")
 
-set(SOURCE_FILES
+set(INCLUDE_FILES
         include/API.h
         include/auto.h
         include/battery.h
@@ -29,6 +30,9 @@ set(SOURCE_FILES
         include/toggle.h
         include/vlib.h
         include/vmath.h
+        )
+
+set(SOURCE_FILES
         src/auto.c
         src/battery.c
         src/claw.c
@@ -53,7 +57,9 @@ set(SOURCE_FILES
         src/toggle.c
         src/vlib.c
         src/vmath.c)
-include_directories(.)
 
+include_directories(./include)
+include_directories(./src)
 
 add_executable(InTheZoneA ${SOURCE_FILES})
+add_executable(InTheZoneA ${INCLUDE_FILES})
