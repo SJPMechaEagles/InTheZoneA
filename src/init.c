@@ -53,9 +53,17 @@ void initializeIO() { watchdogInit(); }
 void initialize() {
   init_main_lcd(uart1);
   info("LCD Init");
-  if (!battery_level_acceptable())
-    error("Bad main/backup bat");
-  menu_t *t = init_menu_var(STRING_TYPE, "TEST Menu", 2, "Five PT", "Ten Pt");
+  if (!battery_level_acceptable()) {
+    menu_t *bat_menu =
+        init_menu_var(STRING_TYPE, "Backup/Partner bad", 1, "Okay");
+    display_menu(bat_menu);
+  }
+  if (!isJoystickConnected(PARTNER)) {
+    menu_t *partner_menu = init_menu_var(STRING_TYPE, "Partner bad", 1, "Okay");
+    display_menu(partner_menu);
+  }
+  menu_t *t =
+      init_menu_var(STRING_TYPE, "Auton Zone", 2, "Five Pt.", "Ten Pt.");
   int opt = display_menu(t);
   if (opt == 1) {
     fiveorten += 200;
