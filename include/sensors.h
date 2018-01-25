@@ -21,6 +21,4 @@
 #define LIFTER 2
 #define CLAW_POT 1
 
-Ultrasonic lifter_ultrasonic;
-
 #endif

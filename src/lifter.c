@@ -6,6 +6,7 @@
 
 bool lifter_autostack_running = false;
 static bool lifter_autostack_routine_interupt = false;
+extern Ultrasonic lifter_ultrasonic;
 
 /**
  * @brief interupts an autostack routine.
@@ -45,20 +46,20 @@ void autostack_routine(void *param) {
   }
   set_secondary_lifter_motors(0);
   int val1 = ultrasonicGet(lifter_ultrasonic);
-  delay(10);
+  delay(20);
   int val2 = ultrasonicGet(lifter_ultrasonic);
   printf("%d, %d\n", val1, val2);
-  while (min(val1, val2) < 20 && !(val1 == -1 || val2 == -1)) {
+  while (min(val1, val2) < 10) {
     raise_main_lifter();
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
       return;
     }
     val1 = ultrasonicGet(lifter_ultrasonic);
-    delay(20);
+    delay(30);
     val2 = ultrasonicGet(lifter_ultrasonic);
     printf("%d, %d\n", val1, val2);
-    delay(20);
+    delay(30);
   }
   if (lifter_autostack_routine_interupt) {
     quit_auto_static();

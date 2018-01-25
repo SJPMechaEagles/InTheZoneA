@@ -23,7 +23,7 @@
 #include "toggle.h"
 #include "vmath.h"
 
-extern Ultrasonic lifter_ultrasonic;
+Ultrasonic lifter_ultrasonic;
 
 /**
  * Runs the user operator control code. This function will be started in its own
@@ -48,7 +48,6 @@ extern Ultrasonic lifter_ultrasonic;
  */
 
 void operatorControl() {
-  lifter_ultrasonic = ultrasonicInit(4, 5);
   buttonInit();
   init_routine();
   init_slew();

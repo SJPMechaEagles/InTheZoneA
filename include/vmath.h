@@ -14,7 +14,7 @@
  * @brief PI
  * 3.14159268...
  */
-#define M_PI 3.14159265358979323846
+#define M_PI 3.14159265358979
 
 /**
  * @brief A struct that contains polar coordinates.

@@ -55,14 +55,13 @@ void initialize() {
   info("LCD Init");
   if (!battery_level_acceptable())
     error("Bad main/backup bat");
-  menu_t *t =
-      init_menu_var(STRING_TYPE, "TEST Menu", 2, "Five PT", "Ten Pt");
+  menu_t *t = init_menu_var(STRING_TYPE, "TEST Menu", 2, "Five PT", "Ten Pt");
   int opt = display_menu(t);
-  if(opt == 1) {
-    fiveorten+=200;
+  if (opt == 1) {
+    fiveorten += 200;
   }
   init_error(true, uart2);
   setTeamName("9228A");
-  //init_encoders();
+  // init_encoders();
   lifter_ultrasonic = ultrasonicInit(4, 5);
 }
