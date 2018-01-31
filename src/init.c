@@ -53,11 +53,14 @@ void initializeIO() { watchdogInit(); }
 void initialize() {
   init_main_lcd(uart1);
   info("LCD Init");
+  // Chech batteries
   if (!battery_level_acceptable()) {
     menu_t *bat_menu =
         init_menu_var(STRING_TYPE, "Backup/Partner bad", 1, "Okay");
+    // execution paused till user confirms
     display_menu(bat_menu);
   }
+  // Check partner controller to prevent another Framingham...
   if (!isJoystickConnected(PARTNER)) {
     menu_t *partner_menu = init_menu_var(STRING_TYPE, "Partner bad", 1, "Okay");
     display_menu(partner_menu);
