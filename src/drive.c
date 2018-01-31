@@ -6,13 +6,13 @@
 static int thresh = 10;
 
 /**
- * @brief Gets the deadzone threshhold on the joystick.
+ * @brief Gets the deadzone threshold on the joystick.
  * @author Christian Desimone
  **/
 int getThresh() { return thresh; }
 
 /**
- * @brief Sets the deadzone threshhold on the joystick.
+ * @brief Sets the deadzone threshold on the joystick.
  * @author Christian Desimone
  **/
 void setThresh(int t) { thresh = t; }

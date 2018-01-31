@@ -10,7 +10,7 @@
  * If the assertion is non-zero (i.e. true), then it returns.
  * If the assertion is zero (i.e. false), then it display the string and
  * aborts the program.
- * This is ment to act like Python's assert keyword.
+ * This is meant to act like Python's assert keyword.
  * @param assertion the condition, acts like a bollean 0 = false else true
  * @param message the message to print if it fails
  **/
@@ -329,7 +329,7 @@ void rowSwap(matrix *a, int p, int q) {
  *
  * Dot product is essentially the sum-of-squares of two vectors.
  *
- * Also, if the second paramter is NULL, it is assumed that we
+ * Also, if the second parameter is NULL, it is assumed that we
  * are performing a cross product with itself.
  * @param a the first matrix
  * @param the second matrix
@@ -382,7 +382,7 @@ matrix *dotProductMatrix(matrix *a, matrix *b) {
  *
  * Dot product is essentially the sum-of-squares of two vectors.
  *
- * If the second paramter is NULL, it is assumed that we
+ * If the second parameter is NULL, it is assumed that we
  * are performing a cross product with itself.
  * @param a the first matrix
  * @param b the second matrix

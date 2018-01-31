@@ -10,7 +10,7 @@ extern Ultrasonic lifter_ultrasonic;
 
 /**
  * @brief interupts an autostack routine.
- * @param param the task the interupt is running on.
+ * @param param the task the interrupt is running on.
  **/
 void interrupt_auto_stack(void *param) {
   lifter_autostack_routine_interupt = true;

@@ -719,7 +719,7 @@ bool i2cRead(uint8_t addr, uint8_t *data, uint16_t count);
 bool i2cReadRegister(uint8_t addr, uint8_t reg, uint8_t *value, uint16_t count);
 /**
  * i2cWrite - Writes the specified number of data bytes to the specified 7-bit I2C address.
- * Returns true if successful or false if failed. If only smoe bytes could be written, false
+ * Returns true if successful or false if failed. If only some bytes could be written, false
  * is still returned.
  *
  * The I2C address should be right-aligned; the R/W bit is automatically supplied.
@@ -753,7 +753,7 @@ typedef int PROS_FILE;
 #ifndef FILE
 /**
  * For convenience, FILE is defined as PROS_FILE if it wasn't already defined. This provides
- * backwards compatability with PROS, but also allows libraries such as newlib to be incorporated
+ * backwards compatibility with PROS, but also allows libraries such as newlib to be incorporated
  * into PROS projects. If you're not using C++/newlib, you can disregard this and just use FILE.
  */
 #define FILE PROS_FILE
@@ -1270,7 +1270,7 @@ void lcdShutdown(PROS_FILE *lcdPort);
 #define TASK_MINIMAL_STACK_SIZE	64
 
 /**
- * Constant returned from taskGetState() when the task is dead or nonexistant.
+ * Constant returned from taskGetState() when the task is dead or nonexistent.
  */
 #define TASK_DEAD 0
 /**

@@ -51,7 +51,7 @@
 #define MAIN_LIFTER_I 0.0000001
 
 /**
- * @brief The threshold of a signficant speed for the lifter
+ * @brief The threshold of a significant speed for the lifter
  **/
 #define THRESHOLD 10
 

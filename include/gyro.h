@@ -23,7 +23,7 @@
  * @brief Initializes the main robot gryoscope/
  * Only call function when robot still and ready to start autonomous. Robot
  * should not move for five seconds while Gyro calibrates
- * @return if the Gyro was sucessfully calibrated
+ * @return if the Gyro was successfully calibrated
  * @date 11/30/17
  * @author Chris Jerrett
  */

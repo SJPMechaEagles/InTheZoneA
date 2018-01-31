@@ -78,7 +78,7 @@ void lcd_print(unsigned int line, const char *str) {
 }
 
 /**
- * @brief prints a formated string to a line on the lcd. Smilar to printf
+ * @brief prints a formatted string to a line on the lcd. Smilar to printf
  * @param line the line to print on
  * @param format_str format string string to print
  * @author Chris Jerrett
