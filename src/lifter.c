@@ -5,8 +5,43 @@
 #include "vmath.h"
 
 bool lifter_autostack_running = false;
+bool second_pid_enabled = true;
 static bool lifter_autostack_routine_interupt = false;
 extern Ultrasonic lifter_ultrasonic;
+
+int compare(const void *a, const void *b) { return (*(int *)a - *(int *)b); }
+
+static int lifter_ultra_med(int tests[], int len) {
+  qsort(tests, len, sizeof(int), compare);
+  if (len % 2 == 0) {
+    int med = (tests[len / 2] + tests[len / 2 - 1]) / 2;
+    printf("MED: %d\n", med);
+  }
+  int med = tests[len / 2];
+  printf("MED: %d\n", med);
+}
+
+bool main_lifter_should_exit_autostack(int tests, int min_bad,
+                                       const unsigned long delay_time,
+                                       int max_val) {
+  int results[tests];
+  for (int i = 0; i < tests; i++) {
+    int val = ultrasonicGet(lifter_ultrasonic);
+    results[i] = val;
+    delay(delay_time);
+    printf("%d,", val);
+  }
+  printf("\n");
+  int neg_ones = 0;
+  for (int i = 0; i < tests; i++) {
+    if (results[i] == ULTRA_BAD_RESPONSE)
+      neg_ones++;
+  }
+  if (neg_ones >= min_bad)
+    return true;
+  bool med = lifter_ultra_med(results, tests) > max_val;
+  return med > max_val;
+}
 
 /**
  * @brief interupts an autostack routine.
@@ -34,71 +69,78 @@ void autostack_routine(void *param) {
   set_claw_motor(0);
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
-  raise_secondary_lifter();
-  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 1800) {
-    set_secondary_lifter_motors(MIN_SPEED);
+
+  do {
+    second_pid_enabled = false;
+    printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
+    raise_secondary_lifter();
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
       return;
     }
     delay(50);
-    info("1");
-  }
+  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 3650);
   set_secondary_lifter_motors(0);
-  int val1 = ultrasonicGet(lifter_ultrasonic);
-  delay(20);
-  int val2 = ultrasonicGet(lifter_ultrasonic);
-  printf("%d, %d\n", val1, val2);
-  while (min(val1, val2) < 10) {
+  const int target = 3550;
+  for (;;) {
     raise_main_lifter();
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
       return;
     }
-    val1 = ultrasonicGet(lifter_ultrasonic);
-    delay(30);
-    val2 = ultrasonicGet(lifter_ultrasonic);
-    printf("%d, %d\n", val1, val2);
-    delay(30);
+
+    int current = analogRead(SECONDARY_LIFTER_POT_PORT);
+    int p = SECONDARY_LIFTER_P * (target - current);
+    set_secondary_lifter_motors(p);
+    // In theory should reduce the likelyhood of stopping early becauce
+    // of this reading to 0.004604969% assuming a .2 chance of each
+    // reading failing and that the events are independent.
+    // We should expect a early lift every 21,715 test, or at 24 tests per
+    // lift
+    if (main_lifter_should_exit_autostack(14, 10, 15, 15))
+      break;
   }
   if (lifter_autostack_routine_interupt) {
     quit_auto_static();
     return;
   }
   set_main_lifter_motors(0);
-  while (analogRead(SECONDARY_LIFTER_POT_PORT) < 3150) {
+  set_secondary_lifter_motors(0);
+  do {
+    printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
       return;
     }
-    set_secondary_lifter_motors(MIN_SPEED);
-    delay(50);
-  }
+    raise_secondary_lifter();
+    delay(10);
+  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 2750);
 
-  set_secondary_lifter_motors(-10);
+  set_secondary_lifter_motors(0);
   set_main_lifter_motors(0);
+  delay(70);
+  set_secondary_lifter_motors(0);
 
   if (lifter_autostack_routine_interupt) {
     quit_auto_static();
     return;
   }
-  delay(300);
-  set_main_lifter_motors(MIN_SPEED);
   delay(200);
   set_main_lifter_motors(0);
-  delay(50);
-  set_claw_motor(MIN_CLAW_SPEED);
+  claw_release_cone();
   if (lifter_autostack_routine_interupt) {
     quit_auto_static();
     return;
   }
-  delay(500);
+  delay(1000);
   set_claw_motor(0);
   set_secondary_lifter_motors(0);
 
   raise_main_lifter();
   delay(200);
   set_main_lifter_motors(0);
+  lower_secondary_lifter();
+  delay(200);
 
   lifter_autostack_running = false;
 }
@@ -112,7 +154,7 @@ void autostack_routine(void *param) {
  * @date 1/6/2018
  **/
 void set_secondary_lifter_motors(const int v) {
-  set_motor_immediate(MOTOR_SECONDARY_LIFTER, v);
+  set_motor_slew(MOTOR_SECONDARY_LIFTER, v);
 }
 
 /**
@@ -150,7 +192,7 @@ void raise_main_lifter() { set_main_lifter_motors(MAX_SPEED); }
  * @author Christian DeSimone
  * @date 9/12/2017
  **/
-void lower_main_lifter() { set_main_lifter_motors(MAX_SPEED); }
+void lower_main_lifter() { set_main_lifter_motors(MIN_SPEED); }
 
 /**
  * @brief Raises the main lifter
@@ -158,7 +200,7 @@ void lower_main_lifter() { set_main_lifter_motors(MAX_SPEED); }
  * @author Christian DeSimone
  * @date 9/12/2017
  **/
-void raise_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED / 1.5); }
+void raise_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
 
 /**
  * @brief Lowers the secondary lifter
@@ -166,7 +208,7 @@ void raise_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED / 1.5); }
  * @author Christian DeSimone
  * @date 9/12/2017
  **/
-void lower_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
+void lower_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
 
 static bool secondary_override = false;
 
@@ -233,15 +275,15 @@ static void secondary_lifter_update() {
                        SECONDARY_LIFTER_I * second_i +
                        SECONDARY_LIFTER_D * second_d;
   second_last_p = second_p;
-
+  second_motor_speed = 0;
   if (joystickGetDigital(SECONDARY_LIFTER_DOWN)) {
-    second_motor_speed = MAX_SPEED;
+    second_motor_speed = MIN_SPEED;
     count = 0;
     second_i = 0;
     second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
     claw_grab_cone();
   } else if (joystickGetDigital(SECONDARY_LIFTER_UP)) {
-    second_motor_speed = MIN_SPEED;
+    second_motor_speed = MAX_SPEED;
     count = 0;
     second_i = 0;
     second_target =

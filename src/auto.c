@@ -46,7 +46,8 @@ start_auton() { // starts the slew rate controller to prevent ptc trips
 }
 
 /**
- * @brief utility function which deploys the secondary lifter at the start of autonomous.
+ * @brief utility function which deploys the secondary lifter at the start of
+ *autonomous.
  * @author Christian DeSimone, Chris Jerrett
  **/
 void deploy_seoncdary_lifter() {
@@ -93,8 +94,10 @@ void auton_drive_towards_mobile_goal(int counts_drive, int counts_drive_left,
     counts_drive /= 2;
   }
 }
-void auton_drive_towards_stationary_goal(int counts_drive, int counts_drive_left, int counts_drive_right){
-  while (counts_drive < STATIONARY_GOAL_DISTANCE){
+void auton_drive_towards_stationary_goal(int counts_drive,
+                                         int counts_drive_left,
+                                         int counts_drive_right) {
+  while (counts_drive < STATIONARY_GOAL_DISTANCE) {
     set_side_speed(BOTH, 127);
     imeGet(MID_LEFT_DRIVE, &counts_drive_left);
     imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
@@ -135,7 +138,7 @@ void auton_turn_180() {
  */
 void autonomous() {
   start_auton();
-  //return;
+  // return;
 
   // How far the left wheels have gone
   int counts_drive_left;
@@ -148,34 +151,34 @@ void autonomous() {
   setup_ime_auton(&counts_drive_left, &counts_drive_right, &counts_drive);
   info("break 0");
   // Deploy claw
-  deploy_seoncdary_lifter();
+  // deploy_seoncdary_lifter();
   info("break 1");
 
   info("break 2");
   set_secondary_lifter_motors(0);
 
   // Grab pre-load cone
-  //delay(300);
+  // delay(300);
 
-//  auton_raise_sec_lifter_max();
+  //  auton_raise_sec_lifter_max();
   // Raise the lifter
-//  auton_rasie_main_lifter();
+  //  auton_rasie_main_lifter();
   // Drive towards the goal
 
-  //lower_intake();
+  // lower_intake();
   delay(500);
-  //set_intake_motor(0);
- set_side_speed(BOTH, 127);
- set_main_lifter_motors(MAX_SPEED);
- lower_intake();
- delay(600);
- set_main_lifter_motors(0);
+  // set_intake_motor(0);
+  set_side_speed(BOTH, 127);
+  set_main_lifter_motors(MAX_SPEED);
+  lower_intake();
+  delay(600);
+  set_main_lifter_motors(0);
 
- delay(500);
- set_intake_motor(0);
- delay(600);
-  //auton_drive_towards_mobile_goal(counts_drive, counts_drive_left,
-    //hedck you chris                              counts_drive_right);
+  delay(500);
+  set_intake_motor(0);
+  delay(600);
+  // auton_drive_towards_mobile_goal(counts_drive, counts_drive_left,
+  // hedck you chris                              counts_drive_right);
   // Stop moving
   set_side_speed(BOTH, 0);
   raise_intake();
@@ -206,31 +209,26 @@ void autonomous() {
   delay(500);
   set_side_speed(BOTH, 0);
 
-  //raise_intake();
-  //delay(300);
-  //set_intake_motor(0);
+  // raise_intake();
+  // delay(300);
+  // set_intake_motor(0);
 
   // Drop the cone on the goal
-  //claw_release_cone();
+  // claw_release_cone();
 
+  //  auton_turn_180();
 
-//  auton_turn_180();
-
-
-
-  //lower_intake();
-  //delay(500);
-  //set_intake_motor(0);
+  // lower_intake();
+  // delay(500);
+  // set_intake_motor(0);
 
   set_side_speed(BOTH, -127);
   delay(1000);
   set_side_speed(BOTH, 0);
 
-
-
   deinitslew();
 }
-void garbo_auton(){
+void garbo_auton() {
   // How far the left wheels have gone
   int counts_drive_left;
   // How far the right wheels have gone
@@ -246,8 +244,8 @@ void garbo_auton(){
   raise_main_lifter();
   delay(500);
   set_main_lifter_motors(0);
-  auton_drive_towards_stationary_goal(counts_drive, counts_drive_left, counts_drive_right);
+  auton_drive_towards_stationary_goal(counts_drive, counts_drive_left,
+                                      counts_drive_right);
   set_side_speed(BOTH, 0);
   claw_release_cone();
-
 }

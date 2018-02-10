@@ -184,9 +184,9 @@ int display_menu(menu_t *menu) {
   printf("%d\n", menu->current);
   printf("return\n");
   lcd_clear();
-  lcd_print(1, "Thk Cm Agn");
+  lcd_print(1, "Selected:");
   lcd_print(2, val);
-  delay(800);
+  delay(600);
   lcd_clear();
   return menu->current;
 }

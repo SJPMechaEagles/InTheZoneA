@@ -54,7 +54,7 @@ void initialize() {
   init_main_lcd(uart1);
   info("LCD Init");
   // Chech batteries
-  if (!battery_level_acceptable()) {
+  /*if (!battery_level_acceptable()) {
     menu_t *bat_menu =
         init_menu_var(STRING_TYPE, "Backup/Partner bad", 1, "Okay");
     // execution paused till user confirms
@@ -70,7 +70,7 @@ void initialize() {
   int opt = display_menu(t);
   if (opt == 1) {
     fiveorten += 200;
-  }
+  }*/
   init_error(true, uart2);
   setTeamName("9228A");
   // init_encoders();

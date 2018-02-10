@@ -18,7 +18,7 @@
  * @date 9/7/2017
  **/
 #define IME_FRONT_RIGHT 0
-#define LIFTER 2
-#define CLAW_POT 1
+#define LIFTER 1
+#define CLAW_POT 2
 
 #endif

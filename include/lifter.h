@@ -13,6 +13,7 @@
 #include "potentiometer.h"
 #include "sensors.h"
 #include "slew.h"
+#include <stdlib.h>
 #include <API.h>
 
 /**
@@ -103,12 +104,12 @@
 /**
  * @brief Max potentiomenter value for secondary lifter.
  **/
-#define SECONDARY_LIFTER_MAX_HEIGHT 3120
+#define SECONDARY_LIFTER_MAX_HEIGHT 1550
 
 /**
  * @brief Min potentiomenter value for secondary lifter.
  */
-#define SECONDARY_LIFTER_MIN_HEIGHT 2000
+#define SECONDARY_LIFTER_MIN_HEIGHT 4000
 
 /**
  * @brief The port the main lifter potentemometer is plugged into.
@@ -228,5 +229,9 @@ void autostack_routine(void *param);
  * @param param ignore parameter
  */
 void interrupt_auto_stack(void *param);
+
+bool main_lifter_should_exit_autostack(int tests, int min_bad,
+                                       const unsigned long delay_time,
+                                       int max_val);
 
 #endif

@@ -47,7 +47,7 @@ void set_claw_motor(const int v) { set_motor_immediate(CLAW_MOTOR, v); }
  * @see CLAW_MOTOR
  * @see MAX_CLAW_SPEED
  **/
-void claw_grab_cone() { set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED); }
+void claw_grab_cone() { set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED); }
 
 /**
  * @brief Drives the motors to release a cone
@@ -55,4 +55,4 @@ void claw_grab_cone() { set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED); }
  * @see CLAW_MOTOR
  * @see MIN_CLAW_SPEED
  **/
-void claw_release_cone() { set_motor_immediate(CLAW_MOTOR, MIN_CLAW_SPEED); }
+void claw_release_cone() { set_motor_immediate(CLAW_MOTOR, MAX_CLAW_SPEED); }
