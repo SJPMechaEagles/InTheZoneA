@@ -69,7 +69,6 @@ void autostack_routine(void *param) {
   set_claw_motor(0);
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
-
   do {
     second_pid_enabled = false;
     printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
@@ -79,7 +78,7 @@ void autostack_routine(void *param) {
       return;
     }
     delay(50);
-  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 3650);
+  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 3500);
   set_secondary_lifter_motors(0);
   const int target = 3550;
   for (;;) {
@@ -93,10 +92,10 @@ void autostack_routine(void *param) {
     int p = SECONDARY_LIFTER_P * (target - current);
     set_secondary_lifter_motors(p);
     // In theory should reduce the likelyhood of stopping early becauce
-    // of this reading to 0.004604969% assuming a .2 chance of each
+    // of this test to 0.004604969% assuming a .2 chance of each
     // reading failing and that the events are independent.
     // We should expect a early lift every 21,715 test, or at 24 tests per
-    // lift
+    // lift a failed lift every 905 attempts
     if (main_lifter_should_exit_autostack(14, 10, 15, 15))
       break;
   }
@@ -106,6 +105,7 @@ void autostack_routine(void *param) {
   }
   set_main_lifter_motors(0);
   set_secondary_lifter_motors(0);
+  long start = millis();
   do {
     printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     if (lifter_autostack_routine_interupt) {
@@ -114,7 +114,8 @@ void autostack_routine(void *param) {
     }
     raise_secondary_lifter();
     delay(10);
-  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 2750);
+  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 2750 &&
+           ((start - millis()) / 1000.0) < 1);
 
   set_secondary_lifter_motors(0);
   set_main_lifter_motors(0);

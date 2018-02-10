@@ -14,6 +14,7 @@
 #include "sensors.h"
 #include "slew.h"
 #include <stdlib.h>
+#include <time.h>
 #include <API.h>
 
 /**
