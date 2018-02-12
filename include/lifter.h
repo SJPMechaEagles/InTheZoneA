@@ -13,9 +13,9 @@
 #include "potentiometer.h"
 #include "sensors.h"
 #include "slew.h"
+#include <API.h>
 #include <stdlib.h>
 #include <time.h>
-#include <API.h>
 
 /**
  * @brief The initial rotation of the lifter potentiometer at height zero

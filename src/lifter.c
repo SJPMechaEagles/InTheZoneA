@@ -19,6 +19,7 @@ static int lifter_ultra_med(int tests[], int len) {
   }
   int med = tests[len / 2];
   printf("MED: %d\n", med);
+  return med;
 }
 
 bool main_lifter_should_exit_autostack(int tests, int min_bad,
@@ -39,7 +40,7 @@ bool main_lifter_should_exit_autostack(int tests, int min_bad,
   }
   if (neg_ones >= min_bad)
     return true;
-  bool med = lifter_ultra_med(results, tests) > max_val;
+  int med = lifter_ultra_med(results, tests);
   return med > max_val;
 }
 
@@ -96,8 +97,10 @@ void autostack_routine(void *param) {
     // reading failing and that the events are independent.
     // We should expect a early lift every 21,715 test, or at 24 tests per
     // lift a failed lift every 905 attempts
-    if (main_lifter_should_exit_autostack(14, 10, 15, 15))
+    if (main_lifter_should_exit_autostack(14, 10, 15, 12)) {
+      printf("exit");
       break;
+    }
   }
   if (lifter_autostack_routine_interupt) {
     quit_auto_static();
