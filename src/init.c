@@ -73,6 +73,5 @@ void initialize() {
   }*/
   init_error(true, uart2);
   setTeamName("9228A");
-  // init_encoders();
   lifter_ultrasonic = ultrasonicInit(4, 5);
 }

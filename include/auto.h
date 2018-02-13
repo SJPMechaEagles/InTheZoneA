@@ -22,12 +22,12 @@
 /**
  * @brief Middle left motor integrated motor encoder
  **/
-#define MID_LEFT_DRIVE 1
+#define MID_LEFT_DRIVE 0
 
 /**
  * @brief Middle right motor integrated motor encoder
  **/
-#define MID_RIGHT_DRIVE 4
+#define MID_RIGHT_DRIVE 1
 
 /**
  * @brief First Stop position for stationary autonomous

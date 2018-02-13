@@ -42,8 +42,6 @@ void update_drive_motors() {
 
   r = -joystickExp(r);
   l = joystickExp(l);
-
-  printf("%d  %d", r, l);
   // Set the drive motors
 
   set_side_speed(LEFT, l);

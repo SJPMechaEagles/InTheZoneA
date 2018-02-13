@@ -16,6 +16,7 @@ static int lifter_ultra_med(int tests[], int len) {
   if (len % 2 == 0) {
     int med = (tests[len / 2] + tests[len / 2 - 1]) / 2;
     printf("MED: %d\n", med);
+    return med;
   }
   int med = tests[len / 2];
   printf("MED: %d\n", med);
@@ -97,7 +98,7 @@ void autostack_routine(void *param) {
     // reading failing and that the events are independent.
     // We should expect a early lift every 21,715 test, or at 24 tests per
     // lift a failed lift every 905 attempts
-    if (main_lifter_should_exit_autostack(10, 8, 10, 15)) {
+    if (main_lifter_should_exit_autostack(12, 11, 7, 20)) {
       break;
     }
   }
@@ -107,7 +108,8 @@ void autostack_routine(void *param) {
   }
   set_main_lifter_motors(0);
   set_secondary_lifter_motors(0);
-  long start = millis();
+  unsigned const long start = millis();
+  unsigned long time = 0;
   do {
     printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     if (lifter_autostack_routine_interupt) {
@@ -116,7 +118,8 @@ void autostack_routine(void *param) {
     }
     raise_secondary_lifter();
     delay(10);
-  } while (((start - millis()) / 1000.0) < 4);
+    time = millis();
+  } while (((time - start) / 1000.0) < .71);
 
   set_secondary_lifter_motors(0);
   set_main_lifter_motors(0);
