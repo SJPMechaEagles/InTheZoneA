@@ -16,6 +16,8 @@
  */
 #define M_PI 3.14159265358979
 
+#define M_E 2.71828182845904523536
+
 /**
  * @brief A struct that contains polar coordinates.
  * @date 9/9/2017

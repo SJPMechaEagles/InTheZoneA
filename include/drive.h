@@ -9,12 +9,20 @@
 #define _DRIVE_H_
 
 #include <API.h>
+#include "math.h"
+#include "vmath.h"
 
 /**
  * @brief The dead spot on the controller to avoid running motors at low
  * speeds.
  **/
 #define THRESHOLD 10
+
+#define D (0.066)
+
+#define B (-110)
+
+#define K (0.05)
 
 /**
  * @brief enumeration indication side of the robot.

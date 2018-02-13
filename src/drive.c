@@ -3,6 +3,7 @@
 #include "motor_ports.h"
 #include "slew.h"
 
+static float joystickExp(int joystickVal);
 static int thresh = 10;
 
 /**
@@ -39,9 +40,14 @@ void update_drive_motors() {
   int r = (x + y);
   int l = -(x - y);
 
+  r = -joystickExp(r);
+  l = joystickExp(l);
+
+  printf("%d  %d", r, l);
   // Set the drive motors
+
   set_side_speed(LEFT, l);
-  set_side_speed(RIGHT, -r);
+  set_side_speed(RIGHT, r);
 }
 
 /**
@@ -75,14 +81,8 @@ static float joystickExp(int joystickVal) {
   if (abs(joystickVal) < thresh) {
     return 0;
   }
-
-  int offset;
-  // Use the threshold to ensure the joystick values are significant
-  if (joystickVal < 0) {
-    offset = -(thresh);
-  } else {
-    offset = thresh;
+  if (joystickVal > 0) {
+    return 129.951 / (1 + K * exp(-(D * (joystickVal + B))));
   }
-  // Apply the function ((((x/10)^3)/18) + offset) * 0.8 to the joystick value
-  return (pow(joystickVal / 10, 3) / 18 + offset) * 0.8;
+  return -129.951 / (1 + K * exp(-(D * (-joystickVal + B))));
 }

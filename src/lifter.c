@@ -97,8 +97,7 @@ void autostack_routine(void *param) {
     // reading failing and that the events are independent.
     // We should expect a early lift every 21,715 test, or at 24 tests per
     // lift a failed lift every 905 attempts
-    if (main_lifter_should_exit_autostack(14, 10, 15, 12)) {
-      printf("exit");
+    if (main_lifter_should_exit_autostack(10, 8, 10, 15)) {
       break;
     }
   }
@@ -117,8 +116,7 @@ void autostack_routine(void *param) {
     }
     raise_secondary_lifter();
     delay(10);
-  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 2750 &&
-           ((start - millis()) / 1000.0) < 1);
+  } while (((start - millis()) / 1000.0) < 4);
 
   set_secondary_lifter_motors(0);
   set_main_lifter_motors(0);
@@ -136,7 +134,7 @@ void autostack_routine(void *param) {
     quit_auto_static();
     return;
   }
-  delay(1000);
+  delay(600);
   set_claw_motor(0);
   set_secondary_lifter_motors(0);
 
@@ -158,7 +156,7 @@ void autostack_routine(void *param) {
  * @date 1/6/2018
  **/
 void set_secondary_lifter_motors(const int v) {
-  set_motor_slew(MOTOR_SECONDARY_LIFTER, v);
+  set_motor_immediate(MOTOR_SECONDARY_LIFTER, v);
 }
 
 /**
@@ -170,7 +168,7 @@ void set_secondary_lifter_motors(const int v) {
  * @date 9/9/2017
  **/
 void set_main_lifter_motors(const int v) {
-  set_motor_slew(MOTOR_MAIN_LIFTER, v);
+  set_motor_immediate(MOTOR_MAIN_LIFTER, v);
 }
 
 /**
