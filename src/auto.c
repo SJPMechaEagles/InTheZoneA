@@ -11,112 +11,76 @@
  * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
  */
 #include "auto.h"
+#include "lifter.h"
 #include "log.h"
 #include "slew.h"
 
-int fiveorten = 1700;
-
-/**
- * @brief sets up the IMEs for the autonomous portion.
- * @author Christian DeSimone, Chris Jerrett
- * @param counts_drive_left The encoder value from the left motors
- * @param counts_drive_right The encoder value from the right motors
- * @param counts_drive The average encoder value from both sides
- **/
-static inline void setup_ime_auton(int *counts_drive_left,
-                                   int *counts_drive_right, int *counts_drive) {
+static void zero_ime() {
   imeReset(MID_LEFT_DRIVE);
   imeReset(MID_RIGHT_DRIVE);
-  // Set initial values for how far the wheels have gone
-  imeGet(MID_LEFT_DRIVE, counts_drive_left);
-  imeGet(MID_RIGHT_DRIVE, counts_drive_right);
-  *counts_drive = *counts_drive_left + *counts_drive_right;
-  *counts_drive /= 2;
-}
-/**
- * @brief Starts the auntonomous program.
- * @author Chris Jerrett, Christian DeSimone
- **/
-static inline void
-start_auton() { // starts the slew rate controller to prevent ptc trips
-  init_slew();
-
-  delay(10);
-  info("AUTO");
 }
 
-/**
- * @brief utility function which deploys the secondary lifter at the start of
- *autonomous.
- * @author Christian DeSimone, Chris Jerrett
- **/
-void deploy_seoncdary_lifter() {
-  while (analogRead(SECONDARY_LIFTER_POT_PORT) < DEPLOY_HEIGHT) {
-    set_secondary_lifter_motors(MIN_SPEED);
-  }
-  set_secondary_lifter_motors(0);
-}
-
-/**
- * @brief utility function which raises the second lifter to its maximum height
- * @author Chris Jerrett, Christian DeSimone
- * @see MAX_HEIGHT
- **/
-void auton_raise_sec_lifter_max() {
-  while (analogRead(SECONDARY_LIFTER_POT_PORT) < MAX_HEIGHT) {
-    set_secondary_lifter_motors(MIN_SPEED);
-  }
-  set_secondary_lifter_motors(0);
-}
-
-/**
- * @brief utility function to raise the mainlifter to the mobile goal height
- * @author Chris Jerrett, Christian DeSimone
- **/
-void auton_rasie_main_lifter() {
-  while (analogRead(MAIN_LIFTER_POT) < MOBILE_GOAL_HEIGHT) {
-    set_main_lifter_motors(MAX_SPEED);
-  }
+static void setup_auton() {
+  raise_main_lifter();
+  delay(300);
   set_main_lifter_motors(0);
 }
-/**
- * @brief Drives the robot forward until it reaches the mobile goal
- * @author Christian DeSimone, Chris Jerrett
- **/
-void auton_drive_towards_mobile_goal(int counts_drive, int counts_drive_left,
-                                     int counts_drive_right) {
-  while (counts_drive < MOBILE_GOAL_DISTANCE) {
-    set_side_speed(BOTH, 127);
-    // Restablish the distance traveled
-    imeGet(MID_LEFT_DRIVE, &counts_drive_left);
-    imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
-    counts_drive = counts_drive_left + counts_drive_right;
-    counts_drive /= 2;
+
+static void drive_towards_goal() {
+  unsigned const int start_time = millis();
+  int right_set_speed = 100;
+  int left_set_speed = 100;
+
+  int right_vel = 0;
+  int left_vel = 0;
+
+  for (;;) {
+    lower_intake();
+    if ((millis() - start_time) / 1000.0 > 2) {
+      set_intake_motor(0);
+    }
+    set_side_speed(RIGHT, right_set_speed);
+    set_side_speed(LEFT, left_set_speed);
+
+    imeGetVelocity(MID_RIGHT_DRIVE, &right_vel);
+    imeGetVelocity(MID_LEFT_DRIVE, &left_vel);
+
+    const int diff = abs(right_vel) - abs(left_vel);
+
+    right_set_speed -= .0005 * diff;
+    left_set_speed += .0005 * diff;
+
+    printf("RIGHT VEL: %d\n", right_vel);
+    printf("LEFT VEL: %d\n", left_vel);
+    printf("DIFF VEL: %d\n", diff);
+
+    int right_dist, left_dist = 0;
+    imeGet(MID_LEFT_DRIVE, &right_dist);
+    imeGet(MID_RIGHT_DRIVE, &left_dist);
+
+    int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
+    if (ave_dist > 2000) {
+      set_side_speed(BOTH, 0);
+      break;
+    }
+
+    printf("RIGHT: %d\n", right_dist);
+    printf("LEFT: %d\n", left_dist);
+    printf("DIFF: %d\n", ave_dist);
+
+    delay(20);
   }
 }
-void auton_drive_towards_stationary_goal(int counts_drive,
-                                         int counts_drive_left,
-                                         int counts_drive_right) {
-  while (counts_drive < STATIONARY_GOAL_DISTANCE) {
-    set_side_speed(BOTH, 127);
-    imeGet(MID_LEFT_DRIVE, &counts_drive_left);
-    imeGet(MID_RIGHT_DRIVE, &counts_drive_right);
-    counts_drive = counts_drive_left + counts_drive_right;
-    counts_drive /= 2;
-  }
+
+static void pick_up_mobile_goal() {
+  raise_intake();
+  delay(1000);
 }
-/**
- * @brief Rotates the robot 180 degrees clockwise
- * @author Chris Jerrett, Christian DeSimone
- **/
-void auton_turn_180() {
-  int ang = 0;
-  while (ang < HALF_ROTATE) {
-    ang += calculate_encoder_angle();
-    set_side_speed(LEFT, MAX_SPEED);
-    set_side_speed(RIGHT, MIN_SPEED);
-  }
-  set_side_speed(BOTH, 0);
+
+static void turn(int degrees) {
+  do {
+
+  } while (false);
 }
 
 /*
@@ -137,115 +101,16 @@ void auton_turn_180() {
  * disable/enable cycle.
  */
 void autonomous() {
-  start_auton();
-  // return;
-
-  // How far the left wheels have gone
-  int counts_drive_left;
-  // How far the right wheels have gone
-  int counts_drive_right;
-  // The average distance traveled forward
-  int counts_drive;
-
-  // Reset the integrated motor controllers
-  setup_ime_auton(&counts_drive_left, &counts_drive_right, &counts_drive);
-  info("break 0");
-  // Deploy claw
-  // deploy_seoncdary_lifter();
-  info("break 1");
-
-  info("break 2");
-  set_secondary_lifter_motors(0);
-
-  // Grab pre-load cone
-  // delay(300);
-
-  //  auton_raise_sec_lifter_max();
-  // Raise the lifter
-  //  auton_rasie_main_lifter();
-  // Drive towards the goal
-
-  // lower_intake();
-  delay(500);
-  // set_intake_motor(0);
-  set_side_speed(BOTH, 127);
-  set_main_lifter_motors(MAX_SPEED);
-  lower_intake();
-  delay(600);
-  set_main_lifter_motors(0);
-
-  delay(500);
-  set_intake_motor(0);
-  delay(600);
-  // auton_drive_towards_mobile_goal(counts_drive, counts_drive_left,
-  // hedck you chris                              counts_drive_right);
-  // Stop moving
-  set_side_speed(BOTH, 0);
-  raise_intake();
-  delay(1000);
-  set_intake_motor(0);
-  deploy_seoncdary_lifter();
-  set_main_lifter_motors(MIN_SPEED);
-  delay(400);
-  set_main_lifter_motors(0);
-  set_claw_motor(MIN_CLAW_SPEED);
-  delay(750);
-  set_claw_motor(0);
-  set_side_speed(RIGHT, 127);
-  set_side_speed(LEFT, -127);
-  delay(1100);
-  set_side_speed(BOTH, 0);
-  set_main_lifter_motors(MAX_SPEED);
-  delay(300);
-  set_side_speed(BOTH, 127);
-  delay(fiveorten);
-  set_side_speed(BOTH, 0);
-  lower_intake();
-  delay(500);
-  set_intake_motor(0);
-  set_side_speed(BOTH, -127);
-  delay(500);
-  raise_intake();
-  delay(500);
-  set_side_speed(BOTH, 0);
-
-  // raise_intake();
-  // delay(300);
-  // set_intake_motor(0);
-
-  // Drop the cone on the goal
-  // claw_release_cone();
-
-  //  auton_turn_180();
-
-  // lower_intake();
-  // delay(500);
-  // set_intake_motor(0);
-
-  set_side_speed(BOTH, -127);
-  delay(1000);
-  set_side_speed(BOTH, 0);
-
-  deinitslew();
-}
-void garbo_auton() {
-  // How far the left wheels have gone
-  int counts_drive_left;
-  // How far the right wheels have gone
-  int counts_drive_right;
-  // The average distance traveled forward
-  int counts_drive;
-
-  // Reset the integrated motor controllers
-  setup_ime_auton(&counts_drive_left, &counts_drive_right, &counts_drive);
-  info("break 0");
-
-  deploy_seoncdary_lifter();
-  raise_main_lifter();
-  delay(500);
-  set_main_lifter_motors(0);
-  auton_drive_towards_stationary_goal(counts_drive, counts_drive_left,
-                                      counts_drive_right);
-  set_side_speed(BOTH, 0);
-  claw_release_cone();
+  info("0");
+  init_slew();
+  info("1");
+  zero_ime();
+  info("2");
+  setup_auton();
+  info("3");
+  drive_towards_goal();
+  info("4");
+  pick_up_mobile_goal();
+  info("5");
+  turn(-180);
 }

@@ -21,7 +21,6 @@
 #include "slew.h"
 
 extern Ultrasonic lifter_ultrasonic;
-extern int fiveorten;
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode
@@ -52,9 +51,8 @@ void initializeIO() { watchdogInit(); }
  */
 void initialize() {
   init_main_lcd(uart1);
-  info("LCD Init");
   // Chech batteries
-  /*if (!battery_level_acceptable()) {
+  if (!battery_level_acceptable()) {
     menu_t *bat_menu =
         init_menu_var(STRING_TYPE, "Backup/Partner bad", 1, "Okay");
     // execution paused till user confirms
@@ -68,10 +66,11 @@ void initialize() {
   menu_t *t =
       init_menu_var(STRING_TYPE, "Auton Zone", 2, "Five Pt.", "Ten Pt.");
   int opt = display_menu(t);
-  if (opt == 1) {
-    fiveorten += 200;
-  }*/
   init_error(true, uart2);
+  info("init error");
   setTeamName("9228A");
+  if (!init_encoders())
+    error("Encoders failed");
   lifter_ultrasonic = ultrasonicInit(4, 5);
+  info("Exit Init");
 }
