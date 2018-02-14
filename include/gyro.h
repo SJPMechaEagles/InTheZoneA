@@ -17,7 +17,7 @@
  * Special Gyro multiplier for tuning in Gyro
  * @todo
  */
-#define GYRO_MULTIPLIER 0
+#define GYRO_MULTIPLIER 196
 
 /**
  * @brief Initializes the main robot gryoscope/

@@ -14,6 +14,7 @@
 #include "lifter.h"
 #include "log.h"
 #include "slew.h"
+#include "gyro.h"
 Gyro gyro;
 
 static void zero_ime() {
@@ -25,6 +26,7 @@ static void setup_auton() {
   raise_main_lifter();
   delay(300);
   set_main_lifter_motors(0);
+
 }
 
 static void drive_towards_goal() {
@@ -80,9 +82,14 @@ static void pick_up_mobile_goal() {
 }
 
 static void turn(int degrees) {
+  gyro = gyroInit(GYRO_PORT, GYRO_MULTIPLIER);
+  gyroReset(gyro);
+  int neg = abs(degrees)/degrees;
   do {
-
-  } while (false);
+    set_side_speed(RIGHT, -1 * neg * ROTATION_SPEED);
+    set_side_speed(LEFT, neg * ROTATION_SPEED);
+  } while (abs(gyroGet(gyro)) < abs(degrees));
+  gyroShutdown(gyro);
 }
 
 /*

@@ -19,6 +19,8 @@
  **/
 #define FRONT_LEFT_IME 0
 
+#define ROTATION_SPEED 60
+
 /**
  * @brief Middle left motor integrated motor encoder
  **/
