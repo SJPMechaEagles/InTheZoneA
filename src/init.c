@@ -21,6 +21,7 @@
 #include "slew.h"
 
 extern Ultrasonic lifter_ultrasonic;
+extern Gyro gyro;
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode
@@ -66,6 +67,8 @@ void initialize() {
   menu_t *t =
       init_menu_var(STRING_TYPE, "Auton Zone", 2, "Five Pt.", "Ten Pt.");
   int opt = display_menu(t);
+  info("Gyro Calibrate");
+  gyro = gyroInit(3, 0);
   init_error(true, uart2);
   info("init error");
   setTeamName("9228A");

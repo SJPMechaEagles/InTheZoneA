@@ -14,6 +14,7 @@
 #include "lifter.h"
 #include "log.h"
 #include "slew.h"
+Gyro gyro;
 
 static void zero_ime() {
   imeReset(MID_LEFT_DRIVE);
@@ -59,7 +60,7 @@ static void drive_towards_goal() {
     imeGet(MID_RIGHT_DRIVE, &left_dist);
 
     int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
-    if (ave_dist > 1800) {
+    if (ave_dist > 1800 || millis() - start_time > 4000) {
       info("exit");
       set_side_speed(BOTH, 0);
       break;
