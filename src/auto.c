@@ -59,14 +59,15 @@ static void drive_towards_goal() {
     imeGet(MID_RIGHT_DRIVE, &left_dist);
 
     int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
-    if (ave_dist > 2000) {
+    if (ave_dist > 1800) {
+      info("exit");
       set_side_speed(BOTH, 0);
       break;
     }
 
     printf("RIGHT: %d\n", right_dist);
     printf("LEFT: %d\n", left_dist);
-    printf("DIFF: %d\n", ave_dist);
+    printf("AVG: %d\n", ave_dist);
 
     delay(20);
   }
@@ -111,6 +112,9 @@ void autonomous() {
   drive_towards_goal();
   info("4");
   pick_up_mobile_goal();
+  claw_release_cone();
+  delay(500);
+  set_claw_motor(0);
   info("5");
   turn(-180);
 }
