@@ -4,19 +4,6 @@
 #include "slew.h"
 
 static float joystickExp(int joystickVal);
-static int thresh = 10;
-
-/**
- * @brief Gets the deadzone threshold on the joystick.
- * @author Christian Desimone
- **/
-int getThresh() { return thresh; }
-
-/**
- * @brief Sets the deadzone threshold on the joystick.
- * @author Christian Desimone
- **/
-void setThresh(int t) { thresh = t; }
 
 /**
  * @brief Updates the drive motors during teleop
@@ -30,10 +17,10 @@ void update_drive_motors() {
   x = -(joystickGetAnalog(MASTER, 3));
   y = (joystickGetAnalog(MASTER, 1));
   // Make sure the joystick values are significant enough to change the motors
-  if (x < thresh && x > -thresh) {
+  if (x < THRESHOLD && x > -THRESHOLD) {
     x = 0;
   }
-  if (y < thresh && y > -thresh) {
+  if (y < THRESHOLD && y > -THRESHOLD) {
     y = 0;
   }
   // Create motor values for the left and right from the x and y of the joystick
@@ -55,7 +42,7 @@ void update_drive_motors() {
  * @param speed the speed of the side. Can range from -127 - 127 negative being
  *		  back and positive forwards
  **/
-void set_side_speed(side_t side, int speed) {
+void set_side_speed(const side_t side, const int speed) {
   if (side == RIGHT || side == BOTH) {
     set_motor_slew(MOTOR_BACK_RIGHT, -speed);
     set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
@@ -76,7 +63,7 @@ void set_side_speed(side_t side, int speed) {
  **/
 static float joystickExp(int joystickVal) {
   // make the offset negative if moving backwards
-  if (abs(joystickVal) < thresh) {
+  if (abs(joystickVal) < THRESHOLD) {
     return 0;
   }
   if (joystickVal > 0) {

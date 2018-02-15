@@ -1,5 +1,5 @@
-#ifndef _MOBLE_GOAL_INTAKE_
-#define _MOBLE_GOAL_INTAKE_
+#ifndef _MOBILE_GOAL_H_
+#define _MOBILE_GOAL_H_
 
 #include "controller.h"
 #include "motor_ports.h"
@@ -21,11 +21,11 @@ void set_intake_motor(int n);
 /**
  * @brief raises the intake
  **/
-void raise_intake();
+void inline raise_intake();
 
 /**
  * @brief lowers the intake
  **/
-void lower_intake();
+void inline lower_intake();
 
 #endif

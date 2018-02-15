@@ -112,6 +112,6 @@ enum joystick {
  * @brief Gets the location of a joystick on the controller
  * @author Chris Jerrett
  **/
-struct cord get_joystick_cord(enum joystick side, int controller);
+struct cord get_joystick_cord(const enum joystick side, const int controller);
 
 #endif

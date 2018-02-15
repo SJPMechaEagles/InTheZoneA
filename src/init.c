@@ -51,29 +51,28 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
+  if (isEnabled() && !isAutonomous() && isOnline()) {
+    error("Robot Reset");
+    // Return to opt control
+    return;
+  }
+  init_error(true, uart2);
+  info("init error");
   init_main_lcd(uart1);
   // Chech batteries
   if (!battery_level_acceptable()) {
-    menu_t *bat_menu =
-        init_menu_var(STRING_TYPE, "Backup/Partner bad", 1, "Okay");
+    menu_t *bat_menu = init_menu_var(STRING_TYPE, "Main or 9V Dead", 1, "Okay");
     // execution paused till user confirms
     display_menu(bat_menu);
-  }
-  // Check partner controller to prevent another Framingham...
-  if (!isJoystickConnected(PARTNER)) {
-    menu_t *partner_menu = init_menu_var(STRING_TYPE, "Partner bad", 1, "Okay");
-    display_menu(partner_menu);
   }
   menu_t *t =
       init_menu_var(STRING_TYPE, "Auton Zone", 2, "Five Pt.", "Ten Pt.");
   int opt = display_menu(t);
   info("Gyro Calibrate");
   gyro = gyroInit(3, 0);
-  init_error(true, uart2);
-  info("init error");
   setTeamName("9228A");
   if (!init_encoders())
     error("Encoders failed");
   lifter_ultrasonic = ultrasonicInit(4, 5);
-  info("Exit Init");
+  info("Ready to run");
 }
