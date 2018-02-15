@@ -51,7 +51,7 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
-  if (isEnabled() && !isAutonomous() && isOnline()) {
+  if (isEnabled() && isOnline()) {
     error("Robot Reset");
     // Return to opt control
     return;
@@ -69,7 +69,7 @@ void initialize() {
       init_menu_var(STRING_TYPE, "Auton Zone", 2, "Five Pt.", "Ten Pt.");
   int opt = display_menu(t);
   info("Gyro Calibrate");
-  gyro = gyroInit(3, 0);
+  gyro = gyroInit(3, 230);
   setTeamName("9228A");
   if (!init_encoders())
     error("Encoders failed");

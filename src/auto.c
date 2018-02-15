@@ -25,21 +25,21 @@ static void zero_ime() {
 
 static void setup_auton() {
   raise_main_lifter();
-  delay(300);
+  delay(500);
   set_main_lifter_motors(0);
 }
 
 static void drive_towards_goal() {
   unsigned const int start_time = millis();
-  int right_set_speed = 100;
-  int left_set_speed = 100;
+  int right_set_speed = 80;
+  int left_set_speed = 80;
 
   int right_vel = 0;
   int left_vel = 0;
 
   for (;;) {
     lower_intake();
-    if ((millis() - start_time) / 1000.0 > 3.5) {
+    if ((millis() - start_time) / 1000.0 > 1) {
       set_intake_motor(0);
     }
     set_side_speed(RIGHT, right_set_speed);
@@ -62,7 +62,7 @@ static void drive_towards_goal() {
     imeGet(MID_RIGHT_DRIVE, &left_dist);
 
     int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
-    if (ave_dist > 1800 || millis() - start_time > 34000) {
+    if (ave_dist > 1600 || millis() - start_time > 2300) {
       info("exit");
       set_side_speed(BOTH, 0);
       break;
@@ -90,9 +90,43 @@ static void turn(const int degrees) {
     diff = gyroGet(gyro) - start;
     set_side_speed(RIGHT, -100 * neg);
     set_side_speed(LEFT, 100 * neg);
+    info("Turn");
     delay(10);
-  } while (abs(diff) < degrees);
+  } while (abs(diff) < abs(degrees));
   set_side_speed(BOTH, 0);
+}
+
+static void drive_distance(const int dist, const unsigned int speed) {
+  info("Drive Distance");
+  int right_dist = 0;
+  int left_dist = 0;
+  imeGet(MID_RIGHT_DRIVE, &right_dist);
+  const int ime_right_start = right_dist;
+
+  imeGet(MID_LEFT_DRIVE, &left_dist);
+  const int ime_left_start = left_dist;
+
+  int right_set_speed = 100;
+  int left_set_speed = 100;
+
+  int right_vel = 0;
+  int left_vel = 0;
+
+  do {
+    set_side_speed(RIGHT, 100);
+    set_side_speed(LEFT, 100);
+    int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
+
+    imeGetVelocity(MID_RIGHT_DRIVE, &right_vel);
+    imeGetVelocity(MID_LEFT_DRIVE, &left_vel);
+
+    const int diff = abs(right_vel) - abs(left_vel);
+
+    right_set_speed -= .001 * diff;
+    left_set_speed += .001 * diff;
+
+    delay(10);
+  } while (abs(dist) < dist);
 }
 
 /*
@@ -128,6 +162,6 @@ void autonomous() {
   set_claw_motor(0);
   info("5");
   turn(-180);
-
+  drive_distance(4000, 100);
   gyroShutdown(gyro);
 }
