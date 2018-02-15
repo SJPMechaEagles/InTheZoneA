@@ -74,6 +74,7 @@ static void drive_towards_goal() {
 
     delay(20);
   }
+  zero_ime();
 }
 
 static void pick_up_mobile_goal() {
@@ -97,6 +98,8 @@ static void turn(const int degrees) {
 }
 
 static void drive_distance(const int dist, const unsigned int speed) {
+  zero_ime();
+  set_side_speed(BOTH, 0);
   info("Drive Distance");
   int right_dist = 0;
   int left_dist = 0;
@@ -112,21 +115,28 @@ static void drive_distance(const int dist, const unsigned int speed) {
   int right_vel = 0;
   int left_vel = 0;
 
+  int ave_dist = 0;
+
   do {
-    set_side_speed(RIGHT, 100);
-    set_side_speed(LEFT, 100);
-    int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
+    set_side_speed(RIGHT, right_set_speed);
+    set_side_speed(LEFT, left_set_speed);
+
+    printf("right: %d, left %d\n", right_set_speed, left_set_speed);
+
+    ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
 
     imeGetVelocity(MID_RIGHT_DRIVE, &right_vel);
     imeGetVelocity(MID_LEFT_DRIVE, &left_vel);
 
-    const int diff = abs(right_vel) - abs(left_vel);
+    const int diff =
+        abs(right_vel - ime_right_start) - abs(left_vel - ime_left_start);
 
     right_set_speed -= .001 * diff;
     left_set_speed += .001 * diff;
 
     delay(10);
-  } while (abs(dist) < dist);
+  } while (abs(ave_dist) < dist);
+  set_side_speed(BOTH, 0);
 }
 
 /*
