@@ -40,13 +40,7 @@ typedef enum side { LEFT, BOTH, RIGHT } side_t;
  * @param speed the speed of the side. Can range from -127 - 127 negative being
  *back and positive forwards
  **/
-void set_side_speed(side_t side, int speed);
-
-/**
- * @brief Sets the deadzone threshold on the drive.
- * @author Chris Jerrett
- **/
-void setThresh(int t);
+void set_side_speed(const side_t side, const int speed);
 
 /**
  * @brief Updates the drive motors during teleop

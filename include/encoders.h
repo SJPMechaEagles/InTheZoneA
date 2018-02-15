@@ -32,13 +32,13 @@ bool init_encoders();
  * @author Chris Jerrett
  * @date 9/15/2017
  **/
-int get_encoder_ticks(unsigned char address);
+int get_encoder_ticks(const unsigned char address);
 
 /**
  * @brief Gets the encoder reads
  * @author Chris Jerrett
  * @date 9/15/2017
  **/
-int get_encoder_velocity(unsigned char address);
+int get_encoder_velocity(const unsigned char address);
 
 #endif

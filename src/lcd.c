@@ -1,5 +1,5 @@
 #include "lcd.h"
-
+#include <API.h>
 /** The port of the initialized lcd **/
 static FILE *lcd_port = NULL;
 
@@ -72,7 +72,7 @@ void init_main_lcd(FILE *lcd) {
  * @author Chris Jerrett
  * @date 9/9/2017
  **/
-void lcd_print(unsigned int line, const char *str) {
+void lcd_print(const unsigned int line, const char *str) {
   lcd_assert();
   lcdSetText(lcd_port, line, str);
 }
@@ -84,7 +84,7 @@ void lcd_print(unsigned int line, const char *str) {
  * @author Chris Jerrett
  * @date 9/9/2017
  **/
-void lcd_printf(unsigned int line, const char *format_str, ...) {
+void lcd_printf(const unsigned int line, const char *format_str, ...) {
   lcd_assert();
   lcdPrint(lcd_port, line, format_str);
 }
@@ -96,7 +96,7 @@ void lcd_printf(unsigned int line, const char *format_str, ...) {
  * @author Chris Jerrett
  * @date 9/9/2017
  **/
-void lcd_set_backlight(bool state) {
+void lcd_set_backlight(const bool state) {
   lcd_assert();
   lcdSetBacklight(lcd_port, state);
 }

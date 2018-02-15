@@ -9,7 +9,7 @@
  * @see LEFT_JOY_X
  * @see LEFT_JOY_Y
  **/
-struct cord get_joystick_cord(enum joystick side, int controller) {
+struct cord get_joystick_cord(const enum joystick side, const int controller) {
   int x;
   int y;
   // Get the joystick value for either the right or left,

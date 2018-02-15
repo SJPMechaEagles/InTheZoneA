@@ -13,6 +13,7 @@
 #include "auto.h"
 #include "lifter.h"
 #include "log.h"
+#include "mobile_goal_intake.h"
 #include "slew.h"
 Gyro gyro;
 
@@ -36,8 +37,8 @@ static void drive_towards_goal() {
   int left_vel = 0;
 
   for (;;) {
-    lower_intake();
-    if ((millis() - start_time) / 1000.0 > 2) {
+    // lower_intake();
+    if ((millis() - start_time) / 1000.0 > 3) {
       set_intake_motor(0);
     }
     set_side_speed(RIGHT, right_set_speed);
@@ -48,8 +49,8 @@ static void drive_towards_goal() {
 
     const int diff = abs(right_vel) - abs(left_vel);
 
-    right_set_speed -= .0005 * diff;
-    left_set_speed += .0005 * diff;
+    right_set_speed -= .001 * diff;
+    left_set_speed += .001 * diff;
 
     printf("RIGHT VEL: %d\n", right_vel);
     printf("LEFT VEL: %d\n", left_vel);
@@ -60,7 +61,7 @@ static void drive_towards_goal() {
     imeGet(MID_RIGHT_DRIVE, &left_dist);
 
     int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
-    if (ave_dist > 1800 || millis() - start_time > 4000) {
+    if (ave_dist > 1800 || millis() - start_time > 34000) {
       info("exit");
       set_side_speed(BOTH, 0);
       break;
@@ -77,12 +78,19 @@ static void drive_towards_goal() {
 static void pick_up_mobile_goal() {
   raise_intake();
   delay(1000);
+  set_intake_motor(0);
 }
 
-static void turn(int degrees) {
+static void turn(const int degrees) {
+  int start = gyroGet(gyro);
+  int diff;
   do {
-
-  } while (false);
+    diff = gyroGet(gyro) - start;
+    set_side_speed(RIGHT, -100);
+    set_side_speed(LEFT, 100);
+    delay(10);
+  } while (abs(diff) < degrees);
+  set_side_speed(BOTH, 0);
 }
 
 /*
@@ -118,4 +126,6 @@ void autonomous() {
   set_claw_motor(0);
   info("5");
   turn(-180);
+
+  gyroShutdown(gyro);
 }

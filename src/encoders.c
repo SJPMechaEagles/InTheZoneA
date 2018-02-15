@@ -11,6 +11,7 @@
 bool init_encoders() {
 #ifdef IME_NUMBER
   int count = imeInitializeAll();
+  delay(1000);
   if (count != IME_NUMBER) {
     printf("detected only %d\n", count);
     error("Wrong Number of IMEs Connected");
@@ -27,7 +28,7 @@ bool init_encoders() {
  * @author Chris Jerrett
  * @date 9/15/2017
  **/
-int get_encoder_ticks(unsigned char address) {
+int get_encoder_ticks(const unsigned char address) {
   int i = 0;
   imeGet(address, &i);
   return i;
@@ -38,7 +39,7 @@ int get_encoder_ticks(unsigned char address) {
  * @author Chris Jerrett
  * @date 9/15/2017
  **/
-int get_encoder_velocity(unsigned char address) {
+int get_encoder_velocity(const unsigned char address) {
   int i = 0;
   imeGetVelocity(address, &i);
   return i;
