@@ -11,11 +11,11 @@
  * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
  */
 #include "auto.h"
+#include "gyro.h"
 #include "lifter.h"
 #include "log.h"
 #include "mobile_goal_intake.h"
 #include "slew.h"
-#include "gyro.h"
 Gyro gyro;
 
 static void zero_ime() {
@@ -27,7 +27,6 @@ static void setup_auton() {
   raise_main_lifter();
   delay(300);
   set_main_lifter_motors(0);
-
 }
 
 static void drive_towards_goal() {
@@ -39,8 +38,8 @@ static void drive_towards_goal() {
   int left_vel = 0;
 
   for (;;) {
-    // lower_intake();
-    if ((millis() - start_time) / 1000.0 > 3) {
+    lower_intake();
+    if ((millis() - start_time) / 1000.0 > 3.5) {
       set_intake_motor(0);
     }
     set_side_speed(RIGHT, right_set_speed);
@@ -86,10 +85,11 @@ static void pick_up_mobile_goal() {
 static void turn(const int degrees) {
   int start = gyroGet(gyro);
   int diff;
+  int neg = abs(degrees) / degrees;
   do {
     diff = gyroGet(gyro) - start;
-    set_side_speed(RIGHT, -100);
-    set_side_speed(LEFT, 100);
+    set_side_speed(RIGHT, -100 * neg);
+    set_side_speed(LEFT, 100 * neg);
     delay(10);
   } while (abs(diff) < degrees);
   set_side_speed(BOTH, 0);
