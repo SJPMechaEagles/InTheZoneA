@@ -183,6 +183,7 @@ int display_menu(menu_t *menu) {
     if (isEnabled() && !isAutonomous() && isOnline()) {
       error("Robot Reset");
       // Returnif robot is in optcontrol and enabled
+      lcd_clear();
       return menu->current;
     }
   }
