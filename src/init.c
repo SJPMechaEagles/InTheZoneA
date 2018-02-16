@@ -20,6 +20,11 @@
 #include "sensors.h"
 #include "slew.h"
 
+/*
+ * Initilaizes the watchdog and feed task if watchdog is enabled
+ */
+void watchdogStart();
+
 extern Ultrasonic lifter_ultrasonic;
 extern Gyro gyro;
 
