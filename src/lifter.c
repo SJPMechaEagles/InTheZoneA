@@ -71,6 +71,7 @@ void autostack_routine(void *param) {
   set_claw_motor(0);
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
+  // Lift main lifter
   do {
     second_pid_enabled = false;
     printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
@@ -98,6 +99,10 @@ void autostack_routine(void *param) {
     // reading failing and that the events are independent.
     // We should expect a early lift every 21,715 test, or at 24 tests per
     // lift a failed lift every 905 attempts
+    // First arg: total tests
+    // Sec arg: number that are bad_responses aka -1
+    // Third arg: Delay between reading
+    // Forth Arg: Minimum distance before exiting of the median value
     if (main_lifter_should_exit_autostack(15, 13, 8, 20)) {
       break;
     }
@@ -106,10 +111,12 @@ void autostack_routine(void *param) {
     quit_auto_static();
     return;
   }
+  // Reached top
   set_main_lifter_motors(0);
   set_secondary_lifter_motors(0);
   unsigned const long start = millis();
   unsigned long time = 0;
+  // Lift secondary lifter
   do {
     printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     if (lifter_autostack_routine_interupt) {
@@ -119,8 +126,9 @@ void autostack_routine(void *param) {
     raise_secondary_lifter();
     delay(10);
     time = millis();
-  } while (((time - start) / 1000.0) < .71);
+  } while (((time - start) / 1000.0) < 1);
 
+  // at top
   set_secondary_lifter_motors(0);
   set_main_lifter_motors(0);
   delay(70);
@@ -130,6 +138,7 @@ void autostack_routine(void *param) {
     quit_auto_static();
     return;
   }
+  // release cone
   delay(200);
   set_main_lifter_motors(0);
   claw_release_cone();
@@ -141,6 +150,7 @@ void autostack_routine(void *param) {
   set_claw_motor(0);
   set_secondary_lifter_motors(0);
 
+  // get out of way of the cone
   raise_main_lifter();
   delay(200);
   set_main_lifter_motors(0);
