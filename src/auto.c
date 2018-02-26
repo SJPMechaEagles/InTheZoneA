@@ -139,6 +139,12 @@ static void drive_distance(const int dist, const unsigned int speed) {
   set_side_speed(BOTH, 0);
 }
 
+void drop_mobile_goal(){
+  lower_intake();
+  delay(1000);
+  set_intake_motor(0);
+}
+
 /*
  * Runs the user autonomous code. This function will be started in its own task
  * with the default priority and stack size whenever the robot is enabled via
@@ -173,5 +179,9 @@ void autonomous() {
   info("5");
   turn(-180);
   drive_distance(4000, 100);
+  drop_mobile_goal();
+  set_side_speed(BOTH, MIN_SPEED);
+  delay(2000);
+  set_side_speed(BOTH, 0);
   gyroShutdown(gyro);
 }

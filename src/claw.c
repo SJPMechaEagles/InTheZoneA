@@ -1,5 +1,6 @@
 #include "claw.h"
 static enum claw_state state = CLAW_NEUTRAL_STATE;
+static bool hold = false;
 
 extern bool lifter_autostack_running;
 
@@ -19,8 +20,10 @@ void update_claw() {
     return;
   if (joystickGetDigital(CLAW_CLOSE)) {
     state = CLAW_CLOSE_STATE;
+    hold = false;
   } else if (joystickGetDigital(CLAW_OPEN)) {
     state = CLAW_OPEN_STATE;
+    hold = true;
   } else {
     state = CLAW_NEUTRAL_STATE;
   }
@@ -30,7 +33,11 @@ void update_claw() {
   } else if (state == CLAW_OPEN_STATE) {
     set_claw_motor(MIN_CLAW_SPEED);
   } else {
-    set_claw_motor(0);
+    if(hold){
+      set_claw_motor(-20);
+    } else {
+      set_claw_motor(0);
+    }
   }
 }
 

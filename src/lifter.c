@@ -103,7 +103,7 @@ void autostack_routine(void *param) {
     // Sec arg: number that are bad_responses aka -1
     // Third arg: Delay between reading
     // Forth Arg: Minimum distance before exiting of the median value
-    if (main_lifter_should_exit_autostack(15, 13, 8, 20)) {
+    if (main_lifter_should_exit_autostack(15, 13, 6, 20)) {
       break;
     }
   }

@@ -56,6 +56,12 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
+  gyro = gyroInit(3, 230);
+  setTeamName("9228A");
+  if (!init_encoders())
+    error("Encoders failed");
+  lifter_ultrasonic = ultrasonicInit(4, 5);
+  return;
   if (isEnabled() && isOnline()) {
     error("Robot Reset");
     // Return to opt control
