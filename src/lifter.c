@@ -98,7 +98,7 @@ void autostack_routine(void *param) {
     // reading failing and that the events are independent.
     // We should expect a early lift every 21,715 test, or at 24 tests per
     // lift a failed lift every 905 attempts
-    if (main_lifter_should_exit_autostack(12, 11, 7, 20)) {
+    if (main_lifter_should_exit_autostack(15, 13, 8, 20)) {
       break;
     }
   }
