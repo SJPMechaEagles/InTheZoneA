@@ -139,7 +139,7 @@ static void drive_distance(const int dist, const unsigned int speed) {
   set_side_speed(BOTH, 0);
 }
 
-void drop_mobile_goal(){
+void drop_mobile_goal() {
   lower_intake();
   delay(1000);
   set_intake_motor(0);
@@ -163,25 +163,21 @@ void drop_mobile_goal(){
  * disable/enable cycle.
  */
 void autonomous() {
-  info("0");
   init_slew();
-  info("1");
   zero_ime();
-  info("2");
   setup_auton();
-  info("3");
   drive_towards_goal();
-  info("4");
   pick_up_mobile_goal();
   claw_release_cone();
   delay(500);
   set_claw_motor(0);
-  info("5");
   turn(-180);
   drive_distance(4000, 100);
   drop_mobile_goal();
   set_side_speed(BOTH, MIN_SPEED);
   delay(2000);
   set_side_speed(BOTH, 0);
+  drop_mobile_goal();
+  delay(1000);
   gyroShutdown(gyro);
 }
