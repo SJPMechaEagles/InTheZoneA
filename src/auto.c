@@ -131,8 +131,8 @@ static void drive_distance(const int dist, const unsigned int speed) {
     const int diff =
         abs(right_vel - ime_right_start) - abs(left_vel - ime_left_start);
 
-    right_set_speed -= .001 * diff;
-    left_set_speed += .001 * diff;
+    right_set_speed += .001 * diff;
+    left_set_speed -= .001 * diff;
 
     delay(10);
   } while (abs(ave_dist) < dist);
@@ -173,11 +173,14 @@ void autonomous() {
   set_claw_motor(0);
   turn(-180);
   drive_distance(4000, 100);
+  info("Drop Mobile Goal");
+  delay(5000);
   drop_mobile_goal();
-  set_side_speed(BOTH, MIN_SPEED);
-  delay(2000);
+  delay(5000);
+  info("Done Drop Mobile Goal");
+  // set_side_speed(BOTH, MIN_SPEED);
+  // delay(2000);
   set_side_speed(BOTH, 0);
-  drop_mobile_goal();
   delay(1000);
   gyroShutdown(gyro);
 }
