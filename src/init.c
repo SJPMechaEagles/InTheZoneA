@@ -61,29 +61,28 @@ void initialize() {
   if (!init_encoders())
     error("Encoders failed");
   lifter_ultrasonic = ultrasonicInit(4, 5);
-  return;
-  if (isEnabled() && isOnline()) {
+  init_error(true, uart2);
+  info("init error");
+  init_main_lcd(uart1);
+
+  if (!isEnabled()) {
     error("Robot Reset");
     // Return to opt control
     return;
   }
-  init_error(true, uart2);
-  info("init error");
-  init_main_lcd(uart1);
   // Chech batteries
   if (!battery_level_acceptable()) {
     menu_t *bat_menu = init_menu_var(STRING_TYPE, "Main or 9V Dead", 1, "Okay");
     // execution paused till user confirms
-    display_menu(bat_menu);
+    // display_menu(bat_menu);
   }
   menu_t *t =
       init_menu_var(STRING_TYPE, "Auton Zone", 2, "Five Pt.", "Ten Pt.");
-  int opt = display_menu(t);
+  // int opt = display_menu(t);
   info("Gyro Calibrate");
   gyro = gyroInit(3, 230);
-  setTeamName("9228A");
-  if (!init_encoders())
-    error("Encoders failed");
+  info("Initializing Encoders");
+  info("Done Initing");
   lifter_ultrasonic = ultrasonicInit(4, 5);
   info("Ready to run");
 }

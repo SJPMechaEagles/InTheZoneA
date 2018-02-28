@@ -11,7 +11,6 @@
 bool init_encoders() {
 #ifdef IME_NUMBER
   int count = imeInitializeAll();
-  delay(1000);
   if (count != IME_NUMBER) {
     printf("detected only %d\n", count);
     error("Wrong Number of IMEs Connected");
