@@ -72,13 +72,14 @@ void autostack_routine(void *param) {
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
   // Lift main lifter
-  set_claw_motor(-20);
+  claw_grab_cone();
   raise_main_lifter();
   raise_secondary_lifter();
   delay(100);
   set_secondary_lifter_motors(-20);
-  delay(500);
+  delay(300);
   set_main_lifter_motors(0);
+  set_claw_motor(-30);
   do {
     second_pid_enabled = false;
     raise_secondary_lifter();

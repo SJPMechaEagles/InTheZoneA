@@ -102,8 +102,8 @@ static void drive_distance(const int dist, const unsigned int speed,
   imeGet(MID_LEFT_DRIVE, &left_dist);
   const int ime_left_start = left_dist;
 
-  int right_set_speed = 100;
-  int left_set_speed = 100;
+  int right_set_speed = 80;
+  int left_set_speed = 80;
 
   int right_vel = 0;
   int left_vel = 0;
@@ -164,8 +164,8 @@ void autonomous() {
   delay(500);
   int multiplier = counter_clockwise ? 1 : -1;
   set_claw_motor(0);
-  turn(-140 * multiplier);
-  drive_distance(1500, 50, 2.5);
+  turn(-150 * multiplier);
+  drive_distance(1300, 50, 2);
   turn(-20 * multiplier);
   drive_distance(500, 50, 2);
   drop_mobile_goal();
