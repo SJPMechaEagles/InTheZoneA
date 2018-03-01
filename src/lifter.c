@@ -72,13 +72,13 @@ void autostack_routine(void *param) {
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
   // Lift main lifter
+  set_claw_motor(-20);
   raise_main_lifter();
   raise_secondary_lifter();
-  delay(200);
-  set_secondary_lifter_motors(-20);
   delay(100);
+  set_secondary_lifter_motors(-20);
+  delay(500);
   set_main_lifter_motors(0);
-  set_claw_motor(-30);
   do {
     second_pid_enabled = false;
     raise_secondary_lifter();
@@ -109,7 +109,7 @@ void autostack_routine(void *param) {
     // Sec arg: number that are bad_responses aka -1
     // Third arg: Delay between reading
     // Forth Arg: Minimum distance before exiting of the median value
-    if (main_lifter_should_exit_autostack(13, 12, 5, 24)) {
+    if (main_lifter_should_exit_autostack(10, 9, 5, 22)) {
       break;
     }
   }
