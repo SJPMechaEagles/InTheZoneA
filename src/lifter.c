@@ -72,9 +72,15 @@ void autostack_routine(void *param) {
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
   // Lift main lifter
+  raise_main_lifter();
+  raise_secondary_lifter();
+  delay(300);
+  set_secondary_lifter_motors(-20);
+  delay(100);
+  set_main_lifter_motors(0);
+  set_claw_motor(-10);
   do {
     second_pid_enabled = false;
-    printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     raise_secondary_lifter();
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
@@ -103,7 +109,7 @@ void autostack_routine(void *param) {
     // Sec arg: number that are bad_responses aka -1
     // Third arg: Delay between reading
     // Forth Arg: Minimum distance before exiting of the median value
-    if (main_lifter_should_exit_autostack(15, 13, 6, 20)) {
+    if (main_lifter_should_exit_autostack(13, 12, 5, 24)) {
       break;
     }
   }
@@ -118,7 +124,6 @@ void autostack_routine(void *param) {
   unsigned long time = 0;
   // Lift secondary lifter
   do {
-    printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
       return;
@@ -146,7 +151,7 @@ void autostack_routine(void *param) {
     quit_auto_static();
     return;
   }
-  delay(600);
+  delay(400);
   set_claw_motor(0);
   set_secondary_lifter_motors(0);
 
@@ -155,8 +160,8 @@ void autostack_routine(void *param) {
   delay(200);
   set_main_lifter_motors(0);
   lower_secondary_lifter();
-  delay(200);
-
+  delay(400);
+  set_claw_motor(0);
   lifter_autostack_running = false;
 }
 
@@ -271,7 +276,7 @@ static void secondary_lifter_update() {
   if (lifter_autostack_running)
     return;
   static int count = 0;
-  // static bool pid_on = false;
+  static bool pid_on = false;
   static int second_target = 0;
   int second_motor_speed = 0;
   static long long second_i = 0;
@@ -290,7 +295,6 @@ static void secondary_lifter_update() {
                        SECONDARY_LIFTER_I * second_i +
                        SECONDARY_LIFTER_D * second_d;
   second_last_p = second_p;
-  second_motor_speed = 0;
   if (joystickGetDigital(SECONDARY_LIFTER_DOWN)) {
     second_motor_speed = MIN_SPEED;
     count = 0;

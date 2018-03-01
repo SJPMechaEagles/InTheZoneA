@@ -50,27 +50,15 @@ static void drive_towards_goal() {
 
     const int diff = abs(right_vel) - abs(left_vel);
 
-    right_set_speed -= .001 * diff;
-    left_set_speed += .001 * diff;
-
-    printf("RIGHT VEL: %d\n", right_vel);
-    printf("LEFT VEL: %d\n", left_vel);
-    printf("DIFF VEL: %d\n", diff);
-
     int right_dist, left_dist = 0;
     imeGet(MID_LEFT_DRIVE, &right_dist);
     imeGet(MID_RIGHT_DRIVE, &left_dist);
 
     int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
-    if (ave_dist > 1600 || millis() - start_time > 2300) {
-      info("exit");
+    if (ave_dist > 2000 || millis() - start_time > 2300) {
       set_side_speed(BOTH, 0);
       break;
     }
-
-    printf("RIGHT: %d\n", right_dist);
-    printf("LEFT: %d\n", left_dist);
-    printf("AVG: %d\n", ave_dist);
 
     delay(20);
   }
@@ -91,16 +79,19 @@ static void turn(const int degrees) {
     diff = gyroGet(gyro) - start;
     set_side_speed(RIGHT, -100 * neg);
     set_side_speed(LEFT, 100 * neg);
-    info("Turn");
     delay(10);
   } while (abs(diff) < abs(degrees));
   set_side_speed(BOTH, 0);
 }
 
-static void drive_distance(const int dist, const unsigned int speed) {
+static void drive_distance(const int dist, const unsigned int speed,
+                           float time) {
   zero_ime();
+  int r_start;
+  int l_start;
+  imeGet(MID_RIGHT_DRIVE, &r_start);
+  imeGet(MID_LEFT_DRIVE, &l_start);
   set_side_speed(BOTH, 0);
-  info("Drive Distance");
   int right_dist = 0;
   int left_dist = 0;
   imeGet(MID_RIGHT_DRIVE, &right_dist);
@@ -116,23 +107,21 @@ static void drive_distance(const int dist, const unsigned int speed) {
   int left_vel = 0;
 
   int ave_dist = 0;
-
+  unsigned const int start_time = millis();
   do {
+    if (abs(millis() - start_time) / 1000.0 > time)
+      break;
+
     set_side_speed(RIGHT, right_set_speed);
     set_side_speed(LEFT, left_set_speed);
 
-    printf("right: %d, left %d\n", right_set_speed, left_set_speed);
+    imeGet(MID_RIGHT_DRIVE, &right_dist);
+    imeGet(MID_LEFT_DRIVE, &left_dist);
 
-    ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
-
-    imeGetVelocity(MID_RIGHT_DRIVE, &right_vel);
-    imeGetVelocity(MID_LEFT_DRIVE, &left_vel);
+    ave_dist = max(abs(right_dist), abs(left_dist));
 
     const int diff =
         abs(right_vel - ime_right_start) - abs(left_vel - ime_left_start);
-
-    right_set_speed -= .001 * diff;
-    left_set_speed += .001 * diff;
 
     delay(10);
   } while (abs(ave_dist) < dist);
@@ -163,6 +152,7 @@ void drop_mobile_goal() {
  * disable/enable cycle.
  */
 void autonomous() {
+  info("Autonomous");
   init_slew();
   zero_ime();
   setup_auton();
@@ -171,8 +161,10 @@ void autonomous() {
   claw_release_cone();
   delay(500);
   set_claw_motor(0);
-  turn(-180);
-  drive_distance(4000, 100);
+  turn(-140);
+  drive_distance(1500, 50, 2.5);
+  turn(-20);
+  drive_distance(500, 50, 2);
   drop_mobile_goal();
   set_side_speed(BOTH, MIN_SPEED);
   delay(2000);

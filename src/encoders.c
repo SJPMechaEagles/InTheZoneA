@@ -2,6 +2,8 @@
 #include "log.h"
 #include <API.h>
 
+static bool encoders_initialized = false;
+
 /**
  * @brief Initializes all motor encoders
  * @author Chris Jerrett
@@ -9,6 +11,8 @@
  * @see IME_NUMBER
  **/
 bool init_encoders() {
+  if (encoders_initialized)
+    return true;
 #ifdef IME_NUMBER
   int count = imeInitializeAll();
   delay(1000);
@@ -17,6 +21,7 @@ bool init_encoders() {
     error("Wrong Number of IMEs Connected");
     return false;
   }
+  encoders_initialized = true;
   return true;
 #else
   return imeInitializeAll();

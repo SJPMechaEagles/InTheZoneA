@@ -180,9 +180,9 @@ int display_menu(menu_t *menu) {
     printf("%d\n", menu->current);
     lcd_print(2, val);
     delay(300);
-    if (isEnabled() && !isAutonomous() && isOnline()) {
+    if (isEnabled()) {
       error("Robot Reset");
-      // Returnif robot is in optcontrol and enabled
+      // Return if robot is in optcontrol and enabled
       lcd_clear();
       return menu->current;
     }
