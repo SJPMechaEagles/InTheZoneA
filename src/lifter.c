@@ -78,7 +78,7 @@ void autostack_routine(void *param) {
   set_secondary_lifter_motors(-20);
   delay(100);
   set_main_lifter_motors(0);
-  set_claw_motor(-10);
+  set_claw_motor(-30);
   do {
     second_pid_enabled = false;
     raise_secondary_lifter();

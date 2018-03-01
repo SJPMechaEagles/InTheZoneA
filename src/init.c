@@ -23,6 +23,8 @@
 extern Ultrasonic lifter_ultrasonic;
 extern Gyro gyro;
 
+bool counter_clockwise = false;
+
 /*
  * Runs pre-initialization code. This function will be started in kernel mode
  * one time while the VEX Cortex is starting up. As the scheduler is still
@@ -62,7 +64,7 @@ void initialize() {
   setTeamName("9228A");
   init_main_lcd(uart1);
   info("Ready to run");
-  if (isEnabled() && isOnline()) {
+  if (isEnabled()) {
     error("Robot Reset");
     // Return to opt control
     return;
@@ -77,4 +79,8 @@ void initialize() {
   menu_t *t =
       init_menu_var(STRING_TYPE, "Auton Zone", 2, "Five Pt.", "Ten Pt.");
   int opt = display_menu(t);
+
+  menu_t *direction =
+      init_menu_var(STRING_TYPE, "Counter Clockwise?", 2, "Yes", "No");
+  counter_clockwise = display_menu(direction) == 0;
 }

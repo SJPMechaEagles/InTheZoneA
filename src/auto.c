@@ -18,6 +18,8 @@
 #include "slew.h"
 Gyro gyro;
 
+extern bool counter_clockwise;
+
 static void zero_ime() {
   imeReset(MID_LEFT_DRIVE);
   imeReset(MID_RIGHT_DRIVE);
@@ -25,14 +27,14 @@ static void zero_ime() {
 
 static void setup_auton() {
   raise_main_lifter();
-  delay(500);
+  delay(200);
   set_main_lifter_motors(0);
 }
 
 static void drive_towards_goal() {
   unsigned const int start_time = millis();
-  int right_set_speed = 80;
-  int left_set_speed = 80;
+  int right_set_speed = 70;
+  int left_set_speed = 70;
 
   int right_vel = 0;
   int left_vel = 0;
@@ -55,7 +57,7 @@ static void drive_towards_goal() {
     imeGet(MID_RIGHT_DRIVE, &left_dist);
 
     int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
-    if (ave_dist > 2000 || millis() - start_time > 2300) {
+    if (ave_dist > 2000 || millis() - start_time > 2600) {
       set_side_speed(BOTH, 0);
       break;
     }
@@ -160,10 +162,11 @@ void autonomous() {
   pick_up_mobile_goal();
   claw_release_cone();
   delay(500);
+  int multiplier = counter_clockwise ? 1 : -1;
   set_claw_motor(0);
-  turn(-140);
+  turn(-140 * multiplier);
   drive_distance(1500, 50, 2.5);
-  turn(-20);
+  turn(-20 * multiplier);
   drive_distance(500, 50, 2);
   drop_mobile_goal();
   set_side_speed(BOTH, MIN_SPEED);
