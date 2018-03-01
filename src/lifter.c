@@ -74,7 +74,7 @@ void autostack_routine(void *param) {
   // Lift main lifter
   raise_main_lifter();
   raise_secondary_lifter();
-  delay(300);
+  delay(200);
   set_secondary_lifter_motors(-20);
   delay(100);
   set_main_lifter_motors(0);
