@@ -23,7 +23,7 @@
 extern Ultrasonic lifter_ultrasonic;
 extern Gyro gyro;
 
-bool counter_clockwise = false;
+bool counter_clockwise = true;
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode
@@ -76,11 +76,10 @@ void initialize() {
     // execution paused till user confirms
     display_menu(bat_menu);
   }
-  menu_t *t =
-      init_menu_var(STRING_TYPE, "Auton Zone", 2, "Five Pt.", "Ten Pt.");
-  int opt = display_menu(t);
 
   menu_t *direction =
       init_menu_var(STRING_TYPE, "Counter Clockwise?", 2, "Yes", "No");
   counter_clockwise = display_menu(direction) == 0;
+
+  info("Ready to run");
 }

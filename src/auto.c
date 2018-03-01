@@ -21,18 +21,16 @@ Gyro gyro;
 
 extern bool counter_clockwise;
 
-static bool testIfReset(){
-	FILE* f = fopen("de_cbble", 'r');
-	if(f == NULL){
-	 	f = fopen("de_cbble", 'w');
-		fputc('d',f);
-		fflush(f);
-		fclose(f);
-		return false;	
-	}
-	return true;
-
-
+static bool testIfReset() {
+  FILE *f = fopen("de_cbble", "r");
+  if (f == NULL) {
+    f = fopen("de_cbble", "w");
+    fputc('d', f);
+    fflush(f);
+    fclose(f);
+    return false;
+  }
+  return true;
 }
 
 static void zero_ime() {
@@ -42,11 +40,12 @@ static void zero_ime() {
 
 static void setup_auton() {
   raise_main_lifter();
-  delay(200);
+  delay(500);
   set_main_lifter_motors(0);
 }
 
 static void drive_towards_goal() {
+  zero_ime();
   unsigned const int start_time = millis();
   int right_set_speed = 70;
   int left_set_speed = 70;
@@ -72,7 +71,8 @@ static void drive_towards_goal() {
     imeGet(MID_RIGHT_DRIVE, &left_dist);
 
     int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
-    if (ave_dist > 2000 || millis() - start_time > 2600) {
+    if (ave_dist > 2000 || millis() - start_time > 2000) {
+      printf("avg dist: %d\n", ave_dist);
       set_side_speed(BOTH, 0);
       break;
     }
@@ -117,8 +117,8 @@ static void drive_distance(const int dist, const unsigned int speed,
   imeGet(MID_LEFT_DRIVE, &left_dist);
   const int ime_left_start = left_dist;
 
-  int right_set_speed = 80;
-  int left_set_speed = 80;
+  int right_set_speed = speed;
+  int left_set_speed = speed;
 
   int right_vel = 0;
   int left_vel = 0;
@@ -169,29 +169,40 @@ void drop_mobile_goal() {
  * disable/enable cycle.
  */
 void autonomous() {
-	if(testIfReset()){
-		return;
-	}
+  if (testIfReset()) {
+    error("File Reset");
+    // return;
+  }
+  lower_secondary_lifter();
+  delay(400);
+  raise_secondary_lifter();
+  delay(400);
+  set_secondary_lifter_motors(0);
 
   info("Autonomous");
   init_slew();
   zero_ime();
   setup_auton();
   drive_towards_goal();
+  delay(500);
   pick_up_mobile_goal();
   claw_release_cone();
   delay(500);
-  int multiplier = counter_clockwise ? 1 : -1;
+  drive_distance(3000, -60, 2.4);
+  int multiplier = counter_clockwise ? -1 : 1;
   set_claw_motor(0);
-  turn(-150 * multiplier);
-  drive_distance(1300, 50, 2);
-  turn(-20 * multiplier);
-  drive_distance(500, 50, 2);
-  drop_mobile_goal();
-  set_side_speed(BOTH, MIN_SPEED);
-  delay(2000);
+  turn(-100 * multiplier);
+  drive_distance(600, 50, 1);
+  turn(-80 * multiplier);
+
+  //  drive_distance(500, 50, 2);
+  //  drop_mobile_goal();
+  //  set_side_speed(BOTH, MIN_SPEED);
+  //  delay(2000);
   set_side_speed(BOTH, 0);
+  drive_distance(1600, 100, 2);
   drop_mobile_goal();
+  drive_distance(1600, -50, 2);
   delay(1000);
   gyroShutdown(gyro);
 }
