@@ -161,10 +161,10 @@ void autonomous() {
   claw_release_cone();
   delay(500);
   set_claw_motor(0);
-  turn(-140);
+  turn(-150);
   drive_distance(1500, 50, 2.5);
   turn(-20);
-  drive_distance(500, 50, 2);
+  drive_distance(600, 50, 2);
   drop_mobile_goal();
   set_side_speed(BOTH, MIN_SPEED);
   delay(2000);
