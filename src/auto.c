@@ -16,9 +16,24 @@
 #include "log.h"
 #include "mobile_goal_intake.h"
 #include "slew.h"
+#include <API.h>
 Gyro gyro;
 
 extern bool counter_clockwise;
+
+static bool testIfReset(){
+	FILE* f = fopen("de_cbble", 'r');
+	if(f == NULL){
+	 	f = fopen("de_cbble", 'w');
+		fputc('d',f);
+		fflush(f);
+		fclose(f);
+		return false;	
+	}
+	return true;
+
+
+}
 
 static void zero_ime() {
   imeReset(MID_LEFT_DRIVE);
@@ -154,6 +169,10 @@ void drop_mobile_goal() {
  * disable/enable cycle.
  */
 void autonomous() {
+	if(testIfReset()){
+		return;
+	}
+
   info("Autonomous");
   init_slew();
   zero_ime();
