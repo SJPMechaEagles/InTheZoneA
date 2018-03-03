@@ -40,7 +40,7 @@ static void zero_ime() {
 
 static void setup_auton() {
   raise_main_lifter();
-  delay(500);
+  delay(400);
   set_main_lifter_motors(0);
 }
 
@@ -55,7 +55,7 @@ static void drive_towards_goal() {
 
   for (;;) {
     lower_intake();
-    if ((millis() - start_time) / 1000.0 > 1) {
+    if ((millis() - start_time) / 1000.0 > 1.3) {
       set_intake_motor(0);
     }
     set_side_speed(RIGHT, right_set_speed);
@@ -71,8 +71,7 @@ static void drive_towards_goal() {
     imeGet(MID_RIGHT_DRIVE, &left_dist);
 
     int ave_dist = (abs(right_dist) + abs(left_dist)) / 2;
-    if (ave_dist > 2000 || millis() - start_time > 2000) {
-      printf("avg dist: %d\n", ave_dist);
+    if (millis() - start_time > 2000) {
       set_side_speed(BOTH, 0);
       break;
     }
@@ -94,8 +93,8 @@ static void turn(const int degrees) {
   int neg = abs(degrees) / degrees;
   do {
     diff = gyroGet(gyro) - start;
-    set_side_speed(RIGHT, -100 * neg);
-    set_side_speed(LEFT, 100 * neg);
+    set_side_speed(RIGHT, -70 * neg);
+    set_side_speed(LEFT, 70 * neg);
     delay(10);
   } while (abs(diff) < abs(degrees));
   set_side_speed(BOTH, 0);
@@ -135,7 +134,7 @@ static void drive_distance(const int dist, const unsigned int speed,
     imeGet(MID_RIGHT_DRIVE, &right_dist);
     imeGet(MID_LEFT_DRIVE, &left_dist);
 
-    ave_dist = max(abs(right_dist), abs(left_dist));
+    // ave_dist = max(abs(right_dist), abs(left_dist));
 
     const int diff =
         abs(right_vel - ime_right_start) - abs(left_vel - ime_left_start);
@@ -186,14 +185,15 @@ void autonomous() {
   drive_towards_goal();
   delay(500);
   pick_up_mobile_goal();
+  delay(300);
   claw_release_cone();
-  delay(500);
-  drive_distance(3000, -60, 2.4);
+  delay(300);
+  drive_distance(2000, -60, 2);
   int multiplier = counter_clockwise ? -1 : 1;
   set_claw_motor(0);
+  turn(-120 * multiplier);
+  drive_distance(600, 80, .6);
   turn(-100 * multiplier);
-  drive_distance(600, 50, 1);
-  turn(-80 * multiplier);
 
   //  drive_distance(500, 50, 2);
   //  drop_mobile_goal();
@@ -201,8 +201,11 @@ void autonomous() {
   //  delay(2000);
   set_side_speed(BOTH, 0);
   drive_distance(1600, 100, 2);
+  setup_auton();
   drop_mobile_goal();
-  drive_distance(1600, -50, 2);
+  set_side_speed(BOTH, -100);
+  pick_up_mobile_goal();
+  set_side_speed(BOTH, 0);
   delay(1000);
   gyroShutdown(gyro);
 }

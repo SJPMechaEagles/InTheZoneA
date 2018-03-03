@@ -68,18 +68,19 @@ static inline void quit_auto_static() {
  * @param param the taskt the routine is running in.
  **/
 void autostack_routine(void *param) {
-  set_claw_motor(0);
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
   // Lift main lifter
   claw_grab_cone();
-  raise_main_lifter();
   raise_secondary_lifter();
   delay(100);
+  raise_main_lifter();
   set_secondary_lifter_motors(-20);
-  delay(300);
-  set_main_lifter_motors(0);
+  delay(200);
   set_claw_motor(-30);
+  delay(100);
+  set_main_lifter_motors(0);
+  delay(200);
   do {
     second_pid_enabled = false;
     raise_secondary_lifter();
@@ -110,7 +111,7 @@ void autostack_routine(void *param) {
     // Sec arg: number that are bad_responses aka -1
     // Third arg: Delay between reading
     // Forth Arg: Minimum distance before exiting of the median value
-    if (main_lifter_should_exit_autostack(10, 9, 5, 22)) {
+    if (main_lifter_should_exit_autostack(13, 12, 6, 22)) {
       break;
     }
   }
@@ -132,7 +133,7 @@ void autostack_routine(void *param) {
     raise_secondary_lifter();
     delay(10);
     time = millis();
-  } while (((time - start) / 1000.0) < 1);
+  } while (((time - start) / 1000.0) < .7);
 
   // at top
   set_secondary_lifter_motors(0);
@@ -322,7 +323,6 @@ static void secondary_lifter_update() {
  * @date 9/9/2017
  **/
 void update_lifter() {
-  // printf("%d \n", analogRead(SECONDARY_LIFTER_POT_PORT));
   main_lifter_update();
   if (!secondary_override)
     secondary_lifter_update();

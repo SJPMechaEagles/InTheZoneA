@@ -27,7 +27,7 @@ void init_error(bool use_lcd, FILE *lcd) {
  * @param mess the string on the bottom line
  **/
 static void log_info(const char *s, const char *mess) {
-  printf("[%s]: %s\n", s, mess);
+  // printf("[%s]: %s\n", s, mess);
   lcdSetBacklight(log_lcd, false);
   lcdClear(log_lcd);
   lcdPrint(log_lcd, TOP_ROW, s);
