@@ -53,6 +53,7 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
+  return;
   gyro = gyroInit(3, 230);
   setTeamName("9228A");
   if (!init_encoders())
