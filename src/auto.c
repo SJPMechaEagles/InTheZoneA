@@ -153,6 +153,7 @@ void drop_mobile_goal() {
 void ten_point() {
   drive_distance(2000, -60, 2);
   int multiplier = counter_clockwise ? -1 : 1;
+  multiplier *= -1;
   set_claw_motor(0);
   turn(-215 * multiplier);
   drive_distance(200, 100, .3);
