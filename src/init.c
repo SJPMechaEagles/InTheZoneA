@@ -53,14 +53,15 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
-  return;
-  gyro = gyroInit(3, 230);
-  setTeamName("9228A");
+  init_error(true, uart2);
+  info("Boot");
   if (!init_encoders())
     error("Encoders failed");
-  lifter_ultrasonic = ultrasonicInit(4, 5);
-  init_error(true, uart2);
   info("Gyro Calibrate");
+  gyro = gyroInit(3, 230);
+  setTeamName("9228A");
+  lifter_ultrasonic = ultrasonicInit(4, 5);
+
   gyro = gyroInit(3, 230);
   setTeamName("9228A");
   init_main_lcd(uart1);

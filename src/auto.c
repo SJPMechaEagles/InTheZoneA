@@ -150,6 +150,37 @@ void drop_mobile_goal() {
   set_intake_motor(0);
 }
 
+void ten_point() {
+  drive_distance(2000, -60, 2);
+  int multiplier = counter_clockwise ? -1 : 1;
+  set_claw_motor(0);
+  turn(-215 * multiplier);
+  drive_distance(200, 100, .3);
+  drop_mobile_goal();
+  delay(500);
+  //  drive_distance(500, 50, 2);
+  //  drop_mobile_goal();
+  //  set_side_speed(BOTH, MIN_SPEED);
+  //  delay(2000);
+  set_side_speed(BOTH, 0);
+}
+
+void twenty_point() {
+  drive_distance(2000, -60, 2);
+  int multiplier = counter_clockwise ? -1 : 1;
+  set_claw_motor(0);
+  turn(-120 * multiplier);
+  drive_distance(600, 80, .6);
+  turn(-100 * multiplier);
+
+  //  drive_distance(500, 50, 2);
+  //  drop_mobile_goal();
+  //  set_side_speed(BOTH, MIN_SPEED);
+  //  delay(2000);
+  set_side_speed(BOTH, 0);
+  drive_distance(1600, 100, 2);
+}
+
 /*
  * Runs the user autonomous code. This function will be started in its own task
  * with the default priority and stack size whenever the robot is enabled via
@@ -188,20 +219,7 @@ void autonomous() {
   delay(300);
   claw_release_cone();
   delay(300);
-  drive_distance(2000, -60, 2);
-  int multiplier = counter_clockwise ? -1 : 1;
-  set_claw_motor(0);
-  turn(-120 * multiplier);
-  drive_distance(600, 80, .6);
-  turn(-100 * multiplier);
-
-  //  drive_distance(500, 50, 2);
-  //  drop_mobile_goal();
-  //  set_side_speed(BOTH, MIN_SPEED);
-  //  delay(2000);
-  set_side_speed(BOTH, 0);
-  drive_distance(1600, 100, 2);
-  setup_auton();
+  ten_point();
   drop_mobile_goal();
   set_side_speed(BOTH, -100);
   pick_up_mobile_goal();
