@@ -55,7 +55,7 @@ static void drive_towards_goal() {
 
   for (;;) {
     lower_intake();
-    if ((millis() - start_time) / 1000.0 > 1.3) {
+    if ((millis() - start_time) / 1000.0 > 1.7) {
       set_intake_motor(0);
     }
     set_side_speed(RIGHT, right_set_speed);
@@ -153,7 +153,7 @@ void drop_mobile_goal() {
 void ten_point() {
   drive_distance(2000, -60, 2);
   int multiplier = counter_clockwise ? -1 : 1;
-  multiplier *= -1;
+  multiplier = 1;
   set_claw_motor(0);
   turn(-215 * multiplier);
   drive_distance(200, 100, .3);
