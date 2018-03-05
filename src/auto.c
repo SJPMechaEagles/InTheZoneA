@@ -158,6 +158,7 @@ void ten_point() {
   turn(-215 * multiplier);
   drive_distance(200, 100, .3);
   drop_mobile_goal();
+  delay(500);
   //  drive_distance(500, 50, 2);
   //  drop_mobile_goal();
   //  set_side_speed(BOTH, MIN_SPEED);
@@ -169,9 +170,9 @@ void twenty_point() {
   drive_distance(2000, -60, 2);
   int multiplier = counter_clockwise ? -1 : 1;
   set_claw_motor(0);
-  turn(120 * multiplier);
+  turn(-120 * multiplier);
   drive_distance(600, 80, .6);
-  turn(100 * multiplier);
+  turn(-100 * multiplier);
 
   //  drive_distance(500, 50, 2);
   //  drop_mobile_goal();
@@ -199,7 +200,6 @@ void twenty_point() {
  * disable/enable cycle.
  */
 void autonomous() {
-  delay(2000);
   if (testIfReset()) {
     error("File Reset");
     // return;
@@ -221,8 +221,10 @@ void autonomous() {
   claw_release_cone();
   delay(300);
   ten_point();
+  drop_mobile_goal();
   set_side_speed(BOTH, -100);
-  delay(1000);
+  pick_up_mobile_goal();
   set_side_speed(BOTH, 0);
+  delay(1000);
   gyroShutdown(gyro);
 }

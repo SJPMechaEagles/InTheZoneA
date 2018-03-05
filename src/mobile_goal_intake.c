@@ -20,7 +20,7 @@ void update_intake() {
     lower_intake();
     hold = false;
   } else {
-    if (hold) {
+    if(hold){
       set_intake_motor(20);
     } else {
       set_intake_motor(0);

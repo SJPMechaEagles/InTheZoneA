@@ -27,7 +27,7 @@ void updateMotors() {
     int curr_speed = motors_curr_speeds[i];
     mutexGive(speeds_mutex);
     int diff = set_speed - curr_speed;
-    int offset = diff;
+    int offset = diff / 2;
     int n = curr_speed + offset;
     motors_curr_speeds[i] = n;
     motorSet(i + 1, n);
