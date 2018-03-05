@@ -165,7 +165,6 @@ void add_menu(menu_t *menu) {
 }
 
 static void update_menu(void *param) {
-  int index = 0;
   int length = list_length(menus_list);
   for (int i = 0; i < length; i++) {
     display_menu((menu_t *)list_rpop(menus_list)->val);
@@ -222,11 +221,9 @@ void display_menu(menu_t *menu) {
   if (menu->type == STRING_TYPE) {
     *(menu->returnValue) = menu->current;
   } else if (menu->type == INT_TYPE) {
-    int curr = menu->current;
     *(menu->returnValue) =
         menu->current * menu->step + (menu->min + menu->max) / 2;
   } else if (menu->type == FLOAT_TYPE) {
-    int curr = menu->current;
     *(menu->returnValue) =
         menu->current * menu->step_f + (menu->min_f + menu->max_f) / 2.0;
   }
