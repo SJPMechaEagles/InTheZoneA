@@ -43,6 +43,15 @@ list_t *list_new() {
   return self;
 }
 
+int list_length(list_t *self) {
+  list_iterator_t *it = list_iterator_new(self, LIST_HEAD);
+  int length = 0;
+  while (list_iterator_next(it)) {
+    length++;
+  }
+  return length;
+}
+
 /*
  * Free the list.
  */

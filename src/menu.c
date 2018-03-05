@@ -1,12 +1,15 @@
 #include "menu.h"
 
+static TaskHandle menuTask;
+
 /**
  * @brief Static function that handles creation of menu.
  * <em> Menu must be freed or will cause memory leak <em>
  * @author Chris Jerrett
  * @date 9/8/17
  **/
-static menu_t *create_menu(enum menu_type type, const char *prompt);
+static menu_t *create_menu(enum menu_type type, int *returnValue,
+                           const char *prompt);
 
 /**
  * @brief Static function that calculates the string from menu
@@ -24,7 +27,8 @@ static void calculate_current_display(char *rtn, menu_t *menu);
  * @author Chris Jerrett
  * @date 9/8/17
  **/
-static menu_t *create_menu(enum menu_type type, const char *prompt) {
+static menu_t *create_menu(enum menu_type type, int *returnValue,
+                           const char *prompt) {
   menu_t *menu = (menu_t *)malloc(sizeof(menu_t));
   if (!menu) {
     error("Menu Malloc");
@@ -41,6 +45,7 @@ static menu_t *create_menu(enum menu_type type, const char *prompt) {
   menu->max_f = FLT_MAX;
   menu->step_f = 1;
   menu->current = 0;
+  menu->returnValue = returnValue;
 
   return menu;
 }
@@ -57,8 +62,9 @@ static menu_t *create_menu(enum menu_type type, const char *prompt) {
  * @author Chris Jerrett
  * @date 9/8/17
  **/
-menu_t *init_menu_var(enum menu_type type, const char *prompt, int nums, ...) {
-  menu_t *menu = create_menu(type, prompt);
+menu_t *init_menu_var(enum menu_type type, int *returnValue, const char *prompt,
+                      int nums, ...) {
+  menu_t *menu = create_menu(type, returnValue, prompt);
   va_list ap;
   char **options_array = (char **)calloc(sizeof(char *), nums);
   va_start(ap, nums);
@@ -85,9 +91,9 @@ menu_t *init_menu_var(enum menu_type type, const char *prompt, int nums, ...) {
  * @author Chris Jerrett
  * @date 9/8/17
  **/
-menu_t *init_menu_int(enum menu_type type, int min, int max, int step,
-                      const char *prompt) {
-  menu_t *menu = create_menu(type, prompt);
+menu_t *init_menu_int(enum menu_type type, int *returnValue, int min, int max,
+                      int step, const char *prompt) {
+  menu_t *menu = create_menu(type, returnValue, prompt);
   menu->min = min;
   menu->max = max;
   menu->step = step;
@@ -108,9 +114,9 @@ menu_t *init_menu_int(enum menu_type type, int min, int max, int step,
  * @author Chris Jerrett
  * @date 9/8/17
  **/
-menu_t *init_menu_float(enum menu_type type, float min, float max, float step,
-                        const char *prompt) {
-  menu_t *menu = create_menu(type, prompt);
+menu_t *init_menu_float(enum menu_type type, int *returnValue, float min,
+                        float max, float step, const char *prompt) {
+  menu_t *menu = create_menu(type, returnValue, prompt);
   menu->min_f = min;
   menu->max_f = max;
   menu->step_f = step;
@@ -128,7 +134,7 @@ static void calculate_current_display(char *rtn, menu_t *menu) {
     int step = (menu->step);
     int min = (menu->min);
     int max = (menu->max);
-    int value = menu->current * step;
+    int value = menu->current * step + (menu->min + menu->max) / 2;
     if (value < min) {
       value = min;
       menu->current++;
@@ -143,7 +149,7 @@ static void calculate_current_display(char *rtn, menu_t *menu) {
     float step = (menu->step_f);
     float min = (menu->min_f);
     float max = (menu->max_f);
-    float value = menu->current * step;
+    float value = menu->current * step + (menu->min_f + menu->max_f) / 2;
     value = value < min ? min : value;
     value = value > max ? max : value;
 
@@ -151,17 +157,42 @@ static void calculate_current_display(char *rtn, menu_t *menu) {
   }
 }
 
+static list_t *menus_list;
+
+void add_menu(menu_t *menu) {
+  list_node_t *node = list_node_new(menu);
+  list_rpush(menus_list, node);
+}
+
+static void update_menu(void *) {
+  int index = 0;
+  int length = list_length(menus_list);
+  for (int i = 0; i < length; i++) {
+    display_menu((menu_t *)list_rpop(menus_list)->val);
+    char str[16];
+    sprintf(str, "Displaying num: %s", str);
+    debug(str);
+  }
+}
+
+void init_menu() { menus_list = list_new(); }
+
+void start_menu() {
+  menuTask = taskCreate(update_menu, TASK_DEFAULT_STACK_SIZE, NULL,
+                        TASK_DEFAULT_STACK_SIZE);
+}
+
 /**
  * @brief Displays a menu contex.
  * <em> Menu must be freed or will cause memory leak! <em> Will exit if robot is
- *enabled. This prevents menu from locking up system in even of a reset.
+ * enabled. This prevents menu from locking up system in even of a reset.
  *
  * @param menu the menu to display
  * @see menu_type
  * @author Chris Jerrett
  * @date 9/8/17
  **/
-int display_menu(menu_t *menu) {
+void display_menu(menu_t *menu) {
   lcd_print(TOP_ROW, menu->prompt);
   printf("printed prompt\n");
   // Will exit if teleop or autonomous begin. This is extremely important if
@@ -180,12 +211,6 @@ int display_menu(menu_t *menu) {
     printf("%d\n", menu->current);
     lcd_print(2, val);
     delay(300);
-    if (isEnabled()) {
-      error("Robot Reset");
-      // Return if robot is in optcontrol and enabled
-      lcd_clear();
-      return menu->current;
-    }
   }
   printf("%d\n", menu->current);
   printf("return\n");
@@ -194,7 +219,17 @@ int display_menu(menu_t *menu) {
   lcd_print(2, val);
   delay(600);
   lcd_clear();
-  return menu->current;
+  if (menu->type == STRING_TYPE) {
+    *(menu->returnValue) = menu->current;
+  } else if (menu->type == INT_TYPE) {
+    int curr = menu->current;
+    *(menu->returnValue) =
+        menu->current * menu->step + (menu->min + menu->max) / 2;
+  } else if (menu->type == FLOAT_TYPE) {
+    int curr = menu->current;
+    *(menu->returnValue) =
+        menu->current * menu->step_f + (menu->min_f + menu->max_f) / 2.0;
+  }
 }
 
 /**

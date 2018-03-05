@@ -204,7 +204,7 @@ list_iterator_t *list_iterator_new_from_node(list_node_t *node,
 
 /**
  * @brief The next node in the iterator and advances the iterator. Returns NULL
- *when done.
+ * when done.
  * @param self the iterator
  * @return the next node.
  * @author Chris Jerrett
@@ -219,5 +219,14 @@ list_node_t *list_iterator_next(list_iterator_t *self);
  * @date 1/3/17
  **/
 void list_iterator_destroy(list_iterator_t *self);
+
+/**
+ * @brief the length of the list
+ * @param self the iterator
+ * @returns the list length
+ * @author Chris Jerrett
+ * @date 1/3/17
+ **/
+int list_length(list_t *self);
 
 #endif

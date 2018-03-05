@@ -53,35 +53,41 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
-  init_error(true, uart2);
   info("Boot");
+  setTeamName("9228A");
+
+  init_error(true, uart2);
+  debug("init error sys");
+
   if (!init_encoders())
     error("Encoders failed");
+
   info("Gyro Calibrate");
   gyro = gyroInit(3, 230);
-  setTeamName("9228A");
+
   lifter_ultrasonic = ultrasonicInit(4, 5);
 
-  gyro = gyroInit(3, 230);
-  setTeamName("9228A");
   init_main_lcd(uart1);
-  info("Ready to run");
-  if (isEnabled()) {
-    error("Robot Reset");
-    // Return to opt control
-    return;
-  }
-  info("init error");
-  // Chech batteries
-  if (!battery_level_acceptable()) {
-    menu_t *bat_menu = init_menu_var(STRING_TYPE, "Main or 9V Dead", 1, "Okay");
-    // execution paused till user confirms
-    display_menu(bat_menu);
-  }
 
-  menu_t *direction =
-      init_menu_var(STRING_TYPE, "Counter Clockwise?", 2, "Yes", "No");
-  counter_clockwise = display_menu(direction) == 0;
+  init_menu();
+
+  menu_t *direction_menu =
+      init_menu_var(STRING_TYPE, "Turn Direction?", 2, "CCW", "CW");
+  int rtn_val1 = -1;
+
+  menu_t *point_menu =
+      init_menu_var(STRING_TYPE, "Turn Direction?", 2, "CCW", "CW");
+  int rtn_val2 = -1;
+
+  menu_t *delay_menu =
+      init_menu_int(INT_TYPE, 0, 2000, 100, "Autonomous Start Delay");
+  int rtn_val3 = -1;
+
+  add_menu(direction_menu);
+  add_menu(point_menu);
+  add_menu(delay_menu);
+
+  start_menu();
 
   info("Ready to run");
 }

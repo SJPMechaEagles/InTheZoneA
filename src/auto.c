@@ -158,10 +158,6 @@ void ten_point() {
   turn(-215 * multiplier);
   drive_distance(200, 100, .3);
   drop_mobile_goal();
-  //  drive_distance(500, 50, 2);
-  //  drop_mobile_goal();
-  //  set_side_speed(BOTH, MIN_SPEED);
-  //  delay(2000);
   set_side_speed(BOTH, 0);
 }
 
@@ -172,11 +168,6 @@ void twenty_point() {
   turn(120 * multiplier);
   drive_distance(600, 80, .6);
   turn(100 * multiplier);
-
-  //  drive_distance(500, 50, 2);
-  //  drop_mobile_goal();
-  //  set_side_speed(BOTH, MIN_SPEED);
-  //  delay(2000);
   set_side_speed(BOTH, 0);
   drive_distance(1600, 100, 2);
 }
