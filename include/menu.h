@@ -165,7 +165,7 @@ typedef struct menu_t {
  * @author Chris Jerrett
  * @date 9/8/17
  **/
-menu_t *init_menu_var(enum menu_type type, const char *prompt, int nums, ...);
+menu_t *init_menu_var(enum menu_type type, int *returnValue, const char *prompt, int nums, ...);
 
 /**
  * @brief Creates a menu context, but does not display.
@@ -180,7 +180,7 @@ menu_t *init_menu_var(enum menu_type type, const char *prompt, int nums, ...);
  * @author Chris Jerrett
  * @date 9/8/17
  **/
-menu_t *init_menu_int(enum menu_type type, int min, int max, int step,
+menu_t *init_menu_int(enum menu_type type, int *returnValue, int min, int max, int step,
                       const char *prompt);
 
 /**
@@ -196,7 +196,7 @@ menu_t *init_menu_int(enum menu_type type, int min, int max, int step,
  * @author Chris Jerrett
  * @date 9/8/17
  **/
-menu_t *init_menu_float(enum menu_type type, float min, float max, float step,
+menu_t *init_menu_float(enum menu_type type, int *returnValue, float min, float max, float step,
                         const char *prompt);
 
 /**
@@ -226,6 +226,6 @@ void init_menu();
 
 void start_menu();
 
-void add_menu();
+void add_menu(menu_t *menu);
 
 #endif

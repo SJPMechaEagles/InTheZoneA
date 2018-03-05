@@ -164,7 +164,7 @@ void add_menu(menu_t *menu) {
   list_rpush(menus_list, node);
 }
 
-static void update_menu(void *) {
+static void update_menu(void *param) {
   int index = 0;
   int length = list_length(menus_list);
   for (int i = 0; i < length; i++) {

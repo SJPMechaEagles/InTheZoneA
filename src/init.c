@@ -71,17 +71,17 @@ void initialize() {
 
   init_menu();
 
-  menu_t *direction_menu =
-      init_menu_var(STRING_TYPE, "Turn Direction?", 2, "CCW", "CW");
   int rtn_val1 = -1;
+  menu_t *direction_menu =
+      init_menu_var(STRING_TYPE, &rtn_val1, "Turn Direction?", 2, "CCW", "CW");
 
-  menu_t *point_menu =
-      init_menu_var(STRING_TYPE, "Turn Direction?", 2, "CCW", "CW");
   int rtn_val2 = -1;
+  menu_t *point_menu =
+      init_menu_var(STRING_TYPE, &rtn_val2, "Turn Direction?", 2, "CCW", "CW");
 
-  menu_t *delay_menu =
-      init_menu_int(INT_TYPE, 0, 2000, 100, "Autonomous Start Delay");
   int rtn_val3 = -1;
+  menu_t *delay_menu = init_menu_int(INT_TYPE, &rtn_val3, 0, 2000, 100,
+                                     "Autonomous Start Delay");
 
   add_menu(direction_menu);
   add_menu(point_menu);
