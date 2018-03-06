@@ -17,6 +17,12 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define INTERUPT                                                               \
+  if (lifter_autostack_routine_interupt) {                                     \
+    quit_auto_static();                                                        \
+    return;                                                                    \
+  }
+
 /**
  * @brief The initial rotation of the lifter potentiometer at height zero
  **/

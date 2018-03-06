@@ -74,6 +74,7 @@ void autostack_routine(void *param) {
   claw_grab_cone();
   raise_secondary_lifter();
   delay(100);
+  INTERUPT
   raise_main_lifter();
   set_secondary_lifter_motors(-20);
   delay(200);
@@ -81,23 +82,17 @@ void autostack_routine(void *param) {
   delay(100);
   set_main_lifter_motors(0);
   delay(200);
+  INTERUPT
   do {
     second_pid_enabled = false;
     raise_secondary_lifter();
-    if (lifter_autostack_routine_interupt) {
-      quit_auto_static();
-      return;
-    }
     delay(50);
   } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 3500);
   set_secondary_lifter_motors(0);
   const int target = 3550;
   for (;;) {
     raise_main_lifter();
-    if (lifter_autostack_routine_interupt) {
-      quit_auto_static();
-      return;
-    }
+    INTERUPT
 
     int current = analogRead(SECONDARY_LIFTER_POT_PORT);
     int p = SECONDARY_LIFTER_P * (target - current);
@@ -115,10 +110,7 @@ void autostack_routine(void *param) {
       break;
     }
   }
-  if (lifter_autostack_routine_interupt) {
-    quit_auto_static();
-    return;
-  }
+  INTERUPT
   // Reached top
   set_main_lifter_motors(0);
   set_secondary_lifter_motors(0);
@@ -126,10 +118,7 @@ void autostack_routine(void *param) {
   unsigned long time = 0;
   // Lift secondary lifter
   do {
-    if (lifter_autostack_routine_interupt) {
-      quit_auto_static();
-      return;
-    }
+    INTERUPT
     raise_secondary_lifter();
     delay(10);
     time = millis();
@@ -141,18 +130,12 @@ void autostack_routine(void *param) {
   delay(70);
   set_secondary_lifter_motors(0);
 
-  if (lifter_autostack_routine_interupt) {
-    quit_auto_static();
-    return;
-  }
+  INTERUPT
   // release cone
   delay(200);
   set_main_lifter_motors(0);
   claw_release_cone();
-  if (lifter_autostack_routine_interupt) {
-    quit_auto_static();
-    return;
-  }
+  INTERUPT
   delay(400);
   set_claw_motor(0);
   set_secondary_lifter_motors(0);
@@ -160,6 +143,7 @@ void autostack_routine(void *param) {
   // get out of way of the cone
   raise_main_lifter();
   delay(200);
+  INTERUPT
   set_main_lifter_motors(0);
   lower_secondary_lifter();
   delay(400);
