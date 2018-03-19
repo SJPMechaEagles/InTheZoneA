@@ -7,7 +7,7 @@
 
 static bool encoders_initialized = false;
 
-static int ime_get_right_dist() {
+int ime_get_right_dist() {
   int front = 0;
   int back = 0;
   // TODO change for new robot
@@ -15,7 +15,7 @@ static int ime_get_right_dist() {
   return front;
 }
 
-static int ime_get_left_dist() {
+int ime_get_left_dist() {
   int front = 0;
   int back = 0;
   // TODO change for new robot
@@ -23,7 +23,7 @@ static int ime_get_left_dist() {
   return front;
 }
 
-static int ime_get_right_vel() {
+int ime_get_right_vel() {
   int front = 0;
   int back = 0;
   // TODO change for new robot
@@ -31,7 +31,7 @@ static int ime_get_right_vel() {
   return front;
 }
 
-static int ime_get_left_vel() {
+int ime_get_left_vel() {
   int front = 0;
   int back = 0;
   // TODO change for new robot
