@@ -22,3 +22,35 @@ float get_main_gyro_angluar_velocity() {
   int32_t reading = (int32_t)analogReadCalibratedHR(port + 1);
   return 0;
 }
+
+void gyroTurn(int degrees, Gyro gyro, int minPower) {
+  int direction;
+  //postive direction means turning right (posiive degrees)
+  if (degrees > 0) {
+    direction = 1;
+  } else {
+    direction = -1;
+  }
+  degrees -= degrees / 10;
+  int initial = gyroGet(gyro);
+  int slowDown = 0;
+  int powerLeft;
+  int powerRight;
+  //turn while the difference is less than the target degrees
+  while (abs(initial - gyroGet(gyro)) <= abs(degrees)) {
+    //if less than 38 degs to target, slow down
+    int degsRemaining = abs(degrees) - abs(initial - gyroGet(gyro));
+    if (degsRemaining <= 38) {
+      //slow down by a fraction of degrees remaining;
+      slowDown += degsRemaining / 3;
+    }
+    powerLeft = max(minPower, GYRO_TURN_SPEED_MAX - slowDown) * direction;
+    powerRight = - max(minPower, GYRO_TURN_SPEED_MAX - slowDown) * direction;
+    set_side_speed(LEFT, powerLeft);
+    set_side_speed(RIGHT, powerRight);
+
+    wait(20);
+
+  }
+  set_side_speed(BOTH, 0);
+}

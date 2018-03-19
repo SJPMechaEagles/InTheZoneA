@@ -7,6 +7,7 @@
 #define _GYRO_H_
 
 #include "API.h"
+#include "drive.h"
 
 /**
  * @brief Port the Gyroscope plugs into.
@@ -18,6 +19,9 @@
  * @todo
  */
 #define GYRO_MULTIPLIER 196
+#define GYRO_TURN_SPEED_MAX 80
+#define GYRO_TURN_SPEED_MIN_NORMAL 34
+#define GYRO_TURN_SPEED_MIN_FAST 48
 
 /**
  * @brief Initializes the main robot gryoscope/
