@@ -1,9 +1,16 @@
 #include "drive.h"
 #include "controller.h"
+#include "encoders.h"
 #include "motor_ports.h"
 #include "slew.h"
 
 static float joystickExp(int joystickVal);
+
+static void driveStraightDistance(int distance, int speed) {
+  int right_start_dist = ime_get_right_dist();
+  int left_start_dist = ime_get_right_dist();
+  int avg_distance;
+}
 
 /**
  * @brief Updates the drive motors during teleop

@@ -21,18 +21,6 @@ Gyro gyro;
 
 extern bool counter_clockwise;
 
-static bool testIfReset() {
-  FILE *f = fopen("de_cbble", "r");
-  if (f == NULL) {
-    f = fopen("de_cbble", "w");
-    fputc('d', f);
-    fflush(f);
-    fclose(f);
-    return false;
-  }
-  return true;
-}
-
 static void zero_ime() {
   imeReset(MID_LEFT_DRIVE);
   imeReset(MID_RIGHT_DRIVE);
@@ -200,10 +188,6 @@ void twenty_point() {
  * disable/enable cycle.
  */
 void autonomous() {
-  if (testIfReset()) {
-    error("File Reset");
-    // return;
-  }
   lower_secondary_lifter();
   delay(400);
   raise_secondary_lifter();

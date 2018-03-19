@@ -1,8 +1,43 @@
 #include "encoders.h"
+#include "auto.h"
+#include "drive.h"
 #include "log.h"
+#include "sensors.h"
 #include <API.h>
 
 static bool encoders_initialized = false;
+
+static int ime_get_right_dist() {
+  int front = 0;
+  int back = 0;
+  // TODO change for new robot
+  front = get_encoder_ticks(MID_RIGHT_DRIVE);
+  return front;
+}
+
+static int ime_get_left_dist() {
+  int front = 0;
+  int back = 0;
+  // TODO change for new robot
+  front = get_encoder_ticks(MID_LEFT_DRIVE);
+  return front;
+}
+
+static int ime_get_right_vel() {
+  int front = 0;
+  int back = 0;
+  // TODO change for new robot
+  front = get_encoder_velocity(MID_RIGHT_DRIVE);
+  return front;
+}
+
+static int ime_get_left_vel() {
+  int front = 0;
+  int back = 0;
+  // TODO change for new robot
+  front = get_encoder_velocity(MID_LEFT_DRIVE);
+  return front;
+}
 
 /**
  * @brief Initializes all motor encoders
