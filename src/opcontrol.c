@@ -22,6 +22,7 @@
 #include "slew.h"
 #include "toggle.h"
 #include "vmath.h"
+#include "ultrasonic.h"
 
 Ultrasonic lifter_ultrasonic;
 
@@ -48,16 +49,21 @@ Ultrasonic lifter_ultrasonic;
  */
 
 void operatorControl() {
-  buttonInit();
-  init_routine();
-  init_slew();
-  register_routine(&autostack_routine, JOY2_7D, NULL);
-  register_routine(&interrupt_auto_stack, JOY2_7R, NULL);
+//  buttonInit();
+//  init_routine();
+  //init_slew();
+//  register_routine(&autostack_routine, JOY2_7D, NULL);
+//  register_routine(&interrupt_auto_stack, JOY2_7R, NULL);
+  init_dual_ultrasonic();
   for (;;) {
-    update_claw();
-    update_intake();
-    update_lifter();
-    update_drive_motors();
+
+
+    printf("%d\n",is_cone_detected());
+
+  //  update_claw();
+    //update_intake();
+    //update_lifter();
+    //update_drive_motors();
     delay(20);
   }
 }

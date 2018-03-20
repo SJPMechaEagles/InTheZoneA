@@ -53,6 +53,7 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
+  return;
   init_error(true, uart2);
   info("Boot");
   if (!init_encoders())
