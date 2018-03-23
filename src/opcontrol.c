@@ -58,6 +58,8 @@ void operatorControl() {
     update_intake();
     update_lifter();
     update_drive_motors();
+    printf("Secondary Lift: %d \n", analogRead(SECONDARY_LIFTER_POT_PORT));
+    printf("Main Lift: %d \n", analogRead(MAIN_LIFTER_POT));
     delay(20);
   }
 }

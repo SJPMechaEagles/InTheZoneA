@@ -64,6 +64,8 @@ void initialize() {
   init_main_gyro();
   setTeamName("9228A");
   lifter_ultrasonic = ultrasonicInit(4, 5);
+  analogCalibrate(SECONDARY_LIFTER_POT_PORT);
+  analogCalibrate(MAIN_LIFTER_POT);
   delay(5000);
   setTeamName("9228A");
   init_main_lcd(uart1);
