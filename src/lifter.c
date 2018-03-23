@@ -352,6 +352,5 @@ int getLifterTicks() { return analogRead(LIFTER); }
  **/
 double getLifterHeight() {
   unsigned int ticks = getLifterTicks();
-  return (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) +
-          0.0198 * ticks + 2.3033);
+  return (-.0203 * ticks + 52.241);
 }

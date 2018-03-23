@@ -122,8 +122,11 @@ void test(int time) { printf("Test %d\n", time); }
  * turn around, finally drop mobile goal in the 20 or 10 point zone.
  */
 void autonomous_many_cones() {
-  // go forward until robot reaches the mobile goal
+  //Deploy (put down) mobile lifter and raise main lifter a bit
 
+  // go forward until robot reaches the mobile goal
+  driveStraightDistance(2320,50);
+  //gyroTurn(-170, GYRO_TURN_SPEED_MIN_FAST);
   // pick up mobile goal and drop preload cone
 
   // pick up and stack the second to fourth cones
