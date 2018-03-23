@@ -187,6 +187,24 @@ void twenty_point() {
  * exit. If it does so, the robot will await a switch to another mode or
  * disable/enable cycle.
  */
+
+/*
+ * New autonomous routine: load preload cone, go to mobile goal, pick up mobile
+ * goal, stack the preload cone, go forward, pick up and stack another cone, go
+ * forward, pick up and stack the thrid cone, pick up and stack the fourth cone,
+ * turn around, finally drop mobile goal in the 20 or 10 point zone.
+ */
+void autonomous_many_cones(){
+  //go forward until robot reaches the mobile goal
+
+  //pick up mobile goal and drop preload cone
+
+  //pick up and stack the second to fourth cones
+  for (int i = 0; i < 3; i ++) {
+    
+  }
+}
+
 void autonomous() {
   lower_secondary_lifter();
   delay(400);
