@@ -41,4 +41,12 @@ int get_encoder_ticks(const unsigned char address);
  **/
 int get_encoder_velocity(const unsigned char address);
 
+int ime_get_right_dist();
+
+int ime_get_left_dist();
+
+int ime_get_right_vel();
+
+int ime_get_left_vel();
+
 #endif

@@ -18,6 +18,11 @@
 #include "slew.h"
 Gyro gyro;
 
+<<<<<<< HEAD
+extern bool counter_clockwise;
+
+=======
+>>>>>>> master
 static void zero_ime() {
   return;
   imeReset(MID_LEFT_DRIVE);
@@ -95,6 +100,8 @@ void drive_back_to_scoring_zone() {
   set_side_speed(BOTH, 0);
 }
 
+void test(int time) { printf("Test %d\n", time); }
+
 /*
  * Runs the user autonomous code. This function will be started in its own task
  * with the default priority and stack size whenever the robot is enabled via
@@ -112,7 +119,42 @@ void drive_back_to_scoring_zone() {
  * exit. If it does so, the robot will await a switch to another mode or
  * disable/enable cycle.
  */
+
+/*
+ * New autonomous routine: load preload cone, go to mobile goal, pick up mobile
+ * goal, stack the preload cone, go forward, pick up and stack another cone, go
+ * forward, pick up and stack the thrid cone, pick up and stack the fourth cone,
+ * turn around, finally drop mobile goal in the 20 or 10 point zone.
+ */
+void autonomous_many_cones(){
+  //go forward until robot reaches the mobile goal
+
+  //pick up mobile goal and drop preload cone
+
+  //pick up and stack the second to fourth cones
+  for (int i = 0; i < 3; i ++) {
+    
+  }
+}
+
 void autonomous() {
+<<<<<<< HEAD
+  init_slew();
+  for (;;) {
+    driveStraightDistance(12, 100, &test);
+    gyroTurn(90, 30, 80);
+    delay(1000);
+  }
+  return;
+  lower_secondary_lifter();
+  delay(400);
+  raise_secondary_lifter();
+  delay(400);
+  set_secondary_lifter_motors(0);
+
+  info("Autonomous");
+=======
+>>>>>>> master
   init_slew();
   setup_auton();
   drive_towards_goal();

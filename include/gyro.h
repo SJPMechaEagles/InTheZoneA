@@ -7,17 +7,21 @@
 #define _GYRO_H_
 
 #include "API.h"
+#include "drive.h"
 
 /**
  * @brief Port the Gyroscope plugs into.
  */
-#define GYRO_PORT 1
+#define GYRO_PORT 3
 
 /**
  * Special Gyro multiplier for tuning in Gyro
  * @todo
  */
 #define GYRO_MULTIPLIER 196
+#define GYRO_TURN_SPEED_MAX 80
+#define GYRO_TURN_SPEED_MIN_NORMAL 33
+#define GYRO_TURN_SPEED_MIN_FAST 46
 
 /**
  * @brief Initializes the main robot gryoscope/
@@ -37,5 +41,9 @@ bool init_main_gyro();
  *  @date 11/30/17
  */
 float get_main_gyro_angluar_velocity();
+
+void gyroTurn(int degrees, int minPower, int defaultSpeed);
+
+bool init_main_gyro();
 
 #endif

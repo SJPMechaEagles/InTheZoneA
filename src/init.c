@@ -12,6 +12,7 @@
  */
 #include "battery.h"
 #include "encoders.h"
+#include "gyro.h"
 #include "lcd.h"
 #include "lifter.h"
 #include "log.h"
@@ -26,7 +27,6 @@
 void watchdogStart();
 
 extern Ultrasonic lifter_ultrasonic;
-extern Gyro gyro;
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode
@@ -56,20 +56,22 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
-  gyro = gyroInit(3, 230);
+  init_error(true, uart2);
+  info("Boot");
+  if (!init_encoders())
+    error("Encoders failed");
+  info("Gyro Calibrate");
+  init_main_gyro();
   setTeamName("9228A");
   if (!init_encoders())
     error("Encoders failed");
   lifter_ultrasonic = ultrasonicInit(4, 5);
-  init_error(true, uart2);
-  info("init error");
-  init_main_lcd(uart1);
 
-  if (!isEnabled()) {
-    error("Robot Reset");
-    // Return to opt control
-    return;
-  }
+  setTeamName("9228A");
+  init_main_lcd(uart1);
+  info("Ready to run");
+  info("init error");
+
   // Chech batteries
   if (!battery_level_acceptable()) {
     menu_t *bat_menu = init_menu_var(STRING_TYPE, "Main or 9V Dead", 1, "Okay");
@@ -80,7 +82,6 @@ void initialize() {
       init_menu_var(STRING_TYPE, "Auton Zone", 2, "Five Pt.", "Ten Pt.");
   // int opt = display_menu(t);
   info("Gyro Calibrate");
-  gyro = gyroInit(3, 230);
   info("Initializing Encoders");
   info("Done Initing");
   lifter_ultrasonic = ultrasonicInit(4, 5);
