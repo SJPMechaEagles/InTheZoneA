@@ -51,4 +51,6 @@ void update_drive_motors();
 
 void driveStraightDistance(float distance, int speed, void (*functionPtr)(int));
 
+void driveStraightDistance(float distance, int speed);
+
 #endif

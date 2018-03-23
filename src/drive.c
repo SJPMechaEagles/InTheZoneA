@@ -80,14 +80,21 @@ static float ticksToDistance(int ticks) {
 
 void driveStraightDistance(float distance, int speed,
                            void (*functionPtr)(int)) {
-  int start_right = ticksToDistance(ime_get_right_dist());
-  int start_left = ticksToDistance(ime_get_left_dist());
+  driveStraightDistance(distance, speed, NULL);
+}
+
+void driveStraightDistance(float distance, int speed,
+                           void (*functionPtr)(int)) {
+  int start_right = (ime_get_right_dist());
+  int start_left = (ime_get_left_dist());
   unsigned long start_time = millis();
   float distanceTraveled =
       ticksToDistance((abs(start_left) + abs(start_right)) / 2.00);
   do {
-    distanceTraveled = ticksToDistance(
-        (abs(ime_get_right_dist()) + abs(ime_get_left_dist())) / 2.00);
+    distanceTraveled =
+        ticksToDistance((abs(ime_get_right_dist() - start_right) +
+                         abs(ime_get_left_dist() - start_left)) /
+                        2.00);
     if (functionPtr != NULL)
       functionPtr(distanceTraveled);
     set_side_speed(RIGHT, speed);

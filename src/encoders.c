@@ -5,7 +5,6 @@
 #include "sensors.h"
 #include <API.h>
 
-<<<<<<< HEAD
 static bool encoders_initialized = false;
 
 int ime_get_right_dist() {
@@ -40,8 +39,6 @@ int ime_get_left_vel() {
   return front;
 }
 
-=======
->>>>>>> master
 /**
  * @brief Initializes all motor encoders
  * @author Chris Jerrett
