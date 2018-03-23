@@ -68,21 +68,13 @@ static inline void quit_auto_static() {
  * @param param the taskt the routine is running in.
  **/
 void autostack_routine(void *param) {
+  set_claw_motor(0);
   lifter_autostack_routine_interupt = false;
   lifter_autostack_running = true;
   // Lift main lifter
-  claw_grab_cone();
-  raise_secondary_lifter();
-  delay(100);
-  raise_main_lifter();
-  set_secondary_lifter_motors(-20);
-  delay(200);
-  set_claw_motor(-30);
-  delay(100);
-  set_main_lifter_motors(0);
-  delay(200);
   do {
     second_pid_enabled = false;
+    printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     raise_secondary_lifter();
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
@@ -111,7 +103,7 @@ void autostack_routine(void *param) {
     // Sec arg: number that are bad_responses aka -1
     // Third arg: Delay between reading
     // Forth Arg: Minimum distance before exiting of the median value
-    if (main_lifter_should_exit_autostack(11, 10, 6, 18)) {
+    if (main_lifter_should_exit_autostack(15, 13, 6, 20)) {
       break;
     }
   }
@@ -126,6 +118,7 @@ void autostack_routine(void *param) {
   unsigned long time = 0;
   // Lift secondary lifter
   do {
+    printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
       return;
@@ -133,7 +126,7 @@ void autostack_routine(void *param) {
     raise_secondary_lifter();
     delay(10);
     time = millis();
-  } while (((time - start) / 1000.0) < .7);
+  } while (((time - start) / 1000.0) < 1);
 
   // at top
   set_secondary_lifter_motors(0);
@@ -153,7 +146,7 @@ void autostack_routine(void *param) {
     quit_auto_static();
     return;
   }
-  delay(400);
+  delay(600);
   set_claw_motor(0);
   set_secondary_lifter_motors(0);
 
@@ -162,8 +155,8 @@ void autostack_routine(void *param) {
   delay(200);
   set_main_lifter_motors(0);
   lower_secondary_lifter();
-  delay(400);
-  set_claw_motor(0);
+  delay(200);
+
   lifter_autostack_running = false;
 }
 
@@ -278,7 +271,7 @@ static void secondary_lifter_update() {
   if (lifter_autostack_running)
     return;
   static int count = 0;
-  static bool pid_on = false;
+  // static bool pid_on = false;
   static int second_target = 0;
   int second_motor_speed = 0;
   static long long second_i = 0;
@@ -297,6 +290,7 @@ static void secondary_lifter_update() {
                        SECONDARY_LIFTER_I * second_i +
                        SECONDARY_LIFTER_D * second_d;
   second_last_p = second_p;
+  second_motor_speed = 0;
   if (joystickGetDigital(SECONDARY_LIFTER_DOWN)) {
     second_motor_speed = MIN_SPEED;
     count = 0;
@@ -323,6 +317,7 @@ static void secondary_lifter_update() {
  * @date 9/9/2017
  **/
 void update_lifter() {
+  // printf("%d \n", analogRead(SECONDARY_LIFTER_POT_PORT));
   main_lifter_update();
   if (!secondary_override)
     secondary_lifter_update();

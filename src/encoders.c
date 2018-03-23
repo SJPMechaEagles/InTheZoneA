@@ -5,6 +5,7 @@
 #include "sensors.h"
 #include <API.h>
 
+<<<<<<< HEAD
 static bool encoders_initialized = false;
 
 int ime_get_right_dist() {
@@ -39,6 +40,8 @@ int ime_get_left_vel() {
   return front;
 }
 
+=======
+>>>>>>> master
 /**
  * @brief Initializes all motor encoders
  * @author Chris Jerrett
@@ -46,17 +49,13 @@ int ime_get_left_vel() {
  * @see IME_NUMBER
  **/
 bool init_encoders() {
-  if (encoders_initialized)
-    return true;
 #ifdef IME_NUMBER
   int count = imeInitializeAll();
-  delay(1000);
   if (count != IME_NUMBER) {
     printf("detected only %d\n", count);
     error("Wrong Number of IMEs Connected");
     return false;
   }
-  encoders_initialized = true;
   return true;
 #else
   return imeInitializeAll();

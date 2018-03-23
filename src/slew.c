@@ -27,7 +27,7 @@ void updateMotors() {
     int curr_speed = motors_curr_speeds[i];
     mutexGive(speeds_mutex);
     int diff = set_speed - curr_speed;
-    int offset = diff / 2;
+    int offset = diff;
     int n = curr_speed + offset;
     motors_curr_speeds[i] = n;
     motorSet(i + 1, n);
@@ -47,7 +47,7 @@ void init_slew() {
   memset(motors_curr_speeds, 0, sizeof(int) * 10);
   motorStopAll();
   speeds_mutex = mutexCreate();
-  slew = taskRunLoop(updateMotors, 50);
+  slew = taskRunLoop(updateMotors, 100);
   initialized = true;
 }
 

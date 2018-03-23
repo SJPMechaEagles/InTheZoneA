@@ -16,7 +16,7 @@
  * @brief The dead spot on the controller to avoid running motors at low
  * speeds.
  **/
-#define THRESHOLD 8
+#define THRESHOLD 10
 
 #define D (0.066)
 
