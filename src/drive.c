@@ -6,12 +6,6 @@
 
 static float joystickExp(int joystickVal);
 
-static void driveStraightDistance(int distance, int speed) {
-  int right_start_dist = ime_get_right_dist();
-  int left_start_dist = ime_get_right_dist();
-  int avg_distance;
-}
-
 /**
  * @brief Updates the drive motors during teleop
  * @author Christian Desimone
@@ -77,4 +71,28 @@ static float joystickExp(int joystickVal) {
     return 129.951 / (1 + K * exp(-(D * (joystickVal + B))));
   }
   return -129.951 / (1 + K * exp(-(D * (-joystickVal + B))));
+}
+
+static float ticksToDistance(int ticks) {
+  float rotations = ticks / 392.0;
+  return rotations * 2 * M_PI * 2.00;
+}
+
+void driveStraightDistance(float distance, int speed,
+                           void (*functionPtr)(int)) {
+  int start_right = ticksToDistance(ime_get_right_dist());
+  int start_left = ticksToDistance(ime_get_left_dist());
+  unsigned long start_time = millis();
+  float distanceTraveled =
+      ticksToDistance((abs(start_left) + abs(start_right)) / 2.00);
+  do {
+    distanceTraveled = ticksToDistance(
+        (abs(ime_get_right_dist()) + abs(ime_get_left_dist())) / 2.00);
+    if (functionPtr != NULL)
+      functionPtr(distanceTraveled);
+    set_side_speed(RIGHT, speed);
+    set_side_speed(LEFT, speed);
+    delay(10);
+  } while (distanceTraveled < distance - 10);
+  set_side_speed(BOTH, 0);
 }

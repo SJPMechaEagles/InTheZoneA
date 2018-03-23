@@ -12,6 +12,7 @@
  */
 #include "battery.h"
 #include "encoders.h"
+#include "gyro.h"
 #include "lcd.h"
 #include "lifter.h"
 #include "log.h"
@@ -21,7 +22,6 @@
 #include "slew.h"
 
 extern Ultrasonic lifter_ultrasonic;
-extern Gyro gyro;
 
 bool counter_clockwise = true;
 
@@ -58,19 +58,12 @@ void initialize() {
   if (!init_encoders())
     error("Encoders failed");
   info("Gyro Calibrate");
-  gyro = gyroInit(3, 230);
+  init_main_gyro();
   setTeamName("9228A");
   lifter_ultrasonic = ultrasonicInit(4, 5);
-
-  gyro = gyroInit(3, 230);
   setTeamName("9228A");
   init_main_lcd(uart1);
   info("Ready to run");
-  if (isEnabled()) {
-    error("Robot Reset");
-    // Return to opt control
-    return;
-  }
   info("init error");
   // Chech batteries
   if (!battery_level_acceptable()) {

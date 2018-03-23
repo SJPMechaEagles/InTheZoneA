@@ -170,6 +170,8 @@ void twenty_point() {
   drive_distance(1600, 100, 2);
 }
 
+void test(int time) { printf("Test %d\n", time); }
+
 /*
  * Runs the user autonomous code. This function will be started in its own task
  * with the default priority and stack size whenever the robot is enabled via
@@ -188,6 +190,13 @@ void twenty_point() {
  * disable/enable cycle.
  */
 void autonomous() {
+  init_slew();
+  for (;;) {
+    driveStraightDistance(12, 100, &test);
+    gyroTurn(90, 30, 80);
+    delay(1000);
+  }
+  return;
   lower_secondary_lifter();
   delay(400);
   raise_secondary_lifter();
