@@ -18,11 +18,6 @@
 #include "slew.h"
 Gyro gyro;
 
-<<<<<<< HEAD
-extern bool counter_clockwise;
-
-=======
->>>>>>> master
 static void zero_ime() {
   return;
   imeReset(MID_LEFT_DRIVE);
@@ -126,19 +121,17 @@ void test(int time) { printf("Test %d\n", time); }
  * forward, pick up and stack the thrid cone, pick up and stack the fourth cone,
  * turn around, finally drop mobile goal in the 20 or 10 point zone.
  */
-void autonomous_many_cones(){
-  //go forward until robot reaches the mobile goal
+void autonomous_many_cones() {
+  // go forward until robot reaches the mobile goal
 
-  //pick up mobile goal and drop preload cone
+  // pick up mobile goal and drop preload cone
 
-  //pick up and stack the second to fourth cones
-  for (int i = 0; i < 3; i ++) {
-    
+  // pick up and stack the second to fourth cones
+  for (int i = 0; i < 3; i++) {
   }
 }
 
 void autonomous() {
-<<<<<<< HEAD
   init_slew();
   for (;;) {
     driveStraightDistance(12, 100, &test);
@@ -153,8 +146,6 @@ void autonomous() {
   set_secondary_lifter_motors(0);
 
   info("Autonomous");
-=======
->>>>>>> master
   init_slew();
   setup_auton();
   drive_towards_goal();
