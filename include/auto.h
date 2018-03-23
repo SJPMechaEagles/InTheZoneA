@@ -13,6 +13,7 @@
 #include "localization.h"
 #include "mobile_goal_intake.h"
 #include "sensors.h"
+#include "gyro.h"
 
 /**
  * @brief Front left motor integrated motor encoder
