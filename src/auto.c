@@ -135,7 +135,7 @@ void autonomous() {
   init_slew();
   for (int i = 1; i < 10; i++) {
     driveStraightDistance(5 * i, 100, &test);
-    delay(20000);
+    delay(10000);
   }
   return;
   lower_secondary_lifter();

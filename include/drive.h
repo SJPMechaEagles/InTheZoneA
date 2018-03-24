@@ -42,6 +42,8 @@ typedef enum side { LEFT, BOTH, RIGHT } side_t;
  **/
 void set_side_speed(const side_t side, const int speed);
 
+void set_side_speed_no_slew(const side_t side, const int speed)
+
 /**
  * @brief Updates the drive motors during teleop
  * @author Christian Desimone
