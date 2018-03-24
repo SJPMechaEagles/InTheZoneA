@@ -95,6 +95,6 @@ void driveStraightDistance(float distance, int speed,
     set_side_speed(RIGHT, speed);
     set_side_speed(LEFT, speed);
     delay(10);
-  } while (distanceTraveled < distance - 10);
+  } while (distanceTraveled < distance);
   set_side_speed(BOTH, 0);
 }
