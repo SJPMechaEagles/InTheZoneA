@@ -112,8 +112,9 @@ void driveStraightDistance(float distance, int speed,
                         2.00);
     if (functionPtr != NULL)
       functionPtr(distanceTraveled);
-    set_side_speed(RIGHT, speed);
-    set_side_speed(LEFT, speed);
+    set_side_speed_no_slew(RIGHT, speed);
+    set_side_speed_no_slew(LEFT, speed);
+    printf("%d\n", ime_get_left_vel() - ime_get_left_vel());
     delay(10);
   } while (distanceTraveled < distance);
   set_side_speed(BOTH, 0);
