@@ -352,6 +352,71 @@ int getLifterTicks() { return analogRead(LIFTER); }
  **/
 double getLifterHeight() {
   unsigned int ticks = getLifterTicks();
-  return (-2 * pow(10, (-9 * ticks)) + 6 * (pow(10, (-6 * ticks * ticks))) +
-          0.0198 * ticks + 2.3033);
+  return (-.0203 * ticks + 52.241);
+}
+
+/**
+ * @brief raises the lifter until it hits a potentiometer value
+ *
+ * @param toPot the pot value at which motors stop
+ * @author Fred Lu
+ * @date 3/24/2017
+ **/
+void potRaiseMainLifter (int toPot) {
+  int theta= analogRead(MAIN_LIFTER_POT);
+  while (theta >= toPot) {
+    set_main_lifter_motors(MAX_SPEED);
+    wait(15);
+    if (abs(analogRead(MAIN_LIFTER_POT) - theta) <= 1) {
+        break; //quit loop if delta theta is small (lifter stuck)
+    }
+    theta = analogRead(MAIN_LIFTER_POT);
+  }
+  set_main_lifter_motors(0);
+}
+
+void potLowerMainLifter (int toPot) {
+  int theta= analogRead(MAIN_LIFTER_POT);
+  while (theta <= toPot) {
+    set_main_lifter_motors(MIN_SPEED);
+    wait(15);
+    if (abs(analogRead(MAIN_LIFTER_POT) - theta) <= 1) {
+        break; //quit loop if delta theta is small (lifter stuck)
+    }
+    theta = analogRead(MAIN_LIFTER_POT);
+  }
+  set_main_lifter_motors(0);
+}
+
+/**
+ * @brief raises the lifter until it hits a potentiometer value
+ *
+ * @param toPot the pot value at which motors stop
+ * @author Fred Lu
+ * @date 3/24/2017
+ **/
+void potRaiseSecondaryLifter (int toPot) {
+  int theta = analogRead(SECONDARY_LIFTER_POT_PORT);
+  while (theta >= toPot) {
+    set_secondary_lifter_motors(MAX_SPEED);
+    wait(15);
+    if (abs(analogRead(SECONDARY_LIFTER_POT_PORT) - theta) <= 1) {
+        break; //quit loop if delta theta is small (lifter stuck)
+    }
+    theta = analogRead(SECONDARY_LIFTER_POT_PORT);
+  }
+  set_main_lifter_motors(0);
+}
+
+void potLowerSecondaryLifter (int toPot) {
+  int theta = analogRead(SECONDARY_LIFTER_POT_PORT);
+  while (theta <= toPot) {
+    set_secondary_lifter_motors(MIN_SPEED);
+    wait(15);
+    if (abs(analogRead(SECONDARY_LIFTER_POT_PORT) - theta) <= 1) {
+        break; //quit loop if delta theta is small (lifter stuck)
+    }
+    theta = analogRead(SECONDARY_LIFTER_POT_PORT);
+  }
+  set_main_lifter_motors(0);
 }
