@@ -24,6 +24,10 @@
 
 #define K (0.05)
 
+#define BASE_P .013
+#define BASE_D .0006
+#define BASE_I .0000004
+
 /**
  * @brief enumeration indication side of the robot.
  * @author Christian Desimone
@@ -41,6 +45,8 @@ typedef enum side { LEFT, BOTH, RIGHT } side_t;
  *back and positive forwards
  **/
 void set_side_speed(const side_t side, const int speed);
+
+void set_side_speed_no_slew(const side_t side, const int speed);
 
 /**
  * @brief Updates the drive motors during teleop

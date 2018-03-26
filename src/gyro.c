@@ -31,7 +31,7 @@ void gyroTurn(int degrees, int minPower, int defaultSpeed) {
   } else {
     direction = -1;
   }
-  degrees -= degrees / 10;
+  degrees -= degrees / 20;
   int initial = gyroGet(main_gyro);
   int slowDown = 0;
   int powerLeft;
