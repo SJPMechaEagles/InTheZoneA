@@ -10,6 +10,7 @@
  */
 
 #include "toggle.h"
+#include "lcd.h"
 
 /**
  * Represents the array of "wasPressed" for all 27 available buttons.
@@ -104,13 +105,12 @@ bool buttonGetState(button_t button) {
   } else {
     // button is on LCD
     if (button == LCD_LEFT)
-      currentButton = (lcdReadButtons(uart1) == LCD_BTN_LEFT);
-
+      currentButton = lcd_get_pressed_buttons().left == PRESSED;
     if (button == LCD_CENT)
-      currentButton = (lcdReadButtons(uart1) == LCD_BTN_CENTER);
+      currentButton = lcd_get_pressed_buttons().middle == PRESSED;
 
     if (button == LCD_RIGHT)
-      currentButton = (lcdReadButtons(uart1) == LCD_BTN_RIGHT);
+      currentButton = lcd_get_pressed_buttons().right == PRESSED;
   }
   return currentButton;
 }

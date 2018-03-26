@@ -10,6 +10,7 @@
  * PROS contains FreeRTOS (http://www.freertos.org) whose source code may be
  * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
  */
+#include "auto.h"
 #include "battery.h"
 #include "encoders.h"
 #include "gyro.h"
@@ -20,7 +21,7 @@
 #include "menu.h"
 #include "sensors.h"
 #include "slew.h"
-
+#include "toggle.h"
 /*
  * Initilaizes the watchdog and feed task if watchdog is enabled
  */
@@ -41,6 +42,8 @@ extern Ultrasonic lifter_ultrasonic;
  */
 void initializeIO() { watchdogInit(); }
 
+enum FIELD_SIDE start_side = SIDE_NOT_SET;
+enum FIELD_COLOR start_color = COLOR_NOT_SET;
 /* @brief Initialization code to be run at startup of the cortex
  * @author Chris Jerrett
  * Runs user initialization code. This function will be started in its own task
@@ -56,19 +59,23 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
+  buttonInit();
   init_error(true, uart2);
+  init_main_lcd(uart1);
   info("Boot");
-  if (!init_encoders())
-    error("Encoders failed");
   info("Gyro Calibrate");
   init_main_gyro();
   setTeamName("9228A");
   lifter_ultrasonic = ultrasonicInit(4, 5);
-  analogCalibrate(SECONDARY_LIFTER_POT_PORT);
-  analogCalibrate(MAIN_LIFTER_POT);
   delay(5000);
+  init_menu();
+  menu_t *color_menu = init_menu_var(STRING_TYPE, (int *)&start_color, "COLOR?",
+                                     2, "RED", "BLUE");
+  menu_t *side_menu = init_menu_var(STRING_TYPE, (int *)&start_side, "SIDE?", 2,
+                                    "Driver Side", "Not Driver Side");
+  add_menu(color_menu);
+  add_menu(side_menu);
+  start_menu();
   setTeamName("9228A");
-  init_main_lcd(uart1);
   info("Ready to run");
-  info("init error");
 }
