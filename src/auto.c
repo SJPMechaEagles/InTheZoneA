@@ -128,7 +128,7 @@ void autonomous_many_cones() {
   driveStraightDistance(2320,50, NULL);
   gyroTurn(-170, GYRO_TURN_SPEED_MIN_FAST, 60);
   // pick up mobile goal and drop preload cone
-
+  
   // pick up and stack the second to fourth cones
   for (int i = 0; i < 3; i++) {
   }

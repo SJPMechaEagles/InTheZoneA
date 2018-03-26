@@ -420,3 +420,30 @@ void potLowerSecondaryLifter (int toPot) {
   }
   set_main_lifter_motors(0);
 }
+/*
+void potRaiseMobileIntake (int toPot) {
+  int theta = analogRead(SECONDARY_LIFTER_POT_PORT);
+  while (theta >= toPot) {
+    set_secondary_lifter_motors(MAX_SPEED);
+    wait(15);
+    if (abs(analogRead(SECONDARY_LIFTER_POT_PORT) - theta) <= 1) {
+        break; //quit loop if delta theta is small (lifter stuck)
+    }
+    theta = analogRead(SECONDARY_LIFTER_POT_PORT);
+  }
+  set_main_lifter_motors(0);
+}
+
+void potLowerMobileIntake(int toPot) {
+  int theta = analogRead(SECONDARY_LIFTER_POT_PORT);
+  while (theta <= toPot) {
+    set_secondary_lifter_motors(MIN_SPEED);
+    wait(15);
+    if (abs(analogRead(SECONDARY_LIFTER_POT_PORT) - theta) <= 1) {
+        break; //quit loop if delta theta is small (lifter stuck)
+    }
+    theta = analogRead(SECONDARY_LIFTER_POT_PORT);
+  }
+  set_main_lifter_motors(0);
+}
+*/
