@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "toggle.h"
 
 static TaskHandle menuTask;
 
@@ -168,8 +169,8 @@ static void update_menu(void *param) {
   int length = list_length(menus_list);
   for (int i = 0; i < length; i++) {
     display_menu((menu_t *)list_rpop(menus_list)->val);
-    char str[16];
-    sprintf(str, "Displaying num: %s", str);
+    char str[32];
+    sprintf(str, "Displaying num: %d", i);
     debug(str);
   }
 }
@@ -197,19 +198,20 @@ void display_menu(menu_t *menu) {
   // Will exit if teleop or autonomous begin. This is extremely important if
   // robot disconnects or resets.
   char val[16];
-  while (lcd_get_pressed_buttons().middle == RELEASED) {
+  while (!buttonIsNewPress(LCD_CENT)) {
     calculate_current_display(val, menu);
 
-    if (lcd_get_pressed_buttons().right == PRESSED) {
+    if (buttonIsNewPress(LCD_RIGHT)) {
       menu->current += 1;
     }
-    if (lcd_get_pressed_buttons().left == PRESSED) {
+    if (buttonIsNewPress(LCD_LEFT)) {
       menu->current -= 1;
     }
     printf("%s\n", val);
     printf("%d\n", menu->current);
+    lcd_print(1, menu->prompt);
     lcd_print(2, val);
-    delay(300);
+    delay(20);
   }
   printf("%d\n", menu->current);
   printf("return\n");
@@ -219,7 +221,7 @@ void display_menu(menu_t *menu) {
   delay(600);
   lcd_clear();
   if (menu->type == STRING_TYPE) {
-    *(menu->returnValue) = menu->current;
+    *(menu->returnValue) = menu->current % menu->length;
   } else if (menu->type == INT_TYPE) {
     *(menu->returnValue) =
         menu->current * menu->step + (menu->min + menu->max) / 2;

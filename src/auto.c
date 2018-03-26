@@ -17,9 +17,12 @@
 #include "mobile_goal_intake.h"
 #include "slew.h"
 #include <API.h>
+
 Gyro gyro;
 
 extern bool counter_clockwise;
+extern enum FIELD_SIDE start_side;
+extern enum FIELD_COLOR start_color;
 
 static bool testIfReset() {
   FILE *f = fopen("de_cbble", "r");
@@ -190,6 +193,9 @@ void twenty_point() {
  * disable/enable cycle.
  */
 void autonomous() {
+  char str[16];
+  sprintf(str, "Side: %d", (int)start_side);
+  printf("%s\n", str);
   delay(2000);
   if (testIfReset()) {
     error("File Reset");

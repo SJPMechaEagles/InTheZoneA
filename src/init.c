@@ -10,8 +10,10 @@
  * PROS contains FreeRTOS (http://www.freertos.org) whose source code may be
  * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
  */
+#include "auto.h"
 #include "battery.h"
 #include "encoders.h"
+#include "gyro.h"
 #include "lcd.h"
 #include "lifter.h"
 #include "log.h"
@@ -19,11 +21,13 @@
 #include "menu.h"
 #include "sensors.h"
 #include "slew.h"
+#include "toggle.h"
+/*
+ * Initilaizes the watchdog and feed task if watchdog is enabled
+ */
+void watchdogStart();
 
 extern Ultrasonic lifter_ultrasonic;
-extern Gyro gyro;
-
-bool counter_clockwise = true;
 
 /*
  * Runs pre-initialization code. This function will be started in kernel mode
@@ -38,6 +42,8 @@ bool counter_clockwise = true;
  */
 void initializeIO() { watchdogInit(); }
 
+enum FIELD_SIDE start_side = SIDE_NOT_SET;
+enum FIELD_COLOR start_color = COLOR_NOT_SET;
 /* @brief Initialization code to be run at startup of the cortex
  * @author Chris Jerrett
  * Runs user initialization code. This function will be started in its own task
@@ -53,41 +59,23 @@ void initializeIO() { watchdogInit(); }
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
-  info("Boot");
-  setTeamName("9228A");
-
+  buttonInit();
   init_error(true, uart2);
-  debug("init error sys");
-
-  if (!init_encoders())
-    error("Encoders failed");
-
-  info("Gyro Calibrate");
-  gyro = gyroInit(3, 230);
-
-  lifter_ultrasonic = ultrasonicInit(4, 5);
-
   init_main_lcd(uart1);
-
+  info("Boot");
+  info("Gyro Calibrate");
+  init_main_gyro();
+  setTeamName("9228A");
+  lifter_ultrasonic = ultrasonicInit(4, 5);
+  delay(5000);
   init_menu();
-
-  int rtn_val1 = -1;
-  menu_t *direction_menu =
-      init_menu_var(STRING_TYPE, &rtn_val1, "Turn Direction?", 2, "CCW", "CW");
-
-  int rtn_val2 = -1;
-  menu_t *point_menu =
-      init_menu_var(STRING_TYPE, &rtn_val2, "Turn Direction?", 2, "CCW", "CW");
-
-  int rtn_val3 = -1;
-  menu_t *delay_menu = init_menu_int(INT_TYPE, &rtn_val3, 0, 2000, 100,
-                                     "Autonomous Start Delay");
-
-  add_menu(direction_menu);
-  add_menu(point_menu);
-  add_menu(delay_menu);
-
+  menu_t *color_menu = init_menu_var(STRING_TYPE, (int *)&start_color, "COLOR?",
+                                     2, "RED", "BLUE");
+  menu_t *side_menu = init_menu_var(STRING_TYPE, (int *)&start_side, "SIDE?", 2,
+                                    "Driver Side", "Not Driver Side");
+  add_menu(color_menu);
+  add_menu(side_menu);
   start_menu();
-
+  setTeamName("9228A");
   info("Ready to run");
 }
