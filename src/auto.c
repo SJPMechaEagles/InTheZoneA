@@ -125,7 +125,7 @@ void autonomous_many_cones() {
   //Deploy (put down) mobile lifter and raise main lifter a bit
 
   // go forward until robot reaches the mobile goal
-  driveStraightDistance(2320,50);
+  driveStraightDistance(2320,50, NULL);
   //gyroTurn(-170, GYRO_TURN_SPEED_MIN_FAST);
   // pick up mobile goal and drop preload cone
 
