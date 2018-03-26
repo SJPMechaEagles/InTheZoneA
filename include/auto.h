@@ -14,6 +14,9 @@
 #include "mobile_goal_intake.h"
 #include "sensors.h"
 
+enum FIELD_COLOR{ COLOR_NOT_SET = -1, RED = 0, BLUE = 1 };
+enum FIELD_SIDE { SIDE_NOT_SET = -1, DRIVER_SIDE = 0, NOT_DRIVER_SIDE = 1 };
+
 /**
  * @brief Front left motor integrated motor encoder
  **/
