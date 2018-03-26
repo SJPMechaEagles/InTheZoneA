@@ -24,6 +24,10 @@
 
 #define K (0.05)
 
+#define BASE_P .013
+#define BASE_D .0006
+#define BASE_I .0000004
+
 /**
  * @brief enumeration indication side of the robot.
  * @author Christian Desimone

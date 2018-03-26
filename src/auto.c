@@ -133,10 +133,7 @@ void autonomous_many_cones() {
 
 void autonomous() {
   init_slew();
-  for (int i = 1; i < 10; i++) {
-    driveStraightDistance(5 * i, 100, &test);
-    delay(10000);
-  }
+  driveStraightDistance(60, 100, NULL);
   return;
   lower_secondary_lifter();
   delay(400);
