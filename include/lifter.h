@@ -231,8 +231,6 @@ void autostack_routine(void *param);
  */
 void interrupt_auto_stack(void *param);
 
-bool main_lifter_should_exit_autostack(int tests, int min_bad,
-                                       const unsigned long delay_time,
-                                       int max_val);
+bool main_lifter_should_exit_autostack(int tests_num);
 
 #endif

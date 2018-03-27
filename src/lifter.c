@@ -21,11 +21,9 @@ static int lifter_ultra_med(int tests[], int len) {
   return med;
 }
 
-bool main_lifter_should_exit_autostack(int tests, int min_bad,
-                                       const unsigned long delay_time,
-                                       int max_val) {
-  int testVals[10];
-  for (unsigned int tests = 0; tests < 10; tests++) {
+bool main_lifter_should_exit_autostack(int tests_num) {
+  int testVals[tests_num];
+  for (unsigned int tests = 0; tests < tests_num; tests++) {
     unsigned int ultrasonic_value = ultrasonicGet(lifter_ultrasonic);
     if (ultrasonic_value == ULTRA_BAD_RESPONSE) {
       tests--;
@@ -33,11 +31,10 @@ bool main_lifter_should_exit_autostack(int tests, int min_bad,
     }
     testVals[tests] = ultrasonic_value;
   }
-  int median = lifter_ultra_med(testVals, 10);
+  int median = lifter_ultra_med(testVals, tests_num);
   printf("Median: %d\n", median);
-  return abs(median - 16) < 2;
+  return median > 15;
 }
-
 /**
  * @brief interupts an autostack routine.
  * @param param the task the interrupt is running on.
@@ -73,7 +70,7 @@ void autostack_routine(void *param) {
       return;
     }
     delay(50);
-  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 3500);
+  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 3900);
   set_secondary_lifter_motors(0);
   const int target = 3550;
   for (;;) {
@@ -82,10 +79,6 @@ void autostack_routine(void *param) {
       quit_auto_static();
       return;
     }
-
-    int current = analogRead(SECONDARY_LIFTER_POT_PORT);
-    int p = SECONDARY_LIFTER_P * (target - current);
-    set_secondary_lifter_motors(p);
     // In theory should reduce the likelyhood of stopping early becauce
     // of this test to 0.004604969% assuming a .2 chance of each
     // reading failing and that the events are independent.
@@ -95,7 +88,7 @@ void autostack_routine(void *param) {
     // Sec arg: number that are bad_responses aka -1
     // Third arg: Delay between reading
     // Forth Arg: Minimum distance before exiting of the median value
-    if (main_lifter_should_exit_autostack(15, 13, 6, 20)) {
+    if (main_lifter_should_exit_autostack(5)) {
       break;
     }
   }
