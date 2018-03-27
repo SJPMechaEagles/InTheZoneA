@@ -15,34 +15,27 @@ static int lifter_ultra_med(int tests[], int len) {
   qsort(tests, len, sizeof(int), compare);
   if (len % 2 == 0) {
     int med = (tests[len / 2] + tests[len / 2 - 1]) / 2;
-    printf("MED: %d\n", med);
     return med;
   }
   int med = tests[len / 2];
-  printf("MED: %d\n", med);
   return med;
 }
 
 bool main_lifter_should_exit_autostack(int tests, int min_bad,
                                        const unsigned long delay_time,
                                        int max_val) {
-  int results[tests];
-  for (int i = 0; i < tests; i++) {
-    int val = ultrasonicGet(lifter_ultrasonic);
-    results[i] = val;
-    delay(delay_time);
-    printf("%d,", val);
+  int testVals[10];
+  for (unsigned int tests = 0; tests < 10; tests++) {
+    unsigned int ultrasonic_value = ultrasonicGet(lifter_ultrasonic);
+    if (ultrasonic_value == ULTRA_BAD_RESPONSE) {
+      tests--;
+      continue;
+    }
+    testVals[tests] = ultrasonic_value;
   }
-  printf("\n");
-  int neg_ones = 0;
-  for (int i = 0; i < tests; i++) {
-    if (results[i] == ULTRA_BAD_RESPONSE)
-      neg_ones++;
-  }
-  if (neg_ones >= min_bad)
-    return true;
-  int med = lifter_ultra_med(results, tests);
-  return med > max_val;
+  int median = lifter_ultra_med(testVals, 10);
+  printf("Median: %d\n", median);
+  return abs(median - 16) < 2;
 }
 
 /**
@@ -74,7 +67,6 @@ void autostack_routine(void *param) {
   // Lift main lifter
   do {
     second_pid_enabled = false;
-    printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     raise_secondary_lifter();
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
@@ -118,7 +110,6 @@ void autostack_routine(void *param) {
   unsigned long time = 0;
   // Lift secondary lifter
   do {
-    printf("%d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
     if (lifter_autostack_routine_interupt) {
       quit_auto_static();
       return;

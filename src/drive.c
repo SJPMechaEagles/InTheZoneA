@@ -122,7 +122,6 @@ void driveStraightDistance(float distance, int speed,
     int derivative = error - last;
     int offset = error * BASE_P + integral * BASE_I + derivative * BASE_D;
     if (distance - distanceTraveled < 12) {
-      printf("decrease\n");
       rightSpeed = abs(rightSpeed * .92) < 40 ? rightSpeed : rightSpeed * .92;
       leftSpeed = abs(leftSpeed * .92) < 40 ? leftSpeed : leftSpeed * .92;
     } else {

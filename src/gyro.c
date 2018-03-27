@@ -53,7 +53,6 @@ void gyroTurn(int degrees, int minPower, int defaultSpeed) {
   }
   delay(500);
   int error = (initial - gyroGet(main_gyro)) - abs(degrees);
-  printf("%d\n", error);
   set_side_speed(BOTH, 0);
   return;
 }
