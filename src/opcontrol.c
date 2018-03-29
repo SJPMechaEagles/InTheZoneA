@@ -60,6 +60,6 @@ void operatorControl() {
     update_drive_motors();
     printf("Main Lifter Potentiometer: %d ", analogRead(MAIN_LIFTER_POT));
     printf("Secondary Lifter: %d\n", analogRead(SECONDARY_LIFTER_POT_PORT));
-    delay(20);
+    delay(40);
   }
 }

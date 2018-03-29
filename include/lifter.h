@@ -231,6 +231,11 @@ void autostack_routine(void *param);
  */
 void interrupt_auto_stack(void *param);
 
+void potRaiseMainLifter (int toPot);
+void potLowerMainLifter (int toPot);
+void potRaiseSecondaryLifter (int toPot);
+void potLowerSecondaryLifter (int toPot);
+
 bool main_lifter_should_exit_autostack(int tests, int min_bad,
                                        const unsigned long delay_time,
                                        int max_val);
