@@ -74,6 +74,8 @@ enum FIELD_SIDE { SIDE_NOT_SET = -1, DRIVER_SIDE = 0, NOT_DRIVER_SIDE = 1 };
 
 #define STATIONARY_GOAL_DISTANCE 1000
 
+void autonomous();
+
 /**
  * @brief the maximum height of the secondary lifter
  **/

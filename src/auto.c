@@ -51,7 +51,7 @@ static void drive_towards_goal() {
 
 static void pick_up_mobile_goal() {
   raise_intake();
-  delay(1000);
+  delay(1500);
   set_intake_motor(0);
 }
 
@@ -113,6 +113,13 @@ void drive_back_to_scoring_zone() {
  * turn around, finally drop mobile goal in the 20 or 10 point zone.
  */
 void autonomous_many_cones() {
+
+  // gyroTurn(-170, GYRO_TURN_SPEED_MIN_FAST);
+}
+
+void autonomous() {
+  printf("yes");
+  init_slew();
   printf("1");
   delay(50);
   printf("2");
@@ -132,6 +139,11 @@ void autonomous_many_cones() {
   delay(500);
   printf("6");
   //drop the preload cone
+  pick_up_mobile_goal();
+  lower_main_lifter();
+  delay(500);
+  claw_release_cone();
+  delay(500);
   //move_main_lifter_to();
   printf("7");
 
@@ -139,13 +151,10 @@ void autonomous_many_cones() {
 
   // pick up and stack the second to fourth cones
   for (int i = 0; i < 3; i++) {
-  }
-  // gyroTurn(-170, GYRO_TURN_SPEED_MIN_FAST);
-}
 
-void autonomous() {
-  init_slew();
-  autonomous_many_cones();
+    printf("%d \n", i);
+  }
+//  autonomous_many_cones();
   return;
 
   drive_back_to_scoring_zone();
