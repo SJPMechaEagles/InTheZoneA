@@ -95,8 +95,6 @@ void drive_back_to_scoring_zone() {
   set_side_speed(BOTH, 0);
 }
 
-void test(int time) { printf("Test %d\n", time); }
-
 /*
  * Runs the user autonomous code. This function will be started in its own task
  * with the default priority and stack size whenever the robot is enabled via
@@ -122,11 +120,11 @@ void test(int time) { printf("Test %d\n", time); }
  * turn around, finally drop mobile goal in the 20 or 10 point zone.
  */
 void autonomous_many_cones() {
-  //Deploy (put down) mobile lifter and raise main lifter a bit
+  // Deploy (put down) mobile lifter and raise main lifter a bit
 
   // go forward until robot reaches the mobile goal
-  driveStraightDistance(2320,50, NULL);
-  //gyroTurn(-170, GYRO_TURN_SPEED_MIN_FAST);
+  driveStraightDistance(2320, 50, NULL);
+  // gyroTurn(-170, GYRO_TURN_SPEED_MIN_FAST);
   // pick up mobile goal and drop preload cone
 
   // pick up and stack the second to fourth cones

@@ -71,7 +71,6 @@ menu_t *init_menu_var(enum menu_type type, int *returnValue, const char *prompt,
   va_start(ap, nums);
   for (int i = 0; i < nums; i++) {
     options_array[i] = (char *)va_arg(ap, char *);
-    printf("%s\n", options_array[i]);
   }
   va_end(ap);
   menu->options = options_array;
@@ -128,7 +127,6 @@ static void calculate_current_display(char *rtn, menu_t *menu) {
   if (menu->type == STRING_TYPE) {
     int index = menu->current % menu->length;
     sprintf(rtn, "%s", menu->options[index]);
-    printf("%s\n", rtn);
     return;
   }
   if (menu->type == INT_TYPE) {
@@ -194,7 +192,6 @@ void start_menu() {
  **/
 void display_menu(menu_t *menu) {
   lcd_print(TOP_ROW, menu->prompt);
-  printf("printed prompt\n");
   // Will exit if teleop or autonomous begin. This is extremely important if
   // robot disconnects or resets.
   char val[16];
@@ -207,14 +204,10 @@ void display_menu(menu_t *menu) {
     if (buttonIsNewPress(LCD_LEFT)) {
       menu->current -= 1;
     }
-    printf("%s\n", val);
-    printf("%d\n", menu->current);
     lcd_print(1, menu->prompt);
     lcd_print(2, val);
     delay(20);
   }
-  printf("%d\n", menu->current);
-  printf("return\n");
   lcd_clear();
   lcd_print(1, "Selected:");
   lcd_print(2, val);

@@ -21,11 +21,17 @@ static int lifter_ultra_med(int tests[], int len) {
   return med;
 }
 
+<<<<<<< HEAD
 bool main_lifter_should_exit_autostack(int tests, int min_bad,
                                        const unsigned long delay_time,
                                        int max_val) {
   int testVals[10];
   for (unsigned int tests = 0; tests < 10; tests++) {
+=======
+bool main_lifter_should_exit_autostack(int tests_num) {
+  int testVals[tests_num];
+  for (unsigned int tests = 0; tests < tests_num; tests++) {
+>>>>>>> autostack2
     unsigned int ultrasonic_value = ultrasonicGet(lifter_ultrasonic);
     if (ultrasonic_value == ULTRA_BAD_RESPONSE) {
       tests--;
@@ -33,11 +39,16 @@ bool main_lifter_should_exit_autostack(int tests, int min_bad,
     }
     testVals[tests] = ultrasonic_value;
   }
+<<<<<<< HEAD
   int median = lifter_ultra_med(testVals, 10);
   printf("Median: %d\n", median);
   return abs(median - 16) < 2;
+=======
+  int median = lifter_ultra_med(testVals, tests_num);
+  printf("Median: %d\n", median);
+  return abs(median - 19) < 5;
+>>>>>>> autostack2
 }
-
 /**
  * @brief interupts an autostack routine.
  * @param param the task the interrupt is running on.
@@ -73,7 +84,7 @@ void autostack_routine(void *param) {
       return;
     }
     delay(50);
-  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 3500);
+  } while (analogRead(SECONDARY_LIFTER_POT_PORT) > 3900);
   set_secondary_lifter_motors(0);
   const int target = 3550;
   for (;;) {
@@ -82,28 +93,10 @@ void autostack_routine(void *param) {
       quit_auto_static();
       return;
     }
-
-    int current = analogRead(SECONDARY_LIFTER_POT_PORT);
-    int p = SECONDARY_LIFTER_P * (target - current);
-    set_secondary_lifter_motors(p);
-    // In theory should reduce the likelyhood of stopping early becauce
-    // of this test to 0.004604969% assuming a .2 chance of each
-    // reading failing and that the events are independent.
-    // We should expect a early lift every 21,715 test, or at 24 tests per
-    // lift a failed lift every 905 attempts
-    // First arg: total tests
-    // Sec arg: number that are bad_responses aka -1
-    // Third arg: Delay between reading
-    // Forth Arg: Minimum distance before exiting of the median value
-    if (main_lifter_should_exit_autostack(15, 13, 6, 20)) {
+    if (main_lifter_should_exit_autostack(3)) {
       break;
     }
   }
-  if (lifter_autostack_routine_interupt) {
-    quit_auto_static();
-    return;
-  }
-  // Reached top
   set_main_lifter_motors(0);
   set_secondary_lifter_motors(0);
   unsigned const long start = millis();
@@ -118,6 +111,10 @@ void autostack_routine(void *param) {
     delay(10);
     time = millis();
   } while (((time - start) / 1000.0) < 1);
+
+  lower_main_lifter();
+  delay(200);
+  set_main_lifter_motors(0);
 
   // at top
   set_secondary_lifter_motors(0);
@@ -160,6 +157,7 @@ void autostack_routine(void *param) {
  * @date 1/6/2018
  **/
 void set_secondary_lifter_motors(const int v) {
+  printf("%d\n", v);
   set_motor_immediate(MOTOR_SECONDARY_LIFTER, v);
 }
 
@@ -284,20 +282,12 @@ static void secondary_lifter_update() {
   second_motor_speed = 0;
   if (joystickGetDigital(SECONDARY_LIFTER_DOWN)) {
     second_motor_speed = MIN_SPEED;
-    count = 0;
-    second_i = 0;
-    second_target = analogRead(SECONDARY_LIFTER_POT_PORT);
     claw_grab_cone();
   } else if (joystickGetDigital(SECONDARY_LIFTER_UP)) {
     second_motor_speed = MAX_SPEED;
-    count = 0;
-    second_i = 0;
-    second_target =
-        second_target > 3000 ? 4095 : analogRead(SECONDARY_LIFTER_POT_PORT);
   } else {
     second_target = second_target > 3000 ? 4095 : second_target;
   }
-  second_motor_speed = abs(second_motor_speed) < 20 ? 0 : second_motor_speed;
   set_secondary_lifter_motors(second_motor_speed);
 }
 
