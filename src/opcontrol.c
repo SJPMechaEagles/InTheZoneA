@@ -48,6 +48,16 @@ Ultrasonic lifter_ultrasonic;
  */
 
 void operatorControl() {
+  delay(1000);
+  for (int i = 1; i < 11; i++) {
+  }
+  while (true) {
+    printf("%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d", analogRead(8), analogRead(1),
+           analogRead(2), analogRead(3), analogRead(4), analogRead(5),
+           analogRead(6), analogRead(7));
+    delay(1000);
+  }
+  delay(10000000);
   buttonInit();
   init_routine();
   init_slew();

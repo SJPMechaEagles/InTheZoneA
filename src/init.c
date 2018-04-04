@@ -59,6 +59,7 @@ enum FIELD_COLOR start_color = COLOR_NOT_SET;
  * pre_auton() in other environments can be implemented in this task if desired.
  */
 void initialize() {
+  return;
   buttonInit();
   init_error(true, uart2);
   init_main_lcd(uart1);

@@ -45,12 +45,12 @@ void update_drive_motors() {
  **/
 void set_side_speed(const side_t side, const int speed) {
   if (side == RIGHT || side == BOTH) {
-    set_motor_slew(MOTOR_BACK_RIGHT, -speed);
-    set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
+    set_motor_immediate(MOTOR_BACK_RIGHT, -speed);
+    set_motor_immediate(MOTOR_FRONT_RIGHT, -speed);
   }
   if (side == LEFT || side == BOTH) {
-    set_motor_slew(MOTOR_BACK_LEFT, speed);
-    set_motor_slew(MOTOR_FRONT_LEFT, speed);
+    set_motor_immediate(MOTOR_BACK_LEFT, speed);
+    set_motor_immediate(MOTOR_FRONT_LEFT, speed);
   }
 }
 
