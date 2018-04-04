@@ -18,12 +18,6 @@
 #include "slew.h"
 Gyro gyro;
 
-static void zero_ime() {
-  return;
-  imeReset(MID_LEFT_DRIVE);
-  imeReset(MID_RIGHT_DRIVE);
-}
-
 static void setup_auton() {
   info("setup_auton");
   raise_main_lifter();
@@ -52,7 +46,6 @@ static void drive_towards_goal() {
 
     delay(20);
   }
-  zero_ime();
   set_side_speed(BOTH, 0);
 }
 

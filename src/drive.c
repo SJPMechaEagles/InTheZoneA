@@ -47,11 +47,9 @@ void set_side_speed(const side_t side, const int speed) {
   if (side == RIGHT || side == BOTH) {
     set_motor_slew(MOTOR_BACK_RIGHT, -speed);
     set_motor_slew(MOTOR_FRONT_RIGHT, -speed);
-    set_motor_slew(MOTOR_MIDDLE_RIGHT, -speed);
   }
   if (side == LEFT || side == BOTH) {
     set_motor_slew(MOTOR_BACK_LEFT, speed);
-    set_motor_slew(MOTOR_MIDDLE_LEFT, speed);
     set_motor_slew(MOTOR_FRONT_LEFT, speed);
   }
 }
@@ -67,11 +65,9 @@ void set_side_speed_no_slew(const side_t side, const int speed) {
   if (side == RIGHT || side == BOTH) {
     set_motor_immediate(MOTOR_BACK_RIGHT, -speed);
     set_motor_immediate(MOTOR_FRONT_RIGHT, -speed);
-    set_motor_immediate(MOTOR_MIDDLE_RIGHT, -speed);
   }
   if (side == LEFT || side == BOTH) {
     set_motor_immediate(MOTOR_BACK_LEFT, speed);
-    set_motor_immediate(MOTOR_MIDDLE_LEFT, speed);
     set_motor_immediate(MOTOR_FRONT_LEFT, speed);
   }
 }
@@ -128,7 +124,6 @@ void driveStraightDistance(float distance, int speed,
       rightSpeed += offset;
       leftSpeed -= offset;
     }
-    printf("%d\n", offset);
     set_side_speed_no_slew(RIGHT, rightSpeed);
     set_side_speed_no_slew(LEFT, leftSpeed);
     delay(10);

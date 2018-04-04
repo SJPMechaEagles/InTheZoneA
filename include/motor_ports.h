@@ -21,46 +21,37 @@
  * @author Christian Desimone
  * @date 9/7/2017
  **/
-#define MOTOR_FRONT_RIGHT 2
+#define MOTOR_FRONT_RIGHT 8
 
 /**
  * @brief Front left drive motor of robot base
  * @author Christian Desimone
  * @date 9/7/2017
  **/
-#define MOTOR_FRONT_LEFT 7
-
-/**
- * @brief Middle right drive motor of robot base
- * @author Christian Desimone
- * @date 9/7/2017
- **/
-#define MOTOR_MIDDLE_RIGHT 3
-
-/**
- * @brief Middle left drive motor of robot base
- * @date 9/7/2017
- * @author Christian Desimone
- **/
-#define MOTOR_MIDDLE_LEFT 6
+#define MOTOR_FRONT_LEFT 3
 
 /**
  * @brief Back right drive motor of robot base
  * @author Christian Desimone
  * @date 9/7/2017
  **/
-#define MOTOR_BACK_RIGHT 4
+#define MOTOR_BACK_RIGHT 9
 /**
  * @brief Back left drive motor of robot base
  * @author Christian Desimone
  * @date 9/7/2017
  **/
-#define MOTOR_BACK_LEFT 5
+#define MOTOR_BACK_LEFT 2
 
 /**
  * @brief Port for the main lifter
  */
-#define MOTOR_MAIN_LIFTER 9
+#define MOTOR_MAIN_LIFTER_RIGHT 6
+
+/**
+ * @brief Port for the main lifter
+ */
+#define MOTOR_MAIN_LIFTER_LEFT 5
 
 /**
  * @brief The port for the roller claw
@@ -70,11 +61,16 @@
 /**
  * @brief Port for the secondary lifter
  */
-#define MOTOR_SECONDARY_LIFTER 1
+#define MOTOR_SECONDARY_LIFTER_RIGHT 7
+
+/**
+ * @brief Port for the secondary lifter
+ */
+#define MOTOR_SECONDARY_LIFTER_LEFT 4
 
 /**
  * @brief Port for the main lifter
  */
-#define MOBILE_INTAKE_MOTOR 8
+#define MOBILE_INTAKE_MOTOR 1
 
 #endif

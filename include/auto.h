@@ -17,22 +17,28 @@
 enum FIELD_COLOR{ COLOR_NOT_SET = -1, RED = 0, BLUE = 1 };
 enum FIELD_SIDE { SIDE_NOT_SET = -1, DRIVER_SIDE = 0, NOT_DRIVER_SIDE = 1 };
 
-/**
- * @brief Front left motor integrated motor encoder
- **/
-#define FRONT_LEFT_IME 0
 
 #define ROTATION_SPEED 60
 
 /**
  * @brief Middle left motor integrated motor encoder
  **/
-#define MID_LEFT_DRIVE 0
+#define FRONT_RIGHT_IME 0
 
 /**
  * @brief Middle right motor integrated motor encoder
  **/
-#define MID_RIGHT_DRIVE 1
+#define FRONT_LEFT_IME 1
+
+/**
+ * @brief  right motor integrated motor encoder
+ **/
+#define BACK_LEFT_IME 2
+
+/**
+ * @brief Middle right motor integrated motor encoder
+ **/
+#define BACK_RIGHT_IME 3
 
 /**
  * @brief First Stop position for stationary autonomous

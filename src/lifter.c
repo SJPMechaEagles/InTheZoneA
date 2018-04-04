@@ -21,17 +21,9 @@ static int lifter_ultra_med(int tests[], int len) {
   return med;
 }
 
-<<<<<<< HEAD
-bool main_lifter_should_exit_autostack(int tests, int min_bad,
-                                       const unsigned long delay_time,
-                                       int max_val) {
-  int testVals[10];
-  for (unsigned int tests = 0; tests < 10; tests++) {
-=======
 bool main_lifter_should_exit_autostack(int tests_num) {
   int testVals[tests_num];
   for (unsigned int tests = 0; tests < tests_num; tests++) {
->>>>>>> autostack2
     unsigned int ultrasonic_value = ultrasonicGet(lifter_ultrasonic);
     if (ultrasonic_value == ULTRA_BAD_RESPONSE) {
       tests--;
@@ -39,15 +31,9 @@ bool main_lifter_should_exit_autostack(int tests_num) {
     }
     testVals[tests] = ultrasonic_value;
   }
-<<<<<<< HEAD
-  int median = lifter_ultra_med(testVals, 10);
-  printf("Median: %d\n", median);
-  return abs(median - 16) < 2;
-=======
   int median = lifter_ultra_med(testVals, tests_num);
   printf("Median: %d\n", median);
   return abs(median - 19) < 5;
->>>>>>> autostack2
 }
 /**
  * @brief interupts an autostack routine.
@@ -158,7 +144,8 @@ void autostack_routine(void *param) {
  **/
 void set_secondary_lifter_motors(const int v) {
   printf("%d\n", v);
-  set_motor_immediate(MOTOR_SECONDARY_LIFTER, v);
+  set_motor_immediate(MOTOR_SECONDARY_LIFTER_LEFT, -v);
+  set_motor_immediate(MOTOR_SECONDARY_LIFTER_RIGHT, v);
 }
 
 /**
@@ -170,7 +157,8 @@ void set_secondary_lifter_motors(const int v) {
  * @date 9/9/2017
  **/
 void set_main_lifter_motors(const int v) {
-  set_motor_immediate(MOTOR_MAIN_LIFTER, v);
+  set_motor_immediate(MOTOR_MAIN_LIFTER_LEFT, v);
+  set_motor_immediate(MOTOR_MAIN_LIFTER_RIGHT, v);
 }
 
 /**

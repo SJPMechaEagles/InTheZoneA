@@ -7,36 +7,44 @@
 
 static bool encoders_initialized = false;
 
+void zero_imes() {
+  for (int i = 0; i < IME_NUMBER; i++) {
+    imeReset(i);
+  }
+}
+
 int ime_get_right_dist() {
   int front = 0;
   int back = 0;
-  // TODO change for new robot
-  front = get_encoder_ticks(MID_RIGHT_DRIVE);
-  return front;
+  // TODO change for new robo
+  front = get_encoder_ticks(FRONT_RIGHT_IME);
+  back = get_encoder_ticks(BACK_RIGHT_IME);
+  return (front + back) / 2;
 }
 
 int ime_get_left_dist() {
   int front = 0;
   int back = 0;
   // TODO change for new robot
-  front = get_encoder_ticks(MID_LEFT_DRIVE);
-  return front;
+  front = get_encoder_ticks(FRONT_LEFT_IME);
+  back = get_encoder_ticks(BACK_LEFT_IME);
+  return (front + back) / 2;
 }
 
 int ime_get_right_vel() {
   int front = 0;
   int back = 0;
-  // TODO change for new robot
-  front = get_encoder_velocity(MID_RIGHT_DRIVE);
-  return front;
+  front = get_encoder_velocity(FRONT_RIGHT_IME);
+  back = get_encoder_velocity(BACK_RIGHT_IME);
+  return (front + back) / 2;
 }
 
 int ime_get_left_vel() {
   int front = 0;
   int back = 0;
-  // TODO change for new robot
-  front = get_encoder_velocity(MID_LEFT_DRIVE);
-  return front;
+  front = get_encoder_velocity(FRONT_LEFT_IME);
+  back = get_encoder_velocity(BACK_LEFT_IME);
+  return (front + back) / 2;
 }
 
 /**
