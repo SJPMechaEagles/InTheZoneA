@@ -4,11 +4,24 @@ static bool hold = false;
 void set_intake_motor(int n) { set_motor_immediate(MOBILE_INTAKE_MOTOR, n); }
 
 extern void lower_intake();
-void inline lower_intake() { set_intake_motor(-100); }
+void inline lower_intake() { set_intake_motor(100); }
 
 extern void raise_intake();
-void inline raise_intake() { set_intake_motor(100); }
+void inline raise_intake() { set_intake_motor(-100); }
 
+void mobile_goal_down_pot() {
+  lower_intake();
+  for (; analogRead(MOBILE_GOAL_POT_PORT) < MOBILE_GOAL_DOWN; delay(10)) {
+  }
+  set_intake_motor(0);
+}
+
+void mobile_goal_up_pot() {
+  raise_intake();
+  for (; analogRead(MOBILE_GOAL_POT_PORT) > MOBILE_GOAL_UP; delay(10)) {
+  }
+  set_intake_motor(0);
+}
 /**
  * @brief updates the mobile goal intake in teleop.
  */

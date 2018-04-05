@@ -143,7 +143,6 @@ void autostack_routine(void *param) {
  * @date 1/6/2018
  **/
 void set_secondary_lifter_motors(const int v) {
-  printf("%d\n", v);
   set_motor_immediate(MOTOR_SECONDARY_LIFTER_LEFT, -v);
   set_motor_immediate(MOTOR_SECONDARY_LIFTER_RIGHT, v);
 }
@@ -205,9 +204,6 @@ void lower_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
 static bool secondary_override = false;
 
 static void main_lifter_update() {
-  if (lifter_autostack_running) {
-    return;
-  }
   static int count = 0;
   static bool pid_on = false;
   static int main_target = 0;

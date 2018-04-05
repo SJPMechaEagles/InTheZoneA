@@ -127,8 +127,14 @@ void autonomous_many_cones() {
 
 void autonomous() {
   init_slew();
+  for (;;) {
+    printf("POT: %d\n", analogRead(MOBILE_GOAL_POT_PORT));
+    mobile_goal_down_pot();
+    delay(1000);
+    mobile_goal_up_pot();
+    delay(1000);
+  }
   driveStraightDistance(60, 100, NULL);
-  return;
   lower_secondary_lifter();
   delay(400);
   raise_secondary_lifter();
