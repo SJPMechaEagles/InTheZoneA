@@ -94,8 +94,13 @@ static float ticksToDistance(int ticks) {
   return rotations * 2 * M_PI * 2.00;
 }
 
-void driveStraightDistance(float distance, int speed,
-                           void (*functionPtr)(int)) {
+void driveStraightDistance(float distance, int speed, void (*functionPtr)(int),
+                           void (*start_function)(void *)) {
+  TaskHandle task;
+  if (start_function != NULL) {
+    task = taskCreate(start_function, TASK_DEFAULT_STACK_SIZE, NULL,
+                      TASK_PRIORITY_DEFAULT);
+  }
   distance *= .97;
   int start_right = (ime_get_right_dist());
   int start_left = (ime_get_left_dist());
@@ -128,5 +133,8 @@ void driveStraightDistance(float distance, int speed,
     set_side_speed_no_slew(LEFT, leftSpeed);
     delay(10);
   } while (distanceTraveled < distance);
+  if (start_function != NULL) {
+    taskDelete(task);
+  }
   set_side_speed(BOTH, 0);
 }

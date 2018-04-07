@@ -10,9 +10,9 @@
 #define MOBILE_GOAL_POT_PORT 1
 
 
-void mobile_goal_down_pot();
+void mobile_goal_down_pot(void *param);
 
-void mobile_goal_up_pot();
+void mobile_goal_up_pot(void *param);
 
 
 /**

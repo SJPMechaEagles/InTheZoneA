@@ -116,7 +116,7 @@ void autonomous_many_cones() {
   // Deploy (put down) mobile lifter and raise main lifter a bit
 
   // go forward until robot reaches the mobile goal
-  driveStraightDistance(2320, 50, NULL);
+  driveStraightDistance(2320, 50, NULL, &mobile_goal_down_pot);
   // gyroTurn(-170, GYRO_TURN_SPEED_MIN_FAST);
   // pick up mobile goal and drop preload cone
 
@@ -127,28 +127,12 @@ void autonomous_many_cones() {
 
 void autonomous() {
   init_slew();
-  for (;;) {
-    printf("POT: %d\n", analogRead(MOBILE_GOAL_POT_PORT));
-    mobile_goal_down_pot();
-    delay(1000);
-    mobile_goal_up_pot();
-    delay(1000);
-  }
-  driveStraightDistance(60, 100, NULL);
-  lower_secondary_lifter();
-  delay(400);
   raise_secondary_lifter();
+  raise_main_lifter();
   delay(400);
   set_secondary_lifter_motors(0);
-
-  info("Autonomous");
-  init_slew();
-  setup_auton();
-  drive_towards_goal();
-
-  pick_up_mobile_goal();
-
-  claw_release_cone();
+  set_main_lifter_motors(0);
+  driveStraightDistance(60, 50, NULL, &mobile_goal_down_pot);
 
   delay(500);
   set_claw_motor(0);

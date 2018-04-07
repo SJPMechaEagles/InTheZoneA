@@ -9,14 +9,14 @@ void inline lower_intake() { set_intake_motor(100); }
 extern void raise_intake();
 void inline raise_intake() { set_intake_motor(-100); }
 
-void mobile_goal_down_pot() {
+void mobile_goal_down_pot(void *param) {
   lower_intake();
   for (; analogRead(MOBILE_GOAL_POT_PORT) < MOBILE_GOAL_DOWN; delay(10)) {
   }
   set_intake_motor(0);
 }
 
-void mobile_goal_up_pot() {
+void mobile_goal_up_pot(void *param) {
   raise_intake();
   for (; analogRead(MOBILE_GOAL_POT_PORT) > MOBILE_GOAL_UP; delay(10)) {
   }
