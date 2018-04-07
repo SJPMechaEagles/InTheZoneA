@@ -127,19 +127,17 @@ void autonomous_many_cones() {
 
 void autonomous() {
   init_slew();
-  raise_secondary_lifter();
-  raise_main_lifter();
-  delay(400);
+  delay(5000);
+  // raise_secondary_lifter();
+  // raise_main_lifter();
+  // delay(500);
   set_secondary_lifter_motors(0);
   set_main_lifter_motors(0);
-  mobile_goal_down_pot(NULL);
-  set_intake_motor(10);
-  driveStraightDistance(10, 120, NULL, NULL);
-  set_intake_motor(0);
+  // mobile_goal_down_pot();
+  delay(100);
+  driveStraightDistance(14, 100, NULL, NULL);
   delay(500);
-  set_claw_motor(0);
-
-  turn(-150);
+  return;
 
   drive_back_to_scoring_zone();
 

@@ -105,8 +105,7 @@ void driveStraightDistance(float distance, int speed, void (*functionPtr)(int),
   int start_right = (ime_get_right_dist());
   int start_left = (ime_get_left_dist());
   unsigned long start_time = millis();
-  float distanceTraveled =
-      ticksToDistance((abs(start_left) + abs(start_right)) / 2.00);
+  float distanceTraveled = 0;
   long integral = 0;
   int last = 0;
   float rightSpeed = speed;
@@ -126,8 +125,8 @@ void driveStraightDistance(float distance, int speed, void (*functionPtr)(int),
       rightSpeed = abs(rightSpeed * .92) < 40 ? rightSpeed : rightSpeed * .92;
       leftSpeed = abs(leftSpeed * .92) < 40 ? leftSpeed : leftSpeed * .92;
     } else {
-      rightSpeed += offset;
-      leftSpeed -= offset;
+      // rightSpeed += offset;
+      // leftSpeed -= offset;
     }
     set_side_speed_no_slew(RIGHT, rightSpeed);
     set_side_speed_no_slew(LEFT, leftSpeed);
