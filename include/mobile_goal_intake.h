@@ -31,11 +31,11 @@ void set_intake_motor(int n);
 /**
  * @brief raises the intake
  **/
-void inline raise_intake();
+void raise_intake();
 
 /**
  * @brief lowers the intake
  **/
-void inline lower_intake();
+void lower_intake();
 
 #endif

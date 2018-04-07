@@ -3,18 +3,19 @@
 static bool hold = false;
 void set_intake_motor(int n) { set_motor_immediate(MOBILE_INTAKE_MOTOR, n); }
 
-extern void lower_intake();
-void inline lower_intake() { set_intake_motor(120); }
+void lower_intake() { set_intake_motor(80); }
 
-extern void raise_intake();
-void inline raise_intake() { set_intake_motor(-120); }
+void raise_intake() { set_intake_motor(-80); }
 
 void mobile_goal_down_pot() {
   lower_intake();
+  printf("m1");
   while (analogRead(MOBILE_GOAL_POT_PORT) < MOBILE_GOAL_DOWN) {
-    delay(15);
+    delay(50);
   }
+  printf("m2");
   set_intake_motor(0);
+  printf("m3");
 }
 
 void mobile_goal_up_pot() {
