@@ -3,6 +3,8 @@
 
 MAKE_COMMAND=make
 
+CXXFLAGS+=-g
+
 # Makefile for IFI VeX Cortex Microcontroller (STM32F103VD series)
 DEVICE=VexCortex
 # Libraries to include in the link (use -L and -l) e.g. -lm, -lmyLib
