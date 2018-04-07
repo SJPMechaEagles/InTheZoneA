@@ -60,7 +60,7 @@ enum FIELD_COLOR start_color = COLOR_NOT_SET;
  */
 void initialize() {
   buttonInit();
-  return;
+  init_encoders();
   init_error(true, uart2);
   init_main_lcd(uart1);
   info("Boot");

@@ -132,8 +132,10 @@ void autonomous() {
   delay(400);
   set_secondary_lifter_motors(0);
   set_main_lifter_motors(0);
-  driveStraightDistance(60, 50, NULL, &mobile_goal_down_pot);
-
+  mobile_goal_down_pot(NULL);
+  set_intake_motor(10);
+  driveStraightDistance(10, 120, NULL, NULL);
+  set_intake_motor(0);
   delay(500);
   set_claw_motor(0);
 

@@ -6,7 +6,7 @@
 #include "slew.h"
 
 #define MOBILE_GOAL_UP 1218
-#define MOBILE_GOAL_DOWN 4000
+#define MOBILE_GOAL_DOWN 4020
 #define MOBILE_GOAL_POT_PORT 1
 
 
