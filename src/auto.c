@@ -138,7 +138,7 @@ void autonomous() {
   printf("4");
   set_main_lifter_motors(0);
   printf("5");
-  // mobile_goal_down_pot();
+  mobile_goal_down_pot();
   delay(100);
   printf("6");
   driveStraightDistance(14, 100, NULL, NULL);
