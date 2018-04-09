@@ -23,22 +23,22 @@ enum FIELD_SIDE { SIDE_NOT_SET = -1, DRIVER_SIDE = 0, NOT_DRIVER_SIDE = 1 };
 /**
  * @brief Middle left motor integrated motor encoder
  **/
-#define FRONT_RIGHT_IME 0
+#define FRONT_RIGHT_IME 3
 
 /**
  * @brief Middle right motor integrated motor encoder
  **/
-#define FRONT_LEFT_IME 1
+#define FRONT_LEFT_IME 2
 
 /**
  * @brief  right motor integrated motor encoder
  **/
-#define BACK_LEFT_IME 2
+#define BACK_LEFT_IME 1
 
 /**
  * @brief Middle right motor integrated motor encoder
  **/
-#define BACK_RIGHT_IME 3
+#define BACK_RIGHT_IME 0
 
 /**
  * @brief First Stop position for stationary autonomous

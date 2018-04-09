@@ -11,6 +11,7 @@ void mobile_goal_down_pot() {
   lower_intake();
   printf("m1");
   while (analogRead(MOBILE_GOAL_POT_PORT) < MOBILE_GOAL_DOWN) {
+    printf("%d\n", analogRead(MOBILE_GOAL_POT_PORT));
     delay(50);
   }
   printf("m2");
