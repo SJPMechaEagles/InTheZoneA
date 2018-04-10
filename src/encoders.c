@@ -13,6 +13,18 @@ void zero_imes() {
   }
 }
 
+int img_get_average(bool multi) {
+  //use the first connected encoder
+  int avg = 0;
+  if (multi) {
+    avg = (get_encoder_ticks(BACK_RIGHT_IME) + get_encoder_ticks(FRONT_RIGHT_IME) + get_encoder_ticks(FRONT_LEFT_IME)
+      + get_encoder_ticks(FRONT_RIGHT_IME)) / 4;
+  } else {
+    avg = get_encoder_ticks(BACK_RIGHT_IME);
+  }
+  return avg;
+}
+
 int ime_get_right_dist() {
   int front = 0;
   int back = 0;
@@ -61,6 +73,10 @@ bool init_encoders() {
     error("Wrong Number of IMEs Connected");
     return false;
   }
+  imeReset(0);
+  imeReset(1);
+  imeReset(2);
+  imeReset(3);
   return true;
 #else
   return imeInitializeAll();

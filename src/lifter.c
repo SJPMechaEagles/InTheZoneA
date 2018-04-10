@@ -186,6 +186,31 @@ void raise_main_lifter() { set_main_lifter_motors(MAX_SPEED); }
 void lower_main_lifter() { set_main_lifter_motors(MIN_SPEED); }
 
 /**
+ * @brief Raises or lowers the main lifter to a until a set
+ * height (potentiometer tick)
+ *
+ * @author Fred Lu
+ * @date 4/10/2018
+ **/
+void move_main_lifter_to(int targetTick) {
+  bool direction = 1; //raises lifter by default
+  if (getLifterTicks() >= targetTick) {
+    //sets the direction to lowering the lifter if lifter is higher than desired height
+    direction = 0;
+  }
+  int initialTick = getLifterTicks();
+  int targetDifference = abs(targetTick - initialTick);
+  while(abs(getLifterTicks() - initialTick) < targetDifference) {
+    if(direction) {
+      set_main_lifter_motors(MAX_SPEED);
+    } else {
+      set_main_lifter_motors(MIN_SPEED);
+    }
+  }
+  set_main_lifter_motors(0);
+}
+
+/**
  * @brief Raises the main lifter
  *
  * @author Christian DeSimone
@@ -200,6 +225,17 @@ void raise_secondary_lifter() { set_secondary_lifter_motors(MAX_SPEED); }
  * @date 9/12/2017
  **/
 void lower_secondary_lifter() { set_secondary_lifter_motors(MIN_SPEED); }
+
+/**
+ * @brief Raises or lowers the secondary lifter to a until a set
+ * height (potentiometer tick)
+ *
+ * @author Fred Lu
+ * @date 4/10/2018
+ **/
+void move_secondary_lifter_to(int tick) {
+
+}
 
 static bool secondary_override = false;
 

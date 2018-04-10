@@ -102,8 +102,7 @@ void driveStraightDistance(float distance, int speed, void (*functionPtr)(int),
                       TASK_PRIORITY_DEFAULT);
   }
   distance *= .97;
-  int start_right = (ime_get_right_dist());
-  int start_left = (ime_get_left_dist());
+  int start_avg = img_get_average(false);
   unsigned long start_time = millis();
   float distanceTraveled = 0;
   long integral = 0;
@@ -112,9 +111,7 @@ void driveStraightDistance(float distance, int speed, void (*functionPtr)(int),
   float leftSpeed = speed;
   do {
     distanceTraveled =
-        ticksToDistance((abs(ime_get_right_dist() - start_right) +
-                         abs(ime_get_left_dist() - start_left)) /
-                        2.00);
+        ticksToDistance(img_get_average(false) - start_avg);
     if (functionPtr != NULL)
       functionPtr(distanceTraveled);
     printf("%f\n", distanceTraveled);

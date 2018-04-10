@@ -58,8 +58,6 @@ void operatorControl() {
     update_intake();
     update_lifter();
     update_drive_motors();
-    printf("LEFT: %d\n", ime_get_left_dist());
-    printf("RIGHT: %d\n", ime_get_right_dist());
     delay(20);
   }
 }

@@ -168,6 +168,15 @@ void raise_main_lifter();
 void lower_main_lifter();
 
 /**
+ * @brief Raises or lowers the main lifter to a until a set
+ * height (potentiometer tick)
+ *
+ * @author Fred Lu
+ * @date 4/10/2018
+ **/
+void move_main_lifter_to(int targetTick);
+
+/**
  * @brief Raises the main lifter
  *
  * @author Christian DeSimone
@@ -182,6 +191,15 @@ void raise_secondary_lifter();
  * @date 9/12/2017
  **/
 void lower_secondary_lifter();
+
+/**
+ * @brief Raises or lowers the secondary lifter to a until a set
+ * height (potentiometer tick)
+ *
+ * @author Fred Lu
+ * @date 4/10/2018
+ **/
+void move_secondary_lifter_to(int targetTick);
 
 /**
  * @brief Updates the lifter in teleop.

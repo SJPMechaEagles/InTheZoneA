@@ -3,9 +3,9 @@
 static bool hold = false;
 void set_intake_motor(int n) { set_motor_immediate(MOBILE_INTAKE_MOTOR, n); }
 
-void lower_intake() { set_intake_motor(80); }
+void lower_intake() { set_intake_motor(120); }
 
-void raise_intake() { set_intake_motor(-80); }
+void raise_intake() { set_intake_motor(-120); }
 
 void mobile_goal_down_pot() {
   lower_intake();
