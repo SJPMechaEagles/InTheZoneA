@@ -141,7 +141,7 @@ void autonomous() {
   mobile_goal_down_pot();
   delay(100);
   printf("6");
-  driveStraightDistance(20, 100, NULL, NULL);
+  driveStraightDistance(20, 80, NULL, NULL);
   printf("7");
   delay(500);
   return;

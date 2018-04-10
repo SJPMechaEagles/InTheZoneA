@@ -108,6 +108,8 @@ void driveStraightDistance(float distance, int speed, void (*functionPtr)(int),
   float distanceTraveled = 0;
   long integral = 0;
   int last = 0;
+  float rightSpeed = speed;
+  float leftSpeed = speed;
   do {
     distanceTraveled =
         ticksToDistance((abs(ime_get_right_dist() - start_right) +
@@ -116,7 +118,19 @@ void driveStraightDistance(float distance, int speed, void (*functionPtr)(int),
     if (functionPtr != NULL)
       functionPtr(distanceTraveled);
     printf("%f\n", distanceTraveled);
-    set_side_speed_no_slew(BOTH, speed);
+    int error = abs(ime_get_left_vel()) - abs(ime_get_right_vel());
+    integral += error;
+    int derivative = error - last;
+    int offset = error * BASE_P + integral * BASE_I + derivative * BASE_D;
+    if (distance - distanceTraveled < 12) {
+      rightSpeed = abs(rightSpeed * .92) < 40 ? rightSpeed : rightSpeed * .92;
+      leftSpeed = abs(leftSpeed * .92) < 40 ? leftSpeed : leftSpeed * .92;
+    } else {
+      rightSpeed += offset;
+      leftSpeed -= offset;
+    }
+    set_side_speed_no_slew(RIGHT, rightSpeed);
+    set_side_speed_no_slew(LEFT, leftSpeed);
     delay(15);
   } while (distanceTraveled < distance);
   if (start_function != NULL) {

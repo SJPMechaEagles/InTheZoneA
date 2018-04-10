@@ -31,15 +31,10 @@ void mobile_goal_up_pot() {
 void update_intake() {
   if (joystickGetDigital(MASTER, 8, JOY_UP)) {
     raise_intake();
-    hold = true;
+
   } else if (joystickGetDigital(MASTER, 8, JOY_DOWN)) {
     lower_intake();
-    hold = false;
   } else {
-    if (hold) {
-      set_intake_motor(20);
-    } else {
-      set_intake_motor(0);
-    }
+    set_intake_motor(0);
   }
 }

@@ -24,8 +24,8 @@
 
 #define K (0.05)
 
-#define BASE_P .005
-#define BASE_D .0006
+#define BASE_P .0005
+#define BASE_D .00001
 #define BASE_I .0000004
 
 /**

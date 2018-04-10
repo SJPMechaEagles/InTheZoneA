@@ -17,15 +17,18 @@ int ime_get_right_dist() {
   int front = 0;
   int back = 0;
   // TODO change for new robo
-  back = get_encoder_ticks(FRONT_RIGHT_IME);
-  return back;
+  back = get_encoder_ticks(BACK_RIGHT_IME);
+  front = get_encoder_ticks(FRONT_RIGHT_IME);
+  return .5 * (front + back);
 }
 
 int ime_get_left_dist() {
   int back = 0;
+  int front = 0;
   // TODO change for new robot
   back = get_encoder_ticks(FRONT_LEFT_IME);
-  return back;
+  front = get_encoder_ticks(FRONT_RIGHT_IME);
+  return .5 * (front + back);
 }
 
 int ime_get_right_vel() {

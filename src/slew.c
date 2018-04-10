@@ -93,8 +93,9 @@ void set_motor_immediate(int motor, int speed) {
     init_slew();
   }
   motorSet(motor, speed);
-  mutexTake(speeds_mutex, 10);
-  motors_curr_speeds[motor - 1] = speed;
-  motors_set_speeds[motor - 1] = speed;
+  if (mutexTake(speeds_mutex, 50)) {
+    motors_curr_speeds[motor - 1] = speed;
+    motors_set_speeds[motor - 1] = speed;
+  }
   mutexGive(speeds_mutex);
 }
