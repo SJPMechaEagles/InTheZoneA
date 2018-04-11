@@ -13,7 +13,7 @@ void zero_imes() {
   }
 }
 
-int img_get_average(bool multi) {
+int ime_get_average(bool multi) {
   //use the first connected encoder
   int avg = 0;
   if (multi) {
@@ -70,6 +70,7 @@ bool init_encoders() {
   if (count != IME_NUMBER) {
     printf("detected only %d\n", count);
     error("Wrong Number of IMEs Connected");
+    imeReset(0);
     return false;
   }
   imeReset(0);

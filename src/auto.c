@@ -135,11 +135,15 @@ void autonomous() {
   delay(100);
   printf("5");
   // go forward until robot reaches the mobile goal
-  driveStraightDistance(20, 80, NULL, NULL);
+  set_side_speed(BOTH, 80);
+  delay(1150);
+  //driveDistance(800, 80, NULL, NULL);
+  set_side_speed(BOTH, 0);
   delay(500);
   printf("6");
   //drop the preload cone
   pick_up_mobile_goal();
+  //delay(500);
   lower_main_lifter();
   delay(500);
   claw_release_cone();
