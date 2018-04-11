@@ -17,8 +17,7 @@ int img_get_average(bool multi) {
   //use the first connected encoder
   int avg = 0;
   if (multi) {
-    avg = (get_encoder_ticks(BACK_RIGHT_IME) + get_encoder_ticks(FRONT_RIGHT_IME) + get_encoder_ticks(FRONT_LEFT_IME)
-      + get_encoder_ticks(FRONT_RIGHT_IME)) / 4;
+    avg = get_encoder_ticks(BACK_RIGHT_IME);
   } else {
     avg = get_encoder_ticks(BACK_RIGHT_IME);
   }

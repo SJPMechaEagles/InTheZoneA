@@ -94,6 +94,22 @@ static float ticksToDistance(int ticks) {
   return rotations * 2 * M_PI * 2.00;
 }
 
+void driveDistance(int distance, int speed, void (*functionPtr)(int),
+                           void (*start_function)(void *)) {
+  TaskHandle task;
+  if (start_function != NULL) {
+    task = taskCreate(start_function, TASK_DEFAULT_STACK_SIZE, NULL,
+                      TASK_PRIORITY_DEFAULT);
+  }
+  int initial = ime_get_average(false);
+
+  while(abs(ime_get_average(false) - initial) < distance){
+    set_side_speed(BOTH, speed);
+  }
+  set_side_speed(BOTH, 0);
+
+}
+
 void driveStraightDistance(float distance, int speed, void (*functionPtr)(int),
                            void (*start_function)(void *)) {
   TaskHandle task;
@@ -114,7 +130,7 @@ void driveStraightDistance(float distance, int speed, void (*functionPtr)(int),
         ticksToDistance(img_get_average(false) - start_avg);
     if (functionPtr != NULL)
       functionPtr(distanceTraveled);
-    printf("%f\n", distanceTraveled);
+    //printf("%f\n", distanceTraveled);
     int error = abs(ime_get_left_vel()) - abs(ime_get_right_vel());
     integral += error;
     int derivative = error - last;
