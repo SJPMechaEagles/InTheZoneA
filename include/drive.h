@@ -37,6 +37,9 @@
  **/
 typedef enum side { LEFT, BOTH, RIGHT } side_t;
 
+void driveDistance(int distance, int speed, void (*functionPtr)(int),
+                           void (*start_function)(void *));
+
 /**
  * @brief sets the speed of one side of the robot.
  * @author Christian Desimone

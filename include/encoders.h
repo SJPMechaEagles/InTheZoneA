@@ -45,7 +45,7 @@ int get_encoder_velocity(const unsigned char address);
  * @brief Gets the average of four encoders or the value of one encoder
  * @date 4/10/2017
  **/
-int img_get_average(bool multi);
+int ime_get_average(bool multi);
 
 int ime_get_right_dist();
 
