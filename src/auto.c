@@ -124,19 +124,22 @@ void autonomous() {
   delay(50);
   printf("2");
   // Deploy (put down) mobile lifter and raise main lifter a bit
-  raise_secondary_lifter();
+  lower_secondary_lifter();
   raise_main_lifter();
-  delay(500);
+  delay(300);
+  raise_secondary_lifter();
+  delay(200);
   printf("3");
-  set_secondary_lifter_motors(0);
   set_main_lifter_motors(0);
+  delay(100);
+  set_secondary_lifter_motors(0);
   printf("4");
   mobile_goal_down_pot();
   delay(100);
   printf("5");
   // go forward until robot reaches the mobile goal
   set_side_speed(BOTH, 80);
-  delay(1150);
+  delay(1600);
   //driveDistance(800, 80, NULL, NULL);
   set_side_speed(BOTH, 0);
   delay(500);
@@ -146,8 +149,38 @@ void autonomous() {
   //delay(500);
   lower_main_lifter();
   delay(500);
+  set_main_lifter_motors(0);
   claw_release_cone();
   delay(500);
+  raise_main_lifter();
+  delay(300);
+  set_main_lifter_motors(0);
+  set_side_speed(BOTH, 120);
+  delay(380);
+  set_side_speed(BOTH, 0);
+  lower_secondary_lifter();
+  claw_grab_cone();
+  delay(200);
+  lower_main_lifter();
+  delay(700);
+  set_main_lifter_motors(0);
+  printf("6a");
+  do {
+    raise_secondary_lifter();
+  } while( analogRead(SECONDARY_LIFTER_POT_PORT) < 1300);
+  set_secondary_lifter_motors(0);
+  printf("6b");
+  raise_main_lifter();
+  delay(500);
+  set_main_lifter_motors(0);
+  raise_secondary_lifter();
+  delay(300);
+  set_secondary_lifter_motors(0);
+  lower_main_lifter();
+  delay(200);
+  set_main_lifter_motors(0);
+  claw_release_cone();
+
   //move_main_lifter_to();
   printf("7");
 
