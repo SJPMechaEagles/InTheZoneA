@@ -14,6 +14,8 @@
  */
 #define GYRO_PORT 4
 
+int get_gyro();
+
 /**
  * Special Gyro multiplier for tuning in Gyro
  * @todo

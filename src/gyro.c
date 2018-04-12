@@ -23,6 +23,10 @@ float get_main_gyro_angluar_velocity() {
   return 0;
 }
 
+int get_gyro(){
+  return gyroGet(main_gyro);
+}
+
 void gyroTurn(int degrees, int minPower, int defaultSpeed) {
   int direction;
   // postive direction means turning right (posiive degrees)

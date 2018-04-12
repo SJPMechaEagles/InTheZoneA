@@ -67,6 +67,10 @@ void initialize() {
   info("Boot");
   info("Gyro Calibrate");
   init_main_gyro();
+  for(;;){
+    printf("%d\n", get_gyro());
+    delay(50);
+  }
   setTeamName("9228A");
   lifter_ultrasonic = ultrasonicInit(4, 5);
   delay(5000);
