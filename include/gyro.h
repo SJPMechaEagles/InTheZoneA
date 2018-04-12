@@ -12,7 +12,7 @@
 /**
  * @brief Port the Gyroscope plugs into.
  */
-#define GYRO_PORT 3
+#define GYRO_PORT 4
 
 /**
  * Special Gyro multiplier for tuning in Gyro
