@@ -17,7 +17,11 @@ int ime_get_average(bool multi) {
   //use the first connected encoder
   int avg = 0;
   if (multi) {
+<<<<<<< HEAD
     avg = get_encoder_ticks(BACK_RIGHT_IME);
+=======
+    avg = (abs(ime_get_right_dist()) + abs(ime_get_left_dist())) / 2;
+>>>>>>> 10974d8bed7b7a44a78bec99d9be52b19de59e8b
   } else {
     avg = get_encoder_ticks(BACK_RIGHT_IME);
   }
@@ -30,7 +34,7 @@ int ime_get_right_dist() {
   // TODO change for new robo
   back = get_encoder_ticks(BACK_RIGHT_IME);
   front = get_encoder_ticks(FRONT_RIGHT_IME);
-  return .5 * (front + back);
+  return (int) (.5 * (front + back));
 }
 
 int ime_get_left_dist() {
@@ -39,7 +43,7 @@ int ime_get_left_dist() {
   // TODO change for new robot
   back = get_encoder_ticks(FRONT_LEFT_IME);
   front = get_encoder_ticks(FRONT_RIGHT_IME);
-  return .5 * (front + back);
+  return (int)(.5 * (front + back));
 }
 
 int ime_get_right_vel() {

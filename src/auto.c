@@ -139,7 +139,11 @@ void autonomous() {
   printf("5");
   // go forward until robot reaches the mobile goal
   set_side_speed(BOTH, 80);
+<<<<<<< HEAD
   delay(1600);
+=======
+  delay(1150);
+>>>>>>> 10974d8bed7b7a44a78bec99d9be52b19de59e8b
   //driveDistance(800, 80, NULL, NULL);
   set_side_speed(BOTH, 0);
   delay(500);
