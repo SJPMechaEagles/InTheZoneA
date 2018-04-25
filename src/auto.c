@@ -126,12 +126,12 @@ void autonomous() {
   // Deploy (put down) mobile lifter and raise main lifter a bit
   lower_secondary_lifter();
   raise_main_lifter();
-  delay(300);
+  delay(400);
   raise_secondary_lifter();
-  delay(200);
+  delay(100);
   printf("3");
   set_main_lifter_motors(0);
-  delay(100);
+  delay(300);
   set_secondary_lifter_motors(0);
   printf("4");
   mobile_goal_down_pot();
@@ -139,7 +139,7 @@ void autonomous() {
   printf("5");
   // go forward until robot reaches the mobile goal
   set_side_speed(BOTH, 80);
-  delay(1600);
+  delay(1800);
   //driveDistance(800, 80, NULL, NULL);
   set_side_speed(BOTH, 0);
   delay(500);
@@ -155,6 +155,7 @@ void autonomous() {
   raise_main_lifter();
   delay(300);
   set_main_lifter_motors(0);
+  return;
   set_side_speed(BOTH, 120);
   delay(380);
   set_side_speed(BOTH, 0);
