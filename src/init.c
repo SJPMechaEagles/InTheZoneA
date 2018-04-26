@@ -78,7 +78,9 @@ void initialize() {
                                     "Driver Side", "Not Driver Side");
   add_menu(color_menu);
   add_menu(side_menu);
+  info("start menu");
   start_menu();
+  delay(1000);
   setTeamName("9228A");
   info("Ready to run");
 }

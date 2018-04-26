@@ -12,7 +12,7 @@
 /**
  * @brief Port the Gyroscope plugs into.
  */
-#define GYRO_PORT 4
+#define GYRO_PORT 3
 
 int get_gyro();
 
