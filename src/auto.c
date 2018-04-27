@@ -122,40 +122,44 @@ void autonomous_many_cones() {
 
 void autonomous() {
   init_slew();
+  delay(850);
   int negate;
-  if (start_side == -1 || start_color == -1)
+  if (start_side == -1 || start_color == -1) {
     return;
+  }
+  //side: 0 means driver's
+  //color: 0 means red and 1 means blue
   if (start_side == 0 && start_color == 0) {
-    negate = -1;
+    negate = -1; //clockwise turn
   }
   if (start_side == 0 && start_color == 1) {
-    negate = -1;
+    negate = 1; //counterclockwise turn
   }
   if (start_side == 1 && start_color == 0) {
-    negate = 1;
+    negate = 1; //counterclockwise turn
   }
   if (start_side == 1 && start_color == 1) {
-    negate = 1;
+    negate = -1; //clockwise turn
   }
   printf("side: %d, color: %d\n", start_side, start_color);
   printf("1");
   delay(50);
   printf("2");
   set_claw_motor(MIN_CLAW_SPEED);
-  // Deploy (put down) mobile lifter and raise main lifter a bit
-  set_secondary_lifter_motors(MIN_SPEED);
+  // Deploy secondary lifter and raise main lifter a bit
+  set_secondary_lifter_motors(MIN_SPEED + 15);
   raise_main_lifter();
-  delay(200);
+  delay(400);
   set_main_lifter_motors(0);
-  delay(50);
   set_secondary_lifter_motors(MAX_SPEED / 2);
-  delay(100);
   printf("3");
-  delay(300);
+  delay(220);
+  set_secondary_lifter_motors(MAX_SPEED / 4);
+  delay(230);
   set_secondary_lifter_motors(0);
   printf("4");
   mobile_goal_down_pot();
-  set_claw_motor(0);
+  //set_claw_motor(0);
   delay(100);
   printf("5");
   // go forward until robot reaches the mobile goal
@@ -163,13 +167,11 @@ void autonomous() {
   delay(50);
   set_side_speed(BOTH, 80);
   delay(2000);
-  // driveDistance(800, 80, NULL, NULL);
   set_side_speed(BOTH, 0);
   delay(500);
   printf("6");
   // drop the preload cone
   pick_up_mobile_goal();
-  // delay(500);
   lower_main_lifter();
   delay(400);
   set_main_lifter_motors(0);
@@ -178,22 +180,29 @@ void autonomous() {
   raise_main_lifter();
   delay(300);
   set_main_lifter_motors(0);
-
+  set_claw_motor(0);
+  //go back, do the turn and drop off mobile goal
   set_side_speed(BOTH, -80);
-  delay(1300);
-  gyroTurn(-30 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
-  set_side_speed(BOTH, -80);
-  delay(200);
-  gyroTurn(-100 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
+  delay(1500);
+//  gyroTurn(-30 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
+  //set_side_speed(BOTH, -80);
+  //delay(200);
+  gyroTurn(-170 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
   set_side_speed(BOTH, 120);
   delay(500);
   set_side_speed(BOTH, 0);
   mobile_goal_down_pot();
+  //go backwards and set up for teleop
   set_side_speed(BOTH, -100);
-  delay(500);
+  delay(800);
   set_side_speed(BOTH, 0);
-  gyroTurn(-180 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
+  //gyroTurn(-180 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
+  raise_intake();
+  delay(500);
+  set_intake_motor(0);
   return;
+
+
   set_side_speed(BOTH, 120);
   delay(380);
   set_side_speed(BOTH, 0);
@@ -222,14 +231,6 @@ void autonomous() {
 
   // move_main_lifter_to();
   printf("7");
-
-  // pick up mobile goal and drop preload cone
-
-  // pick up and stack the second to fourth cones
-  for (int i = 0; i < 3; i++) {
-    printf("%d \n", i);
-  }
-  //  autonomous_many_cones();
   return;
 
   drive_back_to_scoring_zone();
