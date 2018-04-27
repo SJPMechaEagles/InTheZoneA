@@ -23,9 +23,7 @@ float get_main_gyro_angluar_velocity() {
   return 0;
 }
 
-int get_gyro(){
-  return gyroGet(main_gyro);
-}
+int get_gyro() { return gyroGet(main_gyro); }
 
 void gyroTurn(int degrees, int minPower, int defaultSpeed) {
   int direction;
@@ -55,8 +53,6 @@ void gyroTurn(int degrees, int minPower, int defaultSpeed) {
 
     wait(20);
   }
-  delay(500);
-  int error = (initial - gyroGet(main_gyro)) - abs(degrees);
   set_side_speed(BOTH, 0);
   return;
 }

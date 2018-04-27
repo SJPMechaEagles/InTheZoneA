@@ -209,8 +209,8 @@ void display_menu(menu_t *menu) {
     delay(20);
   }
   lcd_clear();
-  lcd_print(1, "Selected:");
-  lcd_print(2, val);
+  char buffer[16];
+  sprintf(buffer, "Sel: %s", val);
   delay(600);
   lcd_clear();
   if (menu->type == STRING_TYPE) {

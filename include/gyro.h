@@ -23,7 +23,7 @@ int get_gyro();
 #define GYRO_MULTIPLIER 196
 #define GYRO_TURN_SPEED_MAX 80
 #define GYRO_TURN_SPEED_MIN_NORMAL 33
-#define GYRO_TURN_SPEED_MIN_FAST 46
+#define GYRO_TURN_SPEED_MIN_FAST 45
 
 /**
  * @brief Initializes the main robot gryoscope/

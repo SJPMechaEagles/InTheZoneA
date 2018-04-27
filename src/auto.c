@@ -141,12 +141,13 @@ void autonomous() {
   printf("1");
   delay(50);
   printf("2");
+  set_claw_motor(MIN_CLAW_SPEED);
   // Deploy (put down) mobile lifter and raise main lifter a bit
-  lower_secondary_lifter();
+  set_secondary_lifter_motors(MIN_SPEED);
   raise_main_lifter();
-  delay(400);
-  set_main_lifter_motors(0);
   delay(200);
+  set_main_lifter_motors(0);
+  delay(50);
   set_secondary_lifter_motors(MAX_SPEED / 2);
   delay(100);
   printf("3");
@@ -154,9 +155,12 @@ void autonomous() {
   set_secondary_lifter_motors(0);
   printf("4");
   mobile_goal_down_pot();
+  set_claw_motor(0);
   delay(100);
   printf("5");
   // go forward until robot reaches the mobile goal
+  set_side_speed(BOTH, 40);
+  delay(50);
   set_side_speed(BOTH, 80);
   delay(2000);
   // driveDistance(800, 80, NULL, NULL);
@@ -176,21 +180,19 @@ void autonomous() {
   set_main_lifter_motors(0);
 
   set_side_speed(BOTH, -80);
-  delay(1000);
-  gyroTurn(-120 * negate, GYRO_TURN_SPEED_MIN_NORMAL, GYRO_TURN_SPEED_MAX);
-  set_side_speed(BOTH, 80);
-  delay(800);
-  gyroTurn(-70 * negate, GYRO_TURN_SPEED_MIN_NORMAL, GYRO_TURN_SPEED_MAX);
+  delay(1300);
+  gyroTurn(-30 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
+  set_side_speed(BOTH, -80);
+  delay(200);
+  gyroTurn(-100 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
   set_side_speed(BOTH, 120);
   delay(500);
   set_side_speed(BOTH, 0);
-  raise_main_lifter();
-  delay(300);
-  set_main_lifter_motors(0);
   mobile_goal_down_pot();
-  set_side_speed(BOTH, -50);
-  delay(200);
+  set_side_speed(BOTH, -100);
+  delay(500);
   set_side_speed(BOTH, 0);
+  gyroTurn(-180 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
   return;
   set_side_speed(BOTH, 120);
   delay(380);
