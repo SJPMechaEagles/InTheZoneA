@@ -122,7 +122,13 @@ void autonomous_many_cones() {
 
 void autonomous() {
   init_slew();
-  delay(850);
+
+  set_side_speed(BOTH, 127);
+  delay(4000);
+  set_side_speed(BOTH, 0);
+  return;
+
+  delay(900);
   int negate;
   if (start_side == -1 || start_color == -1) {
     return;
@@ -176,7 +182,7 @@ void autonomous() {
   delay(400);
   set_main_lifter_motors(0);
   claw_release_cone();
-  delay(500);
+  delay(600);
   raise_main_lifter();
   delay(300);
   set_main_lifter_motors(0);
@@ -187,9 +193,9 @@ void autonomous() {
 //  gyroTurn(-30 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
   //set_side_speed(BOTH, -80);
   //delay(200);
-  gyroTurn(-170 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
-  set_side_speed(BOTH, 120);
-  delay(500);
+  gyroTurn(-150 * negate, GYRO_TURN_SPEED_MIN_FAST, GYRO_TURN_SPEED_MAX);
+  set_side_speed(BOTH, 60);
+  delay(300);
   set_side_speed(BOTH, 0);
   mobile_goal_down_pot();
   //go backwards and set up for teleop
